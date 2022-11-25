@@ -1,6 +1,6 @@
-<TeXmacs|2.1>
+<TeXmacs|2.1.2>
 
-<style|<tuple|course|SIUnits-simple>>
+<style|<tuple|course|SIUnits-simple|python>>
 
 <\body>
   <\hide-preamble>
@@ -11,16 +11,129 @@
 
   <doc-data|<doc-title|Differential Equations for Chemists>>
 
-  <part|Complex numbers and complex functions>
+  <\table-of-contents|toc>
+    <vspace*|2fn><with|font-series|bold|math-font-series|bold|font-size|1.19|Preface:
+    Complex numbers and functions> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-1><vspace|1fn>
 
-  <section|Recollections and definitions><marginal-note|normal|c|les 1
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|Recollections
+    and definitions> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-2><vspace|0.5fn>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|Complex
+    analysis> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-3><vspace|0.5fn>
+
+    <with|par-left|1tab|Limit of a complex sequence
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-4>>
+
+    <with|par-left|1tab|Limit of a series of complex numbers
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-5>>
+
+    <with|par-left|1tab|Complex (and analytic) functions
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-6>>
+
+    <with|par-left|1tab|Reminder: Taylor series
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-7>>
+
+    <with|par-left|1tab|Taylor theorem for analytic functions
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-8>>
+
+    <vspace*|2fn><with|font-series|bold|math-font-series|bold|font-size|1.19|Differential
+    equations> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-9><vspace|1fn>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|Definitions>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-10><vspace|0.5fn>
+
+    <vspace*|2fn><with|font-series|bold|math-font-series|bold|font-size|1.19|I<space|2spc>First
+    order ODEs> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-11><vspace|1fn>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|1<space|2spc>Linear
+    ODEs> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-12><vspace|0.5fn>
+
+    <with|par-left|1tab|1.1<space|2spc>Integrating factors method: (due to
+    Leibniz) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-13>>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|2<space|2spc>Separable
+    ODEs> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-14><vspace|0.5fn>
+
+    <with|par-left|1tab|2.1<space|2spc>Autonomous ODEs
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-15>>
+
+    <with|par-left|1tab|2.2<space|2spc>Verhulst's Model (1845)
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-16>>
+
+    <vspace*|2fn><with|font-series|bold|math-font-series|bold|font-size|1.19|II<space|2spc>Second
+    Order ODEs> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-17><vspace|1fn>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|3<space|2spc>Special
+    2nd order ODEs> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-18><vspace|0.5fn>
+
+    <with|par-left|1tab|3.1<space|2spc>2nd order ODE where the dependent
+    variable doesn't appear <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-19>>
+
+    <with|par-left|1tab|3.2<space|2spc>2nd order autonomous ODE
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-20>>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|4<space|2spc>Existence
+    and uniqueness theorem for first order ODEs>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-21><vspace|0.5fn>
+
+    <with|par-left|1tab|4.1<space|2spc>Existence and uniqueness theorem for
+    higher order ODEs <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-22>>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|5<space|2spc>Second
+    order linear ODEs> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-23><vspace|0.5fn>
+
+    <with|par-left|1tab|5.1<space|2spc>Homogeneous ODEs
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-24>>
+
+    <with|par-left|1tab|5.2<space|2spc>Finding a basis for the set of
+    solutions <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-25>>
+
+    <with|par-left|2tab|5.2.1<space|2spc>When one solution is known
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-26>>
+
+    <with|par-left|2tab|5.2.2<space|2spc>All coefficients are constants
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-27>>
+  </table-of-contents>
+
+  <part*|Preface: Complex numbers and functions>
+
+  <section*|Recollections and definitions><marginal-note|normal|c|lec 1
   6.11.22>
 
   Complex numbers are denoted by <math|\<bbb-C\>=<around*|{|x+\<mathi\>y\|x,y\<in\>
   \<bbb-R\>|}>> in Cartesian representation. In Polar representation, we
   have:
 
-  <with|gr-mode|<tuple|edit|math-at>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|cartesian|<point|0|0>|1>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-auto-crop|true|<graphics||<line|<point|0|0>|<point|2.0|2.0>>|<point|2|2>|<with|dash-style|10|<line|<point|2|2>|<point|0.0|2.0>>>|<with|dash-style|10|<line|<point|2|2>|<point|2.0|0.0>>>|<math-at|y|<point|-0.5|2>>|<math-at|x|<point|2|-0.3>>|<math-at|x+\<mathi\>y=z|<point|2.4|2>>|<arc|<point|0.6|0.6>|<point|1.0|0.4>|<point|1.0|0.0>>|<math-at|\<theta\>|<point|0.6|0.145686067640152>>|<math-at|r|<point|0.8|1.2>>>>
+  <\padded-center>
+    <with|gr-mode|<tuple|edit|math-at>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|cartesian|<point|0|0>|1>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-auto-crop|true|<graphics||<line|<point|0|0>|<point|2.0|2.0>>|<point|2|2>|<with|dash-style|10|<line|<point|2|2>|<point|0.0|2.0>>>|<with|dash-style|10|<line|<point|2|2>|<point|2.0|0.0>>>|<math-at|y|<point|-0.5|2>>|<math-at|x|<point|2|-0.3>>|<math-at|x+\<mathi\>y=z|<point|2.4|2>>|<arc|<point|0.6|0.6>|<point|1.0|0.4>|<point|1.0|0.0>>|<math-at|\<theta\>|<point|0.6|0.145686067640152>>|<math-at|r|<point|0.8|1.2>>>>
+  </padded-center>
 
   The complex number <math|z> can be written using both
   <math|<around*|(|x,y|)>> and <math|<around*|(|r,\<theta\>|)>>, so that
@@ -83,7 +196,9 @@
   <\enumerate-numeric>
     <item><math|z<rsup|3>=1>. [<math|r=1> and <math|\<theta\>=0>]
 
-    <with|gr-mode|<tuple|edit|point>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par|center>|gr-grid|<tuple|cartesian|<point|0|0>|1>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-auto-crop|true|gr-color|red|<graphics||<carc|<point|-1|0>|<point|1.0|0.0>|<point|0.0|1.0>>|<point|1|0>|<with|color|blue|<point|-0.6|0.8>>|<with|color|red|<point|-0.5|-0.866025>>>>
+    <\padded-center>
+      <with|gr-mode|<tuple|edit|point>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par|center>|gr-grid|<tuple|cartesian|<point|0|0>|1>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-auto-crop|true|gr-color|red|<graphics||<carc|<point|-1|0>|<point|1.0|0.0>|<point|0.0|1.0>>|<point|1|0>|<with|color|blue|<point|-0.6|0.8>>|<with|color|red|<point|-0.5|-0.866025>>>>
+    </padded-center>
 
     then <math|z=cos <frac|2k\<mathpi\>|3>+\<mathi\> sin
     <frac|2k\<mathpi\>|3>> where <math|k=0,<with|color|blue|1
@@ -92,7 +207,9 @@
     <item><math|z<rsup|n>=1.> <math|z=cos <frac|2\<mathpi\>k|n>+\<mathi\> sin
     <frac|2\<mathpi\>k|n>> where <math|0\<leq\>k\<leq\>n-1>
 
-    <with|gr-mode|<tuple|edit|point>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|cartesian|<point|0|0>|1>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-auto-crop|true|<graphics||<carc|<point|-1|0>|<point|1.0|0.0>|<point|0.0|1.0>>|<point|1|0>|<point|0.9|0.43589>|<point|0.6|0.8>|<point|0.3|0.953939>|<point|-0.4|0.916515>|<point|-0.7|0.7>|<point|-0.9|-0.43589>|<point|-0.7|-0.7>|<point|-0.4|-0.916515>|<point|0|-1>|<point|0.4|-0.916515>|<point|0.7|-0.714143>|<point|0.9|-0.43589>|<point|0|1>|<point|-1|0>|<point|-0.916515|0.4>>>
+    <\padded-center>
+      <with|gr-mode|<tuple|edit|point>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|cartesian|<point|0|0>|1>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-auto-crop|true|<graphics||<carc|<point|-1|0>|<point|1.0|0.0>|<point|0.0|1.0>>|<point|1|0>|<point|0.9|0.43589>|<point|0.6|0.8>|<point|0.3|0.953939>|<point|-0.4|0.916515>|<point|-0.7|0.7>|<point|-0.9|-0.43589>|<point|-0.7|-0.7>|<point|-0.4|-0.916515>|<point|0|-1>|<point|0.4|-0.916515>|<point|0.7|-0.714143>|<point|0.9|-0.43589>|<point|0|1>|<point|-1|0>|<point|-0.916515|0.4>>>
+    </padded-center>
 
     \ <math|n> points are distributed equally on the circle.
 
@@ -100,7 +217,9 @@
     <math|r=<sqrt|6<text|>4+64>=<sqrt|128>=8<sqrt|2>> and
     <math|\<theta\>=5\<mathpi\>/4>.
 
-    <with|gr-mode|<tuple|edit|arc>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|cartesian|<point|0|0>|1>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-arrow-end|\<gtr\>|gr-auto-crop|true|<graphics||<line|<point|0|0>|<point|-2.0|-2.0>>|<point|-2|-2>|<with|dash-style|10|<line|<point|-2|-2>|<point|-2.0|0.0>>>|<with|dash-style|10|<line|<point|-2|-2>|<point|0.0|-2.0>>>|<math-at|-8|<point|-2|0.3>>|<math-at|-8|<point|0.2|-2>>|<with|arrow-end|\<gtr\>|<arc|<point|1|0>|<point|-0.5|-0.4>|<point|-0.4|-0.5>>>|<math-at|\<theta\>=<frac|5\<mathpi\>|4>|<point|-0.4|0.3>>>>
+    <\padded-center>
+      <with|gr-mode|<tuple|edit|arc>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|cartesian|<point|0|0>|1>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-arrow-end|\<gtr\>|gr-auto-crop|true|<graphics||<line|<point|0|0>|<point|-2.0|-2.0>>|<point|-2|-2>|<with|dash-style|10|<line|<point|-2|-2>|<point|-2.0|0.0>>>|<with|dash-style|10|<line|<point|-2|-2>|<point|0.0|-2.0>>>|<math-at|-8|<point|-2|0.3>>|<math-at|-8|<point|0.2|-2>>|<with|arrow-end|\<gtr\>|<arc|<point|1|0>|<point|-0.5|-0.4>|<point|-0.4|-0.5>>>|<math-at|\<theta\>=<frac|5\<mathpi\>|4>|<point|-0.4|0.3>>>>
+    </padded-center>
 
     so
 
@@ -116,17 +235,23 @@
       <frac|5\<mathpi\>+8k\<mathpi\>|12>|)>
     </equation*>
 
-    <with|gr-mode|<tuple|edit|math-at>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|cartesian|<point|0|0>|1>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-auto-crop|true|<graphics||<carc|<point|-2|0>|<point|2.0|0.0>|<point|0.0|2.0>>|<point|0.7|1.8735>|<point|-1.83303|-0.8>|2|<math-at|<rsup|><rsup|>|<point|2|-1>>|<point|1.7|-1.05357>|<math-at|2\<cdot\>2<rsup|1/6>|<point|2.3|0>>|<with|dash-style|10|<line|<point|0|0>|<point|0.7|1.8735>>>|<arc|<point|0.7|0>|<point|0.8|0.6>|<point|0.3|0.80292857142857>>|<math-at|<frac|5\<mathpi\>|12>|<point|0.3|0.3>>|<math-at||<point|1.38135|1.07986>>>>
+    <\padded-center>
+      <with|gr-mode|<tuple|edit|math-at>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|cartesian|<point|0|0>|1>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-auto-crop|true|<graphics||<carc|<point|-2|0>|<point|2.0|0.0>|<point|0.0|2.0>>|<point|0.7|1.8735>|<point|-1.83303|-0.8>|2|<math-at|<rsup|><rsup|>|<point|2|-1>>|<point|1.7|-1.05357>|<math-at|2\<cdot\>2<rsup|1/6>|<point|2.3|0>>|<with|dash-style|10|<line|<point|0|0>|<point|0.7|1.8735>>>|<arc|<point|0.7|0>|<point|0.8|0.6>|<point|0.3|0.80292857142857>>|<math-at|<frac|5\<mathpi\>|12>|<point|0.3|0.3>>|<math-at||<point|1.38135|1.07986>>>>
+    </padded-center>
 
     All points are shifted by <math|5\<mathpi\>/12>.
   </enumerate-numeric>
 
-  <section|Complex analysis>
+  <section*|Complex analysis>
 
   If we have two points, <math|z<rsub|1>> and <math|z<rsub|2>>, the distance
   between them is <math|z<rsub|1>-z<rsub|2>=z<rsub|1>+<around*|(|-z<rsub|2>|)>>.
 
-  \ <with|gr-mode|<tuple|edit|math-at>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|cartesian|<point|0|0>|1>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-dash-style|10|gr-color|blue|gr-auto-crop|true|gr-transformation|<tuple|<tuple|0.995004165278026|0.0|0.0998334166468281|0.0>|<tuple|0.0|1.0|0.0|0.0>|<tuple|-0.0998334166468281|0.0|0.995004165278026|0.0>|<tuple|0.0|0.0|0.0|1.0>>|<graphics||<point|1|2>|<point|4|1>|<math-at|z<rsub|1>|<point|1|2.6>>|<math-at|z<rsub|2>|<point|4.5|1>>|<line|<point|1|2>|<point|4.0|1.0>>|<with|color|red|arrow-end|\<gtr\>|<line|<point|0|0>|<point|1.0|2.0>>>|<with|color|red|arrow-end|\<gtr\>|<line|<point|0|0>|<point|4.0|1.0>>>|<with|color|red|arrow-end|\<gtr\>|<line|<point|0|0>|<point|-3.0|-1.0>>>|<math-at|-z<rsub|2>|<point|-3|-1.3>>|<with|arrow-end|\<gtr\>|dash-style|10|<line|<point|0|0>|<point|-3.0|1.0>>>|<with|color|blue|dash-style|10|<line|<point|1|2>|<point|-3.0|1.0>>>|<with|color|blue|<math-at|z<rsub|1>-z<rsub|2>|<point|-2.4|2>>>>>
+  \ 
+
+  <\padded-center>
+    <with|gr-mode|<tuple|edit|math-at>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|cartesian|<point|0|0>|1>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-dash-style|10|gr-color|blue|gr-auto-crop|true|gr-transformation|<tuple|<tuple|0.995004165278026|0.0|0.0998334166468281|0.0>|<tuple|0.0|1.0|0.0|0.0>|<tuple|-0.0998334166468281|0.0|0.995004165278026|0.0>|<tuple|0.0|0.0|0.0|1.0>>|<graphics||<point|1|2>|<point|4|1>|<math-at|z<rsub|1>|<point|1|2.6>>|<math-at|z<rsub|2>|<point|4.5|1>>|<line|<point|1|2>|<point|4.0|1.0>>|<with|color|red|arrow-end|\<gtr\>|<line|<point|0|0>|<point|1.0|2.0>>>|<with|color|red|arrow-end|\<gtr\>|<line|<point|0|0>|<point|4.0|1.0>>>|<with|color|red|arrow-end|\<gtr\>|<line|<point|0|0>|<point|-3.0|-1.0>>>|<math-at|-z<rsub|2>|<point|-3|-1.3>>|<with|arrow-end|\<gtr\>|dash-style|10|<line|<point|0|0>|<point|-3.0|1.0>>>|<with|color|blue|dash-style|10|<line|<point|1|2>|<point|-3.0|1.0>>>|<with|color|blue|<math-at|z<rsub|1>-z<rsub|2>|<point|-2.4|2>>>>>
+  </padded-center>
 
   \;
 
@@ -137,7 +262,7 @@
   Can we use the distance function to define limits and continuity functions
   etc\<ldots\>?
 
-  <subsection|Limit of a complex sequence>
+  <subsection*|Limit of a complex sequence>
 
   If given the sequence of numbers <math|<around*|{|z<rsub|n>|}>\|<rsup|\<infty\>><rsub|n=1>\<subseteq\>\<bbb-C\>>,
   we say <math|z<rsub|n>\<rightarrow\>w>, <math|w\<in\>\<bbb-C\>>, if
@@ -149,7 +274,7 @@
   <math|<around*|\<\|\|\>|z<rsub|n>|\<\|\|\>>=<frac|<sqrt|10>|n>\<rightarrow\>0>
   \ so the sequence goes to zero in the complex plane.
 
-  <subsection|Limit of a series of complex numbers>
+  <subsection*|Limit of a series of complex numbers>
 
   Given the sequence <math|<around*|{|z<rsub|n>|}><rsub|n=1><rsup|\<infty\>>>,
   the series <math|<big|sum><rsub|n=1><rsup|\<infty\>>z<rsub|n>> converges to
@@ -189,7 +314,7 @@
     <big|sum><rsub|k=1><rsup|\<infty\>><around*|(|<frac|1+\<mathi\>|2>|)><rsup|k>=<frac|1|1-<around*|(|<frac|1|2>+<frac|1|2>\<mathi\>|)>>=<frac|1|<frac|1|2>-<frac|1|2>\<mathi\>>=<frac|<frac|1|2>+<frac|1|2>\<mathi\>|<frac|1|2>>=1+\<mathi\>
   </equation*>
 
-  <subsection|Complex (and analytic) functions>
+  <subsection*|Complex (and analytic) functions>
 
   If we have a function <math|f> such that
   <math|f:\<bbb-C\>\<rightarrow\>\<bbb-C\>>, we say that <math|w> is the
@@ -198,8 +323,8 @@
   <math|z\<rightarrow\>z<rsub|0>>.
 
   Define <em|continuity>: <math|f> is continuous at the point
-  <math|z<rsub|0>> if the limit <math|lim<rsub|z\<rightarrow\>z<rsub|0>>
-  f<around*|(|z|)>> exists and equals <math|f<around*|(|z<rsub|0>|)>.>
+  <math|z<rsub|0>> if the limit <math|<with|math-display|true|lim<rsub|z\<rightarrow\>z<rsub|0>>
+  f<around*|(|z|)>>> exists and equals <math|f<around*|(|z<rsub|0>|)>.>
 
   <with|font-series|bold|Definition:> <math|f:\<bbb-C\>\<rightarrow\>\<bbb-C\>>
   is <em|analytic> at <math|z<rsub|0>> if for the limit:
@@ -218,7 +343,7 @@
   does <math|f<rsup|<around*|(|n|)>><around*|(|z|)>\<space\>\<forall\>n> [all
   higher derivatives of <math|f> also exist].
 
-  <subsection|Reminder: Taylor series>
+  <subsection*|Reminder: Taylor series>
 
   A (real) <em|power series> is a series of the form
   <math|<big|sum><rsub|n=0>a<rsub|n> x<rsup|n>> which converges for some
@@ -260,10 +385,10 @@
     f<around*|(|x|)>=<big|sum><rsub|n=0><rsup|\<infty\>>x<rsup|n>=<frac|1|1-x>
   </equation*>
 
-  So <math|f<around*|(|x|)>=<big|sum><rsub|n=0><rsup|\<infty\>>x<rsup|n>>
+  So <math|f<around*|(|x|)>=<with|math-display|true|<big|sum><rsub|n=0><rsup|\<infty\>>x<rsup|n>>>
   <math|>must be a Taylor series.
 
-  <subsection|Taylor theorem for analytic functions>
+  <subsection*|Taylor theorem for analytic functions>
 
   If <math|f> is analytic (everywhere) then it can be represented as a power
   series <math|<big|sum>C<rsub|n>z<rsup|n>> where
@@ -304,7 +429,7 @@
       <tformat|<table|<row|<cell|\<mathe\><rsup|z<rsub|1>+z<rsub|2>>>|<cell|=>|<cell|\<mathe\><rsup|z<rsub|1>>\<cdot\>\<mathe\><rsup|z<rsub|2>><label|exponential-identities><eq-number>>>|<row|<cell|\<mathe\><rsup|z<rsub|1>\<cdot\>z<rsub|2>>>|<cell|=>|<cell|<around*|(|\<mathe\><rsup|z<rsub|1>>|)><rsup|z<rsub|2>>>>>>
     </eqnarray*>
 
-    <item><marginal-note|normal|c|les 2 7.11.22><math|f<around*|(|x|)>=sin
+    <item><marginal-note|normal|c|lec 2 7.11.22><math|f<around*|(|x|)>=sin
     x.>
 
     <\equation*>
@@ -512,7 +637,7 @@
     Then the claim is true for all <math|n>.
   </ornamented>
 
-  <part|Differential equations>
+  <part*|Differential equations>
 
   Informally, a differential equation (DE) is a functional equation which
   involves functions, variables and derivatives of the functions. Note that
@@ -609,7 +734,7 @@
     <frac|\<partial\><rsup|2>f<around*|(|x,y|)>|\<partial\>x<rsup|2>>+<frac|\<partial\><rsup|2>f<around*|(|x,y|)>|\<partial\>y<rsup|2>>=0
   </equation*>
 
-  <section|Definitions>
+  <section*|Definitions>
 
   <underline|Ordinary differential equations>
 
@@ -640,9 +765,11 @@
   <\enumerate>
     <item>A falling object:
 
-    <with|gr-mode|<tuple|edit|math-at>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|empty>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-arrow-end|\<gtr\>|gr-auto-crop|true|gr-text-at-halign|center|gr-text-at-valign|center|<graphics||<carc|<point|-1|0>|<point|1.0|0.0>|<point|0.0|1.0>>|<with|arrow-end|\<gtr\>|<line|<point|0|1>|<point|0.0|2.3>>>|<with|arrow-end|\<gtr\>|<line|<point|0|-1>|<point|0.0|-2.3>>>|<math-at|m
-    g=force of gravity|<point|0|-2.7>>|<math-at|\<gamma\>\<cdot\>v<around*|(|t|)>=
-    drag force|<point|0|2.6>>|<math-at|m|<point|-0.208460113771663|-0.0277979891520042>>|<with|text-at-valign|center|text-at-halign|center|<math-at||<point|3.11744|0.578532>>>>>
+    <\padded-center>
+      <with|gr-mode|<tuple|edit|math-at>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|empty>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-arrow-end|\<gtr\>|gr-auto-crop|true|gr-text-at-halign|center|gr-text-at-valign|center|<graphics||<carc|<point|-1|0>|<point|1.0|0.0>|<point|0.0|1.0>>|<with|arrow-end|\<gtr\>|<line|<point|0|1>|<point|0.0|2.3>>>|<with|arrow-end|\<gtr\>|<line|<point|0|-1>|<point|0.0|-2.3>>>|<math-at|m
+      g=force of gravity|<point|0|-2.7>>|<math-at|\<gamma\>\<cdot\>v<around*|(|t|)>=
+      drag force|<point|0|2.6>>|<math-at|m|<point|-0.208460113771663|-0.0277979891520042>>|<with|text-at-valign|center|text-at-halign|center|<math-at||<point|3.11744|0.578532>>>>>
+    </padded-center>
 
     Define <math|v<around*|(|t|)>> the velocity of mass <math|m>, the drag
     force is proportionate to <math|v<around*|(|t|)>.>
@@ -670,7 +797,7 @@
     get an approximation of the graph of the function and guess what the
     function (solution to DE) could be.
 
-    <marginal-note|normal|c|les 3 13.11.22>
+    <marginal-note|normal|c|lec 3 13.11.22>
 
     <\with|par-mode|center>
       <tabular*|<tformat|<cwith|1|-1|1|-1|cell-halign|c>|<cwith|1|-1|1|-1|cell-hyphen|n>|<cwith|1|-1|1|-1|cell-tborder|1ln>|<cwith|1|-1|1|-1|cell-bborder|1ln>|<cwith|1|-1|1|-1|cell-lborder|1ln>|<cwith|1|-1|1|-1|cell-rborder|1ln>|<cwith|1|1|1|-1|cell-background|pastel
@@ -790,7 +917,7 @@
   <math|k=y<rsub|0>-<frac|b|a>> is the unique solution satisfying the initial
   condition (IC): <math|y=<around*|(|y<rsub|0>-<frac|b|a>|)>*\<mathe\><rsup|a*t>+<frac|b|a>>.
 
-  <section|First order ODEs>
+  <part|First order ODEs>
 
   First order ODEs are of the form
 
@@ -801,7 +928,7 @@
   The relationship between <math|t,y> can be very complex! Let's review some
   kinds:
 
-  <subsection|Linear ODEs>
+  <section|Linear ODEs>
 
   Linear in <math|y>, that is.
 
@@ -814,7 +941,7 @@
 
   A method for solving linear ODEs:
 
-  <subsubsection|Integrating factors method: (due to Leibniz)>
+  <subsection|Integrating factors method: (due to Leibniz)>
 
   Take for example the ODE <math|y<rprime|'>=-2y+3>
   (<math|a<around*|(|t|)>=-2,\<nospace\>b<around*|(|t|)>=3>).
@@ -1050,7 +1177,7 @@
   <with|font-shape|italic|defined>. Then, we can see that if we choose
   <math|c=0> we get a specific solution <math|y=t<rsup|2>>.
 
-  <subsection|Separable ODEs>
+  <section|Separable ODEs>
 
   Equations of the form (in Leibniz notation):
 
@@ -1084,7 +1211,7 @@
 
   So that <math|y> is given implicitly.
 
-  <marginal-note|normal|c|les 4 14.11.22>Note that if <math|N> is a function
+  <marginal-note|normal|c|lec 4 14.11.22>Note that if <math|N> is a function
   of <math|y> and <math|y> is a function of <math|x.> Suppose
   <math|<big|int>N<around*|(|y|)> \<mathd\>y=Q<around*|(|y|)>> so
   <math|<frac|\<mathd\>Q|\<mathd\>y>=N<around*|(|y|)>>, then, according to
@@ -1320,7 +1447,7 @@
     We've examined all possible cases, and thus found all the solutions.
   </enumerate-numeric>
 
-  <marginal-note|normal|c|les 5 20.11.22><underline|Another example of
+  <marginal-note|normal|c|lec 5 20.11.22><underline|Another example of
   modeling with first order DEs: Interest compounded continuously>
 
   <math|S<around*|(|t|)>=\<space\>> amount of money deposited and interest
@@ -1343,7 +1470,7 @@
 
   If we compute <math|n> times a year: <math|S<around*|(|t|)>=S<around*|(|0|)>*<around*|(|1+<frac|r|n>|)><rsup|n*t>>.
 
-  Recall that <math|lim<rsub|n\<rightarrow\>\<infty\>><around*|(|1+<frac|r|n>|)><rsup|n>=\<mathe\><rsup|r>>.
+  Recall that <math|<with|math-display|true|lim<rsub|n\<rightarrow\>\<infty\>><around*|(|1+<frac|r|n>|)><rsup|n>=\<mathe\><rsup|r>>>.
   So when <math|n\<rightarrow\>\<infty\>> and interest is compounded
   continuously we get <math|S<around*|(|t|)>=S<around*|(|0|)>*\<mathe\><rsup|r*t>>.
 
@@ -1380,7 +1507,7 @@
   We invested 80,000$ and made a 508,000$ profit! Note this is a special case
   called an <with|font-shape|italic|autonomous equation>.
 
-  <subsubsection|Autonomous ODEs>
+  <subsection|Autonomous ODEs>
 
   <with|font-series|bold|Definition:> An ODE is <em|autonomous> if the
   independent variable does not appear explicitly.
@@ -1443,7 +1570,7 @@
     denominator.
   </enumerate-numeric>
 
-  <subsubsection|Verhulst's Model (1845)>
+  <subsection|Verhulst's Model (1845)>
 
   Similar to the field mice model, we had <math|y<rprime|'>=r*y> where
   <math|r> was a constant rate of population growth and
@@ -1590,13 +1717,15 @@
   The constant <math|k=<frac|r|s>> is called the <em|saturation level> or
   <em|environmental carrying capacity>.
 
-  <subsection|Special 2nd order ODEs>
+  <part|Second Order ODEs>
+
+  <section|Special 2nd order ODEs>
 
   The solution be obtained by <em|reducing> to a
   <with|font-series|bold|first> order equation. Two kinds of equations where
   you can do that:
 
-  <subsubsection|2nd order ODE where the dependent variable doesn't appear>
+  <subsection|2nd order ODE where the dependent variable doesn't appear>
 
   An equation of the form:
 
@@ -1724,7 +1853,7 @@
     </equation*>
   </enumerate-numeric>
 
-  <subsubsection|2nd order autonomous ODE>
+  <subsection|2nd order autonomous ODE>
 
   The independent variable doesn't appear.
 
@@ -1820,7 +1949,7 @@
     </equation*>
   </enumerate-numeric>
 
-  <marginal-note|normal|c|les 6 21.11.22><subsection|Existence and uniqueness
+  <marginal-note|normal|c|lec 6 21.11.22><section|Existence and uniqueness
   theorem for first order ODEs>
 
   Sometimes knowing that there exists a unique solution helps finding the
@@ -1840,9 +1969,13 @@
 
   Conditions guarantee that we cannot have a solution:
 
-  <with|gr-mode|<tuple|group-edit|edit-props>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|cartesian|<point|0|0>|1>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-auto-crop|true|gr-color|blue|<graphics||<point|4|2>|<with|dash-style|10|<line|<point|4|2>|<point|0.0|2.0>>>|<with|dash-style|10|<line|<point|4|2>|<point|4.0|0.0>>>|<spline|<point|-2.8|0.3>|<point|0.7|3.5>|<point|4.0|2.0>|<point|6.3|1.0>>|<with|color|blue|<spline|<point|-1.4|-0.8>|<point|0.7|2.5>|<point|2.4|1.0>|<point|4.0|2.0>|<point|6.5|3.0>>>|<math-at|a|<point|4|-0.4>>|<math-at|b|<point|-0.3|2>>>>
+  <\padded-center>
+    <with|gr-mode|<tuple|group-edit|edit-props>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|cartesian|<point|0|0>|1>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-auto-crop|true|gr-color|blue|<graphics||<point|4|2>|<with|dash-style|10|<line|<point|4|2>|<point|0.0|2.0>>>|<with|dash-style|10|<line|<point|4|2>|<point|4.0|0.0>>>|<spline|<point|-2.8|0.3>|<point|0.7|3.5>|<point|4.0|2.0>|<point|6.3|1.0>>|<with|color|blue|<spline|<point|-1.4|-0.8>|<point|0.7|2.5>|<point|2.4|1.0>|<point|4.0|2.0>|<point|6.5|3.0>>>|<math-at|a|<point|4|-0.4>>|<math-at|b|<point|-0.3|2>>>>
+  </padded-center>
 
-  <with|gr-mode|<tuple|edit|line>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|cartesian|<point|0|0>|1>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-auto-crop|true|<graphics||<point|3|2>|<with|dash-style|10|<line|<point|3|2>|<point|0.0|2.0>>>|<with|dash-style|10|<line|<point|3|2>|<point|3.0|0.0>>>|<smooth|<point|-1|0>|<point|1.0|1.3>|<point|3.0|2.0>|<point|5.3|1.2>|<point|7.0|0.0>>|<with|color|blue|<smooth|<point|-1.7|0>|<point|3.0|2.0>|<point|7.4|0.0>>>>>
+  <\padded-center>
+    <with|gr-mode|<tuple|edit|line>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|cartesian|<point|0|0>|1>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-auto-crop|true|<graphics||<point|3|2>|<with|dash-style|10|<line|<point|3|2>|<point|0.0|2.0>>>|<with|dash-style|10|<line|<point|3|2>|<point|3.0|0.0>>>|<smooth|<point|-1|0>|<point|1.0|1.3>|<point|3.0|2.0>|<point|5.3|1.2>|<point|7.0|0.0>>|<with|color|blue|<smooth|<point|-1.7|0>|<point|3.0|2.0>|<point|7.4|0.0>>>>>
+  </padded-center>
 
   <underline|Examples>
 
@@ -1900,7 +2033,9 @@
     Let's draw the solutions. First notice that clearly <math|y\<equiv\>0> is
     a solution satisfying IC.
 
-    <with|gr-mode|<tuple|edit|math-at>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|cartesian|<point|0|0>|1>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-auto-crop|true|gr-color|blue|<graphics||<with|color|red|<line|<point|-5|0>|<point|6.0|0.0>>>|<with|color|red|<math-at|y\<equiv\>0|<point|-6.0|0.2>>>|<with|color|blue|<point|2|0>>|<with|color|blue|<math-at|-c|<point|1.6|-0.4>>>|<with|color|blue|<smooth|<point|3.0|0.016833400946641>|<point|4.5|0.716833400946641>|<point|5.0|2.71683340094664>>>|<with|color|blue|<smooth|<point|1.96964449398425|-0.065111777486277>|<point|3.46964449398425|0.634888222513723>|<point|3.96964449398425|2.63488822251372>>>|<with|color|blue|<smooth|<point|4.022175940079|0.026482756256572>|<point|5.522175940079|0.726482756256572>|<point|6.022175940079|2.72648275625657>>>|<with|color|blue|<smooth|<point|1.1|6.0715756156289e-18>|<point|2.6|0.7>|<point|3.1|2.7>>>|<with|color|blue|<smooth|<point|-0.0282176617193999|-3.98292510084275e-15>|<point|1.4717823382806|0.7>|<point|1.9717823382806|2.7>>>|<carc|<point|-0.2|0.2>|<point|0.2|-0.2>|<point|0.3|0.1>>|<with|color|blue|<smooth|<point|-1.94249252178442|0.0564060681305599>|<point|-0.44249252178442|0.75640606813056>|<point|0.05750747821558|2.75640606813056>>>|<with|color|blue|<math-at|y=x<rsup|2>,<around*|(|x\<geq\>-c|)>|<point|-3.0|2.0>>>>>
+    <\padded-center>
+      <with|gr-mode|<tuple|edit|math-at>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|cartesian|<point|0|0>|1>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-auto-crop|true|gr-color|blue|<graphics||<with|color|red|<line|<point|-5|0>|<point|6.0|0.0>>>|<with|color|red|<math-at|y\<equiv\>0|<point|-6.0|0.2>>>|<with|color|blue|<point|2|0>>|<with|color|blue|<math-at|-c|<point|1.6|-0.4>>>|<with|color|blue|<smooth|<point|3.0|0.016833400946641>|<point|4.5|0.716833400946641>|<point|5.0|2.71683340094664>>>|<with|color|blue|<smooth|<point|1.96964449398425|-0.065111777486277>|<point|3.46964449398425|0.634888222513723>|<point|3.96964449398425|2.63488822251372>>>|<with|color|blue|<smooth|<point|4.022175940079|0.026482756256572>|<point|5.522175940079|0.726482756256572>|<point|6.022175940079|2.72648275625657>>>|<with|color|blue|<smooth|<point|1.1|6.0715756156289e-18>|<point|2.6|0.7>|<point|3.1|2.7>>>|<with|color|blue|<smooth|<point|-0.0282176617193999|-3.98292510084275e-15>|<point|1.4717823382806|0.7>|<point|1.9717823382806|2.7>>>|<carc|<point|-0.2|0.2>|<point|0.2|-0.2>|<point|0.3|0.1>>|<with|color|blue|<smooth|<point|-1.94249252178442|0.0564060681305599>|<point|-0.44249252178442|0.75640606813056>|<point|0.05750747821558|2.75640606813056>>>|<with|color|blue|<math-at|y=x<rsup|2>,<around*|(|x\<geq\>-c|)>|<point|-3.0|2.0>>>>>
+    </padded-center>
 
     <math|y=x<rsup|2>,<around*|(|x\<geq\>0|)>> is also a solution satisfying
     IC.
@@ -2007,7 +2142,7 @@
     </itemize>
   </enumerate>
 
-  <subsubsection|Existence and uniqueness theorem for higher order ODEs>
+  <subsection|Existence and uniqueness theorem for higher order ODEs>
 
   Given a linear ODE of order <math|n>,
 
@@ -2036,7 +2171,7 @@
     y<rprime|''>+p<around*|(|x|)>*y<rprime|'>+q<around*|(|x|)>*y=0
   </equation*>
 
-  By E&U theo., for any IC <math|y<around*|(|a|)>=b>,
+  By E&U thm., for any IC <math|y<around*|(|a|)>=b>,
   <math|y<rprime|'><around*|(|a|)>=c> we have a unique sol. in some
   neighborhood of <math|a>, provided <math|p,q> are continuous in this
   interval.
@@ -2104,12 +2239,12 @@
     </itemize>
   </ornamented>
 
-  <underline|Claim>: The set of solutions to our ODE\ 
+  <underline|Claim>: The set of solutions to our ODE
 
-  <\equation*>
+  <\equation>
     y<rprime|''>+p<around*|(|x|)>*y<rprime|'>+q<around*|(|x|)>*y=0,<application-space|1em>p,q<text|
-    continuous>
-  </equation*>
+    continuous><label|homo-2nd>
+  </equation>
 
   is a vector space over <math|\<bbb-R\>> (a subspace of <math|V>). In fact,
   it is a vector space of dimension 2.
@@ -2151,7 +2286,7 @@
 
   <underline|Conclude>: Set of all solutions is a subspace of <math|V>.
 
-  It remains to show dimension of this subspace is 2. Here we use E&U theo.
+  It remains to show dimension of this subspace is 2. Here we use E&U thm.
   Given a point <math|a> we have a solution such that
   <math|y<around*|(|a|)>=1>. There is at least one solution, so the dimension
   must be <math|\<geq\>1>. [Dimension is zero if only <math|y\<equiv\>0> is a
@@ -2172,6 +2307,556 @@
   That means <math|y<rsub|1>,y<rsub|2>> are linearly independent and the
   dimension of the subspace is <with|font-series|bold|at least> 2. Now we
   only need to show that the dimension is <with|font-series|bold|exactly> 2.
+
+  <marginal-note|normal|c|lec 7 27.11.22>Let <math|f<around*|(|x|)>> be an
+  arbitrary solution to <eqref|homo-2nd>, such that <math|f<around*|(|a|)>=b>
+  and <math|f<rprime|'><around*|(|a|)>=c>. Now look at the following
+  function:
+
+  <\equation*>
+    g<around*|(|x|)>=b*y<rsub|1><around*|(|x|)>+c*y<rsub|2><around*|(|x|)>
+  </equation*>
+
+  <math|y<rsub|1><around*|(|x|)>,y<rsub|2><around*|(|x|)>> are solutions and
+  therefore <math|g<around*|(|x|)>> also solves <eqref|homo-2nd>.
+
+  Set <math|x=a>:
+
+  <\equation*>
+    g<around*|(|a|)>=b*y<rsub|1><around*|(|a|)>+c*y<rsub|2><around*|(|a|)>=b
+  </equation*>
+
+  <\equation*>
+    g<rprime|'><around*|(|a|)>=b*y<rsub|1><rprime|'><around*|(|a|)>+c*y<rsub|2><rprime|'><around*|(|a|)>=c
+  </equation*>
+
+  So <math|g<around*|(|x|)>> solves the ODE and satisfies the same ICs as the
+  arbitrary function <math|f<around*|(|x|)>>. But by the E&U thm.<em|>
+  there's only one solution satisfying a given set of ICs, so
+  <math|f<around*|(|x|)>=g<around*|(|x|)>> for all <math|x> and
+  <math|f<around*|(|x|)>> is a linear combination of <math|y<rsub|1>> and
+  <math|y<rsub|2>>.
+
+  To conclude, all solutions can be written as linear combinations of
+  <math|y<rsub|1>,y<rsub|2>>, meaning that the subspace is
+  <with|font-shape|italic|spanned> by <math|y<rsub|1>,y<rsub|2>>, and its
+  dimension is exactly 2.
+
+  <underline|Example Usage of E&U thm.>
+
+  Given the ODE
+
+  <\equation*>
+    y<rprime|''>+y=0
+  </equation*>
+
+  Note that <math|sin x> and <math|cos x> are solutions. We want the unique
+  sol. such that
+
+  <\equation*>
+    <choice|<tformat|<table|<row|<cell|y<around*|(|0|)>=3>>|<row|<cell|y<rprime|'><around*|(|0|)>=-2>>>>>
+  </equation*>
+
+  <math|sin x,cos x> are linearly independent (as if <math|\<alpha\>*sin
+  x+\<beta\>*cos x=0> for all <math|x>, \ setting <math|x=0> gives:
+  <math|\<alpha\>*sin 0+\<beta\>*cos 0=0\<rightarrow\>\<beta\>=0>, so
+  <math|\<alpha\>*sin x=0> for all <math|x>, so <math|\<alpha\>=0>.)
+
+  <math|sin x,cos x> are therefore a basis for set of solutions. We want a
+  function <math|y<around*|(|x|)>=a*sin x+b*cos x> such that the ICs hold. We
+  get
+
+  <\equation*>
+    3=y<around*|(|0|)>=a*sin 0+b*cos 0=b
+  </equation*>
+
+  <\equation*>
+    -2=y<rprime|'><around*|(|0|)>=a*cos<around*|(|0|)>=a
+  </equation*>
+
+  So <math|y<around*|(|x|)>=-2*sin x+3*cos x> is the unique solution. Knowing
+  that a solution exists and the E&U thm. holds means that
+  <math|y<around*|(|x|)>> is the <with|font-series|bold|only> solution that
+  satisfies the ICs.
+
+  <\ornamented>
+    <underline|Note>
+
+    1st order homogeneous linear ODEs are of form:
+    <math|y<rprime|'>+p<around*|(|x|)>*y=0>. We solved and found that also
+    solutions were multiples of <math|\<mathe\><rsup|<big|int>p<around*|(|x|)>
+    \<mathd\>x>>, i.e. a 1-dimensional space of functions solves the ODE. We
+    expect (and shall see later) that for an ODE of order <math|n>, the space
+    of solutions would be <math|n>-dimensional.
+  </ornamented>
+
+  <subsection|Finding a basis for the set of solutions>
+
+  <\equation*>
+    y<rprime|''>+p<around*|(|x|)>*y<rprime|'>+q<around*|(|x|)>*y=0
+  </equation*>
+
+  If <math|p<around*|(|x|)>,q<around*|(|x|)>> are <with|font-series|bold|not>
+  constant functions, this can be difficult.
+
+  There are some special situations for which we can use certain tricks to
+  solve.
+
+  <subsubsection|When one solution is known>
+
+  Imagine we somehow know one non-zero solution and want to find a second
+  solution which is linearly independent.
+
+  Suppose <math|y<rsub|1>> solves our ODE. We want <math|y<rsub|2>> which is
+  <with|font-series|bold|not> a multiple of <math|y<rsub|1>>. It means that
+  <math|<frac|y<rsub|2>|y<rsub|1>>> is not a constant, but a function,
+  <math|v<around*|(|x|)>>.
+
+  In other words, <math|v<around*|(|x|)>> is non-constant and
+  <math|y<rsub|2><around*|(|x|)>=y<rsub|1><around*|(|x|)>\<cdot\>v<around*|(|x|)>>
+  is a solution. We substitute <math|y<rsub|2>> in the ODE:
+
+  <\equation*>
+    y<rsub|2><rprime|''>+p<around*|(|x|)>*y<rprime|'><rsub|2>+q<around*|(|x|)>*y<rsub|2>=0
+  </equation*>
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|y<rprime|'><rsub|2>>|<cell|=>|<cell|y<rsub|1><rprime|'>*v+y<rsub|1>*v<rprime|'>>>|<row|<cell|y<rsub|2><rprime|''>>|<cell|=>|<cell|y<rsub|1><rprime|''>*v+2y<rsub|1><rprime|'>*v<rprime|'>+y<rsub|1>*v<rprime|''>>>>>
+  </eqnarray*>
+
+  Get
+
+  <\equation*>
+    <around*|(|<with|color|red|y<rsub|1><rprime|''>*v>+<with|color|blue|2y<rsub|1><rprime|'>*v<rprime|'>>+y<rsub|1>*v<rprime|''>*|)>+p<around*|(|x|)>*<around*|(|<with|color|red|y<rsub|1><rprime|'>*v>+<with|color|blue|y<rsub|1>*v<rprime|'>>|)>+q<around*|(|x|)>*<around*|(|<with|color|red|y<rsub|1>*v>|)>=0
+  </equation*>
+
+  Rewrite as
+
+  <\equation*>
+    <with|color|red|<around*|(|y<rsub|1><rprime|''>+p<around*|(|x|)>*y<rprime|'><rsub|1>+q<around*|(|x|)>*y<rsub|1>|)>>*v+<with|color|blue|<around*|(|2y<rsub|1><rprime|'>+p<around*|(|x|)>*y<rsub|1>|)>>*v<rprime|'>+y<rsub|1>*v<rprime|''>=0
+  </equation*>
+
+  The <with|color|red|red> term is equal to zero because <math|y<rsub|1>> is
+  a solution. Let's look at what's left.
+
+  <\equation*>
+    <around*|(|2y<rsub|1><rprime|'>+p*y<rsub|1>|)>v<rprime|'>+y<rsub|1>*v<rprime|''>=0
+  </equation*>
+
+  This is a 2nd order ODE in <math|v>, or a 1st order linear ODE in
+  <math|v<rprime|'>>. Therefore we can find <math|y<rsub|2>> by \Preduction
+  of order\Q.
+
+  <underline|Examples>
+
+  <\enumerate>
+    <item><math|y+y<rprime|''>=0>. Suppose given <math|y<rsub|1>=sin x>. Set
+    <math|y<rsub|2>=y<rsub|1>*v=sin x\<cdot\>v>.
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|y<rprime|'><rsub|2>>|<cell|=>|<cell|cos
+      x\<cdot\>v+sin x\<cdot\>v<rprime|'>>>|<row|<cell|y<rsub|2><rprime|''>>|<cell|=>|<cell|-sin
+      x\<cdot\>v+2*cos x\<cdot\>v<rprime|'>+sin x\<cdot\>v<rprime|''>>>>>
+    </eqnarray*>
+
+    Substitute and get
+
+    <\equation*>
+      <around*|(|<with|color|red|-sin x\<cdot\>v>+2*cos
+      x\<cdot\>v<rprime|'>+sin x\<cdot\>v<rprime|''>|)>+<with|color|red|sin
+      x\<cdot\>v>=0
+    </equation*>
+
+    <\equation*>
+      v<rprime|''>\<cdot\>sin x+2*cos x\<cdot\>v<rprime|'>=0
+    </equation*>
+
+    Set <math|v<rprime|'>=z>.
+
+    <\equation*>
+      z<rprime|'>\<cdot\>sin x+2*cos x\<cdot\>z=0
+    </equation*>
+
+    This is a separable ODE.
+
+    <\equation*>
+      -2cos x\<cdot\>z=<frac|\<mathd\>z|\<mathd\>x>\<cdot\>sin x
+    </equation*>
+
+    <\equation*>
+      -2*<big|int><frac|cos x|sin x> \<mathd\>x=<big|int><frac|\<mathd\>z|z>
+    </equation*>
+
+    <\equation*>
+      -2*ln <around*|\||sin x|\|>=ln <around*|\||z|\|>+c
+    </equation*>
+
+    Take <math|c=0>
+
+    <\equation*>
+      ln<around*|(| sin<rsup|-2> x|)>=ln <around*|\||z|\|>
+    </equation*>
+
+    <\equation*>
+      v<rprime|'>=z=<frac|1|sin <rsup|2> x>\<Rightarrow\>v=cot x <text|is a
+      solution for <math|sin x\<neq\>0>.>
+    </equation*>
+
+    So out second solution is\ 
+
+    <\equation*>
+      y<rsub|2>=sin x\<cdot\>v<around*|(|x|)>=sin x\<cdot\>cot x=cos x
+    </equation*>
+
+    But we can verify <math|cos x> is a solution for all <math|x>, not only
+    when <math|sin x\<neq\>0>.
+
+    <item><math|2x<rsup|2>*y<rprime|''>+3*x*y<rprime|'>-y=0,<application-space|1em>x\<gtr\>0>.
+    By \Pinspection\Q we see that <math|y=<frac|1|x>> is a solution.
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<around*|(|<frac|1|x>|)><rprime|'>>|<cell|=>|<cell|-<frac|1|x<rsup|2>>>>|<row|<cell|<around*|(|<frac|1|x>|)><rprime|''>>|<cell|=>|<cell|<frac|2|x<rsup|3>>>>>>
+    </eqnarray*>
+
+    <\equation*>
+      \<Rightarrow\>2x<rsup|2>\<cdot\><frac|2|x<rsup|3>>+3*x\<cdot\><around*|(|-<frac|1|x<rsup|2>>|)>-<frac|1|x>
+      <above|=|\<checkmark\>> 0
+    </equation*>
+
+    We want <math|v<around*|(|x|)>\<equiv\>C> such that <math|y=<frac|v|x>>
+    is a solution.
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|y<rprime|'>>|<cell|=>|<cell|<frac|v<rprime|'>|x>-<frac|v|x<rsup|2>>>>|<row|<cell|y<rprime|''>>|<cell|=>|<cell|<frac|v<rprime|''>|x>-<frac|2v<rprime|'>|x<rsup|2>>+<frac|2v|x<rsup|3>>>>>>
+    </eqnarray*>
+
+    Substitute in the ODE:
+
+    <\equation*>
+      2x<rsup|2>*<around*|[|<frac|v<rprime|''>|x>-<frac|2v<rprime|'>|x<rsup|2>>+<frac|2v|x<rsup|3>>|]>+3*x*<around*|[|<frac|v<rprime|'>|x>-<frac|v|x<rsup|2>>|]>-<frac|v|x>=0
+    </equation*>
+
+    <\equation*>
+      2x<rsup|2>\<cdot\><frac|v<rprime|''>|x>-v<rprime|'>=0
+    </equation*>
+
+    Set <math|v<rprime|'>=z\<nequiv\>0>.
+
+    <\equation*>
+      2x\<cdot\><frac|\<mathd\>z|\<mathd\>x>=z\<rightarrow\><frac|\<mathd\>z|z>=<frac|\<mathd\>x|2x>
+    </equation*>
+
+    <\equation*>
+      ln <around*|\||z|\|>=ln <sqrt|x>,<application-space|1em>x\<gtr\>0
+    </equation*>
+
+    <\equation*>
+      v<rprime|'>=z=c\<cdot\>x<rsup|1/2>
+    </equation*>
+
+    <\equation*>
+      v<rprime|'>=<frac|2|3>*c\<cdot\>x<rsup|3/2>
+    </equation*>
+
+    Take <math|c=<frac|3|2>>.
+
+    <\equation*>
+      y=<frac|v|x>=<frac|x<rsup|3/2>|x>=<sqrt|x>
+    </equation*>
+
+    Out 2nd linearly independent solution will be <math|<sqrt|x>> and the
+    general solution to our ODE is <math|y=a*<sqrt|x>+b*<frac|1|x>.>
+
+    <item><math|y<rprime|''>-3y<rprime|'>+2y=0>. Note that
+    <math|y=\<mathe\><rsup|x>> is a solution. We use reduction of order to
+    find a second solution: <math|y=\<mathe\><rsup|x>\<cdot\>v<around*|(|x|)>>.
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|y<rprime|'>>|<cell|=>|<cell|\<mathe\><rsup|x>\<cdot\>v+\<mathe\><rsup|x>\<cdot\>v<rprime|'>=\<mathe\><rsup|x><around*|(|v+v<rprime|'>|)>>>|<row|<cell|y<rprime|''>>|<cell|=>|<cell|\<mathe\><rsup|x>*v+2\<mathe\><rsup|x>*v<rprime|'>+\<mathe\><rsup|x>*v<rprime|''>=\<mathe\><rsup|x><around*|(|v+2v<rprime|'>+v<rprime|''>|)>>>>>
+    </eqnarray*>
+
+    Substitute:
+
+    <\equation*>
+      \<mathe\><rsup|x><around*|(|v+2v<rprime|'>+v<rprime|''>|)>-3\<mathe\><rsup|x><around*|(|v+v<rprime|'>|)>+2\<mathe\><rsup|x>*v=0
+    </equation*>
+
+    Divide by <math|\<mathe\><rsup|x>\<neq\>0 \<forall\>x>, rearrange and
+    get:
+
+    <\equation*>
+      v<rprime|''>=v<rprime|'>
+    </equation*>
+
+    <math|v=\<mathe\><rsup|x>> solves the problem, and
+    <math|y=\<mathe\><rsup|2x>> is a 2nd solution.
+
+    Alternative approach: Suppose we start with <math|\<mathe\><rsup|2x>> and
+    want a 2nd solution of the form <math|y=v*\<mathe\><rsup|2x>>.
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|y<rprime|'>>|<cell|=>|<cell|2\<mathe\><rsup|2x>*v+\<mathe\><rsup|2x>*v<rprime|'>>>|<row|<cell|y<rprime|''>>|<cell|=>|<cell|4\<mathe\><rsup|2x>*v+4\<mathe\><rsup|2x>*v<rprime|'>+\<mathe\><rsup|2x>*v<rprime|''>>>>>
+    </eqnarray*>
+
+    <\equation*>
+      <around*|(|4\<mathe\><rsup|2x>*v+4\<mathe\><rsup|2x>*v<rprime|'>+\<mathe\><rsup|2x>*v<rprime|''>|)>-3*<around*|(|2\<mathe\><rsup|2x>*v+\<mathe\><rsup|2x>*v<rprime|'>|)>+2\<mathe\><rsup|2x>*v=0
+    </equation*>
+
+    <\equation*>
+      \<mathe\><rsup|2x>*v<rprime|'>+\<mathe\><rsup|2x>*v<rprime|''>=0
+    </equation*>
+
+    <\equation*>
+      v<rprime|''>=-v<rprime|'>\<Rightarrow\>v<around*|(|x|)>=-c*\<mathe\><rsup|-x>,<application-space|1em><text|take
+      <math|c=-1>>.
+    </equation*>
+
+    <\equation*>
+      y=\<mathe\><rsup|2x>\<cdot\>\<mathe\><rsup|-x>=\<mathe\><rsup|x>
+    </equation*>
+
+    We've got the solution from the first approach.
+
+    <item><math|x<rsup|2>*y<rprime|''>-5x*y+9y=0>. Notice <math|y=x<rsup|3>>
+    is a solution. Want a sol. of form <math|y=x<rsup|3>*v>.
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|y<rprime|'>>|<cell|=>|<cell|3x<rsup|2>*v+x<rsup|3>*v<rprime|'>>>|<row|<cell|y<rprime|''>>|<cell|=>|<cell|6x*v+6x<rsup|2>*v<rprime|'>+x<rsup|3>*v<rprime|''>>>>>
+    </eqnarray*>
+
+    Get
+
+    <\equation*>
+      x<rsup|2>*<around*|(|6x*v+6x<rsup|2>*v<rprime|'>+x<rsup|3>*v<rprime|''>|)>-5x*<around*|(|3x<rsup|2>*v+x<rsup|3>*v<rprime|'>|)>+9x<rsup|3>*v=0
+    </equation*>
+
+    <\equation*>
+      x<rsup|4>*v<rprime|'>+x<rsup|5>*v<rprime|''>=0
+    </equation*>
+
+    Assuming <math|x\<neq\>0>, get
+
+    <\equation*>
+      v<rprime|'>+x*v<rprime|''>=0
+    </equation*>
+
+    Set <math|z=v<rprime|'>>, solve for <math|z> and finally get
+    <math|v<around*|(|x|)>=ln <around*|\||x|\|>>, <math|y=x<rsup|3>\<cdot\>ln
+    <around*|\||x|\|>>.
+  </enumerate>
+
+  <marginal-note|normal|c|lec 8 28.11.22><underline|Claim>
+
+  Given a linear homogeneous ODE of order <math|n>,
+
+  <\equation*>
+    y<rsup|<around*|(|n|)>>+p<rsub|n-1><around*|(|x|)>*y<rsup|<around*|(|n-1|)>>+\<cdots\>+p<rsub|1><around*|(|x|)>*y<rprime|'>+p<rsub|0><around*|(|x|)>*y=0
+  </equation*>
+
+  the set of solutions is a vector space of functions of dimension <math|n>.
+
+  <underline|Proof>
+
+  For <math|n=2> we've already proved. It is easy to see it is a subspace \V
+  showing dim. is <math|n> is similar to case we did for <math|n=2>.
+
+  <subsubsection|All coefficients are constants>
+
+  All coeffs are constants: <math|\<forall\>k>:
+  <math|p<rsub|k><rsup|><around*|(|x|)>\<equiv\>a<rsub|k>\<in\>\<bbb-R\>>.
+
+  Rewrite ODE as
+
+  <\equation*>
+    a<rsub|n>*y<rsup|<around*|(|n|)>>+a<rsub|n-1>*y<rsup|<around*|(|n-1|)>>+\<cdots\>+a<rsub|0>*y=0,<application-space|1em>a<rsub|n>\<neq\>0
+  </equation*>
+
+  <underline|Example>: <math|y<rprime|''>-y<rprime|'>=0>.
+
+  Clearly the <math|y\<equiv\>1> and <math|y=\<mathe\><rsup|x>> are both
+  solutions and are linearly independent. Therefore, they form a basis for
+  the space of solutions. Given ICs <math|y<around*|(|0|)>=1,y<rprime|'><around*|(|0|)>=0>,
+  we can construct the general solution as a linear combination of our basis:
+
+  <\equation*>
+    General sol.\<nospace\><application-space|1em>y=a+b*\<mathe\><rsup|x>
+  </equation*>
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|1>|<cell|=>|<cell|y<around*|(|0|)>=a+b>>|<row|<cell|0>|<cell|=>|<cell|y<rprime|'><around*|(|0|)>=b>>>>
+  </eqnarray*>
+
+  So we get \ <math|a=1,b=0> and the unique solution is <math|y\<equiv\>1>.
+
+  <underline|Another example>: <math|y<rprime|''>-2y<rprime|'>-15y=0>. It
+  makes sense to guess a solution of the form
+  <math|y=\<mathe\><rsup|\<lambda\>*x>>. Then:
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|y<rprime|'>>|<cell|=>|<cell|\<lambda\>\<mathe\><rsup|\<lambda\>x>>>|<row|<cell|y<rprime|''>>|<cell|=>|<cell|\<lambda\><rsup|2>\<mathe\><rsup|\<lambda\>x>>>>>
+  </eqnarray*>
+
+  Substitute and get
+
+  <\equation*>
+    \<lambda\><rsup|2>\<mathe\><rsup|\<lambda\>x>-2\<lambda\>\<mathe\><rsup|\<lambda\>x>-15\<mathe\><rsup|\<lambda\>x>=0
+  </equation*>
+
+  <\equation*>
+    \<mathe\><rsup|\<lambda\>x>*<around*|(|\<lambda\><rsup|2>-2\<lambda\>-15|)>=0
+  </equation*>
+
+  <math|\<mathe\><rsup|\<lambda\>x>> is a solution
+  <math|\<Longleftrightarrow\>> <math|\<lambda\><rsup|2>-2\<lambda\>-15=0>.
+  Solve the quadratic equation:
+
+  <\equation*>
+    <frac|2\<pm\><sqrt|4+60>|2>=<frac|2\<pm\>8|2>=<choice|<tformat|<table|<row|<cell|5>>|<row|<cell|-3>>>>>
+  </equation*>
+
+  The solutions <math|\<mathe\><rsup|-3x>> and <math|\<mathe\><rsup|5x>> are
+  both linearly independent solutions! So the general solution will be
+  <math|y=a*\<mathe\><rsup|-3x>+b*\<mathe\><rsup|5x>>.
+
+  In the previous example, we would have gotten <math|y\<equiv\>1> using the
+  method above by finding that <math|\<lambda\>=0>.
+
+  <\ornamented>
+    <underline|General case>
+
+    Given: <math|a<rsub|n>*y<rsup|<around*|(|n|)>>+a<rsub|n-1>*y<rsup|<around*|(|n-1|)>>+\<cdots\>+a<rsub|0>*y=0,<application-space|1em>a<rsub|n>\<neq\>0>
+    we look for solutions of the form <math|\<mathe\><rsup|\<lambda\>x>> and
+    get:
+
+    <\equation*>
+      y<rsup|<around*|(|k|)>><around*|(|x|)>=\<lambda\><rsup|k>*\<mathe\><rsup|\<lambda\>x><application-space|1em>\<forall\>x
+    </equation*>
+
+    And when we substitute in the ODE:
+
+    <\equation*>
+      \<mathe\><rsup|\<lambda\>x>*<around*|(|a<rsub|n>*\<lambda\><rsup|n>+a<rsub|n-1>*\<lambda\><rsup|n-1>+\<cdots\>+a<rsub|1>*\<lambda\>+a<rsub|0>|)>=0
+    </equation*>
+
+    Then <math|\<mathe\><rsup|\<lambda\>x>> is a solution if and only if
+    <math|><math|a<rsub|n>*\<lambda\><rsup|n>+a<rsub|n-1>*\<lambda\><rsup|n-1>+\<cdots\>+a<rsub|1>*\<lambda\>+a<rsub|0>=0>.
+    (This equation is also called the <with|font-shape|italic|characteristic
+    polynomial of the ODE>.)
+
+    If the polynomial has <math|n> distinct solutions
+    <math|\<lambda\><rsub|1>,\<ldots\>,\<lambda\><rsub|n>> then
+    <math|\<mathe\><rsup|\<lambda\><rsub|1>x>,\<ldots\>,\<mathe\><rsup|\<lambda\><rsub|n>x>>
+    are <math|n> linearly independent solutions and form a basis for space of
+    solutions.
+  </ornamented>
+
+  <underline|Example: 3rd order ODE>
+
+  <\equation*>
+    y<rsup|<around*|(|3|)>>-6y<rprime|''>+11y<rprime|'>-6=0
+  </equation*>
+
+  A trick to solve cubic equations: if you can find one solution
+  <math|\<lambda\><rsub|0>> then you get an equation of the form
+  <math|<around*|(|\<lambda\>-\<lambda\><rsub|0>|)><around*|(|<text|quadratic
+  equation>|)>>. So check if <math|<rigid|\<lambda\>=0,\<pm\>1,\<pm\>2,\<ldots\>>>
+  are solutions and the problem might be simplified.
+
+  In this case we need to solve
+
+  <\equation*>
+    \<lambda\><rsup|3>-6\<lambda\><rsup|2>+11\<lambda\>-6=0
+  </equation*>
+
+  Setting <math|\<lambda\>=1>: <math|1-6+11-6
+  <above|<above|<above|=|\<checkmark\>>|>|><rsup|> 0 >.
+
+  <\equation*>
+    \<lambda\><rsup|3>-6\<lambda\><rsup|2>+11\<lambda\>-6=<around*|(|\<lambda\>-1|)>*<around*|(|\<lambda\><rsup|2>-5\<lambda\>+6|)>=<around*|(|\<lambda\>-1|)>*<around*|(|\<lambda\>-2|)>*<around*|(|\<lambda\>-3|)>
+  </equation*>
+
+  The general solution is <math|y=a*\<mathe\><rsup|x>+b*\<mathe\><rsup|2x>+c*\<mathe\><rsup|3x>>.
+
+  \;
+
+  <underline|Example: The characteristic polynomial does not have <math|n>
+  distinct roots>
+
+  We still need <math|n> linearly independent solutions. What do we do?
+
+  <\equation*>
+    y<rprime|''>-4y<rprime|'>+4y=0
+  </equation*>
+
+  The characteristic polynomial is <math|\<lambda\><rsup|2>-4\<lambda\>+4=<around*|(|\<lambda\>-2|)><rsup|2>>.
+  Our method yields only one exponential function: <math|\<mathe\><rsup|2x>>.
+
+  We look for a second linearly independent solution. We want a non-constant
+  function <math|v<around*|(|x|)>> such that
+  <math|y=\<mathe\><rsup|2x>*v<around*|(|x|)>> solves the ODE.
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|y<rprime|'>>|<cell|=>|<cell|2\<mathe\><rsup|2x>*v<around*|(|x|)>+\<mathe\><rsup|2x>*v<rprime|'><around*|(|x|)>=\<mathe\><rsup|2x>*<around*|(|2v+v<rprime|'>|)>>>|<row|<cell|y<rprime|''>>|<cell|>|<cell|2\<mathe\><rsup|2x>*<around*|(|2v+v<rprime|'>|)>+\<mathe\><rsup|2x>*<around*|(|2v<rprime|'>+v<rprime|''>|)>=\<mathe\><rsup|2x>*<around*|(|4v+4v<rprime|'>+v<rprime|''>|)>>>>>
+  </eqnarray*>
+
+  <\equation*>
+    <neg|\<mathe\><rsup|2x>>*<around*|(|4v+4v<rprime|'>+v<rprime|''>|)>-4<neg|\<mathe\><rsup|2x>>*<around*|(|2v+v<rprime|'>|)>+4<neg|\<mathe\><rsup|2x>>*v=0
+  </equation*>
+
+  <\equation*>
+    v<rprime|''>=0\<Rightarrow\><text|<math|v> is linear in <math|x>>
+  </equation*>
+
+  So take <math|v=x> and get <around*|{|<math|\<mathe\><rsup|2x>,x*\<mathe\><rsup|2x>>|}>
+  is the basis for set of solutions.
+
+  <\ornamented>
+    <underline|In general>
+
+    If <math|\<lambda\><rsub|0>> is a root of the characteristic polynomial
+    of multiplicity <math|r>, then <math|<rigid|\<mathe\><rsup|\<lambda\>x>,x*\<mathe\><rsup|\<lambda\>x>,x<rsup|2>*\<mathe\><rsup|\<lambda\>x>,\<ldots\>,x<rsup|r-1>*\<mathe\><rsup|\<lambda\>x>>>
+    will all solve the ODE and are linearly independent, and will be linearly
+    independent of solutions we obtain from other roots of the characteristic
+    polynomial.
+  </ornamented>
+
+  <underline|Example>: Suppose we know that the char. poly. factors as
+  <math|\<lambda\><rsup|3>*<around*|(|\<lambda\>+3|)><rsup|2>*<around*|(|\<lambda\>-1|)><rsup|2>>:
+  A 7th order linear ODE.\ 
+
+  <\itemize>
+    <item>From <math|\<lambda\>=0> we get the solutions:
+    <math|y=1,x,x<rsup|2>>.
+
+    <item>From <math|\<lambda\>=3> we get the solutions:
+    <math|y=\<mathe\><rsup|-3x>,x*\<mathe\><rsup|-3x>>.
+
+    <item>From <math|\<lambda\>=1> we get the solutions
+    <math|y=\<mathe\><rsup|x>,x*\<mathe\><rsup|x>>.
+  </itemize>
+
+  <underline|Solution of polynomial equations>
+
+  <\equation*>
+    a<rsub|n>*\<lambda\><rsup|n>+a<rsub|n-1>*\<lambda\><rsup|n-1>+\<cdots\>+a<rsub|1>*\<lambda\>+a<rsub|0>=0
+  </equation*>
+
+  There are <with|font-series|bold|no> formulas that give the roots of
+  polynomials (in general) for <math|n\<geq\>5>, in terms of the
+  coefficients.
+
+  <underline|Fundamental thm. of Algebra>
+
+  Every polynomial equation over <math|\<bbb-C\>> has <math|n> solutions
+  including multiplicities.
+
+  What do we do if the roots of the char. poly. are non-real?
+
+  \;
+
+  <\session|matlab|default>
+    \;
+  </session>
 </body>
 
 <\initial>
@@ -2186,128 +2871,150 @@
 
 <\references>
   <\collection>
-    <associate|auto-1|<tuple|I|1>>
-    <associate|auto-10|<tuple|3|10>>
-    <associate|auto-11|<tuple|4|13>>
-    <associate|auto-12|<tuple|4.1|13>>
-    <associate|auto-13|<tuple|4.1.1|14>>
-    <associate|auto-14|<tuple|4.2|17>>
-    <associate|auto-15|<tuple|4.2.1|22>>
-    <associate|auto-16|<tuple|4.2.2|23>>
-    <associate|auto-17|<tuple|4.3|25>>
-    <associate|auto-18|<tuple|4.3.1|25>>
-    <associate|auto-19|<tuple|4.3.2|27>>
-    <associate|auto-2|<tuple|1|1>>
-    <associate|auto-20|<tuple|4.4|29>>
-    <associate|auto-21|<tuple|4.4.1|32>>
-    <associate|auto-22|<tuple|5|32>>
-    <associate|auto-23|<tuple|5.1|32>>
-    <associate|auto-3|<tuple|2|3>>
-    <associate|auto-4|<tuple|2.1|3>>
-    <associate|auto-5|<tuple|2.2|3>>
-    <associate|auto-6|<tuple|2.3|4>>
-    <associate|auto-7|<tuple|2.4|4>>
-    <associate|auto-8|<tuple|2.5|5>>
-    <associate|auto-9|<tuple|II|9>>
-    <associate|exponential-identities|<tuple|1|5>>
-    <associate|first-order-const-ode|<tuple|2|13>>
+    <associate|auto-1|<tuple|?|2>>
+    <associate|auto-10|<tuple|2|11>>
+    <associate|auto-11|<tuple|I|14>>
+    <associate|auto-12|<tuple|1|15>>
+    <associate|auto-13|<tuple|1.1|15>>
+    <associate|auto-14|<tuple|2|18>>
+    <associate|auto-15|<tuple|2.1|23>>
+    <associate|auto-16|<tuple|2.2|24>>
+    <associate|auto-17|<tuple|II|26>>
+    <associate|auto-18|<tuple|3|26>>
+    <associate|auto-19|<tuple|3.1|26>>
+    <associate|auto-2|<tuple|?|2>>
+    <associate|auto-20|<tuple|3.2|28>>
+    <associate|auto-21|<tuple|4|30>>
+    <associate|auto-22|<tuple|4.1|33>>
+    <associate|auto-23|<tuple|5|33>>
+    <associate|auto-24|<tuple|5.1|33>>
+    <associate|auto-25|<tuple|5.2|36>>
+    <associate|auto-26|<tuple|5.2.1|36>>
+    <associate|auto-27|<tuple|5.2.2|40>>
+    <associate|auto-3|<tuple|3|4>>
+    <associate|auto-4|<tuple|3|4>>
+    <associate|auto-5|<tuple|3|4>>
+    <associate|auto-6|<tuple|3|5>>
+    <associate|auto-7|<tuple|3|5>>
+    <associate|auto-8|<tuple|3|6>>
+    <associate|auto-9|<tuple|2|10>>
+    <associate|exponential-identities|<tuple|1|6>>
+    <associate|first-order-const-ode|<tuple|2|14>>
+    <associate|homo-2nd|<tuple|3|34>>
   </collection>
 </references>
 
 <\auxiliary>
   <\collection>
     <\associate|toc>
-      <vspace*|2fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-size|<quote|1.19>|I<space|2spc>Complex
-      numbers and complex functions> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <vspace*|2fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-size|<quote|1.19>|Preface:
+      Complex numbers and functions> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-1><vspace|1fn>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Recollections
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Recollections
       and definitions> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-2><vspace|0.5fn>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Complex
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Complex
       analysis> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-3><vspace|0.5fn>
 
-      <with|par-left|<quote|1tab>|2.1<space|2spc>Limit of a complex sequence
+      <with|par-left|<quote|1tab>|Limit of a complex sequence
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-4>>
 
-      <with|par-left|<quote|1tab>|2.2<space|2spc>Limit of a series of complex
-      numbers <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|Limit of a series of complex numbers
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-5>>
 
-      <with|par-left|<quote|1tab>|2.3<space|2spc>Complex (and analytic)
-      functions <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|Complex (and analytic) functions
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-6>>
 
-      <with|par-left|<quote|1tab>|2.4<space|2spc>Reminder: Taylor series
+      <with|par-left|<quote|1tab>|Reminder: Taylor series
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-7>>
 
-      <with|par-left|<quote|1tab>|2.5<space|2spc>Taylor theorem for analytic
-      functions <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|Taylor theorem for analytic functions
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-8>>
 
-      <vspace*|2fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-size|<quote|1.19>|II<space|2spc>Differential
+      <vspace*|2fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-size|<quote|1.19>|Differential
       equations> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-9><vspace|1fn>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Definitions>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Definitions>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-10><vspace|0.5fn>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>First
+      <vspace*|2fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-size|<quote|1.19>|I<space|2spc>First
       order ODEs> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-11><vspace|0.5fn>
+      <no-break><pageref|auto-11><vspace|1fn>
 
-      <with|par-left|<quote|1tab>|4.1<space|2spc>Linear ODEs
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-12>>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Linear
+      ODEs> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-12><vspace|0.5fn>
 
-      <with|par-left|<quote|2tab>|4.1.1<space|2spc>Integrating factors
-      method: (due to Leibniz) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|1.1<space|2spc>Integrating factors method:
+      (due to Leibniz) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-13>>
 
-      <with|par-left|<quote|1tab>|4.2<space|2spc>Separable ODEs
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-14>>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|2<space|2spc>Separable
+      ODEs> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-14><vspace|0.5fn>
 
-      <with|par-left|<quote|2tab>|4.2.1<space|2spc>Autonomous ODEs
+      <with|par-left|<quote|1tab>|2.1<space|2spc>Autonomous ODEs
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-15>>
 
-      <with|par-left|<quote|2tab>|4.2.2<space|2spc>Verhulst's Model (1845)
+      <with|par-left|<quote|1tab>|2.2<space|2spc>Verhulst's Model (1845)
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-16>>
 
-      <with|par-left|<quote|1tab>|4.3<space|2spc>Special 2nd order ODEs
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-17>>
+      <vspace*|2fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-size|<quote|1.19>|II<space|2spc>Second
+      Order ODEs> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-17><vspace|1fn>
 
-      <with|par-left|<quote|2tab>|4.3.1<space|2spc>2nd order ODE where the
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Special
+      2nd order ODEs> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-18><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|3.1<space|2spc>2nd order ODE where the
       dependent variable doesn't appear <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-18>>
-
-      <with|par-left|<quote|2tab>|4.3.2<space|2spc>2nd order autonomous ODE
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-19>>
 
-      <with|par-left|<quote|1tab>|4.4<space|2spc>Existence and uniqueness
-      theorem for first order ODEs <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|3.2<space|2spc>2nd order autonomous ODE
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-20>>
 
-      <with|par-left|<quote|2tab>|4.4.1<space|2spc>Existence and uniqueness
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|4<space|2spc>Existence
+      and uniqueness theorem for first order ODEs>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-21><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|4.1<space|2spc>Existence and uniqueness
       theorem for higher order ODEs <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-21>>
+      <no-break><pageref|auto-22>>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|5<space|2spc>Second
       order linear ODEs> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-22><vspace|0.5fn>
+      <no-break><pageref|auto-23><vspace|0.5fn>
 
       <with|par-left|<quote|1tab>|5.1<space|2spc>Homogeneous ODEs
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-23>>
+      <no-break><pageref|auto-24>>
+
+      <with|par-left|<quote|1tab>|5.2<space|2spc>Finding a basis for the set
+      of solutions <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-25>>
+
+      <with|par-left|<quote|2tab>|5.2.1<space|2spc>When one solution is known
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-26>>
+
+      <with|par-left|<quote|2tab>|5.2.2<space|2spc>All coefficients are
+      constants <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-27>>
     </associate>
   </collection>
 </auxiliary>
