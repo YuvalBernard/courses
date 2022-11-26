@@ -1,2 +1,2 @@
 # weizmann
-This repo contains rotations and courses.
+This repo contains courses taken at Weizmann Institute of Science.
