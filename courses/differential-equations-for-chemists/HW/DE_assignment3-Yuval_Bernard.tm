@@ -1,4 +1,4 @@
-<TeXmacs|2.1>
+<TeXmacs|2.1.2>
 
 <style|<tuple|generic|SIUnits-simple>>
 
@@ -39,7 +39,7 @@
 
   <with|gr-mode|<tuple|edit|math-at>|gr-frame|<tuple|scale|1cm|<tuple|0gw|0gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|cartesian|<point|0|0>|2>|gr-grid-old|<tuple|cartesian|<point|0|0>|2>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|cartesian|<point|0|0>|2>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|2>|gr-color|red|gr-auto-crop|true|<graphics||<math-at|t|<point|14|3.5>>|<math-at|y|<point|1.0|8.4>>|<math-at|4|<point|0.6|8>>|<with|arrow-end|\<gtr\>|<line|<point|1|0>|<point|1.0|8.0>>>|<with|arrow-end|\<gtr\>|<line|<point|1|4>|<point|14.0|4.0>>>|<with|color|blue|<line|<point|2|8>|<point|2.2|7.4>>>|<with|color|blue|<line|<point|2|6.6>|<point|2.6|6.0>>>|<with|color|blue|<line|<point|2|5.2>|<point|2.8|4.8>>>|<with|color|blue|<line|<point|2|4.2>|<point|2.8|4.2>>>|<with|color|blue|<line|<point|2|3.4>|<point|2.8|3.8>>>|<with|color|blue|<line|<point|2|2.6>|<point|2.6|3.2>>>|<with|color|blue|<line|<point|2|1.4>|<point|2.31974726353648|2.2>>>|<with|color|blue|<line|<point|4|8>|<point|4.6|7.2>>>|<with|color|blue|<line|<point|4|6.6>|<point|4.8|6.2>>>|<with|color|blue|<line|<point|4|5.2>|<point|5.0|5.0>>>|<with|color|blue|<line|<point|4|3.4>|<point|5.2|3.6>>>|<with|color|blue|<line|<point|4|2.4>|<point|5.2|3.0>>>|<with|color|blue|<line|<point|4|1.2>|<point|4.8|2.0>>>|<with|color|blue|<line|<point|6|8>|<point|6.8|7.6>>>|<with|color|blue|<line|<point|6|7>|<point|6.8|6.8>>>|<with|color|blue|<line|<point|6|5.4>|<point|7.0|5.4>>>|<with|color|blue|<line|<point|6|4.4>|<point|7.2|4.8>>>|<with|color|blue|<line|<point|6|3>|<point|6.6|3.6>>>|<with|color|blue|<line|<point|6|1.6>|<point|6.4|2.6>>>|<with|color|blue|<line|<point|8.2|6.8>|<point|9.2|6.4>>>|<with|color|blue|<line|<point|8.2|8>|<point|8.8|7.2>>>|<with|color|blue|<line|<point|8.2|1.72433>|<point|8.4|2.6>>>|<with|color|blue|<line|<point|8|3>|<point|8.8|3.6>>>|<with|color|blue|<line|<point|8.2|4>|<point|9.4|4.4>>>|<with|color|red|dash-style|10|<smooth|<point|1|4.6>|<point|2.0|4.2>|<point|3.2|4.2>|<point|4.4|4.6>|<point|7.0|5.4>>>|<with|color|red|dash-style|10|<smooth|<point|7|5.4>|<point|9.6|6.2>>>|<with|color|blue|<smooth|<point|9.8|6.2>|<point|10.8|6.2>>>|<with|color|blue|<smooth|<point|8.6|5>|<point|9.6|5.2>>>|<with|color|red|<math-at|y=<frac|1|3><around*|(|t+\<mathe\><rsup|-2t>|)>|<point|9.6|6.6>>>>>
 
-  (b) Inspecting the direction field suggests that
+  (b) Inspection of the direction field suggests that
   <math|y\<rightarrow\>\<infty\>> as <math|t\<rightarrow\>\<infty\>>, and
   grows in a linear fashion.
 
@@ -179,8 +179,8 @@
     y<around*|(|1|)>=<frac|1|2>=<frac|1|4>-<frac|1|3>+<frac|1|2>+c\<rightarrow\>c=<frac|1|12>
   </equation*>
 
-  The unique solution is <math|y=<frac|t<rsup|2>|4>-<frac|t|3>+<frac|1|2>+<frac|1|12t<rsup|2>>>,
-  <math|t\<gtr\>0>.
+  The unique solution is <math|y=<frac|t<rsup|2>|4>-<frac|t|3>+<frac|1|2>+<frac|1|12t<rsup|2>>>
+  in the domain <math|t\<gtr\>0>.
 
   <underline|Question 18>
 
@@ -218,7 +218,7 @@
   The general solution is
 
   <\equation*>
-    y=-<frac|cos t|t>+<frac|sin t|t<rsup|2>>+<frac|c|t<rsup|2>>,<application-space|1em>t\<gtr\>0
+    y=-<frac|cos t|t>+<frac|sin t|t<rsup|2>>+<frac|c|t<rsup|2>>,<application-space|1em>t\<neq\>0
   </equation*>
 
   Input the IC:
@@ -228,8 +228,8 @@
   </equation*>
 
   The unique solution is <math|y=-<frac|cos t|t>+<frac|sin
-  t|t<rsup|2>>+<around*|(|<frac|\<mathpi\><rsup|2>|4>-1|)><frac|1|t<rsup|2>>>,
-  <math|t\<gtr\>0>.
+  t|t<rsup|2>>+<around*|(|<frac|\<mathpi\><rsup|2>|4>-1|)><frac|1|t<rsup|2>>>
+  in the domain <math|t\<gtr\>0>.
 
   <underline|Question 19>
 
@@ -237,8 +237,8 @@
     t<rsup|3>*y<rprime|'>+4t<rsup|2>*y=\<mathe\><rsup|-t>,<application-space|1em>y<around*|(|-1|)>=0
   </equation*>
 
-  For the given IC, <math|t\<less\>0>. To find the specific solution we
-  divide by <math|t<rsup|3>>, assuming <math|t\<neq\>0>.
+  In the given IC, <math|t\<less\>0>. To find the specific solution we divide
+  by <math|t<rsup|3>>, assuming <math|t\<neq\>0>.
 
   <\equation*>
     y<rprime|'>+<frac|4|t>*y=<frac|1|t<rsup|3>>*\<mathe\><rsup|-t>
@@ -329,15 +329,18 @@
   Back to the original equation:
 
   <\equation*>
-    <big|int><frac|\<mathd\>y|cos<rsup|2> 2y>=<frac|1|2>*tan
-    2x=<frac|1|2><around*|(|x+<frac|1|2>*sin 2x+c|)>
+    <big|int><frac|\<mathd\>y|cos<rsup|2> <around*|(|2y|)>>=<frac|1|2>*tan
+    2y=<frac|1|2><around*|(|x+<frac|1|2>*sin 2x+c|)>
   </equation*>
 
   <\equation*>
     tan 2y=x+<frac|1|2>*sin 2x+c,<application-space|1em>cos 2y\<neq\>0
   </equation*>
 
-  The solution is given implicitly.
+  <\equation*>
+    y=<frac|1|2>*arctan<around*|(|x+<frac|1|2>*sin
+    2x+c|)>,<application-space|1em>cos 2y\<neq\>0
+  </equation*>
 
   What if <math|cos<rsup|2> 2y\<equiv\>0>?
 
@@ -349,7 +352,8 @@
     y=<frac|\<mathpi\>|4>+<frac|\<mathpi\>|2>\<cdot\>n,<application-space|1em>n\<in\>\<bbb-Z\>,<application-space|1em>\<forall\>x
   </equation*>
 
-  This is also a solution.
+  Because for this <math|y>, <math|<frac|\<mathd\>y|\<mathd\>x>=0<space|1em>\<forall\>x>,
+  this is also a solution.
 
   <underline|Question 8>
 
@@ -425,8 +429,16 @@
 
   <underline|Question 1>
 
-  Denote <math|y<around*|(|t|)>> the dye concentration in the tank. The
+  Denote <math|y<around*|(|t|)>> as the dye concentration in the tank. The
   equation for <math|y<rprime|'><around*|(|t|)>> is as follows:
+
+  <\equation*>
+    y<rprime|'><around*|(|t|)>=-<around*|(|<text|rate of water flowing
+    in>|)>\<cdot\><frac|<around*|(|<text|initial dye
+    concentration>|)>|<text|(total transient volume)>>*y<around*|(|t|)>
+  </equation*>
+
+  Input the numbers:
 
   <\equation*>
     y<rprime|'><around*|(|t|)>=-<SI|2|L/min>\<cdot\><frac|<SI|1|g|L<rsup|-1>>|<SI|200|L>>\<cdot\>y<around*|(|t|)>=-0.01y<around*|(|t|)>,<application-space|1em>y<around*|(|0|)>=<SI|1|g|L<rsup|-1>>
@@ -452,6 +464,13 @@
   <underline|Question 4>
 
   Write the DE for the amount of salt in the tank (<math|y<around*|(|t|)>>):
+
+  <\equation*>
+    y<rprime|'><around*|(|t|)>=<text|(rate of salt flowing in)(con. of salt)
+    >-<text| (rate of salt flowing out)(con. of salt) >
+  </equation*>
+
+  Input the numbers:
 
   <\eqnarray*>
     <tformat|<table|<row|<cell|y<rprime|'><around*|(|t|)>>|<cell|=>|<cell|<SI|1|lb/gal>\<cdot\><SI|3|gal/min>-<SI|2|gal/min>\<cdot\><frac|y<around*|(|t|)>|<SI|200|gal>+<SI|1|gal/min>\<cdot\>t>>>|<row|<cell|y<rprime|'><around*|(|t|)>>|<cell|=>|<cell|3-<frac|2y<around*|(|t|)>|200+t>>>>>

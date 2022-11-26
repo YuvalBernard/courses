@@ -5,12 +5,17 @@ T1 = 1; % s
 T2 = 5e-3; %s
 w1 = 750; % Hz; gamma*H1
 dw = 2500; % Hz; gamma*H0-w
-t = linspace(0,1,10000)';
-
+t = linspace(0,7,10000)';
 [Mz,Mx,My] = bloch(t,T1,T2,w1,dw);
-[t_ss,Mz_ss, Mzfit] = blochSS(t,Mz);
+[t_ss,Mz_ss] = blochSS(t,Mz);
 figure; plot(t,Mz,'b-','LineWidth',2); hold on; plot(t_ss,Mz_ss,'r.','MarkerSize',24)
 figure; plot(t,Mx,t,My,t,Mz); legend('Mx','My','Mz')
+
+%% Compare numerical and analytical solutions
+R1 = 1/T1; % s^-1
+R2 = 1/T2; % s^-1
+Mz0 = 1; % initial z-magnetization
+Anal_Mz_ss = Mz0*(R1*(R2^2+dw^2))/(R1*(R2^2+dw^2)+w1^2*R2);
 
 %% Change T1
 close all; clc; clear
@@ -98,11 +103,10 @@ close all; clc; clear
 T1 = 1;
 T2 = 20e-3;
 t = linspace(0,7,100)';
-dw = linspace(0,2500);
-w1 = linspace(0,150);
+dw = linspace(0,2500); 
+w1 = linspace(0,150); 
 [DW, W1] = meshgrid(dw,w1);
 [t_ss,Mz_ss] = arrayfun(@(w1,dw) blochSS(t,bloch(t,T1,T2,w1,dw)), W1, DW);
-
 %%%%% Mz_ss %%%%%%
 
 % figure
