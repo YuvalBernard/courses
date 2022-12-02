@@ -1,4 +1,4 @@
-<TeXmacs|2.1.2>
+<TeXmacs|2.1>
 
 <style|<tuple|course|SIUnits-simple|python>>
 
@@ -2740,15 +2740,30 @@
 
     Then <math|\<mathe\><rsup|\<lambda\>x>> is a solution if and only if
     <math|><math|a<rsub|n>*\<lambda\><rsup|n>+a<rsub|n-1>*\<lambda\><rsup|n-1>+\<cdots\>+a<rsub|1>*\<lambda\>+a<rsub|0>=0>.
-    (This equation is also called the <with|font-shape|italic|characteristic
+    (This polynomial is also called the <with|font-shape|italic|characteristic
     polynomial of the ODE>.)
 
-    If the polynomial has <math|n> distinct solutions
+    If the polynomial has <math|n> distinct (real of complex) solutions
     <math|\<lambda\><rsub|1>,\<ldots\>,\<lambda\><rsub|n>> then
     <math|\<mathe\><rsup|\<lambda\><rsub|1>x>,\<ldots\>,\<mathe\><rsup|\<lambda\><rsub|n>x>>
     are <math|n> linearly independent solutions and form a basis for space of
     solutions.
   </ornamented>
+
+  <underline|Fundamental thm. of Algebra (Gauss)>
+
+  Every polynomial equation over <math|\<bbb-C\>> has <math|n> solutions
+  including multiplicities.
+
+  <underline|Solution of polynomial equations>
+
+  <\equation*>
+    a<rsub|n>*\<lambda\><rsup|n>+a<rsub|n-1>*\<lambda\><rsup|n-1>+\<cdots\>+a<rsub|1>*\<lambda\>+a<rsub|0>=0
+  </equation*>
+
+  There are <with|font-series|bold|no> formulas that give the roots of
+  polynomials (in general) for <math|n\<geq\>5>, in terms of the
+  coefficients\<#5E5\>
 
   <underline|Example: 3rd order ODE>
 
@@ -2759,7 +2774,7 @@
   A trick to solve cubic equations: if you can find one solution
   <math|\<lambda\><rsub|0>> then you get an equation of the form
   <math|<around*|(|\<lambda\>-\<lambda\><rsub|0>|)><around*|(|<text|quadratic
-  equation>|)>>. So check if <math|<rigid|\<lambda\>=0,\<pm\>1,\<pm\>2,\<ldots\>>>
+  equation>|)>=0>. So check if <math|<rigid|\<lambda\>=0,\<pm\>1,\<pm\>2,\<ldots\>>>
   are solutions and the problem might be simplified.
 
   In this case we need to solve
@@ -2810,15 +2825,15 @@
   So take <math|v=x> and get <around*|{|<math|\<mathe\><rsup|2x>,x*\<mathe\><rsup|2x>>|}>
   is the basis for set of solutions.
 
-  <\ornamented>
+  <with|ornament-shape|classic|<\ornamented>
     <underline|In general>
 
     If <math|\<lambda\><rsub|0>> is a root of the characteristic polynomial
-    of multiplicity <math|r>, then <math|<rigid|\<mathe\><rsup|\<lambda\>x>,x*\<mathe\><rsup|\<lambda\>x>,x<rsup|2>*\<mathe\><rsup|\<lambda\>x>,\<ldots\>,x<rsup|r-1>*\<mathe\><rsup|\<lambda\>x>>>
+    of multiplicity <math|r>, then <math|<rigid|\<mathe\><rsup|\<lambda\><rsub|0>x>,x*\<mathe\><rsup|\<lambda\><rsub|0>x>,x<rsup|2>*\<mathe\><rsup|\<lambda\><rsub|0>x>,\<ldots\>,x<rsup|r-1>*\<mathe\><rsup|\<lambda\><rsub|0>x>>>
     will all solve the ODE and are linearly independent, and will be linearly
     independent of solutions we obtain from other roots of the characteristic
     polynomial.
-  </ornamented>
+  </ornamented>>
 
   <underline|Example>: Suppose we know that the char. poly. factors as
   <math|\<lambda\><rsup|3>*<around*|(|\<lambda\>+3|)><rsup|2>*<around*|(|\<lambda\>-1|)><rsup|2>>:
@@ -2835,24 +2850,93 @@
     <math|y=\<mathe\><rsup|x>,x*\<mathe\><rsup|x>>.
   </itemize>
 
-  <underline|Solution of polynomial equations>
+  <underline|Example: Roots of the characteristic polynomial are not real>
 
   <\equation*>
-    a<rsub|n>*\<lambda\><rsup|n>+a<rsub|n-1>*\<lambda\><rsup|n-1>+\<cdots\>+a<rsub|1>*\<lambda\>+a<rsub|0>=0
+    y<rprime|''>+y=0
   </equation*>
 
-  There are <with|font-series|bold|no> formulas that give the roots of
-  polynomials (in general) for <math|n\<geq\>5>, in terms of the
-  coefficients.
+  Our method yields the roots of char. poly. <math|x<rsup|2>+1>:
+  <math|\<pm\>\<mathi\>>. Get 2 non-real solutions:
+  <math|\<mathe\><rsup|\<mathi\>x>,\<mathe\><rsup|-\<mathi\>x>>. These span
+  the vector space of all complex solutions.
 
-  <underline|Fundamental thm. of Algebra>
+  We note that the span over <math|\<bbb-C\>>
+  <math|<around*|{|\<mathe\><rsup|\<mathi\>x>,\<mathe\><rsup|-\<mathi\>x>|}>>
+  is a space of dimension 2 of complex functions. We also have 2 real
+  solutions: <math|sin x> and <math|cos x>, that are linearly independent.
+  This means that the span can be written as <math|<around*|{|sin x,cos
+  x|}>>. This meakes sense, as <rigid|<math|\<mathe\><rsup|\<mathi\>x>=cos
+  x+\<mathi\>*sin x>, <math|\<mathe\><rsup|-\<mathi\>x>=cos x-\<mathi\>*sin
+  x>>, and <math|<frac|1|2><around*|(|\<mathe\><rsup|\<mathi\>x>+\<mathe\><rsup|-\<mathi\>x>|)>=cos
+  x,<frac|1|2\<mathi\>><around*|(|\<mathe\><rsup|\<mathi\>x>-\<mathe\><rsup|-\<mathi\>x>|)>=sin
+  x>.
 
-  Every polynomial equation over <math|\<bbb-C\>> has <math|n> solutions
-  including multiplicities.
+  <math|\<mathe\><rsup|\<mathi\>x>,\<mathe\><rsup|-\<mathi\>x>> are in the
+  span of <math|<around*|{|sin x,cos x|}>>, and <math|cos x,sin x> are in the
+  span of <math|<around*|{|\<mathe\><rsup|\<mathi\>x>,\<mathe\><rsup|-\<mathi\>x>|}>>.
+  However, <math|span<rsub|\<bbb-C\>> <around*|{|sin x,cos
+  x|}>\<nsupset\>span<rsub|\<bbb-R\>> <around*|{|sin x,cos x|}>>.
 
-  What do we do if the roots of the char. poly. are non-real?
+  <underline|Note>: if <math|z<around*|(|x|)>> is a complex-valued function
+  solving our ODE, then it can be written as:
 
-  \;
+  <\equation*>
+    z<around*|(|x|)>=u<around*|(|x|)>+\<mathi\>*v<around*|(|x|)>,<application-space|1em>u,v\<in\>\<bbb-R\>
+  </equation*>
+
+  Then we have
+
+  <\equation*>
+    <around*|(|u+\<mathi\>*v|)><rsup|<around*|(|n|)>>+a<rsub|n-1><around*|(|u+\<mathi\>*v|)><rsup|<around*|(|n-1|)>>+\<cdots\>+a<rsub|1><around*|(|u+\<mathi\>*v|)><rprime|'>+a<rsub|0><around*|(|u+\<mathi\>*v|)>=0
+  </equation*>
+
+  <\equation*>
+    u<rsup|<around*|(|n|)>>+\<mathi\>*v<rsup|<around*|(|n|)>>+a<rsub|n-1><around*|(|u<rsup|<around*|(|n-1|)>>+\<mathi\>*v<rsup|<around*|(|n-1|)>>|)>+\<cdots\>+a<rsub|1><around*|(|u<rprime|'>+\<mathi\>*v<rprime|'>|)>+a<rsub|0><around*|(|u+\<mathi\>*v|)>=0
+  </equation*>
+
+  <\equation*>
+    <around*|(|u<rsup|<around*|(|n|)>>+a<rsub|n-1>u<rsup|<around*|(|n-1|)>>+\<cdots\>+a<rsub|1>u<rprime|'>+a<rsub|0>u|)>+\<mathi\>*<around*|(|v<rsup|<around*|(|n|)>>+a<rsub|n-1>v<rsup|<around*|(|n-1|)>>+\<cdots\>+a<rsub|1>v<rprime|'>+a<rsub|0>v|)>=0
+  </equation*>
+
+  This holds for all <math|x> if and only if:
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|u<rsup|<around*|(|n|)>>+a<rsub|n-1>u<rsup|<around*|(|n-1|)>>+\<cdots\>+a<rsub|1>u<rprime|'>+a<rsub|0>u>|<cell|=>|<cell|0>>|<row|<cell|v<rsup|<around*|(|n|)>>+a<rsub|n-1>v<rsup|<around*|(|n-1|)>>+\<cdots\>+a<rsub|1>v<rprime|'>+a<rsub|0>v>|<cell|=>|<cell|0>>>>
+  </eqnarray*>
+
+  Therefore, <math|u<around*|(|x|)>,v<around*|(|x|)>> are
+  <with|font-series|bold|both> real solutions to the ODE.
+
+  Note that if <math|z<around*|(|x|)>> is a complex solution to our ODE, then
+  so is <math|<wide| z|\<bar\>><around*|(|x|)>=u<around*|(|x|)>-\<mathi\>*v<around*|(|x|)>>,
+  as since we have:
+
+  <\equation*>
+    z<rsup|<around*|(|n|)>>+a<rsub|n-1>z<rsup|<around*|(|n-1|)>>+\<cdots\>+a<rsub|1>z<rprime|'>+a<rsub|0>z=0
+  </equation*>
+
+  Since <math|a<rsub|i>\<in\>\<bbb-R\>>, <math|<wide|a|\<bar\>><rsub|i>=a<rsub|i>>.
+  Because:
+
+  <\equation*>
+    <wide|z<rsub|1>\<cdot\>z<rsub|2>|\<bar\>>=<wide|z<rsub|1>|\<bar\>><rsub|>*<wide|z<rsub|2>|\<bar\>>
+  </equation*>
+
+  <\equation*>
+    <wide|z<rsub|1>+z<rsub|2>|\<bar\>>=<wide|z<rsub|1>|\<bar\>>+<wide|z<rsub|2>|\<bar\>>
+  </equation*>
+
+  We get
+
+  <\equation*>
+    <wide|z|\<bar\>><rsup|<around*|(|n|)>>+a<rsub|n-1><wide|z|\<bar\>><rsup|<around*|(|n-1|)>>+\<cdots\>+a<rsub|1><wide|z|\<bar\>><rprime|'>+a<rsub|0><wide|z|\<bar\>>=0
+  </equation*>
+
+  In conclusion, <with|font-series|bold|complex roots come in pairs>. So
+  every complex solution <math|z<around*|(|x|)>> gives rise to another,
+  <math|<wide|z|\<bar\>><around*|(|x|)>>, and these give 2 linearly
+  independent real solutions <math|u<around*|(|x|)>,v<around*|(|x|)>>.
 
   <\session|matlab|default>
     \;
