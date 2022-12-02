@@ -1,4 +1,4 @@
-<TeXmacs|2.1>
+<TeXmacs|2.1.2>
 
 <style|<tuple|course|SIUnits-simple|python>>
 
@@ -2866,7 +2866,7 @@
   is a space of dimension 2 of complex functions. We also have 2 real
   solutions: <math|sin x> and <math|cos x>, that are linearly independent.
   This means that the span can be written as <math|<around*|{|sin x,cos
-  x|}>>. This meakes sense, as <rigid|<math|\<mathe\><rsup|\<mathi\>x>=cos
+  x|}>>. This makes sense, as <rigid|<math|\<mathe\><rsup|\<mathi\>x>=cos
   x+\<mathi\>*sin x>, <math|\<mathe\><rsup|-\<mathi\>x>=cos x-\<mathi\>*sin
   x>>, and <math|<frac|1|2><around*|(|\<mathe\><rsup|\<mathi\>x>+\<mathe\><rsup|-\<mathi\>x>|)>=cos
   x,<frac|1|2\<mathi\>><around*|(|\<mathe\><rsup|\<mathi\>x>-\<mathe\><rsup|-\<mathi\>x>|)>=sin
@@ -2901,9 +2901,9 @@
 
   This holds for all <math|x> if and only if:
 
-  <\eqnarray*>
-    <tformat|<table|<row|<cell|u<rsup|<around*|(|n|)>>+a<rsub|n-1>u<rsup|<around*|(|n-1|)>>+\<cdots\>+a<rsub|1>u<rprime|'>+a<rsub|0>u>|<cell|=>|<cell|0>>|<row|<cell|v<rsup|<around*|(|n|)>>+a<rsub|n-1>v<rsup|<around*|(|n-1|)>>+\<cdots\>+a<rsub|1>v<rprime|'>+a<rsub|0>v>|<cell|=>|<cell|0>>>>
-  </eqnarray*>
+  <\equation*>
+    <choice|<tformat|<table|<row|<cell|u<rsup|<around*|(|n|)>>+a<rsub|n-1>u<rsup|<around*|(|n-1|)>>+\<cdots\>+a<rsub|1>u<rprime|'>+a<rsub|0>u=0>>|<row|<cell|v<rsup|<around*|(|n|)>>+a<rsub|n-1>v<rsup|<around*|(|n-1|)>>+\<cdots\>+a<rsub|1>v<rprime|'>+a<rsub|0>v=0>>>>>
+  </equation*>
 
   Therefore, <math|u<around*|(|x|)>,v<around*|(|x|)>> are
   <with|font-series|bold|both> real solutions to the ODE.
@@ -2938,9 +2938,452 @@
   <math|<wide|z|\<bar\>><around*|(|x|)>>, and these give 2 linearly
   independent real solutions <math|u<around*|(|x|)>,v<around*|(|x|)>>.
 
-  <\session|matlab|default>
+  <marginal-note|normal|c|lec 9 04.12.22><underline|Example: Roots are
+  complex, where the real part is non-zero>
+
+  <\equation*>
+    y<rprime|''>+y<rprime|'>+y=0
+  </equation*>
+
+  Characteristic polynomial is <math|\<lambda\><rsup|2>+\<lambda\>+1>,
+
+  <\equation*>
+    \<lambda\><rsup|2>+\<lambda\>+1=0\<Longleftrightarrow\>\<lambda\>=<frac|-1\<pm\><sqrt|1-4>|3>=<frac|-1\<pm\>\<mathi\><sqrt|3>|2>
+  </equation*>
+
+  We get 2 complex solutions to the ODE: <math|\<mathe\><rsup|<around*|(|-<frac|1|2>+<frac|<sqrt|3>|2>\<mathi\>|)>x>,\<mathe\><rsup|<around*|(|-<frac|1|2>-<frac|<sqrt|3>|2>\<mathi\>|)>x>>.
+  Note that
+
+  <\equation*>
+    \<mathe\><rsup|-<frac|1|2>x>\<cdot\>\<mathe\><rsup|<frac|<sqrt|3>|2>*\<mathi\>*x>=\<mathe\><rsup|-<frac|1|2>x>*<around*|(|cos
+    <frac|<sqrt|3>|2>x+\<mathi\>*sin <frac|<sqrt|3>|2>x|)>
+  </equation*>
+
+  So we get
+
+  <\equation*>
+    <choice|<tformat|<table|<row|<cell|u<around*|(|x|)>=\<mathe\><rsup|-<frac|1|2>x>*cos
+    <frac|<sqrt|3>|2>x>>|<row|<cell|v<around*|(|x|)>=\<mathe\><rsup|-<frac|1|2>x>*sin
+    <frac|<sqrt|3>|2>x>>>>>
+  </equation*>
+
+  are 2 real, linearly independent solutions.
+
+  <\ornamented>
+    Conclude: if <math|z> is a non-real solution to
+    <math|a<rsub|n>\<lambda\><rsup|n>+\<cdots\>+a<rsub|1>\<lambda\>+a<rsub|0>=0>
+    then so is <math|<wide|z|\<bar\>>>, and if we write
+
+    <\equation*>
+      z=\<alpha\>+\<mathi\>*\<beta\>
+    </equation*>
+
+    we get 2 linearly independent real solutions to the ODE:
+
+    <\equation*>
+      <choice|<tformat|<table|<row|<cell|\<mathe\><rsup|\<alpha\>x>*cos
+      \<beta\>>>|<row|<cell|\<mathe\><rsup|\<alpha\>x>*sin \<beta\>>>>>>
+    </equation*>
+  </ornamented>
+
+  <underline|Final case>: the characteristic polynomial has non-real roots
+  which are multiple roots. Then we multiply the solutions we obtained by
+  powers of <math|x>.
+
+  For example,
+
+  <\equation*>
+    y<rsup|<around*|(|4|)>>+2y<rprime|''>+y=0
+  </equation*>
+
+  Characteristic equation is
+
+  <\equation*>
+    \<lambda\><rsup|4>+2\<lambda\><rsup|2>+1=0
+  </equation*>
+
+  <\equation*>
+    <around*|(|\<lambda\><rsup|2>+1|)><rsup|2>=0
+  </equation*>
+
+  roots are <math|\<pm\>i> both of multiplicity 2. Get 4 linearly independent
+  real solutions: <rigid|<math|cos x,sin x,x*cos x,x*sin x>>.
+
+  <\equation*>
+    y=a*cos x+b*sin x+c*x*cos x+d*x*sin x
+  </equation*>
+
+  Let's show these 4 are linearly independent. Assume linear combinations =
+  0. Set <math|x=0> and get <math|a=0>. Set <math|x=\<mathpi\>> and get
+  <math|c=0>. Set <math|x=<frac|\<mathpi\>|2>> and get
+  <math|b+<frac|\<mathpi\>|2>d=0>. Set <math|x=-<frac|\<mathpi\>|2>> and get
+  <math|-b+<frac|\<mathpi\>|2>d=0>. Therefore <math|b,d=0>.
+
+  <\ornamented>
+    <underline|Summarize>
+
+    Suppose the roots of the characteristic polynomial are:
+
+    <underline|real:> <math|\<lambda\><rsub|1>,\<ldots\>,\<lambda\><rsub|k>>
+    of respective multiplicities <math|r<rsub|1>,\<ldots\>,r<rsub|k>>.
+
+    <underline|non-real:>\ 
+
+    <\equation*>
+      <choice|<tformat|<table|<row|<cell|\<mu\><rsub|1>,<wide|\<mu\>|\<bar\>><rsub|1><text|
+      of multiplicity >s<rsub|1>>>|<row|<cell|\<mu\><rsub|2>,<wide|\<mu\>|\<bar\>><rsub|2><text|
+      of multiplicity >s<rsub|2>>>|<row|<cell|\<vdots\>>>|<row|<cell|\<mu\><rsub|\<ell\>>,<wide|\<mu\>|\<bar\>><rsub|\<ell\>><text|
+      of multiplicity >s<rsub|\<ell\>>>>>>>
+    </equation*>
+
+    Then we can obtain <math|r<rsub|1>+\<cdots\>+r<rsub|k>> linearly
+    independent real solutions from <math|\<lambda\><rsub|1>,\<ldots\>,\<lambda\><rsub|k>>
+    and <math|2*<around*|(|s<rsub|1>+\<cdots\>+s<rsub|\<ell\>>|)>> non-real
+    solutions from <math|\<mu\><rsub|1>,<wide|\<mu\>|\<bar\>><rsub|1>,\<ldots\>,\<mu\><rsub|\<ell\>>,<wide|\<mu\>|\<bar\>><rsub|\<ell\>>>.
+  </ornamented>
+
+  <underline|Example>
+
+  Suppose out ODE has a characteristic polynomial which factors as follows:
+
+  <\equation*>
+    <wide*|<around*|(|\<lambda\>-1|)><rsup|3>|\<wide-underbrace\>><rsub|1>*<wide*|<around*|(|\<lambda\>-2|)><rsup|4>*|\<wide-underbrace\>><rsub|2><wide*|<around*|(|\<lambda\><rsup|2>+\<lambda\>+4|)><rsup|3>|\<wide-underbrace\>><rsub|<frac|1\<pm\>\<mathi\>*<sqrt|15>|2>>
+  </equation*>
+
+  The degree of the polynomial is 13. We want 13 linearly independent
+  solutions to the ODE.
+
+  <\itemize>
+    <item><math|\<lambda\>=1>: <math|\<mathe\><rsup|x>,x*\<mathe\><rsup|x>,x<rsup|2>*\<mathe\><rsup|x>>.
+
+    <item><math|\<lambda\>=2>: <math|\<mathe\><rsup|2x>,x*\<mathe\><rsup|2x>,x<rsup|2>*\<mathe\><rsup|2x>,x<rsup|3>*\<mathe\><rsup|2x>>
+
+    <item><math|l=<frac|-1+\<mathi\>*<sqrt|15>|2>>:
+    <math|\<mathe\><rsup|-<frac|1|2>x>cos<around*|(|<frac|<sqrt|15>x|2>|)>>,<math|\<mathe\><rsup|-<frac|1|2>x>sin<around*|(|<frac|<sqrt|15>x|2>|)>,\<mathe\><rsup|-<frac|1|2>x>cos<around*|(|<frac|<sqrt|15>x|2>|)>,x*\<mathe\><rsup|-<frac|1|2>x>*sin<around*|(|<frac|<sqrt|15>x|2>|)>,x<rsup|2>*\<mathe\><rsup|-<frac|1|2>x>*cos<around*|(|<frac|<sqrt|15>x|2>|)>,x<rsup|2>*\<mathe\><rsup|-<frac|1|2>x>*sin<around*|(|<frac|<sqrt|15>x|2>|)>>.
+  </itemize>
+
+  <underline|Example>
+
+  <\equation*>
+    y<rsup|<around*|(|3|)>>-y<rprime|''>+2y<rprime|'>-8y=0
+  </equation*>
+
+  Characteristic equation is\ 
+
+  <\equation*>
+    \<lambda\><rsup|3>-\<lambda\><rsup|2>+2\<lambda\>-8=0
+  </equation*>
+
+  Look for an integer root. <math|\<lambda\>=2> is a root. Factor out
+  <math|\<lambda\>-2>.
+
+  <\equation*>
+    \<lambda\><rsup|3>-\<lambda\><rsup|2>+2\<lambda\>-8=<around*|(|\<lambda\>-2|)><around*|(|\<lambda\><rsup|2>+\<lambda\>+4|)>
+  </equation*>
+
+  <subsection|Non-homogeneous linear ODEs>
+
+  Given a second order ODE of form:
+
+  <\equation*>
+    y<rprime|''>+p<around*|(|x|)>*y<rprime|'>+q<around*|(|x|)>*y=g<around*|(|x|)>,<application-space|1em>g<around*|(|x|)>\<nequiv\>0
+  </equation*>
+
+  Note that sums and multiples of solutions will <with|font-series|bold|not>
+  solve our equation!
+
+  So the set of all solutions is <with|font-series|bold|not> a vector space.
+
+  <underline|Claim>: If <math|y<rsub|1>,y<rsub|2>> both solve the ODE then
+  <math|y<rsub|1>-y<rsub|2>> solves the associated homogeneous equation.
+
+  <underline|Proof>: We know that:
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|y<rsub|1><rprime|''>+p<around*|(|x|)>*y<rprime|'><rsub|1>+q<around*|(|x|)>*y<rsub|1>>|<cell|=>|<cell|g<around*|(|x|)>>>|<row|<cell|y<rsub|2><rprime|''>+p<around*|(|x|)>*y<rprime|'><rsub|2>+q<around*|(|x|)>*y<rsub|2>>|<cell|=>|<cell|g<around*|(|x|)>>>>>
+  </eqnarray*>
+
+  Subtract to get:
+
+  <\equation*>
+    <around*|(|y<rsub|1><rprime|''>-y<rsub|2><rprime|''>|)>+p<around*|(|x|)>*<around*|(|y<rsub|1><rprime|'>-y<rsub|2><rprime|'>|)>+q<around*|(|x|)>*<around*|(|y<rsub|1>-y<rsub|2>|)>=0
+  </equation*>
+
+  So <math|y<rsub|1>-y<rsub|2>> solves
+
+  <\equation*>
+    y<rprime|''>+p<around*|(|x|)>*y<rprime|'>+q<around*|(|x|)>*y=0
+  </equation*>
+
+  <underline|Claim:> Let <math|y<rsub|1>> be a solution of the ODE. Then
+  <with|font-shape|italic|every> solution will be of the form:
+
+  <\equation*>
+    y=y<rsub|1>+y<rsub|0>,
+  </equation*>
+
+  where <math|y<rsub|0>> solves the associated homogeneous equation.
+  Moreover, every solution of this form solves the non-homogeneous equation.
+  Therefore, if we find a <math|y<rsub|1>>, we can find the general solution
+  by finding the set of solutions to the homogeneous equation and add them
+  up.
+
+  <underline|Proof>: Suppose <math|y<rsub|0>> solves the homogeneous
+  equation. We substitute <math|y<rsub|1>+y<rsub|0>> in the ODE:
+
+  <\equation*>
+    <around*|(|y<rsub|1>+y<rsub|0>|)><rprime|''>+p<around*|(|x|)>*<around*|(|y<rsub|1>+y<rsub|0>|)><rprime|'>+q<around*|(|x|)>*<around*|(|y<rsub|1>+y<rsub|0>|)>
+  </equation*>
+
+  <\equation*>
+    <wide*|<around*|(|y<rsub|1><rprime|''>+p<around*|(|x|)>*y<rprime|'><rsub|1>+q<around*|(|x|)>*y<rsub|1>|)>
+    |\<wide-underbrace\>><rsub|g<around*|(|x|)>>+<wide*|<around*|(|y<rsub|0><rprime|''>+p<around*|(|x|)>*y<rprime|'><rsub|0>+q<around*|(|x|)>*y<rsub|0>|)>|\<wide-underbrace\>><rsub|0>=g<around*|(|x|)>+0=g<around*|(|x|)>
+  </equation*>
+
+  Now take any solution <math|y<rsub|2>> of the ODE. We shall show it is of
+  the form <math|y<rsub|0>+y<rsub|1>>.
+
+  Write:
+
+  <\equation*>
+    y<rsub|2>=y<rsub|1>+<around*|(|y<rsub|2>-y<rsub|1>|)>
+  </equation*>
+
+  <math|<around*|(|y<rsub|2>-y<rsub|1>|)>> is the difference of 2 solutions
+  to the non-homogeneous ODE and so solves the homogeneous equations. So
+  <math|y<rsub|2>> is of the required form.
+
+  <underline|Conclusion>
+
+  To find the general solution to a non-homogeneous linear ODE we need to
+  find one particular solution and a basis for solution space of the
+  homogeneous equation.
+
+  <underline|Question>: How do we find a particular solution to the
+  non-homogeneous ODE?
+
+  <subsubsection|Method of undetermined coefficients>
+
+  Applies for the special case where our ODE has constant coefficients. The
+  RHS can be a non-constant function, though.
+
+  <\equation*>
+    a<rsub|2>y<rprime|''>+a<rsub|1>y<rprime|'>+a<rsub|0>y=g<around*|(|x|)>,<application-space|1em>g<around*|(|x|)>\<nequiv\>0
+  </equation*>
+
+  This works if <math|g<around*|(|x|)>> belongs to one of several families of
+  \Pnice\Q functions: combination of exponentials, trigonometric functions
+  (sine and cosine), and polynomials.
+
+  <underline|Idea>: We guess a solution which has \Psame\Q form as
+  <math|g<around*|(|x|)>>. If <math|g<around*|(|x|)>> is a poly, then we
+  guess a poly. If <math|g<around*|(|x|)>> is an exponential, guess an
+  exponential, etc.
+
+  Note: This method does <with|font-series|bold|not> work for rational
+  functions on RHS! (Poly divided by poly.)
+
+  <underline|Examples: Which function to guess?>
+
+  <\enumerate>
+    <item><math|y<rprime|''>-3y<rprime|'>-4y=3\<mathe\><rsup|2x>>. Guess a
+    solution of form <math|y<around*|(|x|)>=A\<mathe\><rsup|2x>>. We
+    substitute in the equation and get:
+
+    <\equation*>
+      4A\<mathe\><rsup|2x>-6A\<mathe\><rsup|2x>-4A\<mathe\><rsup|2x>=3\<mathe\><rsup|2x>
+    </equation*>
+
+    Divide by <math|\<mathe\><rsup|2x>\<neq\>0>.get
+
+    <\equation*>
+      4A-6A-4A=3\<rightarrow\>A=-<frac|1|2>
+    </equation*>
+
+    We found a particular solution <math|y=-<frac|1|2>\<mathe\><rsup|2x>>.
+
     \;
-  </session>
+
+    <marginal-note|normal|c|lec 10 05.12.2022>Now find the basis of the
+    associated homogeneous equation.
+
+    <\equation*>
+      y<rprime|''>-3y<rprime|'>-4y=0
+    </equation*>
+
+    <\equation*>
+      \<lambda\><rsup|2>-3\<lambda\>-4=0\<rightarrow\>\<lambda\>=4,-1
+    </equation*>
+
+    So <math|\<mathe\><rsup|4x>,\<mathe\><rsup|-x>> is a basis for solutions
+    space of the homo. equation. The general solution to the ODE is\ 
+
+    <\equation*>
+      y=-<frac|1|2>\<mathe\><rsup|2x>+c<rsub|1>*\<mathe\><rsup|4x>+c<rsub|2>*\<mathe\><rsup|-x>,<application-space|1em>c<rsub|1>,c<rsub|2>\<in\>\<bbb-R\>
+    </equation*>
+
+    <item><math|y<rprime|''>-3y<rprime|'>-4t=2*sin x>.
+
+    Wrong guess: <math|y=A*sin x>. What happens if we substitute?
+
+    <\equation*>
+      -A*sin x-3A*cos x-4A*sin x=2*sin x
+    </equation*>
+
+    <\equation*>
+      -5A*sin x-3A*cos x=2*sin x<application-space|1em>\<forall\>x
+    </equation*>
+
+    This doesn't hold! Set <math|x=0> and find a contradiction.
+
+    Right guess: <math|y=A*sin x+B*cos x>.
+
+    <\equation*>
+      y<rprime|'>=A*cos x-B*sin x
+    </equation*>
+
+    <\equation*>
+      y<rprime|''>=-A*sin x-B*cos x
+    </equation*>
+
+    <\equation*>
+      <around*|(|-A*sin x-B*cos x|)>-3<around*|(|A*cos x-B*sin
+      x|)>-4<around*|(|A*sin x+B*cos x|)>=2*sin x
+    </equation*>
+
+    <\equation*>
+      <around*|(|-5A+3B|)>*sin x+<around*|(|-5B-3A|)>*cos x=2*sin x
+    </equation*>
+
+    Equate coefficients of <math|sin x> and <math|cos x> on both sides.
+
+    <\equation*>
+      <choice|<tformat|<table|<row|<cell|sin x:-5A+3B=2>>|<row|<cell|cos
+      x:-5B-3A=0>>>>>\<Rightarrow\>A=-<frac|5|17>,B=<frac|3|17>
+    </equation*>
+
+    So <math|y<rsub|2>=-<frac|5|17>*sin x+<frac|3|17>*cos x> is a particular
+    solution. We've already solved the homogeneous equation (example 1.) The
+    general solution is
+
+    <\equation*>
+      -<frac|5|17>*sin x+<frac|3|17>*cos x+c<rsub|1>*\<mathe\><rsup|4x>+c<rsub|2>*\<mathe\><rsup|-x>,<application-space|1em>c<rsub|1>,c<rsub|2>\<in\>\<bbb-R\>
+    </equation*>
+
+    <item><math|y<rprime|''>-3y<rprime|'>-4y=4x<rsup|2>-1>. Guess a
+    polynomial of the same degree as the RHS.
+
+    Guess <math|y=A*x<rsup|2>+B*x+C>.
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|y<rprime|'>>|<cell|=>|<cell|2A*x+B>>|<row|<cell|y<rprime|''>>|<cell|=>|<cell|2A>>>>
+    </eqnarray*>
+
+    Substitute:
+
+    <\equation*>
+      2A-3<around*|(|2A*x+B|)>-4<around*|(|A*x<rsup|2>+B*x+C|)>=4x<rsup|2>-1
+    </equation*>
+
+    Equate coefficients on both sides.
+
+    <\equation*>
+      <choice|<tformat|<table|<row|<cell|x<rsup|2>:-4A=4>>|<row|<cell|x:-6A-4B=0>>|<row|<cell|const:2A-3B-4C=-1>>>>>\<Rightarrow\>A=-1,B=<frac|3|2>,C=-<frac|11|8>
+    </equation*>
+
+    <math|y=-x<rsup|2>+<frac|3|2>x-<frac|11|8>> is a particular solution.
+
+    <item><math|y<rprime|''>-3y<rprime|'>-4y=-8\<mathe\><rsup|x>*cos x>.
+    Guess <math|y=A*\<mathe\><rsup|x>*cos x+B*\<mathe\><rsup|x>*sin x> for a
+    particular solution.
+
+    <item><math|y<rprime|''>-3y<rprime|'>-4y=3\<mathe\><rsup|2x>+2*sin x>.
+
+    We found <math|y<rsub|1>=-<frac|1|2>\<mathe\><rsup|2x>> solves
+    <math|y<rprime|''>-3y<rprime|'>-4y=3\<mathe\><rsup|2x>> and
+    <math|y<rsub|2>=-<frac|5|17>*sin x+<frac|3|17>*cos x> solves
+    <math|y<rprime|''>-3y<rprime|'>-4y=2*sin x>.
+
+    So if we substitute <math|y<rsub|1>+y<rsub|2>> in LHS we get:
+    <math|3\<mathe\><rsup|2x>+2*sin x>.
+
+    This is how you deal with a complex RHS. Don't try to solve it all in one
+    shot. Divide the RHS into easily solvable groups and add them up later.
+
+    <item><math|y<rprime|''>+9y=2*sin 3x>.
+
+    Here, as before, we try <math|y=A*sin 3x+B*cos 3x>.
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|y<rprime|'>>|<cell|=>|<cell|3A*cos 3x-3B*sin
+      3x>>|<row|<cell|y<rprime|''>>|<cell|=>|<cell|-9<around*|(|A*sin
+      3x+B*cos 3x|)>>>>>
+    </eqnarray*>
+
+    When we substitute we get
+
+    <\equation*>
+      <wide*|-9<around*|(|A*sin 3x+B*cos 3x|)>+9<around*|(|A*sin 3x+B*cos
+      3x|)>|\<wide-underbrace\>><rsub|=0>=2*sin 3x
+    </equation*>
+
+    <\equation*>
+      0=2*sin 3x\<Rightarrow\><text|no solution?!>
+    </equation*>
+
+    What went wrong? If you look at the associated homogeneous equation, it
+    turns out that <math|y=A*sin 3x+B*cos 3x> solves it.
+
+    <\equation*>
+      y<rprime|''>+9y=0
+    </equation*>
+
+    <\equation*>
+      \<lambda\><rsup|2>+9=0\<rightarrow\>\<lambda\>=\<pm\>3\<mathi\>
+    </equation*>
+
+    We get a basis for solution space: <math|<around*|{|sin 3x,cos 3x|}>>.
+
+    We have to guess something else. What works here \V Multiply by <math|x>.
+
+    Guess instead <math|y=x<around*|(|A*cos 3x+B*sin 3x|)>>
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|y<rprime|'>>|<cell|=>|<cell|A*cos 3x+B*sin
+      3x+x<around*|(|-3A*sin 3x+3B*cos 3x|)>>>|<row|<cell|y<rprime|''>>|<cell|=>|<cell|-3A*sin
+      3x+3B*cos 3x-3A*sin 3x+3B*cos 3x>>|<row|<cell|>|<cell|+>|<cell|x<around*|(|-9A*cos
+      3x-9B*sin 3x|)>>>|<row|<cell|y<rprime|''>>|<cell|=>|<cell|-6A*sin
+      3x+6B*cos 3x-9x<around*|(|A*cos 3x+B*sin 3x|)>>>>>
+    </eqnarray*>
+
+    Substitute:
+
+    <\equation*>
+      y<rprime|''>+9y=-6A*sin 3x+6B*cos 3x=2*sin 3x
+    </equation*>
+
+    Equate coefficients on both sides and get <math|A=-<frac|1|3>,B=0>. The
+    particular solution is <math|y=-<frac|1|3>x*cos 3x>.
+  </enumerate>
+
+  <\ornamented>
+    <underline|Conclude>
+
+    <\itemize>
+      <item>First, solve the associated homogeneous equation
+
+      <item>If the RHS is a solution to the homogeneous equation, guess a
+      particular solution of the form:
+
+      <\equation*>
+        <around*|(|power of x|)>\<cdot\><around*|(|RHS form|)>
+      </equation*>
+    </itemize>
+
+    <\session|matlab|default>
+      \;
+    </session>
+  </ornamented>
 </body>
 
 <\initial>
@@ -2975,6 +3418,8 @@
     <associate|auto-25|<tuple|5.2|36>>
     <associate|auto-26|<tuple|5.2.1|36>>
     <associate|auto-27|<tuple|5.2.2|40>>
+    <associate|auto-28|<tuple|5.3|46>>
+    <associate|auto-29|<tuple|5.3.1|47>>
     <associate|auto-3|<tuple|3|4>>
     <associate|auto-4|<tuple|3|4>>
     <associate|auto-5|<tuple|3|4>>
@@ -3099,6 +3544,14 @@
       <with|par-left|<quote|2tab>|5.2.2<space|2spc>All coefficients are
       constants <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-27>>
+
+      <with|par-left|<quote|1tab>|5.3<space|2spc>Non-homogeneous linear ODEs
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-28>>
+
+      <with|par-left|<quote|2tab>|5.3.1<space|2spc>Method of undetermined
+      coefficients <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-29>>
     </associate>
   </collection>
 </auxiliary>

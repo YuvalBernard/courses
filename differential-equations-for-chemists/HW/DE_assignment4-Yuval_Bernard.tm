@@ -5,7 +5,7 @@
 <\body>
   <doc-data|<doc-title|Assignment 4>|<doc-author|<author-data|<author-name|Yuval
   Bernard>|<\author-affiliation>
-    Date:
+    Date: 14-02-2022
   </author-affiliation>>>>
 
   <underline|Question 29>
@@ -296,7 +296,7 @@
   \;
 
   <\equation*>
-    \<pm\><around*|[|<frac|2|3><sqrt|y+2c<rsub|1>>*<around*|(|y-4c<rsub|1>|)>|]>=x+c<rsub|2>,<application-space|1em>y\<gtr\>-2c<rsub|1>
+    \<pm\><around*|[|<frac|2|3><sqrt|y+2c<rsub|1>>*<around*|(|y-4c<rsub|1>|)>|]>=x+c<rsub|2>,<application-space|1em>y\<geq\>-2c<rsub|1>
   </equation*>
 
   <\underline>
@@ -358,7 +358,7 @@
   </equation*>
 
   <\equation*>
-    y=<frac|4|3>*<around*|(|x+1|)>-<frac|1|3>
+    y=<frac|4|3>*<around*|(|x+1|)><rsup|3/2>-<frac|1|3>
   </equation*>
 
   <underline|Question 41>
@@ -434,13 +434,35 @@
   Input the ICs:
 
   <\equation*>
-    y<around*|(|0|)>=2=2*<around*|(|0+c<rsub|2>|)><rsup|-2>\<rightarrow\>c<rsub|2>=1
+    y<around*|(|0|)>=2=2*<around*|(|0+c<rsub|2>|)><rsup|-2>\<rightarrow\>c<rsub|2>=1<infix-or>c<rsub|2>=-1
   </equation*>
 
-  The unique solution is
+  To find <math|c<rsub|2>> we use the IC <math|y<rprime|'><around*|(|0|)>=4>.
+  If <math|c<rsub|2>=1>,
 
   <\equation*>
-    y=2<around*|(|x+1|)><rsup|-2>
+    y<rprime|'>=-4*<around*|(|x+1|)><rsup|-3>
+  </equation*>
+
+  <\equation*>
+    y<rprime|'><around*|(|0|)>=-4*<around*|(|0+1|)><rsup|-3>\<neq\>4
+  </equation*>
+
+  And if <math|c<rsub|2>=-1>,
+
+  <\equation*>
+    y<rprime|'>=-4*<around*|(|x-1|)><rsup|-3>
+  </equation*>
+
+  <\equation*>
+    y<rprime|'><around*|(|0|)>=-4*<around*|(|0-1|)><rsup|-3>=-4<space|1em>\<checkmark\>
+  </equation*>
+
+  The initial conditions hold only for <math|c<rsub|2>=-1>.To summarize, the
+  unique solution is
+
+  <\equation*>
+    y=2<around*|(|x-1|)><rsup|-2>
   </equation*>
 
   <\equation*>
