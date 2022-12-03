@@ -5,7 +5,7 @@
 <\body>
   <doc-data|<doc-title|Assignment 4>|<doc-author|<author-data|<author-name|Yuval
   Bernard>|<\author-affiliation>
-    Date: 14-02-2022
+    Date: 05-12-2022
   </author-affiliation>>>>
 
   <underline|Question 29>
@@ -14,13 +14,13 @@
     t*y<rprime|''>+y<rprime|'>=1,<application-space|1em>t\<gtr\>0
   </equation*>
 
-  Substitute <math|y<rprime|'>> for <math|v> and divide by <math|t\<neq\>0>.
+  Substitute <math|y<rprime|'>> for <math|v>.
 
   <\equation*>
     <around*|(|t*v|)><rprime|'>=1
   </equation*>
 
-  Integrate and get
+  Integrate and divide by <math|t\<neq\>0> to get:
 
   <\equation*>
     v=1+<frac|c<rsub|1>|t>
@@ -30,8 +30,11 @@
 
   <\equation*>
     y=<big|int>v<around*|(|t|)> \<mathd\>t=t+c<rsub|1>*ln
-    t+c<rsub|2>,<application-space|1em>t\<gtr\>0
+    t+c<rsub|2>,<application-space|1em>t\<gtr\>0;<application-space|1em>c<rsub|1,2>\<in\>\<bbb-R\>
   </equation*>
+
+  Note: the integral contains <math|ln <around*|\||t|\|>> but taking the
+  absolute value is redundant since the given domain is <math|t\<gtr\>0>.
 
   <underline|Question 30>
 
@@ -63,7 +66,7 @@
   Isolate <math|v>.
 
   <\equation*>
-    v=<frac|2|t<rsup|2>-2c<rsub|1>>
+    v=<frac|2|t<rsup|2>-2c<rsub|1>>,<application-space|1em>t\<neq\><sqrt|2c<rsub|1>>;<application-space|1em>c<rsub|1>\<in\>\<bbb-R\>
   </equation*>
 
   There are 3 different kinds of possible solutions, depending whether
@@ -77,7 +80,7 @@
     </equation*>
 
     <\equation*>
-      y=<big|int>v \<mathd\>t=-<frac|2|t>+c<rsub|2>,<application-space|1em>t\<neq\>0
+      y=<big|int>v \<mathd\>t=-<frac|2|t>+c<rsub|2>,<application-space|1em>t\<neq\>0;<application-space|1em>c<rsub|2>\<in\>\<bbb-R\>
     </equation*>
 
     <item>If <math|c<rsub|1>\<less\>0>, substitute
@@ -93,14 +96,14 @@
     </equation*>
 
     <\equation*>
-      y=<frac|2|C>*arctan <around*|(|<frac|t|C>|)>+c<rsub|2>
+      y=<frac|2|C>*arctan <around*|(|<frac|t|C>|)>+c<rsub|2>,<application-space|1em>\<forall\>t;<application-space|1em>c<rsub|2>\<in\>\<bbb-R\>
     </equation*>
 
     <item>If <math|c<rsub|1>\<gtr\>0>, substitute
     <math|2c<rsub|1>=C<rsup|2>,C\<gtr\>0>.
 
     <\equation*>
-      v==<frac|2|t<rsup|2>-C<rsup|2>>=2*<frac|1|<around*|(|t-C|)>>*<frac|1|<around*|(|t+C|)>>
+      v=<frac|2|t<rsup|2>-C<rsup|2>>=2*<frac|1|<around*|(|t-C|)>>*<frac|1|<around*|(|t+C|)>>
     </equation*>
 
     <\equation*>
@@ -114,7 +117,7 @@
     </equation*>
 
     <\equation*>
-      y=<frac|1|C>*ln <around*|\||<frac|t+C|t-C>|\|>+c<rsub|2>,<application-space|1em>t\<neq\>C
+      y=<frac|1|C>*ln <around*|\||<frac|t+C|t-C>|\|>+c<rsub|2>,<application-space|1em>t\<neq\>C;<application-space|1em>c<rsub|2>\<in\>\<bbb-R\>
     </equation*>
   </enumerate>
 
@@ -159,7 +162,7 @@
   </equation*>
 
   <\equation*>
-    y=-t*\<mathe\><rsup|-t>-<around*|(|c<rsub|1>+1|)>*\<mathe\><rsup|-t>+c<rsub|2>
+    y=-t*\<mathe\><rsup|-t>-<around*|(|c<rsub|1>+1|)>*\<mathe\><rsup|-t>+c<rsub|2>,<application-space|1em>c<rsub|1,2>\<in\>\<bbb-R\>
   </equation*>
 
   <underline|Question 36>
@@ -183,7 +186,7 @@
     <frac|\<mathd\>v|\<mathd\>y>\<cdot\>v+y\<cdot\>v<rsup|3>=0
   </equation*>
 
-  This is a separable equation. Divide by <math|v> assuming <math|v\<neq\>0>
+  This is a separable equation. Divide by <math|v> assuming <math|v\<neq\>0>.
   (If <math|v=0> then <math|y\<equiv\>k> is a solution we've already found.)
   Rewrite as:
 
@@ -198,18 +201,21 @@
   </equation*>
 
   <\equation*>
-    v=<frac|2|y<rsub|><rsup|2>-2c<rsub|1>>
+    <frac|\<mathd\>y|\<mathd\>t>=v=<frac|2|y<rsub|><rsup|2>-2c<rsub|1>>
   </equation*>
 
-  Integrate again to find <math|y>.
+  We're left with another separable DE. Rewrite as:
 
   <\equation*>
-    y=<big|int>v \<mathd\>x=<frac|2|y<rsub|><rsup|2>-2c<rsub|1>>\<cdot\>t+c<rsub|2>
+    <around*|(|y<rsup|2>-2c<rsub|1>|)> \<mathd\>y=2\<mathd\>t
   </equation*>
 
-  Notice that to achieve a continuous solution we must set
-  <math|y\<neq\><sqrt|2c<rsub|1>>>. However,
-  <math|y\<equiv\><sqrt|2c<rsub|1>>> does solve the original DE. Anyway, here
+  and integrate.
+
+  <\equation*>
+    <frac|y<rsup|3>|3>-2c<rsub|1>*y=2t+c<rsub|2>,<application-space|1em>c<rsub|1,2>\<in\>\<bbb-R\>
+  </equation*>
+
   <math|y> is given implicitly.
 
   <underline|Question 37>
@@ -264,25 +270,25 @@
   </equation*>
 
   <\equation*>
-    <frac|\<mathd\>y|\<mathd\>x>=\<pm\><around*|(|<frac|1|y>+<frac|2c<rsub|1>|y<rsup|2>>|)><rsup|1/2>=\<pm\><sqrt|<frac|y+2c<rsub|1>|y<rsup|2>>>=\<pm\><frac|<sqrt|y+2c<rsub|1>>|<around*|\||y|\|>>
+    <frac|\<mathd\>y|\<mathd\>t>=\<pm\><around*|(|<frac|1|y>+<frac|2c<rsub|1>|y<rsup|2>>|)><rsup|1/2>=\<pm\><sqrt|<frac|y+2c<rsub|1>|y<rsup|2>>>=\<pm\><frac|<sqrt|y+2c<rsub|1>>|<around*|\||y|\|>>
   </equation*>
 
   This is a separable equation
 
   <\equation*>
     \<pm\><big|int><frac|<around*|\||y|\|>|<sqrt|y+2c<rsub|1>>>
-    \<mathd\>y=<big|int>\<mathd\>x=x+c<rsub|2>
+    \<mathd\>y=<big|int>\<mathd\>t=t+c<rsub|2>
   </equation*>
 
   Because we already have <math|\<pm\>> as a prefix, we don't have to take
   the absolute value of <math|y>.
 
   Let's focus on the LHS: substitute <math|u=y+2c<rsub|1>>.
-  <math|\<mathd\>u=\<mathd\>y>.,
+  <math|\<mathd\>u=\<mathd\>y>.
 
   <\equation*>
     \<pm\><big|int><frac|u-2c<rsub|1>|<sqrt|u>>
-    \<mathd\>u=\<pm\><big|int><around*|(|<sqrt|u>-2c<rsub|1>*u<rsup|-1/2>|)>\<mathd\>u=\<pm\><around*|(|<frac|2|3>*u<rsup|3/2>-2c<rsub|1>\<cdot\>2<sqrt|u>|)>
+    \<mathd\>u=\<pm\><big|int><around*|(|u<rsup|1/2>-2c<rsub|1>*u<rsup|-1/2>|)>\<mathd\>u=\<pm\><around*|(|<frac|2|3>*u<rsup|3/2>-2c<rsub|1>\<cdot\>2<sqrt|u>|)>
   </equation*>
 
   Substitute back <math|u> and simplify:
@@ -291,13 +297,15 @@
     \<pm\><around*|[|<frac|2|3><around*|(|y+2c<rsub|1>|)><rsup|3/2>-4c<rsub|1>*<around*|(|y+2c<rsub|1>|)><rsup|1/2>|]>=\<pm\><around*|[|<frac|2|3><sqrt|y+2c<rsub|1>>*<around*|(|y+2c<rsub|1>-6c<rsub|1>|)>|]>=\<pm\><around*|[|<frac|2|3><sqrt|y+2c<rsub|1>>*<around*|(|y-4c<rsub|1>|)>|]>
   </equation*>
 
-  Finally,
+  To summarize:
 
   \;
 
   <\equation*>
-    \<pm\><around*|[|<frac|2|3><sqrt|y+2c<rsub|1>>*<around*|(|y-4c<rsub|1>|)>|]>=x+c<rsub|2>,<application-space|1em>y\<geq\>-2c<rsub|1>
+    \<pm\><around*|[|<frac|2|3><sqrt|y+2c<rsub|1>>*<around*|(|y-4c<rsub|1>|)>|]>=t+c<rsub|2>,<application-space|1em>y\<geq\>-2c<rsub|1>;<application-space|1em>c<rsub|1,2>\<in\>\<bbb-R\>
   </equation*>
+
+  <math|y> is given implicitly.
 
   <\underline>
     Question 40
@@ -307,45 +315,48 @@
     y<rprime|'>*y<rprime|''>=2,<application-space|1em>y<around*|(|0|)>=1,y<rprime|'><around*|(|0|)>=2
   </equation*>
 
-  Set <math|v=y<rprime|'>>
+  Set <math|v=y<rprime|'>> and divide by <math|v\<neq\>0>.
 
   <\equation*>
-    <frac|\<mathd\>v|\<mathd\>x>*=<frac|2|v>,<application-space|1em>v\<neq\>0
+    <frac|\<mathd\>v|\<mathd\>t>*=<frac|2|v>,<application-space|1em>v\<neq\>0
   </equation*>
 
   Solve separable equation:
 
   <\equation*>
-    <big|int>v \<mathd\>v=<big|int>2\<mathd\>x
+    <big|int>v \<mathd\>v=<big|int>2 \<mathd\>t
   </equation*>
 
   <\equation*>
-    <frac|1|2>v<rsup|2>=2x+c<rsub|1>
+    <frac|1|2>v<rsup|2>=2t+c<rsub|1>
   </equation*>
 
   <\equation*>
-    <frac|\<mathd\>y|\<mathd\>x>=v=\<pm\><sqrt|4x+2c<rsub|1>>
+    v=\<pm\><sqrt|4t+2c<rsub|1>>
   </equation*>
 
-  From the ICs we have <math|v<around*|(|0|)>=y<rprime|'><around*|(|0|)>=2\<gtr\>0>.
-  This can simplify the solution:
+  The ICs dictate <math|v<around*|(|0|)>=y<rprime|'><around*|(|0|)>=2\<gtr\>0>.
+  This can simplify the solution. Assume only possitive <math|v>.
 
   <\equation*>
-    <frac|\<mathd\>y|\<mathd\>x>=v=<sqrt|4x+2c<rsub|1>>
+    <frac|\<mathd\>y|\<mathd\>t>=v=<sqrt|4t+2c<rsub|1>>
   </equation*>
 
-  Integrate again to find <math|y>.
+  Integrate to find <math|y>.
 
   <\equation*>
-    y=<frac|1|6>*<around*|(|4x+2c<rsub|1>|)><rsup|3/2>+c<rsub|2>
+    y=<frac|1|6>*<around*|(|4t+2c<rsub|1>|)><rsup|3/2>+c<rsub|2>
   </equation*>
 
-  Find specific solution to find ICs: <math|y<rprime|'><around*|(|0|)>=v<around*|(|0|)>=2>.
-  Input in <math|<frac|1|2>v<rsup|2>=2x+c<rsub|1>> and get:
+  Find specific solution that satisfies ICs. We have
+  <math|y<rprime|'><around*|(|0|)>=v<around*|(|0|)>=2>. Input in
+  <math|<frac|1|2>v<rsup|2>=2t+c<rsub|1>> and get:
 
   <\equation*>
     <frac|1|2>\<cdot\>2<rsup|2>=2\<cdot\>0+c<rsub|1>\<rightarrow\>c<rsub|1>=2
   </equation*>
+
+  Also:
 
   <\equation*>
     y<around*|(|0|)>=1=<frac|1|6>*<around*|(|4\<cdot\>0+2\<cdot\>2|)><rsup|3/2>+c<rsub|2>\<rightarrow\>c<rsub|2>=-<frac|1|3>
@@ -354,11 +365,11 @@
   The specific solution is\ 
 
   <\equation*>
-    y=<frac|1|6>*<around*|(|4x+4|)><rsup|3/2>-<frac|1|3>
+    y=<frac|1|6>*<around*|(|4t+4|)><rsup|3/2>-<frac|1|3>
   </equation*>
 
   <\equation*>
-    y=<frac|4|3>*<around*|(|x+1|)><rsup|3/2>-<frac|1|3>
+    y=<frac|4|3>*<around*|(|t+1|)><rsup|3/2>-<frac|1|3>
   </equation*>
 
   <underline|Question 41>
@@ -388,12 +399,14 @@
   </equation*>
 
   <\equation*>
-    <frac|\<mathd\>y|\<mathd\>x>=v=\<pm\><sqrt|2>*<sqrt|y<rsup|3>+c<rsub|1>>
+    <frac|\<mathd\>y|\<mathd\>t>=v=\<pm\><sqrt|2>*<sqrt|y<rsup|3>+c<rsub|1>>
   </equation*>
+
+  Solve separable DE:
 
   <\equation*>
     \<pm\><big|int><around*|(|y<rsup|3>+c<rsub|1>|)><rsup|-1/2>
-    \<mathd\>y=<sqrt|2><big|int>\<mathd\>x
+    \<mathd\>y=<sqrt|2><big|int>\<mathd\>t
   </equation*>
 
   The LHS integral is unsolvable. We can try to find <math|c<rsub|1>> and may
@@ -422,13 +435,13 @@
   Therefore,
 
   <\equation*>
-    \<pm\><around*|(|-2y<rsup|-1/2>|)>=<sqrt|2>*<around*|(|x+c<rsub|2>|)>
+    \<pm\><around*|(|-2y<rsup|-1/2>|)>=<sqrt|2>*<around*|(|t+c<rsub|2>|)>
   </equation*>
 
   Raise both sides by <math|-2>:
 
   <\equation*>
-    y=2<around*|(|x+c<rsub|2>|)><rsup|-2>
+    y=2<around*|(|t+c<rsub|2>|)><rsup|-2>
   </equation*>
 
   Input the ICs:
@@ -458,11 +471,11 @@
     y<rprime|'><around*|(|0|)>=-4*<around*|(|0-1|)><rsup|-3>=-4<space|1em>\<checkmark\>
   </equation*>
 
-  The initial conditions hold only for <math|c<rsub|2>=-1>.To summarize, the
+  The initial conditions hold only for <math|c<rsub|2>=-1>. To summarize, the
   unique solution is
 
   <\equation*>
-    y=2<around*|(|x-1|)><rsup|-2>
+    y=2<around*|(|t-1|)><rsup|-2>,<application-space|1em>t\<neq\>1
   </equation*>
 
   <\equation*>
