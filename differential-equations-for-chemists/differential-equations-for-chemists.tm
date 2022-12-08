@@ -1,4 +1,4 @@
-<TeXmacs|2.1.2>
+<TeXmacs|2.1>
 
 <style|<tuple|course|SIUnits-simple|python>>
 
@@ -120,6 +120,14 @@
     <with|par-left|2tab|5.2.2<space|2spc>All coefficients are constants
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-27>>
+
+    <with|par-left|1tab|5.3<space|2spc>Non-homogeneous linear ODEs
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-28>>
+
+    <with|par-left|2tab|5.3.1<space|2spc>Method of undetermined coefficients
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-29>>
   </table-of-contents>
 
   <part*|Preface: Complex numbers and functions>
@@ -2763,7 +2771,7 @@
 
   There are <with|font-series|bold|no> formulas that give the roots of
   polynomials (in general) for <math|n\<geq\>5>, in terms of the
-  coefficients\<#5E5\>
+  coefficients.
 
   <underline|Example: 3rd order ODE>
 
@@ -3006,8 +3014,8 @@
     <around*|(|\<lambda\><rsup|2>+1|)><rsup|2>=0
   </equation*>
 
-  roots are <math|\<pm\>i> both of multiplicity 2. Get 4 linearly independent
-  real solutions: <rigid|<math|cos x,sin x,x*cos x,x*sin x>>.
+  roots are <math|\<pm\>\<mathi\>> both of multiplicity 2. Get 4 linearly
+  independent real solutions: <rigid|<math|cos x,sin x,x*cos x,x*sin x>>.
 
   <\equation*>
     y=a*cos x+b*sin x+c*x*cos x+d*x*sin x
@@ -3058,7 +3066,7 @@
 
     <item><math|\<lambda\>=2>: <math|\<mathe\><rsup|2x>,x*\<mathe\><rsup|2x>,x<rsup|2>*\<mathe\><rsup|2x>,x<rsup|3>*\<mathe\><rsup|2x>>
 
-    <item><math|l=<frac|-1+\<mathi\>*<sqrt|15>|2>>:
+    <item><math|\<lambda\>=<frac|-1+\<mathi\>*<sqrt|15>|2>>:
     <math|\<mathe\><rsup|-<frac|1|2>x>cos<around*|(|<frac|<sqrt|15>x|2>|)>>,<math|\<mathe\><rsup|-<frac|1|2>x>sin<around*|(|<frac|<sqrt|15>x|2>|)>,\<mathe\><rsup|-<frac|1|2>x>cos<around*|(|<frac|<sqrt|15>x|2>|)>,x*\<mathe\><rsup|-<frac|1|2>x>*sin<around*|(|<frac|<sqrt|15>x|2>|)>,x<rsup|2>*\<mathe\><rsup|-<frac|1|2>x>*cos<around*|(|<frac|<sqrt|15>x|2>|)>,x<rsup|2>*\<mathe\><rsup|-<frac|1|2>x>*sin<around*|(|<frac|<sqrt|15>x|2>|)>>.
   </itemize>
 
@@ -3174,6 +3182,8 @@
   This works if <math|g<around*|(|x|)>> belongs to one of several families of
   \Pnice\Q functions: combination of exponentials, trigonometric functions
   (sine and cosine), and polynomials.
+
+  Note: multiplication of these \Pnice\Q functions also counts.
 
   <underline|Idea>: We guess a solution which has \Psame\Q form as
   <math|g<around*|(|x|)>>. If <math|g<around*|(|x|)>> is a poly, then we
@@ -3364,6 +3374,106 @@
 
     Equate coefficients on both sides and get <math|A=-<frac|1|3>,B=0>. The
     particular solution is <math|y=-<frac|1|3>x*cos 3x>.
+
+    <item><math|y<rsup|<around*|(|4|)>>-y<rprime|'>=x<rsup|3>+2x<rsup|2>+3>.
+    Find solution to homogeneous version. Note that we can't guess a
+    polynomial of degree 3 because the LHS has a characteristic polynomial of
+    a higher degree.
+
+    <\equation*>
+      \<lambda\><around*|(|\<lambda\>-1|)><around*|(|\<lambda\><rsup|2>+2\<lambda\>+1|)>=\<lambda\><around*|(|\<lambda\><rsup|3>-1|)>=0
+    </equation*>
+
+    Roots are <math|\<lambda\>=0,\<lambda\>=1,\<lambda\>=<frac|-1\<pm\>\<mathi\><sqrt|3>|2>.>
+
+    Get 4 linearly independent solutions:
+    <math|1,\<mathe\><rsup|x>,\<mathe\><rsup|-<frac|1|2>x>*cos
+    <frac|<sqrt|3>x|2>,\<mathe\><rsup|-<frac|1|2>x>*sin <frac|<sqrt|3>x|2>>.
+
+    It is clear that polynomials of degree 0 solve the homogeneous equation,
+    however it wouldn't benefit to finding a particular solution.
+
+    Guess a 4th degree polynomial, which would give us a third degree
+    polynomial at both RHS and LHS. <math|y=x<around*|(|A*x<rsup|3>+B*x<rsup|2>+C*x+D|\<nobracket\>>.>
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|y<rprime|'>>|<cell|=>|<cell|4A*x<rsup|3>+3B*x<rsup|2>+2C*x+D>>|<row|<cell|y<rprime|''>>|<cell|=>|<cell|12A*x<rsup|2>+6B*x+2C>>|<row|<cell|y<rprime|'''>>|<cell|=>|<cell|24A*x+6B>>|<row|<cell|y<rsup|<around*|(|4|)>>>|<cell|=>|<cell|24A>>>>
+    </eqnarray*>
+
+    Substitute and get:
+
+    <\equation*>
+      24A-<around*|(|4A*x<rsup|3>+3B*x<rsup|2>+2C*x+D|)>=x<rsup|3>+2x<rsup|2>+3
+    </equation*>
+
+    Equate coefficients of equal powers of <math|x> on both sides:
+
+    <\equation*>
+      <choice|<tformat|<table|<row|<cell|x<rsup|3>:<application-space|1em>-4A=1\<rightarrow\>A=-<frac|1|4>>>|<row|<cell|x<rsup|2>:<application-space|1em>-3B=2\<rightarrow\>B=-<frac|2|3>>>|<row|<cell|x:<application-space|1em>2C=0\<rightarrow\>C=0>>|<row|<cell|1:<application-space|1em>24A-D=3\<rightarrow\>D=-9>>>>>
+    </equation*>
+
+    The general solution is: <math|y=-<frac|1|4>x<rsup|4>-<frac|2|3>x<rsup|2>-9x+c<rsub|1>+c<rsub|2>*\<mathe\><rsup|x>+\<mathe\><rsup|-<frac|1|2>x>*<around*|(|c<rsub|3>*cos
+    <frac|<sqrt|3>|2>x+c<rsub|4>*sin <frac|<sqrt|3>|2>x|)>>.
+
+    <underline|Note>: If the ODE were <math|y<rsup|<around*|(|4|)>>-y<rprime|''>=x<rsup|3>+2x<rsup|2>+3>
+    then we would have chosen a 5th degree polynomial as a particular
+    solution.
+
+    <underline|Note>: If the homogeneous equation would have had repeated
+    roots and RHS involved a solution to the homogeneous equation, we would
+    have multiplied by higher powers of <math|x>.
+
+    <item><math|y<rprime|''>+3y<rprime|'>=2x<rsup|4>+x<rsup|2>*\<mathe\><rsup|-3x>+sin
+    3x.> Solve the homogeneous equation.
+
+    <\equation*>
+      \<lambda\><around*|(|\<lambda\>+3|)>=\<lambda\><rsup|2>+3\<lambda\>=0
+    </equation*>
+
+    <math|\<lambda\>=0,-3>, giving the basis: <math|1,\<mathe\><rsup|-3x>>.
+
+    It won't be enough to guess either a poly. of degree 4 of an exponent
+    multiplied by <math|x<rsup|2>>. Divide the problem into parts.
+
+    <\enumerate-Roman>
+      <item>Find a particular solution when RHS is <math|2x<rsup|4>>. Guess a
+      5th degree poly. with constant zero (as it's redundant).
+
+      <\equation*>
+        y<rsub|1>=x*<around*|(|A<rsub|4>*x<rsup|4>+A<rsub|3>*x<rsup|3>+A<rsub|2>*x<rsup|2>+A<rsub|1>*x+A<rsub|0>|)>
+      </equation*>
+
+      <item>Now find a particular solution when RHS is
+      <math|x<rsup|2>*\<mathe\><rsup|-3x>>.
+
+      If we guess (quadratic)<math|*\<mathe\><rsup|-3x>>, i.e.
+      <math|y<rsub|2>=<around*|(|B<rsub|2>*x<rsup|2>+B<rsub|1>*x|)>\<mathe\><rsup|-3x>>,
+      then
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|y<rsub|2><rprime|'>>|<cell|=>|<cell|<around*|(|2B<rsub|2>*x+B<rsub|1>|)>\<mathe\><rsup|-3x>-3\<mathe\><rsup|-3x><around*|(|B<rsub|2>*x<rsup|2>+B<rsub|1>*x|)>>>|<row|<cell|y<rprime|''><rsub|2>>|<cell|=>|<cell|2B<rsub|2>\<mathe\><rsup|-3x>+B<rsub|1>\<mathe\><rsup|-3x>-3\<mathe\><rsup|-3x><around*|(|2B<rsub|2>x+B<rsub|1>|)>>>|<row|<cell|>|<cell|+>|<cell|-3\<mathe\><rsup|-3x><around*|(|2B<rsub|2>x+B<rsub|1>|)>+9\<mathe\><rsup|-3x><around*|(|B<rsub|2>x<rsup|2>+B<rsub|1>x|)>>>>>
+      </eqnarray*>
+
+      Substitute on LHS:
+
+      <\equation*>
+        <around*|(|9\<mathe\><rsup|-3x>*B<rsub|2>x<rsup|2>+\<cdots\>|)>+3<around*|(|-3\<mathe\><rsup|-3x>B<rsub|2>x<rsup|2>+\<cdots\>+|)>=<around*|(|<text|lin.
+        poly.>|)>\<mathe\><rsup|-3x>
+      </equation*>
+
+      We don't have a high enough order poly. multiplied by
+      <math|\<mathe\><rsup|-3x>>. Guess instead
+      <rigid|<math|y<rsub|2>=x<around*|(|<around*|(|B<rsub|2>*x<rsup|2>+B<rsub|1>*x+B<rsub|0>|)>\<mathe\><rsup|-3x>|)>>>.
+
+      <item>Now find particular solution when RHS is <math|sin 3x>. Guess
+      <math|<rigid|y<rsub|3>=C<rsub|1>*sin 3x+D<rsub|2>*cos 3x><rigid|>>.
+    </enumerate-Roman>
+
+    The general solution will be <math|y<rsub|1>+y<rsub|2>+y<rsub|3>+c<rsub|1>+c<rsub|2>*\<mathe\><rsup|-3x>>.
+
+    \ 
+
+    \;
   </enumerate>
 
   <\ornamented>
@@ -3378,17 +3488,74 @@
       <\equation*>
         <around*|(|power of x|)>\<cdot\><around*|(|RHS form|)>
       </equation*>
+
+      Such that the form of LHS matches the form of RHS.
     </itemize>
 
     <\session|matlab|default>
       \;
     </session>
   </ornamented>
+
+  <subsubsection|Mechanical and electrical vibrations>
+
+  Start with the mechanical case: mass on a spring.
+
+  <\padded-center>
+    <with|gr-mode|<tuple|edit|math-at>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-dash-style|11100|gr-auto-crop|true|<graphics||<line|<point|-2.11114|2.97061>|<point|1.51481677470565|2.99588239185077>>|<line|<point|-0.455493|2.98215>|<point|-0.456078846408255|2.5031584865723>>|<line|<point|-0.456079|2.49052>|<point|-0.456079|2.49052>|<point|-0.531883|2.49052>|<point|-0.531883|2.47789>|<point|-0.531883|2.46526>|<point|-0.531883|2.45262>|<point|-0.531883|2.43999>|<point|-0.531883|2.42735>|<point|-0.531883|2.41472>|<point|-0.531883|2.40209>|<point|-0.519249|2.40209>|<point|-0.506615|2.38945>|<point|-0.506615|2.37682>|<point|-0.493981|2.37682>|<point|-0.481347|2.37682>|<point|-0.481347|2.36419>|<point|-0.468713|2.36419>|<point|-0.456079|2.36419>|<point|-0.443445|2.36419>|<point|-0.430811|2.36419>|<point|-0.418177|2.36419>|<point|-0.418177|2.37682>|<point|-0.405543|2.37682>|<point|-0.405543|2.38945>|<point|-0.418177|2.38945>|<point|-0.430811|2.40209>|<point|-0.443445|2.40209>|<point|-0.456079|2.40209>|<point|-0.468713|2.40209>|<point|-0.481347|2.38945>|<point|-0.493981|2.38945>|<point|-0.506615|2.37682>|<point|-0.506615|2.36419>|<point|-0.519249|2.36419>|<point|-0.519249|2.35155>|<point|-0.531883|2.35155>|<point|-0.531883|2.33892>|<point|-0.544516|2.32628>|<point|-0.544516|2.31365>|<point|-0.544516|2.30102>|<point|-0.55715|2.30102>|<point|-0.55715|2.28838>|<point|-0.55715|2.27575>|<point|-0.55715|2.26311>|<point|-0.55715|2.25048>|<point|-0.544516|2.25048>|<point|-0.493981|2.22521>|<point|-0.481347|2.22521>|<point|-0.468713|2.22521>|<point|-0.456079|2.22521>|<point|-0.443445|2.22521>|<point|-0.443445|2.23785>|<point|-0.443445|2.25048>|<point|-0.443445|2.26311>|<point|-0.456079|2.26311>|<point|-0.468713|2.27575>|<point|-0.481347|2.28838>|<point|-0.493981|2.28838>|<point|-0.506615|2.28838>|<point|-0.519249|2.28838>|<point|-0.531883|2.27575>|<point|-0.544516|2.27575>|<point|-0.544516|2.26311>|<point|-0.55715|2.26311>|<point|-0.55715|2.25048>|<point|-0.569784|2.25048>|<point|-0.569784|2.23785>|<point|-0.569784|2.22521>|<point|-0.569784|2.19994>|<point|-0.569784|2.18731>|<point|-0.569784|2.17468>|<point|-0.569784|2.16204>|<point|-0.569784|2.14941>|<point|-0.569784|2.13677>|<point|-0.569784|2.12414>|<point|-0.55715|2.11151>|<point|-0.544516|2.09887>|<point|-0.544516|2.08624>|<point|-0.531883|2.08624>|<point|-0.531883|2.0736>|<point|-0.519249|2.0736>|<point|-0.519249|2.06097>|<point|-0.506615|2.06097>|<point|-0.493981|2.06097>|<point|-0.481347|2.04834>|<point|-0.468713|2.04834>|<point|-0.456079|2.04834>|<point|-0.443445|2.04834>|<point|-0.443445|2.06097>|<point|-0.430811|2.06097>|<point|-0.430811|2.0736>|<point|-0.443445|2.08624>|<point|-0.456079|2.08624>|<point|-0.481347|2.08624>|<point|-0.493981|2.08624>|<point|-0.506615|2.08624>|<point|-0.519249|2.08624>|<point|-0.519249|2.0736>|<point|-0.531883|2.0736>|<point|-0.531883|2.06097>|<point|-0.544516|2.04834>|<point|-0.544516|2.0357>|<point|-0.544516|2.02307>|<point|-0.55715|2.02307>|<point|-0.55715|2.01043>|<point|-0.55715|1.98517>|<point|-0.55715|1.97253>|<point|-0.55715|1.9599>|<point|-0.55715|1.94726>|<point|-0.544516|1.93463>|<point|-0.544516|1.922>|<point|-0.531883|1.922>|<point|-0.519249|1.922>|<point|-0.519249|1.90936>|<point|-0.506615|1.90936>|<point|-0.493981|1.90936>|<point|-0.481347|1.90936>|<point|-0.468713|1.89673>|<point|-0.456079|1.89673>|<point|-0.443445|1.89673>|<point|-0.430811|1.89673>|<point|-0.418177|1.90936>|<point|-0.405543|1.90936>|<point|-0.405543|1.922>|<point|-0.392909|1.93463>|<point|-0.392909|1.94726>|<point|-0.405543|1.94726>|<point|-0.430811|1.94726>|<point|-0.456079|1.94726>|<point|-0.468713|1.94726>|<point|-0.481347|1.94726>|<point|-0.493981|1.94726>|<point|-0.506615|1.94726>|<point|-0.519249|1.94726>|<point|-0.519249|1.93463>|<point|-0.531883|1.93463>|<point|-0.544516|1.922>|<point|-0.544516|1.90936>|<point|-0.544516|1.89673>|<point|-0.55715|1.8841>|<point|-0.55715|1.85883>|<point|-0.569784|1.83356>|<point|-0.569784|1.80829>|<point|-0.569784|1.79566>|<point|-0.569784|1.77039>|<point|-0.569784|1.75776>|<point|-0.569784|1.74512>|<point|-0.55715|1.71985>|<point|-0.55715|1.70722>|<point|-0.544516|1.69459>|<point|-0.544516|1.68195>|<point|-0.531883|1.66932>|<point|-0.519249|1.65668>|<point|-0.519249|1.64405>|<point|-0.506615|1.64405>|<point|-0.493981|1.64405>|<point|-0.481347|1.64405>|<point|-0.468713|1.64405>|<point|-0.468713|1.65668>>|<line|<point|-0.481347|1.64405>|<point|-0.481346738986638|1.18922807249636>>|<cline|<point|-0.797195|1.12606>|<point|-0.0265246725757375|1.1260583410504>|<point|-0.0138907262865458|0.43119129514486>|<point|-0.797195396216431|0.443825241434052>>|<with|dash-style|11100|<line|<point|-0.696124|2.04834>|<point|-2.17431207831724|2.03570247387221>>>|<line|<point|-6.39405|2.89481>|<point|-3.80407461304405|2.93271266040482>>|<line|<point|-5.20211|2.91225>|<point|-5.19380870485514|2.46525664770472>>|<line|<point|-5.16854|2.45262>|<point|-5.16854|2.45262>|<point|-5.24434|2.43999>|<point|-5.25698|2.42735>|<point|-5.26961|2.41472>|<point|-5.28225|2.40209>|<point|-5.29488|2.38945>|<point|-5.29488|2.37682>|<point|-5.30751|2.37682>|<point|-5.30751|2.33892>|<point|-5.30751|2.32628>|<point|-5.30751|2.31365>|<point|-5.30751|2.30102>|<point|-5.29488|2.28838>|<point|-5.28225|2.28838>|<point|-5.26961|2.27575>|<point|-5.25698|2.26311>|<point|-5.24434|2.26311>|<point|-5.23171|2.25048>|<point|-5.21908|2.25048>|<point|-5.20644|2.25048>|<point|-5.19381|2.25048>|<point|-5.18117|2.25048>|<point|-5.16854|2.25048>|<point|-5.16854|2.26311>|<point|-5.18117|2.26311>|<point|-5.19381|2.26311>|<point|-5.21908|2.26311>|<point|-5.24434|2.26311>|<point|-5.24434|2.25048>|<point|-5.26961|2.25048>|<point|-5.28225|2.23785>|<point|-5.29488|2.22521>|<point|-5.30751|2.21258>|<point|-5.32015|2.21258>|<point|-5.32015|2.19994>|<point|-5.32015|2.18731>|<point|-5.32015|2.17468>|<point|-5.32015|2.16204>|<point|-5.32015|2.14941>|<point|-5.29488|2.12414>|<point|-5.26961|2.09887>|<point|-5.25698|2.08624>|<point|-5.23171|2.08624>|<point|-5.21908|2.0736>|<point|-5.19381|2.0736>|<point|-5.18117|2.0736>|<point|-5.18117|2.06097>|<point|-5.16854|2.06097>|<point|-5.15591|2.06097>|<point|-5.14327|2.06097>|<point|-5.14327|2.0736>|<point|-5.16854|2.0736>|<point|-5.18117|2.0736>|<point|-5.20644|2.0736>|<point|-5.21908|2.0736>|<point|-5.21908|2.06097>|<point|-5.23171|2.06097>|<point|-5.25698|2.04834>|<point|-5.25698|2.0357>|<point|-5.26961|2.0357>|<point|-5.26961|2.02307>|<point|-5.28225|2.02307>|<point|-5.28225|2.01043>|<point|-5.28225|1.9978>|<point|-5.28225|1.98517>|<point|-5.28225|1.97253>|<point|-5.28225|1.9599>>|<with|dash-style|11100|<line|<point|-2.17431|2.0357>|<point|-5.02956740309565|1.99780063500463>>>|<math-at|\<ell\>|<point|-5.6739|2.21258>>|<math-at|0|<point|-0.888510384971557|2.60059200952507>>|<math-at|L|<point|-1.01486638444239|1.43826895091943>>|<math-at|m|<point|-0.533139304140759|0.689757243021564>>>>
+  </padded-center>
+
+  When we hang a mass on a spring of length <math|\<ell\>> it lengthens by
+  <math|L>.
+
+  When in a state of equilibrium, by Newton's 2nd law: <math|<big|sum>F=0>.
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|<text|Force
+    downwards>>|<cell|=>|<cell|m*g>>|<row|<cell|<text|Force upwards exerted
+    by spring>>|<cell|=>|<cell|F<rsub|s>=k*L>>>>
+  </eqnarray*>
+
+  So <math|m*g=F<rsub|s>=k*L>, where <math|k> is the spring's constant. (The
+  stronger the spring, the smaller <math|L> would be.)
+
+  We act on the spring with a new force <math|F<around*|(|t|)>> and it
+  displaces the mass by <math|u<around*|(|t|)>> at time <math|t>.
+
+  <\padded-center>
+    <with|gr-mode|<tuple|edit|math-at>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-auto-crop|true|gr-arrow-end|\<gtr\>|gr-arrow-begin|\<less\>|<graphics||<line|<point|-0.455493|2.98215>|<point|-0.456078846408255|2.5031584865723>>|<line|<point|-0.456079|2.49052>|<point|-0.456079|2.49052>|<point|-0.531883|2.49052>|<point|-0.531883|2.47789>|<point|-0.531883|2.46526>|<point|-0.531883|2.45262>|<point|-0.531883|2.43999>|<point|-0.531883|2.42735>|<point|-0.531883|2.41472>|<point|-0.531883|2.40209>|<point|-0.519249|2.40209>|<point|-0.506615|2.38945>|<point|-0.506615|2.37682>|<point|-0.493981|2.37682>|<point|-0.481347|2.37682>|<point|-0.481347|2.36419>|<point|-0.468713|2.36419>|<point|-0.456079|2.36419>|<point|-0.443445|2.36419>|<point|-0.430811|2.36419>|<point|-0.418177|2.36419>|<point|-0.418177|2.37682>|<point|-0.405543|2.37682>|<point|-0.405543|2.38945>|<point|-0.418177|2.38945>|<point|-0.430811|2.40209>|<point|-0.443445|2.40209>|<point|-0.456079|2.40209>|<point|-0.468713|2.40209>|<point|-0.481347|2.38945>|<point|-0.493981|2.38945>|<point|-0.506615|2.37682>|<point|-0.506615|2.36419>|<point|-0.519249|2.36419>|<point|-0.519249|2.35155>|<point|-0.531883|2.35155>|<point|-0.531883|2.33892>|<point|-0.544516|2.32628>|<point|-0.544516|2.31365>|<point|-0.544516|2.30102>|<point|-0.55715|2.30102>|<point|-0.55715|2.28838>|<point|-0.55715|2.27575>|<point|-0.55715|2.26311>|<point|-0.55715|2.25048>|<point|-0.544516|2.25048>|<point|-0.493981|2.22521>|<point|-0.481347|2.22521>|<point|-0.468713|2.22521>|<point|-0.456079|2.22521>|<point|-0.443445|2.22521>|<point|-0.443445|2.23785>|<point|-0.443445|2.25048>|<point|-0.443445|2.26311>|<point|-0.456079|2.26311>|<point|-0.468713|2.27575>|<point|-0.481347|2.28838>|<point|-0.493981|2.28838>|<point|-0.506615|2.28838>|<point|-0.519249|2.28838>|<point|-0.531883|2.27575>|<point|-0.544516|2.27575>|<point|-0.544516|2.26311>|<point|-0.55715|2.26311>|<point|-0.55715|2.25048>|<point|-0.569784|2.25048>|<point|-0.569784|2.23785>|<point|-0.569784|2.22521>|<point|-0.569784|2.19994>|<point|-0.569784|2.18731>|<point|-0.569784|2.17468>|<point|-0.569784|2.16204>|<point|-0.569784|2.14941>|<point|-0.569784|2.13677>|<point|-0.569784|2.12414>|<point|-0.55715|2.11151>|<point|-0.544516|2.09887>|<point|-0.544516|2.08624>|<point|-0.531883|2.08624>|<point|-0.531883|2.0736>|<point|-0.519249|2.0736>|<point|-0.519249|2.06097>|<point|-0.506615|2.06097>|<point|-0.493981|2.06097>|<point|-0.481347|2.04834>|<point|-0.468713|2.04834>|<point|-0.456079|2.04834>|<point|-0.443445|2.04834>|<point|-0.443445|2.06097>|<point|-0.430811|2.06097>|<point|-0.430811|2.0736>|<point|-0.443445|2.08624>|<point|-0.456079|2.08624>|<point|-0.481347|2.08624>|<point|-0.493981|2.08624>|<point|-0.506615|2.08624>|<point|-0.519249|2.08624>|<point|-0.519249|2.0736>|<point|-0.531883|2.0736>|<point|-0.531883|2.06097>|<point|-0.544516|2.04834>|<point|-0.544516|2.0357>|<point|-0.544516|2.02307>|<point|-0.55715|2.02307>|<point|-0.55715|2.01043>|<point|-0.55715|1.98517>|<point|-0.55715|1.97253>|<point|-0.55715|1.9599>|<point|-0.55715|1.94726>|<point|-0.544516|1.93463>|<point|-0.544516|1.922>|<point|-0.531883|1.922>|<point|-0.519249|1.922>|<point|-0.519249|1.90936>|<point|-0.506615|1.90936>|<point|-0.493981|1.90936>|<point|-0.481347|1.90936>|<point|-0.468713|1.89673>|<point|-0.456079|1.89673>|<point|-0.443445|1.89673>|<point|-0.430811|1.89673>|<point|-0.418177|1.90936>|<point|-0.405543|1.90936>|<point|-0.405543|1.922>|<point|-0.392909|1.93463>|<point|-0.392909|1.94726>|<point|-0.405543|1.94726>|<point|-0.430811|1.94726>|<point|-0.456079|1.94726>|<point|-0.468713|1.94726>|<point|-0.481347|1.94726>|<point|-0.493981|1.94726>|<point|-0.506615|1.94726>|<point|-0.519249|1.94726>|<point|-0.519249|1.93463>|<point|-0.531883|1.93463>|<point|-0.544516|1.922>|<point|-0.544516|1.90936>|<point|-0.544516|1.89673>|<point|-0.55715|1.8841>|<point|-0.55715|1.85883>|<point|-0.569784|1.83356>|<point|-0.569784|1.80829>|<point|-0.569784|1.79566>|<point|-0.569784|1.77039>|<point|-0.569784|1.75776>|<point|-0.569784|1.74512>|<point|-0.55715|1.71985>|<point|-0.55715|1.70722>|<point|-0.544516|1.69459>|<point|-0.544516|1.68195>|<point|-0.531883|1.66932>|<point|-0.519249|1.65668>|<point|-0.519249|1.64405>|<point|-0.506615|1.64405>|<point|-0.493981|1.64405>|<point|-0.481347|1.64405>|<point|-0.468713|1.64405>|<point|-0.468713|1.65668>>|<line|<point|-0.481347|1.64405>|<point|-0.481346738986638|1.18922807249636>>|<cline|<point|-0.797195|1.12606>|<point|-0.0265246725757375|1.1260583410504>|<point|-0.0138907262865458|0.43119129514486>|<point|-0.797195396216431|0.443825241434052>>|<line|<point|-2.0858744542929|2.97785752083609>|<point|1.51481677470565|2.99588239185077>>|<with|arrow-end|\<gtr\>|<line|<point|-0.482571|0.438751>|<point|-0.468712792697447|-0.395406138378092>>>|<math-at|F<around*|(|t|)>|<point|-0.2034|-0.433308>>|<math-at|m|<point|-0.595052255589364|0.691113242492393>>|<with|dash-style|11100|<line|<point|0.147457|0.763279>|<point|1.46138708823919|0.788546765445165>>>|<math-at|0|<point|1.62563|0.750645>>|<with|arrow-end|\<gtr\>|arrow-begin|\<less\>|<line|<point|1.19776|0.454508>|<point|1.19776094721524|-0.328796798518323>>>|<math-at|u<around*|(|t|)>|<point|1.43781|0.0502216>>>>
+  </padded-center>
+
+  <underline|Forces acting on mass>:
+
+  <\itemize>
+    <item><math|F<around*|(|t|)>>, external force (down)
+
+    <item><math|m*g>, gravity (down).
+
+    <item>Force exerted by the spring (up)
+
+    <item>Damping force (drag) (up), which is proportionate to the velocity.
+    <math|\<gamma\>*u<rprime|'><around*|(|t|)>>.
+  </itemize>
+
+  Sum of forces is <math|m*a<around*|(|t|)>>.
+
+  <\equation*>
+    m*u<rprime|''><around*|(|t|)>=F<around*|(|t|)>+m*g-k<around*|(|L+u<around*|(|t|)>|)>-\<gamma\>*u<rprime|'><around*|(|t|)>
+  </equation*>
+
+  <\equation*>
+    m*u<rprime|''>=F<around*|(|t|)>-k**u-\<gamma\>*u<rprime|'>
+  </equation*>
 </body>
 
 <\initial>
   <\collection>
+    <associate|font|frak=TeX Gyre Pagella,cal=TeX Gyre Termes,roman>
     <associate|font-base-size|12>
+    <associate|font-family|rm>
+    <associate|math-font|roman>
     <associate|page-medium|paper>
     <associate|page-screen-margin|false>
     <associate|par-mode|justify>
@@ -3399,37 +3566,38 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|?|2>>
-    <associate|auto-10|<tuple|2|11>>
-    <associate|auto-11|<tuple|I|14>>
+    <associate|auto-10|<tuple|2|12>>
+    <associate|auto-11|<tuple|I|15>>
     <associate|auto-12|<tuple|1|15>>
-    <associate|auto-13|<tuple|1.1|15>>
-    <associate|auto-14|<tuple|2|18>>
-    <associate|auto-15|<tuple|2.1|23>>
-    <associate|auto-16|<tuple|2.2|24>>
-    <associate|auto-17|<tuple|II|26>>
-    <associate|auto-18|<tuple|3|26>>
-    <associate|auto-19|<tuple|3.1|26>>
+    <associate|auto-13|<tuple|1.1|16>>
+    <associate|auto-14|<tuple|2|19>>
+    <associate|auto-15|<tuple|2.1|24>>
+    <associate|auto-16|<tuple|2.2|25>>
+    <associate|auto-17|<tuple|II|27>>
+    <associate|auto-18|<tuple|3|27>>
+    <associate|auto-19|<tuple|3.1|27>>
     <associate|auto-2|<tuple|?|2>>
-    <associate|auto-20|<tuple|3.2|28>>
-    <associate|auto-21|<tuple|4|30>>
-    <associate|auto-22|<tuple|4.1|33>>
-    <associate|auto-23|<tuple|5|33>>
-    <associate|auto-24|<tuple|5.1|33>>
-    <associate|auto-25|<tuple|5.2|36>>
-    <associate|auto-26|<tuple|5.2.1|36>>
-    <associate|auto-27|<tuple|5.2.2|40>>
-    <associate|auto-28|<tuple|5.3|46>>
-    <associate|auto-29|<tuple|5.3.1|47>>
+    <associate|auto-20|<tuple|3.2|29>>
+    <associate|auto-21|<tuple|4|31>>
+    <associate|auto-22|<tuple|4.1|34>>
+    <associate|auto-23|<tuple|5|34>>
+    <associate|auto-24|<tuple|5.1|34>>
+    <associate|auto-25|<tuple|5.2|37>>
+    <associate|auto-26|<tuple|5.2.1|37>>
+    <associate|auto-27|<tuple|5.2.2|41>>
+    <associate|auto-28|<tuple|5.3|47>>
+    <associate|auto-29|<tuple|5.3.1|48>>
     <associate|auto-3|<tuple|3|4>>
+    <associate|auto-30|<tuple|5.3.2|53>>
     <associate|auto-4|<tuple|3|4>>
     <associate|auto-5|<tuple|3|4>>
     <associate|auto-6|<tuple|3|5>>
     <associate|auto-7|<tuple|3|5>>
     <associate|auto-8|<tuple|3|6>>
     <associate|auto-9|<tuple|2|10>>
-    <associate|exponential-identities|<tuple|1|6>>
-    <associate|first-order-const-ode|<tuple|2|14>>
-    <associate|homo-2nd|<tuple|3|34>>
+    <associate|exponential-identities|<tuple|1|7>>
+    <associate|first-order-const-ode|<tuple|2|15>>
+    <associate|homo-2nd|<tuple|3|35>>
   </collection>
 </references>
 
@@ -3552,6 +3720,10 @@
       <with|par-left|<quote|2tab>|5.3.1<space|2spc>Method of undetermined
       coefficients <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-29>>
+
+      <with|par-left|<quote|2tab>|5.3.2<space|2spc>Mechanical and electrical
+      vibrations <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-30>>
     </associate>
   </collection>
 </auxiliary>
