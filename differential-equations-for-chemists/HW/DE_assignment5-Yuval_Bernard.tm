@@ -5,7 +5,7 @@
 <\body>
   <doc-data|<doc-title|Assignment 5>|<doc-author|<author-data|<author-name|Yuval
   Bernard>|<\author-affiliation>
-    Date:
+    Date: 12/12/22
   </author-affiliation>>>>
 
   <section*|Page 168>
@@ -15,6 +15,8 @@
   <\equation*>
     t<rsup|2>*y<rprime|''>-4t*y<rprime|'>+6y=0,<application-space|1em>t\<gtr\>0,<application-space|1em>y<rsub|1>=t<rsup|2>
   </equation*>
+
+  Recall from class:
 
   <\ornamented>
     The general method is as follows: for a second order equation of the
@@ -58,16 +60,20 @@
   </ornamented>
 
   Rewrite the equation to match the form of eq. (1). Divide by
-  <math|t<rsup|2>\<neq\>0>:
+  <math|t<rsup|2>\<neq\>0> (not in domain):
 
   <\equation*>
     y<rprime|''>-<frac|4|t>*y<rprime|'>+<frac|6|t<rsup|2>>*y=0,<application-space|1em>t\<gtr\>0
   </equation*>
 
-  Write a second solution <math|y<rsub|2>=y<rsub|1>*v=t<rsup|2>*v>. According
-  to eq. (1), <math|p<around*|(|t|)>=-<frac|4|t>,q<around*|(|t|)>=<frac|6|t<rsup|2>>>.
+  Write a second solution of the form <math|y<rsub|2>=y<rsub|1>*v=t<rsup|2>*v>.
+  According to eq. (1), <math|p<around*|(|t|)>=-<frac|4|t>,q<around*|(|t|)>=<frac|6|t<rsup|2>>>.
 
   Get the reduced ODE according to eq. (2):
+
+  <\equation*>
+    y<rprime|'><rsub|1>=2t
+  </equation*>
 
   <\equation*>
     <wide*|<around*|(|2\<cdot\>2t-<frac|4|t>\<cdot\>t<rsup|2>|)><rsub|>|\<wide-underbrace\>><rsub|=0>*v<rprime|'>+t<rsup|2>*v<rprime|''>=0
@@ -79,14 +85,14 @@
     t<rsup|2>*v<rprime|''>=0
   </equation*>
 
-  Therefore, <math|v<rprime|''>\<equiv\>0> <math|\<forall\>t>.
+  As <math|t\<gtr\>0>, <math|v<rprime|''>\<equiv\>0>.
 
   <\equation*>
     v<rprime|'>=<big|int>v<rprime|''> \<mathd\>t=c<rsub|1>
   </equation*>
 
   <\equation*>
-    v=<big|int>v<rprime|'> \<mathd\>t=c<rsub|1>*t+c<rsub|2>
+    v=<big|int>v<rprime|'> \<mathd\>t=c<rsub|1>*t+c<rsub|2>,<application-space|1em>c<rsub|1,2>\<in\>\<bbb-R\>
   </equation*>
 
   In conclusion,
@@ -107,14 +113,18 @@
   </equation*>
 
   Rewrite the equation to match the form of eq. (1). Divide by
-  <math|t<rsup|2>\<neq\>0>:
+  <math|t<rsup|2>\<neq\>0> (not in domain):
 
   <\equation*>
     y<rprime|''>+<frac|2|t>*y<rprime|'>-<frac|2|t<rsup|2>>*y=0,<application-space|1em>t\<gtr\>0
   </equation*>
 
-  Here <math|p=<frac|2|t>,q=-<frac|2|t<rsup|2>>>. Select a solution
-  <math|y<rsub|2>=y<rsub|1>*v>. According to eq. (2),
+  Here <math|p=<frac|2|t>,q=-<frac|2|t<rsup|2>>>. Select a solution of the
+  form <math|y<rsub|2>=y<rsub|1>*v>. According to eq. (2),
+
+  <\equation*>
+    y<rsub|1><rprime|'>=1
+  </equation*>
 
   <\equation*>
     <around*|(|2\<cdot\>1+<frac|2|t>*t|)>*v<rprime|'>+t*v<rprime|''>=0
@@ -131,7 +141,7 @@
   </equation*>
 
   This is a second order linear ODE in <math|v>. Substitute
-  <math|f=v<rprime|'>> to reduce equation order. The equation becomes
+  <math|f=v<rprime|'>> to reduce equation order. The equation becomes:
 
   <\equation*>
     f<rprime|'>+<frac|4|t>*f=0,<application-space|1em>t\<gtr\>0
@@ -146,14 +156,14 @@
   </equation*>
 
   <\equation*>
-    f<around*|(|t|)>=<frac|c<rsub|1>|t<rsup|4>>*
+    f<around*|(|t|)>=<frac|c<rsub|1>|t<rsup|4>>*,
   </equation*>
 
   Integrate to find <math|v>.
 
   <\equation*>
     v<around*|(|t|)>=<big|int>f<around*|(|t|)>
-    \<mathd\>t=-<frac|c<rsub|1>|3>**t<rsup|-3>+c<rsub|2>
+    \<mathd\>t=-<frac|c<rsub|1>|3>**t<rsup|-3>+c<rsub|2>,<application-space|1em>c<rsub|1,2>\<in\>\<bbb-R\>
   </equation*>
 
   Substitute in expression for <math|y<rsub|2>>:
@@ -173,7 +183,7 @@
   </equation*>
 
   Rewrite the equation to match the form of eq. (1). Divide by
-  <math|x\<neq\>0>:
+  <math|x\<neq\>0> (not in domain):
 
   <\equation*>
     y<rprime|''>-<frac|1|x>*y<rprime|'>+4x<rsup|2>*y=0,<application-space|1em>x\<gtr\>0
@@ -181,6 +191,10 @@
 
   Here <math|p=-<frac|1|x>,q=4x<rsup|2>>. Select a solution of the form
   <math|y<rsub|2>=y<rsub|1>*v=sin x<rsup|2>*v>. According to eq. (2),
+
+  <\equation*>
+    y<rsub|1><rprime|'>=2x*cos x<rsup|2>
+  </equation*>
 
   <\equation*>
     <around*|(|2\<cdot\>cos x<rsup|2>\<cdot\>2x-<frac|1|x>\<cdot\>sin
@@ -192,8 +206,8 @@
     x<rsup|2>*v<rprime|''>=0
   </equation*>
 
-  Divide by <math|sin x<rsup|2>\<neq\>0>:
-  (<math|x\<neq\>\<pm\><sqrt|\<mathpi\>k>>, <math|k=1,2,3,\<ldots\>>)
+  Divide by <math|sin x<rsup|2>\<neq\>0>: (<math|x\<neq\><sqrt|\<mathpi\>k>>,
+  <math|k=1,2,3,\<ldots\>>)
 
   <\equation*>
     v<rprime|''>+<around*|(|<frac|4x*|tan
@@ -217,8 +231,10 @@
 
   <\equation*>
     f=\<mathe\><rsup|<big|int><around*|(|<frac|1|x>-<frac|4x|tan
-    x<rsup|2>>|)> \<mathd\>x>\<cdot\>c<rsub|1><rsup|>
+    x<rsup|2>>|)> \<mathd\>x>\<cdot\>c<rsub|1><rsup|>,<application-space|1em>c<rsub|1>\<in\>\<bbb-R\>
   </equation*>
+
+  Calculate the integral:
 
   <\equation*>
     <big|int><around*|(|<frac|1|x>-<frac|4x|tan x<rsup|2>>|)> \<mathd\>x=ln
@@ -243,9 +259,9 @@
 
   <\equation*>
     f<around*|(|x|)>=c<rsub|1>*\<mathe\><rsup|<around*|(|ln
-    <around*|\||x|\|>-2ln <around*|\||sin
+    <around*|\||x|\|>-2*ln <around*|\||sin
     x<rsup|2>|\|>|)>>=c<rsub|1>*<frac|x|sin<rsup|2>
-    x<rsup|2>>,<application-space|1em>sin x<rsup|2>\<neq\>0
+    x<rsup|2>>,<application-space|1em>x\<neq\><sqrt|\<mathpi\>k>,k=1,2,3,\<ldots\>
   </equation*>
 
   Integrate to get <math|v>:
@@ -275,13 +291,31 @@
   Therefore,
 
   <\equation*>
-    v=-<frac|c<rsub|1>|2><frac|cos x<rsup|2>|sin x<rsup|2>>+c<rsub|2>
+    v=-<frac|c<rsub|1>|2><frac|cos x<rsup|2>|sin
+    x<rsup|2>>+c<rsub|2>,<application-space|1em>c<rsub|1,2>\<in\>\<bbb-R\>
   </equation*>
 
   <\equation*>
     y<rsub|2>=y<rsub|1>*v=-<frac|c<rsub|1>|2>*cos x<rsup|2>+c<rsub|2>*sin
-    x<rsup|2>
+    x<rsup|2>,x\<gtr\>0
   </equation*>
+
+  To get the solution we assumed <math|x\<neq\><sqrt|\<pi\>k>>. However, if
+  we input <math|y<rsub|2>=cos x<rsup|2>> in the original ODE we get:
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|y<rsub|2><rprime|'>>|<cell|=>|<cell|-2x*sin
+    x<rsup|2>>>|<row|<cell|y<rsub|2><rprime|''>>|<cell|=>|<cell|-2*sin
+    x<rsup|2>-4x<rsup|2>*cos x<rsup|2>>>>>
+  </eqnarray*>
+
+  <\equation*>
+    x\<cdot\>y<rsub|2><rprime|''>-y<rprime|'>+4x<rsup|3>*y=-2x*<around*|(|sin
+    x<rsup|2>+2x*<rsup|2>cos x<rsup|2>|)>+2x*sin x<rsup|2>+4x<rsup|3>*cos
+    x<rsup|2>\<equiv\>0
+  </equation*>
+
+  The solution applies for all <math|x> in the requested domain.
 
   For a specific solution, choose <math|c<rsub|1>=-2,c<rsub|2>=0>.
   <math|y<rsub|2>=cos x<rsup|2>,<application-space|1em>x\<gtr\>0>.
@@ -294,8 +328,10 @@
     y<rprime|'''>-y<rprime|''>-y<rprime|'>+y=0
   </equation*>
 
+  As we've seen in class:
+
   <\ornamented>
-    As we've seen in class, given: <math|a<rsub|n>*y<rsup|<around*|(|n|)>>+a<rsub|n-1>*y<rsup|<around*|(|n-1|)>>+\<cdots\>+a<rsub|0>*y=0,<application-space|1em>a<rsub|n>\<neq\>0>,
+    Given: <math|a<rsub|n>*y<rsup|<around*|(|n|)>>+a<rsub|n-1>*y<rsup|<around*|(|n-1|)>>+\<cdots\>+a<rsub|0>*y=0,<application-space|1em>a<rsub|n>\<neq\>0>,
     we look for solutions of the form <math|\<mathe\><rsup|\<lambda\>x>> and
     get:
 
@@ -326,9 +362,23 @@
     will all solve the ODE and are linearly independent, and will be linearly
     independent of solutions we obtain from other roots of the characteristic
     polynomial.
+
+    Moreover, if <math|z> is a non-real solution to
+    <math|a<rsub|n>\<lambda\><rsup|n>+\<cdots\>+a<rsub|1>\<lambda\>+a<rsub|0>=0>,
+    then so is <math|<wide|z|\<bar\>>>, and if we write
+    <math|z=\<alpha\>+\<mathi\>*\<beta\>>, we get 2 linearly independent real
+    solutions to the ODE:
+
+    <\equation*>
+      \<mathe\><rsup|\<alpha\>*x>*cos \<beta\>,\<mathe\><rsup|\<alpha\>*x>*sin
+      \<beta\>
+    </equation*>
+
+    These of course behave similarly to real roots with multiplicity bigger
+    than 1. Just multiply by <math|x,x<rsup|2>,\<ldots\>>
   </ornamented>
 
-  The equation for the characteristic polynomial of the equation is:
+  The equation for the characteristic polynomial is:
 
   <\equation*>
     \<lambda\><rsup|3>-\<lambda\><rsup|2>-\<lambda\>+1=0
@@ -352,7 +402,7 @@
   The general solution is a linear combination of all solutions we've found:
 
   <\equation*>
-    y=c<rsub|1>*\<mathe\><rsup|-x>+c<rsub|2>*\<mathe\><rsup|x>+c<rsub|3>*x*\<mathe\><rsup|x>
+    y=c<rsub|1>*\<mathe\><rsup|-x>+c<rsub|2>*\<mathe\><rsup|x>+c<rsub|3>*x*\<mathe\><rsup|x>,<application-space|1em>c<rsub|1,2>\<in\>\<bbb-R\>,<application-space|1em>\<forall\>x
   </equation*>
 
   <underline|Question 20>
@@ -370,6 +420,8 @@
   <\equation*>
     \<lambda\>*<around*|(|\<lambda\><rsup|3>-8|)>=0
   </equation*>
+
+  After polynomial division we get:
 
   <\equation*>
     \<lambda\>*<around*|(|\<lambda\>-2|)><around*|(|\<lambda\><rsup|2>+2\<lambda\>+4|)>=0
@@ -394,7 +446,7 @@
   <\equation*>
     c<rsub|1>+c<rsub|2>*\<mathe\><rsup|2x>+c<rsub|3>*\<mathe\><rsup|-x>*cos
     <around*|(|<sqrt|3>x|)>+c<rsub|4>*\<mathe\><rsup|-x>*sin
-    <around*|(|<sqrt|3>x|)>
+    <around*|(|<sqrt|3>x|)>,<application-space|1em>c<rsub|1,2>\<in\>\<bbb-R\>,<application-space|1em>\<forall\>x
   </equation*>
 
   <underline|Question 29>
@@ -417,9 +469,11 @@
     \<lambda\><around*|(|\<lambda\>-i|)><around*|(|\<lambda\>+i|)>
   </equation*>
 
+  General solution is:
+
   <\eqnarray*>
     <tformat|<table|<row|<cell|y>|<cell|=>|<cell|c<rsub|1>+c<rsub|2>*cos
-    t+c<rsub|3>*sin t>>|<row|<cell|y<rprime|'>>|<cell|=>|<cell|-c<rsub|2>*sin
+    t+c<rsub|3>*sin t,<application-space|1em>c<rsub|1,2>\<in\>\<bbb-R\>,<application-space|1em>\<forall\>t>>|<row|<cell|y<rprime|'>>|<cell|=>|<cell|-c<rsub|2>*sin
     t+c<rsub|3>*cos t>>|<row|<cell|y<rprime|''>>|<cell|=>|<cell|-c<rsub|2>*cos
     t-c<rsub|3>*sin t>>>>
   </eqnarray*>
@@ -430,10 +484,11 @@
     <tformat|<table|<row|<cell|y<around*|(|0|)>=0>|<cell|=>|<cell|c<rsub|1>+c<rsub|2>\<rightarrow\>c<rsub|1>=-c<rsub|2>>>|<row|<cell|y<rprime|'><around*|(|0|)>=1>|<cell|=>|<cell|c<rsub|3>>>|<row|<cell|y<rprime|''><around*|(|0|)>=2>|<cell|=>|<cell|-c<rsub|2>>>>>
   </eqnarray*>
 
-  The specific solution is <math|y=2-2cos t+sin t>.
+  The specific solution is <math|y=2-2cos t+sin
+  t,<application-space|1em>\<forall\>t>.
 
   The limit of <math|y<around*|(|t|)>> as <math|t\<rightarrow\>\<infty\>> is
-  indeterminate. The result is a sinusoid.
+  indeterminate. The solution oscillates.
 
   <underline|Question 34>
 
@@ -462,7 +517,7 @@
 
   <\equation*>
     y=c<rsub|1>*\<mathe\><rsup|-t>+c<rsub|2>*\<mathe\><rsup|t/2>*cos
-    t+c<rsub|3>*\<mathe\><rsup|t/2>*sin t
+    t+c<rsub|3>*\<mathe\><rsup|t/2>*sin t,<application-space|1em>c<rsub|1,2>\<in\>\<bbb-R\>,<application-space|1em>\<forall\>t
   </equation*>
 
   <\equation*>
@@ -503,7 +558,8 @@
 
   <\equation*>
     y=<frac|2|13>*\<mathe\><rsup|-t>+<frac|24|13>*\<mathe\><rsup|t/2>*cos
-    t+<frac|3|13>*\<mathe\><rsup|t/2>*sin t
+    t+<frac|3|13>*\<mathe\><rsup|t/2>*sin
+    t,<application-space|1em>\<forall\>t
   </equation*>
 
   As <math|t\<rightarrow\>\<infty\>> the term
@@ -536,16 +592,16 @@
 
   Differentiate wrt <math|t>.
 
-  <\equation>
-    c<rsub|3><around*|(|r<rsub|3>-r<rsub|1>|)><around*|(|r<rsub|3>-r<rsub|2>|)>\<mathe\><rsup|<around*|(|r<rsub|3>-r<rsub|2>|)>t>+c<rsub|4><around*|(|r<rsub|4>-r<rsub|1>|)><around*|(|r<rsub|4>-r<rsub|2>|)>\<mathe\><rsup|<around*|(|r<rsub|4>-r<rsub|2>|)>t>+\<cdots\>+c<rsub|n><around*|(|r<rsub|n>-r<rsub|1>|)><around*|(|r<rsub|n>-r<rsub|2>|)>\<mathe\><rsup|<around*|(|r<rsub|n>-r<rsub|2>|)>t>=0
-  </equation>
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|c<rsub|3><around*|(|r<rsub|3>-r<rsub|1>|)><around*|(|r<rsub|3>-r<rsub|2>|)>\<mathe\><rsup|<around*|(|r<rsub|3>-r<rsub|2>|)>t>+c<rsub|4><around*|(|r<rsub|4>-r<rsub|1>|)><around*|(|r<rsub|4>-r<rsub|2>|)>\<mathe\><rsup|<around*|(|r<rsub|4>-r<rsub|2>|)>t>+\<cdots\>+>|<cell|>|<cell|>>|<row|<cell|+c<rsub|n><around*|(|r<rsub|n>-r<rsub|1>|)><around*|(|r<rsub|n>-r<rsub|2>|)>\<mathe\><rsup|<around*|(|r<rsub|n>-r<rsub|2>|)>t>>|<cell|=>|<cell|0>>>>
+  </eqnarray*>
 
   (c) As we can see, each time we multiply by the negative version of the
   first exponent and differentiate, we reduce the number of terms in the
   equation and multiply all the remaining terms by the power of the exponent
   we multiplied with.
 
-  Therefore, repeating the process (the third time) for eq. (8) we get
+  Therefore, repeating the process (for the third time) for eq. (8) we get
 
   <\equation*>
     c<rsub|4><around*|(|r<rsub|4>-r<rsub|1>|)><around*|(|r<rsub|4>-r<rsub|2>|)><around*|(|r<rsub|4>-r<rsub|3>|)>*\<mathe\><rsup|<around*|(|r<rsub|4>-r<rsub|3>|)>t>+\<cdots\>+c<rsub|n><around*|(|r<rsub|n>-r<rsub|1>|)><around*|(|r<rsub|n>-r<rsub|2>|)><around*|(|r<rsub|n>-r<rsub|3>|)>\<mathe\><rsup|<around*|(|r<rsub|n>-r<rsub|3>|)>t>=0
