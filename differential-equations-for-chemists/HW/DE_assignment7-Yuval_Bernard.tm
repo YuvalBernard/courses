@@ -565,14 +565,76 @@
   Denote
 
   <\equation*>
-    A=
+    A=<bmatrix|<tformat|<table|<row|<cell|<frac|1|10>>|<cell|-<frac|3|40>>>|<row|<cell|-<frac|1|10>>|<cell|<frac|1|5>>>>>>,<wide|b|\<vect\>>=<bmatrix|<tformat|<table|<row|<cell|<frac|3|2>>>|<row|<cell|3>>>>>
   </equation*>
 
   The solution is given by:
 
   <\equation*>
-    \;
+    <bmatrix|<tformat|<table|<row|<cell|Q<rsub|1><rsup|E>>>|<row|<cell|Q<rsub|2><rsup|E>>>>>>=A<rsup|-1>*<wide|b|\<vect\>>
   </equation*>
+
+  The inverse matrix <math|A<rsup|-1>> is calculated by taking the adjoint of
+  <math|A> and dividing by its determinant.
+
+  <\equation*>
+    det A=<frac|1|10>\<ast\><frac|1|5>-<frac|3|40>\<ast\><frac|1|10>=<frac|1|80>
+  </equation*>
+
+  <\equation*>
+    <bmatrix|<tformat|<table|<row|<cell|<frac|1|10>>|<cell|-<frac|3|40>>>|<row|<cell|-<frac|1|10>>|<cell|<frac|1|5>>>>>>
+  </equation*>
+
+  <\equation*>
+    adj A=<bmatrix|<tformat|<table|<row|<cell|<around*|(|-1|)><rsup|1+1>\<cdot\><frac|1|5>*>|<cell|<around*|(|-1|)><rsup|1+2>\<cdot\><around*|(|-<frac|1|10>|)>>>|<row|<cell|<around*|(|-1|)><rsup|2+1>\<cdot\><around*|(|-<frac|3|40>|)>>|<cell|<around*|(|-1|)><rsup|2+2>\<cdot\><frac|1|10>>>>>><rsup|T>=<bmatrix|<tformat|<table|<row|<cell|<frac|1|5>>|<cell|<frac|1|10>>>|<row|<cell|<frac|3|40>>|<cell|<frac|1|10>>>>>><rsup|T>=<bmatrix|<tformat|<table|<row|<cell|<frac|1|5>>|<cell|<frac|3|40>>>|<row|<cell|<frac|1|10>>|<cell|<frac|1|10>>>>>>
+  </equation*>
+
+  <\equation*>
+    A<rsup|-1>=<frac|adj A|det A>=80\<cdot\><bmatrix|<tformat|<table|<row|<cell|<frac|1|5>>|<cell|<frac|3|40>>>|<row|<cell|<frac|1|10>>|<cell|<frac|1|10>>>>>>=<bmatrix|<tformat|<table|<row|<cell|16>|<cell|6>>|<row|<cell|8>|<cell|8>>>>>
+  </equation*>
+
+  Finally,\ 
+
+  <\equation*>
+    <bmatrix|<tformat|<table|<row|<cell|Q<rsub|1><rsup|E>>>|<row|<cell|Q<rsub|2><rsup|E>>>>>>=A<rsup|-1>*<wide|b|\<vect\>>=<bmatrix|<tformat|<table|<row|<cell|16>|<cell|6>>|<row|<cell|8>|<cell|8>>>>><bmatrix|<tformat|<table|<row|<cell|<frac|3|2>>>|<row|<cell|3>>>>>=<bmatrix|<tformat|<table|<row|<cell|42>>|<row|<cell|36>>>>>
+  </equation*>
+
+  <math|Q<rsub|1><rsup|E>=42 oz> and <math|Q<rsub|2><rsup|E>=36 oz>.
+
+  (c) Note that
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|x<rsub|1><rprime|'>>|<cell|=>|<cell|<around*|(|Q<rsub|1><around*|(|t|)>+Q<rsub|1><rsup|E>|)><rprime|'>=Q<rsub|1><rprime|'>>>|<row|<cell|x<rsub|2><rprime|'>>|<cell|=>|<cell|<around*|(|Q<rsub|2><around*|(|t|)>+Q<rsub|2><rsup|E>|)>=Q<rsub|2><rprime|'>>>>>
+  </eqnarray*>
+
+  The differential equatins for <math|x<rsub|1>,x<rsub|2>> are the same as
+  for <math|Q<rsub|1>,Q<rsub|2>>, where <math|Q<rsub|1>,Q<rsub|2>> are
+  substituted with <math|<around*|(|x<rsub|1>+Q<rsub|1><rsup|E>|)>> and
+  <math|<around*|(|x<rsub|2>+Q<rsub|2><rsup|E>|)>>:
+
+  <\equation*>
+    <tabular|<tformat|<table|<row|<cell|x<rsub|1><rprime|'>>|<cell|=>|<cell|-<frac|1|10>*<around*|(|x<rsub|1>+42|)>+<frac|3|40>*<around*|(|x<rsub|2>+36|)>+<frac|3|2>>>|<row|<cell|x<rsub|2><rprime|'>>|<cell|=>|<cell|<frac|1|10><around*|(|x<rsub|1>+42|)>-<frac|1|5><around*|(|x<rsub|2>+36|)>+3>>>>>
+  </equation*>
+
+  Simplify:
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|x<rsub|1><rprime|'>>|<cell|=>|<cell|-<frac|1|10>x<rsub|1>+<frac|3|40>x<rsub|2>>>|<row|<cell|x<rsub|2><rprime|'>>|<cell|=>|<cell|<frac|1|10>x<rsub|1>-<frac|1|5>x<rsub|2>>>>>
+  </eqnarray*>
+
+  where
+
+  <\equation*>
+    x<rsub|1><around*|(|0|)>=Q<rsub|1><around*|(|0|)>-Q<rsub|1><rsup|E>=25-42=-17
+    oz
+  </equation*>
+
+  <\equation*>
+    x<rsub|2><around*|(|0|)>=Q<rsub|2><around*|(|0|)>-Q<rsub|2><rsup|E>=15-36=-21
+    oz
+  </equation*>
+
+  Note that the differential equations are homogeneous, as expected.
 </body>
 
 <\initial>
@@ -586,7 +648,7 @@
   <\collection>
     <associate|auto-1|<tuple|?|1>>
     <associate|auto-2|<tuple|<with|mode|<quote|math>|\<bullet\>>|4>>
-    <associate|auto-3|<tuple|2|?>>
+    <associate|auto-3|<tuple|2|8>>
   </collection>
 </references>
 
@@ -600,6 +662,10 @@
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Page
       344> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-2><vspace|0.5fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Page
+      346> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-3><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>

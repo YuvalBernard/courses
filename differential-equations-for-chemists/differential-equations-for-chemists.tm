@@ -4021,6 +4021,253 @@
 
   <section|System of ODES>
 
+  <subsection|Examples of problems represented by a system of ODEs>
+
+  <\enumerate>
+    <item>2nd order system in <math|u<rsub|1>,u<rsub|2>>.
+
+    <\padded-center>
+      <with|gr-mode|<tuple|hand-edit|line>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|empty>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-auto-crop|true|<graphics||<line|<point|2|3>|<point|5.0|3.0>>|<line|<point|3.5|3>|<point|3.5|2.5>>|<cline|<point|3|1.7>|<point|4.0|1.7>|<point|4.0|1.0>|<point|3.0|1.0>>|<line|<point|3.49119|1.00174>|<point|3.49119|1.00174>|<point|3.36419|0.98057>|<point|3.36419|0.959403>|<point|3.36419|0.938236>|<point|3.36419|0.917069>|<point|3.36419|0.895902>|<point|3.36419|0.874735>|<point|3.38535|0.853569>|<point|3.40652|0.853569>|<point|3.42769|0.853569>|<point|3.44885|0.832402>|<point|3.47002|0.832402>|<point|3.49119|0.832402>|<point|3.51235|0.832402>|<point|3.53352|0.832402>|<point|3.55469|0.832402>|<point|3.53352|0.832402>|<point|3.51235|0.832402>|<point|3.49119|0.832402>|<point|3.47002|0.811235>|<point|3.44885|0.811235>|<point|3.42769|0.790068>|<point|3.42769|0.768901>|<point|3.40652|0.768901>|<point|3.40652|0.747734>|<point|3.40652|0.726568>|<point|3.38535|0.726568>|<point|3.38535|0.705401>|<point|3.38535|0.684234>|<point|3.38535|0.663067>|<point|3.40652|0.663067>|<point|3.42769|0.663067>|<point|3.42769|0.6419>|<point|3.44885|0.6419>|<point|3.47002|0.620734>|<point|3.49119|0.620734>|<point|3.51235|0.620734>|<point|3.53352|0.620734>|<point|3.55469|0.620734>|<point|3.53352|0.620734>|<point|3.51235|0.620734>|<point|3.49119|0.620734>|<point|3.47002|0.620734>|<point|3.44885|0.620734>|<point|3.42769|0.620734>|<point|3.40652|0.599567>|<point|3.38535|0.599567>|<point|3.36419|0.5784>|<point|3.36419|0.557233>|<point|3.34302|0.536066>|<point|3.34302|0.514899>|<point|3.34302|0.493733>|<point|3.36419|0.493733>|<point|3.38535|0.493733>|<point|3.40652|0.472566>|<point|3.42769|0.451399>|<point|3.44885|0.451399>|<point|3.42769|0.451399>|<point|3.40652|0.451399>|<point|3.40652|0.430232>|<point|3.38535|0.430232>|<point|3.38535|0.409065>|<point|3.38535|0.387899>|<point|3.38535|0.366732>|<point|3.40652|0.366732>|<point|3.40652|0.345565>|<point|3.42769|0.345565>|<point|3.42769|0.324398>|<point|3.44885|0.324398>|<point|3.47002|0.324398>>|<cline|<point|3|0.3>|<point|4.0|0.3>|<point|4.0|-0.5>|<point|3.0|-0.5>>|<math-at|k<rsub|1>|<point|3.89336|2.14474>>|<with|dash-style|10|<line|<point|2.62335|-0.0142711>|<point|1.64967257573753|-0.0142710676015346>>>|<with|dash-style|10|<line|<point|2.6|1.3>|<point|1.7|1.3>>>|<math-at|0|<point|1.2475029765842|1.21340455086652>>|<with|arrow-end|\<gtr\>|<line|<point|2|-0.2>|<point|2.0|-1.0>>>|<with|arrow-end|\<gtr\>|<line|<point|2|1>|<point|2.0|0.3>>>|<math-at|u<rsub|1><around*|(|t|)>|<point|1|0.6>>|<math-at|u<rsub|2><around*|(|t|)>|<point|1|-0.6>>|<math-at|m<rsub|1>|<point|3.27488755126339|1.2802950125678>>|<math-at|k<rsub|2>|<point|3.80405807646514|0.539456277285355>>|<math-at|m<rsub|2>|<point|3.25372073025532|-0.18021563698902>>|<line|<point|3.50772|2.49162>|<point|3.50772|2.49162>|<point|3.40189|2.51278>|<point|3.38072|2.51278>|<point|3.38072|2.49162>|<point|3.38072|2.47045>|<point|3.38072|2.44928>|<point|3.38072|2.42812>|<point|3.38072|2.40695>|<point|3.38072|2.38578>|<point|3.38072|2.36462>|<point|3.38072|2.34345>|<point|3.40189|2.32228>|<point|3.42306|2.32228>|<point|3.44422|2.32228>|<point|3.46539|2.32228>|<point|3.48656|2.32228>|<point|3.50772|2.32228>|<point|3.50772|2.34345>|<point|3.50772|2.36462>|<point|3.50772|2.38578>|<point|3.50772|2.40695>|<point|3.48656|2.40695>|<point|3.46539|2.40695>|<point|3.44422|2.40695>|<point|3.44422|2.42812>|<point|3.42306|2.42812>|<point|3.40189|2.42812>|<point|3.38072|2.42812>|<point|3.35955|2.42812>|<point|3.35955|2.40695>|<point|3.35955|2.38578>|<point|3.33839|2.38578>|<point|3.33839|2.36462>|<point|3.33839|2.34345>|<point|3.31722|2.34345>|<point|3.31722|2.32228>|<point|3.31722|2.30111>|<point|3.31722|2.27995>|<point|3.31722|2.25878>|<point|3.31722|2.23761>|<point|3.33839|2.23761>|<point|3.33839|2.21645>|<point|3.35955|2.21645>|<point|3.38072|2.21645>|<point|3.38072|2.19528>|<point|3.40189|2.19528>|<point|3.42306|2.19528>|<point|3.44422|2.19528>|<point|3.46539|2.19528>|<point|3.48656|2.19528>|<point|3.50772|2.19528>|<point|3.50772|2.21645>|<point|3.52889|2.21645>|<point|3.52889|2.25878>|<point|3.52889|2.27995>|<point|3.52889|2.30111>|<point|3.50772|2.30111>|<point|3.48656|2.30111>|<point|3.46539|2.30111>|<point|3.44422|2.30111>|<point|3.44422|2.27995>|<point|3.42306|2.27995>|<point|3.42306|2.25878>|<point|3.42306|2.23761>|<point|3.40189|2.23761>|<point|3.40189|2.21645>|<point|3.38072|2.21645>|<point|3.38072|2.19528>|<point|3.38072|2.17411>|<point|3.38072|2.15295>|<point|3.38072|2.13178>|<point|3.38072|2.11061>|<point|3.38072|2.08945>|<point|3.38072|2.06828>|<point|3.40189|2.06828>|<point|3.40189|2.04711>|<point|3.40189|2.02595>|<point|3.42306|2.02595>|<point|3.44422|2.02595>|<point|3.46539|2.02595>|<point|3.48656|2.02595>|<point|3.50772|2.02595>|<point|3.52889|2.02595>|<point|3.52889|2.04711>|<point|3.52889|2.06828>|<point|3.52889|2.08945>|<point|3.52889|2.11061>|<point|3.52889|2.13178>|<point|3.50772|2.13178>|<point|3.48656|2.13178>|<point|3.46539|2.13178>|<point|3.44422|2.13178>|<point|3.44422|2.11061>|<point|3.44422|2.08945>|<point|3.42306|2.08945>|<point|3.42306|2.06828>|<point|3.40189|2.06828>|<point|3.40189|2.04711>|<point|3.38072|2.02595>|<point|3.38072|2.00478>|<point|3.38072|1.98361>|<point|3.35955|1.98361>|<point|3.35955|1.96245>|<point|3.35955|1.94128>|<point|3.35955|1.92011>|<point|3.35955|1.89894>|<point|3.38072|1.89894>|<point|3.40189|1.89894>|<point|3.40189|1.87778>|<point|3.42306|1.87778>|<point|3.44422|1.87778>|<point|3.46539|1.87778>|<point|3.48656|1.87778>|<point|3.50772|1.87778>|<point|3.52889|1.87778>|<point|3.55006|1.87778>|<point|3.57122|1.87778>|<point|3.57122|1.89894>|<point|3.57122|1.92011>|<point|3.57122|1.94128>|<point|3.57122|1.96245>|<point|3.57122|1.98361>|<point|3.55006|1.98361>|<point|3.52889|1.98361>|<point|3.50772|1.98361>|<point|3.48656|1.96245>|<point|3.46539|1.96245>|<point|3.44422|1.94128>|<point|3.44422|1.92011>|<point|3.42306|1.92011>|<point|3.42306|1.89894>|<point|3.42306|1.87778>|<point|3.40189|1.87778>|<point|3.40189|1.85661>|<point|3.40189|1.83544>|<point|3.40189|1.81428>|<point|3.40189|1.79311>|<point|3.40189|1.77194>|<point|3.40189|1.75078>>>>
+    </padded-center>
+
+    <item>2-degree of freedom spring-mass system with dash-pot.
+
+    <with|gr-mode|<tuple|edit|math-at>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|empty>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|2|none>>|gr-edit-grid|<tuple|empty>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-grid-aspect|<tuple|<tuple|axes|#e0e0ff>|<tuple|1|#e0e0ff>|<tuple|2|#e0e0ff>>|gr-grid-aspect-props|<tuple|<tuple|axes|#e0e0ff>|<tuple|1|#e0e0ff>|<tuple|2|#e0e0ff>>|<graphics||<line|<point|-5|2>|<point|-5.0|-2.0>>|<line|<point|-5|0>|<point|-4.0|0.0>>|<line|<point|-4.00913|-0.0308738>|<point|-4.00913|-0.0308738>|<point|-3.84839|0.129862>|<point|-3.83053|0.112002>|<point|-3.77695|0.0227047>|<point|-3.7591|-0.0308738>|<point|-3.7591|-0.0665928>|<point|-3.7591|-0.102312>|<point|-3.77695|-0.120171>|<point|-3.77695|-0.138031>|<point|-3.77695|-0.120171>|<point|-3.7591|-0.0844523>|<point|-3.70552|-0.0308738>|<point|-3.65194|0.0405642>|<point|-3.61622|0.0584237>|<point|-3.59836|0.0584237>|<point|-3.5805|0.0584237>|<point|-3.52692|0.0584237>|<point|-3.52692|0.00484522>|<point|-3.52692|-0.0487333>|<point|-3.52692|-0.102312>|<point|-3.52692|-0.120171>|<point|-3.38405|0.0405642>|<point|-3.34833|0.0762832>|<point|-3.33047|0.0762832>|<point|-3.31261|0.0405642>|<point|-3.29475|0.00484522>|<point|-3.29475|-0.0308738>|<point|-3.29475|-0.0665928>|<point|-3.27689|-0.0665928>|<point|-3.15187|0.0762832>|<point|-3.11615|0.0941427>|<point|-3.08043|0.0941427>|<point|-3.06257|0.0227047>|<point|-3.06257|-0.0487333>|<point|-3.06257|-0.102312>|<point|-3.06257|-0.120171>|<point|-3.06257|-0.102312>|<point|-2.97328|0.0227047>|<point|-2.93756|0.0584237>|<point|-2.9197|0.0762832>|<point|-2.90184|0.0762832>|<point|-2.88398|0.0762832>|<point|-2.86612|0.00484522>|<point|-2.86612|-0.0487333>|<point|-2.88398|-0.138031>|<point|-2.88398|-0.15589>|<point|-2.86612|-0.15589>|<point|-2.8304|-0.0844523>|<point|-2.75896|-0.0130143>|<point|-2.7411|0.00484522>|<point|-2.72324|0.00484522>|<point|-2.68752|0.00484522>|<point|-2.66967|0.00484522>|<point|-2.65181|-0.0130143>|<point|-2.65181|-0.0308738>|<point|-2.59823|-0.15589>|<point|-2.58037|-0.17375>|<point|-2.56251|-0.17375>>|<line|<point|-2.52679|-0.245188>|<point|-2.52679|-0.245188>|<point|-2.43749|-0.191609>|<point|-2.43749|-0.17375>|<point|-2.43749|-0.15589>|<point|-2.43749|-0.138031>|<point|-2.43749|-0.120171>|<point|-2.43749|-0.102312>|<point|-2.43749|-0.0844523>|<point|-2.43749|-0.0665928>|<point|-2.43749|-0.0487333>|<point|-2.43749|-0.0844523>|<point|-2.43749|-0.102312>|<point|-2.45535|-0.120171>|<point|-2.45535|-0.138031>|<point|-2.45535|-0.15589>|<point|-2.47321|-0.15589>|<point|-2.47321|-0.17375>|<point|-2.50893|-0.191609>|<point|-2.52679|-0.209469>|<point|-2.54465|-0.209469>|<point|-2.56251|-0.209469>|<point|-2.58037|-0.209469>>|<line|<point|-2.43749|-0.0130143>|<point|-2.43749|-0.0130143>|<point|-2.47321|-0.138031>|<point|-2.49107|-0.15589>|<point|-2.50893|-0.17375>|<point|-2.52679|-0.191609>|<point|-2.54465|-0.191609>|<point|-2.56251|-0.191609>>|<line|<point|-2.43749|-0.0130143>|<point|-1.11588834501918|0.00484521762137849>>|<line|<point|0.142058|0.0820105>|<point|0.902235745468977|0.0762832385236142>>|<cline|<point|3.11681|0.54063>|<point|3.11681439343829|-0.298766371213123>|<point|4.11694668606959|-0.298766371213123>|<point|4.1526656965207|0.540630374388147>>|<line|<point|4.13366|0.0938995>|<point|4.79560788464083|0.0941427437491732>>|<line|<point|6.5637|1.7015>|<point|6.5458393967456|-1.42391520042334>>|<math-at|k<rsub|1>|<point|-3.15187|0.701366>>|<math-at|m<rsub|1>|<point|-0.669401|0.0584237>>|<math-at|k<rsub|2>|<point|1.47374|0.754944>>|<math-at|m<rsub|2>|<point|3.36685|0.147721>>|<math-at|k<rsub|3>|<point|5.38497|0.665647>>|<with|arrow-end|\<gtr\>|<line|<point|-0.472946|-1.45963>|<point|0.277153062574415|-1.45963421087445>>>|<with|arrow-end|\<gtr\>|<line|<point|3.68832|-1.56679>|<point|4.545574811483|-1.56679124222781>>>|<math-at|x<rsub|1><around*|(|t|)>|<point|0.562905|-1.58465>>|<math-at|x<rsub|2><around*|(|t|)>|<point|4.74203|-1.63823>>|<with|arrow-end|\<gtr\>|<line|<point|-0.526525|1.75508>|<point|0.273829210212991|1.75641619261807>>>|<with|dash-style|10|<line|<point|-0.526525|1.75508>|<point|-0.5|-1.5>>>|<with|dash-style|10|<line|<point|3.7419|1.75508>|<point|3.76502142572881|-1.5>>>|<with|arrow-end|\<gtr\>|<line|<point|3.7419|1.75508>|<point|4.5|1.76183953666201>>>|<math-at|F<rsub|2><around*|(|t|)>|<point|4.5|2.09420197386657>>|<line|<point|5.71193|0>|<point|6.5|0.0>>|<line|<point|4.8247|0.0419037>|<point|4.8247|0.0419037>|<point|4.8882|0.168905>|<point|4.90936|0.168905>|<point|4.90936|0.190071>|<point|4.93053|0.190071>|<point|4.9517|0.190071>|<point|4.97286|0.190071>|<point|4.99403|0.190071>|<point|5.0152|0.190071>|<point|5.0152|0.168905>|<point|5.0152|0.147738>|<point|5.0152|0.126571>|<point|5.0152|0.105404>|<point|5.0152|0.0842373>|<point|5.0152|0.0630705>|<point|5.0152|0.0419037>|<point|5.0152|0.0207369>|<point|4.99403|0.0207369>|<point|4.97286|0.0207369>|<point|4.9517|0.0207369>|<point|4.9517|-0.000429951>|<point|4.93053|-0.000429951>|<point|4.90936|-0.000429951>|<point|4.90936|0.0207369>|<point|4.90936|0.0419037>|<point|4.90936|0.0630705>|<point|4.93053|0.0842373>|<point|4.93053|0.105404>|<point|4.9517|0.126571>|<point|4.97286|0.147738>|<point|4.99403|0.168905>|<point|5.0152|0.168905>|<point|5.03636|0.168905>|<point|5.05753|0.168905>|<point|5.0787|0.168905>|<point|5.09986|0.168905>|<point|5.12103|0.168905>|<point|5.12103|0.147738>|<point|5.12103|0.126571>|<point|5.1422|0.126571>|<point|5.1422|0.105404>|<point|5.1422|0.0842373>|<point|5.1422|0.0630705>|<point|5.1422|0.0419037>|<point|5.1422|0.0207369>|<point|5.12103|0.0207369>|<point|5.12103|-0.000429951>|<point|5.09986|-0.000429951>|<point|5.09986|0.0207369>|<point|5.09986|0.0419037>|<point|5.09986|0.0630705>|<point|5.09986|0.0842373>|<point|5.09986|0.105404>|<point|5.09986|0.126571>|<point|5.12103|0.126571>|<point|5.12103|0.147738>|<point|5.1422|0.147738>|<point|5.16336|0.147738>|<point|5.18453|0.147738>|<point|5.2057|0.147738>|<point|5.22687|0.147738>|<point|5.24803|0.147738>|<point|5.24803|0.126571>|<point|5.24803|0.105404>|<point|5.24803|0.0842373>|<point|5.24803|0.0630705>|<point|5.24803|0.0419037>|<point|5.24803|0.0207369>|<point|5.24803|-0.000429951>|<point|5.24803|-0.0215968>|<point|5.22687|-0.0215968>|<point|5.2057|-0.0215968>|<point|5.18453|-0.0215968>|<point|5.18453|-0.000429951>|<point|5.18453|0.0207369>|<point|5.18453|0.0419037>|<point|5.18453|0.0630705>|<point|5.2057|0.0842373>|<point|5.2057|0.105404>|<point|5.22687|0.126571>|<point|5.24803|0.147738>|<point|5.2692|0.147738>|<point|5.2692|0.168905>|<point|5.29037|0.168905>|<point|5.31153|0.168905>|<point|5.3327|0.168905>|<point|5.35387|0.168905>|<point|5.37503|0.168905>|<point|5.41737|0.168905>|<point|5.43853|0.147738>|<point|5.43853|0.126571>|<point|5.43853|0.105404>|<point|5.43853|0.0842373>|<point|5.43853|0.0630705>|<point|5.43853|0.0419037>|<point|5.43853|0.0207369>|<point|5.41737|0.0207369>|<point|5.3962|0.0207369>|<point|5.3962|-0.000429951>|<point|5.37503|-0.000429951>|<point|5.35387|-0.000429951>|<point|5.35387|0.0207369>|<point|5.35387|0.0419037>|<point|5.35387|0.0630705>|<point|5.35387|0.0842373>|<point|5.35387|0.105404>|<point|5.37503|0.126571>|<point|5.3962|0.147738>|<point|5.3962|0.168905>|<point|5.41737|0.168905>|<point|5.43853|0.168905>|<point|5.4597|0.168905>|<point|5.50203|0.168905>|<point|5.5232|0.168905>|<point|5.54437|0.168905>|<point|5.54437|0.147738>|<point|5.54437|0.126571>|<point|5.54437|0.105404>|<point|5.54437|0.0630705>|<point|5.54437|0.0207369>|<point|5.54437|-0.000429951>|<point|5.54437|-0.0215968>|<point|5.54437|-0.0427636>|<point|5.5232|-0.0427636>|<point|5.5232|-0.0215968>|<point|5.5232|-0.000429951>|<point|5.5232|0.0207369>|<point|5.5232|0.0419037>|<point|5.54437|0.0630705>|<point|5.54437|0.0842373>|<point|5.54437|0.105404>|<point|5.5867|0.105404>|<point|5.5867|0.126571>|<point|5.60787|0.126571>|<point|5.62903|0.126571>|<point|5.6502|0.126571>|<point|5.67137|0.126571>|<point|5.69254|0.126571>|<point|5.7137|0.126571>|<point|5.73487|0.105404>|<point|5.73487|0.0842373>|<point|5.73487|0.0630705>|<point|5.73487|0.0419037>>|<line|<point|3|0>|<point|2.0|0.0>>|<line|<point|0.930001|0.0842373>|<point|0.930001|0.0842373>|<point|1.01467|0.168905>|<point|1.03583|0.168905>|<point|1.057|0.168905>|<point|1.057|0.147738>|<point|1.057|0.126571>|<point|1.07817|0.105404>|<point|1.07817|0.0842373>|<point|1.07817|0.0630705>|<point|1.057|0.0630705>|<point|1.057|0.0842373>|<point|1.057|0.105404>|<point|1.07817|0.105404>|<point|1.07817|0.126571>|<point|1.09934|0.126571>|<point|1.09934|0.147738>|<point|1.1205|0.147738>|<point|1.14167|0.147738>|<point|1.16284|0.147738>|<point|1.184|0.147738>|<point|1.184|0.126571>|<point|1.184|0.105404>|<point|1.184|0.0842373>|<point|1.184|0.0630705>|<point|1.184|0.0419037>|<point|1.184|0.0207369>|<point|1.16284|0.0207369>|<point|1.16284|0.0419037>|<point|1.16284|0.0630705>|<point|1.16284|0.0842373>|<point|1.16284|0.105404>|<point|1.16284|0.126571>|<point|1.16284|0.147738>|<point|1.184|0.147738>|<point|1.20517|0.147738>|<point|1.22634|0.147738>|<point|1.2475|0.147738>|<point|1.26867|0.147738>|<point|1.28984|0.147738>|<point|1.311|0.147738>|<point|1.311|0.126571>|<point|1.311|0.105404>|<point|1.33217|0.105404>|<point|1.33217|0.0842373>|<point|1.33217|0.0419037>|<point|1.33217|0.0207369>|<point|1.311|0.0207369>|<point|1.28984|0.0207369>|<point|1.28984|0.0419037>|<point|1.28984|0.0630705>|<point|1.28984|0.0842373>|<point|1.28984|0.105404>|<point|1.311|0.105404>|<point|1.33217|0.105404>|<point|1.33217|0.126571>|<point|1.35334|0.126571>|<point|1.3745|0.126571>|<point|1.39567|0.126571>|<point|1.41684|0.126571>|<point|1.438|0.126571>|<point|1.438|0.105404>|<point|1.438|0.0842373>|<point|1.438|0.0630705>|<point|1.438|0.0419037>|<point|1.438|0.0207369>|<point|1.438|-0.000429951>|<point|1.438|0.0207369>|<point|1.438|0.0419037>|<point|1.438|0.0630705>|<point|1.45917|0.0842373>|<point|1.48034|0.0842373>|<point|1.5015|0.0842373>|<point|1.52267|0.0842373>|<point|1.54384|0.0842373>|<point|1.56501|0.0842373>|<point|1.58617|0.0842373>|<point|1.58617|0.0630705>|<point|1.58617|0.0419037>|<point|1.58617|0.0207369>|<point|1.60734|0.0207369>|<point|1.60734|-0.000429951>|<point|1.58617|-0.000429951>|<point|1.56501|-0.000429951>|<point|1.56501|0.0207369>|<point|1.56501|0.0419037>|<point|1.56501|0.0630705>|<point|1.56501|0.0842373>|<point|1.58617|0.0842373>|<point|1.58617|0.105404>|<point|1.60734|0.105404>|<point|1.62851|0.105404>|<point|1.64967|0.105404>|<point|1.67084|0.105404>|<point|1.67084|0.0842373>|<point|1.67084|0.0630705>|<point|1.67084|0.0419037>|<point|1.67084|0.0207369>|<point|1.67084|-0.000429951>|<point|1.67084|0.0207369>|<point|1.69201|0.0419037>|<point|1.71317|0.0630705>|<point|1.71317|0.0842373>|<point|1.75551|0.0842373>|<point|1.77667|0.0842373>|<point|1.79784|0.0842373>|<point|1.79784|0.0630705>|<point|1.79784|0.0419037>|<point|1.79784|0.0207369>|<point|1.79784|-0.000429951>|<point|1.79784|0.0207369>|<point|1.79784|0.0419037>|<point|1.79784|0.0630705>|<point|1.79784|0.0842373>|<point|1.81901|0.105404>|<point|1.84017|0.105404>|<point|1.86134|0.105404>|<point|1.88251|0.105404>|<point|1.90367|0.105404>|<point|1.92484|0.105404>|<point|1.92484|0.0842373>|<point|1.92484|0.0630705>|<point|1.94601|0.0419037>|<point|1.94601|0.0207369>|<point|1.94601|-0.000429951>|<point|1.96717|-0.000429951>|<point|1.96717|-0.0215968>|<point|1.96717|-0.0427636>|<point|1.96717|-0.0215968>|<point|1.96717|-0.000429951>|<point|1.96717|0.0207369>|<point|1.98834|0.0207369>|<point|2.00951|0.0207369>>|<math-at|F<rsub|1><around*|(|t|)>|<point|0.252662389204921|2.01041804471491>>|<cline|<point|-1.02659|0.612068>|<point|-0.99087180844027|-0.405923402566477>|<point|0.116417515544384|-0.388063897340918>|<point|0.0833278211403625|0.634574679190369>>>>
+
+    System of motion equations (Assume no damping):
+
+    <\equation*>
+      <choice|<tformat|<table|<row|<cell|m<rsub|1>*x<rsub|1><rprime|''>=F<rsub|1><around*|(|t|)>-k<rsub|1>*x<rsub|1>+k<rsub|2>*<around*|(|x<rsub|2>-x<rsub|1>|)>>>|<row|<cell|m<rsub|2>*x<rsub|2><rprime|''>=F<rsub|2><around*|(|t|)>-k<rsub|2>*<around*|(|x<rsub|2>-x<rsub|1>|)>-k<rsub|3>*x<rsub|2>>>>>>
+    </equation*>
+
+    or:
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|m<rsub|1>*x<rsub|1><rprime|''>>|<cell|=>|<cell|-<around*|(|k<rsub|1>+k<rsub|2>|)>*x<rsub|1>+k<rsub|2>*x<rsub|2>+F<rsub|1><around*|(|t|)>>>|<row|<cell|m<rsub|2>*x<rsub|2><rprime|''>>|<cell|=>|<cell|k<rsub|2>*x<rsub|1>-<around*|(|k<rsub|2>+k<rsub|3>|)>*x<rsub|2>+F<rsub|2><around*|(|t|)>>>>>
+    </eqnarray*>
+
+    This is a linear 2nd order system of ODEs. In matrix form:
+
+    <\equation*>
+      <matrix|<tformat|<table|<row|<cell|<rsub|>x<rsub|1><rprime|''>>>|<row|<cell|x<rsub|2><rprime|''>>>>>>=<matrix|<tformat|<table|<row|<cell|-<frac|<around*|(|k<rsub|1>+k<rsub|2>|)>|m<rsub|1>>>|<cell|<frac|k<rsub|2>|m<rsub|1>>>>|<row|<cell|<frac|k<rsub|2>|m<rsub|2>>>|<cell|-<frac|k<rsub|2>+k<rsub|3>|m<rsub|2>>>>>>><matrix|<tformat|<table|<row|<cell|<rsub|>x<rsub|1>>>|<row|<cell|x<rsub|2>>>>>>+<matrix|<tformat|<table|<row|<cell|<frac|F<rsub|1><around*|(|t|)>|m<rsub|1>>>>|<row|<cell|<frac|F<rsub|2><around*|(|t|)>|m<rsub|2>>>>>>>
+    </equation*>
+
+    <item>Parallel electrical circuit.
+
+    <\padded-center>
+      <with|gr-mode|<tuple|edit|math-at>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|empty>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-auto-crop|true|<graphics||<line|<point|-4|3>|<point|-2.0|3.0>>|<line|<point|-2|3.3>|<point|-2.0|2.6>>|<line|<point|-1.6|3.2>|<point|-1.6|2.6>>|<line|<point|-1.5|3>|<point|-0.3|3.0>|<point|-0.3|0.5>>|<line|<point|-4|3>|<point|-4.0|0.5>|<point|-2.7|0.5>>|<math-at|R|<point|-1.4|2>>|<math-at|C|<point|-1.5|3.5>>|<line|<point|-4|1.7>|<point|-2.49001190633682|1.70371411562376>>|<line|<point|-2.49001|1.70371>|<point|-2.27834369625612|2.06355007276095>|<point|-2.08784230718349|1.44971226352692>|<point|-1.81267363407858|1.9577159677206>|<point|-1.60100542399788|1.64021365259955>|<point|-0.3|1.65780244484044>>|<line|<point|-0.3|0.5>|<point|-1.47400449794946|0.495320148167747>>|<line|<point|-2.72285|0.512336>|<point|-2.72285|0.512336>|<point|-2.65935|0.660504>|<point|-2.65935|0.681671>|<point|-2.63818|0.681671>|<point|-2.61701|0.681671>|<point|-2.61701|0.702838>|<point|-2.59585|0.702838>|<point|-2.57468|0.702838>|<point|-2.55351|0.702838>|<point|-2.53235|0.702838>|<point|-2.51118|0.702838>|<point|-2.55351|0.533503>|<point|-2.55351|0.55467>|<point|-2.55351|0.575837>|<point|-2.53235|0.597004>|<point|-2.53235|0.61817>|<point|-2.51118|0.639337>|<point|-2.49001|0.639337>|<point|-2.49001|0.660504>|<point|-2.46885|0.660504>|<point|-2.44768|0.681671>|<point|-2.42651|0.681671>|<point|-2.40534|0.681671>|<point|-2.38418|0.681671>|<point|-2.38418|0.660504>|<point|-2.38418|0.639337>|<point|-2.38418|0.61817>|<point|-2.38418|0.597004>|<point|-2.40534|0.597004>|<point|-2.40534|0.575837>|<point|-2.42651|0.55467>|<point|-2.44768|0.55467>|<point|-2.44768|0.533503>|<point|-2.46885|0.533503>|<point|-2.46885|0.512336>|<point|-2.49001|0.512336>|<point|-2.49001|0.533503>|<point|-2.49001|0.55467>|<point|-2.49001|0.575837>|<point|-2.46885|0.597004>|<point|-2.44768|0.61817>|<point|-2.42651|0.61817>|<point|-2.42651|0.639337>|<point|-2.40534|0.639337>|<point|-2.38418|0.639337>|<point|-2.36301|0.639337>|<point|-2.34184|0.639337>|<point|-2.32068|0.639337>|<point|-2.29951|0.639337>|<point|-2.27834|0.61817>|<point|-2.27834|0.597004>|<point|-2.27834|0.575837>|<point|-2.27834|0.55467>|<point|-2.27834|0.533503>|<point|-2.27834|0.512336>|<point|-2.27834|0.491169>|<point|-2.29951|0.470003>|<point|-2.29951|0.491169>|<point|-2.29951|0.512336>|<point|-2.29951|0.533503>|<point|-2.27834|0.533503>|<point|-2.25718|0.55467>|<point|-2.23601|0.55467>|<point|-2.21484|0.575837>|<point|-2.19368|0.575837>|<point|-2.17251|0.575837>|<point|-2.15134|0.575837>|<point|-2.13018|0.575837>|<point|-2.10901|0.575837>|<point|-2.10901|0.55467>|<point|-2.10901|0.533503>|<point|-2.10901|0.512336>|<point|-2.10901|0.491169>|<point|-2.13018|0.470003>|<point|-2.15134|0.470003>|<point|-2.17251|0.470003>|<point|-2.17251|0.491169>|<point|-2.17251|0.512336>|<point|-2.17251|0.533503>|<point|-2.15134|0.533503>|<point|-2.15134|0.55467>|<point|-2.13018|0.575837>|<point|-2.10901|0.575837>|<point|-2.08784|0.575837>|<point|-2.06668|0.575837>|<point|-2.04551|0.575837>|<point|-2.02434|0.575837>|<point|-2.00318|0.575837>|<point|-1.98201|0.575837>|<point|-1.98201|0.55467>|<point|-1.98201|0.533503>|<point|-1.98201|0.512336>|<point|-1.98201|0.491169>|<point|-2.00318|0.491169>|<point|-2.02434|0.491169>|<point|-2.02434|0.512336>|<point|-2.02434|0.533503>|<point|-2.00318|0.55467>|<point|-1.98201|0.55467>|<point|-1.98201|0.575837>|<point|-1.98201|0.597004>|<point|-1.96084|0.61817>|<point|-1.93967|0.61817>|<point|-1.91851|0.61817>|<point|-1.89734|0.61817>|<point|-1.87617|0.61817>|<point|-1.87617|0.597004>|<point|-1.87617|0.575837>|<point|-1.85501|0.55467>|<point|-1.85501|0.533503>|<point|-1.85501|0.512336>|<point|-1.85501|0.491169>|<point|-1.87617|0.491169>|<point|-1.89734|0.491169>|<point|-1.89734|0.512336>|<point|-1.89734|0.533503>|<point|-1.89734|0.55467>|<point|-1.89734|0.575837>|<point|-1.89734|0.597004>|<point|-1.87617|0.597004>|<point|-1.87617|0.61817>|<point|-1.83384|0.61817>|<point|-1.81267|0.61817>|<point|-1.79151|0.597004>|<point|-1.77034|0.597004>|<point|-1.74917|0.575837>|<point|-1.74917|0.55467>|<point|-1.74917|0.533503>|<point|-1.74917|0.512336>|<point|-1.74917|0.491169>|<point|-1.74917|0.470003>|<point|-1.74917|0.448836>|<point|-1.74917|0.427669>|<point|-1.77034|0.427669>|<point|-1.77034|0.406502>|<point|-1.77034|0.427669>|<point|-1.77034|0.448836>|<point|-1.77034|0.470003>|<point|-1.77034|0.491169>|<point|-1.74917|0.512336>|<point|-1.72801|0.512336>|<point|-1.72801|0.533503>|<point|-1.70684|0.533503>|<point|-1.68567|0.533503>|<point|-1.66451|0.533503>|<point|-1.66451|0.512336>|<point|-1.64334|0.491169>|<point|-1.64334|0.470003>|<point|-1.64334|0.448836>|<point|-1.64334|0.427669>|<point|-1.64334|0.406502>|<point|-1.66451|0.406502>|<point|-1.68567|0.406502>|<point|-1.68567|0.385335>|<point|-1.70684|0.385335>|<point|-1.70684|0.406502>|<point|-1.72801|0.427669>|<point|-1.72801|0.448836>|<point|-1.72801|0.470003>|<point|-1.70684|0.491169>|<point|-1.70684|0.512336>|<point|-1.68567|0.533503>|<point|-1.66451|0.533503>|<point|-1.64334|0.55467>|<point|-1.62217|0.55467>|<point|-1.62217|0.575837>|<point|-1.60101|0.575837>|<point|-1.57984|0.575837>|<point|-1.55867|0.575837>|<point|-1.5375|0.575837>|<point|-1.5375|0.55467>|<point|-1.5375|0.533503>|<point|-1.5375|0.512336>|<point|-1.5375|0.491169>|<point|-1.5375|0.470003>>|<math-at|L|<point|-1.64333906601402|0.881333509723508>>>>
+    </padded-center>
+
+    <\equation*>
+      <choice|<tformat|<table|<row|<cell|V<around*|(|t|)>=<text| voltage at
+      time <math|t>>>>|<row|<cell|I<around*|(|t|)>=<text| current at time
+      >t>>>>>
+    </equation*>
+
+    Get:
+
+    <\equation*>
+      <choice|<tformat|<table|<row|<cell|<frac|\<mathd\>I<around*|(|t|)>|\<mathd\>t>=<frac|V<around*|(|t|)>|L>>>|<row|<cell|<frac|\<mathd\>V<around*|(|t|)>|\<mathd\>t>=-<frac|I<around*|(|t|)>|C>-<frac|V<around*|(|t|)>|R*C>>>>>>
+    </equation*>
+
+    This is a linear first order system.
+
+    <\equation*>
+      <bmatrix|<tformat|<table|<row|<cell|I<around*|(|t|)>>>|<row|<cell|V<around*|(|t|)>>>>>><rprime|'>=<bmatrix|<tformat|<table|<row|<cell|0>|<cell|<frac|1|L>>>|<row|<cell|-<frac|1|C>>|<cell|-<frac|1|RC>>>>>>*<bmatrix|<tformat|<table|<row|<cell|I<around*|(|t|)>>>|<row|<cell|V<around*|(|t|)>>>>>>
+    </equation*>
+
+    <item>Predator-prey situation, model of Lotka & Volterra (1925).
+
+    <\itemize>
+      <item>population of food fish = <math|x<around*|(|t|)>>
+
+      <item>population of sharks = <math|y<around*|(|t|)>>
+    </itemize>
+
+    Principles:
+
+    <\enumerate>
+      <item>If no predators, prey pop. increases at a constant rate
+      <math|a\<gtr\>0>.
+
+      <\equation*>
+        <frac|\<mathd\>x|\<mathd\>t>=a*x
+      </equation*>
+
+      <item>If no prey, predator pop. decreases at constant rate
+      <math|c\<gtr\>0>.
+
+      <\equation*>
+        <frac|\<mathd\>y|\<mathd\>t>=-c*y
+      </equation*>
+
+      <item>If both prey and predators are present, number of encounters is
+      proportionate to <math|x*y>.
+    </enumerate>
+
+    Result is net decline of <math|b*x*y> in fish and increase of
+    <math|r*x*y> in sharks. (<math|r,b\<gtr\>0>)
+
+    <\equation*>
+      <choice|<tformat|<table|<row|<cell|<frac|\<mathd\>x|\<mathd\>t>=a*x-b*x*y=x<around*|(|a-b*y|)>>>|<row|<cell|<frac|\<mathd\>y|\<mathd\>t>=-c*x+r*x*y=y<around*|(|-c+r*x|)>>>>>>
+    </equation*>
+
+    This is a first order non-linear system.
+
+    Inspect equilibrium of populations: <math|x=0=y>
+    <with|font-series|bold|or> <math|y=<frac|a|b>> & <math|x=<frac|c|r>>.
+
+    <underline|Note:> The system:
+
+    <\equation*>
+      <choice|<tformat|<table|<row|<cell|y<rsub|1><rprime|'>=y<rsub|1>>>|<row|<cell|y<rsub|2><rprime|'>=y<rsub|2>>>>>>
+    </equation*>
+
+    Clearly cannot express <math|y<rsub|2>> in terms of <math|y<rsub|1>> and
+    reduce to one equation.
+  </enumerate>
+
+  <underline|In general:>
+
+  A first order system of ODEs is of the form:
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|y<rsub|1><rprime|'><around*|(|x|)>>|<cell|=>|<cell|f<rsub|1><around*|(|x,y,\<ldots\>,y<rsub|n>|)>>>|<row|<cell|y<rsub|2><rprime|'><around*|(|x|)>>|<cell|=>|<cell|f<rsub|2><around*|(|x,y,\<ldots\>,y<rsub|n>|)>>>|<row|<cell|\<vdots\>>|<cell|>|<cell|>>|<row|<cell|y<rprime|'><rsub|n><around*|(|x|)>>|<cell|=>|<cell|f<rsub|n><around*|(|x,y,\<ldots\>,y<rsub|n>|)>>>>>
+  </eqnarray*>
+
+  We call it <with|font-shape|italic|linear> if
+  <math|f<rsub|0>,\<ldots\>,f<rsub|n>> are linear in
+  <math|y<rsub|1>,\<ldots\>,y<rsub|n>>.
+
+  So <math|f<rsub|i><around*|(|x,y<rsub|1>,\<ldots\>,y<rsub|n>|)>=p<rsub|i1><around*|(|x|)>*y<rsub|1>+p<rsub|i<rsub|2>><around*|(|x|)>*y<rsub|2>+\<cdots\>+p<rsub|i<rsub|n>><around*|(|x|)>*y<rsub|n>+g<rsub|i><around*|(|x|)>>
+  where <math|p<rsub|i<rsub|1>>,\<ldots\>,p<rsub|i<rsub|n>>> are functions of
+  <math|x>.
+
+  Linear systems can be written in matrix form:
+
+  <\equation*>
+    <bmatrix|<tformat|<table|<row|<cell|y<rsub|1><rprime|'><around*|(|x|)>>>|<row|<cell|\<vdots\>>>|<row|<cell|y<rprime|'><rsub|n><around*|(|x|)>>>>>>=<bmatrix|<tformat|<table|<row|<cell|p<rsub|1<rsub|1>><around*|(|x|)>>|<cell|\<ldots\>>|<cell|p<rsub|1<rsub|n>><around*|(|x|)>>>|<row|<cell|\<vdots\>>|<cell|\<ddots\>>|<cell|>>|<row|<cell|p<rsub|n<rsub|1>><around*|(|x|)>>|<cell|>|<cell|p<rsub|n<rsub|n>><around*|(|x|)>>>>>><bmatrix|<tformat|<table|<row|<cell|y<rsub|1><around*|(|x|)>>>|<row|<cell|\<vdots\>>>|<row|<cell|y<rsub|n><around*|(|x|)>>>>>>+<bmatrix|<tformat|<table|<row|<cell|g<rsub|1><around*|(|x|)>>>|<row|<cell|\<vdots\>>>|<row|<cell|g<rsub|n><around*|(|x|)>>>>>>
+  </equation*>
+
+  Or
+
+  <\equation*>
+    <wide|Y|\<vect\>><rprime|'>=A*<wide|Y|\<vect\>>+<wide|b|\<vect\>>
+  </equation*>
+
+  <underline|Example>
+
+  <\equation*>
+    <choice|<tformat|<table|<row|<cell|y<rsub|1><rprime|'>=x<rsup|2>y<rsub|1>+\<mathe\><rsup|x>y<rsub|2>+sin
+    x*y<rsup|><rsub|3>+x<rsup|2>>>|<row|<cell|y<rsub|2><rprime|'>=x*y<rsub|2>+y<rsub|3>+\<mathe\><rsup|2x>>>|<row|<cell|y<rsub|3><rprime|'>=<sqrt|x>*y<rsub|1>+2y<rsub|3>+ln
+    x>>>>>
+  </equation*>
+
+  <\equation*>
+    <bmatrix|<tformat|<table|<row|<cell|y<rsub|1>>>|<row|<cell|y<rsub|2>>>|<row|<cell|y<rsub|3>>>>>><rprime|'>=<bmatrix|<tformat|<table|<row|<cell|x<rsup|2>>|<cell|\<mathe\><rsup|x>>|<cell|sin
+    x>>|<row|<cell|0>|<cell|x>|<cell|1>>|<row|<cell|<sqrt|x>>|<cell|0>|<cell|2>>>>><bmatrix|<tformat|<table|<row|<cell|y<rsub|1>>>|<row|<cell|y<rsub|2>>>|<row|<cell|y<rsub|3>>>>>>+<bmatrix|<tformat|<table|<row|<cell|x<rsup|2>>>|<row|<cell|\<mathe\><rsup|2x>>>|<row|<cell|ln
+    x>>>>>
+  </equation*>
+
+  A solution is a vector of functions <math|<bmatrix|<tformat|<table|<row|<cell|y<rsub|1>>|<cell|\<ldots\>>|<cell|y<rsub|n>>>>>><rsup|T>>
+  satisfying the system.
+
+  ICs: <math|y<rsub|1><around*|(|a|)>=b<rsub|1>,y<rsub|2><around*|(|a|)>=b<rsub|2>,\<ldots\>,y<rsub|n><around*|(|a|)>=b<rsub|n>>.
+
+  <subsection|Existence & Uniqueness theorem for first order systems>
+
+  Given\ 
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|y<rsub|1><rprime|'><around*|(|x|)>>|<cell|=>|<cell|f<rsub|1><around*|(|x,y,\<ldots\>,y<rsub|n>|)>>>|<row|<cell|y<rsub|2><rprime|'><around*|(|x|)>>|<cell|=>|<cell|f<rsub|2><around*|(|x,y,\<ldots\>,y<rsub|n>|)>>>|<row|<cell|\<vdots\>>|<cell|>|<cell|>>|<row|<cell|y<rprime|'><rsub|n><around*|(|x|)>>|<cell|=>|<cell|f<rsub|n><around*|(|x,y,\<ldots\>,y<rsub|n>|)>>>>>
+  </eqnarray*>
+
+  and ICs
+
+  <\equation*>
+    y<rsub|1><around*|(|a|)>=b<rsub|1>,y<rsub|2><around*|(|a|)>=b<rsub|2>,\<ldots\>,y<rsub|n><around*|(|a|)>=b<rsub|n>
+  </equation*>
+
+  such that <math|f<rsub|1>,\<ldots\>,f<rsub|n>> are continuous in
+  <math|x,y<rsub|1>,\<ldots\>,y<rsub|n>> and
+  <math|\<partial\>f<rsub|i>/\<partial\>y<rsub|j>> exist and are continuous
+  in some neighborhood of <math|<around*|(|a,b<rsub|1>,\<ldots\>,b<rsub|n>|)>>
+  in <math|\<bbb-R\><rsup|n+1>>, there exists a unique solution satisfying
+  ICs defined for some interval around <math|a>. This holds for linear
+  systems if and only if <math|g<rsub|i>,p<rsub|i,j>> are continuous.
+
+  <marginal-note|normal|c|lec 13 18.12.22>
+
+  <\ornamented>
+    <underline|Theorem>: The <em|cardinality> (number of elements in a group)
+    of a basis is determined uniquely. This cardinality is the <em|dimension>
+    of the space.
+
+    <underline|Theorem>: If the dimension of a space <math|w> is <math|k>,
+    then any linearly independent set of <math|k> elements will be a basis.
+    Also, any spanning set with <math|k> elements will be a basis.
+
+    Note that:\ 
+
+    <\itemize>
+      <item>The dimension of the vector space of all real functions in
+      infinite. (<math|2<rsup|\<aleph\><rsub|0>>>)
+
+      <item>The dimension of vector space of polynomial functions is
+      <math|\<aleph\><rsub|0>> are <math|1,x,x<rsup|2>,\<ldots\>> is a basis.
+    </itemize>
+  </ornamented>
+
+  <subsection|Reducing higher order ODE to a system of first order system>
+
+  Any higher order linear ODE can be reduced to a first order linear system.
+
+  <underline|Example>: <math|y<rprime|''>+y=0>.
+
+  We can define a <math|2\<times\>2> system which is equivalent:
+
+  <\equation*>
+    <choice|<tformat|<table|<row|<cell|y<rsub|1>=y>>|<row|<cell|y<rsub|2>=y<rprime|'>>>>>>
+  </equation*>
+
+  Then:
+
+  <\equation*>
+    <choice|<tformat|<table|<row|<cell|y<rsub|1><rprime|'>=y<rsub|2>>>|<row|<cell|y<rsub|2><rprime|'>=y<rprime|''>=-y<rsub|1>>>>>>
+  </equation*>
+
+  Write in matrix form:
+
+  <\equation*>
+    <bmatrix|<tformat|<table|<row|<cell|y<rsub|1>>>|<row|<cell|y<rsub|2>>>>>><rprime|'>=<bmatrix|<tformat|<table|<row|<cell|0>|<cell|1>>|<row|<cell|-1>|<cell|0>>>>>*<bmatrix|<tformat|<table|<row|<cell|y<rsub|1>>>|<row|<cell|y<rsub|2>>>>>>
+  </equation*>
+
+  We can see that <math|y<rsub|1>=sin x,y<rsub|2>=cos x> solve<rigid|> this
+  system.
+
+  <underline|Another example>: <math|y<rsup|<around*|(|3|)>>-2y<rprime|''>+3y<rprime|'>+4y=sin
+  x>
+
+  This is equivalent to the following <math|3\<times\>3> system:
+
+  <\equation*>
+    <choice|<tformat|<table|<row|<cell|y<rsub|1>=y>>|<row|<cell|y<rsub|2>=y<rprime|'>>>|<row|<cell|y<rsub|3>=y<rprime|''>>>>>>
+  </equation*>
+
+  Get:
+
+  <\equation*>
+    <choice|<tformat|<table|<row|<cell|y<rsub|1><rprime|'>=y<rsub|2>>>|<row|<cell|y<rsub|2><rprime|'>=y<rsub|3>>>|<row|<cell|y<rsub|3><rprime|'>=-4y<rsub|1>+-3y<rsub|2>+2y<rsub|3>+sin
+    x>>>>>
+  </equation*>
+
+  In matrix form:
+
+  <\equation*>
+    <bmatrix|<tformat|<table|<row|<cell|y<rsub|1>>>|<row|<cell|y<rsub|2>>>|<row|<cell|y<rsub|3>>>>>><rprime|'>=<bmatrix|<tformat|<table|<row|<cell|0>|<cell|1>|<cell|0>>|<row|<cell|0>|<cell|0>|<cell|1>>|<row|<cell|-4>|<cell|-3>|<cell|2>>>>><bmatrix|<tformat|<table|<row|<cell|y<rsub|1>>>|<row|<cell|y<rsub|2>>>|<row|<cell|y<rsub|3>>>>>>+<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|0>>|<row|<cell|sin
+    x>>>>>
+  </equation*>
+
   <subsection|System of algebraic equations>
 
   A system of equations of the form:
@@ -4205,253 +4452,6 @@
   <\equation*>
     A<rsup|-1>=<bmatrix|<tformat|<table|<row|<cell|-<frac|7|2>>|<cell|-3>|<cell|-<frac|5|2>>>|<row|<cell|<frac|1|2>>|<cell|1>|<cell|-<frac|1|2>>>|<row|<cell|<frac|5|2>>|<cell|2>|<cell|-<frac|3|2>>>>>>
   </equation*>
-
-  <subsection|Examples of problems represented by a system of ODEs>
-
-  <\enumerate>
-    <item>2nd order system in <math|u<rsub|1>,u<rsub|2>>.
-
-    <\padded-center>
-      <with|gr-mode|<tuple|hand-edit|line>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|empty>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-auto-crop|true|<graphics||<line|<point|2|3>|<point|5.0|3.0>>|<line|<point|3.5|3>|<point|3.5|2.5>>|<cline|<point|3|1.7>|<point|4.0|1.7>|<point|4.0|1.0>|<point|3.0|1.0>>|<line|<point|3.49119|1.00174>|<point|3.49119|1.00174>|<point|3.36419|0.98057>|<point|3.36419|0.959403>|<point|3.36419|0.938236>|<point|3.36419|0.917069>|<point|3.36419|0.895902>|<point|3.36419|0.874735>|<point|3.38535|0.853569>|<point|3.40652|0.853569>|<point|3.42769|0.853569>|<point|3.44885|0.832402>|<point|3.47002|0.832402>|<point|3.49119|0.832402>|<point|3.51235|0.832402>|<point|3.53352|0.832402>|<point|3.55469|0.832402>|<point|3.53352|0.832402>|<point|3.51235|0.832402>|<point|3.49119|0.832402>|<point|3.47002|0.811235>|<point|3.44885|0.811235>|<point|3.42769|0.790068>|<point|3.42769|0.768901>|<point|3.40652|0.768901>|<point|3.40652|0.747734>|<point|3.40652|0.726568>|<point|3.38535|0.726568>|<point|3.38535|0.705401>|<point|3.38535|0.684234>|<point|3.38535|0.663067>|<point|3.40652|0.663067>|<point|3.42769|0.663067>|<point|3.42769|0.6419>|<point|3.44885|0.6419>|<point|3.47002|0.620734>|<point|3.49119|0.620734>|<point|3.51235|0.620734>|<point|3.53352|0.620734>|<point|3.55469|0.620734>|<point|3.53352|0.620734>|<point|3.51235|0.620734>|<point|3.49119|0.620734>|<point|3.47002|0.620734>|<point|3.44885|0.620734>|<point|3.42769|0.620734>|<point|3.40652|0.599567>|<point|3.38535|0.599567>|<point|3.36419|0.5784>|<point|3.36419|0.557233>|<point|3.34302|0.536066>|<point|3.34302|0.514899>|<point|3.34302|0.493733>|<point|3.36419|0.493733>|<point|3.38535|0.493733>|<point|3.40652|0.472566>|<point|3.42769|0.451399>|<point|3.44885|0.451399>|<point|3.42769|0.451399>|<point|3.40652|0.451399>|<point|3.40652|0.430232>|<point|3.38535|0.430232>|<point|3.38535|0.409065>|<point|3.38535|0.387899>|<point|3.38535|0.366732>|<point|3.40652|0.366732>|<point|3.40652|0.345565>|<point|3.42769|0.345565>|<point|3.42769|0.324398>|<point|3.44885|0.324398>|<point|3.47002|0.324398>>|<cline|<point|3|0.3>|<point|4.0|0.3>|<point|4.0|-0.5>|<point|3.0|-0.5>>|<math-at|k<rsub|1>|<point|3.89336|2.14474>>|<with|dash-style|10|<line|<point|2.62335|-0.0142711>|<point|1.64967257573753|-0.0142710676015346>>>|<with|dash-style|10|<line|<point|2.6|1.3>|<point|1.7|1.3>>>|<math-at|0|<point|1.2475029765842|1.21340455086652>>|<with|arrow-end|\<gtr\>|<line|<point|2|-0.2>|<point|2.0|-1.0>>>|<with|arrow-end|\<gtr\>|<line|<point|2|1>|<point|2.0|0.3>>>|<math-at|u<rsub|1><around*|(|t|)>|<point|1|0.6>>|<math-at|u<rsub|2><around*|(|t|)>|<point|1|-0.6>>|<math-at|m<rsub|1>|<point|3.27488755126339|1.2802950125678>>|<math-at|k<rsub|2>|<point|3.80405807646514|0.539456277285355>>|<math-at|m<rsub|2>|<point|3.25372073025532|-0.18021563698902>>|<line|<point|3.50772|2.49162>|<point|3.50772|2.49162>|<point|3.40189|2.51278>|<point|3.38072|2.51278>|<point|3.38072|2.49162>|<point|3.38072|2.47045>|<point|3.38072|2.44928>|<point|3.38072|2.42812>|<point|3.38072|2.40695>|<point|3.38072|2.38578>|<point|3.38072|2.36462>|<point|3.38072|2.34345>|<point|3.40189|2.32228>|<point|3.42306|2.32228>|<point|3.44422|2.32228>|<point|3.46539|2.32228>|<point|3.48656|2.32228>|<point|3.50772|2.32228>|<point|3.50772|2.34345>|<point|3.50772|2.36462>|<point|3.50772|2.38578>|<point|3.50772|2.40695>|<point|3.48656|2.40695>|<point|3.46539|2.40695>|<point|3.44422|2.40695>|<point|3.44422|2.42812>|<point|3.42306|2.42812>|<point|3.40189|2.42812>|<point|3.38072|2.42812>|<point|3.35955|2.42812>|<point|3.35955|2.40695>|<point|3.35955|2.38578>|<point|3.33839|2.38578>|<point|3.33839|2.36462>|<point|3.33839|2.34345>|<point|3.31722|2.34345>|<point|3.31722|2.32228>|<point|3.31722|2.30111>|<point|3.31722|2.27995>|<point|3.31722|2.25878>|<point|3.31722|2.23761>|<point|3.33839|2.23761>|<point|3.33839|2.21645>|<point|3.35955|2.21645>|<point|3.38072|2.21645>|<point|3.38072|2.19528>|<point|3.40189|2.19528>|<point|3.42306|2.19528>|<point|3.44422|2.19528>|<point|3.46539|2.19528>|<point|3.48656|2.19528>|<point|3.50772|2.19528>|<point|3.50772|2.21645>|<point|3.52889|2.21645>|<point|3.52889|2.25878>|<point|3.52889|2.27995>|<point|3.52889|2.30111>|<point|3.50772|2.30111>|<point|3.48656|2.30111>|<point|3.46539|2.30111>|<point|3.44422|2.30111>|<point|3.44422|2.27995>|<point|3.42306|2.27995>|<point|3.42306|2.25878>|<point|3.42306|2.23761>|<point|3.40189|2.23761>|<point|3.40189|2.21645>|<point|3.38072|2.21645>|<point|3.38072|2.19528>|<point|3.38072|2.17411>|<point|3.38072|2.15295>|<point|3.38072|2.13178>|<point|3.38072|2.11061>|<point|3.38072|2.08945>|<point|3.38072|2.06828>|<point|3.40189|2.06828>|<point|3.40189|2.04711>|<point|3.40189|2.02595>|<point|3.42306|2.02595>|<point|3.44422|2.02595>|<point|3.46539|2.02595>|<point|3.48656|2.02595>|<point|3.50772|2.02595>|<point|3.52889|2.02595>|<point|3.52889|2.04711>|<point|3.52889|2.06828>|<point|3.52889|2.08945>|<point|3.52889|2.11061>|<point|3.52889|2.13178>|<point|3.50772|2.13178>|<point|3.48656|2.13178>|<point|3.46539|2.13178>|<point|3.44422|2.13178>|<point|3.44422|2.11061>|<point|3.44422|2.08945>|<point|3.42306|2.08945>|<point|3.42306|2.06828>|<point|3.40189|2.06828>|<point|3.40189|2.04711>|<point|3.38072|2.02595>|<point|3.38072|2.00478>|<point|3.38072|1.98361>|<point|3.35955|1.98361>|<point|3.35955|1.96245>|<point|3.35955|1.94128>|<point|3.35955|1.92011>|<point|3.35955|1.89894>|<point|3.38072|1.89894>|<point|3.40189|1.89894>|<point|3.40189|1.87778>|<point|3.42306|1.87778>|<point|3.44422|1.87778>|<point|3.46539|1.87778>|<point|3.48656|1.87778>|<point|3.50772|1.87778>|<point|3.52889|1.87778>|<point|3.55006|1.87778>|<point|3.57122|1.87778>|<point|3.57122|1.89894>|<point|3.57122|1.92011>|<point|3.57122|1.94128>|<point|3.57122|1.96245>|<point|3.57122|1.98361>|<point|3.55006|1.98361>|<point|3.52889|1.98361>|<point|3.50772|1.98361>|<point|3.48656|1.96245>|<point|3.46539|1.96245>|<point|3.44422|1.94128>|<point|3.44422|1.92011>|<point|3.42306|1.92011>|<point|3.42306|1.89894>|<point|3.42306|1.87778>|<point|3.40189|1.87778>|<point|3.40189|1.85661>|<point|3.40189|1.83544>|<point|3.40189|1.81428>|<point|3.40189|1.79311>|<point|3.40189|1.77194>|<point|3.40189|1.75078>>>>
-    </padded-center>
-
-    <item>2-degree of freedom spring-mass system with dash-pot.
-
-    <with|gr-mode|<tuple|edit|math-at>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|empty>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|2|none>>|gr-edit-grid|<tuple|empty>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-grid-aspect|<tuple|<tuple|axes|#e0e0ff>|<tuple|1|#e0e0ff>|<tuple|2|#e0e0ff>>|gr-grid-aspect-props|<tuple|<tuple|axes|#e0e0ff>|<tuple|1|#e0e0ff>|<tuple|2|#e0e0ff>>|<graphics||<line|<point|-5|2>|<point|-5.0|-2.0>>|<line|<point|-5|0>|<point|-4.0|0.0>>|<line|<point|-4.00913|-0.0308738>|<point|-4.00913|-0.0308738>|<point|-3.84839|0.129862>|<point|-3.83053|0.112002>|<point|-3.77695|0.0227047>|<point|-3.7591|-0.0308738>|<point|-3.7591|-0.0665928>|<point|-3.7591|-0.102312>|<point|-3.77695|-0.120171>|<point|-3.77695|-0.138031>|<point|-3.77695|-0.120171>|<point|-3.7591|-0.0844523>|<point|-3.70552|-0.0308738>|<point|-3.65194|0.0405642>|<point|-3.61622|0.0584237>|<point|-3.59836|0.0584237>|<point|-3.5805|0.0584237>|<point|-3.52692|0.0584237>|<point|-3.52692|0.00484522>|<point|-3.52692|-0.0487333>|<point|-3.52692|-0.102312>|<point|-3.52692|-0.120171>|<point|-3.38405|0.0405642>|<point|-3.34833|0.0762832>|<point|-3.33047|0.0762832>|<point|-3.31261|0.0405642>|<point|-3.29475|0.00484522>|<point|-3.29475|-0.0308738>|<point|-3.29475|-0.0665928>|<point|-3.27689|-0.0665928>|<point|-3.15187|0.0762832>|<point|-3.11615|0.0941427>|<point|-3.08043|0.0941427>|<point|-3.06257|0.0227047>|<point|-3.06257|-0.0487333>|<point|-3.06257|-0.102312>|<point|-3.06257|-0.120171>|<point|-3.06257|-0.102312>|<point|-2.97328|0.0227047>|<point|-2.93756|0.0584237>|<point|-2.9197|0.0762832>|<point|-2.90184|0.0762832>|<point|-2.88398|0.0762832>|<point|-2.86612|0.00484522>|<point|-2.86612|-0.0487333>|<point|-2.88398|-0.138031>|<point|-2.88398|-0.15589>|<point|-2.86612|-0.15589>|<point|-2.8304|-0.0844523>|<point|-2.75896|-0.0130143>|<point|-2.7411|0.00484522>|<point|-2.72324|0.00484522>|<point|-2.68752|0.00484522>|<point|-2.66967|0.00484522>|<point|-2.65181|-0.0130143>|<point|-2.65181|-0.0308738>|<point|-2.59823|-0.15589>|<point|-2.58037|-0.17375>|<point|-2.56251|-0.17375>>|<line|<point|-2.52679|-0.245188>|<point|-2.52679|-0.245188>|<point|-2.43749|-0.191609>|<point|-2.43749|-0.17375>|<point|-2.43749|-0.15589>|<point|-2.43749|-0.138031>|<point|-2.43749|-0.120171>|<point|-2.43749|-0.102312>|<point|-2.43749|-0.0844523>|<point|-2.43749|-0.0665928>|<point|-2.43749|-0.0487333>|<point|-2.43749|-0.0844523>|<point|-2.43749|-0.102312>|<point|-2.45535|-0.120171>|<point|-2.45535|-0.138031>|<point|-2.45535|-0.15589>|<point|-2.47321|-0.15589>|<point|-2.47321|-0.17375>|<point|-2.50893|-0.191609>|<point|-2.52679|-0.209469>|<point|-2.54465|-0.209469>|<point|-2.56251|-0.209469>|<point|-2.58037|-0.209469>>|<line|<point|-2.43749|-0.0130143>|<point|-2.43749|-0.0130143>|<point|-2.47321|-0.138031>|<point|-2.49107|-0.15589>|<point|-2.50893|-0.17375>|<point|-2.52679|-0.191609>|<point|-2.54465|-0.191609>|<point|-2.56251|-0.191609>>|<line|<point|-2.43749|-0.0130143>|<point|-1.11588834501918|0.00484521762137849>>|<line|<point|0.142058|0.0820105>|<point|0.902235745468977|0.0762832385236142>>|<cline|<point|3.11681|0.54063>|<point|3.11681439343829|-0.298766371213123>|<point|4.11694668606959|-0.298766371213123>|<point|4.1526656965207|0.540630374388147>>|<line|<point|4.13366|0.0938995>|<point|4.79560788464083|0.0941427437491732>>|<line|<point|6.5637|1.7015>|<point|6.5458393967456|-1.42391520042334>>|<math-at|k<rsub|1>|<point|-3.15187|0.701366>>|<math-at|m<rsub|1>|<point|-0.669401|0.0584237>>|<math-at|k<rsub|2>|<point|1.47374|0.754944>>|<math-at|m<rsub|2>|<point|3.36685|0.147721>>|<math-at|k<rsub|3>|<point|5.38497|0.665647>>|<with|arrow-end|\<gtr\>|<line|<point|-0.472946|-1.45963>|<point|0.277153062574415|-1.45963421087445>>>|<with|arrow-end|\<gtr\>|<line|<point|3.68832|-1.56679>|<point|4.545574811483|-1.56679124222781>>>|<math-at|x<rsub|1><around*|(|t|)>|<point|0.562905|-1.58465>>|<math-at|x<rsub|2><around*|(|t|)>|<point|4.74203|-1.63823>>|<with|arrow-end|\<gtr\>|<line|<point|-0.526525|1.75508>|<point|0.273829210212991|1.75641619261807>>>|<with|dash-style|10|<line|<point|-0.526525|1.75508>|<point|-0.5|-1.5>>>|<with|dash-style|10|<line|<point|3.7419|1.75508>|<point|3.76502142572881|-1.5>>>|<with|arrow-end|\<gtr\>|<line|<point|3.7419|1.75508>|<point|4.5|1.76183953666201>>>|<math-at|F<rsub|2><around*|(|t|)>|<point|4.5|2.09420197386657>>|<line|<point|5.71193|0>|<point|6.5|0.0>>|<line|<point|4.8247|0.0419037>|<point|4.8247|0.0419037>|<point|4.8882|0.168905>|<point|4.90936|0.168905>|<point|4.90936|0.190071>|<point|4.93053|0.190071>|<point|4.9517|0.190071>|<point|4.97286|0.190071>|<point|4.99403|0.190071>|<point|5.0152|0.190071>|<point|5.0152|0.168905>|<point|5.0152|0.147738>|<point|5.0152|0.126571>|<point|5.0152|0.105404>|<point|5.0152|0.0842373>|<point|5.0152|0.0630705>|<point|5.0152|0.0419037>|<point|5.0152|0.0207369>|<point|4.99403|0.0207369>|<point|4.97286|0.0207369>|<point|4.9517|0.0207369>|<point|4.9517|-0.000429951>|<point|4.93053|-0.000429951>|<point|4.90936|-0.000429951>|<point|4.90936|0.0207369>|<point|4.90936|0.0419037>|<point|4.90936|0.0630705>|<point|4.93053|0.0842373>|<point|4.93053|0.105404>|<point|4.9517|0.126571>|<point|4.97286|0.147738>|<point|4.99403|0.168905>|<point|5.0152|0.168905>|<point|5.03636|0.168905>|<point|5.05753|0.168905>|<point|5.0787|0.168905>|<point|5.09986|0.168905>|<point|5.12103|0.168905>|<point|5.12103|0.147738>|<point|5.12103|0.126571>|<point|5.1422|0.126571>|<point|5.1422|0.105404>|<point|5.1422|0.0842373>|<point|5.1422|0.0630705>|<point|5.1422|0.0419037>|<point|5.1422|0.0207369>|<point|5.12103|0.0207369>|<point|5.12103|-0.000429951>|<point|5.09986|-0.000429951>|<point|5.09986|0.0207369>|<point|5.09986|0.0419037>|<point|5.09986|0.0630705>|<point|5.09986|0.0842373>|<point|5.09986|0.105404>|<point|5.09986|0.126571>|<point|5.12103|0.126571>|<point|5.12103|0.147738>|<point|5.1422|0.147738>|<point|5.16336|0.147738>|<point|5.18453|0.147738>|<point|5.2057|0.147738>|<point|5.22687|0.147738>|<point|5.24803|0.147738>|<point|5.24803|0.126571>|<point|5.24803|0.105404>|<point|5.24803|0.0842373>|<point|5.24803|0.0630705>|<point|5.24803|0.0419037>|<point|5.24803|0.0207369>|<point|5.24803|-0.000429951>|<point|5.24803|-0.0215968>|<point|5.22687|-0.0215968>|<point|5.2057|-0.0215968>|<point|5.18453|-0.0215968>|<point|5.18453|-0.000429951>|<point|5.18453|0.0207369>|<point|5.18453|0.0419037>|<point|5.18453|0.0630705>|<point|5.2057|0.0842373>|<point|5.2057|0.105404>|<point|5.22687|0.126571>|<point|5.24803|0.147738>|<point|5.2692|0.147738>|<point|5.2692|0.168905>|<point|5.29037|0.168905>|<point|5.31153|0.168905>|<point|5.3327|0.168905>|<point|5.35387|0.168905>|<point|5.37503|0.168905>|<point|5.41737|0.168905>|<point|5.43853|0.147738>|<point|5.43853|0.126571>|<point|5.43853|0.105404>|<point|5.43853|0.0842373>|<point|5.43853|0.0630705>|<point|5.43853|0.0419037>|<point|5.43853|0.0207369>|<point|5.41737|0.0207369>|<point|5.3962|0.0207369>|<point|5.3962|-0.000429951>|<point|5.37503|-0.000429951>|<point|5.35387|-0.000429951>|<point|5.35387|0.0207369>|<point|5.35387|0.0419037>|<point|5.35387|0.0630705>|<point|5.35387|0.0842373>|<point|5.35387|0.105404>|<point|5.37503|0.126571>|<point|5.3962|0.147738>|<point|5.3962|0.168905>|<point|5.41737|0.168905>|<point|5.43853|0.168905>|<point|5.4597|0.168905>|<point|5.50203|0.168905>|<point|5.5232|0.168905>|<point|5.54437|0.168905>|<point|5.54437|0.147738>|<point|5.54437|0.126571>|<point|5.54437|0.105404>|<point|5.54437|0.0630705>|<point|5.54437|0.0207369>|<point|5.54437|-0.000429951>|<point|5.54437|-0.0215968>|<point|5.54437|-0.0427636>|<point|5.5232|-0.0427636>|<point|5.5232|-0.0215968>|<point|5.5232|-0.000429951>|<point|5.5232|0.0207369>|<point|5.5232|0.0419037>|<point|5.54437|0.0630705>|<point|5.54437|0.0842373>|<point|5.54437|0.105404>|<point|5.5867|0.105404>|<point|5.5867|0.126571>|<point|5.60787|0.126571>|<point|5.62903|0.126571>|<point|5.6502|0.126571>|<point|5.67137|0.126571>|<point|5.69254|0.126571>|<point|5.7137|0.126571>|<point|5.73487|0.105404>|<point|5.73487|0.0842373>|<point|5.73487|0.0630705>|<point|5.73487|0.0419037>>|<line|<point|3|0>|<point|2.0|0.0>>|<line|<point|0.930001|0.0842373>|<point|0.930001|0.0842373>|<point|1.01467|0.168905>|<point|1.03583|0.168905>|<point|1.057|0.168905>|<point|1.057|0.147738>|<point|1.057|0.126571>|<point|1.07817|0.105404>|<point|1.07817|0.0842373>|<point|1.07817|0.0630705>|<point|1.057|0.0630705>|<point|1.057|0.0842373>|<point|1.057|0.105404>|<point|1.07817|0.105404>|<point|1.07817|0.126571>|<point|1.09934|0.126571>|<point|1.09934|0.147738>|<point|1.1205|0.147738>|<point|1.14167|0.147738>|<point|1.16284|0.147738>|<point|1.184|0.147738>|<point|1.184|0.126571>|<point|1.184|0.105404>|<point|1.184|0.0842373>|<point|1.184|0.0630705>|<point|1.184|0.0419037>|<point|1.184|0.0207369>|<point|1.16284|0.0207369>|<point|1.16284|0.0419037>|<point|1.16284|0.0630705>|<point|1.16284|0.0842373>|<point|1.16284|0.105404>|<point|1.16284|0.126571>|<point|1.16284|0.147738>|<point|1.184|0.147738>|<point|1.20517|0.147738>|<point|1.22634|0.147738>|<point|1.2475|0.147738>|<point|1.26867|0.147738>|<point|1.28984|0.147738>|<point|1.311|0.147738>|<point|1.311|0.126571>|<point|1.311|0.105404>|<point|1.33217|0.105404>|<point|1.33217|0.0842373>|<point|1.33217|0.0419037>|<point|1.33217|0.0207369>|<point|1.311|0.0207369>|<point|1.28984|0.0207369>|<point|1.28984|0.0419037>|<point|1.28984|0.0630705>|<point|1.28984|0.0842373>|<point|1.28984|0.105404>|<point|1.311|0.105404>|<point|1.33217|0.105404>|<point|1.33217|0.126571>|<point|1.35334|0.126571>|<point|1.3745|0.126571>|<point|1.39567|0.126571>|<point|1.41684|0.126571>|<point|1.438|0.126571>|<point|1.438|0.105404>|<point|1.438|0.0842373>|<point|1.438|0.0630705>|<point|1.438|0.0419037>|<point|1.438|0.0207369>|<point|1.438|-0.000429951>|<point|1.438|0.0207369>|<point|1.438|0.0419037>|<point|1.438|0.0630705>|<point|1.45917|0.0842373>|<point|1.48034|0.0842373>|<point|1.5015|0.0842373>|<point|1.52267|0.0842373>|<point|1.54384|0.0842373>|<point|1.56501|0.0842373>|<point|1.58617|0.0842373>|<point|1.58617|0.0630705>|<point|1.58617|0.0419037>|<point|1.58617|0.0207369>|<point|1.60734|0.0207369>|<point|1.60734|-0.000429951>|<point|1.58617|-0.000429951>|<point|1.56501|-0.000429951>|<point|1.56501|0.0207369>|<point|1.56501|0.0419037>|<point|1.56501|0.0630705>|<point|1.56501|0.0842373>|<point|1.58617|0.0842373>|<point|1.58617|0.105404>|<point|1.60734|0.105404>|<point|1.62851|0.105404>|<point|1.64967|0.105404>|<point|1.67084|0.105404>|<point|1.67084|0.0842373>|<point|1.67084|0.0630705>|<point|1.67084|0.0419037>|<point|1.67084|0.0207369>|<point|1.67084|-0.000429951>|<point|1.67084|0.0207369>|<point|1.69201|0.0419037>|<point|1.71317|0.0630705>|<point|1.71317|0.0842373>|<point|1.75551|0.0842373>|<point|1.77667|0.0842373>|<point|1.79784|0.0842373>|<point|1.79784|0.0630705>|<point|1.79784|0.0419037>|<point|1.79784|0.0207369>|<point|1.79784|-0.000429951>|<point|1.79784|0.0207369>|<point|1.79784|0.0419037>|<point|1.79784|0.0630705>|<point|1.79784|0.0842373>|<point|1.81901|0.105404>|<point|1.84017|0.105404>|<point|1.86134|0.105404>|<point|1.88251|0.105404>|<point|1.90367|0.105404>|<point|1.92484|0.105404>|<point|1.92484|0.0842373>|<point|1.92484|0.0630705>|<point|1.94601|0.0419037>|<point|1.94601|0.0207369>|<point|1.94601|-0.000429951>|<point|1.96717|-0.000429951>|<point|1.96717|-0.0215968>|<point|1.96717|-0.0427636>|<point|1.96717|-0.0215968>|<point|1.96717|-0.000429951>|<point|1.96717|0.0207369>|<point|1.98834|0.0207369>|<point|2.00951|0.0207369>>|<math-at|F<rsub|1><around*|(|t|)>|<point|0.252662389204921|2.01041804471491>>|<cline|<point|-1.02659|0.612068>|<point|-0.99087180844027|-0.405923402566477>|<point|0.116417515544384|-0.388063897340918>|<point|0.0833278211403625|0.634574679190369>>>>
-
-    System of motion equations (Assume no damping):
-
-    <\equation*>
-      <choice|<tformat|<table|<row|<cell|m<rsub|1>*x<rsub|1><rprime|''>=F<rsub|1><around*|(|t|)>-k<rsub|1>*x<rsub|1>+k<rsub|2>*<around*|(|x<rsub|2>-x<rsub|1>|)>>>|<row|<cell|m<rsub|2>*x<rsub|2><rprime|''>=F<rsub|2><around*|(|t|)>-k<rsub|2>*<around*|(|x<rsub|2>-x<rsub|1>|)>-k<rsub|3>*x<rsub|2>>>>>>
-    </equation*>
-
-    or:
-
-    <\eqnarray*>
-      <tformat|<table|<row|<cell|m<rsub|1>*x<rsub|1><rprime|''>>|<cell|=>|<cell|-<around*|(|k<rsub|1>+k<rsub|2>|)>*x<rsub|1>+k<rsub|2>*x<rsub|2>+F<rsub|1><around*|(|t|)>>>|<row|<cell|m<rsub|2>*x<rsub|2><rprime|''>>|<cell|=>|<cell|k<rsub|2>*x<rsub|1>-<around*|(|k<rsub|2>+k<rsub|3>|)>*x<rsub|2>+F<rsub|2><around*|(|t|)>>>>>
-    </eqnarray*>
-
-    This is a linear 2nd order system of ODEs. In matrix form:
-
-    <\equation*>
-      <matrix|<tformat|<table|<row|<cell|<rsub|>x<rsub|1><rprime|''>>>|<row|<cell|x<rsub|2><rprime|''>>>>>>=<matrix|<tformat|<table|<row|<cell|-<frac|<around*|(|k<rsub|1>+k<rsub|2>|)>|m<rsub|1>>>|<cell|<frac|k<rsub|2>|m<rsub|1>>>>|<row|<cell|<frac|k<rsub|2>|m<rsub|2>>>|<cell|-<frac|k<rsub|2>+k<rsub|3>|m<rsub|2>>>>>>><matrix|<tformat|<table|<row|<cell|<rsub|>x<rsub|1>>>|<row|<cell|x<rsub|2>>>>>>+<matrix|<tformat|<table|<row|<cell|<frac|F<rsub|1><around*|(|t|)>|m<rsub|1>>>>|<row|<cell|<frac|F<rsub|2><around*|(|t|)>|m<rsub|2>>>>>>>
-    </equation*>
-
-    <item>Parallel electrical circuit.
-
-    <\padded-center>
-      <with|gr-mode|<tuple|edit|math-at>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|empty>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-auto-crop|true|<graphics||<line|<point|-4|3>|<point|-2.0|3.0>>|<line|<point|-2|3.3>|<point|-2.0|2.6>>|<line|<point|-1.6|3.2>|<point|-1.6|2.6>>|<line|<point|-1.5|3>|<point|-0.3|3.0>|<point|-0.3|0.5>>|<line|<point|-4|3>|<point|-4.0|0.5>|<point|-2.7|0.5>>|<math-at|R|<point|-1.4|2>>|<math-at|C|<point|-1.5|3.5>>|<line|<point|-4|1.7>|<point|-2.49001190633682|1.70371411562376>>|<line|<point|-2.49001|1.70371>|<point|-2.27834369625612|2.06355007276095>|<point|-2.08784230718349|1.44971226352692>|<point|-1.81267363407858|1.9577159677206>|<point|-1.60100542399788|1.64021365259955>|<point|-0.3|1.65780244484044>>|<line|<point|-0.3|0.5>|<point|-1.47400449794946|0.495320148167747>>|<line|<point|-2.72285|0.512336>|<point|-2.72285|0.512336>|<point|-2.65935|0.660504>|<point|-2.65935|0.681671>|<point|-2.63818|0.681671>|<point|-2.61701|0.681671>|<point|-2.61701|0.702838>|<point|-2.59585|0.702838>|<point|-2.57468|0.702838>|<point|-2.55351|0.702838>|<point|-2.53235|0.702838>|<point|-2.51118|0.702838>|<point|-2.55351|0.533503>|<point|-2.55351|0.55467>|<point|-2.55351|0.575837>|<point|-2.53235|0.597004>|<point|-2.53235|0.61817>|<point|-2.51118|0.639337>|<point|-2.49001|0.639337>|<point|-2.49001|0.660504>|<point|-2.46885|0.660504>|<point|-2.44768|0.681671>|<point|-2.42651|0.681671>|<point|-2.40534|0.681671>|<point|-2.38418|0.681671>|<point|-2.38418|0.660504>|<point|-2.38418|0.639337>|<point|-2.38418|0.61817>|<point|-2.38418|0.597004>|<point|-2.40534|0.597004>|<point|-2.40534|0.575837>|<point|-2.42651|0.55467>|<point|-2.44768|0.55467>|<point|-2.44768|0.533503>|<point|-2.46885|0.533503>|<point|-2.46885|0.512336>|<point|-2.49001|0.512336>|<point|-2.49001|0.533503>|<point|-2.49001|0.55467>|<point|-2.49001|0.575837>|<point|-2.46885|0.597004>|<point|-2.44768|0.61817>|<point|-2.42651|0.61817>|<point|-2.42651|0.639337>|<point|-2.40534|0.639337>|<point|-2.38418|0.639337>|<point|-2.36301|0.639337>|<point|-2.34184|0.639337>|<point|-2.32068|0.639337>|<point|-2.29951|0.639337>|<point|-2.27834|0.61817>|<point|-2.27834|0.597004>|<point|-2.27834|0.575837>|<point|-2.27834|0.55467>|<point|-2.27834|0.533503>|<point|-2.27834|0.512336>|<point|-2.27834|0.491169>|<point|-2.29951|0.470003>|<point|-2.29951|0.491169>|<point|-2.29951|0.512336>|<point|-2.29951|0.533503>|<point|-2.27834|0.533503>|<point|-2.25718|0.55467>|<point|-2.23601|0.55467>|<point|-2.21484|0.575837>|<point|-2.19368|0.575837>|<point|-2.17251|0.575837>|<point|-2.15134|0.575837>|<point|-2.13018|0.575837>|<point|-2.10901|0.575837>|<point|-2.10901|0.55467>|<point|-2.10901|0.533503>|<point|-2.10901|0.512336>|<point|-2.10901|0.491169>|<point|-2.13018|0.470003>|<point|-2.15134|0.470003>|<point|-2.17251|0.470003>|<point|-2.17251|0.491169>|<point|-2.17251|0.512336>|<point|-2.17251|0.533503>|<point|-2.15134|0.533503>|<point|-2.15134|0.55467>|<point|-2.13018|0.575837>|<point|-2.10901|0.575837>|<point|-2.08784|0.575837>|<point|-2.06668|0.575837>|<point|-2.04551|0.575837>|<point|-2.02434|0.575837>|<point|-2.00318|0.575837>|<point|-1.98201|0.575837>|<point|-1.98201|0.55467>|<point|-1.98201|0.533503>|<point|-1.98201|0.512336>|<point|-1.98201|0.491169>|<point|-2.00318|0.491169>|<point|-2.02434|0.491169>|<point|-2.02434|0.512336>|<point|-2.02434|0.533503>|<point|-2.00318|0.55467>|<point|-1.98201|0.55467>|<point|-1.98201|0.575837>|<point|-1.98201|0.597004>|<point|-1.96084|0.61817>|<point|-1.93967|0.61817>|<point|-1.91851|0.61817>|<point|-1.89734|0.61817>|<point|-1.87617|0.61817>|<point|-1.87617|0.597004>|<point|-1.87617|0.575837>|<point|-1.85501|0.55467>|<point|-1.85501|0.533503>|<point|-1.85501|0.512336>|<point|-1.85501|0.491169>|<point|-1.87617|0.491169>|<point|-1.89734|0.491169>|<point|-1.89734|0.512336>|<point|-1.89734|0.533503>|<point|-1.89734|0.55467>|<point|-1.89734|0.575837>|<point|-1.89734|0.597004>|<point|-1.87617|0.597004>|<point|-1.87617|0.61817>|<point|-1.83384|0.61817>|<point|-1.81267|0.61817>|<point|-1.79151|0.597004>|<point|-1.77034|0.597004>|<point|-1.74917|0.575837>|<point|-1.74917|0.55467>|<point|-1.74917|0.533503>|<point|-1.74917|0.512336>|<point|-1.74917|0.491169>|<point|-1.74917|0.470003>|<point|-1.74917|0.448836>|<point|-1.74917|0.427669>|<point|-1.77034|0.427669>|<point|-1.77034|0.406502>|<point|-1.77034|0.427669>|<point|-1.77034|0.448836>|<point|-1.77034|0.470003>|<point|-1.77034|0.491169>|<point|-1.74917|0.512336>|<point|-1.72801|0.512336>|<point|-1.72801|0.533503>|<point|-1.70684|0.533503>|<point|-1.68567|0.533503>|<point|-1.66451|0.533503>|<point|-1.66451|0.512336>|<point|-1.64334|0.491169>|<point|-1.64334|0.470003>|<point|-1.64334|0.448836>|<point|-1.64334|0.427669>|<point|-1.64334|0.406502>|<point|-1.66451|0.406502>|<point|-1.68567|0.406502>|<point|-1.68567|0.385335>|<point|-1.70684|0.385335>|<point|-1.70684|0.406502>|<point|-1.72801|0.427669>|<point|-1.72801|0.448836>|<point|-1.72801|0.470003>|<point|-1.70684|0.491169>|<point|-1.70684|0.512336>|<point|-1.68567|0.533503>|<point|-1.66451|0.533503>|<point|-1.64334|0.55467>|<point|-1.62217|0.55467>|<point|-1.62217|0.575837>|<point|-1.60101|0.575837>|<point|-1.57984|0.575837>|<point|-1.55867|0.575837>|<point|-1.5375|0.575837>|<point|-1.5375|0.55467>|<point|-1.5375|0.533503>|<point|-1.5375|0.512336>|<point|-1.5375|0.491169>|<point|-1.5375|0.470003>>|<math-at|L|<point|-1.64333906601402|0.881333509723508>>>>
-    </padded-center>
-
-    <\equation*>
-      <choice|<tformat|<table|<row|<cell|V<around*|(|t|)>=<text| voltage at
-      time <math|t>>>>|<row|<cell|I<around*|(|t|)>=<text| current at time
-      >t>>>>>
-    </equation*>
-
-    Get:
-
-    <\equation*>
-      <choice|<tformat|<table|<row|<cell|<frac|\<mathd\>I<around*|(|t|)>|\<mathd\>t>=<frac|V<around*|(|t|)>|L>>>|<row|<cell|<frac|\<mathd\>V<around*|(|t|)>|\<mathd\>t>=-<frac|I<around*|(|t|)>|C>-<frac|V<around*|(|t|)>|R*C>>>>>>
-    </equation*>
-
-    This is a linear first order system.
-
-    <\equation*>
-      <bmatrix|<tformat|<table|<row|<cell|I<around*|(|t|)>>>|<row|<cell|V<around*|(|t|)>>>>>><rprime|'>=<bmatrix|<tformat|<table|<row|<cell|0>|<cell|<frac|1|L>>>|<row|<cell|-<frac|1|C>>|<cell|-<frac|1|RC>>>>>>*<bmatrix|<tformat|<table|<row|<cell|I<around*|(|t|)>>>|<row|<cell|V<around*|(|t|)>>>>>>
-    </equation*>
-
-    <item>Predator-prey situation, model of Lotka & Volterra (1925).
-
-    <\itemize>
-      <item>population of food fish = <math|x<around*|(|t|)>>
-
-      <item>population of sharks = <math|y<around*|(|t|)>>
-    </itemize>
-
-    Principles:
-
-    <\enumerate>
-      <item>If no predators, prey pop. increases at a constant rate
-      <math|a\<gtr\>0>.
-
-      <\equation*>
-        <frac|\<mathd\>x|\<mathd\>t>=a*x
-      </equation*>
-
-      <item>If no prey, predator pop. decreases at constant rate
-      <math|c\<gtr\>0>.
-
-      <\equation*>
-        <frac|\<mathd\>y|\<mathd\>t>=-c*y
-      </equation*>
-
-      <item>If both prey and predators are present, number of encounters is
-      proportionate to <math|x*y>.
-    </enumerate>
-
-    Result is net decline of <math|b*x*y> in fish and increase of
-    <math|r*x*y> in sharks. (<math|r,b\<gtr\>0>)
-
-    <\equation*>
-      <choice|<tformat|<table|<row|<cell|<frac|\<mathd\>x|\<mathd\>t>=a*x-b*x*y=x<around*|(|a-b*y|)>>>|<row|<cell|<frac|\<mathd\>y|\<mathd\>t>=-c*x+r*x*y=y<around*|(|-c+r*x|)>>>>>>
-    </equation*>
-
-    This is a first order non-linear system.
-
-    Inspect equilibrium of populations: <math|x=0=y>
-    <with|font-series|bold|or> <math|y=<frac|a|b>> & <math|x=<frac|c|r>>.
-
-    <underline|Note:> The system:
-
-    <\equation*>
-      <choice|<tformat|<table|<row|<cell|y<rsub|1><rprime|'>=y<rsub|1>>>|<row|<cell|y<rsub|2><rprime|'>=y<rsub|2>>>>>>
-    </equation*>
-
-    Clearly cannot express <math|y<rsub|2>> in terms of <math|y<rsub|1>> and
-    reduce to one equation.
-  </enumerate>
-
-  <underline|In general:>
-
-  A first order system of ODEs is of the form:
-
-  <\eqnarray*>
-    <tformat|<table|<row|<cell|y<rsub|1><rprime|'><around*|(|x|)>>|<cell|=>|<cell|f<rsub|1><around*|(|x,y,\<ldots\>,y<rsub|n>|)>>>|<row|<cell|y<rsub|2><rprime|'><around*|(|x|)>>|<cell|=>|<cell|f<rsub|2><around*|(|x,y,\<ldots\>,y<rsub|n>|)>>>|<row|<cell|\<vdots\>>|<cell|>|<cell|>>|<row|<cell|y<rprime|'><rsub|n><around*|(|x|)>>|<cell|=>|<cell|f<rsub|n><around*|(|x,y,\<ldots\>,y<rsub|n>|)>>>>>
-  </eqnarray*>
-
-  We call it <with|font-shape|italic|linear> if
-  <math|f<rsub|0>,\<ldots\>,f<rsub|n>> are linear in
-  <math|y<rsub|1>,\<ldots\>,y<rsub|n>>.
-
-  So <math|f<rsub|i><around*|(|x,y<rsub|1>,\<ldots\>,y<rsub|n>|)>=p<rsub|i1><around*|(|x|)>*y<rsub|1>+p<rsub|i<rsub|2>><around*|(|x|)>*y<rsub|2>+\<cdots\>+p<rsub|i<rsub|n>><around*|(|x|)>*y<rsub|n>+g<rsub|i><around*|(|x|)>>
-  where <math|p<rsub|i<rsub|1>>,\<ldots\>,p<rsub|i<rsub|n>>> are functions of
-  <math|x>.
-
-  Linear systems can be written in matrix form:
-
-  <\equation*>
-    <bmatrix|<tformat|<table|<row|<cell|y<rsub|1><rprime|'><around*|(|x|)>>>|<row|<cell|\<vdots\>>>|<row|<cell|y<rprime|'><rsub|n><around*|(|x|)>>>>>>=<bmatrix|<tformat|<table|<row|<cell|p<rsub|1<rsub|1>><around*|(|x|)>>|<cell|\<ldots\>>|<cell|p<rsub|1<rsub|n>><around*|(|x|)>>>|<row|<cell|\<vdots\>>|<cell|\<ddots\>>|<cell|>>|<row|<cell|p<rsub|n<rsub|1>><around*|(|x|)>>|<cell|>|<cell|p<rsub|n<rsub|n>><around*|(|x|)>>>>>><bmatrix|<tformat|<table|<row|<cell|y<rsub|1><around*|(|x|)>>>|<row|<cell|\<vdots\>>>|<row|<cell|y<rsub|n><around*|(|x|)>>>>>>+<bmatrix|<tformat|<table|<row|<cell|g<rsub|1><around*|(|x|)>>>|<row|<cell|\<vdots\>>>|<row|<cell|g<rsub|n><around*|(|x|)>>>>>>
-  </equation*>
-
-  Or
-
-  <\equation*>
-    <wide|Y|\<vect\>><rprime|'>=A*<wide|Y|\<vect\>>+<wide|b|\<vect\>>
-  </equation*>
-
-  <underline|Example>
-
-  <\equation*>
-    <choice|<tformat|<table|<row|<cell|y<rsub|1><rprime|'>=x<rsup|2>y<rsub|1>+\<mathe\><rsup|x>y<rsub|2>+sin
-    x*y<rsup|><rsub|3>+x<rsup|2>>>|<row|<cell|y<rsub|2><rprime|'>=x*y<rsub|2>+y<rsub|3>+\<mathe\><rsup|2x>>>|<row|<cell|y<rsub|3><rprime|'>=<sqrt|x>*y<rsub|1>+2y<rsub|3>+ln
-    x>>>>>
-  </equation*>
-
-  <\equation*>
-    <bmatrix|<tformat|<table|<row|<cell|y<rsub|1>>>|<row|<cell|y<rsub|2>>>|<row|<cell|y<rsub|3>>>>>><rprime|'>=<bmatrix|<tformat|<table|<row|<cell|x<rsup|2>>|<cell|\<mathe\><rsup|x>>|<cell|sin
-    x>>|<row|<cell|0>|<cell|x>|<cell|1>>|<row|<cell|<sqrt|x>>|<cell|0>|<cell|2>>>>><bmatrix|<tformat|<table|<row|<cell|y<rsub|1>>>|<row|<cell|y<rsub|2>>>|<row|<cell|y<rsub|3>>>>>>+<bmatrix|<tformat|<table|<row|<cell|x<rsup|2>>>|<row|<cell|\<mathe\><rsup|2x>>>|<row|<cell|ln
-    x>>>>>
-  </equation*>
-
-  A solution is a vector of functions <math|<bmatrix|<tformat|<table|<row|<cell|y<rsub|1>>|<cell|\<ldots\>>|<cell|y<rsub|n>>>>>><rsup|T>>
-  satisfying the system.
-
-  ICs: <math|y<rsub|1><around*|(|a|)>=b<rsub|1>,y<rsub|2><around*|(|a|)>=b<rsub|2>,\<ldots\>,y<rsub|n><around*|(|a|)>=b<rsub|n>>.
-
-  <subsubsection|Existence & Uniqueness thm for first order systems>
-
-  Given\ 
-
-  <\eqnarray*>
-    <tformat|<table|<row|<cell|y<rsub|1><rprime|'><around*|(|x|)>>|<cell|=>|<cell|f<rsub|1><around*|(|x,y,\<ldots\>,y<rsub|n>|)>>>|<row|<cell|y<rsub|2><rprime|'><around*|(|x|)>>|<cell|=>|<cell|f<rsub|2><around*|(|x,y,\<ldots\>,y<rsub|n>|)>>>|<row|<cell|\<vdots\>>|<cell|>|<cell|>>|<row|<cell|y<rprime|'><rsub|n><around*|(|x|)>>|<cell|=>|<cell|f<rsub|n><around*|(|x,y,\<ldots\>,y<rsub|n>|)>>>>>
-  </eqnarray*>
-
-  and ICs
-
-  <\equation*>
-    y<rsub|1><around*|(|a|)>=b<rsub|1>,y<rsub|2><around*|(|a|)>=b<rsub|2>,\<ldots\>,y<rsub|n><around*|(|a|)>=b<rsub|n>
-  </equation*>
-
-  such that <math|f<rsub|1>,\<ldots\>,f<rsub|n>> are continuous in
-  <math|x,y<rsub|1>,\<ldots\>,y<rsub|n>> and
-  <math|\<partial\>f<rsub|i>/\<partial\>y<rsub|j>> exist and are continuous
-  in some neighborhood of <math|<around*|(|a,b<rsub|1>,\<ldots\>,b<rsub|n>|)>>
-  in <math|\<bbb-R\><rsup|n+1>>, there exists a unique solution satisfying
-  ICs defined for some interval around <math|a>. This holds for linear
-  systems if and only if <math|g<rsub|i>,p<rsub|i,j>> are continuous.
-
-  <marginal-note|normal|c|lec 13 18.12.22>
-
-  <\ornamented>
-    <underline|Theorem>: The <em|cardinality> (number of elements in a group)
-    of a basis is determined uniquely. This cardinality is the <em|dimension>
-    of the space.
-
-    <underline|Theorem>: If the dimension of a space <math|w> is <math|k>,
-    then any linearly independent set of <math|k> elements will be a basis.
-    Also, any spanning set with <math|k> elements will be a basis.
-
-    Note that:\ 
-
-    <\itemize>
-      <item>The dimension of the vector space of all real functions in
-      infinite. (<math|2<rsup|\<aleph\><rsub|0>>>)
-
-      <item>The dimension of vector space of polynomial functions is
-      <math|\<aleph\><rsub|0>> are <math|1,x,x<rsup|2>,\<ldots\>> is a basis.
-    </itemize>
-  </ornamented>
-
-  <subsubsection|Reducing higher order ODE to a system of first order system>
-
-  Any higher order linear ODE can be reduced to a first order linear system.
-
-  <underline|Example>: <math|y<rprime|''>+y=0>.
-
-  We can define a <math|2\<times\>2> system which is equivalent:
-
-  <\equation*>
-    <choice|<tformat|<table|<row|<cell|y<rsub|1>=y>>|<row|<cell|y<rsub|2>=y<rprime|'>>>>>>
-  </equation*>
-
-  Then:
-
-  <\equation*>
-    <choice|<tformat|<table|<row|<cell|y<rsub|1><rprime|'>=y<rsub|2>>>|<row|<cell|y<rsub|2><rprime|'>=y<rprime|''>=-y<rsub|1>>>>>>
-  </equation*>
-
-  Write in matrix form:
-
-  <\equation*>
-    <bmatrix|<tformat|<table|<row|<cell|y<rsub|1>>>|<row|<cell|y<rsub|2>>>>>><rprime|'>=<bmatrix|<tformat|<table|<row|<cell|0>|<cell|1>>|<row|<cell|-1>|<cell|0>>>>>*<bmatrix|<tformat|<table|<row|<cell|y<rsub|1>>>|<row|<cell|y<rsub|2>>>>>>
-  </equation*>
-
-  We can see that <math|y<rsub|1>=sin x,y<rsub|2>=cos x> solve<rigid|> this
-  system.
-
-  <underline|Another example>: <math|y<rsup|<around*|(|3|)>>-2y<rprime|''>+3y<rprime|'>+4y=sin
-  x>
-
-  This is equivalent to the following <math|3\<times\>3> system:
-
-  <\equation*>
-    <choice|<tformat|<table|<row|<cell|y<rsub|1>=y>>|<row|<cell|y<rsub|2>=y<rprime|'>>>|<row|<cell|y<rsub|3>=y<rprime|''>>>>>>
-  </equation*>
-
-  Get:
-
-  <\equation*>
-    <choice|<tformat|<table|<row|<cell|y<rsub|1><rprime|'>=y<rsub|2>>>|<row|<cell|y<rsub|2><rprime|'>=y<rsub|3>>>|<row|<cell|y<rsub|3><rprime|'>=-4y<rsub|1>+-3y<rsub|2>+2y<rsub|3>+sin
-    x>>>>>
-  </equation*>
-
-  In matrix form:
-
-  <\equation*>
-    <bmatrix|<tformat|<table|<row|<cell|y<rsub|1>>>|<row|<cell|y<rsub|2>>>|<row|<cell|y<rsub|3>>>>>><rprime|'>=<bmatrix|<tformat|<table|<row|<cell|0>|<cell|1>|<cell|0>>|<row|<cell|0>|<cell|0>|<cell|1>>|<row|<cell|-4>|<cell|-3>|<cell|2>>>>><bmatrix|<tformat|<table|<row|<cell|y<rsub|1>>>|<row|<cell|y<rsub|2>>>|<row|<cell|y<rsub|3>>>>>>+<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|0>>|<row|<cell|sin
-    x>>>>>
-  </equation*>
 </body>
 
 <\initial>
@@ -4495,12 +4495,10 @@
     <associate|auto-30|<tuple|5.3.2|53>>
     <associate|auto-31|<tuple|6|62>>
     <associate|auto-32|<tuple|6.1|62>>
-    <associate|auto-33|<tuple|6.1.1|64>>
-    <associate|auto-34|<tuple|6.2|65>>
-    <associate|auto-35|<tuple|6.2.1|69>>
-    <associate|auto-36|<tuple|6.2.2|?>>
-    <associate|auto-37|<tuple|6.2.3|?>>
-    <associate|auto-38|<tuple|7.0.1|?>>
+    <associate|auto-33|<tuple|6.2|64>>
+    <associate|auto-34|<tuple|6.3|65>>
+    <associate|auto-35|<tuple|6.4|68>>
+    <associate|auto-36|<tuple|6.4.1|69>>
     <associate|auto-4|<tuple|3|4>>
     <associate|auto-5|<tuple|3|5>>
     <associate|auto-6|<tuple|3|5>>
@@ -4654,9 +4652,13 @@
       represented by a system of ODEs <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-34>>
 
-      <with|par-left|<quote|2tab>|6.2.1<space|2spc>Reducing higher order ODE
-      to a system of first order system <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|2tab>|6.2.1<space|2spc>Existence & Uniqueness thm
+      for first order systems <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-35>>
+
+      <with|par-left|<quote|2tab>|6.2.2<space|2spc>Reducing higher order ODE
+      to a system of first order system <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-36>>
     </associate>
   </collection>
 </auxiliary>
