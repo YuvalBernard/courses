@@ -351,11 +351,228 @@
     x<rprime|'><rsub|2,p2>=-2\<gamma\>*\<mathe\><rsup|-2x<rsub|2>>
   </equation*>
 
+  <fill-dots>
+
+  <underline|Question 14>
+
+  Given the system of equations:
+
+  <\equation*>
+    <choice|<tformat|<table|<row|<cell|x<rsub|1><rprime|'>=a<rsub|11>*x<rsub|1>+a<rsub|12>*x<rsub|2>+g<rsub|1><around*|(|t|)>>>|<row|<cell|x<rsub|2><rprime|'>=a<rsub|21>*x<rsub|1>+a<rsub|22>*x<rsub|2>+g<rsub|2><around*|(|t|)>>>>>>,<application-space|2em>x<rsub|1,2><around*|(|0|)>=x<rsub|1,2><rsup|0>
+  </equation*>
+
+  where <math|a<rsub|11>,a<rsub|12>,a<rsub|21>,a<rsub|22>> are constants and
+  <math|a<rsub|12>,a<rsub|21>> are not both zero, and
+  <math|g<rsub|1>,g<rsub|2>> are differentiable.
+
+  Differentiate the first (<with|color|blue|second>) equation.
+
+  <\equation*>
+    x<rsub|1><rprime|''>=a<rsub|11>*x<rsub|1><rprime|'>+a<rsub|12>*x<rprime|'><rsub|2>+g<rsub|1><rprime|'><around*|(|t|)>
+  </equation*>
+
+  <\equation*>
+    <with|color|blue|x<rsub|2><rprime|''>=a<rsub|21>*x<rsub|1><rprime|'>+a<rsub|22>*x<rsub|2><rprime|'>+g<rsub|2><rprime|'><around*|(|t|)>>
+  </equation*>
+
   <\equation*>
     \;
   </equation*>
 
-  \;
+  Insert expression for <math|x<rsub|2><rprime|'>>.
+  (<with|color|blue|<math|x<rsub|1><rprime|'>>>)
+
+  <\equation*>
+    x<rsub|1><rprime|''>=a<rsub|11>*x<rsub|1><rprime|'>+a<rsub|12>*<around*|(|a<rsub|21>*x<rsub|1>+a<rsub|22>*x<rsub|2>+g<rsub|2><around*|(|t|)>|)>+g<rsub|1><rprime|'><around*|(|t|)>
+  </equation*>
+
+  <\equation*>
+    <with|color|blue|x<rsub|2><rprime|''>=a<rsub|21>*<around*|(|a<rsub|11>*x<rsub|1>+a<rsub|12>*x<rsub|2>+g<rsub|1><around*|(|t|)>|)>+a<rsub|22>*x<rsub|2><rprime|'>+g<rsub|2><rprime|'><around*|(|t|)>>
+  </equation*>
+
+  Note that from the first (<with|color|blue|second>) equation,
+  <math|x<rsub|2>> (<math|<with|color|blue|x<rsub|1>>>) can be expressed as:
+
+  <\equation*>
+    x<rsub|2>=<frac|x<rsub|1><rprime|'>-a<rsub|11>*x<rsub|1>-g<rsub|1><around*|(|t|)>|a<rsub|12>>*
+  </equation*>
+
+  <\equation*>
+    <with|color|blue|x<rsub|1>=<frac|x<rsub|2><rprime|'>-a<rsub|22>*x<rsub|2>-g<rsub|2><around*|(|t|)>|a<rsub|21>>>
+  </equation*>
+
+  Input back in the above equation:
+
+  <\equation*>
+    x<rsub|1><rprime|''>=a<rsub|11>*x<rsub|1><rprime|'>+a<rsub|12><around*|[|a<rsub|21>*x<rsub|1>+<frac|a<rsub|22>|a<rsub|12>>*<around*|(|x<rsub|1><rprime|'>-a<rsub|11>*x<rsub|1>-g<rsub|1><around*|(|t|)>|)>+g<rsub|2><around*|(|t|)>|]>+g<rsub|1><rprime|'><around*|(|t|)>
+  </equation*>
+
+  <\equation*>
+    <with|color|blue|x<rsub|2><rprime|''>=a<rsub|21><around*|[|<frac|a<rsub|11>|a<rsub|21>>*<around*|(|x<rsub|2><rprime|'>-a<rsub|22>*x<rsub|2>-g<rsub|2><around*|(|t|)>|)>+a<rsub|12>*x<rsub|2>+g<rsub|1><around*|(|t|)>|]>+a<rsub|22>*x<rsub|2><rprime|'>+g<rsub|2><rprime|'><around*|(|t|)>>
+  </equation*>
+
+  Further simplification can be made to write the equation as a second order
+  ODE of the form <math|x<rprime|''>+p<around*|(|t|)>*x<rprime|'>+q<around*|(|t|)>=0>,
+  however it is sufficiently clear at this point that we've got a second
+  order linear ODE.
+
+  Note two things:
+
+  <\enumerate>
+    <item>Two crucial assumptions were made:
+
+    <\enumerate>
+      <item><math|a<rsub|12>\<neq\>0>
+
+      <item><math|g<rsub|1><around*|(|t|)>> is differentiable.
+    </enumerate>
+
+    Both assumptions are valid given the information we've received at the
+    beginning.
+
+    <item>We chose rather arbitrarily to differentiate the first equation to
+    obtain a second order ODE in <math|x<rsub|1>>. We could have equally
+    chosen to differentiate the second equation and obtain a similar equation
+    in <math|x<rsub|2>>.
+
+    If we would have done so, the expression would have contained
+    <math|<frac|a<rsub|11>|a<rsub|21>>> and
+    <math|g<rsub|2><rprime|'><around*|(|t|)>>. In order for the would-so
+    obtained equation to hold, <math|a<rsub|22>> must be non-zero and
+    <math|g<rsub|2><around*|(|t|)>> must be differentiable. Again, both
+    conditions are satisfied.
+  </enumerate>
+
+  Additionally, given the ICs <math|x<rsub|1><around*|(|0|)>,x<rsub|2><around*|(|0|)>>,
+  we officially have an initial value problem for a single second order
+  equation.
+
+  If <math|a<rsub|11>,\<ldots\>,a<rsub|22>> were functions of <math|t>, the
+  same procedure could be carried out, with the caveat that
+  <math|a<rsub|22><around*|(|t|)>/a<rsub|12><around*|(|t|)>> and
+  <math|a<rsub|11><around*|(|t|)>/a<rsub|21><around*|(|t|)>> must be
+  continuous (and also differentiable in the interval relevant to the ICs).
+
+  <underline|Question 16>
+
+  We're informed that <math|<bmatrix|<tformat|<table|<row|<cell|x>>|<row|<cell|y>>>>>=<bmatrix|<tformat|<table|<row|<cell|x<rsub|1>>>|<row|<cell|y<rsub|1>>>>>>>
+  and <math|<bmatrix|<tformat|<table|<row|<cell|x>>|<row|<cell|y>>>>>=<bmatrix|<tformat|<table|<row|<cell|x<rsub|2>>>|<row|<cell|y<rsub|2>>>>>>>
+  solve the following equations:
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|x<rprime|'>>|<cell|=>|<cell|p<rsub|11><around*|(|t|)>*x+p<rsub|12><around*|(|t|)>*y+g<rsub|1><around*|(|t|)>>>|<row|<cell|y<rprime|'>>|<cell|=>|<cell|p<rsub|21>*<around*|(|t|)>x+p<rsub|22><around*|(|t|)>*y+g<rsub|2><around*|(|t|)>>>>>
+  </eqnarray*>
+
+  These can also be written in matrix form:
+
+  <\equation*>
+    <bmatrix|<tformat|<table|<row|<cell|x>>|<row|<cell|y>>>>><rprime|'>=<bmatrix|<tformat|<table|<row|<cell|p<rsub|11>>|<cell|p<rsub|12>>>|<row|<cell|p<rsub|21>>|<cell|p<rsub|22>>>>>><bmatrix|<tformat|<table|<row|<cell|x<rsub|>>>|<row|<cell|y>>>>>+<bmatrix|<tformat|<table|<row|<cell|g<rsub|1>>>|<row|<cell|g<rsub|2>>>>>>
+  </equation*>
+
+  Plug in the two solutions:
+
+  <\equation*>
+    <bmatrix|<tformat|<table|<row|<cell|x<rsub|1>>>|<row|<cell|y<rsub|1>>>>>><rprime|'>=<bmatrix|<tformat|<table|<row|<cell|p<rsub|11>>|<cell|p<rsub|12>>>|<row|<cell|p<rsub|21>>|<cell|p<rsub|22>>>>>><bmatrix|<tformat|<table|<row|<cell|x<rsub|1>>>|<row|<cell|y<rsub|1>>>>>>+<bmatrix|<tformat|<table|<row|<cell|g<rsub|1>>>|<row|<cell|g<rsub|2>>>>>>
+  </equation*>
+
+  <\equation*>
+    <bmatrix|<tformat|<table|<row|<cell|x<rsub|2>>>|<row|<cell|y<rsub|2>>>>>><rprime|'>=<bmatrix|<tformat|<table|<row|<cell|p<rsub|11>>|<cell|p<rsub|12>>>|<row|<cell|p<rsub|21>>|<cell|p<rsub|22>>>>>><bmatrix|<tformat|<table|<row|<cell|x<rsub|2>>>|<row|<cell|y<rsub|2>>>>>>+<bmatrix|<tformat|<table|<row|<cell|g<rsub|1>>>|<row|<cell|g<rsub|2>>>>>>
+  </equation*>
+
+  Subtract the two equations (operations are valid as matrices in
+  <math|\<bbb-R\>> are a vector subspace).
+
+  <\equation*>
+    <bmatrix|<tformat|<table|<row|<cell|x<rsub|1>-x<rsub|2>>>|<row|<cell|y<rsub|1>-y<rsub|2>>>>>><rprime|'>=<bmatrix|<tformat|<table|<row|<cell|p<rsub|11>>|<cell|p<rsub|12>>>|<row|<cell|p<rsub|21>>|<cell|p<rsub|22>>>>>><bmatrix|<tformat|<table|<row|<cell|x<rsub|1>-x<rsub|2>>>|<row|<cell|y<rsub|1>-y<rsub|2>>>>>>
+  </equation*>
+
+  Return to equation form and rearrange:
+
+  <\equation*>
+    <around*|(|x<rsub|1>-x<rsub|2>|)><rprime|'>-p<rsub|11>*<around*|(|x<rsub|1>-x<rsub|2>|)>-p<rsub|12>*<around*|(|y<rsub|1>-y<rsub|2>|)>=0
+  </equation*>
+
+  <\equation*>
+    <around*|(|y<rsub|1>-y<rsub|2>|)><rprime|'>-p<rsub|21>*<around*|(|x<rsub|1>-x<rsub|2>|)>-p<rsub|22>*<around*|(|y<rsub|1>-y<rsub|2>|)>=0
+  </equation*>
+
+  We thus proved that <math|x=x<rsub|1>-x<rsub|2>,y=y<rsub|1>-y<rsub|2>>
+  solve the corresponding homogeneous equation.
+
+  <section*|Page 346>
+
+  <underline|Question 21>
+
+  (a) Initial conditions are <math|Q<rsub|1><around*|(|0|)>=<SI|25|oz>>,
+  <math|Q<rsub|2><around*|(|0|)>=<SI|15|oz>>. The differential equation for
+  the amount of salt in each tank is given by the amount of salt flowing in
+  minus the amount of salt flowing out. The amount flowing in and out depends
+  on the transient concentraion in each tank.
+
+  For tank 1:
+
+  <\equation*>
+    Q<rprime|'><rsub|1><around*|(|t|)>=1 <frac|oz|gal>\<ast\><frac|3|2>
+    <frac|gal|min>-3*<frac|Q<rsub|1>|V<rsub|1>>+<frac|3|2>*<frac|Q<rsub|2>|V<rsub|2>>
+  </equation*>
+
+  <\equation*>
+    Q<rsub|1><rprime|'>=-<frac|3|V<rsub|1>>*Q<rsub|1>+<frac|3|2V<rsub|2>>*Q<rsub|2>+<frac|3|2>
+  </equation*>
+
+  For tank 2:
+
+  <\equation*>
+    Q<rsub|2><rprime|'><around*|(|t|)>=3 <frac|oz|gal>\<ast\>1
+    <frac|gal|min>+3*<frac|Q<rsub|1>|V<rsub|1>>-4*<frac|Q<rsub|2>|V<rsub|2>>
+  </equation*>
+
+  <\equation*>
+    Q<rsub|2><rprime|'>=<frac|3|V<rsub|1>>*Q<rsub|1>-<frac|4|V<rsub|2>>*Q<rsub|2>+3
+  </equation*>
+
+  Obtain expressions for <math|V<rsub|1>,V<rsub|2>> (in gals):
+
+  <\equation*>
+    V<rsub|1><around*|(|t|)>=V<rsub|1><around*|(|0|)>+1.5 <frac|gal|min>t-3
+    <frac|gal|min>*t+1.5 <frac|gal|min>*t=V<rsub|1><around*|(|0|)>=<SI|30|gal>
+  </equation*>
+
+  <\equation*>
+    V<rsub|2><around*|(|t|)>=V<rsub|2><around*|(|0|)>+1 <frac|gal|min>*t+3
+    <frac|gal|min>*t-4 <frac|gal|min>*t=V<rsub|2><around*|(|0|)>=<SI|20|gal>
+  </equation*>
+
+  Luckily they remain constant. Plug in the differential equations:
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|Q<rsub|1><rprime|'>>|<cell|=>|<cell|-<frac|1|10>*Q<rsub|1>+<frac|3|40>*Q<rsub|2>+<frac|3|2>>>|<row|<cell|Q<rsub|2><rprime|'>>|<cell|=>|<cell|<frac|1|10>Q<rsub|1>-<frac|1|5>Q<rsub|2>+3>>>>
+  </eqnarray*>
+
+  and in matrix form:
+
+  <\equation*>
+    <bmatrix|<tformat|<table|<row|<cell|Q<rsub|1>>>|<row|<cell|Q<rsub|2>>>>>><rprime|'>=<bmatrix|<tformat|<table|<row|<cell|-<frac|1|10>>|<cell|<frac|3|40>>>|<row|<cell|<frac|1|10>>|<cell|-<frac|1|5>>>>>><bmatrix|<tformat|<table|<row|<cell|Q<rsub|1>>>|<row|<cell|Q<rsub|2>>>>>>+<bmatrix|<tformat|<table|<row|<cell|<frac|3|2>>>|<row|<cell|3>>>>>
+  </equation*>
+
+  (b) In equilibrium <math|<bmatrix|<tformat|<table|<row|<cell|Q<rsub|1>>>|<row|<cell|Q<rsub|2>>>>>><rprime|'>=0>.
+  We need to solve:
+
+  <\equation*>
+    <bmatrix|<tformat|<table|<row|<cell|<frac|1|10>>|<cell|-<frac|3|40>>>|<row|<cell|-<frac|1|10>>|<cell|<frac|1|5>>>>>><bmatrix|<tformat|<table|<row|<cell|Q<rsub|1><rsup|E>>>|<row|<cell|Q<rsub|2><rsup|E>>>>>>=<bmatrix|<tformat|<table|<row|<cell|<frac|3|2>>>|<row|<cell|3>>>>>
+  </equation*>
+
+  Denote
+
+  <\equation*>
+    A=
+  </equation*>
+
+  The solution is given by:
+
+  <\equation*>
+    \;
+  </equation*>
 </body>
 
 <\initial>
@@ -367,8 +584,9 @@
 
 <\references>
   <\collection>
-    <associate|auto-1|<tuple|?|1|..\\..\\..\\..\\..\\AppData\\Roaming\\TeXmacs\\texts\\scratch\\no_name_1.tm>>
-    <associate|auto-2|<tuple|<with|mode|<quote|math>|\<bullet\>>|4|..\\..\\..\\..\\..\\AppData\\Roaming\\TeXmacs\\texts\\scratch\\no_name_1.tm>>
+    <associate|auto-1|<tuple|?|1>>
+    <associate|auto-2|<tuple|<with|mode|<quote|math>|\<bullet\>>|4>>
+    <associate|auto-3|<tuple|2|?>>
   </collection>
 </references>
 
