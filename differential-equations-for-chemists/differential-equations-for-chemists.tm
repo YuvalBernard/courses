@@ -4218,7 +4218,7 @@
     </itemize>
   </ornamented>
 
-  <subsection|Reducing higher order ODE to a system of first order system>
+  <subsection|Reducing a higher order ODE to a system of first order ODEs>
 
   Any higher order linear ODE can be reduced to a first order linear system.
 
@@ -4267,6 +4267,27 @@
     <bmatrix|<tformat|<table|<row|<cell|y<rsub|1>>>|<row|<cell|y<rsub|2>>>|<row|<cell|y<rsub|3>>>>>><rprime|'>=<bmatrix|<tformat|<table|<row|<cell|0>|<cell|1>|<cell|0>>|<row|<cell|0>|<cell|0>|<cell|1>>|<row|<cell|-4>|<cell|-3>|<cell|2>>>>><bmatrix|<tformat|<table|<row|<cell|y<rsub|1>>>|<row|<cell|y<rsub|2>>>|<row|<cell|y<rsub|3>>>>>>+<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|0>>|<row|<cell|sin
     x>>>>>
   </equation*>
+
+  <underline|Another example>
+
+  <\equation*>
+    y<rprime|'''>+7x*y<rprime|''>-sin x*y<rprime|'>+4y=0
+  </equation*>
+
+  We define\ 
+
+  <\equation*>
+    <choice|<tformat|<table|<row|<cell|y<rsub|1>=y>>|<row|<cell|y<rsub|2>=y<rprime|'>>>|<row|<cell|y<rsub|3>=y<rprime|''>>>>>>
+  </equation*>
+
+  and obtain the following system:
+
+  <\equation*>
+    <choice|<tformat|<table|<row|<cell|y<rsub|1><rprime|'>=y<rsub|2>>>|<row|<cell|y<rsub|2><rprime|'>=y<rsub|3>>>|<row|<cell|y<rsub|3><rprime|'>=y<rprime|'''>=-4y<rsub|1>+sin
+    x*y<rsub|2>-7x*y<rsub|3>>>>>>
+  </equation*>
+
+  If we solve the system then <math|y=y<rsub|1>> will solve the ODE.
 
   <subsection|System of algebraic equations>
 
@@ -4354,8 +4375,8 @@
     <bmatrix|<tformat|<table|<row|<cell|0>|<cell|1>|<cell|2>|<cell|-1>|<cell|0>|<cell|4>>|<row|<cell|0>|<cell|0>|<cell|0>|<cell|3>|<cell|1>|<cell|2>>|<row|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|-1>|<cell|4>>>>><bmatrix|<tformat|<table|<row|<cell|x<rsub|1>>>|<row|<cell|\<vdots\>>>|<row|<cell|x<rsub|6>>>>>>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|1>>|<row|<cell|-3>>>>>
   </equation*>
 
-  Dependent variables are the variables which correspond to the pivot
-  columns, in our case <math|x<rsub|2>,x<rsub|4>,x<rsub|5>>.
+  <strong|Dependent variables> are the variables which correspond to the
+  <strong|pivot> columns, in our case <math|x<rsub|2>,x<rsub|4>,x<rsub|5>>.
 
   Independent variables are all the rest, in our case
   <math|x<rsub|1>,x<rsub|3>,x<rsub|6>>.
@@ -4376,7 +4397,69 @@
   three vectors solve the associated homogeneous system. Also, they are
   linearly independent and therefore span the basis of the nullspace.
 
-  <underline|2 more examples>:
+  <underline|Another approach>: First solving the associated homogeneous
+  system:
+
+  <\equation*>
+    <bmatrix|<tformat|<table|<row|<cell|0>|<cell|1>|<cell|2>|<cell|-1>|<cell|0>|<cell|4>>|<row|<cell|0>|<cell|0>|<cell|0>|<cell|3>|<cell|1>|<cell|2>>|<row|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|-1>|<cell|4>>>>><bmatrix|<tformat|<table|<row|<cell|x<rsub|1>>>|<row|<cell|\<vdots\>>>|<row|<cell|x<rsub|6>>>>>>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|0>>|<row|<cell|0>>>>>
+  </equation*>
+
+  <\equation*>
+    <tabular|<tformat|<table|<row|<cell|-x<rsub|5>+4x<rsub|6>>|<cell|=>|<cell|0\<rightarrow\>x<rsub|5>=4x<rsub|6>>>|<row|<cell|3x<rsub|4>+x<rsub|5>+2x<rsub|6>>|<cell|=>|<cell|0\<rightarrow\>x<rsub|4>=-2x<rsub|y>>>|<row|<cell|x<rsub|2>+2x<rsub|3>-x<rsub|4>+4x<rsub|6>>|<cell|=>|<cell|0\<rightarrow\>x<rsub|2>=-2x<rsub|3>-6x<rsub|3>>>>>>
+  </equation*>
+
+  The set of solutions (nullspace of the matrix) is a subspace of
+  <math|\<bbb-R\><rsup|6>>.
+
+  The number of free variables is the dimension: #columns \U rank(coeff.
+  matrix) = 3
+
+  We can construct a basis for this by taking in turn on free variable = 1
+  and the rest 0.
+
+  <\enumerate>
+    <item><math|x<rsub|1>=1,x<rsub|3>=x<rsub|6>=0>.
+    <math|<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|0>>|<row|<cell|0>>|<row|<cell|0>>|<row|<cell|0>>|<row|<cell|0>>>>>>
+
+    <item><math|x<rsub|3>=1,x<rsub|1>=x<rsub|6>=0>.
+    <math|<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|-2>>|<row|<cell|1>>|<row|<cell|0>>|<row|<cell|0>>|<row|<cell|0>>>>>>
+
+    <item><math|x<rsub|6>=1,x<rsub|1>=x<rsub|3>=0>.
+    <math|<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|-6>>|<row|<cell|0>>|<row|<cell|-2>>|<row|<cell|4>>|<row|<cell|1>>>>>>
+  </enumerate>
+
+  These vectors are linearly independent and span the space of solutions.
+
+  General solution (of the associated homogeneous system) is:
+
+  <\equation*>
+    x<rsub|1>\<cdot\><bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|0>>|<row|<cell|0>>|<row|<cell|0>>|<row|<cell|0>>|<row|<cell|0>>>>>+x<rsub|3>\<cdot\><bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|-2>>|<row|<cell|1>>|<row|<cell|0>>|<row|<cell|0>>|<row|<cell|0>>>>>+x<rsub|6>\<cdot\><bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|-6>>|<row|<cell|0>>|<row|<cell|-2>>|<row|<cell|4>>|<row|<cell|1>>>>>
+  </equation*>
+
+  \;
+
+  To solve the inhomogeneous system, we just need to find a particular
+  solution. We had the general solution:
+
+  <\equation*>
+    <bmatrix|<tformat|<table|<row|<cell|x<rsub|1>>>|<row|<cell|-2x<rsub|3>-<frac|2|3>-6x<rsub|6>>>|<row|<cell|x<rsub|3>>>|<row|<cell|-2x<rsub|6>-<frac|2|3>>>|<row|<cell|4x<rsub|6>+3>>|<row|<cell|x<rsub|6>>>>>>=x<rsub|1><bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|0>>|<row|<cell|0>>|<row|<cell|0>>|<row|<cell|0>>|<row|<cell|0>>>>>+x<rsub|3><bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|-2>>|<row|<cell|1>>|<row|<cell|0>>|<row|<cell|0>>|<row|<cell|0>>>>>+x<rsub|6><bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|-6>>|<row|<cell|0>>|<row|<cell|-2>>|<row|<cell|4>>|<row|<cell|1>>>>>+<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|-<frac|2|3>>>|<row|<cell|0>>|<row|<cell|-<frac|2|3>>>|<row|<cell|3>>|<row|<cell|0>>>>>,<application-space|1em>x<rsub|1>,x<rsub|3>,x<rsub|6>\<in\>\<bbb-R\>
+  </equation*>
+
+  It is clean then that <math|<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|-<frac|2|3>>>|<row|<cell|0>>|<row|<cell|-<frac|2|3>>>|<row|<cell|3>>|<row|<cell|0>>>>>>
+  is a particular solution.
+
+  In general, given <math|A> <math|m\<times\>n> matrix such that
+  <math|A*<wide|x|\<vect\>>=<wide|b|\<vect\>>> and a particular solution
+  <math|v\<in\>\<bbb-R\><rsup|n>>, the set of all solutions is the set
+  <math|<around*|{|v+v<rsub|0> \|<text| <math|v<rsub|0><text| is in nullspace
+  of <math|A>>>>|}>>.
+
+  <underline|Theorem>: For an <math|m\<times\>n> matrix <math|A>, <math|n=dim
+  N<around*|(|A|)>+dim <around*|(|<text|row space>|)>> such that
+  <math|n-r=dim <around*|(|nullspace|)>>. [dim of row space is equal to the
+  dim of column space of <math|A>.]\ 
+
+  \ <underline|2 more examples>:
 
   <\enumerate>
     <item>
@@ -4400,20 +4483,23 @@
   <math|A*<wide|x|\<vect\>>=<wide|b|\<vect\>>> if and only if <math|rank
   <around*|(|A|)>=rank <around*|(|A\|B|)>>.
 
+  <new-page>
+
   <subsubsection|Algorithm to invert (square) matrices: Gauss-Seidel
   algorithm>
 
   Works for <em|square marices> (<math|n\<times\>n>).
 
-  An elementary matrix is obtained from <math|I> (identitiy matrix) by
-  performing one elementary operation on its rows. e.g.
+  <underline|Definition>: An elementary matrix is obtained from <math|I>
+  (identitiy matrix) by performing one elementary operation on its rows. e.g.
 
   <\equation*>
     <bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|1>|<cell|0>>|<row|<cell|-2>|<cell|0>|<cell|1>>>>><long-arrow|\<rubber-leftarrow\>|-2R<rsub|1>+R<rsub|3>\<rightarrow\>R<rsub|3>>I
   </equation*>
 
-  Multiplying a matrix on left by an element matrix performs the same
-  operation in its rows.
+  <underline|Fact>: Multiplying a matrix <math|A> on the left by an
+  elementary matrix <math|E> performs the same operation defining <math|E> on
+  rows of <math|A>.
 
   <\equation*>
     <bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|1>|<cell|0>>|<row|<cell|-2>|<cell|0>|<cell|1>>>>><bmatrix|<tformat|<table|<row|<cell|a<rsub|11>>|<cell|a<rsub|12>>|<cell|a<rsub|13>>>|<row|<cell|a<rsub|21>>|<cell|a<rsub|22>>|<cell|a<rsub|23>>>|<row|<cell|a<rsub|31>>|<cell|a<rsub|32>>|<cell|a<rsub|33>>>>>>=<bmatrix|<tformat|<table|<row|<cell|a<rsub|11>>|<cell|a<rsub|12>>|<cell|a<rsub|13>>>|<row|<cell|a<rsub|21>>|<cell|a<rsub|22>>|<cell|a<rsub|23>>>|<row|<cell|-2a<rsub|11>+a<rsub|31>>|<cell|-2a<rsub|12>+a<rsub|32>>|<cell|-2a<rsub|13>+a<rsub|33>>>>>>
@@ -4433,17 +4519,20 @@
   elementary operations until <math|*<around*|(|I\|A<rsup|-1>|)>> is
   obtained.
 
-  If the algorithm \Pget stuck\Q (don't have enough pivots) then <math|rank
+  If the algorithm \Pgets stuck\Q (don't have enough pivots) then <math|rank
   <around*|(|A|)>\<less\>n> and <math|A> is not invertible.
+
+  <underline|Note>: Method works iff <math|rank A=n\<Longleftrightarrow\>A>
+  is invertible.
 
   <underline|Example>
 
   <\equation*>
-    <bmatrix|<tformat|<cwith|1|1|4|4|cell-tborder|0ln>|<cwith|3|3|4|4|cell-bborder|0ln>|<cwith|1|-1|4|4|cell-lborder|1ln>|<cwith|1|-1|3|3|cell-rborder|1ln>|<cwith|1|-1|4|4|cell-rborder|0ln>|<cwith|1|-1|5|5|cell-lborder|0ln>|<table|<row|<cell|1>|<cell|-1>|<cell|2>|<cell|1>|<cell|0>|<cell|0>>|<row|<cell|1>|<cell|2>|<cell|1>|<cell|0>|<cell|1>|<cell|0>>|<row|<cell|3>|<cell|1>|<cell|4>|<cell|0>|<cell|0>|<cell|1>>>>><long-arrow|\<rubber-rightarrow\>|<tabular|<tformat|<table|<row|<cell|-R<rsub|1>+R<rsub|2>-R<rsub|2>>>|<row|<cell|-3R<rsub|1>+R<rsub|3>\<rightarrow\>R<rsub|3>>>>>>><bmatrix|<tformat|<cwith|1|1|4|4|cell-tborder|0ln>|<cwith|3|3|4|4|cell-bborder|0ln>|<cwith|1|-1|4|4|cell-lborder|1ln>|<cwith|1|-1|3|3|cell-rborder|1ln>|<cwith|1|-1|4|4|cell-rborder|0ln>|<cwith|1|-1|5|5|cell-lborder|0ln>|<table|<row|<cell|1>|<cell|-1>|<cell|2>|<cell|1>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|3>|<cell|-1>|<cell|-1>|<cell|1>|<cell|0>>|<row|<cell|0>|<cell|4>|<cell|-2>|<cell|-3>|<cell|0>|<cell|1>>>>><long-arrow|\<rubber-rightarrow\>|<frac|1|3>R<rsub|2>\<rightarrow\>R<rsub|2>>\<cdots\>
+    <bmatrix|<tformat|<cwith|1|1|4|4|cell-tborder|0ln>|<cwith|3|3|4|4|cell-bborder|0ln>|<cwith|1|-1|4|4|cell-lborder|1ln>|<cwith|1|-1|3|3|cell-rborder|1ln>|<cwith|1|-1|4|4|cell-rborder|0ln>|<cwith|1|-1|5|5|cell-lborder|0ln>|<table|<row|<cell|1>|<cell|-1>|<cell|2>|<cell|1>|<cell|0>|<cell|0>>|<row|<cell|1>|<cell|2>|<cell|1>|<cell|0>|<cell|1>|<cell|0>>|<row|<cell|3>|<cell|1>|<cell|4>|<cell|0>|<cell|0>|<cell|1>>>>><long-arrow|\<rubber-rightarrow\>|<tabular|<tformat|<table|<row|<cell|-R<rsub|1>+R<rsub|2>\<rightarrow\>R<rsub|2>>>|<row|<cell|-3R<rsub|1>+R<rsub|3>\<rightarrow\>R<rsub|3>>>>>>><bmatrix|<tformat|<cwith|1|1|4|4|cell-tborder|0ln>|<cwith|3|3|4|4|cell-bborder|0ln>|<cwith|1|-1|4|4|cell-lborder|1ln>|<cwith|1|-1|3|3|cell-rborder|1ln>|<cwith|1|-1|4|4|cell-rborder|0ln>|<cwith|1|-1|5|5|cell-lborder|0ln>|<table|<row|<cell|1>|<cell|-1>|<cell|2>|<cell|1>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|3>|<cell|-1>|<cell|-1>|<cell|1>|<cell|0>>|<row|<cell|0>|<cell|4>|<cell|-2>|<cell|-3>|<cell|0>|<cell|1>>>>><long-arrow|\<rubber-rightarrow\>|<frac|1|3>R<rsub|2>\<rightarrow\>R<rsub|2>>\<cdots\>
   </equation*>
 
   <\equation*>
-    <bmatrix|<tformat|<cwith|1|1|4|4|cell-tborder|0ln>|<cwith|3|3|4|4|cell-bborder|0ln>|<cwith|1|-1|4|4|cell-lborder|1ln>|<cwith|1|-1|3|3|cell-rborder|1ln>|<cwith|1|-1|4|4|cell-rborder|0ln>|<cwith|1|-1|5|5|cell-lborder|0ln>|<table|<row|<cell|1>|<cell|-1>|<cell|2>|<cell|1>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|1>|<cell|-<frac|1|3>>|<cell|-<frac|1|3>>|<cell|<frac|1|3>>|<cell|0>>|<row|<cell|0>|<cell|4>|<cell|-2>|<cell|-3>|<cell|0>|<cell|1>>>>><long-arrow|\<rubber-rightarrow\>|-4R<rsub|2>+R<rsub|3>><bmatrix|<tformat|<cwith|1|1|4|4|cell-tborder|0ln>|<cwith|3|3|4|4|cell-bborder|0ln>|<cwith|1|-1|4|4|cell-lborder|1ln>|<cwith|1|-1|3|3|cell-rborder|1ln>|<cwith|1|-1|4|4|cell-rborder|0ln>|<cwith|1|-1|5|5|cell-lborder|0ln>|<table|<row|<cell|1>|<cell|-1>|<cell|2>|<cell|1>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|1>|<cell|-<frac|1|3>>|<cell|-<frac|1|3>>|<cell|<frac|1|3>>|<cell|0>>|<row|<cell|0>|<cell|0>|<cell|-<frac|2|3>>|<cell|-<frac|5|3>>|<cell|-<frac|4|3>>|<cell|1>>>>>
+    <bmatrix|<tformat|<cwith|1|1|4|4|cell-tborder|0ln>|<cwith|3|3|4|4|cell-bborder|0ln>|<cwith|1|-1|4|4|cell-lborder|1ln>|<cwith|1|-1|3|3|cell-rborder|1ln>|<cwith|1|-1|4|4|cell-rborder|0ln>|<cwith|1|-1|5|5|cell-lborder|0ln>|<table|<row|<cell|1>|<cell|-1>|<cell|2>|<cell|1>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|1>|<cell|-<frac|1|3>>|<cell|-<frac|1|3>>|<cell|<frac|1|3>>|<cell|0>>|<row|<cell|0>|<cell|4>|<cell|-2>|<cell|-3>|<cell|0>|<cell|1>>>>><long-arrow|\<rubber-rightarrow\>|-4R<rsub|2>+R<rsub|3>\<rightarrow\>R<rsub|3>><bmatrix|<tformat|<cwith|1|1|4|4|cell-tborder|0ln>|<cwith|3|3|4|4|cell-bborder|0ln>|<cwith|1|-1|4|4|cell-lborder|1ln>|<cwith|1|-1|3|3|cell-rborder|1ln>|<cwith|1|-1|4|4|cell-rborder|0ln>|<cwith|1|-1|5|5|cell-lborder|0ln>|<table|<row|<cell|1>|<cell|-1>|<cell|2>|<cell|1>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|1>|<cell|-<frac|1|3>>|<cell|-<frac|1|3>>|<cell|<frac|1|3>>|<cell|0>>|<row|<cell|0>|<cell|0>|<cell|-<frac|2|3>>|<cell|-<frac|5|3>>|<cell|-<frac|4|3>>|<cell|1>>>>>
   </equation*>
 
   Notice that now we know that <math|r=3>. Eventually, after some operations,
@@ -4452,6 +4541,62 @@
   <\equation*>
     A<rsup|-1>=<bmatrix|<tformat|<table|<row|<cell|-<frac|7|2>>|<cell|-3>|<cell|-<frac|5|2>>>|<row|<cell|<frac|1|2>>|<cell|1>|<cell|-<frac|1|2>>>|<row|<cell|<frac|5|2>>|<cell|2>|<cell|-<frac|3|2>>>>>>
   </equation*>
+
+  <subsubsection|Review of determinants>
+
+  Assume throughout this subsection that all matrices are square.
+
+  <underline|Note>: If <math|A> is an <math|n\<times\>n> real matrix,
+  <math|det A> is a real number.
+
+  <underline|We define <math|def A=<around*|\||A|\|>> recursively>:
+
+  if <math|n=1>: <math|A=<bmatrix|<tformat|<table|<row|<cell|a>>>>>> then
+  <math|det A=a>.
+
+  For an<space|1em><math|n\<times\>n> matrix
+  <math|A=<bmatrix|<tformat|<table|<row|<cell|a<rsub|i\<nocomma\>j>>>>>>>,
+  denote by <math|A<rsub|ij>=det <bmatrix|<tformat|<table|<row|<cell|a<rsub|11>>|<cell|\<cdots\>>|<cell|a<rsub|1n>>>|<row|<cell|\<vdots\>>|<cell|\<ddots\>>|<cell|>>|<row|<cell|a<rsub|n1>>|<cell|>|<cell|a<rsub|n\<nocomma\>n>>>>>>>
+  = det of matrix obtained from <math|A> by ommiting row <math|i> and column
+  <math|j> (<math|i\<nocomma\>j<rsup|th>> minor of <math|A>).
+
+  Define: <math|det A=<big|sum><rsub|j=1><rsup|n><around*|(|-1|)><rsup|i+j>*a<rsub|i\<nocomma\>j>*A<rsub|i\<nocomma\>j>>
+  for any fixed <math|i> (\Palong row <math|i>\Q).
+
+  <underline|if <math|n=2>>:
+
+  <\equation*>
+    A=<bmatrix|<tformat|<table|<row|<cell|a<rsub|11>>|<cell|a<rsub|12>>>|<row|<cell|a<rsub|21>>|<cell|a<rsub|22>>>>>>
+  </equation*>
+
+  Along row 1:
+
+  <\equation*>
+    det A=<big|sum><rsub|j=1><rsup|2>a<rsub|1j>*A<rsub|1j>\<cdot\><around*|(|-1|)><rsup|1+j>=a<rsub|i\<nocomma\>j>*A<rsub|11>-a<rsub|12>*A<rsub|12>=a<rsub|11>*a<rsub|22>-a<rsub|12>*a<rsub|21>
+  </equation*>
+
+  Along row 2:
+
+  <\equation*>
+    det A=<big|sum><rsub|j=1><rsup|2>a<rsub|2j>*A<rsub|2j>\<cdot\><around*|(|-1|)><rsup|2+j>=-a<rsub|21>*A<rsub|21>+a<rsub|22>*A<rsub|22>=-a<rsub|21>*a<rsub|12>+a<rsub|22>*a<rsub|11>
+  </equation*>
+
+  For <math|2\<times\>2> matrices you can also cross-multiply diagonals and
+  subtract main from sub-diagonal.
+
+  <underline|if <math|n=3>>:
+
+  <\equation*>
+    A=<bmatrix|<tformat|<table|<row|<cell|a<rsub|11>>|<cell|a<rsub|12>>|<cell|a<rsub|13>>>|<row|<cell|a<rsub|21>>|<cell|a<rsub|22>>|<cell|a<rsub|23>>>|<row|<cell|a<rsub|31>>|<cell|a<rsub|32>>|<cell|a<rsub|33>>>>>>
+  </equation*>
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|det A>|<cell|=>|<cell|<big|sum><rsub|j=1><rsup|3><around*|(|-1|)><rsup|1+j>*a<rsub|1j>*A<rsub|1j>=a<rsub|11>*A<rsub|11>-a<rsub|12>*A<rsub|12>+a<rsub|13>*A<rsub|13>>>|<row|<cell|>|<cell|=>|<cell|a<rsub|11>*<det|<tformat|<table|<row|<cell|a<rsub|22>>|<cell|a<rsub|23>>>|<row|<cell|a<rsub|32>>|<cell|a<rsub|33>>>>>>-a<rsub|12>*<det|<tformat|<table|<row|<cell|a<rsub|21>>|<cell|a<rsub|23>>>|<row|<cell|a<rsub|31>>|<cell|a<rsub|33>>>>>>+a<rsub|13>*<det|<tformat|<table|<row|<cell|a<rsub|21>>|<cell|a<rsub|22>>>|<row|<cell|a<rsub|31>>|<cell|a<rsub|32>>>>>>>>|<row|<cell|>|<cell|=>|<cell|a<rsub|11>*<around*|(|a<rsub|22>*a<rsub|33>-a<rsub|23>*a<rsub|32>|)>-a<rsub|12>*<around*|(|a<rsub|21>*a<rsub|33>-a<rsub|23>*a<rsub|31>|)>+a<rsub|13>*<around*|(|a<rsub|21>*a<rsub|32>-a<rsub|22>*a<rsub|31>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|a<rsub|11>*a<rsub|22>*a<rsub|33>+a<rsub|12>*a<rsub|23>*a<rsub|31>+a<rsub|13>*a<rsub|21>*a<rsub|32>|)>-<around*|(|a<rsub|11>*a<rsub|23>*a<rsub|32>+a<rsub|12>*a<rsub|21>*a<rsub|33>+a<rsub|13>*a<rsub|22>*a<rsub|31>|)>>>>>
+  </eqnarray*>
+
+  <underline|Theorem>: We can express a det also using columns: <math|det
+  A=<big|sum><rsub|i=1><rsup|n> <around*|(|-1|)><rsup|i+j>*a<rsub|i\<nocomma\>j>*A<rsub|i\<nocomma\>j>>
+  for a fixed <math|j> (\Pdown column <math|j>).
 </body>
 
 <\initial>
@@ -4495,10 +4640,11 @@
     <associate|auto-30|<tuple|5.3.2|53>>
     <associate|auto-31|<tuple|6|62>>
     <associate|auto-32|<tuple|6.1|62>>
-    <associate|auto-33|<tuple|6.2|64>>
-    <associate|auto-34|<tuple|6.3|65>>
-    <associate|auto-35|<tuple|6.4|68>>
+    <associate|auto-33|<tuple|6.2|65>>
+    <associate|auto-34|<tuple|6.3|66>>
+    <associate|auto-35|<tuple|6.4|66>>
     <associate|auto-36|<tuple|6.4.1|69>>
+    <associate|auto-37|<tuple|6.4.2|?>>
     <associate|auto-4|<tuple|3|4>>
     <associate|auto-5|<tuple|3|5>>
     <associate|auto-6|<tuple|3|5>>
@@ -4639,25 +4785,25 @@
       of ODES> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-31><vspace|0.5fn>
 
-      <with|par-left|<quote|1tab>|6.1<space|2spc>System of algebraic
-      equations <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|6.1<space|2spc>Examples of problems
+      represented by a system of ODEs <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-32>>
 
-      <with|par-left|<quote|2tab>|6.1.1<space|2spc>Algorithm to invert
-      (square) matrices: Gauss-Seidel algorithm
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|6.2<space|2spc>Existence & Uniqueness
+      theorem for first order systems <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-33>>
 
-      <with|par-left|<quote|1tab>|6.2<space|2spc>Examples of problems
-      represented by a system of ODEs <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|6.3<space|2spc>Reducing higher order ODE to
+      a system of first order system <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-34>>
 
-      <with|par-left|<quote|2tab>|6.2.1<space|2spc>Existence & Uniqueness thm
-      for first order systems <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|6.4<space|2spc>System of algebraic
+      equations <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-35>>
 
-      <with|par-left|<quote|2tab>|6.2.2<space|2spc>Reducing higher order ODE
-      to a system of first order system <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|2tab>|6.4.1<space|2spc>Algorithm to invert
+      (square) matrices: Gauss-Seidel algorithm
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-36>>
     </associate>
   </collection>
