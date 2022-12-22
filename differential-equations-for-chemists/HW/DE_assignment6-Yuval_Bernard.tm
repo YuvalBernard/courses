@@ -87,7 +87,7 @@
   Solve homogeneous counterpart. Characteristic polynomial equation:
 
   <\equation*>
-    \<lambda\><rsup|2>+4\<lambda\>=0\<rightarrow\>\<lambda\><rsub|1,2>=0,-4
+    \<lambda\><rsup|2>+4=0\<rightarrow\>\<lambda\><rsub|1,2>=\<pm\>2\<mathi\>
   </equation*>
 
   Break the RHS into parts. To find the solution that suits the polynomial
@@ -117,7 +117,30 @@
     \<alpha\><rsup|>\<mathe\><rsup|t>+4\<alpha\>\<mathe\><rsup|t>=3\<mathe\><rsup|t>\<rightarrow\>\<alpha\>=<frac|3|5>
   </equation*>
 
-  The general solution is therefore <math|y=c<rsub|1>+c<rsub|2>\<mathe\><rsup|-4t>+<frac|3|5>\<mathe\><rsup|t>+<frac|1|4>t<rsup|2>-<frac|1|8>,<application-space|1em>c<rsub|1,2>\<in\>\<bbb-R\>,<application-space|1em>\<forall\>t>.
+  The general solution is therefore <math|y=c<rsub|1>*sin 2t+c<rsub|2>*cos
+  2t+<frac|3|5>\<mathe\><rsup|t>+<frac|1|4>t<rsup|2>-<frac|1|8>,<application-space|1em>c<rsub|1,2>\<in\>\<bbb-R\>,<application-space|1em>\<forall\>t>.
+
+  Find <math|c<rsub|1>,c<rsub|2>> via ICs:
+
+  <\equation*>
+    y<around*|(|0|)>=c<rsub|2>+<frac|3|5>-<frac|1|8>=0\<rightarrow\>c<rsub|2>=-<frac|19|40>
+  </equation*>
+
+  <\equation*>
+    y<rprime|'><around*|(|t|)>=2c<rsub|1>*cos 2t-2c<rsub|2>*sin
+    2t+<frac|3|5>\<mathe\><rsup|t>+<frac|1|2>t
+  </equation*>
+
+  <\equation*>
+    y<rprime|'><around*|(|0|)>=2c<rsub|1>+<frac|3|5>=2\<rightarrow\>c<rsub|1>=<frac|7|10>
+  </equation*>
+
+  The unique solution is
+
+  <\equation*>
+    y=<frac|7|10>*sin 2t-<frac|19|40>*cos
+    2t+<frac|3|5>\<mathe\><rsup|t>+<frac|1|4>t<rsup|2>-<frac|1|8>,<application-space|1em>\<forall\>t
+  </equation*>
 
   <section*|Page 197>
 
@@ -175,7 +198,7 @@
   </equation*>
 
   Use the ICs to find <math|c<rsub|1>,c<rsub|2>>. We are given
-  <math|u<rprime|'><around*|(|0|)>=<SI|0.1|m|s<rsup|-1>>> and
+  <math|u<rprime|'><around*|(|0|)>=0.1 <frac|m|sec>> and
   <math|u<around*|(|0|)>=0>.
 
   Inserting in <math|u<around*|(|t|)>> <math|t=0> gives:
@@ -242,14 +265,15 @@
     \<lambda\>=\<pm\>\<mathi\>*<sqrt|<frac|1|L*C>>=\<pm\>2000*\<mathi\>*
   </equation*>
 
-  The the general solution is
+  The general solution is
 
   <\equation*>
     Q<around*|(|t|)>=A*cos 2000t+B*sin 2000t,<application-space|1em>A,B\<in\>\<bbb-R\>
   </equation*>
 
-  Use the IC <math|Q<around*|(|0|)>=1\<mu\>C> to get
-  <math|A=10<rsup|-6>,B=0>. The final expression of the charge at time t is
+  Use the ICs <math|Q<around*|(|0|)>=1\<mu\>C> and
+  <math|Q<rprime|'><around*|(|0|)>=0> to get <math|A=10<rsup|-6>,B=0>. The
+  final expression of the charge at time t is
 
   <\equation*>
     Q<around*|(|t|)>=10<rsup|-6>*cos 2000*t,<application-space|1em>t\<gtr\>0
@@ -316,9 +340,12 @@
     u<rprime|'><around*|(|0|)>=-0.15A+3.87B=0.1\<rightarrow\>B=<frac|1|36>
   </equation*>
 
+  The unique solution is:
+
   <\equation*>
     u<around*|(|t|)>=0.05*\<mathe\><rsup|-0.15t>*cos
-    3.87t+<frac|1|36>*\<mathe\><rsup|-0.15t>*sin 3.87t
+    3.87t+<frac|1|36>*\<mathe\><rsup|-0.15t>*sin
+    3.87t,<application-space|1em>t\<gtr\>0
   </equation*>
 
   Move to polar coordinates:
@@ -334,7 +361,8 @@
   Therefore,
 
   <\equation*>
-    u<around*|(|t|)>=0.05719*cos <around*|(|3.87t-0.5071|)>,<application-space|1em>t\<gtr\>0
+    u<around*|(|t|)>=0.05719*\<mathe\><rsup|-0.15t>*cos
+    <around*|(|3.87t-0.5071|)>,<application-space|1em>t\<gtr\>0
   </equation*>
 
   The quasi frequency <math|\<mu\>> is the frequency of the sinusoidal
@@ -357,7 +385,8 @@
     Q<rprime|''>+<frac|R|L>*Q<rprime|'>+<frac|1|L*C>*Q=0
   </equation*>
 
-  where <math|L=0.2H> and <math|C=0.8\<mu\>F>. Characteristic equation is:
+  where <math|L=0.2H> and <math|C=0.8\<mu\>F>. The characteristic equation
+  is:
 
   <\equation*>
     \<lambda\><rsup|2>+5R*\<lambda\>+6.25\<cdot\>10<rsup|6>*=0
@@ -366,7 +395,7 @@
   Discriminant is:
 
   <\equation*>
-    25R<rsup|2>-4\<cdot\>6.25\<cdot\>10<rsup|6>=0
+    25R<rsup|2>-4\<cdot\>6.25\<cdot\>10<rsup|6> <above|=|!> 0
   </equation*>
 
   <\equation*>
@@ -381,8 +410,8 @@
     u<rprime|''>+<frac|2|3>k*u=0
   </equation*>
 
-  With ICS: <math|u<around*|(|0|)>=2,u<rprime|'><around*|(|0|)>=v>. We are
-  also given <math|T=\<pi\> sec>, <math|R=3>.
+  With ICs: <math|u<around*|(|0|)>=2,u<rprime|'><around*|(|0|)>=v>. We are
+  also given <math|T=\<pi\> sec>, <math|R=3 m>.
 
   We want to find the polar representation of <math|u<around*|(|t|)>>. Solve
   the characteristic equation:
@@ -438,7 +467,7 @@
   </equation*>
 
   <\equation*>
-    v=<sqrt|<frac|10\<ast\>6|3>>=2<sqrt|5>
+    v=<sqrt|<frac|10\<ast\>6|3>>=\<pm\>2<sqrt|5>
   </equation*>
 </body>
 
