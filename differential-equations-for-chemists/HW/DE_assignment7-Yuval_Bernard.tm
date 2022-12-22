@@ -5,7 +5,7 @@
 <\body>
   <doc-data|<doc-title|Assignment 7>|<doc-author|<author-data|<author-name|Yuval
   Bernard>|<\author-affiliation>
-    Date:
+    Date: 26.12.22
   </author-affiliation>>>>
 
   <section*|Page 205>
@@ -213,9 +213,9 @@
   </eqnarray*>
 
   (b) The elements comprising the solution are 2 decaying cosine and sine
-  functions and 2 perpetually oscillating cosine and sine functions. It is
-  clear then that the solution can't approach a steady state, thus concluding
-  that all parts of the solution are transient.
+  functions and 2 perpetually oscillating cosine and sine functions. The
+  decaying sinusoids make the transient solution and the perpetually
+  oscillating sinusoids make the steady (periodic) solution.
 
   <section*|Page 344>
 
@@ -276,82 +276,58 @@
     <choice|<tformat|<table|<row|<cell|x<rsub|1><rprime|'>=-2x<rsub|1>+x<rsub|2>>>|<row|<cell|x<rsub|2><rprime|'>=x<rsub|1>-2x<rsub|2>>>>>>
   </equation*>
 
-  (a) Solve the equation where <math|x<rsub|1>> is a function of
-  <math|x<rsub|2>>
+  (a) Express <math|x<rsub|2>> as
 
   <\equation*>
-    x<rsub|1><rprime|'>+2x<rsub|1>=x<rsub|2>
+    x<rsub|2>=x<rsub|1><rprime|'>+2x<rsub|1>
   </equation*>
 
-  Via integration factor method:
+  and input in the differential equation for <math|x<rsub|2><rprime|'>>:
 
   <\equation*>
-    x<rsub|1>=\<mathe\><rsup|-2x<rsub|2>><around*|[|<big|int>x<rsub|2>*\<mathe\><rsup|2x<rsub|2>>
-    \<mathd\>x<rsub|2>+A|]>
+    <around*|(|x<rsub|1><rprime|'>+2x<rsub|1>|)><rprime|'>=x<rsub|1>-2*<around*|(|x<rsub|1><rprime|'>+2x<rsub|1>|)>
   </equation*>
 
-  Solve the integral via integration by parts:
+  Rearrange.
 
   <\equation*>
-    <big|int>x<rsub|2>*\<mathe\><rsup|2x<rsub|2>>
-    \<mathd\>x<rsub|2>=<frac|1|2>x<rsub|2>*\<mathe\><rsup|2x<rsub|2>>-<frac|1|2>\<mathe\><rsup|2x<rsub|2>>=<frac|1|2>\<mathe\><rsup|2x<rsub|2>><around*|(|x<rsub|2>-1|)>
+    x<rsub|1><rprime|''>+4x<rsub|1><rprime|'>+3x<rsub|1>=0
   </equation*>
 
+  Solve characteristic equation.
+
   <\equation*>
-    x<rsub|1>=<frac|1|2><around*|(|x<rsub|2>-1|)>+A*\<mathe\><rsup|-2x<rsub|2>>,<application-space|1em>A\<in\>\<bbb-R\>
+    \<lambda\><rsup|2>+4\<lambda\>+3=0
   </equation*>
 
-  Substitute solution into the 2nd equation:
+  Roots are <math|\<lambda\><rsub|1,2>=-3,-1>. General solution for
+  <math|x<rsub|1>> is:
 
   <\equation*>
-    x<rsub|2><rprime|'>=<frac|1|2><around*|(|x<rsub|2>-1|)>+A*\<mathe\><rsup|-2x<rsub|2>>-2x<rsub|2>
+    x<rsub|1>=c<rsub|1>*\<mathe\><rsup|-3t>+c<rsub|2>*\<mathe\><rsup|-t>,<application-space|1em>c<rsub|1,2>\<in\>\<bbb-R\>,<application-space|1em>\<forall\>t
   </equation*>
 
+  Input into expression for <math|x<rsub|2>> and get:
+
   <\equation*>
-    x<rsub|2><rprime|'>+<frac|3|2>x<rsub|2>=-<frac|1|2>+A*\<mathe\><rsup|-2x<rsub|2>>
+    x<rsub|2>=-3c<rsub|1>*\<mathe\><rsup|-3t>-c<rsub|2>*\<mathe\><rsup|-t>+2c<rsub|1>*\<mathe\><rsup|-3t>+2c<rsub|2>*\<mathe\><rsup|-t>=-c<rsub|1>*\<mathe\><rsup|3t>+c<rsub|2>*\<mathe\><rsup|t>,<application-space|1em>c<rsub|1,2>\<in\>\<bbb-R\>,<application-space|1em>\<forall\>t
   </equation*>
 
-  First solve the associated homogeneous equation.
+  (b) Given the ICs <math|x<rsub|1><around*|(|0|)>=2,x<rsub|2><around*|(|0|)>=3>,
 
   <\equation*>
-    \<lambda\>+<frac|3|2>=0\<rightarrow\>\<lambda\>=-<frac|3|2>
+    <choice|<tformat|<table|<row|<cell|x<rsub|1><around*|(|0|)>=2:<application-space|1em>c<rsub|1>+c<rsub|2>=2>>|<row|<cell|x<rsub|2><around*|(|0|)>=3:<application-space|1em>-c<rsub|1>+c<rsub|2>=3>>>>>\<rightarrow\>c<rsub|2>=<frac|5|2>,c<rsub|1>=-<frac|1|2>
   </equation*>
 
-  The solution to the homogeneous equation is
-  <math|x<rsub|2,h>=c<rsub|1>*\<mathe\><rsup|-<frac|3|2>t>> where
-  <math|c<rsub|1>\<in\>\<bbb-R\>>.
-
-  Now find a particular solution that fits the polynomial part of the RHS:
+  The unique solution satisfying the ICs is
 
   <\equation*>
-    x<rsub|2,p1>=\<alpha\>*t+\<beta\>
-  </equation*>
-
-  <\equation*>
-    x<rprime|'><rsub|2,p1>=\<alpha\>
-  </equation*>
-
-  Plug in the (polynomial part of the) ODE:
-
-  <\equation*>
-    \<alpha\>+<frac|3|2><around*|(|\<alpha\>t+\<beta\>|)>=-<frac|1|2>
-  </equation*>
-
-  Equate coefficients on both sides and get
-  <math|\<alpha\>=0,\<beta\>=-<frac|1|3>>.
-  <math|\<Rightarrow\>x<rsub|2,p1>=-<frac|1|3>>.
-
-  Now find a particular solution that fits the exponent part of the RHS:
-
-  <\equation*>
-    x<rsub|2,p2>=\<gamma\>*\<mathe\><rsup|-2x<rsub|2>>
+    x<rsub|1>=<frac|1|2>*\<mathe\><rsup|3t>+<frac|5|2>*\<mathe\><rsup|t>
   </equation*>
 
   <\equation*>
-    x<rprime|'><rsub|2,p2>=-2\<gamma\>*\<mathe\><rsup|-2x<rsub|2>>
+    x<rsub|2>=-<frac|1|2>*\<mathe\><rsup|3t>+<frac|5|2>*\<mathe\><rsup|t>
   </equation*>
-
-  <fill-dots>
 
   <underline|Question 14>
 

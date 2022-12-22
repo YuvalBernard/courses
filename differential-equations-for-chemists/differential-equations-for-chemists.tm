@@ -133,9 +133,41 @@
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-30>>
 
-    <with|par-left|1tab|5.4<space|2spc>System of ODES
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|6<space|2spc>System
+    of ODES> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-31><vspace|0.5fn>
+
+    <with|par-left|1tab|6.1<space|2spc>Examples of problems represented by a
+    system of ODEs <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-32>>
+
+    <with|par-left|1tab|6.2<space|2spc>Existence & Uniqueness theorem for
+    first order systems <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-33>>
+
+    <with|par-left|1tab|6.3<space|2spc>Reducing a higher order ODE to a
+    system of first order ODEs <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-34>>
+
+    <with|par-left|1tab|6.4<space|2spc>System of algebraic equations
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-31>>
+    <no-break><pageref|auto-35>>
+
+    <with|par-left|2tab|6.4.1<space|2spc>Algorithm to invert (square)
+    matrices: Gauss-Seidel algorithm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-36>>
+
+    <with|par-left|2tab|6.4.2<space|2spc>Review of determinants
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-37>>
+
+    <with|par-left|2tab|6.4.3<space|2spc>Cramer's rule
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-38>>
+
+    <with|par-left|2tab|6.4.4<space|2spc>Properties of determinants
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-39>>
   </table-of-contents>
 
   <part*|Preface: Complex numbers and functions>
@@ -4338,35 +4370,35 @@
   </enumerate>
 
   <underline|Note>: <math|r> is the rank of a matrix, and is equal to the
-  number of non-zero rows in a matrix <em|after> bringing it to uppder
-  echelon form.
+  number of non-zero rows in a matrix <em|after> bringing it to upper echelon
+  form.
 
   <underline|Definition>: For an <math|m\<times\>n> matrix <math|A>, we
   define fundamental subspaces:
 
   <\enumerate>
     <item>Set of solutions to <math|*A*<wide|x|\<vect\>>=<wide|0|\<vect\>>>
-    is a subspace of <math|\<bbb-R\><rsup|n>> (= nullspace of <math|A>).
+    is a subspace of <math|\<bbb-R\><rsup|n>> (= null-space of <math|A>).
 
     Set of solutions to <math|A*<wide|x|\<vect\>>=<wide|b|\<vect\>>>
     (<math|<wide|b|\<vect\>>\<neq\><wide|0|\<vect\>>>) is not a subspace
 
-    <item>Span of rows of <math|A> = rowspace of A is a subspace of
+    <item>Span of rows of <math|A> = row-space of A is a subspace of
     <math|\<bbb-R\><rsup|n>>
 
-    <item>Span of columns of <math|A> = columnspace of <math|A>, is a
+    <item>Span of columns of <math|A> = column-space of <math|A>, is a
     subspace of <math|\<bbb-R\><rsup|m>>.
   </enumerate>
 
   <underline|Theorems>:\ 
 
   <\itemize>
-    <item>Rank of <math|A=r> is the dimension of rowspace and dimension of
-    the columnspace.
+    <item>Rank of <math|A=r> is the dimension of row-space and dimension of
+    the column-space.
   </itemize>
 
   <\itemize>
-    <item>Dimension of the nullspace is <math|n-r>.
+    <item>Dimension of the null-space is <math|n-r>.
   </itemize>
 
   <underline|Example>
@@ -4395,7 +4427,7 @@
 
   Note that the last vector solves the inhomogeneous equation, and the first
   three vectors solve the associated homogeneous system. Also, they are
-  linearly independent and therefore span the basis of the nullspace.
+  linearly independent and therefore span the basis of the null-space.
 
   <underline|Another approach>: First solving the associated homogeneous
   system:
@@ -4408,7 +4440,7 @@
     <tabular|<tformat|<table|<row|<cell|-x<rsub|5>+4x<rsub|6>>|<cell|=>|<cell|0\<rightarrow\>x<rsub|5>=4x<rsub|6>>>|<row|<cell|3x<rsub|4>+x<rsub|5>+2x<rsub|6>>|<cell|=>|<cell|0\<rightarrow\>x<rsub|4>=-2x<rsub|y>>>|<row|<cell|x<rsub|2>+2x<rsub|3>-x<rsub|4>+4x<rsub|6>>|<cell|=>|<cell|0\<rightarrow\>x<rsub|2>=-2x<rsub|3>-6x<rsub|3>>>>>>
   </equation*>
 
-  The set of solutions (nullspace of the matrix) is a subspace of
+  The set of solutions (null-space of the matrix) is a subspace of
   <math|\<bbb-R\><rsup|6>>.
 
   The number of free variables is the dimension: #columns \U rank(coeff.
@@ -4451,8 +4483,8 @@
   In general, given <math|A> <math|m\<times\>n> matrix such that
   <math|A*<wide|x|\<vect\>>=<wide|b|\<vect\>>> and a particular solution
   <math|v\<in\>\<bbb-R\><rsup|n>>, the set of all solutions is the set
-  <math|<around*|{|v+v<rsub|0> \|<text| <math|v<rsub|0><text| is in nullspace
-  of <math|A>>>>|}>>.
+  <math|<around*|{|v+v<rsub|0> \|<text| <math|v<rsub|0><text| is in
+  null-space of <math|A>>>>|}>>.
 
   <underline|Theorem>: For an <math|m\<times\>n> matrix <math|A>, <math|n=dim
   N<around*|(|A|)>+dim <around*|(|<text|row space>|)>> such that
@@ -4468,7 +4500,7 @@
       <bmatrix|<tformat|<cwith|1|1|4|4|cell-tborder|0ln>|<cwith|3|3|4|4|cell-bborder|0ln>|<cwith|1|-1|4|4|cell-lborder|1ln>|<cwith|1|-1|3|3|cell-rborder|1ln>|<cwith|1|-1|4|4|cell-rborder|0ln>|<table|<row|<cell|1>|<cell|-1>|<cell|3>|<cell|1>>|<row|<cell|-1>|<cell|1>|<cell|-2>|<cell|1>>|<row|<cell|2>|<cell|-1>|<cell|3>|<cell|-4>>>>>\<rightarrow\>\<cdots\>\<rightarrow\><bmatrix|<tformat|<cwith|1|1|4|4|cell-tborder|0ln>|<cwith|3|3|4|4|cell-bborder|0ln>|<cwith|1|-1|4|4|cell-lborder|1ln>|<cwith|1|-1|3|3|cell-rborder|1ln>|<cwith|1|-1|4|4|cell-rborder|0ln>|<table|<row|<cell|1>|<cell|-2>|<cell|3>|<cell|1>>|<row|<cell|0>|<cell|-1>|<cell|1>|<cell|2>>|<row|<cell|0>|<cell|0>|<cell|0>|<cell|0>>>>>
     </equation*>
 
-    Can solve. Dimension of nullspace is 1 (<math|n=3,r=2>).
+    Can solve. Dimension of null-space is 1 (<math|n=3,r=2>).
 
     <item>
 
@@ -4488,10 +4520,10 @@
   <subsubsection|Algorithm to invert (square) matrices: Gauss-Seidel
   algorithm>
 
-  Works for <em|square marices> (<math|n\<times\>n>).
+  Works for <em|square matrices> (<math|n\<times\>n>).
 
   <underline|Definition>: An elementary matrix is obtained from <math|I>
-  (identitiy matrix) by performing one elementary operation on its rows. e.g.
+  (identity matrix) by performing one elementary operation on its rows. e.g.
 
   <\equation*>
     <bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|1>|<cell|0>>|<row|<cell|-2>|<cell|0>|<cell|1>>>>><long-arrow|\<rubber-leftarrow\>|-2R<rsub|1>+R<rsub|3>\<rightarrow\>R<rsub|3>>I
@@ -4556,9 +4588,9 @@
 
   For an<space|1em><math|n\<times\>n> matrix
   <math|A=<bmatrix|<tformat|<table|<row|<cell|a<rsub|i\<nocomma\>j>>>>>>>,
-  denote by <math|A<rsub|ij>=det <bmatrix|<tformat|<table|<row|<cell|a<rsub|11>>|<cell|\<cdots\>>|<cell|a<rsub|1n>>>|<row|<cell|\<vdots\>>|<cell|\<ddots\>>|<cell|>>|<row|<cell|a<rsub|n1>>|<cell|>|<cell|a<rsub|n\<nocomma\>n>>>>>>>
-  = det of matrix obtained from <math|A> by ommiting row <math|i> and column
-  <math|j> (<math|i\<nocomma\>j<rsup|th>> minor of <math|A>).
+  denote by <math|A<rsub|ij>> = det of matrix obtained from <math|A> by
+  omitting row <math|i> and column <math|j> (<math|i\<nocomma\>j<rsup|th>>
+  minor of <math|A>).
 
   Define: <math|det A=<big|sum><rsub|j=1><rsup|n><around*|(|-1|)><rsup|i+j>*a<rsub|i\<nocomma\>j>*A<rsub|i\<nocomma\>j>>
   for any fixed <math|i> (\Palong row <math|i>\Q).
@@ -4596,7 +4628,357 @@
 
   <underline|Theorem>: We can express a det also using columns: <math|det
   A=<big|sum><rsub|i=1><rsup|n> <around*|(|-1|)><rsup|i+j>*a<rsub|i\<nocomma\>j>*A<rsub|i\<nocomma\>j>>
-  for a fixed <math|j> (\Pdown column <math|j>).
+  for a fixed <math|j> (\Pdown column <math|j>\Q).
+
+  <marginal-note|normal|c|Lec 15 25.12.22><underline|if <math|n=4>>:
+
+  Along row <math|i>,
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|det A=<big|sum><rsub|j=1><rsup|4><around*|(|-1|)><rsup|i+j>*a<rsub|i\<nocomma\>j>*A<rsub|i\<nocomma\>j>>|<cell|=>|<cell|<around*|(|-1|)><rsup|i+1>*a<rsub|i\<nocomma\>1>*A<rsub|i\<nocomma\>1>+<around*|(|-1|)><rsup|i+2>*a<rsub|i\<nocomma\>2>*A<rsub|i\<nocomma\>2>+<around*|(|-1|)><rsup|i+3>*a<rsub|i\<nocomma\>3>*A<rsub|i\<nocomma\>3>+\<cdots\>++<around*|(|-1|)><rsup|i+4>*a<rsub|i\<nocomma\>4>*A<rsub|i\<nocomma\>4>>>>>
+  </eqnarray*>
+
+  In fact: <math|det A> = sum of all choices of products of elements chosen,
+  one from each row and one from each column, multiplied by a power of
+  <math|<around*|(|-1|)>>. In total, <math|n!> summands.
+
+  <subsubsection|Cramer's rule>
+
+  <underline|A strategy to find solutions of a system based on determinant:>
+
+  In a <math|2\<times\>2> case, where
+
+  <\equation*>
+    <choice|<tformat|<table|<row|<cell|a<rsub|11>*x<rsub|1>+a<rsub|12>*x<rsub|2>=b<rsub|1>>>|<row|<cell|a<rsub|21>*x<rsub|1>+a<rsub|22>*x<rsub|2>=b<rsub|2>>>>>>
+  </equation*>
+
+  Operate <math|R<rsub|2>-R<rsub|1>\<rightarrow\>R<rsub|2>>
+
+  <\equation*>
+    <choice|<tformat|<table|<row|<cell|a<rsub|21>*a<rsub|11>*x<rsub|1>+a<rsub|21>*a<rsub|12>*x<rsub|2>=a<rsub|21>*b<rsub|1>>>|<row|<cell|a<rsub|11>*a<rsub|21>*x<rsub|1>+a<rsub|11>*a<rsub|22>*x<rsub|2>=a<rsub|11>*b<rsub|2>>>>>>
+  </equation*>
+
+  Subtract
+
+  <\equation*>
+    <around*|(|a<rsub|11>*a<rsub|22>-a<rsub|21>*a<rsub|12>|)>*x<rsub|2>=a<rsub|11>b<rsub|2>-a<rsub|21>*b<rsub|1>
+  </equation*>
+
+  If <math|det A\<neq\>0> we can solve uniquely:
+
+  <\equation*>
+    x<rsub|2>=<frac|<det|<tformat|<table|<row|<cell|a<rsub|11>>|<cell|b<rsub|1>>>|<row|<cell|a<rsub|21>>|<cell|b<rsub|2>>>>>>|det
+    A>
+  </equation*>
+
+  It turns out that
+
+  <\equation*>
+    x<rsub|1>=<frac|<det|<tformat|<table|<row|<cell|b<rsub|1>>|<cell|a<rsub|12>>>|<row|<cell|b<rsub|2>>|<cell|a<rsub|22>>>>>>|det
+    A>
+  </equation*>
+
+  This is called Cramer's rule for <math|n\<times\>n> systems. This method is
+  practical only for small matrices, as it makes us calculate <math|n+1>
+  determinants to find the solutions.
+
+  <subsubsection|Properties of determinants>
+
+  <\enumerate>
+    <item>If <math|A> has a row/column of zeros then <math|det A=0>.
+
+    <item><math|det I> = 1. (<math|I> is the identity matrix)
+
+    <item><math|det <around*|(|c\<cdot\>A|)>=c<rsup|n>*det A>, where
+    <math|c\<in\>\<bbb-C\>>.
+
+    <item><math|det A=det A<rsup|T>>.
+
+    <item><math|det <around*|(|A\<cdot\>B|)>=det A\<cdot\>det B>.
+
+    <item><math|det <around*|(|A+B|)>\<neq\>det A+det B> (proof by splitting
+    <math|I> to upper and lower tridiagonal matrices).
+  </enumerate>
+
+  How do elementary row/column operations affect <math|det A>?
+
+  <\enumerate>
+    <item>If <math|B> is obtained from <math|A> by one row/column switch,
+    then <math|det B=-det A>.
+
+    <item>If <math|B> is obtained from <math|A> by multiplying a row/column
+    by a scalar <math|c>, then <math|det B=c\<cdot\>det A>.
+
+    <item>If <math|B> is obtained from <math|A> by
+    <math|\<alpha\>R<rsub|i>+R<rsub|j>\<rightarrow\>R<rsub|j>>, then
+    <math|det B=det A>.
+
+    <item>If <math|A> is upper-tridiangular
+    <math|<bmatrix|<tformat|<table|<row|<cell|a<rsub|11>>|<cell|a<rsub|12>>|<cell|a<rsub|13>>>|<row|<cell|0>|<cell|\<ddots\>>|<cell|\<vdots\>>>|<row|<cell|0>|<cell|0>|<cell|a<rsub|n\<nocomma\>n>>>>>>>
+    (some elements above main diagonal are non-zero and all bellow are zero),
+    then <math|det A=<big|prod><rsub|i=1><rsup|n>a<rsub|i\<nocomma\>i>>.
+  </enumerate>
+
+  <underline|Conclude:>
+
+  If <math|det A\<neq\>0> and we use Gaussian elimination on the rows of
+  <math|A> to get <math|U> in upper echelon form, then <math|det U\<neq\>0>.
+  So <math|U> will have no rows of zeros, so <math|rank U=rank A=n>.
+
+  That means that all rows/columns of <math|A> are linearly independent!
+
+  Note also that if we had <math|det A=0>, then <math|det U=0> and <math|rank
+  U=rank A\<less\>n>
+
+  <\ornamented>
+    <underline|Theorem>:
+
+    Rows/columns of <math|A> are linearly independent iff <math|det
+    A\<neq\>0>, iff <math|rank A=n> iff <math|A> is invertible
+    (non-singular).
+
+    If <math|det A\<neq\>0> we can write:
+
+    <\equation*>
+      i\<nocomma\>j<rsup|th> element of A<rsup|-1><rsub|>=<frac|1|det
+      A>*<wide*|<around*|(|<around*|(|-1|)><rsup|i+j>*A<rsub|j\<nocomma\>i>|)>
+      |\<wide-underbrace\>><rsub|<text|adjoint of <math|A>>>
+    </equation*>
+
+    <math|<around*|(|-1|)><rsup|i+j>*A<rsub|j\<nocomma\>i>> represents the
+    <math|i\<nocomma\>j<rsup|th>> element of <math|Adj A>.
+  </ornamented>
+
+  For <math|n=2>:
+
+  <\equation*>
+    <bmatrix|<tformat|<table|<row|<cell|a<rsub|11>>|<cell|a<rsub|12>>>|<row|<cell|a<rsub|21>>|<cell|a<rsub|22>>>>>><rsup|-1>=<frac|1|a<rsub|11>*a<rsub|22>-a<rsub|21>*a<rsub|12>>*<bmatrix|<tformat|<table|<row|<cell|A<rsub|11>>|<cell|-A<rsub|21>>>|<row|<cell|-A<rsub|12>>|<cell|A<rsub|22>>>>>>=<frac|1|a<rsub|11>*a<rsub|22>-a<rsub|21>*a<rsub|12>>*<bmatrix|<tformat|<table|<row|<cell|a<rsub|22>>|<cell|-a<rsub|12>>>|<row|<cell|-a<rsub|21>>|<cell|a<rsub|11>>>>>>
+  </equation*>
+
+  This is used in Cramer's rule: suppose you have a system of equations
+  <math|A*<wide|x|\<vect\>>=<wide|b|\<vect\>>>, then if <math|det A\<neq\>0>
+  we have a unique solution <math|<wide|x|\<vect\>>=A<rsup|-1>*<wide|b|\<vect\>>>.
+  Each element of <math|<wide|x|\<vect\>>> is obtained by:
+
+  <\equation*>
+    x<rsub|i>=<frac|<text|det <math|A> where column <math|i> is replaced by
+    ><wide|b|\<vect\>>|det A>
+  </equation*>
+
+  Different ways of calculating determinant of a <math|4\<times\>4> matrix
+  <math|A>:
+
+  <\equation*>
+    A=<bmatrix|<tformat|<cwith|1|-1|2|2|cell-background|pastel
+    yellow>|<table|<row|<cell|1>|<cell|0>|<cell|-1>|<cell|2>>|<row|<cell|2>|<cell|3>|<cell|1>|<cell|1>>|<row|<cell|1>|<cell|0>|<cell|2>|<cell|1>>|<row|<cell|3>|<cell|1>|<cell|1>|<cell|-1>>>>>
+  </equation*>
+
+  Calculate down column 2.
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|det A=<big|sum><rsub|i=1><rsup|4><around*|(|-1|)><rsup|i+2>*a<rsub|i\<nocomma\>2>*A<rsub|i\<nocomma\>2>>|<cell|=>|<cell|<around*|(|-1|)><rsup|1+2>*a<rsub|12>*A<rsub|12>+<around*|(|-1|)><rsup|2+2>*a<rsub|22>*A<rsub|22>+<around*|(|-1|)><rsup|3+2>*a<rsub|32>*A<rsub|32>+<around*|(|-1|)><rsup|4+2>*a<rsub|42>*A<rsub|42>>>>>
+  </eqnarray*>
+
+  Notice that <math|a<rsub|12>,a<rsub|42>=0>
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|det A>|<cell|=>|<cell|3\<cdot\><det|<tformat|<table|<row|<cell|1>|<cell|-1>|<cell|2>>|<row|<cell|1>|<cell|2>|<cell|1>>|<row|<cell|3>|<cell|1>|<cell|-1>>>>>+1\<cdot\><det|<tformat|<table|<row|<cell|1>|<cell|-1>|<cell|2>>|<row|<cell|2>|<cell|1>|<cell|1>>|<row|<cell|1>|<cell|2>|<cell|1>>>>>>>|<row|<cell|>|<cell|=>|<cell|3*<around*|(|<around*|(|-2-3+2|)>-<around*|(|12+1+1|)>|)>+1\<cdot\><around*|(|1-1+8-2+2-2|)>=-45>>>>
+  </eqnarray*>
+
+  Another approach: use elementary operations of type 3 to eliminate below
+  first pivot (this does not change the determinant)
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|>|<cell|>|<cell|>>>>
+  </eqnarray*>
+
+  <\equation*>
+    <bmatrix|<tformat|<cwith|1|-1|2|2|cell-background|>|<table|<row|<cell|1>|<cell|0>|<cell|-1>|<cell|2>>|<row|<cell|2>|<cell|3>|<cell|1>|<cell|1>>|<row|<cell|1>|<cell|0>|<cell|2>|<cell|1>>|<row|<cell|3>|<cell|1>|<cell|1>|<cell|-1>>>>>\<rightarrow\>*\<cdots\>*\<rightarrow\>det
+    <bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>|<cell|-1>|<cell|2>>|<row|<cell|0>|<cell|3>|<cell|3>|<cell|-3>>|<row|<cell|0>|<cell|0>|<cell|3>|<cell|-1>>|<row|<cell|0>|<cell|1>|<cell|4>|<cell|-7>>>>>=3*det
+    <bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>|<cell|-1>|<cell|2>>|<row|<cell|0>|<cell|1>|<cell|1>|<cell|-1>>|<row|<cell|0>|<cell|0>|<cell|3>|<cell|-1>>|<row|<cell|0>|<cell|1>|<cell|4>|<cell|-7>>>>>=
+  </equation*>
+
+  <\equation*>
+    =3*det <bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>|<cell|-1>|<cell|3>>|<row|<cell|0>|<cell|1>|<cell|1>|<cell|-1>>|<row|<cell|0>|<cell|0>|<cell|3>|<cell|-1>>|<row|<cell|0>|<cell|0>|<cell|3>|<cell|-6>>>>>=3*det
+    <bmatrix|<tformat|<cwith|2|-1|1|1|cell-background|pastel
+    yellow>|<cwith|3|4|2|2|cell-background|pastel
+    yellow>|<cwith|4|4|3|3|cell-background|pastel
+    yellow>|<table|<row|<cell|1>|<cell|0>|<cell|-1>|<cell|2>>|<row|<cell|0>|<cell|1>|<cell|1>|<cell|-1>>|<row|<cell|0>|<cell|0>|<cell|3>|<cell|-1>>|<row|<cell|0>|<cell|0>|<cell|0>|<cell|-5>>>>>=3\<cdot\>1\<cdot\>1\<cdot\>3\<cdot\><around*|(|-5|)>=-45
+  </equation*>
+
+  <subsubsection|Review of eigenvalues and
+  eigenvectors><marginal-note|normal|c|Lec 16 26.12.22>
+
+  Assume <math|A> is square <math|n\<times\>n>. The map that sends a vector
+  in <math|\<bbb-R\><rsup|n>> <math|<bmatrix|<tformat|<table|<row|<cell|x<rsub|1>>>|<row|<cell|\<vdots\>>>|<row|<cell|x<rsub|n>>>>>>
+  > to <math|A*<bmatrix|<tformat|<table|<row|<cell|x<rsub|1>>>|<row|<cell|\<vdots\>>>|<row|<cell|x<rsub|n>>>>>>>
+  is a <em|linear operator>.
+
+  <underline|Special case>
+
+  <math|A*<bmatrix|<tformat|<table|<row|<cell|x<rsub|1>>>|<row|<cell|\<vdots\>>>|<row|<cell|x<rsub|n>>>>>>>
+  is a scalar multiple of <math|<bmatrix|<tformat|<table|<row|<cell|x<rsub|1>>>|<row|<cell|\<vdots\>>>|<row|<cell|x<rsub|n>>>>>>>.
+
+  Clearly <math|A\<cdot\><wide|0|\<vect\>>=<wide|0|\<vect\>>>. We're
+  interested in a non-zero <math|<wide|x|\<vect\>>> such that
+  <math|A*<wide|x|\<vect\>>=\<lambda\>*<wide|x|\<vect\>>> for some scalar
+  <math|\<lambda\>>.
+
+  <underline|Example>:
+
+  <\equation*>
+    <bmatrix|<tformat|<table|<row|<cell|3>|<cell|2>>|<row|<cell|1>|<cell|4>>>>>*<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|1>>>>>=<bmatrix|<tformat|<table|<row|<cell|5>>|<row|<cell|5>>>>>=5\<cdot\><bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|1>>>>>
+  </equation*>
+
+  <underline|Definition>: If <math|<wide|x|\<vect\>>> is a non-zero vector
+  such that <math|A*<wide|x|\<vect\>>=\<lambda\>*<wide|x|\<vect\>>> for some
+  scalar <math|\<lambda\>>, we say it is an <em|eigenvector> for <math|A> and
+  <math|\<lambda\>> is its associated <em|eigenvalue>.
+
+  To find an eigenvector we need to solve:
+
+  <\equation*>
+    A*<bmatrix|<tformat|<table|<row|<cell|x<rsub|1>>>|<row|<cell|\<vdots\>>>|<row|<cell|x<rsub|n>>>>>>=\<lambda\>*<bmatrix|<tformat|<table|<row|<cell|x<rsub|1>>>|<row|<cell|\<vdots\>>>|<row|<cell|x<rsub|n>>>>>>
+  </equation*>
+
+  This is a non-linear system in <math|n+1> unknowns:
+  <math|x<rsub|1>,\<ldots\>,x<rsub|n>,\<lambda\>>.
+
+  Suppose <math|<wide|x|\<vect\>>> solves
+  <math|A*<wide|x|\<vect\>>=\<lambda\>*<wide|x|\<vect\>>>, then:
+  <math|<around*|(|A-\<lambda\>\<cdot\>I|)>*<wide|x|\<vect\>>=<wide|0|\<vect\>>>.
+  So <math|<wide|x|\<vect\>>> is a solution to the homogeneous linear system.
+  In other words, <math|<wide|x|\<vect\>>> is a non-trivial element in the
+  null-space of <math|A-\<lambda\>*I>.
+
+  null-space of <math|A-\<lambda\>*I> is called the <em|eigenspace>.
+
+  Recall that <math|dim nullspace=n-r>, so <math|n-1\<geq\>1>. In other
+  words, we have non-trivial solutions to
+  <math|<around*|(|A-\<lambda\>*I|)>*<wide|x|\<vect\>>=<wide|0|\<vect\>>> iff
+  <math|n\<gtr\>r> iff <math|det <around*|(|A-\<lambda\>*I|)>=0>.
+
+  Conclude: <math|\<lambda\>> is an eigenvalue iff
+  <math|<around*|\||A-\<lambda\>*I|\|>=0>.
+
+  <underline|Example>: Find eigenvectors and eigenvalues of matrix <math|A>:
+
+  <\equation*>
+    A=<bmatrix|<tformat|<table|<row|<cell|3>|<cell|2>>|<row|<cell|1>|<cell|4>>>>>
+  </equation*>
+
+  <\enumerate>
+    <item>Solve <math|<around*|\||A-\<lambda\>*I|\|>=0>.
+
+    <\equation*>
+      <det|<tformat|<table|<row|<cell|3-\<lambda\>>|<cell|2>>|<row|<cell|1>|<cell|4-\<lambda\>>>>>>=0
+    </equation*>
+
+    <\equation*>
+      <around*|(|3-\<lambda\>|)>*<around*|(|4-\<lambda\>|)>-2=0
+    </equation*>
+
+    <\equation*>
+      \<lambda\><rsup|2>-7\<lambda\>+10=0
+    </equation*>
+
+    <\equation*>
+      \<lambda\><rsub|1,2>=<frac|7\<pm\><sqrt|49-40>|2>=5,2
+    </equation*>
+
+    <item>Solve <math|<around*|(|A-5*I|)>*<wide|x|\<vect\>>=<wide|0|\<vect\>>>
+    and <math|<around*|(|A-2*I|)>*<wide|x|\<vect\>>=<wide|0|\<vect\>>>.
+
+    <\enumerate>
+      <item><math|\<lambda\>=5>:
+
+      <\equation*>
+        <bmatrix|<tformat|<table|<row|<cell|3-5>|<cell|2>>|<row|<cell|1>|<cell|4-5>>>>>*<bmatrix|<tformat|<table|<row|<cell|x>>|<row|<cell|y>>>>>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|0>>>>>
+      </equation*>
+
+      <\equation*>
+        <bmatrix|<tformat|<table|<row|<cell|-2>|<cell|2>>|<row|<cell|1>|<cell|-1>>>>>*<bmatrix|<tformat|<table|<row|<cell|x>>|<row|<cell|y>>>>>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|0>>>>>
+      </equation*>
+
+      Note this is a matrix of rank 1, as expected. Solve <math|x-y=0> and
+      get set of solutions <math|<bmatrix|<tformat|<table|<row|<cell|x>>|<row|<cell|-x>>>>>>
+      for any <math|x\<neq\>0> will be an eigenvector. e.g.
+      <math|<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|1>>>>>>.
+
+      <item><math|\<lambda\>=2>:
+
+      <\equation*>
+        <bmatrix|<tformat|<table|<row|<cell|3-2>|<cell|2>>|<row|<cell|1>|<cell|4-2>>>>>*<bmatrix|<tformat|<table|<row|<cell|x>>|<row|<cell|y>>>>>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|0>>>>>
+      </equation*>
+
+      <\equation*>
+        <bmatrix|<tformat|<table|<row|<cell|1>|<cell|2>>|<row|<cell|1>|<cell|2>>>>>*<bmatrix|<tformat|<table|<row|<cell|x>>|<row|<cell|y>>>>>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|0>>>>>
+      </equation*>
+
+      choose an eigenvector <math|<bmatrix|<tformat|<table|<row|<cell|-2>>|<row|<cell|1>>>>>>.
+    </enumerate>
+  </enumerate>
+
+  <underline|More examples>:
+
+  <\enumerate>
+    <item>
+
+    <\equation*>
+      A=<bmatrix|<tformat|<table|<row|<cell|1>|<cell|2>>|<row|<cell|-3>|<cell|-6>>>>>
+    </equation*>
+
+    Solve <math|<around*|\||A-\<lambda\>*I|\|>=0>
+
+    <\equation*>
+      <det|<tformat|<table|<row|<cell|1-\<lambda\>>|<cell|2>>|<row|<cell|-3>|<cell|-6-\<lambda\>>>>>>=-<around*|(|1-\<lambda\>|)>*<around*|(|6+\<lambda\>|)>+6=\<lambda\><rsup|2>+5\<lambda\>=0
+    </equation*>
+
+    The eigenvalues are <math|\<lambda\>=0,-5>. We got <math|\<lambda\>=0>
+    because rank <math|A\<less\>2>. <math|\<lambda\>=0> is an eigenvalue iff
+    <math|det A=0>.
+
+    <underline|<math|\<lambda\>=0>>: Find eigenvectors:
+
+    <\equation*>
+      <bmatrix|<tformat|<table|<row|<cell|1>|<cell|2>>|<row|<cell|-3>|<cell|-6>>>>>*<bmatrix|<tformat|<table|<row|<cell|x>>|<row|<cell|y>>>>>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|0>>>>>
+    </equation*>
+
+    <math|x+2y=0>. Get <math|<bmatrix|<tformat|<table|<row|<cell|-2>>|<row|<cell|1>>>>>>
+    basis for eigenspace.
+
+    <underline|<math|\<lambda\>=-5>>:
+
+    <\equation*>
+      <bmatrix|<tformat|<table|<row|<cell|6>|<cell|2>>|<row|<cell|-3>|<cell|-1>>>>>*<bmatrix|<tformat|<table|<row|<cell|x>>|<row|<cell|y>>>>>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|0>>>>>
+    </equation*>
+
+    <math|3x+y=0>. Get <math|<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|-3>>>>>>
+    basis for eigenspace.
+
+    <item>What if every non-zero vector is an eigenvector?
+
+    <\equation*>
+      A=<bmatrix|<tformat|<table|<row|<cell|3>|<cell|0>>|<row|<cell|0>|<cell|3>>>>>
+    </equation*>
+
+    <\equation*>
+      <bmatrix|<tformat|<table|<row|<cell|3>|<cell|0>>|<row|<cell|0>|<cell|3>>>>>*<bmatrix|<tformat|<table|<row|<cell|x>>|<row|<cell|y>>>>>=<bmatrix|<tformat|<table|<row|<cell|3x>>|<row|<cell|3y>>>>>
+    </equation*>
+
+    Solve <math|<around*|\||A-\<lambda\>*I|\|>=0>
+
+    <\equation*>
+      <det|<tformat|<table|<row|<cell|3-\<lambda\>>|<cell|0>>|<row|<cell|0>|<cell|3-\<lambda\>>>>>>=<around*|(|3-\<lambda\>|)><rsup|2>=0\<Longleftrightarrow\>\<lambda\>=3
+    </equation*>
+
+    Note that setting <math|\<lambda\>=3> means when we solve:
+    <math|<bmatrix|<tformat|<table|<row|<cell|A-\<lambda\>*I>>>>>*<bmatrix|<tformat|<table|<row|<cell|x>>|<row|<cell|y>>>>>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|0>>>>>>
+    we get <math|<bmatrix|<tformat|<table|<row|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|0>>>>>><math|<bmatrix|<tformat|<table|<row|<cell|x>>|<row|<cell|y>>>>>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|0>>>>>>
+    and every vector is a solution. Here eigenspace has dim 2.
+  </enumerate>
+
+  \;
 </body>
 
 <\initial>
@@ -4618,42 +5000,45 @@
     <associate|auto-10|<tuple|2|12>>
     <associate|auto-11|<tuple|I|15>>
     <associate|auto-12|<tuple|1|15>>
-    <associate|auto-13|<tuple|1.1|16>>
-    <associate|auto-14|<tuple|2|19>>
-    <associate|auto-15|<tuple|2.1|24>>
-    <associate|auto-16|<tuple|2.2|25>>
+    <associate|auto-13|<tuple|1.1|15>>
+    <associate|auto-14|<tuple|2|18>>
+    <associate|auto-15|<tuple|2.1|23>>
+    <associate|auto-16|<tuple|2.2|24>>
     <associate|auto-17|<tuple|II|27>>
     <associate|auto-18|<tuple|3|27>>
     <associate|auto-19|<tuple|3.1|27>>
     <associate|auto-2|<tuple|?|2>>
     <associate|auto-20|<tuple|3.2|29>>
-    <associate|auto-21|<tuple|4|31>>
-    <associate|auto-22|<tuple|4.1|34>>
-    <associate|auto-23|<tuple|5|34>>
-    <associate|auto-24|<tuple|5.1|34>>
-    <associate|auto-25|<tuple|5.2|37>>
+    <associate|auto-21|<tuple|4|30>>
+    <associate|auto-22|<tuple|4.1|33>>
+    <associate|auto-23|<tuple|5|33>>
+    <associate|auto-24|<tuple|5.1|33>>
+    <associate|auto-25|<tuple|5.2|36>>
     <associate|auto-26|<tuple|5.2.1|37>>
-    <associate|auto-27|<tuple|5.2.2|41>>
-    <associate|auto-28|<tuple|5.3|47>>
-    <associate|auto-29|<tuple|5.3.1|48>>
+    <associate|auto-27|<tuple|5.2.2|40>>
+    <associate|auto-28|<tuple|5.3|46>>
+    <associate|auto-29|<tuple|5.3.1|47>>
     <associate|auto-3|<tuple|3|4>>
-    <associate|auto-30|<tuple|5.3.2|53>>
-    <associate|auto-31|<tuple|6|62>>
-    <associate|auto-32|<tuple|6.1|62>>
-    <associate|auto-33|<tuple|6.2|65>>
-    <associate|auto-34|<tuple|6.3|66>>
-    <associate|auto-35|<tuple|6.4|66>>
-    <associate|auto-36|<tuple|6.4.1|69>>
-    <associate|auto-37|<tuple|6.4.2|?>>
-    <associate|auto-4|<tuple|3|4>>
+    <associate|auto-30|<tuple|5.3.2|52>>
+    <associate|auto-31|<tuple|6|60>>
+    <associate|auto-32|<tuple|6.1|60>>
+    <associate|auto-33|<tuple|6.2|64>>
+    <associate|auto-34|<tuple|6.3|64>>
+    <associate|auto-35|<tuple|6.4|65>>
+    <associate|auto-36|<tuple|6.4.1|70>>
+    <associate|auto-37|<tuple|6.4.2|71>>
+    <associate|auto-38|<tuple|6.4.3|72>>
+    <associate|auto-39|<tuple|6.4.4|72>>
+    <associate|auto-4|<tuple|3|5>>
+    <associate|auto-40|<tuple|6.4.5|74>>
     <associate|auto-5|<tuple|3|5>>
     <associate|auto-6|<tuple|3|5>>
     <associate|auto-7|<tuple|3|6>>
     <associate|auto-8|<tuple|3|6>>
     <associate|auto-9|<tuple|2|10>>
     <associate|exponential-identities|<tuple|1|7>>
-    <associate|first-order-const-ode|<tuple|2|15>>
-    <associate|homo-2nd|<tuple|3|35>>
+    <associate|first-order-const-ode|<tuple|2|14>>
+    <associate|homo-2nd|<tuple|3|34>>
   </collection>
 </references>
 
@@ -4793,8 +5178,8 @@
       theorem for first order systems <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-33>>
 
-      <with|par-left|<quote|1tab>|6.3<space|2spc>Reducing higher order ODE to
-      a system of first order system <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|6.3<space|2spc>Reducing a higher order ODE
+      to a system of first order ODEs <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-34>>
 
       <with|par-left|<quote|1tab>|6.4<space|2spc>System of algebraic
@@ -4805,6 +5190,22 @@
       (square) matrices: Gauss-Seidel algorithm
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-36>>
+
+      <with|par-left|<quote|2tab>|6.4.2<space|2spc>Review of determinants
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-37>>
+
+      <with|par-left|<quote|2tab>|6.4.3<space|2spc>Cramer's rule
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-38>>
+
+      <with|par-left|<quote|2tab>|6.4.4<space|2spc>Properties of determinants
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-39>>
+
+      <with|par-left|<quote|2tab>|6.4.5<space|2spc>Review of eigenvalues and
+      eigenvectors <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-40>>
     </associate>
   </collection>
 </auxiliary>
