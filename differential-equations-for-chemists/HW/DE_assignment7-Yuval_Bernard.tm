@@ -65,7 +65,8 @@
 
   <\equation*>
     cos 9t-cos 7t=-2*sin <around*|(|<frac|9+7|2>t|)>*sin
-    <around*|(|<frac|9-7|2>t|)>=-2*sin 8t*sin t
+    <around*|(|<frac|9-7|2>t|)>=-2*sin 8t*sin
+    t,<application-space|1em>\<forall\>t
   </equation*>
 
   <underline|Question 6>
@@ -74,14 +75,14 @@
     <item>If a mass of 5 kg stretches a spring 10 cm, then
 
     <\equation*>
-      k=<frac|m*g|L>=<frac|5 kg\<ast\><SI|9.8|m|s<rsup|-2>>|<SI|0.1|m>>=<SI|490|N|m<rsup|-1>>
+      k=<frac|m*g|L>=<frac|5 kg\<ast\>9.8 m*s<rsup|-2>|0.1 m>=490 m<rsup|-1>
     </equation*>
 
     <item>If the viscous medium exerts 2N on the mass when its velocity is 4
     cm/s, then
 
     <\equation*>
-      \<gamma\>=<frac|F|v>=<frac|<SI|2|N>|<SI|0.04|m|s<rsup|-1>>>=<SI|50|N|m<rsup|-1>|s<rsup|-1>>
+      \<gamma\>=<frac|F|v>=<frac|2 N|0.04 m s>=50 N m<rsup|-1>s<rsup|-1>
     </equation*>
   </itemize>
 
@@ -91,7 +92,7 @@
     m*u<rprime|''>=m*g-k*<around*|(|L+u|)>-\<gamma\>*u<rprime|'>+F<around*|(|t|)>
   </equation*>
 
-  As <math|m*g=k*L>, the equation can be simplifies and arranged to the form:
+  As <math|m*g=k*L>, the equation can be simplified and arranged to the form:
 
   <\equation*>
     u<rprime|''>+<frac|\<gamma\>|m>*u<rprime|'>+<frac|k|m>*u=<frac|F|m><around*|(|t|)>
@@ -110,7 +111,8 @@
   The given ICs are:
 
   <\equation*>
-    <choice|<tformat|<table|<row|<cell|u<around*|(|0|)>=0>>|<row|<cell|u<rprime|'><around*|(|0|)>=<SI|0.03|m|s<rsup|-1>>>>>>>
+    <choice|<tformat|<table|<row|<cell|u<around*|(|0|)>=0>>|<row|<cell|u<rprime|'><around*|(|0|)>=0.03
+    m*s<rsup|-1>>>>>>
   </equation*>
 
   This is the initial value problem.
@@ -135,7 +137,7 @@
   <\equation*>
     y<rsub|h>=c<rsub|1>*\<mathe\><rsup|-5t>*cos
     <sqrt|73>t+c<rsub|2>*\<mathe\><rsup|-5t>*sin
-    <sqrt|73>t,<application-space|1em>c<rsub|1,2>\<in\>\<bbb-R\>,<application-space|1em>t\<gtr\>0
+    <sqrt|73>t,<application-space|1em>c<rsub|1,2>\<in\>\<bbb-R\>,<application-space|1em>t\<geq\>0
   </equation*>
 
   Now search for a particular solution of the form
@@ -209,7 +211,7 @@
     <tformat|<table|<row|<cell|y>|<cell|=>|<cell|<frac|160|153281>\<mathe\><rsup|-5t>*cos
     <sqrt|73>t+2.927\<times\>10<rsup|-3>*\<mathe\><rsup|-5t>*sin
     <sqrt|73>t>>|<row|<cell|>|<cell|>|<cell|-<frac|160|153281>*cos
-    <frac|t|2>+<frac|3128|153281>*sin <frac|t|2>>>>>
+    <frac|t|2>+<frac|3128|153281>*sin <frac|t|2>,<application-space|1em>t\<geq\>0>>>>
   </eqnarray*>
 
   (b) The elements comprising the solution are 2 decaying cosine and sine
@@ -231,7 +233,7 @@
     <choice|<tformat|<table|<row|<cell|x<rsub|1>=u<rprime|'>>>|<row|<cell|x<rsub|2>=u>>>>>
   </equation*>
 
-  Their derivatives:
+  Their derivatives are:
 
   <\equation*>
     <choice|<tformat|<table|<row|<cell|x<rsub|1><rprime|'>=u<rprime|''>>>|<row|<cell|x<rsub|2><rprime|'>=u<rprime|'>=x<rsub|1>>>>>>
@@ -241,7 +243,7 @@
   the following system of 1st order ODEs:
 
   <\equation*>
-    <choice|<tformat|<table|<row|<cell|x<rsub|1><rprime|'>=-0.5x<rsub|1>+2x<rsub|2>>>|<row|<cell|x<rsub|2><rprime|'>=x<rsub|1>>>>>>
+    <choice|<tformat|<table|<row|<cell|x<rsub|1><rprime|'>=-0.5x<rsub|1>-2x<rsub|2>>>|<row|<cell|x<rsub|2><rprime|'>=x<rsub|1>>>>>>
   </equation*>
 
   <underline|Question 4>
@@ -263,8 +265,8 @@
     <choice|<tformat|<table|<row|<cell|x<rsub|1><rprime|'>=u<rsup|<around*|(|4|)>>>>|<row|<cell|x<rsub|2><rprime|'>=u<rprime|'''>=x<rsub|1>>>|<row|<cell|x<rsub|3><rprime|'>=u<rprime|''>=x<rsub|2>>>|<row|<cell|x<rsub|4><rprime|'>=u<rprime|'>=x<rsub|3>>>>>>
   </equation*>
 
-  Thus, we can transform the original ODE to the following system of 1st
-  order equations:
+  We can transform the original ODE to the following system of 1st order
+  equations:
 
   <\equation*>
     <choice|<tformat|<table|<row|<cell|x<rsub|1><rprime|'>=x<rsub|4>>>|<row|<cell|x<rsub|2><rprime|'>=x<rsub|1>>>|<row|<cell|x<rsub|3><rprime|'>=x<rsub|2>>>|<row|<cell|x<rsub|4><rprime|'>=x<rsub|3>>>>>>
@@ -322,11 +324,11 @@
   The unique solution satisfying the ICs is
 
   <\equation*>
-    x<rsub|1>=<frac|1|2>*\<mathe\><rsup|3t>+<frac|5|2>*\<mathe\><rsup|t>
+    x<rsub|1>=<frac|1|2>*\<mathe\><rsup|3t>+<frac|5|2>*\<mathe\><rsup|t>,<application-space|1em>\<forall\>t
   </equation*>
 
   <\equation*>
-    x<rsub|2>=-<frac|1|2>*\<mathe\><rsup|3t>+<frac|5|2>*\<mathe\><rsup|t>
+    x<rsub|2>=-<frac|1|2>*\<mathe\><rsup|3t>+<frac|5|2>*\<mathe\><rsup|t>,<application-space|1em>\<forall\>t
   </equation*>
 
   <underline|Question 14>
@@ -420,14 +422,13 @@
   </enumerate>
 
   Additionally, given the ICs <math|x<rsub|1><around*|(|0|)>,x<rsub|2><around*|(|0|)>>,
-  we officially have an initial value problem for a single second order
-  equation.
+  we officially have an initial value problem for a single second order ODE.
 
   If <math|a<rsub|11>,\<ldots\>,a<rsub|22>> were functions of <math|t>, the
   same procedure could be carried out, with the caveat that
   <math|a<rsub|22><around*|(|t|)>/a<rsub|12><around*|(|t|)>> and
   <math|a<rsub|11><around*|(|t|)>/a<rsub|21><around*|(|t|)>> must be
-  continuous (and also differentiable in the interval relevant to the ICs).
+  continuous and differentiable in the interval relevant to the ICs.
 
   <underline|Question 16>
 
@@ -456,7 +457,7 @@
   </equation*>
 
   Subtract the two equations (operations are valid as matrices in
-  <math|\<bbb-R\>> are a vector subspace).
+  <math|\<bbb-R\><rsup|n>> are a vector subspace).
 
   <\equation*>
     <bmatrix|<tformat|<table|<row|<cell|x<rsub|1>-x<rsub|2>>>|<row|<cell|y<rsub|1>-y<rsub|2>>>>>><rprime|'>=<bmatrix|<tformat|<table|<row|<cell|p<rsub|11>>|<cell|p<rsub|12>>>|<row|<cell|p<rsub|21>>|<cell|p<rsub|22>>>>>><bmatrix|<tformat|<table|<row|<cell|x<rsub|1>-x<rsub|2>>>|<row|<cell|y<rsub|1>-y<rsub|2>>>>>>
@@ -479,11 +480,11 @@
 
   <underline|Question 21>
 
-  (a) Initial conditions are <math|Q<rsub|1><around*|(|0|)>=<SI|25|oz>>,
-  <math|Q<rsub|2><around*|(|0|)>=<SI|15|oz>>. The differential equation for
-  the amount of salt in each tank is given by the amount of salt flowing in
-  minus the amount of salt flowing out. The amount flowing in and out depends
-  on the transient concentraion in each tank.
+  (a) Initial conditions are <math|Q<rsub|1><around*|(|0|)>=25 oz>,
+  <math|Q<rsub|2><around*|(|0|)>=15 oz>. The differential equation for the
+  amount of salt in each tank is given by the amount of salt flowing in minus
+  the amount of salt flowing out. The amount flowing in and out depends on
+  the transient concentration in each tank.
 
   For tank 1:
 
@@ -511,27 +512,29 @@
 
   <\equation*>
     V<rsub|1><around*|(|t|)>=V<rsub|1><around*|(|0|)>+1.5 <frac|gal|min>t-3
-    <frac|gal|min>*t+1.5 <frac|gal|min>*t=V<rsub|1><around*|(|0|)>=<SI|30|gal>
+    <frac|gal|min>*t+1.5 <frac|gal|min>*t=V<rsub|1><around*|(|0|)>=30 gal
   </equation*>
 
   <\equation*>
     V<rsub|2><around*|(|t|)>=V<rsub|2><around*|(|0|)>+1 <frac|gal|min>*t+3
-    <frac|gal|min>*t-4 <frac|gal|min>*t=V<rsub|2><around*|(|0|)>=<SI|20|gal>
+    <frac|gal|min>*t-4 <frac|gal|min>*t=V<rsub|2><around*|(|0|)>=20 gal
   </equation*>
 
   Luckily they remain constant. Plug in the differential equations:
 
   <\eqnarray*>
-    <tformat|<table|<row|<cell|Q<rsub|1><rprime|'>>|<cell|=>|<cell|-<frac|1|10>*Q<rsub|1>+<frac|3|40>*Q<rsub|2>+<frac|3|2>>>|<row|<cell|Q<rsub|2><rprime|'>>|<cell|=>|<cell|<frac|1|10>Q<rsub|1>-<frac|1|5>Q<rsub|2>+3>>>>
+    <tformat|<table|<row|<cell|Q<rsub|1><rprime|'>>|<cell|=>|<cell|-<frac|1|10>*Q<rsub|1>+<frac|3|40>*Q<rsub|2>+<frac|3|2>,<application-space|1em>Q<rsub|1><around*|(|0|)>=25
+    oz>>|<row|<cell|Q<rsub|2><rprime|'>>|<cell|=>|<cell|<frac|1|10>Q<rsub|1>-<frac|1|5>Q<rsub|2>+3,<application-space|1em>Q<rsub|2><around*|(|0|)>=15
+    oz>>>>
   </eqnarray*>
 
-  and in matrix form:
+  and convert to matrix form (for convenience):
 
   <\equation*>
     <bmatrix|<tformat|<table|<row|<cell|Q<rsub|1>>>|<row|<cell|Q<rsub|2>>>>>><rprime|'>=<bmatrix|<tformat|<table|<row|<cell|-<frac|1|10>>|<cell|<frac|3|40>>>|<row|<cell|<frac|1|10>>|<cell|-<frac|1|5>>>>>><bmatrix|<tformat|<table|<row|<cell|Q<rsub|1>>>|<row|<cell|Q<rsub|2>>>>>>+<bmatrix|<tformat|<table|<row|<cell|<frac|3|2>>>|<row|<cell|3>>>>>
   </equation*>
 
-  (b) In equilibrium <math|<bmatrix|<tformat|<table|<row|<cell|Q<rsub|1>>>|<row|<cell|Q<rsub|2>>>>>><rprime|'>=0>.
+  (b) At equilibrium <math|<bmatrix|<tformat|<table|<row|<cell|Q<rsub|1>>>|<row|<cell|Q<rsub|2>>>>>><rprime|'>=0>.
   We need to solve:
 
   <\equation*>
@@ -558,10 +561,6 @@
   </equation*>
 
   <\equation*>
-    <bmatrix|<tformat|<table|<row|<cell|<frac|1|10>>|<cell|-<frac|3|40>>>|<row|<cell|-<frac|1|10>>|<cell|<frac|1|5>>>>>>
-  </equation*>
-
-  <\equation*>
     adj A=<bmatrix|<tformat|<table|<row|<cell|<around*|(|-1|)><rsup|1+1>\<cdot\><frac|1|5>*>|<cell|<around*|(|-1|)><rsup|1+2>\<cdot\><around*|(|-<frac|1|10>|)>>>|<row|<cell|<around*|(|-1|)><rsup|2+1>\<cdot\><around*|(|-<frac|3|40>|)>>|<cell|<around*|(|-1|)><rsup|2+2>\<cdot\><frac|1|10>>>>>><rsup|T>=<bmatrix|<tformat|<table|<row|<cell|<frac|1|5>>|<cell|<frac|1|10>>>|<row|<cell|<frac|3|40>>|<cell|<frac|1|10>>>>>><rsup|T>=<bmatrix|<tformat|<table|<row|<cell|<frac|1|5>>|<cell|<frac|3|40>>>|<row|<cell|<frac|1|10>>|<cell|<frac|1|10>>>>>>
   </equation*>
 
@@ -583,7 +582,7 @@
     <tformat|<table|<row|<cell|x<rsub|1><rprime|'>>|<cell|=>|<cell|<around*|(|Q<rsub|1><around*|(|t|)>+Q<rsub|1><rsup|E>|)><rprime|'>=Q<rsub|1><rprime|'>>>|<row|<cell|x<rsub|2><rprime|'>>|<cell|=>|<cell|<around*|(|Q<rsub|2><around*|(|t|)>+Q<rsub|2><rsup|E>|)>=Q<rsub|2><rprime|'>>>>>
   </eqnarray*>
 
-  The differential equatins for <math|x<rsub|1>,x<rsub|2>> are the same as
+  The differential equations for <math|x<rsub|1>,x<rsub|2>> are the same as
   for <math|Q<rsub|1>,Q<rsub|2>>, where <math|Q<rsub|1>,Q<rsub|2>> are
   substituted with <math|<around*|(|x<rsub|1>+Q<rsub|1><rsup|E>|)>> and
   <math|<around*|(|x<rsub|2>+Q<rsub|2><rsup|E>|)>>:
