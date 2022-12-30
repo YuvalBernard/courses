@@ -1,6 +1,6 @@
 <TeXmacs|2.1.2>
 
-<style|<tuple|course|SIUnits-simple|python|std-shadow|std-frame>>
+<style|<tuple|course|python|std-shadow|std-frame|SIUnits-simple>>
 
 <\body>
   <\hide-preamble>
@@ -168,6 +168,10 @@
     <with|par-left|2tab|6.4.4<space|2spc>Properties of determinants
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-39>>
+
+    <with|par-left|2tab|6.4.5<space|2spc>Review of eigenvalues and
+    eigenvectors <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-40>>
   </table-of-contents>
 
   <part*|Preface: Complex numbers and functions>
@@ -3539,6 +3543,141 @@
     </session>
   </ornamented>
 
+  <underline|Cases where the RHS is split (not differentiable)>
+
+  For example,
+
+  <\equation*>
+    u<rprime|''>+u=f<around*|(|t|)>,<application-space|1em><choice|<tformat|<table|<row|<cell|u<around*|(|0|)>=0>>|<row|<cell|u<rprime|'><around*|(|0|)>=0>>>>>
+  </equation*>
+
+  <\equation*>
+    f<around*|(|t|)>=<choice|<tformat|<table|<row|<cell|5t,<application-space|1em>0\<leq\>t\<leq\>\<mathpi\>>>|<row|<cell|5*<around*|(|2\<mathpi\>-t|)>,<application-space|1em>\<mathpi\>\<leq\>t\<leq\>2\<mathpi\>>>|<row|<cell|0,<application-space|1em>t\<gtr\>2\<mathpi\>>>>>>
+  </equation*>
+
+  <math|f<around*|(|t|)>> looks like this:
+
+  <\padded-center>
+    <with|gr-mode|<tuple|group-edit|edit-props>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|cartesian|<point|0|0>|1>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-auto-crop|true|<graphics||<with|color|blue|<line|<point|0|0>|<point|2.0|3.0>|<point|4.0|0.0>>>|<math-at|\<mathpi\>|<point|2|-0.3>>|<math-at|2\<mathpi\>|<point|4.0|-0.4>>|<with|color|blue|<line|<point|4|0.0109472>|<point|7.0|0.0>>>|<math-at|5\<mathpi\>|<point|-0.6|3>>>>
+  </padded-center>
+
+  Solve associated homogeneous equation:
+
+  <\equation*>
+    x<rsup|2>+1=0\<Longleftrightarrow\>x=\<pm\>\<mathi\>
+  </equation*>
+
+  General solution is a linear combination of <math|sin t,cos t>.
+
+  Particular solution on <math|<around*|[|0,\<mathpi\>|]>>: In this interval
+  <math|f<around*|(|t|)>> is a polynomial. Guess <math|u=A*t+B>, substitute
+  and get
+
+  <\equation*>
+    A*t+B=5t\<rightarrow\>A=5,B=0
+  </equation*>
+
+  General solution on <math|<around*|[|0,\<mathpi\>|]>:x<around*|(|t|)>=a<rsub|1>*cos
+  t+a<rsub|2>*sin t+5t>. Inserting <math|t=0> gives
+  <math|a<rsub|1>,a<rsub|2>>.
+
+  Particular solution on <math|<around*|[|\<mathpi\>,2\<mathpi\>|]>:> Guess
+  again <math|u=A*t+B>, substitute and get
+
+  <\equation*>
+    A*t+B=10\<mathpi\>-5t\<rightarrow\>A=-5,B=10\<mathpi\>
+  </equation*>
+
+  General solution on <math|<around*|[|\<mathpi\>,2\<mathpi\>|]>:y<around*|(|t|)>=b<rsub|1>*cos
+  t+b<rsub|2>*sin t-5t+10\<mathpi\>>.
+
+  General solution on <math|<around*|[|2\<mathpi\>,\<infty\>|)>:z<around*|(|t|)>=c<rsub|1>*cos
+  t+c<rsub|2>*sin t>.
+
+  We want a unique solution satisfying the ICs, which is twice differentiable
+  (equivalent to order of the ODE). We need to determine the coefficients
+  <math|a<rsub|1,2>,b<rsub|1,2>,c<rsub|1,2>> so that this condition holds.
+
+  Setting <math|t=0:>
+
+  <\equation*>
+    x<around*|(|0|)>=a<rsub|1>=0
+  </equation*>
+
+  <\equation*>
+    x<rprime|'><around*|(|0|)>=a<rsub|2>+5=0\<rightarrow\>a<rsub|2>=-5
+  </equation*>
+
+  <\equation*>
+    x<around*|(|t|)>=-5*sin t+5t
+  </equation*>
+
+  Now we need to make sure that <math|x<around*|(|\<mathpi\>|)>=y<around*|(|\<mathpi\>|)>,x<rprime|'><around*|(|\<mathpi\>|)>=y<rprime|'><around*|(|\<mathpi\>|)>>.
+
+  <\equation*>
+    x<around*|(|\<mathpi\>|)>=5\<mathpi\>,x<rprime|'><around*|(|\<mathpi\>|)>=10
+  </equation*>
+
+  Set \Pinitial conditions\Q for <math|y<around*|(|t|)>>:
+  <math|y<around*|(|\<mathpi\>|)>=5\<mathpi\>,y<rprime|'><around*|(|\<mathpi\>|)>=10>.
+
+  <\equation*>
+    y<around*|(|\<mathpi\>|)>=b<rsub|1>*cos \<mathpi\>+b<rsub|2>*sin
+    \<mathpi\>-5\<mathpi\>+10\<mathpi\>=-b<rsub|1>+5\<mathpi\>\<rightarrow\>b<rsub|1>=0
+  </equation*>
+
+  <\equation*>
+    y<rprime|'><around*|(|\<mathpi\>|)>=-b<rsub|2>-5\<rightarrow\>b<rsub|2>=-15
+  </equation*>
+
+  <\equation*>
+    y<around*|(|t|)>=-15*sin t-5t+10\<mathpi\>
+  </equation*>
+
+  Make sure <math|y<around*|(|2\<mathpi\>|)>=z<around*|(|2\<mathpi\>|)>,y<rprime|'><around*|(|2\<mathpi\>|)>=z<rprime|'><around*|(|2\<mathpi\>|)>>.
+  <math|y<around*|(|2\<mathpi\>|)>=0,y<rprime|'><around*|(|2\<mathpi\>|)>=-20>.
+
+  <\equation*>
+    z<around*|(|2\<mathpi\>|)>=c<rsub|1>*cos 2\<mathpi\>+c<rsub|2>*sin
+    2\<mathpi\>\<rightarrow\>c<rsub|1>=0
+  </equation*>
+
+  <\equation*>
+    z<rprime|'><around*|(|2\<mathpi\>|)>=-c<rsub|1>*sin
+    2\<mathpi\>+c<rsub|2>*cos 2\<mathpi\>\<rightarrow\>c<rsub|2>=-20
+  </equation*>
+
+  <\equation*>
+    z<around*|(|t|)>=-20*sin t
+  </equation*>
+
+  In summary, we have a unique solution:
+
+  <\equation*>
+    u<around*|(|t|)>=<choice|<tformat|<table|<row|<cell|-5*sin
+    t+5t,<application-space|1em>0\<leq\>t\<leq\>\<mathpi\>>>|<row|<cell|-15*sin
+    t-5t+10\<mathpi\>,<application-space|1em>\<mathpi\>\<less\>t\<leq\>2\<mathpi\>>>|<row|<cell|-20*sin
+    t,<application-space|1em>t\<gtr\>2\<mathpi\>>>>>>
+  </equation*>
+
+  We constructed <math|u<around*|(|t|)>> so that it is continuous everywhere.
+  What about the second derivative?
+
+  <\equation*>
+    u<rprime|''><around*|(|t|)>=<choice|<tformat|<table|<row|<cell|5*sin
+    t,<application-space|1em>0\<leq\>t\<leq\>\<mathpi\>>>|<row|<cell|15*sin
+    t,<application-space|1em>\<mathpi\>\<less\>t\<leq\>2\<mathpi\>>>|<row|<cell|20*sin
+    t,<application-space|1em>t\<gtr\>2\<mathpi\>>>>>>
+  </equation*>
+
+  The second derivative is continuous (which is what we expected). Note
+  though that at <math|\<mathpi\>> and <math|2\<mathpi\>>,
+  <math|u<rprime|'''><around*|(|t|)>> does not exist!
+
+  Our method of indeterminate coefficients works also for a split RHS case,
+  so long that the solution is differentiable and continuous within the given
+  intervals.
+
   <subsubsection|Mechanical and electrical vibrations>
 
   Start with the mechanical case: mass on a spring.
@@ -4630,6 +4769,8 @@
   A=<big|sum><rsub|i=1><rsup|n> <around*|(|-1|)><rsup|i+j>*a<rsub|i\<nocomma\>j>*A<rsub|i\<nocomma\>j>>
   for a fixed <math|j> (\Pdown column <math|j>\Q).
 
+  \;
+
   <marginal-note|normal|c|Lec 15 25.12.22><underline|if <math|n=4>>:
 
   Along row <math|i>,
@@ -4697,8 +4838,11 @@
     <item><math|det <around*|(|A\<cdot\>B|)>=det A\<cdot\>det B>.
 
     <item><math|det <around*|(|A+B|)>\<neq\>det A+det B> (proof by splitting
-    <math|I> to upper and lower tridiagonal matrices).
+    <math|I> to <math|<bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>>|<row|<cell|0>|<cell|0>>>>>>
+    and <math|<bmatrix|<tformat|<table|<row|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|1>>>>>>).
   </enumerate>
+
+  Note that from 2. and 5. <math|det A<rsup|-1>=<frac|1|det A>>.
 
   How do elementary row/column operations affect <math|det A>?
 
@@ -4715,20 +4859,21 @@
 
     <item>If <math|A> is upper-tridiangular
     <math|<bmatrix|<tformat|<table|<row|<cell|a<rsub|11>>|<cell|a<rsub|12>>|<cell|a<rsub|13>>>|<row|<cell|0>|<cell|\<ddots\>>|<cell|\<vdots\>>>|<row|<cell|0>|<cell|0>|<cell|a<rsub|n\<nocomma\>n>>>>>>>
-    (some elements above main diagonal are non-zero and all bellow are zero),
-    then <math|det A=<big|prod><rsub|i=1><rsup|n>a<rsub|i\<nocomma\>i>>.
+    (elements bellow the main diagonal are only zeros), then <math|det
+    A=<big|prod><rsub|i=1><rsup|n>a<rsub|i\<nocomma\>i>>.
   </enumerate>
 
   <underline|Conclude:>
 
   If <math|det A\<neq\>0> and we use Gaussian elimination on the rows of
-  <math|A> to get <math|U> in upper echelon form, then <math|det U\<neq\>0>.
-  So <math|U> will have no rows of zeros, so <math|rank U=rank A=n>.
+  <math|A> to get it in upper echelon form, <math|U>, then <math|det
+  U\<neq\>0>. So <math|U> will have no rows of zeros, so <rigid|<math|rank
+  U=rank A=<rigid|>n>>.
 
   That means that all rows/columns of <math|A> are linearly independent!
 
   Note also that if we had <math|det A=0>, then <math|det U=0> and <math|rank
-  U=rank A\<less\>n>
+  U=rank A\<less\>n>.<math|>
 
   <\ornamented>
     <underline|Theorem>:
@@ -4977,8 +5122,6 @@
     we get <math|<bmatrix|<tformat|<table|<row|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|0>>>>>><math|<bmatrix|<tformat|<table|<row|<cell|x>>|<row|<cell|y>>>>>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|0>>>>>>
     and every vector is a solution. Here eigenspace has dim 2.
   </enumerate>
-
-  \;
 </body>
 
 <\initial>
@@ -5015,22 +5158,22 @@
     <associate|auto-24|<tuple|5.1|33>>
     <associate|auto-25|<tuple|5.2|36>>
     <associate|auto-26|<tuple|5.2.1|37>>
-    <associate|auto-27|<tuple|5.2.2|40>>
+    <associate|auto-27|<tuple|5.2.2|41>>
     <associate|auto-28|<tuple|5.3|46>>
-    <associate|auto-29|<tuple|5.3.1|47>>
+    <associate|auto-29|<tuple|5.3.1|48>>
     <associate|auto-3|<tuple|3|4>>
-    <associate|auto-30|<tuple|5.3.2|52>>
-    <associate|auto-31|<tuple|6|60>>
-    <associate|auto-32|<tuple|6.1|60>>
-    <associate|auto-33|<tuple|6.2|64>>
-    <associate|auto-34|<tuple|6.3|64>>
-    <associate|auto-35|<tuple|6.4|65>>
-    <associate|auto-36|<tuple|6.4.1|70>>
-    <associate|auto-37|<tuple|6.4.2|71>>
-    <associate|auto-38|<tuple|6.4.3|72>>
-    <associate|auto-39|<tuple|6.4.4|72>>
+    <associate|auto-30|<tuple|5.3.2|55>>
+    <associate|auto-31|<tuple|6|63>>
+    <associate|auto-32|<tuple|6.1|63>>
+    <associate|auto-33|<tuple|6.2|66>>
+    <associate|auto-34|<tuple|6.3|67>>
+    <associate|auto-35|<tuple|6.4|68>>
+    <associate|auto-36|<tuple|6.4.1|73>>
+    <associate|auto-37|<tuple|6.4.2|74>>
+    <associate|auto-38|<tuple|6.4.3|75>>
+    <associate|auto-39|<tuple|6.4.4|75>>
     <associate|auto-4|<tuple|3|5>>
-    <associate|auto-40|<tuple|6.4.5|74>>
+    <associate|auto-40|<tuple|6.4.5|77>>
     <associate|auto-5|<tuple|3|5>>
     <associate|auto-6|<tuple|3|5>>
     <associate|auto-7|<tuple|3|6>>
