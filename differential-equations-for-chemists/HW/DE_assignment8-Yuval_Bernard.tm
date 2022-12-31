@@ -316,9 +316,18 @@
   <math|A*<wide|k|\<vect\>>=<wide|0|\<vect\>>> has a non-trivial solution and
   the columns of <math|A> are linearly dependent.
 
-  <section*|Page ???>
+  Another approach: The rank of a <math|n\<times\>m> matrix always satisfies
+  <math|rank A\<leq\>min<around*|(|m,n|)>>. As <math|n\<less\>m>, surely
+  <math|rank A\<leq\>n>, so the maximum number of independent rows (or
+  columns) is <math|n>. In <math|A> the number of colunms is bigger than its
+  rank, so the columns must be linearly dependent.
 
-  <underline|<em|>Extra Extremely Exasperating Enquires>
+  \ As <math|rank A=rank A<rsup|T>>, there are more rows in <math|A<rsup|T>>\ 
+
+  There are more rows than independent Therefore, <math|m> rows in <math|A>
+  are linearly dependent.
+
+  <section*|Page ???>
 
   Determine whether the given set of vectors is linearly independent in the
   vector space of vectors of length 2 with entries of real-valued functions
@@ -329,7 +338,7 @@
   These functions are independent iff for all <math|t\<in\>\<bbb-R\>>:
 
   <\equation*>
-    \<alpha\>\<cdot\><bmatrix|<tformat|<table|<row|<cell|\<mathe\><rsup|-t>>>|<row|<cell|\<mathe\><rsup|-2t>>>>>>+\<beta\>\<cdot\><bmatrix|<tformat|<table|<row|<cell|\<mathe\><rsup|-t>>>|<row|<cell|\<mathe\><rsup|-t>>>>>>+\<gamma\>\<cdot\><bmatrix|<tformat|<table|<row|<cell|3\<mathe\><rsup|-t>>>|<row|<cell|0>>>>>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|0>>>>>
+    \<alpha\>\<cdot\><bmatrix|<tformat|<table|<row|<cell|\<mathe\><rsup|-t>>>|<row|<cell|\<mathe\><rsup|-2t>>>>>>+\<beta\>\<cdot\><bmatrix|<tformat|<table|<row|<cell|\<mathe\><rsup|-t>>>|<row|<cell|\<mathe\><rsup|-t>>>>>>+\<gamma\>\<cdot\><bmatrix|<tformat|<table|<row|<cell|3\<mathe\><rsup|-t>>>|<row|<cell|0>>>>>=<bmatrix|<tformat|<table|<row|<cell|0<rsub|f>>>|<row|<cell|0<rsub|f>>>>>>,<application-space|1em>\<alpha\>,\<beta\>,\<gamma\>\<in\>\<bbb-R\>
   </equation*>
 
   From the first row:
@@ -356,7 +365,7 @@
 
   Combining (3) and (4) gives <math|\<gamma\>=0>.
 
-  At <math|t=ln 2>
+  At <math|t=ln 2> (from second row)
 
   <\equation>
     <frac|1|4>*\<alpha\>+<frac|1|2>\<beta\>=0\<rightarrow\><frac|1|2>\<alpha\>+\<beta\>=0*
@@ -373,7 +382,7 @@
   <math|\<forall\>t\<in\>\<bbb-R\>>
 
   <\equation*>
-    \<alpha\>*v<rsub|1>+\<beta\>*v<rsub|2>+\<gamma\>*v<rsub|3>=<wide|0|\<vect\>>
+    \<alpha\>*v<rsub|1>+\<beta\>*v<rsub|2>+\<gamma\>*v<rsub|3>=<wide|0<rsub|>|\<vect\>><rsub|f>
   </equation*>
 
   So <math|v<rsub|1>,v<rsub|2>,v<rsub|3>> are linearly independent.
@@ -397,7 +406,7 @@
     <tformat|<table|<row|<cell|2\<alpha\>+\<beta\>>|<cell|=>|<cell|0>>|<row|<cell|\<alpha\>+2\<beta\>>|<cell|=>|<cell|0>>>>
   </eqnarray*>
 
-  For both equations to hold, <math|\<alpha\>=0,\<beta\>=0>. So
+  For both equations to hold, we must have <math|\<alpha\>=0,\<beta\>=0>, so
   <math|v<rsub|1>,v<rsub|2>> are linearly independent.
 
   (c) <math|v<rsub|1>=<bmatrix|<tformat|<table|<row|<cell|\<mathe\><rsup|t>>>|<row|<cell|t*\<mathe\><rsup|t>>>>>>,v<rsub|2>=<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|t>>>>>>.
@@ -420,7 +429,7 @@
     2\<alpha\>+\<beta\>=0
   </equation>
 
-  For both equations to hold, <math|\<alpha\>=0,\<beta\>=0>. So
+  For both equations to hold, we must have <math|\<alpha\>=0,\<beta\>=0>, so
   <math|v<rsub|1>,v<rsub|2>> are linearly independent.
 
   (d) For a real number <math|t<rsub|0>>, the set of vectors
@@ -447,12 +456,7 @@
 
   There are indeed <math|\<alpha\>,\<beta\>> real non-zero scalars that
   satisfy the condition <math|\<alpha\>*v<rsub|1>+\<beta\>*v<rsub|2>=0>.
-  Therefore, the set of vectors <math|v<rsub|1>,v<rsub|2>> is linearly
-  dependent.
-
-  <with|color|red|Jan ya cheeky bastard you thought you could fool me?! In
-  this last question, the condition has to hold <em|for all> <math|t>, and
-  here it has to hold for a <em|specific> <math|t>. Of course here it holds.>
+  Therefore, <math|v<rsub|1>,v<rsub|2>> are linearly dependent.
 </body>
 
 <\initial>
@@ -466,7 +470,7 @@
   <\collection>
     <associate|auto-1|<tuple|?|1>>
     <associate|auto-2|<tuple|?|4>>
-    <associate|auto-3|<tuple|2|?>>
+    <associate|auto-3|<tuple|2|7>>
   </collection>
 </references>
 
@@ -480,6 +484,10 @@
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Page
       366> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-2><vspace|0.5fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Page
+      ???> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-3><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>

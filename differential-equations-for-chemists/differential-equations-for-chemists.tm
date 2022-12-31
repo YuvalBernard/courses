@@ -1,12 +1,16 @@
 <TeXmacs|2.1.2>
 
-<style|<tuple|course|python|std-shadow|std-frame|SIUnits-simple>>
+<style|<tuple|course|python|std-shadow|std-frame|SIUnits-simple|hanging-theorems>>
 
 <\body>
   <\hide-preamble>
     \;
 
     <assign|section-post-sep|<macro|<sectional-post-sep>>>
+
+    <assign|strong|<macro|body|<with|font-series|bold|math-font-series|bold|<arg|body>>>>
+
+    <assign|theorem-text|<macro|<localize|Theorem>>>
   </hide-preamble>
 
   <doc-data|<doc-title|Differential Equations for Chemists>>
@@ -172,9 +176,25 @@
     <with|par-left|2tab|6.4.5<space|2spc>Review of eigenvalues and
     eigenvectors <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-40>>
+
+    <with|par-left|2tab|6.4.6<space|2spc>Diagonalizability and
+    eigendecomposition <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-41>>
+
+    <with|par-left|1tab|6.5<space|2spc>First-order systems of linear ODEs
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-42>>
+
+    <with|par-left|2tab|6.5.1<space|2spc>Homogeneous system
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-43>>
+
+    <with|par-left|2tab|6.5.2<space|2spc>Real coefficient matrix with
+    non-real eigenvalues <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-44>>
   </table-of-contents>
 
-  <part*|Preface: Complex numbers and functions>
+  <part*|Preliminary: Complex numbers and functions>
 
   <section*|Recollections and definitions><marginal-note|normal|c|lec 1
   6.11.22>
@@ -375,18 +395,26 @@
   <math|z<rsub|0>> if the limit <math|<with|math-display|true|lim<rsub|z\<rightarrow\>z<rsub|0>>
   f<around*|(|z|)>>> exists and equals <math|f<around*|(|z<rsub|0>|)>>.
 
-  <with|font-series|bold|Definition:> <math|f:\<bbb-C\>\<rightarrow\>\<bbb-C\>>
-  is <em|analytic> at <math|z<rsub|0>> if for the limit:
+  <\definition*>
+    \;
 
-  <\equation*>
-    lim<rsub|h\<rightarrow\>0> <frac|f<around*|(|z<rsub|0>+h|)>-f<around*|(|z<rsub|0>|)>|h>
-  </equation*>
+    <\em>
+      <math|f:\<bbb-C\>\<rightarrow\>\<bbb-C\>> is <em|analytic> at
+      <math|z<rsub|0>> if for the limit:
 
-  exists and <math|h\<in\>\<bbb-C\>>. Then we denote the limit by
-  <math|f<rprime|'><around*|(|z<rsub|0>|)>=<frac|\<mathd\>f|\<mathd\>z><mid|\|><rsub|z=z<rsub|0>>>.
+      <\equation*>
+        lim<rsub|h\<rightarrow\>0> <frac|f<around*|(|z<rsub|0>+h|)>-f<around*|(|z<rsub|0>|)>|h>
+      </equation*>
 
-  If <math|f> is analytic at every point we say <math|f> is an analytic
-  function.
+      exists and <math|h\<in\>\<bbb-C\>>. Then we denote the limit by
+      <math|f<rprime|'><around*|(|z<rsub|0>|)>=<frac|\<mathd\>f|\<mathd\>z><mid|\|><rsub|z=z<rsub|0>>>.
+    </em>
+
+    <em|If <math|f> is analytic at every point we say <math|f> is an analytic
+    function.>
+  </definition*>
+
+  \;
 
   Turns out that if <math|f<rprime|'><around*|(|z<rsub|0>|)>> exists then so
   does <math|f<rsup|<around*|(|n|)>><around*|(|z|)>\<space\>\<forall\>n> [all
@@ -398,23 +426,25 @@
   <math|<big|sum><rsub|n=0>a<rsub|n> x<rsup|n>> which converges for some
   <math|<around*|\||x|\|>\<less\>r> (<math|x\<in\>\<bbb-R\>>).
 
-  <underline|Taylor's theorem:>
+  <\render-theorem|Taylor's theorem>
+    \;
 
-  <\framed>
-    If <math|f:\<bbb-R\>\<rightarrow\>\<bbb-R\>> is infinitely differentiable
-    in a neighborhood (nbhd) of some point <math|a>, then we can represent
-    <math|f> <em|uniquely> as a power series of the form:
+    <\em>
+      If <math|f:\<bbb-R\>\<rightarrow\>\<bbb-R\>> is infinitely
+      differentiable in a neighborhood (nbhd) of some point <math|a>, then we
+      can represent <math|f> <em|uniquely> as a power series of the form:
 
-    <\equation*>
-      f<around*|(|x|)>=<big|sum><rsub|n=0><rsup|\<infty\>>C<rsub|n><around*|(|x-a|)><rsup|n>
-    </equation*>
+      <\equation*>
+        f<around*|(|x|)>=<big|sum><rsub|n=0><rsup|\<infty\>>C<rsub|n><around*|(|x-a|)><rsup|n>
+      </equation*>
 
-    where\ 
+      where\ 
 
-    <\equation*>
-      C<rsub|n>=<frac|f<rsup|<around*|(|n|)>><around*|(|a|)>|n!>
-    </equation*>
-  </framed>
+      <\equation*>
+        C<rsub|n>=<frac|f<rsup|<around*|(|n|)>><around*|(|a|)>|n!>
+      </equation*>
+    </em>
+  </render-theorem>
 
   In particular, if <math|a=0> we get the special case
 
@@ -564,38 +594,63 @@
     </equation*>
   </framed>
 
-  <underline|Notes:>
-
-  <\itemize-dot>
-    <item>If <math|f> is infinitely differentiable (real or analytic complex)
-    then we have a unique Taylor series at 0, so any power series
-    representation for <math|f> will be an alternative form of the Taylor
-    series.
-
-    <item>Taylor series converge uniformly so if <math|f> is infinitely
-    differentiable then so is <math|f<rprime|'>>, therefore it also has a
-    Taylor series. In other words
-
-    <\equation*>
-      if\<space\>f<around*|(|x|)>=<big|sum>C<rsub|n>
-      x<rsup|n>\<space\>then\<space\>f<rprime|'><around*|(|x|)>=<big|sum><rsub|n=0><rsup|\<infty\>>n
-      C<rsub|n> x<rsup|n-1>
-    </equation*>
-
-    is the Taylor series for <math|f<rprime|'>>. Similarly, if <math|f> is
-    <em|integrable>, we get
-
-    <\equation*>
-      <big|int>f<around*|(|x|)>\<mathd\>x=<big|sum>C<rsub|n>
-      <frac|x<rsup|n+1>|n+1>
-    </equation*>
-
-    is the Taylor series for <math|<big|int>f<around*|(|x|)>\<mathd\>x>.
-
+  <\note*>
     \;
-  </itemize-dot>
 
-  <underline|Example>
+    <\itemize>
+      <item>If <math|f> is infinitely differentiable (real or analytic
+      complex) then we have a unique Taylor series at 0, so any power series
+      representation for <math|f> will be an alternative form of the Taylor
+      series.
+
+      <item>Taylor series converge uniformly so if <math|f> is infinitely
+      differentiable then so is <math|f<rprime|'>>, therefore it also has a
+      Taylor series. In other words
+
+      <\equation*>
+        if\<space\>f<around*|(|x|)>=<big|sum>C<rsub|n>
+        x<rsup|n>\<space\>then\<space\>f<rprime|'><around*|(|x|)>=<big|sum><rsub|n=0><rsup|\<infty\>>n
+        C<rsub|n> x<rsup|n-1>
+      </equation*>
+
+      is the Taylor series for <math|f<rprime|'>>. Similarly, if <math|f> is
+      <em|integrable>, we get
+
+      <\equation*>
+        <big|int>f<around*|(|x|)>\<mathd\>x=<big|sum>C<rsub|n>
+        <frac|x<rsup|n+1>|n+1>
+      </equation*>
+
+      is the Taylor series for <math|<big|int>f<around*|(|x|)>\<mathd\>x>.
+
+      <item>If <math|f> is infinitely differentiable (real or analytic
+      complex) then we have a unique Taylor series at 0, so any power series
+      representation for <math|f> will be an alternative form of the Taylor
+      series.
+
+      <item>Taylor series converge uniformly so if <math|f> is infinitely
+      differentiable then so is <math|f<rprime|'>>, therefore it also has a
+      Taylor series. In other words
+
+      <\equation*>
+        if\<space\>f<around*|(|x|)>=<big|sum>C<rsub|n>
+        x<rsup|n>\<space\>then\<space\>f<rprime|'><around*|(|x|)>=<big|sum><rsub|n=0><rsup|\<infty\>>n
+        C<rsub|n> x<rsup|n-1>
+      </equation*>
+
+      is the Taylor series for <math|f<rprime|'>>. Similarly, if <math|f> is
+      <em|integrable>, we get
+
+      <\equation*>
+        <big|int>f<around*|(|x|)>\<mathd\>x=<big|sum>C<rsub|n>
+        <frac|x<rsup|n+1>|n+1>
+      </equation*>
+
+      is the Taylor series for <math|<big|int>f<around*|(|x|)>\<mathd\>x>.
+    </itemize>
+  </note*>
+
+  <underline|Examples>
 
   <\enumerate>
     <item>We want to calculate the Taylor series for
@@ -788,25 +843,37 @@
 
   <underline|Ordinary differential equations>
 
-  <em|Definition:> An ordinary differential equation (ODE) is an equation of
-  the form:
+  <\definition*>
+    \;
 
-  <\equation*>
-    F<around*|(|x,y,y<rprime|'>,y<rprime|''>,\<ldots\>,y<rsup|<around*|(|n|)>>|)>=0
-  </equation*>
+    <\em>
+      An ordinary differential equation (ODE) is an equation of the form:
 
-  where <math|F> is some function of <math|n+2> variables.
+      <\equation*>
+        F<around*|(|x,y,y<rprime|'>,y<rprime|''>,\<ldots\>,y<rsup|<around*|(|n|)>>|)>=0
+      </equation*>
+
+      where <math|F> is some function of <math|n+2> variables.
+    </em>
+  </definition*>
 
   <underline|Partial differential equations>
 
-  <em|Definition:> A partial differential equation (PDE) is one of the form:
+  <\definition*>
+    \;
 
-  <\equation*>
-    F<around*|(|x,\<ldots\>,x<rsub|k>,y,<frac|\<partial\>f|\<partial\>x>,<frac|\<partial\><rsup|2>f|\<partial\>x<rsub|i>*\<partial\>x<rsub|j>>,\<ldots\>|)>=0
-  </equation*>
+    <\em>
+      A partial differential equation (PDE) is one of the form:
 
-  where a solution would be <math|y=y<around*|(|x,\<ldots\>,x<rsub|k>|)>>,
-  which when substituted with its partial derivatives, solves the equation.
+      <\equation*>
+        F<around*|(|x,\<ldots\>,x<rsub|k>,y,<frac|\<partial\>f|\<partial\>x>,<frac|\<partial\><rsup|2>f|\<partial\>x<rsub|i>*\<partial\>x<rsub|j>>,\<ldots\>|)>=0
+      </equation*>
+
+      where a solution would be <math|y=y<around*|(|x,\<ldots\>,x<rsub|k>|)>>,
+      which when substituted with its partial derivatives, solves the
+      equation.
+    </em>
+  </definition*>
 
   <underline|More examples of modeling processes with DEs>
 
@@ -1559,8 +1626,14 @@
 
   <subsection|Autonomous ODEs>
 
-  <with|font-series|bold|Definition:> An ODE is <em|autonomous> if the
-  independent variable does not appear explicitly.
+  <\definition*>
+    \;
+
+    <\em>
+      An ODE is <em|autonomous> if the independent variable does not appear
+      explicitly.
+    </em>
+  </definition*>
 
   For example, <math|y<rprime|'>=a*y+b>, In general, this means
   <math|y<rprime|'>=F<around*|(|y|)>> so it's separable.
@@ -2194,22 +2267,30 @@
 
   <subsection|Existence and uniqueness theorem for higher order ODEs>
 
-  Given a linear ODE of order <math|n>,
+  <\theorem*>
+    \;
 
-  <\equation*>
-    y<rsup|<around*|(|n|)>>+p<rsub|n-1><around*|(|x|)>*y<rsup|<around*|(|n-1|)>>+p<rsub|n-2><around*|(|x|)>*y<rsup|<around*|(|n-2|)>>+\<cdots\>+p<rsub|0><around*|(|x|)>*y=q<around*|(|x|)>
-  </equation*>
+    <\em>
+      Given a linear ODE of order <math|n>,
 
-  and the ICs:
+      <\equation*>
+        y<rsup|<around*|(|n|)>>+p<rsub|n-1><around*|(|x|)>*y<rsup|<around*|(|n-1|)>>+p<rsub|n-2><around*|(|x|)>*y<rsup|<around*|(|n-2|)>>+\<cdots\>+p<rsub|0><around*|(|x|)>*y=q<around*|(|x|)>
+      </equation*>
 
-  <\equation*>
-    <choice|<tformat|<table|<row|<cell|y<around*|(|a|)>=b<rsub|0>>>|<row|<cell|y<rprime|'><around*|(|a|)>=b<rsub|1>>>|<row|<cell|\<vdots\>>>|<row|<cell|y<rsup|<around*|(|n-1|)>><around*|(|a|)>=b<rsub|n-1>>>>>>
-  </equation*>
+      and the ICs:
 
-  If <math|p<rsub|0>,p<rsub|1>,\<ldots\>,p<rsub|n-1>,q> are continuous for
-  all <math|x> in some interval containing <math|a>, then the ODE has a
-  unique solution satisfying the ICs for any choice of values
-  <math|b<rsub|0>,\<ldots\>,b<rsub|n-1>>.
+      <\equation*>
+        <choice|<tformat|<table|<row|<cell|y<around*|(|a|)>=b<rsub|0>>>|<row|<cell|y<rprime|'><around*|(|a|)>=b<rsub|1>>>|<row|<cell|\<vdots\>>>|<row|<cell|y<rsup|<around*|(|n-1|)>><around*|(|a|)>=b<rsub|n-1>>>>>>
+      </equation*>
+
+      If <math|p<rsub|0>,p<rsub|1>,\<ldots\>,p<rsub|n-1>,q> are continuous
+      for all <math|x> in some interval containing <math|a>, then the ODE has
+      a unique solution satisfying the ICs for any choice of values
+      <math|b<rsub|0>,\<ldots\>,b<rsub|n-1>>.
+    </em>
+  </theorem*>
+
+  \;
 
   <section|Second order linear ODEs>
 
@@ -2429,16 +2510,14 @@
   <math|y<around*|(|x|)>> is the <with|font-series|bold|only> solution that
   satisfies the ICs.
 
-  <\ornamented>
-    <underline|Note>
-
+  <\note*>
     1st order homogeneous linear ODEs are of form:
     <math|y<rprime|'>+p<around*|(|x|)>*y=0>. We solved and found that also
     solutions were multiples of <math|\<mathe\><rsup|<big|int>p<around*|(|x|)>
     \<mathd\>x>>, i.e. a 1-dimensional space of functions solves the ODE. We
     expect (and shall see later) that for an ODE of order <math|n>, the space
     of solutions would be <math|n>-dimensional.
-  </ornamented>
+  </note*>
 
   <subsection|Finding a basis for the set of solutions>
 
@@ -2696,15 +2775,24 @@
     <around*|\||x|\|>>.
   </enumerate>
 
-  <marginal-note|normal|c|lec 8 28.11.22><underline|Claim>
+  \;
 
-  Given a linear homogeneous ODE of order <math|n>,
+  <marginal-note|normal|c|lec 8 28.11.22>
 
-  <\equation*>
-    y<rsup|<around*|(|n|)>>+p<rsub|n-1><around*|(|x|)>*y<rsup|<around*|(|n-1|)>>+\<cdots\>+p<rsub|1><around*|(|x|)>*y<rprime|'>+p<rsub|0><around*|(|x|)>*y=0
-  </equation*>
+  <\proposition*>
+    \;
 
-  the set of solutions is a vector space of functions of dimension <math|n>.
+    <\em>
+      Given a linear homogeneous ODE of order <math|n>,
+
+      <\equation*>
+        y<rsup|<around*|(|n|)>>+p<rsub|n-1><around*|(|x|)>*y<rsup|<around*|(|n-1|)>>+\<cdots\>+p<rsub|1><around*|(|x|)>*y<rprime|'>+p<rsub|0><around*|(|x|)>*y=0
+      </equation*>
+
+      the set of solutions is a vector space of functions of dimension
+      <math|n>.
+    </em>
+  </proposition*>
 
   <underline|Proof>
 
@@ -2801,10 +2889,12 @@
     solutions.
   </ornamented>
 
-  <underline|Fundamental thm. of Algebra (Gauss)>
+  <\render-theorem|Fundamental theorem of Algebra (Gauss)>
+    \;
 
-  Every polynomial equation over <math|\<bbb-C\>> has <math|n> solutions
-  including multiplicities.
+    <em|Every polynomial equation over <math|\<bbb-C\>> has <math|n>
+    solutions including multiplicities.>
+  </render-theorem>
 
   <underline|Solution of polynomial equations>
 
@@ -4369,25 +4459,33 @@
 
   <marginal-note|normal|c|lec 13 18.12.22>
 
-  <\ornamented>
-    <underline|Theorem>: The <em|cardinality> (number of elements in a group)
-    of a basis is determined uniquely. This cardinality is the <em|dimension>
-    of the space.
+  <\theorem*>
+    \;
 
-    <underline|Theorem>: If the dimension of a space <math|w> is <math|k>,
-    then any linearly independent set of <math|k> elements will be a basis.
-    Also, any spanning set with <math|k> elements will be a basis.
+    <em|The <em|cardinality> (number of elements in a group) of a basis is
+    determined uniquely. This cardinality is the <em|dimension> of the
+    space.>
+  </theorem*>
 
-    Note that:\ 
+  <\theorem*>
+    \;
+
+    <em|If the dimension of a space <math|w> is <math|k>, then any linearly
+    independent set of <math|k> elements will be a basis. Also, any spanning
+    set with <math|k> elements will be a basis.>
+  </theorem*>
+
+  <\note*>
+    \;
 
     <\itemize>
       <item>The dimension of the vector space of all real functions in
       infinite. (<math|2<rsup|\<aleph\><rsub|0>>>)
 
       <item>The dimension of vector space of polynomial functions is
-      <math|\<aleph\><rsub|0>> are <math|1,x,x<rsup|2>,\<ldots\>> is a basis.
+      <math|\<aleph\><rsub|0>> are <math|1,x,x<rsup|2>,\<ldots\>> is a basis
     </itemize>
-  </ornamented>
+  </note*>
 
   <subsection|Reducing a higher order ODE to a system of first order ODEs>
 
@@ -4508,37 +4606,48 @@
     <math|\<alpha\>>)
   </enumerate>
 
-  <underline|Note>: <math|r> is the rank of a matrix, and is equal to the
-  number of non-zero rows in a matrix <em|after> bringing it to upper echelon
-  form.
+  <\note*>
+    <math|r> is the rank of a matrix, and is equal to the number of non-zero
+    rows in a matrix <em|after> bringing it to upper echelon form.
+  </note*>
 
-  <underline|Definition>: For an <math|m\<times\>n> matrix <math|A>, we
-  define fundamental subspaces:
+  <\definition*>
+    \;
 
-  <\enumerate>
-    <item>Set of solutions to <math|*A*<wide|x|\<vect\>>=<wide|0|\<vect\>>>
-    is a subspace of <math|\<bbb-R\><rsup|n>> (= null-space of <math|A>).
+    <\em>
+      For an <math|m\<times\>n> matrix <math|A>, we define fundamental
+      subspaces:
 
-    Set of solutions to <math|A*<wide|x|\<vect\>>=<wide|b|\<vect\>>>
-    (<math|<wide|b|\<vect\>>\<neq\><wide|0|\<vect\>>>) is not a subspace
+      <\enumerate>
+        <item>Set of solutions to <math|*A*<wide|x|\<vect\>>=<wide|0|\<vect\>>>
+        is a subspace of <math|\<bbb-R\><rsup|n>> (= nullspace of <math|A>).
 
-    <item>Span of rows of <math|A> = row-space of A is a subspace of
-    <math|\<bbb-R\><rsup|n>>
+        Set of solutions to <math|A*<wide|x|\<vect\>>=<wide|b|\<vect\>>>
+        (<math|<wide|b|\<vect\>>\<neq\><wide|0|\<vect\>>>) is not a subspace
 
-    <item>Span of columns of <math|A> = column-space of <math|A>, is a
-    subspace of <math|\<bbb-R\><rsup|m>>.
-  </enumerate>
+        <item>Span of rows of <math|A> = row-space of A is a subspace of
+        <math|\<bbb-R\><rsup|n>>
 
-  <underline|Theorems>:\ 
+        <item>Span of columns of <math|A> = column-space of <math|A>, is a
+        subspace of <math|\<bbb-R\><rsup|m>>.
+      </enumerate>
+    </em>
+  </definition*>
 
-  <\itemize>
-    <item>Rank of <math|A=r> is the dimension of row-space and dimension of
-    the column-space.
-  </itemize>
+  <\render-theorem|Theorems>
+    \;
 
-  <\itemize>
-    <item>Dimension of the null-space is <math|n-r>.
-  </itemize>
+    <\em>
+      <\itemize>
+        <item>Rank of <math|A=r> is the dimension of row-space and dimension
+        of the column-space.
+      </itemize>
+
+      <\itemize>
+        <item>Dimension of the nullspace is <math|n-r>.
+      </itemize>
+    </em>
+  </render-theorem>
 
   <underline|Example>
 
@@ -4566,7 +4675,7 @@
 
   Note that the last vector solves the inhomogeneous equation, and the first
   three vectors solve the associated homogeneous system. Also, they are
-  linearly independent and therefore span the basis of the null-space.
+  linearly independent and therefore span the basis of the nullspace.
 
   <underline|Another approach>: First solving the associated homogeneous
   system:
@@ -4579,7 +4688,7 @@
     <tabular|<tformat|<table|<row|<cell|-x<rsub|5>+4x<rsub|6>>|<cell|=>|<cell|0\<rightarrow\>x<rsub|5>=4x<rsub|6>>>|<row|<cell|3x<rsub|4>+x<rsub|5>+2x<rsub|6>>|<cell|=>|<cell|0\<rightarrow\>x<rsub|4>=-2x<rsub|y>>>|<row|<cell|x<rsub|2>+2x<rsub|3>-x<rsub|4>+4x<rsub|6>>|<cell|=>|<cell|0\<rightarrow\>x<rsub|2>=-2x<rsub|3>-6x<rsub|3>>>>>>
   </equation*>
 
-  The set of solutions (null-space of the matrix) is a subspace of
+  The set of solutions (nullspace of the matrix) is a subspace of
   <math|\<bbb-R\><rsup|6>>.
 
   The number of free variables is the dimension: #columns \U rank(coeff.
@@ -4622,13 +4731,17 @@
   In general, given <math|A> <math|m\<times\>n> matrix such that
   <math|A*<wide|x|\<vect\>>=<wide|b|\<vect\>>> and a particular solution
   <math|v\<in\>\<bbb-R\><rsup|n>>, the set of all solutions is the set
-  <math|<around*|{|v+v<rsub|0> \|<text| <math|v<rsub|0><text| is in
-  null-space of <math|A>>>>|}>>.
+  <math|<around*|{|v+v<rsub|0> \|<text| <math|v<rsub|0><text| is in nullspace
+  of <math|A>>>>|}>>.
 
-  <underline|Theorem>: For an <math|m\<times\>n> matrix <math|A>, <math|n=dim
-  N<around*|(|A|)>+dim <around*|(|<text|row space>|)>> such that
-  <math|n-r=dim <around*|(|nullspace|)>>. [dim of row space is equal to the
-  dim of column space of <math|A>.]\ 
+  <\theorem*>
+    \;
+
+    <em|For an <math|m\<times\>n> matrix <math|A>, <math|n=dim
+    N<around*|(|A|)>+dim <around*|(|<text|row space>|)>> such that
+    <math|<rigid|n-r=dim <around*|(|nullspace|)>>>. [dim of row space is
+    equal to the dim of column space of <math|A>.] >
+  </theorem*>
 
   \ <underline|2 more examples>:
 
@@ -4639,7 +4752,7 @@
       <bmatrix|<tformat|<cwith|1|1|4|4|cell-tborder|0ln>|<cwith|3|3|4|4|cell-bborder|0ln>|<cwith|1|-1|4|4|cell-lborder|1ln>|<cwith|1|-1|3|3|cell-rborder|1ln>|<cwith|1|-1|4|4|cell-rborder|0ln>|<table|<row|<cell|1>|<cell|-1>|<cell|3>|<cell|1>>|<row|<cell|-1>|<cell|1>|<cell|-2>|<cell|1>>|<row|<cell|2>|<cell|-1>|<cell|3>|<cell|-4>>>>>\<rightarrow\>\<cdots\>\<rightarrow\><bmatrix|<tformat|<cwith|1|1|4|4|cell-tborder|0ln>|<cwith|3|3|4|4|cell-bborder|0ln>|<cwith|1|-1|4|4|cell-lborder|1ln>|<cwith|1|-1|3|3|cell-rborder|1ln>|<cwith|1|-1|4|4|cell-rborder|0ln>|<table|<row|<cell|1>|<cell|-2>|<cell|3>|<cell|1>>|<row|<cell|0>|<cell|-1>|<cell|1>|<cell|2>>|<row|<cell|0>|<cell|0>|<cell|0>|<cell|0>>>>>
     </equation*>
 
-    Can solve. Dimension of null-space is 1 (<math|n=3,r=2>).
+    Can solve. Dimension of nullspace is 1 (<math|n=3,r=2>).
 
     <item>
 
@@ -4654,27 +4767,33 @@
   <math|A*<wide|x|\<vect\>>=<wide|b|\<vect\>>> if and only if <math|rank
   <around*|(|A|)>=rank <around*|(|A\|B|)>>.
 
-  <new-page>
-
   <subsubsection|Algorithm to invert (square) matrices: Gauss-Seidel
   algorithm>
 
   Works for <em|square matrices> (<math|n\<times\>n>).
 
-  <underline|Definition>: An elementary matrix is obtained from <math|I>
-  (identity matrix) by performing one elementary operation on its rows. e.g.
+  <\definition*>
+    \;
 
-  <\equation*>
-    <bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|1>|<cell|0>>|<row|<cell|-2>|<cell|0>|<cell|1>>>>><long-arrow|\<rubber-leftarrow\>|-2R<rsub|1>+R<rsub|3>\<rightarrow\>R<rsub|3>>I
-  </equation*>
+    <em|An elementary matrix is obtained from <math|I> (identity matrix) by
+    performing one elementary operation on its rows. e.g.>
 
-  <underline|Fact>: Multiplying a matrix <math|A> on the left by an
-  elementary matrix <math|E> performs the same operation defining <math|E> on
-  rows of <math|A>.
+    <\equation*>
+      <bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|1>|<cell|0>>|<row|<cell|-2>|<cell|0>|<cell|1>>>>><long-arrow|\<rubber-leftarrow\>|-2R<rsub|1>+R<rsub|3>\<rightarrow\>R<rsub|3>>I
+    </equation*>
+  </definition*>
 
-  <\equation*>
-    <bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|1>|<cell|0>>|<row|<cell|-2>|<cell|0>|<cell|1>>>>><bmatrix|<tformat|<table|<row|<cell|a<rsub|11>>|<cell|a<rsub|12>>|<cell|a<rsub|13>>>|<row|<cell|a<rsub|21>>|<cell|a<rsub|22>>|<cell|a<rsub|23>>>|<row|<cell|a<rsub|31>>|<cell|a<rsub|32>>|<cell|a<rsub|33>>>>>>=<bmatrix|<tformat|<table|<row|<cell|a<rsub|11>>|<cell|a<rsub|12>>|<cell|a<rsub|13>>>|<row|<cell|a<rsub|21>>|<cell|a<rsub|22>>|<cell|a<rsub|23>>>|<row|<cell|-2a<rsub|11>+a<rsub|31>>|<cell|-2a<rsub|12>+a<rsub|32>>|<cell|-2a<rsub|13>+a<rsub|33>>>>>>
-  </equation*>
+  <\corollary*>
+    \;
+
+    <em|Multiplying a matrix <math|A> on the left by an elementary matrix
+    <math|E> performs the same operation defining <math|E> on rows of
+    <math|A>.>
+
+    <\equation*>
+      <bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|1>|<cell|0>>|<row|<cell|-2>|<cell|0>|<cell|1>>>>><bmatrix|<tformat|<table|<row|<cell|a<rsub|11>>|<cell|a<rsub|12>>|<cell|a<rsub|13>>>|<row|<cell|a<rsub|21>>|<cell|a<rsub|22>>|<cell|a<rsub|23>>>|<row|<cell|a<rsub|31>>|<cell|a<rsub|32>>|<cell|a<rsub|33>>>>>>=<bmatrix|<tformat|<table|<row|<cell|a<rsub|11>>|<cell|a<rsub|12>>|<cell|a<rsub|13>>>|<row|<cell|a<rsub|21>>|<cell|a<rsub|22>>|<cell|a<rsub|23>>>|<row|<cell|-2a<rsub|11>+a<rsub|31>>|<cell|-2a<rsub|12>+a<rsub|32>>|<cell|-2a<rsub|13>+a<rsub|33>>>>>>
+    </equation*>
+  </corollary*>
 
   <underline|Idea>: If we perform elementary operation on rows of <math|A>
   until we reach <math|I>, it is as though we multiplied <math|A> by a
@@ -4686,15 +4805,23 @@
 
   <underline|Algorithm>
 
-  Take <math|<around*|(|A\|I|)>> <math|n\<times\>2n> matrix and perform
-  elementary operations until <math|*<around*|(|I\|A<rsup|-1>|)>> is
-  obtained.
+  <\render-theorem|Algorithm>
+    \;
 
-  If the algorithm \Pgets stuck\Q (don't have enough pivots) then <math|rank
-  <around*|(|A|)>\<less\>n> and <math|A> is not invertible.
+    <\em>
+      Take <math|<around*|(|A\|I|)>> <math|n\<times\>2n> matrix and perform
+      elementary operations until <math|*<around*|(|I\|A<rsup|-1>|)>> is
+      obtained.
 
-  <underline|Note>: Method works iff <math|rank A=n\<Longleftrightarrow\>A>
-  is invertible.
+      If the algorithm \Pgets stuck\Q (don't have enough pivots) then
+      <math|rank <around*|(|A|)>\<less\>n> and <math|A> is not invertible.
+    </em>
+  </render-theorem>
+
+  <\note*>
+    The method works iff <math|rank A=n\<Longleftrightarrow\>A> is
+    invertible.
+  </note*>
 
   <underline|Example>
 
@@ -4731,8 +4858,14 @@
   omitting row <math|i> and column <math|j> (<math|i\<nocomma\>j<rsup|th>>
   minor of <math|A>).
 
-  Define: <math|det A=<big|sum><rsub|j=1><rsup|n><around*|(|-1|)><rsup|i+j>*a<rsub|i\<nocomma\>j>*A<rsub|i\<nocomma\>j>>
-  for any fixed <math|i> (\Palong row <math|i>\Q).
+  Define:\ 
+
+  <\definition*>
+    \;
+
+    <em|<math|det A=<big|sum><rsub|j=1><rsup|n><around*|(|-1|)><rsup|i+j>*a<rsub|i\<nocomma\>j>*A<rsub|i\<nocomma\>j>>
+    for any fixed <math|i> (\Palong row <math|i>\Q).>
+  </definition*>
 
   <underline|if <math|n=2>>:
 
@@ -4765,9 +4898,13 @@
     <tformat|<table|<row|<cell|det A>|<cell|=>|<cell|<big|sum><rsub|j=1><rsup|3><around*|(|-1|)><rsup|1+j>*a<rsub|1j>*A<rsub|1j>=a<rsub|11>*A<rsub|11>-a<rsub|12>*A<rsub|12>+a<rsub|13>*A<rsub|13>>>|<row|<cell|>|<cell|=>|<cell|a<rsub|11>*<det|<tformat|<table|<row|<cell|a<rsub|22>>|<cell|a<rsub|23>>>|<row|<cell|a<rsub|32>>|<cell|a<rsub|33>>>>>>-a<rsub|12>*<det|<tformat|<table|<row|<cell|a<rsub|21>>|<cell|a<rsub|23>>>|<row|<cell|a<rsub|31>>|<cell|a<rsub|33>>>>>>+a<rsub|13>*<det|<tformat|<table|<row|<cell|a<rsub|21>>|<cell|a<rsub|22>>>|<row|<cell|a<rsub|31>>|<cell|a<rsub|32>>>>>>>>|<row|<cell|>|<cell|=>|<cell|a<rsub|11>*<around*|(|a<rsub|22>*a<rsub|33>-a<rsub|23>*a<rsub|32>|)>-a<rsub|12>*<around*|(|a<rsub|21>*a<rsub|33>-a<rsub|23>*a<rsub|31>|)>+a<rsub|13>*<around*|(|a<rsub|21>*a<rsub|32>-a<rsub|22>*a<rsub|31>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|a<rsub|11>*a<rsub|22>*a<rsub|33>+a<rsub|12>*a<rsub|23>*a<rsub|31>+a<rsub|13>*a<rsub|21>*a<rsub|32>|)>-<around*|(|a<rsub|11>*a<rsub|23>*a<rsub|32>+a<rsub|12>*a<rsub|21>*a<rsub|33>+a<rsub|13>*a<rsub|22>*a<rsub|31>|)>>>>>
   </eqnarray*>
 
-  <underline|Theorem>: We can express a det also using columns: <math|det
-  A=<big|sum><rsub|i=1><rsup|n> <around*|(|-1|)><rsup|i+j>*a<rsub|i\<nocomma\>j>*A<rsub|i\<nocomma\>j>>
-  for a fixed <math|j> (\Pdown column <math|j>\Q).
+  <\theorem*>
+    \;
+
+    <em|We can express a det also using columns: <math|det
+    A=<big|sum><rsub|i=1><rsup|n> <around*|(|-1|)><rsup|i+j>*a<rsub|i\<nocomma\>j>*A<rsub|i\<nocomma\>j>>
+    for a fixed <math|j> (\Pdown column <math|j>\Q).>
+  </theorem*>
 
   \;
 
@@ -4782,6 +4919,8 @@
   In fact: <math|det A> = sum of all choices of products of elements chosen,
   one from each row and one from each column, multiplied by a power of
   <math|<around*|(|-1|)>>. In total, <math|n!> summands.
+
+  <page-break>
 
   <subsubsection|Cramer's rule>
 
@@ -4857,7 +4996,7 @@
     <math|\<alpha\>R<rsub|i>+R<rsub|j>\<rightarrow\>R<rsub|j>>, then
     <math|det B=det A>.
 
-    <item>If <math|A> is upper-tridiangular
+    <item>If <math|A> is upper-tridiagonal
     <math|<bmatrix|<tformat|<table|<row|<cell|a<rsub|11>>|<cell|a<rsub|12>>|<cell|a<rsub|13>>>|<row|<cell|0>|<cell|\<ddots\>>|<cell|\<vdots\>>>|<row|<cell|0>|<cell|0>|<cell|a<rsub|n\<nocomma\>n>>>>>>>
     (elements bellow the main diagonal are only zeros), then <math|det
     A=<big|prod><rsub|i=1><rsup|n>a<rsub|i\<nocomma\>i>>.
@@ -4875,24 +5014,26 @@
   Note also that if we had <math|det A=0>, then <math|det U=0> and <math|rank
   U=rank A\<less\>n>.<math|>
 
-  <\ornamented>
-    <underline|Theorem>:
+  <\theorem*>
+    \;
 
-    Rows/columns of <math|A> are linearly independent iff <math|det
-    A\<neq\>0>, iff <math|rank A=n> iff <math|A> is invertible
-    (non-singular).
+    <\em>
+      Rows/columns of <math|A> are linearly independent iff <math|det
+      A\<neq\>0>, iff <math|rank A=n> iff <math|A> is invertible
+      (non-singular).
 
-    If <math|det A\<neq\>0> we can write:
+      If <math|det A\<neq\>0> we can write:
 
-    <\equation*>
-      i\<nocomma\>j<rsup|th> element of A<rsup|-1><rsub|>=<frac|1|det
-      A>*<wide*|<around*|(|<around*|(|-1|)><rsup|i+j>*A<rsub|j\<nocomma\>i>|)>
-      |\<wide-underbrace\>><rsub|<text|adjoint of <math|A>>>
-    </equation*>
+      <\equation*>
+        i\<nocomma\>j<rsup|th> element of A<rsup|-1><rsub|>=<frac|1|det
+        A>*<wide*|<around*|(|<around*|(|-1|)><rsup|i+j>*A<rsub|j\<nocomma\>i>|)>
+        |\<wide-underbrace\>><rsub|<text|adjoint of <math|A>>>
+      </equation*>
 
-    <math|<around*|(|-1|)><rsup|i+j>*A<rsub|j\<nocomma\>i>> represents the
-    <math|i\<nocomma\>j<rsup|th>> element of <math|Adj A>.
-  </ornamented>
+      <math|<around*|(|-1|)><rsup|i+j>*A<rsub|j\<nocomma\>i>> represents the
+      <math|i\<nocomma\>j<rsup|th>> element of <math|Adj A>.
+    </em>
+  </theorem*>
 
   For <math|n=2>:
 
@@ -4975,10 +5116,14 @@
     <bmatrix|<tformat|<table|<row|<cell|3>|<cell|2>>|<row|<cell|1>|<cell|4>>>>>*<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|1>>>>>=<bmatrix|<tformat|<table|<row|<cell|5>>|<row|<cell|5>>>>>=5\<cdot\><bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|1>>>>>
   </equation*>
 
-  <underline|Definition>: If <math|<wide|x|\<vect\>>> is a non-zero vector
-  such that <math|A*<wide|x|\<vect\>>=\<lambda\>*<wide|x|\<vect\>>> for some
-  scalar <math|\<lambda\>>, we say it is an <em|eigenvector> for <math|A> and
-  <math|\<lambda\>> is its associated <em|eigenvalue>.
+  <\definition*>
+    \;
+
+    <em|If <math|<wide|x|\<vect\>>> is a non-zero vector such that
+    <math|A*<wide|x|\<vect\>>=\<lambda\>*<wide|x|\<vect\>>> for some scalar
+    <math|\<lambda\>>, we say it is an <em|eigenvector> for <math|A> and
+    <math|\<lambda\>> is its associated <em|eigenvalue>.>
+  </definition*>
 
   To find an eigenvector we need to solve:
 
@@ -4994,9 +5139,9 @@
   <math|<around*|(|A-\<lambda\>\<cdot\>I|)>*<wide|x|\<vect\>>=<wide|0|\<vect\>>>.
   So <math|<wide|x|\<vect\>>> is a solution to the homogeneous linear system.
   In other words, <math|<wide|x|\<vect\>>> is a non-trivial element in the
-  null-space of <math|A-\<lambda\>*I>.
+  nullspace of <math|A-\<lambda\>*I>.
 
-  null-space of <math|A-\<lambda\>*I> is called the <em|eigenspace>.
+  nullspace of <math|A-\<lambda\>*I> is called the <em|eigenspace>.
 
   Recall that <math|dim nullspace=n-r>, so <math|n-1\<geq\>1>. In other
   words, we have non-trivial solutions to
@@ -5121,7 +5266,696 @@
     <math|<bmatrix|<tformat|<table|<row|<cell|A-\<lambda\>*I>>>>>*<bmatrix|<tformat|<table|<row|<cell|x>>|<row|<cell|y>>>>>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|0>>>>>>
     we get <math|<bmatrix|<tformat|<table|<row|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|0>>>>>><math|<bmatrix|<tformat|<table|<row|<cell|x>>|<row|<cell|y>>>>>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|0>>>>>>
     and every vector is a solution. Here eigenspace has dim 2.
+
+    <marginal-note|normal|c|lec 17 2.1.23><item>
+
+    <\equation*>
+      A=<bmatrix|<tformat|<table|<row|<cell|0>|<cell|-1>>|<row|<cell|1>|<cell|0>>>>>
+    </equation*>
+
+    <math|det <around*|(|A-\<lambda\>*I|)>=\<lambda\><rsup|2>+1>. There are
+    no real eigenvalues. Over <math|\<bbb-C\>> there are
+    <math|\<lambda\>=\<pm\>\<mathi\>> and we can find the eigenvectors over
+    <math|\<bbb-C\><rsup|2>>.\ 
+
+    <underline|Set <math|\<lambda\>=\<mathi\>>>
+
+    Find nullspace of <math|<bmatrix|<tformat|<table|<row|<cell|-\<mathi\>>|<cell|-1>>|<row|<cell|1>|<cell|-\<mathi\>>>>>>*<bmatrix|<tformat|<table|<row|<cell|x>>|<row|<cell|y>>>>>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|0>>>>>>.
+    <math|-\<mathi\>*x-y=0\<rightarrow\><bmatrix|<tformat|<table|<row|<cell|x>>|<row|<cell|y>>>>>=<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|-\<mathi\>>>>>>>.
+
+    <\underline>
+      Set <math|\<lambda\>=-\<mathi\>>
+    </underline>
+
+    Find nullspace of <math|<bmatrix|<tformat|<table|<row|<cell|\<mathi\>>|<cell|-1>>|<row|<cell|1>|<cell|\<mathi\>>>>>>*<bmatrix|<tformat|<table|<row|<cell|x>>|<row|<cell|y>>>>>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|0>>>>>>.
+    <math|\<mathi\>*x-y=0\<rightarrow\><bmatrix|<tformat|<table|<row|<cell|x>>|<row|<cell|y>>>>>=<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|\<mathi\>>>>>>>.
+
+    Notice that the eigenvectors than correspond to conjugate eigenvalues are
+    conjugates of each other.
+
+    <item>
+
+    <\equation*>
+      A=<bmatrix|<tformat|<table|<row|<cell|2>|<cell|1>>|<row|<cell|0>|<cell|2>>>>>
+    </equation*>
+
+    <math|det <around*|(|A-\<lambda\>*I|)>=<around*|(|2-\<lambda\>|)><rsup|2>>.
+    <math|\<lambda\>=2>. Find nullspace of <math|A-\<lambda\>*I>:
+
+    <\equation*>
+      <bmatrix|<tformat|<table|<row|<cell|0>|<cell|1>>|<row|<cell|0>|<cell|0>>>>>*<bmatrix|<tformat|<table|<row|<cell|x>>|<row|<cell|y>>>>>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|0>>>>>
+    </equation*>
+
+    The vector <math|<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|0>>>>>>
+    is a basis for the eigenspace.
+
+    <\theorem*>
+      <\em>
+        \;
+
+        If <math|A> is <math|n\<times\>n> than <math|det
+        <around*|(|A-\<lambda\>*I|)>> is a polynomial of degree <math|n>.
+      </em>
+    </theorem*>
+
+    <\theorem*>
+      \;
+
+      <em|If <math|r<rsub|0>> is the multiplicity of an eigenvalue
+      <math|\<lambda\><rsub|0>> in the characteristic polynomial of <math|A>,
+      then the dimension of the corresponding eigenspace is less or equal to
+      <math|r<rsub|0>>. >
+    </theorem*>
+
+    Also, dimension of eigenspace is called <em|geometric multiplicity>, and
+    multiplicity of eigenvalue in characteristic polynomial<space|1em>is
+    called the <em|algebraic multiplicity>. So <math|1\<leq\><text|geometric
+    multiplicity >\<leq\><text| algebraic multiplicity>>.
+
+    <underline|Example>: Suppose <math|<around*|(|\<lambda\>-3|)>*<around*|(|\<lambda\>-2|)><rsup|5>*<around*|(|\<lambda\>-1|)><rsup|2>>
+    is the characteristic polynomial for a matrix.
+
+    <\itemize>
+      <item><math|\<lambda\>=3>: eigenspace has dim 1
+
+      <item><math|\<lambda\>=2>: eigenspace has <math|1\<leq\>dim\<leq\>5>.
+
+      <item><math|\<lambda\>=1>: eigenspace has dim 1 or 2.
+    </itemize>
+
+    <item>
+
+    <\equation*>
+      A=<bmatrix|<tformat|<table|<row|<cell|0>|<cell|1>|<cell|1>>|<row|<cell|1>|<cell|0>|<cell|1>>|<row|<cell|1>|<cell|1>|<cell|0>>>>>
+    </equation*>
+
+    Calculate character polynomial
+
+    <\equation*>
+      det <around*|(|A-\<lambda\>*I|)>=<det|<tformat|<table|<row|<cell|-\<lambda\>>|<cell|1>|<cell|1>>|<row|<cell|1>|<cell|-\<lambda\>>|<cell|1>>|<row|<cell|1>|<cell|1>|<cell|-\<lambda\>>>>>>
+    </equation*>
+
+    Clearly setting <math|\<lambda\>=-1> gives a matrix of ones, with rank
+    <math|1>, so <math|\<lambda\>=-1> will be an eigenvalue. (Then
+    <math|det<around*|(|A-\<lambda\>*I|)>=0>.)
+
+    <\equation*>
+      -\<lambda\><rsup|3>+1+1+\<lambda\>+\<lambda\>+\<lambda\>=-\<lambda\><rsup|3>+3\<lambda\>+2
+    </equation*>
+
+    Factor our <math|\<lambda\>+1>:
+
+    <\equation*>
+      -\<lambda\><rsup|3>+3\<lambda\>+2=<around*|(|\<lambda\>+1|)>*<around*|(|*-\<lambda\><rsup|2>+\<lambda\>+2|)>=0
+    </equation*>
+
+    <\equation*>
+      \<lambda\><rsub|1,2,3>=2,-1,-1
+    </equation*>
+
+    Calculate eigenvectors. For <math|\<lambda\>=2>:
+
+    <\equation*>
+      <bmatrix|<tformat|<table|<row|<cell|-2>|<cell|1>|<cell|1>>|<row|<cell|1>|<cell|-2>|<cell|1>>|<row|<cell|1>|<cell|1>|<cell|-2>>>>>*<bmatrix|<tformat|<table|<row|<cell|x>>|<row|<cell|y>>|<row|<cell|z>>>>>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|0>>|<row|<cell|0>>>>>
+    </equation*>
+
+    The eigenspace is spanned by <math|<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|1>>|<row|<cell|1>>>>>>.\ 
+
+    For <math|\<lambda\>=-1>:
+
+    <\equation*>
+      <bmatrix|<tformat|<table|<row|<cell|1>|<cell|1>|<cell|1>>|<row|<cell|1>|<cell|1>|<cell|1>>|<row|<cell|1>|<cell|1>|<cell|1>>>>>*<bmatrix|<tformat|<table|<row|<cell|x>>|<row|<cell|y>>|<row|<cell|z>>>>>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|0>>|<row|<cell|0>>>>>
+    </equation*>
+
+    The nullspace is of dimension <math|2>. Basis for eigenspace can be
+    <math|<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|-1>>|<row|<cell|0>>>>>,<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|0>>|<row|<cell|-1>>>>>>.
+
+    Given the three eigenvectors <math|<wide|v|\<vect\>><rsub|1>,<wide|v|\<vect\>><rsub|2>,<wide|v|\<vect\>><rsub|3>>,
+    we form a matrix <math|P=<around*|[|<wide|v|\<vect\>><rsub|1>,<wide|v|\<vect\>><rsub|2>,<wide|v|\<vect\>><rsub|3>|]>>.
+    Note that <math|rank P=3>, so <math|P> is invertible. Calculate
+    <math|A*P>.
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|A*P>|<cell|=>|<cell|<bmatrix|<tformat|<table|<row|<cell|0>|<cell|1>|<cell|1>>|<row|<cell|1>|<cell|0>|<cell|1>>|<row|<cell|1>|<cell|1>|<cell|0>>>>>*<bmatrix|<tformat|<table|<row|<cell|1>|<cell|1>|<cell|1>>|<row|<cell|1>|<cell|-1>|<cell|0>>|<row|<cell|1>|<cell|0>|<cell|-1>>>>>=<bmatrix|<tformat|<table|<row|<cell|2>|<cell|-1>|<cell|-1>>|<row|<cell|2>|<cell|1>|<cell|0>>|<row|<cell|2>|<cell|0>|<cell|1>>>>>=<bmatrix|<tformat|<table|<row|<cell|A*<wide|v|\<vect\>><rsub|1>>|<cell|A*<wide|v|\<vect\>><rsub|2>>|<cell|A*<wide|v|\<vect\>><rsub|3>>>>>>=<bmatrix|<tformat|<table|<row|<cell|2<wide|v|\<vect\>><rsub|1>>|<cell|-<wide|v|\<vect\>><rsub|2>>|<cell|-<wide|v|\<vect\>><rsub|3>>>>>>>>>>
+    </eqnarray*>
+
+    Now multiply <math|P> by a diagonal matrix whose diagonal contains the
+    eigenvalues of <math|A> (in same order that the eigenvectors are aligned
+    in <math|P>):
+
+    <\equation*>
+      P*<bmatrix|<tformat|<table|<row|<cell|2>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|-1>|<cell|0>>|<row|<cell|0>|<cell|0>|<cell|-1>>>>>=<bmatrix|<tformat|<table|<row|<cell|2>|<cell|-1>|<cell|-1>>|<row|<cell|2>|<cell|1>|<cell|0>>|<row|<cell|2>|<cell|0>|<cell|1>>>>><with|color|blue|=A*P>
+    </equation*>
+
+    Conclusion:
+
+    <\equation*>
+      P<rsup|-1>*A*P=<bmatrix|<tformat|<table|<row|<cell|\<lambda\><rsub|1>>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|\<lambda\><rsub|2>>|<cell|0>>|<row|<cell|0>|<cell|0>|<cell|\<lambda\><rsub|3>>>>>>
+    </equation*>
   </enumerate>
+
+  <subsubsection|Diagonalizability and eigendecomposition>
+
+  <\theorem*>
+    \;
+
+    <em|If <math|<wide|v|\<vect\>><rsub|1>,\<ldots\>,<wide|v|\<vect\>><rsub|n>>
+    are linearly independent eigenvectors and we have
+    <math|\<lambda\><rsub|1>,\<ldots\>,\<lambda\><rsub|n>> corresponding
+    eigenvalues (not necessarily distinct), then if <math|P> is the matrix
+    whose columns are <math|<wide|v|\<vect\>><rsub|1>,\<ldots\>,<wide|v|\<vect\>><rsub|n>>,
+    then <math|P> is invertible and we have:>
+
+    <\equation*>
+      A*P=P*<bmatrix|<tformat|<table|<row|<cell|\<lambda\><rsub|1>>|<cell|>|<cell|0>>|<row|<cell|*>|<cell|\<ddots\>>|<cell|>>|<row|<cell|0>|<cell|>|<cell|\<lambda\><rsub|n>>>>>>
+    </equation*>
+
+    <em|and so>
+
+    <\equation*>
+      P<rsup|-1>*A*P=<bmatrix|<tformat|<table|<row|<cell|\<lambda\><rsub|1>>|<cell|>|<cell|0>>|<row|<cell|*>|<cell|\<ddots\>>|<cell|>>|<row|<cell|0>|<cell|>|<cell|\<lambda\><rsub|n>>>>>>
+    </equation*>
+  </theorem*>
+
+  <\definition*>
+    \;
+
+    <em|An <math|n\<times\>n> matrix <math|A> is called <em|diagonalizable>
+    if there exists an invertible matrix <math|P> such that
+    <math|P<rsup|-1>*A*P> is the diagonal matrix.>
+  </definition*>
+
+  <underline|Theorem>:\ 
+
+  <\theorem*>
+    \;
+
+    <em|If <math|A> has <math|n> linearly independent eigenvectors, then it
+    is diagonalizable.>
+  </theorem*>
+
+  <\theorem*>
+    \;
+
+    <\em>
+      If <math|A> is diagonalizable, then it has <math|n> linearly
+      independent eigenvectors.
+
+      Note that in the situation that we do have
+      <math|P<rsup|-1>*A*P=<bmatrix|<tformat|<table|<row|<cell|\<lambda\><rsub|1>>|<cell|>|<cell|0>>|<row|<cell|>|<cell|\<ddots\>>|<cell|>>|<row|<cell|0>|<cell|>|<cell|\<lambda\><rsub|n>>>>>>>
+      then column <math|i> of <math|P> is an eigenvector for
+      <math|\<lambda\><rsub|i>>.
+    </em>
+  </theorem*>
+
+  <\theorem*>
+    \ 
+
+    <em|If <math|\<lambda\><rsub|1>,\<ldots\>,\<lambda\><rsub|k>> are
+    distinct eigenvalues with corresponding eigenvectors
+    <math|<wide|v|\<vect\>><rsub|1>,\<ldots\>,<wide|v|\<vect\>><rsub|k>> then
+    <math|<wide|v|\<vect\>><rsub|1>,\<ldots\>,<wide|v|\<vect\>><rsub|k>> are
+    linearly independent.>
+  </theorem*>
+
+  <\corollary*>
+    (Sufficient condition [not necessary] for diagonalizability)
+
+    <em|If <math|A> has <math|n> distinct eigenvalues then <math|A> is
+    diagonalizable.>
+  </corollary*>
+
+  Show linear independence of eigenvectors corresponding to distinct
+  eigenvalues for <math|k=3>: Suppose
+
+  <\equation*>
+    c<rsub|1>*<wide|v|\<vect\>><rsub|1>+c<rsub|2>*<wide|v|\<vect\>><rsub|2>+c<rsub|3>*<wide|v|\<vect\>><rsub|3>=<wide|0|\<vect\>>,<application-space|1em>c<rsub|i>\<in\>\<bbb-R\>
+  </equation*>
+
+  We need to show <math|c<rsub|1>=c<rsub|2>=c<rsub|3>=0>. So:
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|A*<around*|(|c<rsub|1>*<wide|v|\<vect\>><rsub|1>+c<rsub|2>*<wide|v|\<vect\>><rsub|2>+c<rsub|3>*<wide|v|\<vect\>><rsub|3>|)>>|<cell|=>|<cell|A*<wide|0|\<vect\>>=<wide|0|\<vect\>>>>|<row|<cell|>|<cell|=>|<cell|c<rsub|1>*A*<wide|v|\<vect\>><rsub|1>+c<rsub|2>*A*<wide|v|\<vect\>><rsub|2>+c<rsub|3>*A*<wide|v|\<vect\>><rsub|3>>>|<row|<cell|>|<cell|=>|<cell|c<rsub|1>*\<lambda\><rsub|1>*<wide|v|\<vect\>><rsub|1>+c<rsub|2>*\<lambda\><rsub|2>*<wide|v|\<vect\>><rsub|2>+c<rsub|3>*\<lambda\><rsub|3>*<wide|v|\<vect\>><rsub|3>>>>>
+  </eqnarray*>
+
+  Multiplying again by <math|A> gives
+
+  <\equation*>
+    c<rsub|1>*\<lambda\><rsub|1><rsup|2>*<wide|v|\<vect\>><rsub|1>+c<rsub|2>*\<lambda\><rsub|2><rsup|2>*<wide|v|\<vect\>><rsub|2>+c<rsub|3>*\<lambda\><rsub|3><rsup|2>*<wide|v|\<vect\>><rsub|3>=<wide|0|\<vect\>><rsub|f>.
+  </equation*>
+
+  The matrix of coefficients here is
+
+  <\equation*>
+    <wide*|<bmatrix|<tformat|<table|<row|<cell|1>|<cell|1>|<cell|1>>|<row|<cell|\<lambda\><rsub|1>>|<cell|\<lambda\><rsub|2>>|<cell|\<lambda\><rsub|3>>>|<row|<cell|\<lambda\><rsub|1><rsup|2>>|<cell|\<lambda\><rsub|2><rsup|2>>|<cell|\<lambda\><rsub|3><rsup|2>>>>>>|\<wide-underbrace\>><rsub|<text|Vandermonde
+    matrix>>*<bmatrix|<tformat|<table|<row|<cell|c<rsub|1>>>|<row|<cell|c<rsub|2>>>|<row|<cell|c<rsub|3>>>>>>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|0>>|<row|<cell|0>>>>>
+  </equation*>
+
+  Vandermonde matrix has a non-zero det!
+
+  <\note*>
+    \;
+
+    <\enumerate>
+      <item>There can be less than <math|n> distinct eigenvalues, but still
+      has <math|n> linearly independent eigenvectors and be diagonalizable.
+
+      <item><math|<bmatrix|<tformat|<table|<row|<cell|0>|<cell|-1>>|<row|<cell|1>|<cell|0>>>>>>
+      has no real eigenvalues, so it <strong|is not> diagonalizable over
+      <math|\<bbb-R\>>, but <strong|is> diagonalizable over <math|\<bbb-C\>>.
+
+      <item>Calculations can be much easier if <math|A> is diagonalizable.
+      e.g. finding <math|A<rsup|k>> for high values of <math|k>. For a
+      diagonal matrix <math|D=<bmatrix|<tformat|<table|<row|<cell|\<lambda\><rsub|1>>|<cell|>|<cell|0>>|<row|<cell|>|<cell|\<ddots\>>|<cell|>>|<row|<cell|0>|<cell|>|<cell|\<lambda\><rsub|k>>>>>>>
+      it is easy to show (by induction) that
+
+      <\equation*>
+        D<rsup|k>=<bmatrix|<tformat|<table|<row|<cell|\<lambda\><rsub|1><rsup|k>>|<cell|>|<cell|0>>|<row|<cell|>|<cell|\<ddots\>>|<cell|>>|<row|<cell|0>|<cell|>|<cell|\<lambda\><rsub|k><rsup|k>>>>>>
+      </equation*>
+
+      <item>If <math|P<rsup|-1>*A*P=D> then <math|A=P*D*P<rsup|-1>>.
+
+      <\equation*>
+        A<rsup|2>=<around*|(|P*D*P<rsup|-1>|)><around*|(|P*D*P<rsup|-1>|)>=P*D<rsup|2>*P<rsup|-1>
+      </equation*>
+
+      <\ornamented>
+        <\equation*>
+          A<rsup|k>=P*D<rsup|k>*P<rsup|-1>
+        </equation*>
+      </ornamented>
+    </enumerate>
+  </note*>
+
+  \;
+
+  <marginal-note|normal|c|lec 18 3.1.23><underline|Theorem>:\ 
+
+  <\theorem*>
+    \;
+
+    <\em>
+      If <math|A> is a complex matrix and it is Hermitian (i.e.
+      <math|<wide|A<rsup|>|\<bar\>><rsup|T>=A>) then:
+
+      <\enumerate>
+        <item>All its eigenvalues are real.
+
+        <item>It has <math|n> linearly independent eigenvectors (so it is
+        diagonalizable).
+
+        <item>Eigenvectors corresponding to distinct eigenvalues are
+        <em|orthogonal>
+      </enumerate>
+    </em>
+  </theorem*>
+
+  <\definition*>
+    \;
+
+    <em|><em|In <math|\<bbb-C\><rsup|n>> , for
+    <math|<wide|v|\<vect\>>=<around*|[|x<rsub|1>,\<ldots\>,x<rsub|n>|]><rsup|T>,<wide|w|\<vect\>>=<around*|[|y<rsub|1>,\<ldots\>,y<rsub|n>|]><rsup|T>>
+    we define the<em| inner product> of <math|<wide|v|\<vect\>>> and
+    <math|<wide|w|\<vect\>>> as:>
+
+    <\equation*>
+      <around*|(|<wide|v|\<vect\>>,<wide|w|\<vect\>>|)>=<big|sum><rsub|j=1><rsup|n>x<rsub|j>*<wide|y|\<bar\>><rsub|j>
+    </equation*>
+  </definition*>
+
+  <\note*>
+    If <math|<wide|v|\<vect\>>,<wide|w|\<vect\>>> are real this is simply
+    their scalar product. <math|<wide|v|\<vect\>>,<wide|w|\<vect\>>> are
+    orthogonal if <math|<around*|(|<wide|v|\<vect\>>,<wide|w|\<vect\>>|)>=0>.
+    In fact, orthogonality implies linear independence!
+  </note*>
+
+  <\note*>
+    A real matrix is symmetric iff it is Hermitian.
+  </note*>
+
+  <subsection|First-order systems of linear ODEs>
+
+  <subsubsection|Homogeneous system>
+
+  Suppose we have a homogeneous system:
+
+  <\equation*>
+    <wide|x|\<vect\>><rprime|'><around*|(|t|)>=A<around*|(|t|)>*<wide|x|\<vect\>><around*|(|t|)>
+  </equation*>
+
+  <math|A<around*|(|t|)>=<around*|[|a<rsub|i\<nocomma\>j><around*|(|t|)>|]>>,
+  <math|<wide|x|\<vect\>>=<around*|[|x<rsub|1><around*|(|t|)>,\<ldots\>,x<rsub|n><around*|(|t|)>|]><rsup|T>>.
+
+  <with|theorem*|<\macro|body>
+    <compound|render-theorem|<compound|theorem-unnumbered|<compound|theorem-text>>|<em|<arg|body>>>
+  </macro>|<\theorem*>
+    \;
+
+    The set of solutions is a vector space of dimension <math|n>
+  </theorem*>>
+
+  Can find <math|n> linearly independent solutions by taking a set of
+  <math|n> initial conditions:\ 
+
+  <\equation*>
+    <choice|<tformat|<table|<row|<cell|x<rsub|i><around*|(|t<rsub|0>|)>=1>>|<row|<cell|x<rsub|j><around*|(|t<rsub|0>|)>=0<application-space|1em>i\<neq\>j>>>>><application-space|1em>\<forall\>i\<leq\>j\<leq\>n
+  </equation*>
+
+  We now assume matrix of coefficients is a matrix of constants:
+
+  <\equation*>
+    <wide|x|\<vect\>><rprime|'>=A*<wide|x|\<vect\>>,<application-space|1em>A\<in\>\<bbb-R\><rsup|n\<times\>n>
+  </equation*>
+
+  <underline|Example>: <math|n=1>
+
+  <\equation*>
+    x<rprime|'><around*|(|t|)>=a*x<around*|(|t|)>,<application-space|1em>a\<in\>\<bbb-R\>
+  </equation*>
+
+  We saw that set of solutions is a 1-dim space spanned by
+  <math|\<mathe\><rsup|a*t>>.
+
+  For <math|n\<gtr\>1> we shall have an analogous situation. We look for
+  solutions of the form:
+
+  <\equation*>
+    x<rsub|i><around*|(|t|)>=c<rsub|i>*\<mathe\><rsup|\<lambda\>*t>
+  </equation*>
+
+  or in vector form:
+
+  <\equation*>
+    <wide|x|\<vect\>>=\<mathe\><rsup|\<lambda\>*t>*<bmatrix|<tformat|<table|<row|<cell|c<rsub|1>>>|<row|<cell|\<vdots\>>>|<row|<cell|c<rsub|n>>>>>>\<equiv\>\<mathe\><rsup|\<lambda\>*t>*<wide|v|\<vect\>>
+  </equation*>
+
+  We substitute <math|<wide|x|\<vect\>>=\<mathe\><rsup|\<lambda\>*t>*<wide|v|\<vect\>>>
+  in our system of equations:
+
+  <\equation*>
+    <wide|x|\<vect\>><rprime|'>=\<lambda\>*\<mathe\><rsup|\<lambda\>*t>*<wide|v|\<vect\>>
+  </equation*>
+
+  So get
+
+  <\equation*>
+    \<lambda\>*\<mathe\><rsup|\<lambda\>*t>*<wide|v|\<vect\>>=<wide|x|\<vect\>><rprime|'>=A*<wide|x|\<vect\>>=A*\<mathe\><rsup|\<lambda\>*t>*<wide|v|\<vect\>>,<application-space|1em>\<forall\>t
+  </equation*>
+
+  <\equation*>
+    \<Longupdownarrow\> \<mathe\><rsup|\<lambda\>*t>\<neq\>0\<nospace\><application-space|1em>\<forall\>t
+  </equation*>
+
+  <\equation*>
+    \<lambda\>*<wide|v|\<vect\>>=A*<wide|v|\<vect\>>
+  </equation*>
+
+  Conclude: if <math|\<lambda\>> eigenvalue for <math|A> with eigenvector
+  <math|<wide|v|\<vect\>>> then <math|\<mathe\><rsup|\<lambda\>*t>*<wide|v|\<vect\>>>
+  solves the system.
+
+  <underline|Example>
+
+  <\equation*>
+    <choice|<tformat|<table|<row|<cell|x<rsub|1><rprime|'>=x<rsub|1>+x<rsub|2>>>|<row|<cell|x<rsub|2><rprime|'>=4x<rsub|1>+x<rsub|2>>>>>>,<application-space|1em>A=<bmatrix|<tformat|<table|<row|<cell|1>|<cell|1>>|<row|<cell|4>|<cell|1>>>>>
+  </equation*>
+
+  Find eigenvalues and eigenvectors for <math|A>:
+
+  <\equation*>
+    <det|<tformat|<table|<row|<cell|A-\<lambda\>*I>>>>>=<det|<tformat|<table|<row|<cell|1-\<lambda\>>|<cell|1>>|<row|<cell|4>|<cell|1-\<lambda\>>>>>>=\<lambda\><rsup|2>-2\<lambda\>-3=0
+  </equation*>
+
+  <\equation*>
+    \<lambda\><rsub|1,2>=3,-1
+  </equation*>
+
+  For <math|\<lambda\>=3>: Solve
+
+  <\equation*>
+    <bmatrix|<tformat|<table|<row|<cell|-2>|<cell|1>>|<row|<cell|4>|<cell|-2>>>>>*<bmatrix|<tformat|<table|<row|<cell|x>>|<row|<cell|y>>>>>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|0>>>>>
+  </equation*>
+
+  get eigenvector <math|<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|2>>>>>>.
+  For <math|\<lambda\>=-1>:
+
+  <\equation*>
+    <bmatrix|<tformat|<table|<row|<cell|2>|<cell|1>>|<row|<cell|4>|<cell|2>>>>>*<bmatrix|<tformat|<table|<row|<cell|x>>|<row|<cell|y>>>>>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|0>>>>>
+  </equation*>
+
+  get eigenvector <math|<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|-2>>>>>>.
+  We have 2 solutions to the system of equations:
+
+  <\equation*>
+    \<mathe\><rsup|3*t>*<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|2>>>>>,<application-space|1em>\<mathe\><rsup|-t>*<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|-2>>>>>
+  </equation*>
+
+  These are linearly independent as if: (<math|\<forall\>t>)
+
+  <\equation*>
+    a*\<mathe\><rsup|3*t>*<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|2>>>>>+b*\<mathe\><rsup|-t>*<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|-2>>>>>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|0>>>>>
+  </equation*>
+
+  then (set <math|t=0>):
+
+  <\equation*>
+    a**<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|2>>>>>+b**<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|-2>>>>>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|0>>>>>
+  </equation*>
+
+  but <math|<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|2>>>>>> and
+  <math|<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|-2>>>>>> are
+  linearly independent so <math|a=b=0>.
+
+  Given ICs, say: <math|x<rsub|1><around*|(|0|)>=1,x<rsub|2><around*|(|0|)>=3>.
+  Want <math|a,b> that satisfy ICs.
+
+  <\equation*>
+    <bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|3>>>>>=a*<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|2>>>>>+b*<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|-2>>>>>
+  </equation*>
+
+  <\equation*>
+    b=1-a\<rightarrow\>2a-2<around*|(|1-a|)>=3\<rightarrow\>a=<frac|5|4>,b=-<frac|1|4>
+  </equation*>
+
+  <\theorem*>
+    \;
+
+    <\em>
+      If <math|\<lambda\><rsub|1>,\<ldots\>,\<lambda\><rsub|k> are distinct
+      eigenvalues with corresponding eigenvectors
+      \ <wide|v|\<vect\>><rsub|1>,\<ldots\>,<wide|v|\<vect\>><rsub|k>>, then
+      the vectors of functions <math|\<mathe\><rsup|\<lambda\><rsub|1>*t>*<wide|v|\<vect\>><rsub|1>,\<mathe\><rsup|\<lambda\><rsub|2>*t>*<wide|v|\<vect\>><rsub|2>,\<ldots\>,\<mathe\><rsup|\<lambda\><rsub|k>*t>*<wide|v|\<vect\>><rsub|k>>
+      are linearly independent. (Particularly in space of vectors of
+      functions.)
+    </em>
+  </theorem*>
+
+  <\theorem*>
+    \;
+
+    <em|If <math|A> has <math|n> linearly independent eigenvectors
+    <math|<wide|v|\<vect\>><rsub|1>,\<ldots\>,<wide|v|\<vect\>><rsub|n>> with
+    corresponding eigenvalues <math|\<lambda\><rsub|1>,\<ldots\>,\<lambda\><rsub|n>>
+    (not necessarily distinct) then again the <math|n> vectors of functions:
+    <math|\<mathe\><rsup|\<lambda\><rsub|1>*t>*<wide|v|\<vect\>><rsub|1>,\<mathe\><rsup|\<lambda\><rsub|2>*t>*<wide|v|\<vect\>><rsub|2>,\<ldots\>,\<mathe\><rsup|\<lambda\><rsub|k>*t>*<wide|v|\<vect\>><rsub|n>>
+    will be linearly independent.> (Useful if <math|A> is symmetric.)
+  </theorem*>
+
+  <underline|Example>
+
+  <\equation*>
+    <choice|<tformat|<table|<row|<cell|x<rsub|1><rprime|'>=x<rsub|2>+x<rsub|3>>>|<row|<cell|x<rsub|2><rprime|'>=x<rsub|1>+x<rsub|3>>>|<row|<cell|x<rsub|3><rprime|'>=x<rsub|1>+x<rsub|2>>>>>>
+  </equation*>
+
+  Matrix of coefficients is <math|A=<bmatrix|<tformat|<table|<row|<cell|0>|<cell|1>|<cell|1>>|<row|<cell|1>|<cell|0>|<cell|1>>|<row|<cell|1>|<cell|1>|<cell|0>>>>>>.
+  Recall: there are 2 linearly independent eigenvectors for
+  <math|\<lambda\>=-1>: <math|<around*|[|1,0,-1|]><rsup|T>,<around*|[|0,1,-1|]><rsup|T>>
+  and 1 eigenvector for <math|\<lambda\>=2>:
+  <math|<around*|[|1,1,1|]><rsup|T>>.
+
+  General solution is:
+
+  <\equation*>
+    <bmatrix|<tformat|<table|<row|<cell|x<rsub|1>>>|<row|<cell|x<rsub|2>>>|<row|<cell|x<rsub|3>>>>>>=c<rsub|1>*\<mathe\><rsup|2*t>*<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|1>>|<row|<cell|>>>>>+c<rsub|2>*\<mathe\><rsup|-t>*<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|0>>|<row|<cell|-1>>>>>+c<rsub|3>*\<mathe\><rsup|-t>*<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|1>>|<row|<cell|-1>>>>>
+  </equation*>
+
+  <\note*>
+    The set of equations will <em|always> have a unique solution, as the
+    matrix of coefficients has rank <math|n>.
+  </note*>
+
+  <subsubsection|Real coefficient matrix with non-real eigenvalues>
+
+  What happens if <math|A> has non-real eigenvalues? Suppose <math|A> is real
+  and we have
+
+  <\equation*>
+    <wide|x|\<vect\>><rprime|'>=A*<wide|x|\<vect\>>
+  </equation*>
+
+  and <math|\<lambda\>\<in\>\<bbb-C\>> is a non-real eigenvalue. If
+  <math|<wide|v|\<vect\>>\<in\>\<bbb-C\><rsup|n>> is an eigenvector, then
+  <math|\<mathe\><rsup|\<lambda\>*t>*<wide|v|\<vect\>>> is a (complex)
+  solution. We want to find corresponding real solutions.
+
+  <\note*>
+    In this situation, <math|<wide|\<lambda\>|\<bar\>>> is also an eigenvalue
+    with eigenvector <math|<wide|<wide|v|\<vect\>>|\<bar\>>>.\ 
+  </note*>
+
+  Find a pair of real solutions that correspond to the pair of complex
+  solutions <rigid|<math|<wide|x|\<vect\>>=<around*|{|\<mathe\><rsup|\<lambda\>*t>*<wide|v|\<vect\>>,\<mathe\><rsup|<wide|\<lambda\>|\<bar\>>*t>*<wide|<wide|v|\<vect\>>|\<bar\>>|}><rigid|>>>.
+  We can write:
+
+  <\equation*>
+    <wide|v|\<vect\>>=<wide|a|\<vect\>>+<wide|b|\<vect\>>*\<mathi\>,<application-space|1em><wide|a|\<vect\>>,<wide|b|\<vect\>>\<in\>\<bbb-R\><rsup|n>
+  </equation*>
+
+  <\equation*>
+    \<lambda\>=\<alpha\>+\<beta\>*\<mathi\>,<application-space|1em>\<alpha\>,\<beta\>\<in\>\<bbb-R\>
+  </equation*>
+
+  Get:
+
+  <\equation*>
+    <wide|x|\<vect\>>=\<mathe\><rsup|\<lambda\>*t>*<wide|v|\<vect\>>=\<mathe\><rsup|\<alpha\>*t>*<around*|(|cos\<beta\>t+\<mathi\>*sin
+    \<beta\>t|)>*<around*|(|<wide|a|\<vect\>>+<wide|b|\<vect\>>*\<mathi\>|)>
+  </equation*>
+
+  <\equation*>
+    <wide|x|\<vect\>>=\<mathe\><rsup|\<alpha\>*t>*<around*|[|cos
+    <around*|(|\<beta\>t|)>*<wide|a|\<vect\>>-sin
+    <around*|(|\<beta\>t|)>*<wide|b|\<vect\>>|]>+\<mathi\>*\<mathe\><rsup|\<alpha\>*t><around*|[|*sin
+    <around*|(|\<beta\>t|)>*<wide|a|\<vect\>>+cos
+    <around*|(|\<beta\>*t|)>*<wide|b|\<vect\>>|]>\<equiv\><wide|u|\<vect\>><around*|(|t|)>+\<mathi\>*<wide|w|\<vect\>><around*|(|t|)>
+  </equation*>
+
+  <\proposition*>
+    \;
+
+    <em|<math-it|<math|<wide|u|\<vect\>>,<wide|w|\<vect\>>> <em|are real
+    solutions to our system of ODEs.>>>
+  </proposition*>
+
+  We have
+
+  <\equation*>
+    <wide|x|\<vect\>><rprime|'>=A*<wide|x|\<vect\>>
+  </equation*>
+
+  or\ 
+
+  <\equation*>
+    <around*|(|<wide|u|\<vect\>>+\<mathi\>*<wide|w|\<vect\>>|)><rprime|'>=A*<around*|(|<wide|u|\<vect\>>+\<mathi\>*<wide|w|\<vect\>>|)>
+  </equation*>
+
+  <\equation*>
+    <wide|u|\<vect\>><rprime|'>+\<mathi\>*<wide|w|\<vect\>><rprime|'>=A*<wide|u|\<vect\>>+\<mathi\>*A*<wide|w|\<vect\>>
+  </equation*>
+
+  Equate real and imaginary parts on both sides:
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|<wide|u|\<vect\>><rprime|'>>|<cell|=>|<cell|A*<wide|u|\<vect\>>>>|<row|<cell|<wide|w|\<vect\>><rprime|'>>|<cell|=>|<cell|A*<wide|w|\<vect\>>>>>>
+  </eqnarray*>
+
+  <underline|Example>:
+
+  <\equation*>
+    <choice|<tformat|<table|<row|<cell|<frac|\<mathd\>x<rsub|1>|\<mathd\>t>=4x<rsub|1>-3x<rsub|2>>>|<row|<cell|<frac|\<mathd\>x<rsub|2>|\<mathd\>t>=3x<rsub|1>+4x<rsub|2>>>>>>,<application-space|2em>A=<bmatrix|<tformat|<table|<row|<cell|4>|<cell|-3>>|<row|<cell|3>|<cell|4>>>>>
+  </equation*>
+
+  Find eigenvectors and eigenvalues for <math|A>:
+
+  <\equation*>
+    <det|<tformat|<table|<row|<cell|4-\<lambda\>>|<cell|-3>>|<row|<cell|3>|<cell|4-\<lambda\>>>>>>=<around*|(|4-\<lambda\>|)><rsup|2>+9=\<lambda\><rsup|2>-8\<lambda\>+25=0
+  </equation*>
+
+  <\equation*>
+    \<lambda\><rsub|1,2>=4\<pm\>3\<mathi\>
+  </equation*>
+
+  Take <math|\<lambda\>=4+3\<mathi\>> and find eigenvector:
+
+  <\equation*>
+    <bmatrix|<tformat|<table|<row|<cell|4-<around*|(|4+3\<mathi\>|)>>|<cell|-3>>|<row|<cell|3>|<cell|4-<around*|(|4+3\<mathi\>|)>>>>>>*<bmatrix|<tformat|<table|<row|<cell|x>>|<row|<cell|y>>>>>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|0>>>>>
+  </equation*>
+
+  <\equation*>
+    <bmatrix|<tformat|<table|<row|<cell|-3\<mathi\>>|<cell|-3>>|<row|<cell|3>|<cell|-3\<mathi\>>>>>>*<bmatrix|<tformat|<table|<row|<cell|x>>|<row|<cell|y>>>>>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|0>>>>>
+  </equation*>
+
+  take <math|<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|-\<mathi\>>>>>>>.
+  Construct complex solutions:
+
+  <\equation*>
+    \<mathe\><rsup|<around*|(|4+3\<mathi\>|)>*t>*<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|-i>>>>>
+  </equation*>
+
+  and break it up:
+
+  <\equation*>
+    \<mathe\><rsup|4*t>*<around*|(|cos 3t+\<mathi\>*sin
+    3t|)>*<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|-i>>>>>=\<mathe\><rsup|4*t>*<bmatrix|<tformat|<table|<row|<cell|cos
+    3t+\<mathi\>*sin 3t>>|<row|<cell|-\<mathi\>*cos 3t+sin
+    3t>>>>>=\<mathe\><rsup|4*t>*<bmatrix|<tformat|<table|<row|<cell|cos
+    3t>>|<row|<cell|sin 3t>>>>>+\<mathi\>*\<mathe\><rsup|4*t>*<bmatrix|<tformat|<table|<row|<cell|sin
+    3t>>|<row|<cell|-cos 3t>>>>>
+  </equation*>
+
+  General real solution will be:
+
+  <\equation*>
+    <wide|x|\<vect\>><around*|(|t|)>=c<rsub|1>*\<mathe\><rsup|4*t>*<bmatrix|<tformat|<table|<row|<cell|cos
+    3t>>|<row|<cell|sin 3t>>>>>+c<rsub|2>*\<mathe\><rsup|4*t>*<bmatrix|<tformat|<table|<row|<cell|sin
+    3t>>|<row|<cell|-cos 3t>>>>>
+  </equation*>
+
+  <underline|Example>: Closed system of 3 tanks of salt solution.
+
+  <\padded-center>
+    <with|gr-mode|<tuple|edit|math-at>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|empty>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-arrow-end|\<gtr\>|gr-auto-crop|true|<graphics||<cline|<point|-6|1>|<point|-6.0|-1.0>|<point|-4.0|-1.0>|<point|-4.0|1.0>>|<cline|<point|-2|1>|<point|-2.0|-1.0>|<point|0.0|-1.0>|<point|0.0|1.0>>|<cline|<point|2|1>|<point|2.0|-1.0>|<point|4.0|-1.0>|<point|4.0|1.0>>|<line|<point|-5.3|-1>|<point|-5.3|-2.0>|<point|-3.5|-2.0>|<point|-2.6|-0.5>|<point|-2.0|-0.5>>|<line|<point|-5|-1>|<point|-5.0|-1.7>|<point|-3.7|-1.7>|<point|-2.8|-0.3>|<point|-2.0|-0.3>>|<line|<point|-1|-1>|<point|-1.0|-2.0>|<point|1.0|-2.0>|<point|1.4|-0.5>|<point|2.0|-0.5>>|<line|<point|-0.7|-1>|<point|-0.7|-1.7>|<point|0.6|-1.7>|<point|1.0|-0.3>|<point|2.0|-0.3>>|<line|<point|3|-1>|<point|3.0|-3.0>|<point|-7.0|-3.0>|<point|-7.0|-0.4>|<point|-6.0|-0.4>>|<line|<point|3.4|-1>|<point|3.4|-3.3>|<point|-7.2|-3.3>>|<line|<point|-7.2|-3.3>|<point|-7.2|0.0>|<point|-6.0|0.0>>|<math-at|V<rsub|2>|<point|-1.16551|0.212363>>|<with|arrow-end|\<gtr\>|<line|<point|-6.85939|0.339364>|<point|-6.37255258632094|0.339363672443445>>>|<with|arrow-end|\<gtr\>|<line|<point|-5.6|-1.3>|<point|-5.6|-1.8>>>|<with|arrow-end|\<gtr\>|<line|<point|-1.4|-1.2>|<point|-1.4|-1.7>>>|<with|arrow-end|\<gtr\>|<line|<point|-2.7|0.3>|<point|-2.2|0.3>>>|<with|arrow-end|\<gtr\>|<line|<point|1.3|0.3>|<point|1.7|0.3>>>|<with|arrow-end|\<gtr\>|<line|<point|2.7|-1.3>|<point|2.7|-2.0>>>|<math-at|r|<point|-2.5|0.7>>|<math-at|V<rsub|1>|<point|-5.16913378501162|0.2>>|<math-at|V<rsub|3>|<point|3.0|0.3>>>>
+  </padded-center>
+
+  <\itemize>
+    <item><math|V<rsub|i>> is the volume of solution in tank <math|i>.
+
+    <item><math|r> is the rate of flow (L/min).
+
+    <item><math|x<rsub|i><around*|(|t|)>> is the amount of salt in tank
+    <math|i>.
+  </itemize>
+
+  We get
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|x<rsub|1><rprime|'><around*|(|t|)>>|<cell|=>|<cell|-r*<frac|x<rsub|1>|V<rsub|1>>+r*<frac|x<rsub|3>|V<rsub|3>>>>|<row|<cell|x<rsub|2><rprime|'><around*|(|t|)>>|<cell|=>|<cell|r*<frac|x<rsub|1>|V<rsub|1>>-r*<frac|x<rsub|2>|V<rsub|2>>>>|<row|<cell|x<rsub|3><rprime|'><around*|(|t|)>>|<cell|=>|<cell|r*<frac|x<rsub|2>|V<rsub|2>>-r*<frac|x<rsub|3>|V<rsub|3>>>>>>
+  </eqnarray*>
+
+  In matrix notation:
+
+  <\equation*>
+    <wide|x|\<vect\>><rprime|'>=<bmatrix|<tformat|<table|<row|<cell|-<frac|r|V<rsub|1>>>|<cell|0>|<cell|<frac|r|V<rsub|3>>>>|<row|<cell|<frac|r|V<rsub|1>>>|<cell|-<frac|r|V<rsub|2>>>|<cell|0>>|<row|<cell|0>|<cell|<frac|r|V<rsub|2>>>|<cell|-<frac|r|V<rsub|3>>>>>>>*<wide|x|\<vect\>>
+  </equation*>
+
+  Take <math|r=10,V<rsub|1>=50,V<rsub|2>=25,V<rsub|3>=50>. Get
+
+  <\equation*>
+    <wide|x|\<vect\>><rprime|'>=<bmatrix|<tformat|<table|<row|<cell|-<frac|1|5>>|<cell|0>|<cell|<frac|1|5>>>|<row|<cell|<frac|1|5>>|<cell|-<frac|2|5>>|<cell|0>>|<row|<cell|0>|<cell|<frac|2|5>>|<cell|-<frac|1|5>>>>>>*<wide|x|\<vect\>>
+  </equation*>
+
+  <\equation*>
+    det <around*|(|A-\<lambda\>*I|)>=<det|<tformat|<table|<row|<cell|-<frac|1|5>-\<lambda\>>|<cell|0>|<cell|<frac|1|5>>>|<row|<cell|<frac|1|5>>|<cell|-<frac|2|5>-\<lambda\>>|<cell|0>>|<row|<cell|0>|<cell|<frac|2|5>>|<cell|-<frac|1|5>-\<lambda\>>>>>>=<around*|(|<frac|2|5>+\<lambda\>|)>*<around*|(|<frac|1|5>+\<lambda\>|)><rsup|2>+<frac|2|125>=\<cdots\>
+  </equation*>
+
+  <\equation*>
+    *\<cdots\>*=-\<lambda\><rsup|3>-<frac|4|5>\<lambda\><rsup|2>-<frac|1|5>\<lambda\>=-\<lambda\>*<around*|(|\<lambda\><rsup|2>+<frac|4|5>\<lambda\>+<frac|1|5>|)>=0
+  </equation*>
+
+  <\equation*>
+    \<lambda\><rsub|1,2,3>=0,-<frac|2|5>\<pm\><frac|1|5>*\<mathi\>
+  </equation*>
 </body>
 
 <\initial>
@@ -5141,54 +5975,58 @@
   <\collection>
     <associate|auto-1|<tuple|?|2>>
     <associate|auto-10|<tuple|2|12>>
-    <associate|auto-11|<tuple|I|15>>
-    <associate|auto-12|<tuple|1|15>>
-    <associate|auto-13|<tuple|1.1|15>>
-    <associate|auto-14|<tuple|2|18>>
-    <associate|auto-15|<tuple|2.1|23>>
-    <associate|auto-16|<tuple|2.2|24>>
+    <associate|auto-11|<tuple|I|16>>
+    <associate|auto-12|<tuple|1|16>>
+    <associate|auto-13|<tuple|1.1|16>>
+    <associate|auto-14|<tuple|2|19>>
+    <associate|auto-15|<tuple|2.1|24>>
+    <associate|auto-16|<tuple|2.2|25>>
     <associate|auto-17|<tuple|II|27>>
     <associate|auto-18|<tuple|3|27>>
-    <associate|auto-19|<tuple|3.1|27>>
+    <associate|auto-19|<tuple|3.1|28>>
     <associate|auto-2|<tuple|?|2>>
-    <associate|auto-20|<tuple|3.2|29>>
-    <associate|auto-21|<tuple|4|30>>
-    <associate|auto-22|<tuple|4.1|33>>
-    <associate|auto-23|<tuple|5|33>>
-    <associate|auto-24|<tuple|5.1|33>>
-    <associate|auto-25|<tuple|5.2|36>>
-    <associate|auto-26|<tuple|5.2.1|37>>
-    <associate|auto-27|<tuple|5.2.2|41>>
-    <associate|auto-28|<tuple|5.3|46>>
-    <associate|auto-29|<tuple|5.3.1|48>>
+    <associate|auto-20|<tuple|3.2|30>>
+    <associate|auto-21|<tuple|4|31>>
+    <associate|auto-22|<tuple|4.1|34>>
+    <associate|auto-23|<tuple|5|34>>
+    <associate|auto-24|<tuple|5.1|34>>
+    <associate|auto-25|<tuple|5.2|37>>
+    <associate|auto-26|<tuple|5.2.1|38>>
+    <associate|auto-27|<tuple|5.2.2|42>>
+    <associate|auto-28|<tuple|5.3|48>>
+    <associate|auto-29|<tuple|5.3.1|49>>
     <associate|auto-3|<tuple|3|4>>
-    <associate|auto-30|<tuple|5.3.2|55>>
-    <associate|auto-31|<tuple|6|63>>
-    <associate|auto-32|<tuple|6.1|63>>
-    <associate|auto-33|<tuple|6.2|66>>
-    <associate|auto-34|<tuple|6.3|67>>
-    <associate|auto-35|<tuple|6.4|68>>
+    <associate|auto-30|<tuple|5.3.2|56>>
+    <associate|auto-31|<tuple|6|64>>
+    <associate|auto-32|<tuple|6.1|64>>
+    <associate|auto-33|<tuple|6.2|67>>
+    <associate|auto-34|<tuple|6.3|68>>
+    <associate|auto-35|<tuple|6.4|69>>
     <associate|auto-36|<tuple|6.4.1|73>>
     <associate|auto-37|<tuple|6.4.2|74>>
-    <associate|auto-38|<tuple|6.4.3|75>>
-    <associate|auto-39|<tuple|6.4.4|75>>
+    <associate|auto-38|<tuple|6.4.3|76>>
+    <associate|auto-39|<tuple|6.4.4|76>>
     <associate|auto-4|<tuple|3|5>>
-    <associate|auto-40|<tuple|6.4.5|77>>
+    <associate|auto-40|<tuple|6.4.5|78>>
+    <associate|auto-41|<tuple|6.4.6|83>>
+    <associate|auto-42|<tuple|6.5|86>>
+    <associate|auto-43|<tuple|6.5.1|86>>
+    <associate|auto-44|<tuple|6.5.2|89>>
     <associate|auto-5|<tuple|3|5>>
     <associate|auto-6|<tuple|3|5>>
     <associate|auto-7|<tuple|3|6>>
-    <associate|auto-8|<tuple|3|6>>
-    <associate|auto-9|<tuple|2|10>>
+    <associate|auto-8|<tuple|3|7>>
+    <associate|auto-9|<tuple|2|11>>
     <associate|exponential-identities|<tuple|1|7>>
-    <associate|first-order-const-ode|<tuple|2|14>>
-    <associate|homo-2nd|<tuple|3|34>>
+    <associate|first-order-const-ode|<tuple|2|15>>
+    <associate|homo-2nd|<tuple|3|35>>
   </collection>
 </references>
 
 <\auxiliary>
   <\collection>
     <\associate|toc>
-      <vspace*|2fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-size|<quote|1.19>|Preface:
+      <vspace*|2fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-size|<quote|1.19>|Preliminary:
       Complex numbers and functions> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-1><vspace|1fn>
 
@@ -5349,6 +6187,22 @@
       <with|par-left|<quote|2tab>|6.4.5<space|2spc>Review of eigenvalues and
       eigenvectors <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-40>>
+
+      <with|par-left|<quote|2tab>|6.4.6<space|2spc>Diagonalizability and
+      eigendecomposition <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-41>>
+
+      <with|par-left|<quote|1tab>|6.5<space|2spc>First-order systems of
+      linear ODEs <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-42>>
+
+      <with|par-left|<quote|2tab>|6.5.1<space|2spc>Homogeneous system
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-43>>
+
+      <with|par-left|<quote|2tab>|6.5.2<space|2spc>Real coefficient matrix
+      with non-real eigenvalues <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-44>>
     </associate>
   </collection>
 </auxiliary>
