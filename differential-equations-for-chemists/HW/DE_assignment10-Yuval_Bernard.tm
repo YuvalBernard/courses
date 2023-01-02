@@ -385,8 +385,6 @@
 
   <section*|Page 390>
 
-  Questions 2,10 (no phase diagrams)
-
   <underline|Question 2>
 
   <\equation*>
@@ -499,8 +497,8 @@
 
 <\references>
   <\collection>
-    <associate|auto-1|<tuple|?|1|../../../../../.TeXmacs/texts/scratch/no_name_2.tm>>
-    <associate|auto-2|<tuple|2|2|../../../../../.TeXmacs/texts/scratch/no_name_2.tm>>
+    <associate|auto-1|<tuple|?|1>>
+    <associate|auto-2|<tuple|2|7>>
   </collection>
 </references>
 
