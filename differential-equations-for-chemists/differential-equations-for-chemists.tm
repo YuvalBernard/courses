@@ -16,7 +16,7 @@
   <doc-data|<doc-title|Differential Equations for Chemists>>
 
   <\table-of-contents|toc>
-    <vspace*|2fn><with|font-series|bold|math-font-series|bold|font-size|1.19|Preface:
+    <vspace*|2fn><with|font-series|bold|math-font-series|bold|font-size|1.19|Preliminary:
     Complex numbers and functions> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-1><vspace|1fn>
 
@@ -247,8 +247,8 @@
   <underline|De Moivre's formula:>
 
   <\enumerate-numeric>
-    <item><math|z<rsup|n>=r<rsup|n><around*|(|cos n\<theta\>+\<mathi\> sin
-    n\<theta\>|)>,<application-space|1em>n\<in\>\<bbb-N\>> (integer)
+    <item><math|z<rsup|n>=r<rsup|n><around*|(|cos n \<theta\>+\<mathi\> sin n
+    \<theta\>|)>,<application-space|1em>n\<in\>\<bbb-N\>> (integer)
 
     <item> if <math|z<rsup|n>=r<around*|(|cos \<theta\>+\<mathi\> sin
     \<theta\>|)>> then:
@@ -3642,13 +3642,13 @@
   </equation*>
 
   <\equation*>
-    f<around*|(|t|)>=<choice|<tformat|<table|<row|<cell|5t,<application-space|1em>0\<leq\>t\<leq\>\<mathpi\>>>|<row|<cell|5*<around*|(|2\<mathpi\>-t|)>,<application-space|1em>\<mathpi\>\<leq\>t\<leq\>2\<mathpi\>>>|<row|<cell|0,<application-space|1em>t\<gtr\>2\<mathpi\>>>>>>
+    f<around*|(|t|)>=<choice|<tformat|<table|<row|<cell|5*t,<application-space|1em>0\<leq\>t\<leq\>\<mathpi\>>>|<row|<cell|5*<around*|(|2*\<mathpi\>-t|)>,<application-space|1em>\<mathpi\>\<leq\>t\<leq\>2*\<mathpi\>>>|<row|<cell|0,<application-space|1em>t\<gtr\>2*\<mathpi\>>>>>>
   </equation*>
 
   <math|f<around*|(|t|)>> looks like this:
 
   <\padded-center>
-    <with|gr-mode|<tuple|group-edit|edit-props>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|cartesian|<point|0|0>|1>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-auto-crop|true|<graphics||<with|color|blue|<line|<point|0|0>|<point|2.0|3.0>|<point|4.0|0.0>>>|<math-at|\<mathpi\>|<point|2|-0.3>>|<math-at|2\<mathpi\>|<point|4.0|-0.4>>|<with|color|blue|<line|<point|4|0.0109472>|<point|7.0|0.0>>>|<math-at|5\<mathpi\>|<point|-0.6|3>>>>
+    <with|gr-mode|<tuple|group-edit|edit-props>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|cartesian|<point|0|0>|1>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-auto-crop|true|<graphics||<with|color|blue|<line|<point|0|0>|<point|2.0|3.0>|<point|4.0|0.0>>>|<math-at|\<mathpi\>|<point|2|-0.3>>|<math-at|2*\<mathpi\>|<point|4.0|-0.4>>|<with|color|blue|<line|<point|4|0.0109472>|<point|7.0|0.0>>>|<math-at|5*\<mathpi\>|<point|-0.6|3>>>>
   </padded-center>
 
   Solve associated homogeneous equation:
@@ -3664,31 +3664,31 @@
   and get
 
   <\equation*>
-    A*t+B=5t\<rightarrow\>A=5,B=0
+    A*t+B=5*t\<rightarrow\>A=5,B=0
   </equation*>
 
   General solution on <math|<around*|[|0,\<mathpi\>|]>:x<around*|(|t|)>=a<rsub|1>*cos
-  t+a<rsub|2>*sin t+5t>. Inserting <math|t=0> gives
+  t+a<rsub|2>*sin t+5*t>. Inserting <math|t=0> gives
   <math|a<rsub|1>,a<rsub|2>>.
 
-  Particular solution on <math|<around*|[|\<mathpi\>,2\<mathpi\>|]>:> Guess
+  Particular solution on <math|<around*|[|\<mathpi\>,2*\<mathpi\>|]>>: Guess
   again <math|u=A*t+B>, substitute and get
 
   <\equation*>
-    A*t+B=10\<mathpi\>-5t\<rightarrow\>A=-5,B=10\<mathpi\>
+    A*t+B=10*\<mathpi\>-5*t\<rightarrow\>A=-5,B=10*\<mathpi\>
   </equation*>
 
-  General solution on <math|<around*|[|\<mathpi\>,2\<mathpi\>|]>:y<around*|(|t|)>=b<rsub|1>*cos
-  t+b<rsub|2>*sin t-5t+10\<mathpi\>>.
+  General solution on <math|<around*|[|\<mathpi\>,2*\<mathpi\>|]>:y<around*|(|t|)>=b<rsub|1>*cos
+  t+b<rsub|2>*sin t-5*t+10*\<mathpi\>>.
 
-  General solution on <math|<around*|[|2\<mathpi\>,\<infty\>|)>:z<around*|(|t|)>=c<rsub|1>*cos
+  General solution on <math|<around*|[|2*\<mathpi\>,\<infty\>|)>:z<around*|(|t|)>=c<rsub|1>*cos
   t+c<rsub|2>*sin t>.
 
   We want a unique solution satisfying the ICs, which is twice differentiable
   (equivalent to order of the ODE). We need to determine the coefficients
   <math|a<rsub|1,2>,b<rsub|1,2>,c<rsub|1,2>> so that this condition holds.
 
-  Setting <math|t=0:>
+  Setting <math|t=0>:
 
   <\equation*>
     x<around*|(|0|)>=a<rsub|1>=0
@@ -3699,21 +3699,21 @@
   </equation*>
 
   <\equation*>
-    x<around*|(|t|)>=-5*sin t+5t
+    x<around*|(|t|)>=-5*sin t+5*t
   </equation*>
 
   Now we need to make sure that <math|x<around*|(|\<mathpi\>|)>=y<around*|(|\<mathpi\>|)>,x<rprime|'><around*|(|\<mathpi\>|)>=y<rprime|'><around*|(|\<mathpi\>|)>>.
 
   <\equation*>
-    x<around*|(|\<mathpi\>|)>=5\<mathpi\>,x<rprime|'><around*|(|\<mathpi\>|)>=10
+    x<around*|(|\<mathpi\>|)>=5*\<mathpi\>,x<rprime|'><around*|(|\<mathpi\>|)>=10
   </equation*>
 
   Set \Pinitial conditions\Q for <math|y<around*|(|t|)>>:
-  <math|y<around*|(|\<mathpi\>|)>=5\<mathpi\>,y<rprime|'><around*|(|\<mathpi\>|)>=10>.
+  <math|y<around*|(|\<mathpi\>|)>=5*\<mathpi\>,y<rprime|'><around*|(|\<mathpi\>|)>=10>.
 
   <\equation*>
     y<around*|(|\<mathpi\>|)>=b<rsub|1>*cos \<mathpi\>+b<rsub|2>*sin
-    \<mathpi\>-5\<mathpi\>+10\<mathpi\>=-b<rsub|1>+5\<mathpi\>\<rightarrow\>b<rsub|1>=0
+    \<mathpi\>-5*\<mathpi\>+10*\<mathpi\>=-b<rsub|1>+5*\<mathpi\>\<rightarrow\>b<rsub|1>=0
   </equation*>
 
   <\equation*>
@@ -3721,20 +3721,20 @@
   </equation*>
 
   <\equation*>
-    y<around*|(|t|)>=-15*sin t-5t+10\<mathpi\>
+    y<around*|(|t|)>=-15*sin t-5*t+10*\<mathpi\>
   </equation*>
 
-  Make sure <math|y<around*|(|2\<mathpi\>|)>=z<around*|(|2\<mathpi\>|)>,y<rprime|'><around*|(|2\<mathpi\>|)>=z<rprime|'><around*|(|2\<mathpi\>|)>>.
-  <math|y<around*|(|2\<mathpi\>|)>=0,y<rprime|'><around*|(|2\<mathpi\>|)>=-20>.
+  Make sure <math|y<around*|(|2*\<mathpi\>|)>=z<around*|(|2*\<mathpi\>|)>,y<rprime|'><around*|(|2*\<mathpi\>|)>=z<rprime|'><around*|(|2*\<mathpi\>|)>>.
+  <math|y<around*|(|2*\<mathpi\>|)>=0,y<rprime|'><around*|(|2*\<mathpi\>|)>=-20>.
 
   <\equation*>
-    z<around*|(|2\<mathpi\>|)>=c<rsub|1>*cos 2\<mathpi\>+c<rsub|2>*sin
-    2\<mathpi\>\<rightarrow\>c<rsub|1>=0
+    z<around*|(|2*\<mathpi\>|)>=c<rsub|1>*cos 2*\<mathpi\>+c<rsub|2>*sin
+    2*\<mathpi\>\<rightarrow\>c<rsub|1>=0
   </equation*>
 
   <\equation*>
-    z<rprime|'><around*|(|2\<mathpi\>|)>=-c<rsub|1>*sin
-    2\<mathpi\>+c<rsub|2>*cos 2\<mathpi\>\<rightarrow\>c<rsub|2>=-20
+    z<rprime|'><around*|(|2*\<mathpi\>|)>=-c<rsub|1>*sin
+    2*\<mathpi\>+c<rsub|2>*cos 2*\<mathpi\>\<rightarrow\>c<rsub|2>=-20
   </equation*>
 
   <\equation*>
@@ -3745,9 +3745,9 @@
 
   <\equation*>
     u<around*|(|t|)>=<choice|<tformat|<table|<row|<cell|-5*sin
-    t+5t,<application-space|1em>0\<leq\>t\<leq\>\<mathpi\>>>|<row|<cell|-15*sin
-    t-5t+10\<mathpi\>,<application-space|1em>\<mathpi\>\<less\>t\<leq\>2\<mathpi\>>>|<row|<cell|-20*sin
-    t,<application-space|1em>t\<gtr\>2\<mathpi\>>>>>>
+    t+5*t,<application-space|1em>0\<leq\>t\<leq\>\<mathpi\>>>|<row|<cell|-15*sin
+    t-5*t+10*\<mathpi\>,<application-space|1em>\<mathpi\>\<less\>t\<leq\>2*\<mathpi\>>>|<row|<cell|-20*sin
+    t,<application-space|1em>t\<gtr\>2*\<mathpi\>>>>>>
   </equation*>
 
   We constructed <math|u<around*|(|t|)>> so that it is continuous everywhere.
@@ -3756,12 +3756,12 @@
   <\equation*>
     u<rprime|''><around*|(|t|)>=<choice|<tformat|<table|<row|<cell|5*sin
     t,<application-space|1em>0\<leq\>t\<leq\>\<mathpi\>>>|<row|<cell|15*sin
-    t,<application-space|1em>\<mathpi\>\<less\>t\<leq\>2\<mathpi\>>>|<row|<cell|20*sin
-    t,<application-space|1em>t\<gtr\>2\<mathpi\>>>>>>
+    t,<application-space|1em>\<mathpi\>\<less\>t\<leq\>2*\<mathpi\>>>|<row|<cell|20*sin
+    t,<application-space|1em>t\<gtr\>2*\<mathpi\>>>>>>
   </equation*>
 
   The second derivative is continuous (which is what we expected). Note
-  though that at <math|\<mathpi\>> and <math|2\<mathpi\>>,
+  though that at <math|\<mathpi\>> and <math|2*\<mathpi\>>,
   <math|u<rprime|'''><around*|(|t|)>> does not exist!
 
   Our method of indeterminate coefficients works also for a split RHS case,
@@ -4074,7 +4074,7 @@
 
     <\equation*>
       u<around*|(|t|)>=\<mathe\><rsup|-<frac|\<gamma\>|2*m>*t>*<around*|(|A*cos
-      <around*|(|\<mu\>t|)>+B*sin <around*|(|\<mu\>t|)>|)>
+      <around*|(|\<mu\>*t|)>+B*sin <around*|(|\<mu\>*t|)>|)>
     </equation*>
 
     Here we have vibrations but as <math|t\<rightarrow\>\<infty\>> they die
@@ -4083,8 +4083,8 @@
     As before we can rewrite this is
 
     <\equation*>
-      u<around*|(|t|)>=R*\<mathe\><rsup|-<frac|\<gamma\>|2m>t>*cos
-      <around*|(|\<mu\>t-\<delta\>|)>
+      u<around*|(|t|)>=R*\<mathe\><rsup|-<frac|\<gamma\>|2*m>*t>*cos
+      <around*|(|\<mu\>*t-\<delta\>|)>
     </equation*>
 
     This is called <with|font-shape|italic|damped vibration>, or
@@ -4166,18 +4166,18 @@
   </equation*>
 
   <math|F<around*|(|t|)>\<neq\>0> and is periodic. For example,
-  <math|F<around*|(|t|)>=F<rsub|0>*cos \<omega\>t>.
+  <math|F<around*|(|t|)>=F<rsub|0>*cos \<omega\>*t>.
 
   <\enumerate>
     <item>No damping. <math|\<gamma\>=0>
 
     <\equation*>
-      m*u<rprime|''>+k*u=F<rsub|0>*cos \<omega\>t
+      m*u<rprime|''>+k*u=F<rsub|0>*cos \<omega\>*t
     </equation*>
 
     Recall that solution to the homogeneous equation was <math|A*sin
-    \<omega\><rsub|0>t+B*cos \<omega\><rsub|0>t>,
-    <math|\<omega\><rsub|0>=<sqrt|<frac|k|m>>.>
+    \<omega\><rsub|0>*t+B*cos \<omega\><rsub|0>*t>,
+    <math|\<omega\><rsub|0>=<sqrt|<frac|k|m>>>.
 
     <\enumerate-Roman>
       <item><math|\<omega\><rsub|0>\<neq\>\<omega\>>. Guess particular
@@ -4185,14 +4185,14 @@
 
       <\eqnarray*>
         <tformat|<table|<row|<cell|u>|<cell|=>|<cell|c<rsub|1>*cos
-        \<omega\>t+c<rsub|2>*sin \<omega\>t>>|<row|<cell|u<rprime|''>>|<cell|=>|<cell|-c<rsub|1>*\<omega\><rsup|2>*cos
-        \<omega\>t-c<rsub|2>*\<omega\><rsup|2>*sin \<omega\>t>>>>
+        \<omega\>*t+c<rsub|2>*sin \<omega\>*t>>|<row|<cell|u<rprime|''>>|<cell|=>|<cell|-c<rsub|1>*\<omega\><rsup|2>*cos
+        \<omega\>*t-c<rsub|2>*\<omega\><rsup|2>*sin \<omega\>*t>>>>
       </eqnarray*>
 
       <\equation*>
         -m*\<omega\><rsup|2>*<around*|(|c<rsub|1>*cos
-        \<omega\>t+c<rsub|2>*sin \<omega\>t|)>+k*<around*|(|c<rsub|1>*cos
-        \<omega\>t+c<rsub|2>*sin \<omega\>t|)>=F<rsub|0>*cos \<omega\>t
+        \<omega\>*t+c<rsub|2>*sin \<omega\>*t|)>+k*<around*|(|c<rsub|1>*cos
+        \<omega\>*t+c<rsub|2>*sin \<omega\>*t|)>=F<rsub|0>*cos \<omega\>*t
       </equation*>
 
       Equate coefficient on both sides.
@@ -4212,13 +4212,13 @@
 
       <\equation*>
         u<around*|(|t|)>=<frac|F<rsub|0>|k-m*\<omega\><rsup|2>>*cos
-        \<omega\>t+A*sin \<omega\><rsub|0>t+B*cos \<omega\><rsub|0>t
+        \<omega\>*t+A*sin \<omega\><rsub|0>*t+B*cos \<omega\><rsub|0>*t
       </equation*>
 
       The behavior of solution depends on the relation between
       <math|\<omega\><rsub|0>> and <math|\<omega\>>.
       <math|k-m*\<omega\><rsup|2>=m*<around*|(|\<omega\><rsub|0>-\<omega\><rsup|2>|)>>.
-      If very close, coefficient of <math|cos \<omega\>t> is very large. In
+      If very close, coefficient of <math|cos \<omega\>*t> is very large. In
       other words, the oscillation amplitude will increase as the force
       oscillation frequency approaches the natural frequency of the spring.
 
@@ -4233,14 +4233,14 @@
 
       <\equation*>
         u<around*|(|t|)>=<frac|F<rsub|0>|m*<around*|(|\<omega\><rsub|0><rsup|2>-\<omega\><rsup|2>|)>>*<around*|(|cos
-        \<omega\>t-cos \<omega\><rsub|0>t|)>
+        \<omega\>*t-cos \<omega\><rsub|0>*t|)>
       </equation*>
 
       Using trig. identities we can rewrite solution as a product of sine
       functions:
 
       <\equation*>
-        u<around*|(|t|)>=<frac|2F<rsub|0>|m*<around*|(|\<omega\><rsub|0><rsup|2>-\<omega\><rsup|2>|)>>*sin
+        u<around*|(|t|)>=<frac|2*F<rsub|0>|m*<around*|(|\<omega\><rsub|0><rsup|2>-\<omega\><rsup|2>|)>>*sin
         <around*|(|<frac|\<omega\><rsub|0>-\<omega\>|2>*t|)>*sin
         <around*|(|<frac|\<omega\><rsub|0>+\<omega\>|2>*t|)>
       </equation*>
@@ -4256,14 +4256,14 @@
       <around*|(|<frac|\<omega\><rsub|0>+\<omega\>|2>*t|)>> term is
       responsible to the inner oscillations.
 
-      <item><math|\<omega\><rsub|>=\<omega\><rsub|0>>. External force is
-      applied at resonance.
+      <item><math|\<omega\><rsub|\<nosymbol\>>=\<omega\><rsub|0>>. External
+      force is applied at resonance.
 
       <\equation*>
-        m*u<rprime|''>+k*u=F<rsub|0>*cos \<omega\><rsub|0>t
+        m*u<rprime|''>+k*u=F<rsub|0>*cos \<omega\><rsub|0>*t
       </equation*>
 
-      Guess a particular solution: <math|c<rsub|1>t*cos
+      Guess a particular solution: <math|c<rsub|1>*t*cos
       \<omega\><rsub|0>*t+c<rsub|2>*t*sin \<omega\><rsub|0>*t>.
 
       General solution:
@@ -4310,7 +4310,7 @@
     This is a linear 2nd order system of ODEs. In matrix form:
 
     <\equation*>
-      <matrix|<tformat|<table|<row|<cell|<rsub|>x<rsub|1><rprime|''>>>|<row|<cell|x<rsub|2><rprime|''>>>>>>=<matrix|<tformat|<table|<row|<cell|-<frac|<around*|(|k<rsub|1>+k<rsub|2>|)>|m<rsub|1>>>|<cell|<frac|k<rsub|2>|m<rsub|1>>>>|<row|<cell|<frac|k<rsub|2>|m<rsub|2>>>|<cell|-<frac|k<rsub|2>+k<rsub|3>|m<rsub|2>>>>>>><matrix|<tformat|<table|<row|<cell|<rsub|>x<rsub|1>>>|<row|<cell|x<rsub|2>>>>>>+<matrix|<tformat|<table|<row|<cell|<frac|F<rsub|1><around*|(|t|)>|m<rsub|1>>>>|<row|<cell|<frac|F<rsub|2><around*|(|t|)>|m<rsub|2>>>>>>>
+      <matrix|<tformat|<table|<row|<cell|<rsub|\<nosymbol\>>x<rsub|1><rprime|''>>>|<row|<cell|x<rsub|2><rprime|''>>>>>>=<matrix|<tformat|<table|<row|<cell|-<frac|<around*|(|k<rsub|1>+k<rsub|2>|)>|m<rsub|1>>>|<cell|<frac|k<rsub|2>|m<rsub|1>>>>|<row|<cell|<frac|k<rsub|2>|m<rsub|2>>>|<cell|-<frac|k<rsub|2>+k<rsub|3>|m<rsub|2>>>>>>><matrix|<tformat|<table|<row|<cell|<rsub|\<nosymbol\>>x<rsub|1>>>|<row|<cell|x<rsub|2>>>>>>+<matrix|<tformat|<table|<row|<cell|<frac|F<rsub|1><around*|(|t|)>|m<rsub|1>>>>|<row|<cell|<frac|F<rsub|2><around*|(|t|)>|m<rsub|2>>>>>>>
     </equation*>
 
     <item>Parallel electrical circuit.
@@ -4321,8 +4321,7 @@
 
     <\equation*>
       <choice|<tformat|<table|<row|<cell|V<around*|(|t|)>=<text| voltage at
-      time <math|t>>>>|<row|<cell|I<around*|(|t|)>=<text| current at time
-      >t>>>>>
+      time >t>>|<row|<cell|I<around*|(|t|)>=<text| current at time >t>>>>>
     </equation*>
 
     Get:
@@ -4400,7 +4399,7 @@
   <math|f<rsub|0>,\<ldots\>,f<rsub|n>> are linear in
   <math|y<rsub|1>,\<ldots\>,y<rsub|n>>.
 
-  So <math|f<rsub|i><around*|(|x,y<rsub|1>,\<ldots\>,y<rsub|n>|)>=p<rsub|i1><around*|(|x|)>*y<rsub|1>+p<rsub|i<rsub|2>><around*|(|x|)>*y<rsub|2>+\<cdots\>+p<rsub|i<rsub|n>><around*|(|x|)>*y<rsub|n>+g<rsub|i><around*|(|x|)>>
+  So <math|f<rsub|i><around*|(|x,y<rsub|1>,\<ldots\>,y<rsub|n>|)>=p<rsub|i*1><around*|(|x|)>*y<rsub|1>+p<rsub|i<rsub|2>><around*|(|x|)>*y<rsub|2>+\<cdots\>+p<rsub|i<rsub|n>><around*|(|x|)>*y<rsub|n>+g<rsub|i><around*|(|x|)>>
   where <math|p<rsub|i<rsub|1>>,\<ldots\>,p<rsub|i<rsub|n>>> are functions of
   <math|x>.
 
@@ -4419,14 +4418,14 @@
   <underline|Example>
 
   <\equation*>
-    <choice|<tformat|<table|<row|<cell|y<rsub|1><rprime|'>=x<rsup|2>y<rsub|1>+\<mathe\><rsup|x>y<rsub|2>+sin
-    x*y<rsup|><rsub|3>+x<rsup|2>>>|<row|<cell|y<rsub|2><rprime|'>=x*y<rsub|2>+y<rsub|3>+\<mathe\><rsup|2x>>>|<row|<cell|y<rsub|3><rprime|'>=<sqrt|x>*y<rsub|1>+2y<rsub|3>+ln
+    <choice|<tformat|<table|<row|<cell|y<rsub|1><rprime|'>=x<rsup|2>*y<rsub|1>+\<mathe\><rsup|x>*y<rsub|2>+sin
+    x*y<rsup|\<nosymbol\>><rsub|3>+x<rsup|2>>>|<row|<cell|y<rsub|2><rprime|'>=x*y<rsub|2>+y<rsub|3>+\<mathe\><rsup|2*x>>>|<row|<cell|y<rsub|3><rprime|'>=<sqrt|x>*y<rsub|1>+2*y<rsub|3>+ln
     x>>>>>
   </equation*>
 
   <\equation*>
     <bmatrix|<tformat|<table|<row|<cell|y<rsub|1>>>|<row|<cell|y<rsub|2>>>|<row|<cell|y<rsub|3>>>>>><rprime|'>=<bmatrix|<tformat|<table|<row|<cell|x<rsup|2>>|<cell|\<mathe\><rsup|x>>|<cell|sin
-    x>>|<row|<cell|0>|<cell|x>|<cell|1>>|<row|<cell|<sqrt|x>>|<cell|0>|<cell|2>>>>><bmatrix|<tformat|<table|<row|<cell|y<rsub|1>>>|<row|<cell|y<rsub|2>>>|<row|<cell|y<rsub|3>>>>>>+<bmatrix|<tformat|<table|<row|<cell|x<rsup|2>>>|<row|<cell|\<mathe\><rsup|2x>>>|<row|<cell|ln
+    x>>|<row|<cell|0>|<cell|x>|<cell|1>>|<row|<cell|<sqrt|x>>|<cell|0>|<cell|2>>>>><bmatrix|<tformat|<table|<row|<cell|y<rsub|1>>>|<row|<cell|y<rsub|2>>>|<row|<cell|y<rsub|3>>>>>>+<bmatrix|<tformat|<table|<row|<cell|x<rsup|2>>>|<row|<cell|\<mathe\><rsup|2*x>>>|<row|<cell|ln
     x>>>>>
   </equation*>
 
@@ -4462,9 +4461,8 @@
   <\theorem*>
     \;
 
-    <em|The <em|cardinality> (number of elements in a group) of a basis is
-    determined uniquely. This cardinality is the <em|dimension> of the
-    space.>
+    <em|The cardinality (number of elements in a group) of a basis is
+    determined uniquely. This cardinality is the dimension of the space.>
   </theorem*>
 
   <\theorem*>
@@ -4514,7 +4512,7 @@
   We can see that <math|y<rsub|1>=sin x,y<rsub|2>=cos x> solve<rigid|> this
   system.
 
-  <underline|Another example>: <math|y<rsup|<around*|(|3|)>>-2y<rprime|''>+3y<rprime|'>+4y=sin
+  <underline|Another example>: <math|y<rsup|<around*|(|3|)>>-2*y<rprime|''>+3*y<rprime|'>+4*y=sin
   x>
 
   This is equivalent to the following <math|3\<times\>3> system:
@@ -4526,7 +4524,7 @@
   Get:
 
   <\equation*>
-    <choice|<tformat|<table|<row|<cell|y<rsub|1><rprime|'>=y<rsub|2>>>|<row|<cell|y<rsub|2><rprime|'>=y<rsub|3>>>|<row|<cell|y<rsub|3><rprime|'>=-4y<rsub|1>+-3y<rsub|2>+2y<rsub|3>+sin
+    <choice|<tformat|<table|<row|<cell|y<rsub|1><rprime|'>=y<rsub|2>>>|<row|<cell|y<rsub|2><rprime|'>=y<rsub|3>>>|<row|<cell|y<rsub|3><rprime|'>=-4*y<rsub|1>+-3*y<rsub|2>+2*y<rsub|3>+sin
     x>>>>>
   </equation*>
 
@@ -4540,7 +4538,7 @@
   <underline|Another example>
 
   <\equation*>
-    y<rprime|'''>+7x*y<rprime|''>-sin x*y<rprime|'>+4y=0
+    y<rprime|'''>+7*x*y<rprime|''>-sin x*y<rprime|'>+4*y=0
   </equation*>
 
   We define\ 
@@ -4552,8 +4550,8 @@
   and obtain the following system:
 
   <\equation*>
-    <choice|<tformat|<table|<row|<cell|y<rsub|1><rprime|'>=y<rsub|2>>>|<row|<cell|y<rsub|2><rprime|'>=y<rsub|3>>>|<row|<cell|y<rsub|3><rprime|'>=y<rprime|'''>=-4y<rsub|1>+sin
-    x*y<rsub|2>-7x*y<rsub|3>>>>>>
+    <choice|<tformat|<table|<row|<cell|y<rsub|1><rprime|'>=y<rsub|2>>>|<row|<cell|y<rsub|2><rprime|'>=y<rsub|3>>>|<row|<cell|y<rsub|3><rprime|'>=y<rprime|'''>=-4*y<rsub|1>+sin
+    x*y<rsub|2>-7*x*y<rsub|3>>>>>>
   </equation*>
 
   If we solve the system then <math|y=y<rsub|1>> will solve the ODE.
@@ -4563,7 +4561,7 @@
   A system of equations of the form:
 
   <\equation*>
-    <choice|<tformat|<table|<row|<cell|a<rsub|11>*x<rsub|1>+\<cdots\>+a<rsub|1n>*x<rsub|n>=b<rsub|1>>>|<row|<cell|\<vdots\>>>|<row|<cell|a<rsub|m1>*x<rsub|1>+\<cdots\>+a<rsub|m\<comma\>n>*x<rsub|n>=b<rsub|n>>>>>>
+    <choice|<tformat|<table|<row|<cell|a<rsub|11>*x<rsub|1>+\<cdots\>+a<rsub|1*n>*x<rsub|n>=b<rsub|1>>>|<row|<cell|\<vdots\>>>|<row|<cell|a<rsub|m*1>*x<rsub|1>+\<cdots\>+a<rsub|m\<comma\>n>*x<rsub|n>=b<rsub|n>>>>>>
   </equation*>
 
   or in matrix form:
@@ -4599,10 +4597,10 @@
     <item>Permute rows. (<math|R<rsub|i>\<leftrightarrow\>R<rsub|j>>)
 
     <item>Replace row <math|i> by a non-zero multiple of itself.
-    (<math|\<alpha\>R<rsub|i>\<rightarrow\>R<rsub|i>,<application-space|1em>\<alpha\>\<neq\>0>)
+    (<math|\<alpha\>*R<rsub|i>\<rightarrow\>R<rsub|i>,<application-space|1em>\<alpha\>\<neq\>0>)
 
     <item>Add a multiple of row <math|i> to row <math|j>.
-    \ (<math|\<alpha\>R<rsub|i>+R<rsub|j>\<rightarrow\>R<rsub|j>>, any
+    \ (<math|\<alpha\>*R<rsub|i>+R<rsub|j>\<rightarrow\>R<rsub|j>>, any
     <math|\<alpha\>>)
   </enumerate>
 
@@ -4619,7 +4617,7 @@
       subspaces:
 
       <\enumerate>
-        <item>Set of solutions to <math|*A*<wide|x|\<vect\>>=<wide|0|\<vect\>>>
+        <item>Set of solutions to <math|A*<wide|x|\<vect\>>=<wide|0|\<vect\>>>
         is a subspace of <math|\<bbb-R\><rsup|n>> (= nullspace of <math|A>).
 
         Set of solutions to <math|A*<wide|x|\<vect\>>=<wide|b|\<vect\>>>
@@ -4664,13 +4662,13 @@
   We want to express the solution in terms of the independent variables.
 
   <\eqnarray*>
-    <tformat|<table|<row|<cell|-x<rsub|5>+4x<rsub|6>>|<cell|=>|<cell|-3\<rightarrow\>x<rsub|5>=4x<rsub|6>+3>>|<row|<cell|3x<rsub|4>+x<rsub|5>+2x<rsub|6>>|<cell|=>|<cell|1\<rightarrow\>x<rsub|4>=<frac|1|3><around*|(|1-x<rsub|5>-2x<rsub|6>|)>=<frac|1|3><around*|(|1-<around*|(|4x<rsub|6>+3|)>-2x<rsub|6>|)>=-2x<rsub|6>-<frac|2|3>>>|<row|<cell|x<rsub|2>+2x<rsub|3>-x<rsub|4>+4x<rsub|6>>|<cell|=>|<cell|0\<rightarrow\>x<rsub|2>=-2x<rsub|3>+x<rsub|4>-4x<rsub|6>=\<cdots\>=-2x<rsub|3>-6x<rsub|6>-<frac|2|3>>>>>
+    <tformat|<table|<row|<cell|-x<rsub|5>+4*x<rsub|6>>|<cell|=>|<cell|-3\<rightarrow\>x<rsub|5>=4*x<rsub|6>+3>>|<row|<cell|3*x<rsub|4>+x<rsub|5>+2*x<rsub|6>>|<cell|=>|<cell|1\<rightarrow\>x<rsub|4>=<frac|1|3><around*|(|1-x<rsub|5>-2*x<rsub|6>|)>=<frac|1|3><around*|(|1-<around*|(|4*x<rsub|6>+3|)>-2*x<rsub|6>|)>=-2*x<rsub|6>-<frac|2|3>>>|<row|<cell|x<rsub|2>+2*x<rsub|3>-x<rsub|4>+4*x<rsub|6>>|<cell|=>|<cell|0\<rightarrow\>x<rsub|2>=-2*x<rsub|3>+x<rsub|4>-4*x<rsub|6>=\<cdots\>=-2*x<rsub|3>-6*x<rsub|6>-<frac|2|3>>>>>
   </eqnarray*>
 
   General solution:
 
   <\equation*>
-    <bmatrix|<tformat|<table|<row|<cell|x<rsub|1>>>|<row|<cell|-2x<rsub|3>-<frac|2|3>-6x<rsub|6>>>|<row|<cell|x<rsub|3>>>|<row|<cell|-2x<rsub|6>-<frac|2|3>>>|<row|<cell|4x<rsub|6>+3>>|<row|<cell|x<rsub|6>>>>>>=x<rsub|1><bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|0>>|<row|<cell|0>>|<row|<cell|0>>|<row|<cell|0>>|<row|<cell|0>>>>>+x<rsub|3><bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|-2>>|<row|<cell|1>>|<row|<cell|0>>|<row|<cell|0>>|<row|<cell|0>>>>>+x<rsub|6><bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|-6>>|<row|<cell|0>>|<row|<cell|-2>>|<row|<cell|4>>|<row|<cell|1>>>>>+<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|-<frac|2|3>>>|<row|<cell|0>>|<row|<cell|-<frac|2|3>>>|<row|<cell|3>>|<row|<cell|0>>>>>,<application-space|1em>x<rsub|1>,x<rsub|3>,x<rsub|6>\<in\>\<bbb-R\>
+    <bmatrix|<tformat|<table|<row|<cell|x<rsub|1>>>|<row|<cell|-2*x<rsub|3>-<frac|2|3>-6*x<rsub|6>>>|<row|<cell|x<rsub|3>>>|<row|<cell|-2*x<rsub|6>-<frac|2|3>>>|<row|<cell|4*x<rsub|6>+3>>|<row|<cell|x<rsub|6>>>>>>=x<rsub|1><bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|0>>|<row|<cell|0>>|<row|<cell|0>>|<row|<cell|0>>|<row|<cell|0>>>>>+x<rsub|3><bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|-2>>|<row|<cell|1>>|<row|<cell|0>>|<row|<cell|0>>|<row|<cell|0>>>>>+x<rsub|6><bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|-6>>|<row|<cell|0>>|<row|<cell|-2>>|<row|<cell|4>>|<row|<cell|1>>>>>+<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|-<frac|2|3>>>|<row|<cell|0>>|<row|<cell|-<frac|2|3>>>|<row|<cell|3>>|<row|<cell|0>>>>>,<application-space|1em>x<rsub|1>,x<rsub|3>,x<rsub|6>\<in\>\<bbb-R\>
   </equation*>
 
   Note that the last vector solves the inhomogeneous equation, and the first
@@ -4685,7 +4683,7 @@
   </equation*>
 
   <\equation*>
-    <tabular|<tformat|<table|<row|<cell|-x<rsub|5>+4x<rsub|6>>|<cell|=>|<cell|0\<rightarrow\>x<rsub|5>=4x<rsub|6>>>|<row|<cell|3x<rsub|4>+x<rsub|5>+2x<rsub|6>>|<cell|=>|<cell|0\<rightarrow\>x<rsub|4>=-2x<rsub|y>>>|<row|<cell|x<rsub|2>+2x<rsub|3>-x<rsub|4>+4x<rsub|6>>|<cell|=>|<cell|0\<rightarrow\>x<rsub|2>=-2x<rsub|3>-6x<rsub|3>>>>>>
+    <tabular|<tformat|<table|<row|<cell|-x<rsub|5>+4*x<rsub|6>>|<cell|=>|<cell|0\<rightarrow\>x<rsub|5>=4*x<rsub|6>>>|<row|<cell|3*x<rsub|4>+x<rsub|5>+2*x<rsub|6>>|<cell|=>|<cell|0\<rightarrow\>x<rsub|4>=-2*x<rsub|y>>>|<row|<cell|x<rsub|2>+2*x<rsub|3>-x<rsub|4>+4*x<rsub|6>>|<cell|=>|<cell|0\<rightarrow\>x<rsub|2>=-2*x<rsub|3>-6*x<rsub|3>>>>>>
   </equation*>
 
   The set of solutions (nullspace of the matrix) is a subspace of
@@ -4722,7 +4720,7 @@
   solution. We had the general solution:
 
   <\equation*>
-    <bmatrix|<tformat|<table|<row|<cell|x<rsub|1>>>|<row|<cell|-2x<rsub|3>-<frac|2|3>-6x<rsub|6>>>|<row|<cell|x<rsub|3>>>|<row|<cell|-2x<rsub|6>-<frac|2|3>>>|<row|<cell|4x<rsub|6>+3>>|<row|<cell|x<rsub|6>>>>>>=x<rsub|1><bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|0>>|<row|<cell|0>>|<row|<cell|0>>|<row|<cell|0>>|<row|<cell|0>>>>>+x<rsub|3><bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|-2>>|<row|<cell|1>>|<row|<cell|0>>|<row|<cell|0>>|<row|<cell|0>>>>>+x<rsub|6><bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|-6>>|<row|<cell|0>>|<row|<cell|-2>>|<row|<cell|4>>|<row|<cell|1>>>>>+<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|-<frac|2|3>>>|<row|<cell|0>>|<row|<cell|-<frac|2|3>>>|<row|<cell|3>>|<row|<cell|0>>>>>,<application-space|1em>x<rsub|1>,x<rsub|3>,x<rsub|6>\<in\>\<bbb-R\>
+    <bmatrix|<tformat|<table|<row|<cell|x<rsub|1>>>|<row|<cell|-2*x<rsub|3>-<frac|2|3>-6*x<rsub|6>>>|<row|<cell|x<rsub|3>>>|<row|<cell|-2*x<rsub|6>-<frac|2|3>>>|<row|<cell|4*x<rsub|6>+3>>|<row|<cell|x<rsub|6>>>>>>=x<rsub|1><bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|0>>|<row|<cell|0>>|<row|<cell|0>>|<row|<cell|0>>|<row|<cell|0>>>>>+x<rsub|3><bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|-2>>|<row|<cell|1>>|<row|<cell|0>>|<row|<cell|0>>|<row|<cell|0>>>>>+x<rsub|6><bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|-6>>|<row|<cell|0>>|<row|<cell|-2>>|<row|<cell|4>>|<row|<cell|1>>>>>+<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|-<frac|2|3>>>|<row|<cell|0>>|<row|<cell|-<frac|2|3>>>|<row|<cell|3>>|<row|<cell|0>>>>>,<application-space|1em>x<rsub|1>,x<rsub|3>,x<rsub|6>\<in\>\<bbb-R\>
   </equation*>
 
   It is clean then that <math|<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|-<frac|2|3>>>|<row|<cell|0>>|<row|<cell|-<frac|2|3>>>|<row|<cell|3>>|<row|<cell|0>>>>>>
@@ -4731,8 +4729,8 @@
   In general, given <math|A> <math|m\<times\>n> matrix such that
   <math|A*<wide|x|\<vect\>>=<wide|b|\<vect\>>> and a particular solution
   <math|v\<in\>\<bbb-R\><rsup|n>>, the set of all solutions is the set
-  <math|<around*|{|v+v<rsub|0> \|<text| <math|v<rsub|0><text| is in nullspace
-  of <math|A>>>>|}>>.
+  <math|<around*|{|v+v<rsub|0>\|<text| >v<rsub|0>*<text| is in nullspace of
+  >A|}>>.
 
   <\theorem*>
     \;
@@ -4779,7 +4777,7 @@
     performing one elementary operation on its rows. e.g.>
 
     <\equation*>
-      <bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|1>|<cell|0>>|<row|<cell|-2>|<cell|0>|<cell|1>>>>><long-arrow|\<rubber-leftarrow\>|-2R<rsub|1>+R<rsub|3>\<rightarrow\>R<rsub|3>>I
+      <bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|1>|<cell|0>>|<row|<cell|-2>|<cell|0>|<cell|1>>>>><long-arrow|\<rubber-leftarrow\>|-2*R<rsub|1>+R<rsub|3>\<rightarrow\>R<rsub|3>>I
     </equation*>
   </definition*>
 
@@ -4791,7 +4789,7 @@
     <math|A>.>
 
     <\equation*>
-      <bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|1>|<cell|0>>|<row|<cell|-2>|<cell|0>|<cell|1>>>>><bmatrix|<tformat|<table|<row|<cell|a<rsub|11>>|<cell|a<rsub|12>>|<cell|a<rsub|13>>>|<row|<cell|a<rsub|21>>|<cell|a<rsub|22>>|<cell|a<rsub|23>>>|<row|<cell|a<rsub|31>>|<cell|a<rsub|32>>|<cell|a<rsub|33>>>>>>=<bmatrix|<tformat|<table|<row|<cell|a<rsub|11>>|<cell|a<rsub|12>>|<cell|a<rsub|13>>>|<row|<cell|a<rsub|21>>|<cell|a<rsub|22>>|<cell|a<rsub|23>>>|<row|<cell|-2a<rsub|11>+a<rsub|31>>|<cell|-2a<rsub|12>+a<rsub|32>>|<cell|-2a<rsub|13>+a<rsub|33>>>>>>
+      <bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|1>|<cell|0>>|<row|<cell|-2>|<cell|0>|<cell|1>>>>><bmatrix|<tformat|<table|<row|<cell|a<rsub|11>>|<cell|a<rsub|12>>|<cell|a<rsub|13>>>|<row|<cell|a<rsub|21>>|<cell|a<rsub|22>>|<cell|a<rsub|23>>>|<row|<cell|a<rsub|31>>|<cell|a<rsub|32>>|<cell|a<rsub|33>>>>>>=<bmatrix|<tformat|<table|<row|<cell|a<rsub|11>>|<cell|a<rsub|12>>|<cell|a<rsub|13>>>|<row|<cell|a<rsub|21>>|<cell|a<rsub|22>>|<cell|a<rsub|23>>>|<row|<cell|-2*a<rsub|11>+a<rsub|31>>|<cell|-2*a<rsub|12>+a<rsub|32>>|<cell|-2*a<rsub|13>+a<rsub|33>>>>>>
     </equation*>
   </corollary*>
 
@@ -4800,7 +4798,7 @@
   sequence of elementary matrices.
 
   <\equation*>
-    <wide*|E<rsub|n>\<cdots\>E<rsub|2>*E<rsub|1>|\<wide-underbrace\>><rsub|A<rsup|-1>>*A=I
+    <wide*|E<rsub|n>*\<cdots\>*E<rsub|2>*E<rsub|1>|\<wide-underbrace\>><rsub|A<rsup|-1>>*A=I
   </equation*>
 
   <underline|Algorithm>
@@ -4809,8 +4807,8 @@
     \;
 
     <\em>
-      Take <math|<around*|(|A\|I|)>> <math|n\<times\>2n> matrix and perform
-      elementary operations until <math|*<around*|(|I\|A<rsup|-1>|)>> is
+      Take <math|<around*|(|A\|I|)>> <math|n\<times\>2*n> matrix and perform
+      elementary operations until <math|<around*|(|I\|A<rsup|-1>|)>> is
       obtained.
 
       If the algorithm \Pgets stuck\Q (don't have enough pivots) then
@@ -4826,11 +4824,11 @@
   <underline|Example>
 
   <\equation*>
-    <bmatrix|<tformat|<cwith|1|1|4|4|cell-tborder|0ln>|<cwith|3|3|4|4|cell-bborder|0ln>|<cwith|1|-1|4|4|cell-lborder|1ln>|<cwith|1|-1|3|3|cell-rborder|1ln>|<cwith|1|-1|4|4|cell-rborder|0ln>|<cwith|1|-1|5|5|cell-lborder|0ln>|<table|<row|<cell|1>|<cell|-1>|<cell|2>|<cell|1>|<cell|0>|<cell|0>>|<row|<cell|1>|<cell|2>|<cell|1>|<cell|0>|<cell|1>|<cell|0>>|<row|<cell|3>|<cell|1>|<cell|4>|<cell|0>|<cell|0>|<cell|1>>>>><long-arrow|\<rubber-rightarrow\>|<tabular|<tformat|<table|<row|<cell|-R<rsub|1>+R<rsub|2>\<rightarrow\>R<rsub|2>>>|<row|<cell|-3R<rsub|1>+R<rsub|3>\<rightarrow\>R<rsub|3>>>>>>><bmatrix|<tformat|<cwith|1|1|4|4|cell-tborder|0ln>|<cwith|3|3|4|4|cell-bborder|0ln>|<cwith|1|-1|4|4|cell-lborder|1ln>|<cwith|1|-1|3|3|cell-rborder|1ln>|<cwith|1|-1|4|4|cell-rborder|0ln>|<cwith|1|-1|5|5|cell-lborder|0ln>|<table|<row|<cell|1>|<cell|-1>|<cell|2>|<cell|1>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|3>|<cell|-1>|<cell|-1>|<cell|1>|<cell|0>>|<row|<cell|0>|<cell|4>|<cell|-2>|<cell|-3>|<cell|0>|<cell|1>>>>><long-arrow|\<rubber-rightarrow\>|<frac|1|3>R<rsub|2>\<rightarrow\>R<rsub|2>>\<cdots\>
+    <bmatrix|<tformat|<cwith|1|1|4|4|cell-tborder|0ln>|<cwith|3|3|4|4|cell-bborder|0ln>|<cwith|1|-1|4|4|cell-lborder|1ln>|<cwith|1|-1|3|3|cell-rborder|1ln>|<cwith|1|-1|4|4|cell-rborder|0ln>|<cwith|1|-1|5|5|cell-lborder|0ln>|<table|<row|<cell|1>|<cell|-1>|<cell|2>|<cell|1>|<cell|0>|<cell|0>>|<row|<cell|1>|<cell|2>|<cell|1>|<cell|0>|<cell|1>|<cell|0>>|<row|<cell|3>|<cell|1>|<cell|4>|<cell|0>|<cell|0>|<cell|1>>>>><long-arrow|\<rubber-rightarrow\>|<tabular|<tformat|<table|<row|<cell|-R<rsub|1>+R<rsub|2>\<rightarrow\>R<rsub|2>>>|<row|<cell|-3*R<rsub|1>+R<rsub|3>\<rightarrow\>R<rsub|3>>>>>>><bmatrix|<tformat|<cwith|1|1|4|4|cell-tborder|0ln>|<cwith|3|3|4|4|cell-bborder|0ln>|<cwith|1|-1|4|4|cell-lborder|1ln>|<cwith|1|-1|3|3|cell-rborder|1ln>|<cwith|1|-1|4|4|cell-rborder|0ln>|<cwith|1|-1|5|5|cell-lborder|0ln>|<table|<row|<cell|1>|<cell|-1>|<cell|2>|<cell|1>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|3>|<cell|-1>|<cell|-1>|<cell|1>|<cell|0>>|<row|<cell|0>|<cell|4>|<cell|-2>|<cell|-3>|<cell|0>|<cell|1>>>>><long-arrow|\<rubber-rightarrow\>|<frac|1|3>*R<rsub|2>\<rightarrow\>R<rsub|2>>\<cdots\>
   </equation*>
 
   <\equation*>
-    <bmatrix|<tformat|<cwith|1|1|4|4|cell-tborder|0ln>|<cwith|3|3|4|4|cell-bborder|0ln>|<cwith|1|-1|4|4|cell-lborder|1ln>|<cwith|1|-1|3|3|cell-rborder|1ln>|<cwith|1|-1|4|4|cell-rborder|0ln>|<cwith|1|-1|5|5|cell-lborder|0ln>|<table|<row|<cell|1>|<cell|-1>|<cell|2>|<cell|1>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|1>|<cell|-<frac|1|3>>|<cell|-<frac|1|3>>|<cell|<frac|1|3>>|<cell|0>>|<row|<cell|0>|<cell|4>|<cell|-2>|<cell|-3>|<cell|0>|<cell|1>>>>><long-arrow|\<rubber-rightarrow\>|-4R<rsub|2>+R<rsub|3>\<rightarrow\>R<rsub|3>><bmatrix|<tformat|<cwith|1|1|4|4|cell-tborder|0ln>|<cwith|3|3|4|4|cell-bborder|0ln>|<cwith|1|-1|4|4|cell-lborder|1ln>|<cwith|1|-1|3|3|cell-rborder|1ln>|<cwith|1|-1|4|4|cell-rborder|0ln>|<cwith|1|-1|5|5|cell-lborder|0ln>|<table|<row|<cell|1>|<cell|-1>|<cell|2>|<cell|1>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|1>|<cell|-<frac|1|3>>|<cell|-<frac|1|3>>|<cell|<frac|1|3>>|<cell|0>>|<row|<cell|0>|<cell|0>|<cell|-<frac|2|3>>|<cell|-<frac|5|3>>|<cell|-<frac|4|3>>|<cell|1>>>>>
+    <bmatrix|<tformat|<cwith|1|1|4|4|cell-tborder|0ln>|<cwith|3|3|4|4|cell-bborder|0ln>|<cwith|1|-1|4|4|cell-lborder|1ln>|<cwith|1|-1|3|3|cell-rborder|1ln>|<cwith|1|-1|4|4|cell-rborder|0ln>|<cwith|1|-1|5|5|cell-lborder|0ln>|<table|<row|<cell|1>|<cell|-1>|<cell|2>|<cell|1>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|1>|<cell|-<frac|1|3>>|<cell|-<frac|1|3>>|<cell|<frac|1|3>>|<cell|0>>|<row|<cell|0>|<cell|4>|<cell|-2>|<cell|-3>|<cell|0>|<cell|1>>>>><long-arrow|\<rubber-rightarrow\>|-4*R<rsub|2>+R<rsub|3>\<rightarrow\>R<rsub|3>><bmatrix|<tformat|<cwith|1|1|4|4|cell-tborder|0ln>|<cwith|3|3|4|4|cell-bborder|0ln>|<cwith|1|-1|4|4|cell-lborder|1ln>|<cwith|1|-1|3|3|cell-rborder|1ln>|<cwith|1|-1|4|4|cell-rborder|0ln>|<cwith|1|-1|5|5|cell-lborder|0ln>|<table|<row|<cell|1>|<cell|-1>|<cell|2>|<cell|1>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|1>|<cell|-<frac|1|3>>|<cell|-<frac|1|3>>|<cell|<frac|1|3>>|<cell|0>>|<row|<cell|0>|<cell|0>|<cell|-<frac|2|3>>|<cell|-<frac|5|3>>|<cell|-<frac|4|3>>|<cell|1>>>>>
   </equation*>
 
   Notice that now we know that <math|r=3>. Eventually, after some operations,
@@ -4876,13 +4874,13 @@
   Along row 1:
 
   <\equation*>
-    det A=<big|sum><rsub|j=1><rsup|2>a<rsub|1j>*A<rsub|1j>\<cdot\><around*|(|-1|)><rsup|1+j>=a<rsub|i\<nocomma\>j>*A<rsub|11>-a<rsub|12>*A<rsub|12>=a<rsub|11>*a<rsub|22>-a<rsub|12>*a<rsub|21>
+    det A=<big|sum><rsub|j=1><rsup|2>a<rsub|1*j>*A<rsub|1*j>\<cdot\><around*|(|-1|)><rsup|1+j>=a<rsub|i\<nocomma\>j>*A<rsub|11>-a<rsub|12>*A<rsub|12>=a<rsub|11>*a<rsub|22>-a<rsub|12>*a<rsub|21>
   </equation*>
 
   Along row 2:
 
   <\equation*>
-    det A=<big|sum><rsub|j=1><rsup|2>a<rsub|2j>*A<rsub|2j>\<cdot\><around*|(|-1|)><rsup|2+j>=-a<rsub|21>*A<rsub|21>+a<rsub|22>*A<rsub|22>=-a<rsub|21>*a<rsub|12>+a<rsub|22>*a<rsub|11>
+    det A=<big|sum><rsub|j=1><rsup|2>a<rsub|2*j>*A<rsub|2*j>\<cdot\><around*|(|-1|)><rsup|2+j>=-a<rsub|21>*A<rsub|21>+a<rsub|22>*A<rsub|22>=-a<rsub|21>*a<rsub|12>+a<rsub|22>*a<rsub|11>
   </equation*>
 
   For <math|2\<times\>2> matrices you can also cross-multiply diagonals and
@@ -4895,14 +4893,14 @@
   </equation*>
 
   <\eqnarray*>
-    <tformat|<table|<row|<cell|det A>|<cell|=>|<cell|<big|sum><rsub|j=1><rsup|3><around*|(|-1|)><rsup|1+j>*a<rsub|1j>*A<rsub|1j>=a<rsub|11>*A<rsub|11>-a<rsub|12>*A<rsub|12>+a<rsub|13>*A<rsub|13>>>|<row|<cell|>|<cell|=>|<cell|a<rsub|11>*<det|<tformat|<table|<row|<cell|a<rsub|22>>|<cell|a<rsub|23>>>|<row|<cell|a<rsub|32>>|<cell|a<rsub|33>>>>>>-a<rsub|12>*<det|<tformat|<table|<row|<cell|a<rsub|21>>|<cell|a<rsub|23>>>|<row|<cell|a<rsub|31>>|<cell|a<rsub|33>>>>>>+a<rsub|13>*<det|<tformat|<table|<row|<cell|a<rsub|21>>|<cell|a<rsub|22>>>|<row|<cell|a<rsub|31>>|<cell|a<rsub|32>>>>>>>>|<row|<cell|>|<cell|=>|<cell|a<rsub|11>*<around*|(|a<rsub|22>*a<rsub|33>-a<rsub|23>*a<rsub|32>|)>-a<rsub|12>*<around*|(|a<rsub|21>*a<rsub|33>-a<rsub|23>*a<rsub|31>|)>+a<rsub|13>*<around*|(|a<rsub|21>*a<rsub|32>-a<rsub|22>*a<rsub|31>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|a<rsub|11>*a<rsub|22>*a<rsub|33>+a<rsub|12>*a<rsub|23>*a<rsub|31>+a<rsub|13>*a<rsub|21>*a<rsub|32>|)>-<around*|(|a<rsub|11>*a<rsub|23>*a<rsub|32>+a<rsub|12>*a<rsub|21>*a<rsub|33>+a<rsub|13>*a<rsub|22>*a<rsub|31>|)>>>>>
+    <tformat|<table|<row|<cell|det A>|<cell|=>|<cell|<big|sum><rsub|j=1><rsup|3><around*|(|-1|)><rsup|1+j>*a<rsub|1*j>*A<rsub|1*j>=a<rsub|11>*A<rsub|11>-a<rsub|12>*A<rsub|12>+a<rsub|13>*A<rsub|13>>>|<row|<cell|>|<cell|=>|<cell|a<rsub|11>*<det|<tformat|<table|<row|<cell|a<rsub|22>>|<cell|a<rsub|23>>>|<row|<cell|a<rsub|32>>|<cell|a<rsub|33>>>>>>-a<rsub|12>*<det|<tformat|<table|<row|<cell|a<rsub|21>>|<cell|a<rsub|23>>>|<row|<cell|a<rsub|31>>|<cell|a<rsub|33>>>>>>+a<rsub|13>*<det|<tformat|<table|<row|<cell|a<rsub|21>>|<cell|a<rsub|22>>>|<row|<cell|a<rsub|31>>|<cell|a<rsub|32>>>>>>>>|<row|<cell|>|<cell|=>|<cell|a<rsub|11>*<around*|(|a<rsub|22>*a<rsub|33>-a<rsub|23>*a<rsub|32>|)>-a<rsub|12>*<around*|(|a<rsub|21>*a<rsub|33>-a<rsub|23>*a<rsub|31>|)>+a<rsub|13>*<around*|(|a<rsub|21>*a<rsub|32>-a<rsub|22>*a<rsub|31>|)>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|a<rsub|11>*a<rsub|22>*a<rsub|33>+a<rsub|12>*a<rsub|23>*a<rsub|31>+a<rsub|13>*a<rsub|21>*a<rsub|32>|)>-<around*|(|a<rsub|11>*a<rsub|23>*a<rsub|32>+a<rsub|12>*a<rsub|21>*a<rsub|33>+a<rsub|13>*a<rsub|22>*a<rsub|31>|)>>>>>
   </eqnarray*>
 
   <\theorem*>
     \;
 
     <em|We can express a det also using columns: <math|det
-    A=<big|sum><rsub|i=1><rsup|n> <around*|(|-1|)><rsup|i+j>*a<rsub|i\<nocomma\>j>*A<rsub|i\<nocomma\>j>>
+    A=<big|sum><rsub|i=1><rsup|n><around*|(|-1|)><rsup|i+j>*a<rsub|i\<nocomma\>j>*A<rsub|i\<nocomma\>j>>
     for a fixed <math|j> (\Pdown column <math|j>\Q).>
   </theorem*>
 
@@ -4918,7 +4916,7 @@
 
   In fact: <math|det A> = sum of all choices of products of elements chosen,
   one from each row and one from each column, multiplied by a power of
-  <math|<around*|(|-1|)>>. In total, <math|n!> summands.
+  <math|<around*|(|-1|)>>. In total, <math|n>! summands.
 
   <page-break>
 
@@ -4941,7 +4939,7 @@
   Subtract
 
   <\equation*>
-    <around*|(|a<rsub|11>*a<rsub|22>-a<rsub|21>*a<rsub|12>|)>*x<rsub|2>=a<rsub|11>b<rsub|2>-a<rsub|21>*b<rsub|1>
+    <around*|(|a<rsub|11>*a<rsub|22>-a<rsub|21>*a<rsub|12>|)>*x<rsub|2>=a<rsub|11>*b<rsub|2>-a<rsub|21>*b<rsub|1>
   </equation*>
 
   If <math|det A\<neq\>0> we can solve uniquely:
@@ -4993,7 +4991,7 @@
     by a scalar <math|c>, then <math|det B=c\<cdot\>det A>.
 
     <item>If <math|B> is obtained from <math|A> by
-    <math|\<alpha\>R<rsub|i>+R<rsub|j>\<rightarrow\>R<rsub|j>>, then
+    <math|\<alpha\>*R<rsub|i>+R<rsub|j>\<rightarrow\>R<rsub|j>>, then
     <math|det B=det A>.
 
     <item>If <math|A> is upper-tridiagonal
@@ -5012,7 +5010,7 @@
   That means that all rows/columns of <math|A> are linearly independent!
 
   Note also that if we had <math|det A=0>, then <math|det U=0> and <math|rank
-  U=rank A\<less\>n>.<math|>
+  U=rank A\<less\>n>.
 
   <\theorem*>
     \;
@@ -5025,9 +5023,10 @@
       If <math|det A\<neq\>0> we can write:
 
       <\equation*>
-        i\<nocomma\>j<rsup|th> element of A<rsup|-1><rsub|>=<frac|1|det
-        A>*<wide*|<around*|(|<around*|(|-1|)><rsup|i+j>*A<rsub|j\<nocomma\>i>|)>
-        |\<wide-underbrace\>><rsub|<text|adjoint of <math|A>>>
+        i\<nocomma\>j<rsup|th> element of
+        A<rsup|-1><rsub|\<nosymbol\>>=<frac|1|det
+        A>*<wide*|<around*|(|<around*|(|-1|)><rsup|i+j>*A<rsub|j\<nocomma\>i>|)>|\<wide-underbrace\>><rsub|<text|adjoint
+        of >A>
       </equation*>
 
       <math|<around*|(|-1|)><rsup|i+j>*A<rsub|j\<nocomma\>i>> represents the
@@ -5079,7 +5078,7 @@
   </eqnarray*>
 
   <\equation*>
-    <bmatrix|<tformat|<cwith|1|-1|2|2|cell-background|>|<table|<row|<cell|1>|<cell|0>|<cell|-1>|<cell|2>>|<row|<cell|2>|<cell|3>|<cell|1>|<cell|1>>|<row|<cell|1>|<cell|0>|<cell|2>|<cell|1>>|<row|<cell|3>|<cell|1>|<cell|1>|<cell|-1>>>>>\<rightarrow\>*\<cdots\>*\<rightarrow\>det
+    <bmatrix|<tformat|<cwith|1|-1|2|2|cell-background|>|<table|<row|<cell|1>|<cell|0>|<cell|-1>|<cell|2>>|<row|<cell|2>|<cell|3>|<cell|1>|<cell|1>>|<row|<cell|1>|<cell|0>|<cell|2>|<cell|1>>|<row|<cell|3>|<cell|1>|<cell|1>|<cell|-1>>>>>\<rightarrow\>\<cdots\>\<rightarrow\>det
     <bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>|<cell|-1>|<cell|2>>|<row|<cell|0>|<cell|3>|<cell|3>|<cell|-3>>|<row|<cell|0>|<cell|0>|<cell|3>|<cell|-1>>|<row|<cell|0>|<cell|1>|<cell|4>|<cell|-7>>>>>=3*det
     <bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>|<cell|-1>|<cell|2>>|<row|<cell|0>|<cell|1>|<cell|1>|<cell|-1>>|<row|<cell|0>|<cell|0>|<cell|3>|<cell|-1>>|<row|<cell|0>|<cell|1>|<cell|4>|<cell|-7>>>>>=
   </equation*>
@@ -5096,8 +5095,8 @@
   eigenvectors><marginal-note|normal|c|Lec 16 26.12.22>
 
   Assume <math|A> is square <math|n\<times\>n>. The map that sends a vector
-  in <math|\<bbb-R\><rsup|n>> <math|<bmatrix|<tformat|<table|<row|<cell|x<rsub|1>>>|<row|<cell|\<vdots\>>>|<row|<cell|x<rsub|n>>>>>>
-  > to <math|A*<bmatrix|<tformat|<table|<row|<cell|x<rsub|1>>>|<row|<cell|\<vdots\>>>|<row|<cell|x<rsub|n>>>>>>>
+  in <math|\<bbb-R\><rsup|n>> <math|<bmatrix|<tformat|<table|<row|<cell|x<rsub|1>>>|<row|<cell|\<vdots\>>>|<row|<cell|x<rsub|n>>>>>>>
+  to <math|A*<bmatrix|<tformat|<table|<row|<cell|x<rsub|1>>>|<row|<cell|\<vdots\>>>|<row|<cell|x<rsub|n>>>>>>>
   is a <em|linear operator>.
 
   <underline|Special case>
@@ -5121,8 +5120,8 @@
 
     <em|If <math|<wide|x|\<vect\>>> is a non-zero vector such that
     <math|A*<wide|x|\<vect\>>=\<lambda\>*<wide|x|\<vect\>>> for some scalar
-    <math|\<lambda\>>, we say it is an <em|eigenvector> for <math|A> and
-    <math|\<lambda\>> is its associated <em|eigenvalue>.>
+    <math|\<lambda\>>, we say it is an eigenvector for <math|A> and
+    <math|\<lambda\>> is its associated eigenvalue.>
   </definition*>
 
   To find an eigenvector we need to solve:
@@ -5169,7 +5168,7 @@
     </equation*>
 
     <\equation*>
-      \<lambda\><rsup|2>-7\<lambda\>+10=0
+      \<lambda\><rsup|2>-7*\<lambda\>+10=0
     </equation*>
 
     <\equation*>
@@ -5221,7 +5220,7 @@
     Solve <math|<around*|\||A-\<lambda\>*I|\|>=0>
 
     <\equation*>
-      <det|<tformat|<table|<row|<cell|1-\<lambda\>>|<cell|2>>|<row|<cell|-3>|<cell|-6-\<lambda\>>>>>>=-<around*|(|1-\<lambda\>|)>*<around*|(|6+\<lambda\>|)>+6=\<lambda\><rsup|2>+5\<lambda\>=0
+      <det|<tformat|<table|<row|<cell|1-\<lambda\>>|<cell|2>>|<row|<cell|-3>|<cell|-6-\<lambda\>>>>>>=-<around*|(|1-\<lambda\>|)>*<around*|(|6+\<lambda\>|)>+6=\<lambda\><rsup|2>+5*\<lambda\>=0
     </equation*>
 
     The eigenvalues are <math|\<lambda\>=0,-5>. We got <math|\<lambda\>=0>
@@ -5234,7 +5233,7 @@
       <bmatrix|<tformat|<table|<row|<cell|1>|<cell|2>>|<row|<cell|-3>|<cell|-6>>>>>*<bmatrix|<tformat|<table|<row|<cell|x>>|<row|<cell|y>>>>>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|0>>>>>
     </equation*>
 
-    <math|x+2y=0>. Get <math|<bmatrix|<tformat|<table|<row|<cell|-2>>|<row|<cell|1>>>>>>
+    <math|x+2*y=0>. Get <math|<bmatrix|<tformat|<table|<row|<cell|-2>>|<row|<cell|1>>>>>>
     basis for eigenspace.
 
     <underline|<math|\<lambda\>=-5>>:
@@ -5243,7 +5242,7 @@
       <bmatrix|<tformat|<table|<row|<cell|6>|<cell|2>>|<row|<cell|-3>|<cell|-1>>>>>*<bmatrix|<tformat|<table|<row|<cell|x>>|<row|<cell|y>>>>>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|0>>>>>
     </equation*>
 
-    <math|3x+y=0>. Get <math|<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|-3>>>>>>
+    <math|3*x+y=0>. Get <math|<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|-3>>>>>>
     basis for eigenspace.
 
     <item>What if every non-zero vector is an eigenvector?
@@ -5253,7 +5252,7 @@
     </equation*>
 
     <\equation*>
-      <bmatrix|<tformat|<table|<row|<cell|3>|<cell|0>>|<row|<cell|0>|<cell|3>>>>>*<bmatrix|<tformat|<table|<row|<cell|x>>|<row|<cell|y>>>>>=<bmatrix|<tformat|<table|<row|<cell|3x>>|<row|<cell|3y>>>>>
+      <bmatrix|<tformat|<table|<row|<cell|3>|<cell|0>>|<row|<cell|0>|<cell|3>>>>>*<bmatrix|<tformat|<table|<row|<cell|x>>|<row|<cell|y>>>>>=<bmatrix|<tformat|<table|<row|<cell|3*x>>|<row|<cell|3*y>>>>>
     </equation*>
 
     Solve <math|<around*|\||A-\<lambda\>*I|\|>=0>
@@ -5264,7 +5263,7 @@
 
     Note that setting <math|\<lambda\>=3> means when we solve:
     <math|<bmatrix|<tformat|<table|<row|<cell|A-\<lambda\>*I>>>>>*<bmatrix|<tformat|<table|<row|<cell|x>>|<row|<cell|y>>>>>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|0>>>>>>
-    we get <math|<bmatrix|<tformat|<table|<row|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|0>>>>>><math|<bmatrix|<tformat|<table|<row|<cell|x>>|<row|<cell|y>>>>>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|0>>>>>>
+    we get <math|<bmatrix|<tformat|<table|<row|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|0>>>>><bmatrix|<tformat|<table|<row|<cell|x>>|<row|<cell|y>>>>>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|0>>>>>>
     and every vector is a solution. Here eigenspace has dim 2.
 
     <marginal-note|normal|c|lec 17 2.1.23><item>
@@ -5330,7 +5329,7 @@
     Also, dimension of eigenspace is called <em|geometric multiplicity>, and
     multiplicity of eigenvalue in characteristic polynomial<space|1em>is
     called the <em|algebraic multiplicity>. So <math|1\<leq\><text|geometric
-    multiplicity >\<leq\><text| algebraic multiplicity>>.
+    multiplicity >\<leq\>> algebraic multiplicity.
 
     <underline|Example>: Suppose <math|<around*|(|\<lambda\>-3|)>*<around*|(|\<lambda\>-2|)><rsup|5>*<around*|(|\<lambda\>-1|)><rsup|2>>
     is the characteristic polynomial for a matrix.
@@ -5360,13 +5359,13 @@
     <math|det<around*|(|A-\<lambda\>*I|)>=0>.)
 
     <\equation*>
-      -\<lambda\><rsup|3>+1+1+\<lambda\>+\<lambda\>+\<lambda\>=-\<lambda\><rsup|3>+3\<lambda\>+2
+      -\<lambda\><rsup|3>+1+1+\<lambda\>+\<lambda\>+\<lambda\>=-\<lambda\><rsup|3>+3*\<lambda\>+2
     </equation*>
 
     Factor our <math|\<lambda\>+1>:
 
     <\equation*>
-      -\<lambda\><rsup|3>+3\<lambda\>+2=<around*|(|\<lambda\>+1|)>*<around*|(|*-\<lambda\><rsup|2>+\<lambda\>+2|)>=0
+      -\<lambda\><rsup|3>+3*\<lambda\>+2=<around*|(|\<lambda\>+1|)>*<around*|(|-\<lambda\><rsup|2>+\<lambda\>+2|)>=0
     </equation*>
 
     <\equation*>
@@ -5396,7 +5395,7 @@
     <math|A*P>.
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|A*P>|<cell|=>|<cell|<bmatrix|<tformat|<table|<row|<cell|0>|<cell|1>|<cell|1>>|<row|<cell|1>|<cell|0>|<cell|1>>|<row|<cell|1>|<cell|1>|<cell|0>>>>>*<bmatrix|<tformat|<table|<row|<cell|1>|<cell|1>|<cell|1>>|<row|<cell|1>|<cell|-1>|<cell|0>>|<row|<cell|1>|<cell|0>|<cell|-1>>>>>=<bmatrix|<tformat|<table|<row|<cell|2>|<cell|-1>|<cell|-1>>|<row|<cell|2>|<cell|1>|<cell|0>>|<row|<cell|2>|<cell|0>|<cell|1>>>>>=<bmatrix|<tformat|<table|<row|<cell|A*<wide|v|\<vect\>><rsub|1>>|<cell|A*<wide|v|\<vect\>><rsub|2>>|<cell|A*<wide|v|\<vect\>><rsub|3>>>>>>=<bmatrix|<tformat|<table|<row|<cell|2<wide|v|\<vect\>><rsub|1>>|<cell|-<wide|v|\<vect\>><rsub|2>>|<cell|-<wide|v|\<vect\>><rsub|3>>>>>>>>>>
+      <tformat|<table|<row|<cell|A*P>|<cell|=>|<cell|<bmatrix|<tformat|<table|<row|<cell|0>|<cell|1>|<cell|1>>|<row|<cell|1>|<cell|0>|<cell|1>>|<row|<cell|1>|<cell|1>|<cell|0>>>>>*<bmatrix|<tformat|<table|<row|<cell|1>|<cell|1>|<cell|1>>|<row|<cell|1>|<cell|-1>|<cell|0>>|<row|<cell|1>|<cell|0>|<cell|-1>>>>>=<bmatrix|<tformat|<table|<row|<cell|2>|<cell|-1>|<cell|-1>>|<row|<cell|2>|<cell|1>|<cell|0>>|<row|<cell|2>|<cell|0>|<cell|1>>>>>=<bmatrix|<tformat|<table|<row|<cell|A*<wide|v|\<vect\>><rsub|1>>|<cell|A*<wide|v|\<vect\>><rsub|2>>|<cell|A*<wide|v|\<vect\>><rsub|3>>>>>>=<bmatrix|<tformat|<table|<row|<cell|2*<wide|v|\<vect\>><rsub|1>>|<cell|-<wide|v|\<vect\>><rsub|2>>|<cell|-<wide|v|\<vect\>><rsub|3>>>>>>>>>>
     </eqnarray*>
 
     Now multiply <math|P> by a diagonal matrix whose diagonal contains the
@@ -5427,25 +5426,23 @@
     then <math|P> is invertible and we have:>
 
     <\equation*>
-      A*P=P*<bmatrix|<tformat|<table|<row|<cell|\<lambda\><rsub|1>>|<cell|>|<cell|0>>|<row|<cell|*>|<cell|\<ddots\>>|<cell|>>|<row|<cell|0>|<cell|>|<cell|\<lambda\><rsub|n>>>>>>
+      A*P=P*<bmatrix|<tformat|<table|<row|<cell|\<lambda\><rsub|1>>|<cell|>|<cell|0>>|<row|<cell|>|<cell|\<ddots\>>|<cell|>>|<row|<cell|0>|<cell|>|<cell|\<lambda\><rsub|n>>>>>>
     </equation*>
 
     <em|and so>
 
     <\equation*>
-      P<rsup|-1>*A*P=<bmatrix|<tformat|<table|<row|<cell|\<lambda\><rsub|1>>|<cell|>|<cell|0>>|<row|<cell|*>|<cell|\<ddots\>>|<cell|>>|<row|<cell|0>|<cell|>|<cell|\<lambda\><rsub|n>>>>>>
+      P<rsup|-1>*A*P=<bmatrix|<tformat|<table|<row|<cell|\<lambda\><rsub|1>>|<cell|>|<cell|0>>|<row|<cell|>|<cell|\<ddots\>>|<cell|>>|<row|<cell|0>|<cell|>|<cell|\<lambda\><rsub|n>>>>>>
     </equation*>
   </theorem*>
 
   <\definition*>
     \;
 
-    <em|An <math|n\<times\>n> matrix <math|A> is called <em|diagonalizable>
-    if there exists an invertible matrix <math|P> such that
+    <em|An <math|n\<times\>n> matrix <math|A> is called diagonalizable if
+    there exists an invertible matrix <math|P> such that
     <math|P<rsup|-1>*A*P> is the diagonal matrix.>
   </definition*>
-
-  <underline|Theorem>:\ 
 
   <\theorem*>
     \;
@@ -5547,16 +5544,14 @@
     </enumerate>
   </note*>
 
-  \;
-
-  <marginal-note|normal|c|lec 18 3.1.23><underline|Theorem>:\ 
+  <marginal-note|normal|c|lec 18 3.1.23>
 
   <\theorem*>
     \;
 
     <\em>
       If <math|A> is a complex matrix and it is Hermitian (i.e.
-      <math|<wide|A<rsup|>|\<bar\>><rsup|T>=A>) then:
+      <math|<wide|A<rsup|\<nosymbol\>>|\<bar\>><rsup|T>=A>) then:
 
       <\enumerate>
         <item>All its eigenvalues are real.
@@ -5565,17 +5560,21 @@
         diagonalizable).
 
         <item>Eigenvectors corresponding to distinct eigenvalues are
-        <em|orthogonal>
+        <em|orthogonal> (i.e. the dot product is zero.)
       </enumerate>
     </em>
   </theorem*>
 
+  <\note*>
+    If <math|A> is real symmetric then it is Hermitian.
+  </note*>
+
   <\definition*>
     \;
 
-    <em|><em|In <math|\<bbb-C\><rsup|n>> , for
+    <em|In <math|\<bbb-C\><rsup|n>> , for
     <math|<wide|v|\<vect\>>=<around*|[|x<rsub|1>,\<ldots\>,x<rsub|n>|]><rsup|T>,<wide|w|\<vect\>>=<around*|[|y<rsub|1>,\<ldots\>,y<rsub|n>|]><rsup|T>>
-    we define the<em| inner product> of <math|<wide|v|\<vect\>>> and
+    we define the inner product of <math|<wide|v|\<vect\>>> and
     <math|<wide|w|\<vect\>>> as:>
 
     <\equation*>
@@ -5594,7 +5593,41 @@
     A real matrix is symmetric iff it is Hermitian.
   </note*>
 
-  <subsection|First-order systems of linear ODEs>
+  <subsection|Systems of First-order linear ODEs>
+
+  Suppose we have the system
+
+  <\equation*>
+    <bmatrix|<tformat|<table|<row|<cell|x<rsub|1><rprime|'><around*|(|t|)>>>|<row|<cell|x<rsub|2><rprime|'><around*|(|t|)>>>|<row|<cell|\<vdots\>>>|<row|<cell|x<rsub|n><rprime|'><around*|(|t|)>>>>>>=A<around*|(|t|)>*<bmatrix|<tformat|<table|<row|<cell|x<rsub|1><around*|(|t|)>>>|<row|<cell|x<rsub|2><around*|(|t|)>>>|<row|<cell|\<vdots\>>>|<row|<cell|x<rsub|n><around*|(|t|)>>>>>>+<bmatrix|<tformat|<table|<row|<cell|g<rsub|1><around*|(|t|)>>>|<row|<cell|g<rsub|2><around*|(|t|)>>>|<row|<cell|\<vdots\>>>|<row|<cell|g<rsub|n><around*|(|t|)>>>>>>
+  </equation*>
+
+  In the special case that <math|A<around*|(|t|)>> is a matrix of constants
+  and <wide|<math|g>|\<vect\>>(t) is a vector of constants, then
+
+  <\equation*>
+    <wide|x|\<vect\>><rprime|'><around*|(|t|)>=A*<wide|x|\<vect\>><around*|(|t|)>+<wide|g|\<vect\>>
+  </equation*>
+
+  <\theorem*>
+    \;
+
+    <\em>
+      Given a non-homogeneous system
+
+      <\equation*>
+        <wide|x|\<vect\>><rprime|'>=A<around*|(|t|)>*<wide|x|\<vect\>>+<wide|g|\<vect\>><around*|(|t|)>
+      </equation*>
+
+      and two solutions <math|<wide|u|\<vect\>><rsub|1><around*|(|t|)>,<wide|u|\<vect\>><rsub|2><around*|(|t|)>>,
+      then <math|<wide|u|\<vect\>><rsub|1>-<wide|u|\<vect\>><rsub|2><around*|(|t|)>>
+      solves the associated homoegneous system.
+
+      Moreover, every solution to the non-homogeneous system is of the form
+      <math|<rigid|<wide|u|\<vect\>><rsub|1><around*|(|t|)>+<wide|u|\<vect\>><rsub|0><around*|(|t|)>>>,
+      where <math|<wide|u|\<vect\>><rsub|1>> is a fixed particular solution
+      and <math|<wide|u<rsub|0>|\<vect\>>> solves the homogeneous system.
+    </em>
+  </theorem*>
 
   <subsubsection|Homogeneous system>
 
@@ -5615,18 +5648,35 @@
     The set of solutions is a vector space of dimension <math|n>
   </theorem*>>
 
-  Can find <math|n> linearly independent solutions by taking a set of
-  <math|n> initial conditions:\ 
+  <\note*>
+    This means that we only need to search for <math|n> solutions.
+  </note*>
 
-  <\equation*>
-    <choice|<tformat|<table|<row|<cell|x<rsub|i><around*|(|t<rsub|0>|)>=1>>|<row|<cell|x<rsub|j><around*|(|t<rsub|0>|)>=0<application-space|1em>i\<neq\>j>>>>><application-space|1em>\<forall\>i\<leq\>j\<leq\>n
-  </equation*>
+  <\proof>
+    It's easy to show it is a vector space, as linear combination of
+    solutions is also a solution. Additionally,
+    <math|<wide|0|\<vect\>><rsub|f>> is a solution.
 
-  We now assume matrix of coefficients is a matrix of constants:
+    Regarding dimensionality, since we have a solution for every IC by the
+    E&U theorem, we have <math|n> solutions satisfying different ICs:
 
-  <\equation*>
-    <wide|x|\<vect\>><rprime|'>=A*<wide|x|\<vect\>>,<application-space|1em>A\<in\>\<bbb-R\><rsup|n\<times\>n>
-  </equation*>
+    <\equation*>
+      <choice|<tformat|<table|<row|<cell|x<rsub|i><around*|(|t<rsub|0>|)>=1>>|<row|<cell|x<rsub|j><around*|(|t<rsub|0>|)>=0<application-space|1em>i\<neq\>j>>>>><application-space|1em>\<forall\>i\<leq\>j\<leq\>n
+    </equation*>
+
+    These will be linearly independent and span the solution space.
+
+    As if <math|<wide|x|\<vect\>><around*|(|t|)>> is a solution we write
+    <math|<wide|x|\<vect\>><around*|(|0|)>=<around*|[|b<rsub|1>,\<ldots\>,b<rsub|n>|]><rsup|T>>
+    and individual solutions satisfying ICs are
+    <math|<wide|y|\<vect\>><rsub|1>,\<ldots\>,<wide|y|\<vect\>><rsub|n>>,
+    then <math|b<rsub|1>*<wide|y|\<vect\>><rsub|1>+\<cdots\>+b<rsub|n>*<wide|y|\<vect\>><rsub|n>>
+    is a solution satisfying the same ICs as <math|x<around*|(|t|)>>, so by
+    uniqueness we must have <math|<wide|x|\<vect\>><around*|(|t|)>=<big|sum><rsub|i=1><rsup|n>b<rsub|i>*<wide|y|\<vect\>><rsub|i><around*|(|t|)>>.
+  </proof>
+
+  Assume throughout this subsection that <math|A> is an <math|n\<times\>n>
+  matrix of constants.
 
   <underline|Example>: <math|n=1>
 
@@ -5678,13 +5728,13 @@
   <underline|Example>
 
   <\equation*>
-    <choice|<tformat|<table|<row|<cell|x<rsub|1><rprime|'>=x<rsub|1>+x<rsub|2>>>|<row|<cell|x<rsub|2><rprime|'>=4x<rsub|1>+x<rsub|2>>>>>>,<application-space|1em>A=<bmatrix|<tformat|<table|<row|<cell|1>|<cell|1>>|<row|<cell|4>|<cell|1>>>>>
+    <choice|<tformat|<table|<row|<cell|x<rsub|1><rprime|'>=x<rsub|1>+x<rsub|2>>>|<row|<cell|x<rsub|2><rprime|'>=4*x<rsub|1>+x<rsub|2>>>>>>,<application-space|1em>A=<bmatrix|<tformat|<table|<row|<cell|1>|<cell|1>>|<row|<cell|4>|<cell|1>>>>>
   </equation*>
 
   Find eigenvalues and eigenvectors for <math|A>:
 
   <\equation*>
-    <det|<tformat|<table|<row|<cell|A-\<lambda\>*I>>>>>=<det|<tformat|<table|<row|<cell|1-\<lambda\>>|<cell|1>>|<row|<cell|4>|<cell|1-\<lambda\>>>>>>=\<lambda\><rsup|2>-2\<lambda\>-3=0
+    <det|<tformat|<table|<row|<cell|A-\<lambda\>*I>>>>>=<det|<tformat|<table|<row|<cell|1-\<lambda\>>|<cell|1>>|<row|<cell|4>|<cell|1-\<lambda\>>>>>>=\<lambda\><rsup|2>-2*\<lambda\>-3=0
   </equation*>
 
   <\equation*>
@@ -5720,7 +5770,7 @@
   then (set <math|t=0>):
 
   <\equation*>
-    a**<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|2>>>>>+b**<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|-2>>>>>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|0>>>>>
+    a*<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|2>>>>>+b*<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|-2>>>>>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|0>>>>>
   </equation*>
 
   but <math|<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|2>>>>>> and
@@ -5735,17 +5785,17 @@
   </equation*>
 
   <\equation*>
-    b=1-a\<rightarrow\>2a-2<around*|(|1-a|)>=3\<rightarrow\>a=<frac|5|4>,b=-<frac|1|4>
+    b=1-a\<rightarrow\>2*a-2<around*|(|1-a|)>=3\<rightarrow\>a=<frac|5|4>,b=-<frac|1|4>
   </equation*>
 
   <\theorem*>
     \;
 
     <\em>
-      If <math|\<lambda\><rsub|1>,\<ldots\>,\<lambda\><rsub|k> are distinct
+      If <math|\<lambda\><rsub|1>,\<ldots\>,\<lambda\><rsub|k>> are distinct
       eigenvalues with corresponding eigenvectors
-      \ <wide|v|\<vect\>><rsub|1>,\<ldots\>,<wide|v|\<vect\>><rsub|k>>, then
-      the vectors of functions <math|\<mathe\><rsup|\<lambda\><rsub|1>*t>*<wide|v|\<vect\>><rsub|1>,\<mathe\><rsup|\<lambda\><rsub|2>*t>*<wide|v|\<vect\>><rsub|2>,\<ldots\>,\<mathe\><rsup|\<lambda\><rsub|k>*t>*<wide|v|\<vect\>><rsub|k>>
+      <math|<wide|v|\<vect\>><rsub|1>,\<ldots\>,<wide|v|\<vect\>><rsub|k>>,
+      then the vectors of functions <math|\<mathe\><rsup|\<lambda\><rsub|1>*t>*<wide|v|\<vect\>><rsub|1>,\<mathe\><rsup|\<lambda\><rsub|2>*t>*<wide|v|\<vect\>><rsub|2>,\<ldots\>,\<mathe\><rsup|\<lambda\><rsub|k>*t>*<wide|v|\<vect\>><rsub|k>>
       are linearly independent. (Particularly in space of vectors of
       functions.)
     </em>
@@ -5777,7 +5827,7 @@
   General solution is:
 
   <\equation*>
-    <bmatrix|<tformat|<table|<row|<cell|x<rsub|1>>>|<row|<cell|x<rsub|2>>>|<row|<cell|x<rsub|3>>>>>>=c<rsub|1>*\<mathe\><rsup|2*t>*<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|1>>|<row|<cell|>>>>>+c<rsub|2>*\<mathe\><rsup|-t>*<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|0>>|<row|<cell|-1>>>>>+c<rsub|3>*\<mathe\><rsup|-t>*<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|1>>|<row|<cell|-1>>>>>
+    <bmatrix|<tformat|<table|<row|<cell|x<rsub|1>>>|<row|<cell|x<rsub|2>>>|<row|<cell|x<rsub|3>>>>>>=c<rsub|1>*\<mathe\><rsup|2*t>*<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|1>>|<row|<cell|1>>>>>+c<rsub|2>*\<mathe\><rsup|-t>*<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|0>>|<row|<cell|-1>>>>>+c<rsub|3>*\<mathe\><rsup|-t>*<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|1>>|<row|<cell|-1>>>>>
   </equation*>
 
   <\note*>
@@ -5819,15 +5869,15 @@
   Get:
 
   <\equation*>
-    <wide|x|\<vect\>>=\<mathe\><rsup|\<lambda\>*t>*<wide|v|\<vect\>>=\<mathe\><rsup|\<alpha\>*t>*<around*|(|cos\<beta\>t+\<mathi\>*sin
-    \<beta\>t|)>*<around*|(|<wide|a|\<vect\>>+<wide|b|\<vect\>>*\<mathi\>|)>
+    <wide|x|\<vect\>>=\<mathe\><rsup|\<lambda\>*t>*<wide|v|\<vect\>>=\<mathe\><rsup|\<alpha\>*t>*<around*|(|cos
+    \<beta\>*t+\<mathi\>*sin \<beta\>*t|)>*<around*|(|<wide|a|\<vect\>>+<wide|b|\<vect\>>*\<mathi\>|)>
   </equation*>
 
   <\equation*>
     <wide|x|\<vect\>>=\<mathe\><rsup|\<alpha\>*t>*<around*|[|cos
-    <around*|(|\<beta\>t|)>*<wide|a|\<vect\>>-sin
-    <around*|(|\<beta\>t|)>*<wide|b|\<vect\>>|]>+\<mathi\>*\<mathe\><rsup|\<alpha\>*t><around*|[|*sin
-    <around*|(|\<beta\>t|)>*<wide|a|\<vect\>>+cos
+    <around*|(|\<beta\>*t|)>*<wide|a|\<vect\>>-sin
+    <around*|(|\<beta\>*t|)>*<wide|b|\<vect\>>|]>+\<mathi\>*\<mathe\><rsup|\<alpha\>*t><around*|[|sin
+    <around*|(|\<beta\>*t|)>*<wide|a|\<vect\>>+cos
     <around*|(|\<beta\>*t|)>*<wide|b|\<vect\>>|]>\<equiv\><wide|u|\<vect\>><around*|(|t|)>+\<mathi\>*<wide|w|\<vect\>><around*|(|t|)>
   </equation*>
 
@@ -5835,7 +5885,7 @@
     \;
 
     <em|<math-it|<math|<wide|u|\<vect\>>,<wide|w|\<vect\>>> <em|are real
-    solutions to our system of ODEs.>>>
+    solutions to our system of ODEs and are linearly independent.>>>
   </proposition*>
 
   We have
@@ -5863,59 +5913,59 @@
   <underline|Example>:
 
   <\equation*>
-    <choice|<tformat|<table|<row|<cell|<frac|\<mathd\>x<rsub|1>|\<mathd\>t>=4x<rsub|1>-3x<rsub|2>>>|<row|<cell|<frac|\<mathd\>x<rsub|2>|\<mathd\>t>=3x<rsub|1>+4x<rsub|2>>>>>>,<application-space|2em>A=<bmatrix|<tformat|<table|<row|<cell|4>|<cell|-3>>|<row|<cell|3>|<cell|4>>>>>
+    <choice|<tformat|<table|<row|<cell|x<rsub|1><rprime|'>=4*x<rsub|1>-3*x<rsub|2>>>|<row|<cell|x<rsub|2><rprime|'>=3*x<rsub|1>+4*x<rsub|2>>>>>>,<application-space|2em>A=<bmatrix|<tformat|<table|<row|<cell|4>|<cell|-3>>|<row|<cell|3>|<cell|4>>>>>
   </equation*>
 
   Find eigenvectors and eigenvalues for <math|A>:
 
   <\equation*>
-    <det|<tformat|<table|<row|<cell|4-\<lambda\>>|<cell|-3>>|<row|<cell|3>|<cell|4-\<lambda\>>>>>>=<around*|(|4-\<lambda\>|)><rsup|2>+9=\<lambda\><rsup|2>-8\<lambda\>+25=0
+    <det|<tformat|<table|<row|<cell|4-\<lambda\>>|<cell|-3>>|<row|<cell|3>|<cell|4-\<lambda\>>>>>>=<around*|(|4-\<lambda\>|)><rsup|2>+9=\<lambda\><rsup|2>-8*\<lambda\>+25=0
   </equation*>
 
   <\equation*>
-    \<lambda\><rsub|1,2>=4\<pm\>3\<mathi\>
+    \<lambda\><rsub|1,2>=4\<pm\>3*\<mathi\>
   </equation*>
 
-  Take <math|\<lambda\>=4+3\<mathi\>> and find eigenvector:
+  Take <math|\<lambda\>=4+3*\<mathi\>> and find eigenvector:
 
   <\equation*>
-    <bmatrix|<tformat|<table|<row|<cell|4-<around*|(|4+3\<mathi\>|)>>|<cell|-3>>|<row|<cell|3>|<cell|4-<around*|(|4+3\<mathi\>|)>>>>>>*<bmatrix|<tformat|<table|<row|<cell|x>>|<row|<cell|y>>>>>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|0>>>>>
+    <bmatrix|<tformat|<table|<row|<cell|4-<around*|(|4+3*\<mathi\>|)>>|<cell|-3>>|<row|<cell|3>|<cell|4-<around*|(|4+3*\<mathi\>|)>>>>>>*<bmatrix|<tformat|<table|<row|<cell|x>>|<row|<cell|y>>>>>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|0>>>>>
   </equation*>
 
   <\equation*>
-    <bmatrix|<tformat|<table|<row|<cell|-3\<mathi\>>|<cell|-3>>|<row|<cell|3>|<cell|-3\<mathi\>>>>>>*<bmatrix|<tformat|<table|<row|<cell|x>>|<row|<cell|y>>>>>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|0>>>>>
+    <bmatrix|<tformat|<table|<row|<cell|-3*\<mathi\>>|<cell|-3>>|<row|<cell|3>|<cell|-3*\<mathi\>>>>>>*<bmatrix|<tformat|<table|<row|<cell|x>>|<row|<cell|y>>>>>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|0>>>>>
   </equation*>
 
   take <math|<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|-\<mathi\>>>>>>>.
   Construct complex solutions:
 
   <\equation*>
-    \<mathe\><rsup|<around*|(|4+3\<mathi\>|)>*t>*<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|-i>>>>>
+    \<mathe\><rsup|<around*|(|4+3*\<mathi\>|)>*t>*<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|-i>>>>>
   </equation*>
 
-  and break it up:
+  and break them up:
 
   <\equation*>
-    \<mathe\><rsup|4*t>*<around*|(|cos 3t+\<mathi\>*sin
-    3t|)>*<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|-i>>>>>=\<mathe\><rsup|4*t>*<bmatrix|<tformat|<table|<row|<cell|cos
-    3t+\<mathi\>*sin 3t>>|<row|<cell|-\<mathi\>*cos 3t+sin
-    3t>>>>>=\<mathe\><rsup|4*t>*<bmatrix|<tformat|<table|<row|<cell|cos
-    3t>>|<row|<cell|sin 3t>>>>>+\<mathi\>*\<mathe\><rsup|4*t>*<bmatrix|<tformat|<table|<row|<cell|sin
-    3t>>|<row|<cell|-cos 3t>>>>>
+    \<mathe\><rsup|4*t>*<around*|(|cos 3*t+\<mathi\>*sin
+    3*t|)>*<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|-i>>>>>=\<mathe\><rsup|4*t>*<bmatrix|<tformat|<table|<row|<cell|cos
+    3*t+\<mathi\>*sin 3*t>>|<row|<cell|-\<mathi\>*cos 3*t+sin
+    3*t>>>>>=\<mathe\><rsup|4*t>*<bmatrix|<tformat|<table|<row|<cell|cos
+    3*t>>|<row|<cell|sin 3*t>>>>>+\<mathi\>*\<mathe\><rsup|4*t>*<bmatrix|<tformat|<table|<row|<cell|sin
+    3*t>>|<row|<cell|-cos 3*t>>>>>
   </equation*>
 
   General real solution will be:
 
   <\equation*>
     <wide|x|\<vect\>><around*|(|t|)>=c<rsub|1>*\<mathe\><rsup|4*t>*<bmatrix|<tformat|<table|<row|<cell|cos
-    3t>>|<row|<cell|sin 3t>>>>>+c<rsub|2>*\<mathe\><rsup|4*t>*<bmatrix|<tformat|<table|<row|<cell|sin
-    3t>>|<row|<cell|-cos 3t>>>>>
+    3*t>>|<row|<cell|sin 3*t>>>>>+c<rsub|2>*\<mathe\><rsup|4*t>*<bmatrix|<tformat|<table|<row|<cell|sin
+    3*t>>|<row|<cell|-cos 3*t>>>>>
   </equation*>
 
   <underline|Example>: Closed system of 3 tanks of salt solution.
 
   <\padded-center>
-    <with|gr-mode|<tuple|edit|math-at>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|empty>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-arrow-end|\<gtr\>|gr-auto-crop|true|<graphics||<cline|<point|-6|1>|<point|-6.0|-1.0>|<point|-4.0|-1.0>|<point|-4.0|1.0>>|<cline|<point|-2|1>|<point|-2.0|-1.0>|<point|0.0|-1.0>|<point|0.0|1.0>>|<cline|<point|2|1>|<point|2.0|-1.0>|<point|4.0|-1.0>|<point|4.0|1.0>>|<line|<point|-5.3|-1>|<point|-5.3|-2.0>|<point|-3.5|-2.0>|<point|-2.6|-0.5>|<point|-2.0|-0.5>>|<line|<point|-5|-1>|<point|-5.0|-1.7>|<point|-3.7|-1.7>|<point|-2.8|-0.3>|<point|-2.0|-0.3>>|<line|<point|-1|-1>|<point|-1.0|-2.0>|<point|1.0|-2.0>|<point|1.4|-0.5>|<point|2.0|-0.5>>|<line|<point|-0.7|-1>|<point|-0.7|-1.7>|<point|0.6|-1.7>|<point|1.0|-0.3>|<point|2.0|-0.3>>|<line|<point|3|-1>|<point|3.0|-3.0>|<point|-7.0|-3.0>|<point|-7.0|-0.4>|<point|-6.0|-0.4>>|<line|<point|3.4|-1>|<point|3.4|-3.3>|<point|-7.2|-3.3>>|<line|<point|-7.2|-3.3>|<point|-7.2|0.0>|<point|-6.0|0.0>>|<math-at|V<rsub|2>|<point|-1.16551|0.212363>>|<with|arrow-end|\<gtr\>|<line|<point|-6.85939|0.339364>|<point|-6.37255258632094|0.339363672443445>>>|<with|arrow-end|\<gtr\>|<line|<point|-5.6|-1.3>|<point|-5.6|-1.8>>>|<with|arrow-end|\<gtr\>|<line|<point|-1.4|-1.2>|<point|-1.4|-1.7>>>|<with|arrow-end|\<gtr\>|<line|<point|-2.7|0.3>|<point|-2.2|0.3>>>|<with|arrow-end|\<gtr\>|<line|<point|1.3|0.3>|<point|1.7|0.3>>>|<with|arrow-end|\<gtr\>|<line|<point|2.7|-1.3>|<point|2.7|-2.0>>>|<math-at|r|<point|-2.5|0.7>>|<math-at|V<rsub|1>|<point|-5.16913378501162|0.2>>|<math-at|V<rsub|3>|<point|3.0|0.3>>>>
+    <with|gr-mode|<tuple|edit|math-at>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|empty>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-arrow-end|\<gtr\>|gr-auto-crop|true|<graphics||<cline|<point|-5|1>|<point|-5.0|-1.0>|<point|-3.0|-1.0>|<point|-3.0|1.0>>|<cline|<point|-1|1>|<point|-1.0|-1.0>|<point|1.0|-1.0>|<point|1.0|1.0>>|<cline|<point|3|1>|<point|3.0|-1.0>|<point|5.0|-1.0>|<point|5.0|1.0>>|<cline|<point|-4.4|-1>|<point|-4.4|-2.3>|<point|-2.0|-2.3>|<point|-1.6|-0.6>|<point|-1.0|-0.6>|<point|-1.0|0.0>|<point|-2.0|0.0>|<point|-2.5|-1.8>|<point|-4.0|-1.8>|<point|-4.0|-1.0>>|<cline|<point|-0.42675102804273|-1.03869186918158>|<point|-0.42675102804273|-2.33869186918158>|<point|1.97324897195727|-2.33869186918158>|<point|2.37324897195727|-0.63869186918158>|<point|2.97324897195727|-0.63869186918158>|<point|2.97324897195727|-0.03869186918158>|<point|1.97324897195727|-0.03869186918158>|<point|1.47324897195727|-1.83869186918158>|<point|-0.0267510280427292|-1.83869186918158>|<point|-0.0267510280427292|-1.03869186918158>>|<cline|<point|4.4|-1>|<point|4.4|-3.5>|<point|-6.0|-3.6>|<point|-6.0|0.0>|<point|-5.0|0.0>|<point|-5.0|-0.5>|<point|-5.5|-0.5>|<point|-5.5|-3.0>|<point|4.0|-3.0>|<point|4.0|-1.0>>|<with|arrow-end|\<gtr\>|<line|<point|-5.8|0.4>|<point|-5.2|0.4>>>|<with|arrow-end|\<gtr\>|<line|<point|-2|0.4>|<point|-1.3|0.4>>>|<with|arrow-end|\<gtr\>|<line|<point|2|0.5>|<point|2.8|0.5>>>|<with|arrow-end|\<gtr\>|<line|<point|4.8|-1.3>|<point|4.8|-2.0>>>|<with|arrow-end|\<gtr\>|<line|<point|-0.8|-1.2>|<point|-0.8|-2.0>>>|<with|arrow-end|\<gtr\>|<line|<point|-4.7|-1.2>|<point|-4.7|-2.0>>>|<math-at|V<rsub|1>|<point|-4|0>>|<math-at|V<rsub|2>|<point|0|0>>|<math-at|V<rsub|3>|<point|4|0>>|<math-at|r|<point|-1.7|0.7>>>>
   </padded-center>
 
   <\itemize>
@@ -5950,7 +6000,7 @@
   </equation*>
 
   <\equation*>
-    *\<cdots\>*=-\<lambda\><rsup|3>-<frac|4|5>\<lambda\><rsup|2>-<frac|1|5>\<lambda\>=-\<lambda\>*<around*|(|\<lambda\><rsup|2>+<frac|4|5>\<lambda\>+<frac|1|5>|)>=0
+    \<cdots\>=-\<lambda\><rsup|3>-<frac|4|5>*\<lambda\><rsup|2>-<frac|1|5>*\<lambda\>=-\<lambda\>*<around*|(|\<lambda\><rsup|2>+<frac|4|5>*\<lambda\>+<frac|1|5>|)>=0
   </equation*>
 
   <\equation*>
@@ -6192,7 +6242,7 @@
       eigendecomposition <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-41>>
 
-      <with|par-left|<quote|1tab>|6.5<space|2spc>First-order systems of
+      <with|par-left|<quote|1tab>|6.5<space|2spc>Systems of First-order
       linear ODEs <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-42>>
 

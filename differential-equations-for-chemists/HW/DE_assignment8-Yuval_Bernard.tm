@@ -150,8 +150,6 @@
 
   <section*|Page 366>
 
-  Questions: 1,3,9,10,11
-
   <underline|Question 1>
 
   In matrix form:
