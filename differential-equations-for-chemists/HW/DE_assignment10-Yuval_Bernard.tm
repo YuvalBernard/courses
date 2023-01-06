@@ -110,7 +110,7 @@
     <wide|x|\<vect\>><rprime|'>=<bmatrix|<tformat|<table|<row|<cell|1>|<cell|1>|<cell|2>>|<row|<cell|1>|<cell|2>|<cell|1>>|<row|<cell|2>|<cell|1>|<cell|1>>>>>
   </equation*>
 
-  Note that the sum of all columns is equal (sum = 4). We can infer that
+  Note that the sum of all rows is equal (sum = 4). We can infer that
   <math|<wide|z|\<vect\>><rsub|1>=<around*|[|1,1,1|]><rsup|T>> is an
   eigenvector with an eigenvalue <math|\<lambda\><rsub|1>=4>. Find the other
   eigenvalues:

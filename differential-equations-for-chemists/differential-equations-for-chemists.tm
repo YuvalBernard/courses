@@ -5620,7 +5620,7 @@
 
       and two solutions <math|<wide|u|\<vect\>><rsub|1><around*|(|t|)>,<wide|u|\<vect\>><rsub|2><around*|(|t|)>>,
       then <math|<wide|u|\<vect\>><rsub|1>-<wide|u|\<vect\>><rsub|2><around*|(|t|)>>
-      solves the associated homoegneous system.
+      solves the associated homogeneous system.
 
       Moreover, every solution to the non-homogeneous system is of the form
       <math|<rigid|<wide|u|\<vect\>><rsub|1><around*|(|t|)>+<wide|u|\<vect\>><rsub|0><around*|(|t|)>>>,
@@ -6006,6 +6006,147 @@
   <\equation*>
     \<lambda\><rsub|1,2,3>=0,-<frac|2|5>\<pm\><frac|1|5>*\<mathi\>
   </equation*>
+
+  <marginal-note|normal|c|lec 19 8.1.23>Interlude:
+
+  <subsubsection|Coefficient matrix is not diagonalizble & generalized
+  eigenvectors>
+
+  Interlude: what happens if a matrix isn't diagonalizable?
+
+  Suppose we have a matrix of the following type:
+
+  <\equation*>
+    A=<bmatrix|<tformat|<table|<row|<cell|\<alpha\>>|<cell|1>|<cell|>|<cell|0>>|<row|<cell|0>|<cell|\<ddots\>>|<cell|\<ddots\>>|<cell|>>|<row|<cell|>|<cell|>|<cell|>|<cell|1>>|<row|<cell|0>|<cell|>|<cell|0>|<cell|\<alpha\>>>>>>
+  </equation*>
+
+  Matrix is called a Jordan cell.
+
+  Calculate eigenvalues:
+
+  <\equation*>
+    det <around*|(|A-\<lambda\>*I|)>=<det|<tformat|<table|<row|<cell|\<alpha\>-\<lambda\>>|<cell|1>|<cell|>|<cell|0>>|<row|<cell|0>|<cell|\<ddots\>>|<cell|\<ddots\>>|<cell|>>|<row|<cell|>|<cell|>|<cell|>|<cell|1>>|<row|<cell|0>|<cell|>|<cell|0>|<cell|\<alpha\>-\<lambda\>>>>>>=<around*|(|\<alpha\>-\<lambda\>|)><rsup|n>
+  </equation*>
+
+  <math|\<lambda\>=\<alpha\>> is the only eigenvalue, with multiplicity
+  <math|n>. Find eigenvectors:
+
+  <\equation*>
+    <around*|(|A-\<alpha\>*I|)>*<bmatrix|<tformat|<table|<row|<cell|x<rsub|1>>>|<row|<cell|\<vdots\>>>|<row|<cell|x<rsub|n>>>>>>=<wide|0|\<vect\>>
+  </equation*>
+
+  <\equation*>
+    A-\<alpha\>*I=<bmatrix|<tformat|<table|<row|<cell|0>|<cell|1>|<cell|>|<cell|0>>|<row|<cell|0>|<cell|\<ddots\>>|<cell|\<ddots\>>|<cell|>>|<row|<cell|>|<cell|>|<cell|>|<cell|1>>|<row|<cell|0>|<cell|>|<cell|0>|<cell|0>>>>>
+  </equation*>
+
+  <math|rank <around*|(|A-\<lambda\>*I|)>=n-1>, so nullspace is of dim. 1 and
+  <math|<around*|[|1,0,0,\<ldots\>,0|]><rsup|T>> spans the eigenspace.
+
+  <\note*>
+    If we square the matrix <math|A-\<alpha\>*I> we get:
+
+    <\equation*>
+      <around*|(|A-\<alpha\>*I|)><rsup|2>=<bmatrix|<tformat|<table|<row|<cell|0>|<cell|1>|<cell|>|<cell|0>>|<row|<cell|0>|<cell|\<ddots\>>|<cell|\<ddots\>>|<cell|>>|<row|<cell|>|<cell|>|<cell|>|<cell|1>>|<row|<cell|0>|<cell|>|<cell|0>|<cell|0>>>>><rsup|2>=<bmatrix|<tformat|<table|<row|<cell|0>|<cell|0>|<cell|1>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|0>|<cell|0>|<cell|\<ddots\>>|<cell|>>|<row|<cell|\<vdots\>>|<cell|\<vdots\>>|<cell|\<vdots\>>|<cell|0>|<cell|1>>|<row|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|0>>>>>
+    </equation*>
+
+    The ones diagonal shifts up one row! Also, <math|rank
+    <around*|(|A-\<alpha\>*I|)><rsup|2>=n-2>.
+
+    What's the nullspace? Basis for the nullspace is
+    <math|<around*|[|1,0,\<ldots\>,0|]><rsup|T>,<around*|[|0,1,0,\<ldots\>,0|]><rsup|T>>.
+  </note*>
+
+  In general, if <math|<wide|v|\<vect\>>> is a vector such that for and
+  eigenvalue <math|\<lambda\>> of a matrix <math|A> we have
+
+  <\equation*>
+    <around*|(|A-\<lambda\>*I|)><rsup|k>*<wide|v|\<vect\>>=<wide|0|\<vect\>>
+  </equation*>
+
+  for some <math|k>, then <math|<wide|v|\<vect\>>> is called a
+  <em|generalized eigenvector>.
+
+  Turns out that there are <em|always> <math|n> linearly independent
+  generalized eigenvectors for a matrix <math|A>. It's basically the next
+  best thing to diagonalize if <math|A> a is non-diagonalizable.
+
+  Now back to the tank question. We have 3 eigenvalues where 2 are complex
+  conjugates and the third is zero. For <math|\<lambda\>=0> the eigenvector
+  is <math|<around*|[|2,1,2|]><rsup|T>>.
+
+  For the other eigenvectors, we want 2 linearly independent real
+  eigenvectors. Work, e.g. with <math|\<lambda\>=-<frac|2|5>-<frac|1|5>*\<mathi\>>.
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|A-\<lambda\>*I>|<cell|=>|<cell|<bmatrix|<tformat|<table|<row|<cell|-<frac|1|5>-<around*|(|-<frac|2|5>-<frac|1|5>*\<mathi\>|)>>|<cell|0>|<cell|<frac|1|5>>>|<row|<cell|<frac|1|5>>|<cell|-<frac|2|5>-<around*|(|-<frac|2|5>-<frac|1|5>*\<mathi\>|)>>|<cell|0>>|<row|<cell|0>|<cell|<frac|2|5>>|<cell|-<frac|1|5>-<around*|(|-<frac|2|5>-<frac|1|5>*\<mathi\>|)>>>>>>>>|<row|<cell|>|<cell|=>|<cell|<bmatrix|<tformat|<table|<row|<cell|<frac|1|5>+<frac|\<mathi\>|5>>|<cell|0>|<cell|<frac|1|5>>>|<row|<cell|<frac|1|5>>|<cell|<frac|\<mathi\>|5>>|<cell|0>>|<row|<cell|0>|<cell|<frac|2|5>>|<cell|<frac|1|5>+<frac|\<mathi\>|5>>>>>>>>>>
+  </eqnarray*>
+
+  Nullspace of this is our eigenspace. The vector
+  <math|<around*|[|1,\<mathi\>,-1-\<mathi\>|]><rsup|T>> spans the eigenspace.
+
+  Get complex solution:
+
+  <\equation*>
+    \<mathe\><rsup|<around*|(|-<frac|2|5>-<frac|\<mathi\>|5>|)>*t>*<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|\<mathi\>>>|<row|<cell|-1-\<mathi\>>>>>>=\<cdots\>=<wide*|\<mathe\><rsup|-<frac|2|5>*t>*<bmatrix|<tformat|<table|<row|<cell|cos
+    <frac|t|5>>>|<row|<cell|sin <frac|t|5>>>|<row|<cell|-cos <frac|t|5>-sin
+    <frac|t|5>>>>>> |\<wide-underbrace\>><rsub|<wide|u|\<vect\>>>+\<mathi\>*<wide*|\<mathe\><rsup|-<frac|2|5>*t>*<bmatrix|<tformat|<table|<row|<cell|-sin
+    <frac|t|5>>>|<row|<cell|cos <frac|t|5>>>|<row|<cell|-cos <frac|t|5>+sin
+    <frac|t|5>>>>>>|\<wide-underbrace\>><rsub|<wide|w|\<vect\>>>
+  </equation*>
+
+  <math|<wide|u|\<vect\>>,<wide|w|\<vect\>>> are both real linearly
+  independent solutions.
+
+  General solution is
+
+  <\equation*>
+    <bmatrix|<tformat|<table|<row|<cell|x<rsub|1>>>|<row|<cell|x<rsub|2>>>|<row|<cell|x<rsub|3>>>>>>=c<rsub|1>*<bmatrix|<tformat|<table|<row|<cell|2>>|<row|<cell|1>>|<row|<cell|2>>>>>+c<rsub|2>*\<mathe\><rsup|-<frac|2|5>*t>*<bmatrix|<tformat|<table|<row|<cell|cos
+    <frac|t|5>>>|<row|<cell|sin <frac|t|5>>>|<row|<cell|-cos <frac|t|5>-sin
+    <frac|t|5>>>>>>+c<rsub|3>*\<mathe\><rsup|-<frac|2|5>*t>*<bmatrix|<tformat|<table|<row|<cell|-sin
+    <frac|t|5>>>|<row|<cell|cos <frac|t|5>>>|<row|<cell|-cos <frac|t|5>+sin
+    <frac|t|5>>>>>>
+  </equation*>
+
+  <\note*>
+    If we add <math|x<rsub|1>,x<rsub|2>,x<rsub|3>> we get <math|5c<rsub|1>>.
+    This makes sense, as this is a closed system, which means the salt amount
+    does not change.
+
+    Additionally, as <math|t\<rightarrow\>\<infty\>> the solution approaches
+    the steady state <math|<bmatrix|<tformat|<table|<row|<cell|2*c<rsub|1>>>|<row|<cell|c<rsub|1>>>|<row|<cell|2*c<rsub|1>>>>>>>.
+    Take into account the volumes of the tanks and reach to the conclusion
+    that at steady state the salt concentration is ubiquitous in the tanks.
+  </note*>
+
+  Only case we haven't touched yet is where <math|A> does not have <math|n>
+  linearly independent eigenvectors, i.e. for some eigenvalue
+  <math|\<lambda\>> the eigenspace has dimension <strong|smaller> than the
+  multiplicity of <math|\<lambda\>> in the characteristic polynomial. In this
+  case, generalized eigenvectors come in.
+
+  <subsubsection|Coefficient matrix does not have <math|n> linearly
+  independent eigenvectors>
+
+  Example:
+
+  <\equation*>
+    A=<bmatrix|<tformat|<table|<row|<cell|1>|<cell|-1>>|<row|<cell|1>|<cell|3>>>>>,<application-space|1em><wide|x|\<vect\>><rprime|'>=A*<wide|x|\<vect\>>
+  </equation*>
+
+  <\equation*>
+    det <around*|(|A-\<lambda\>*I|)>=<det|<tformat|<table|<row|<cell|1-\<lambda\>>|<cell|-1>>|<row|<cell|1>|<cell|3-\<lambda\>>>>>>=<around*|(|\<lambda\>-2|)><rsup|2>
+  </equation*>
+
+  <math|\<lambda\>=2> only eigenvalue.
+
+  <\equation*>
+    A-2*I=<bmatrix|<tformat|<table|<row|<cell|-1>|<cell|-1>>|<row|<cell|1>|<cell|1>>>>>
+  </equation*>
+
+  Nullspace has dimension 1, so there is only one linearly independent
+  eigenvector <math|<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|-1>>>>>>,
+  which yields the solution <math|\<mathe\><rsup|2*t>*<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|-1>>>>>>.
+  We need to find another linearly independent solution.
 </body>
 
 <\initial>
@@ -6060,8 +6201,10 @@
     <associate|auto-40|<tuple|6.4.5|78>>
     <associate|auto-41|<tuple|6.4.6|83>>
     <associate|auto-42|<tuple|6.5|86>>
-    <associate|auto-43|<tuple|6.5.1|86>>
-    <associate|auto-44|<tuple|6.5.2|89>>
+    <associate|auto-43|<tuple|6.5.1|87>>
+    <associate|auto-44|<tuple|6.5.2|90>>
+    <associate|auto-45|<tuple|6.5.3|92>>
+    <associate|auto-46|<tuple|6.5.4|?>>
     <associate|auto-5|<tuple|3|5>>
     <associate|auto-6|<tuple|3|5>>
     <associate|auto-7|<tuple|3|6>>
@@ -6253,6 +6396,10 @@
       <with|par-left|<quote|2tab>|6.5.2<space|2spc>Real coefficient matrix
       with non-real eigenvalues <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-44>>
+
+      <with|par-left|<quote|2tab>|6.5.3<space|2spc>Coefficient matrix is not
+      diagonalizble <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-45>>
     </associate>
   </collection>
 </auxiliary>

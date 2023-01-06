@@ -382,7 +382,7 @@
 
   <underline|Two Extra Extremely Exasperating Inquires>
 
-  <section*|Page ???>
+  <section*|Extra Page>
 
   <underline|Question 1>
 
@@ -521,7 +521,7 @@
   <math|\<lambda\><rsub|i><rsup|\<ell\>>> can also be proved by induction:
 
   For <math|\<ell\>=0>: (given <math|<wide|x|\<vect\>><rsub|i>> is the
-  eigenvector corresponding to the <math|i<rsup|th>> eigenvector of <math|A>)
+  eigenvector corresponding to the <math|i<rsup|th>> eigenvalue of <math|A>)
 
   <\equation*>
     A<rsup|0>*<wide|x|\<vect\>><rsub|i>=I*<wide|x|\<vect\>><rsub|i>=<wide|x|\<vect\>><rsub|i>=\<lambda\><rsub|i><rsup|0>*<wide|x|\<vect\>><rsub|i>
@@ -534,7 +534,7 @@
     A<rsup|\<ell\>+1>*<wide|x|\<vect\>><rsub|i>=A*A<rsup|\<ell\>>*<wide|x|\<vect\>><rsub|i>=A*\<lambda\><rsub|i><rsup|\<ell\>>*<wide|x|\<vect\>><rsub|i>=\<lambda\><rsub|i><rsup|\<ell\>>*A*<wide|x|\<vect\>><rsub|i>=\<lambda\><rsub|i><rsup|\<ell\>>*\<lambda\><rsub|i>*<wide|x|\<vect\>><rsub|i>=\<lambda\><rsub|i><rsup|\<ell\>+1>*<wide|x|\<vect\>><rsub|i>
   </equation*>
 
-  thus proving the inductive step holds.
+  thus completing proof by induction.
 
   Now, to compute <math|A<rsup|n>*<wide|v|\<vect\>><rsub|0>>, we need to
   express <math|<wide|v|\<vect\>><rsub|0>> as a linear combination of
@@ -731,32 +731,28 @@
     V=<bmatrix|<tformat|<table|<row|<cell|<wide|v|\<vect\>><rsub|1>>|<cell|<wide|v|\<vect\>><rsub|2>>>>>>=<bmatrix|<tformat|<table|<row|<cell|1>|<cell|1>>|<row|<cell|<frac|1+<sqrt|5>|2>>|<cell|<frac|1-<sqrt|5>|2>>>>>>
   </equation*>
 
-  Let's find <math|V<rsup|-1>> via Gauss-Seidal method:
+  Find <math|V<rsup|-1>>. For a <math|2\<times\>2> matrix:
 
   <\equation*>
-    <bmatrix|<tformat|<cwith|1|1|3|3|cell-tborder|0ln>|<cwith|2|2|3|3|cell-bborder|0ln>|<cwith|1|-1|3|3|cell-lborder|1ln>|<cwith|1|-1|3|3|cell-rborder|0ln>|<cwith|1|-1|4|4|cell-lborder|0ln>|<table|<row|<cell|1>|<cell|1>|<cell|1>|<cell|0>>|<row|<cell|<frac|1+<sqrt|5>|2>>|<cell|<frac|1-<sqrt|5>|2>>|<cell|0>|<cell|1>>>>><long-arrow|\<rubber-rightarrow\>|<tabular*|<tformat|<table|<row|<cell|R<rsub|2>\<rightarrow\>R<rsub|2>-<frac|<around*|(|1+<sqrt|5>|)>|2>R<rsub|1>>>>>>><bmatrix|<tformat|<cwith|1|1|3|3|cell-tborder|0ln>|<cwith|2|2|3|3|cell-bborder|0ln>|<cwith|1|-1|3|3|cell-lborder|1ln>|<cwith|1|-1|2|2|cell-rborder|1ln>|<cwith|1|-1|3|3|cell-rborder|0ln>|<cwith|1|-1|4|4|cell-lborder|0ln>|<table|<row|<cell|1>|<cell|1>|<cell|1>|<cell|0>>|<row|<cell|0>|<cell|-1>|<cell|-<frac|1+<sqrt|5>|2>>|<cell|1>>>>><long-arrow|\<rubber-rightarrow\>|<tabular*|<tformat|<table|<row|<cell|R<rsub|2>\<rightarrow\>-R<rsub|2>>>|<row|<cell|R<rsub|1>\<rightarrow\>R<rsub|1>-R<rsub|2>>>>>>>\<ldots\>
+    V<rsup|-1>=<frac|1|det V>*<bmatrix|<tformat|<table|<row|<cell|V<rsub|22>>|<cell|-V<rsub|12>>>|<row|<cell|-V<rsub|21>>|<cell|V<rsub|11>>>>>>=<frac|1|-<sqrt|5>><bmatrix|<tformat|<table|<row|<cell|<frac|1-<sqrt|5>|2>>|<cell|-1>>|<row|<cell|-<frac|1+<sqrt|5>|2>>|<cell|1>>>>>=<frac|1|<sqrt|5>>*<bmatrix|<tformat|<table|<row|<cell|-<frac|1-<sqrt|5>|2>>|<cell|1>>|<row|<cell|<frac|1+<sqrt|5>|2>>|<cell|-1>>>>>
+  </equation*>
+
+  Thus
+
+  <\equation*>
+    A<rsup|n>=V*D<rsup|n>*V<rsup|-1>=<frac|1|<sqrt|5>>*<bmatrix|<tformat|<table|<row|<cell|1>|<cell|1>>|<row|<cell|<frac|1+<sqrt|5>|2>>|<cell|<frac|1-<sqrt|5>|2>>>>>><bmatrix|<tformat|<table|<row|<cell|<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n>>|<cell|0>>|<row|<cell|0>|<cell|<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n>>>>>><bmatrix|<tformat|<table|<row|<cell|-<frac|1-<sqrt|5>|2>>|<cell|1>>|<row|<cell|<frac|1+<sqrt|5>|2>>|<cell|-1>>>>>
   </equation*>
 
   <\equation*>
-    V<rsup|-1>=<bmatrix|<tformat|<table|<row|<cell|<frac|1-<sqrt|5>|2>>|<cell|1>>|<row|<cell|<frac|1+<sqrt|5>|2>>|<cell|-1>>>>>
-  </equation*>
-
-  Thus,
-
-  <\equation*>
-    A<rsup|n>=V*D<rsup|n>*V<rsup|-1>=<bmatrix|<tformat|<table|<row|<cell|1>|<cell|1>>|<row|<cell|<frac|1+<sqrt|5>|2>>|<cell|<frac|1-<sqrt|5>|2>>>>>><bmatrix|<tformat|<table|<row|<cell|<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n>>|<cell|0>>|<row|<cell|0>|<cell|<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n>>>>>><bmatrix|<tformat|<table|<row|<cell|<frac|1-<sqrt|5>|2>>|<cell|1>>|<row|<cell|<frac|1+<sqrt|5>|2>>|<cell|-1>>>>>
+    A<rsup|n>=<frac|1|<sqrt|5>>*<bmatrix|<tformat|<table|<row|<cell|<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n>>|<cell|<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n>>>|<row|<cell|<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n+1>>|<cell|<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n+1>>>>>><bmatrix|<tformat|<table|<row|<cell|-<frac|1-<sqrt|5>|2>>|<cell|1>>|<row|<cell|<frac|1+<sqrt|5>|2>>|<cell|-1>>>>>
   </equation*>
 
   <\equation*>
-    A<rsup|n>=<bmatrix|<tformat|<table|<row|<cell|<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n>>|<cell|<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n>>>|<row|<cell|<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n+1>>|<cell|<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n+1>>>>>><bmatrix|<tformat|<table|<row|<cell|<frac|1-<sqrt|5>|2>>|<cell|1>>|<row|<cell|<frac|1+<sqrt|5>|2>>|<cell|-1>>>>>
+    A<rsup|n>=<frac|1|<sqrt|5>>*<bmatrix|<tformat|<table|<row|<cell|-<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n>*<around*|(|<frac|1-<sqrt|5>|2>|)>+<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n>*<around*|(|<frac|1+<sqrt|5>|2>|)>>|<cell|<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n>-<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n>>>|<row|<cell|-<around*|(|<frac|1-<sqrt|5>|2>|)>*<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n+1>+<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n+1>*<around*|(|<frac|1+<sqrt|5>|2>|)>>|<cell|<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n+1>-<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n+1>>>>>>
   </equation*>
 
   <\equation*>
-    A<rsup|n>=<bmatrix|<tformat|<table|<row|<cell|<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n>*<around*|(|<frac|1-<sqrt|5>|2>|)>+<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n><around*|(|<frac|1+<sqrt|5>|2>|)>>|<cell|<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n>-<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n>>>|<row|<cell|<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n+1>*<around*|(|<frac|1-<sqrt|5>|2>|)>+<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n+1>*<around*|(|<frac|1+<sqrt|5>|2>|)>>|<cell|<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n+1>-<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n+1>>>>>>
-  </equation*>
-
-  <\equation*>
-    A<rsup|n>=<bmatrix|<tformat|<table|<row|<cell|-<around*|[|<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n-1>+<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n-1>|]>>|<cell|<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n>-<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n>>>|<row|<cell|-<around*|[|<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n>+<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n>|]>>|<cell|<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n+1>-<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n+1>>>>>>
+    A<rsup|n>=<frac|1|<sqrt|5>>*<bmatrix|<tformat|<table|<row|<cell|<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n-1>-<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n-1>>|<cell|<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n>-<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n>>>|<row|<cell|<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n>-<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n>>|<cell|<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n+1>-<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n+1>>>>>>
   </equation*>
 
   (c) Given
@@ -766,11 +762,11 @@
   </equation*>
 
   <\equation*>
-    <wide|v|\<vect\>><rsub|n>=A<rsup|n>*<wide|v|\<vect\>><rsub|0>=<bmatrix|<tformat|<table|<row|<cell|-<around*|[|<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n-1>+<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n-1>|]>>|<cell|<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n>-<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n>>>|<row|<cell|-<around*|[|<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n>+<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n>|]>>|<cell|<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n+1>-<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n+1>>>>>>*<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|1>>>>>
+    <wide|v|\<vect\>><rsub|n>=A<rsup|n>*<wide|v|\<vect\>><rsub|0>=<frac|1|<sqrt|5>>*<bmatrix|<tformat|<table|<row|<cell|<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n-1>-<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n-1>>|<cell|<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n>-<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n>>>|<row|<cell|<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n>-<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n>>|<cell|<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n+1>-<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n+1>>>>>>*<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|1>>>>>
   </equation*>
 
   <\equation*>
-    <wide|v|\<vect\>><rsub|n>=<bmatrix|<tformat|<table|<row|<cell|<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n>-<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n>>>|<row|<cell|<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n+1>-<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n+1>>>>>>
+    <wide|v|\<vect\>><rsub|n>=<frac|1|<sqrt|5>>*<bmatrix|<tformat|<table|<row|<cell|<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n>-<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n>>>|<row|<cell|<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n+1>-<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n+1>>>>>>
   </equation*>
 
   It is clear that the result obeys the relation
@@ -783,11 +779,8 @@
   formula for <math|a<rsub|n>>
 
   <\equation*>
-    a<rsub|n>=<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n>-<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n>
+    a<rsub|n>=<frac|1|<sqrt|5>>*<around*|[|<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n>-<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n>|]>
   </equation*>
-
-  this is just the subtraction of the eigenvalues of <math|A> to the
-  <math|n<rsup|th>> power!
 </body>
 
 <\initial>
