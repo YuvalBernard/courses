@@ -181,7 +181,7 @@
     eigendecomposition <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-41>>
 
-    <with|par-left|1tab|6.5<space|2spc>First-order systems of linear ODEs
+    <with|par-left|1tab|6.5<space|2spc>Systems of First-order linear ODEs
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-42>>
 
@@ -192,7 +192,35 @@
     <with|par-left|2tab|6.5.2<space|2spc>Real coefficient matrix with
     non-real eigenvalues <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-44>>
+
+    <with|par-left|2tab|6.5.3<space|2spc>Coefficient matrix is not
+    diagonalizable & generalized eigenvectors
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-45>>
+
+    <with|par-left|2tab|6.5.4<space|2spc>Coefficient matrix does not have
+    <with|mode|math|n> linearly independent eigenvectors
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-46>>
+
+    <with|par-left|1tab|6.6<space|2spc>Two-point boundary value problems
+    (BVPs) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-47>>
+
+    <with|par-left|2tab|6.6.1<space|2spc>Eigenvalue problems
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-48>>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|7<space|2spc>Partial
+    differential equations> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-49><vspace|0.5fn>
+
+    <with|par-left|1tab|7.1<space|2spc>Heat conduction in a rod (Heat
+    equation) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-50>>
   </table-of-contents>
+
+  <page-break*>
 
   <part*|Preliminary: Complex numbers and functions>
 
@@ -5266,7 +5294,7 @@
     we get <math|<bmatrix|<tformat|<table|<row|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|0>>>>><bmatrix|<tformat|<table|<row|<cell|x>>|<row|<cell|y>>>>>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|0>>>>>>
     and every vector is a solution. Here eigenspace has dim 2.
 
-    <marginal-note|normal|c|lec 17 2.1.23><item>
+    <marginal-note|normal|c|lec 17 1.1.23><item>
 
     <\equation*>
       A=<bmatrix|<tformat|<table|<row|<cell|0>|<cell|-1>>|<row|<cell|1>|<cell|0>>>>>
@@ -5544,7 +5572,7 @@
     </enumerate>
   </note*>
 
-  <marginal-note|normal|c|lec 18 3.1.23>
+  <marginal-note|normal|c|lec 18 2.1.23>
 
   <\theorem*>
     \;
@@ -6009,7 +6037,7 @@
 
   <marginal-note|normal|c|lec 19 8.1.23>Interlude:
 
-  <subsubsection|Coefficient matrix is not diagonalizble & generalized
+  <subsubsection|Coefficient matrix is not diagonalizable & generalized
   eigenvectors>
 
   Interlude: what happens if a matrix isn't diagonalizable?
@@ -6145,8 +6173,630 @@
 
   Nullspace has dimension 1, so there is only one linearly independent
   eigenvector <math|<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|-1>>>>>>,
-  which yields the solution <math|\<mathe\><rsup|2*t>*<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|-1>>>>>>.
-  We need to find another linearly independent solution.
+  which yields the solution <math|\<mathe\><rsup|2*t>*<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|-1>>>>>>.\ 
+
+  We need to find another linearly independent solution. Try to find a
+  solution of the form <math|<wide|x|\<vect\>>=<wide|v|\<vect\>><rsub|1>*t*\<mathe\><rsup|2*t>+<wide|v|\<vect\>><rsub|2>*\<mathe\><rsup|2*t>>.
+  Substitute in <math|<wide|x|\<vect\>><rprime|'>=A*<wide|x|\<vect\>>>.
+
+  <\equation*>
+    <wide|x|\<vect\>><rprime|'>=2*<wide|v|\<vect\>><rsub|1>*t*\<mathe\><rsup|2*t>+<wide|v|\<vect\>><rsub|1>*\<mathe\><rsup|2*t>+2<wide|v|\<vect\>><rsub|2>*\<mathe\><rsup|2*t>=A*<around*|(|<wide|v|\<vect\>><rsub|1>*t*\<mathe\><rsup|2*t>+<wide|v|\<vect\>><rsub|2>*\<mathe\><rsup|2*t>|)>
+  </equation*>
+
+  This has to hold for all <math|t>. Set <math|t=0>:
+
+  <\equation>
+    <wide|v|\<vect\>><rsub|1>+2*<wide|v|\<vect\>><rsub|2>=A*<wide|v|\<vect\>><rsub|2>
+  </equation>
+
+  <\equation>
+    <around*|(|A-2*I|)>*<wide|v|\<vect\>><rsub|2>=<wide|v|\<vect\>><rsub|1>
+  </equation>
+
+  Factoring <math|\<mathe\><rsup|2*t>> from eq. (4) and dividing we get:
+
+  <\equation*>
+    2*<wide|v|\<vect\>><rsub|1>*t+<wide|v|\<vect\>><rsub|1>+2*<wide|v|\<vect\>><rsub|2>=A*<wide|v|\<vect\>><rsub|1>*t+A*<wide|v|\<vect\>><rsub|2>
+  </equation*>
+
+  <\equation*>
+    2*<wide|v|\<vect\>><rsub|1>*t+<wide|v|\<vect\>><rsub|1>-A*<wide|v|\<vect\>><rsub|1>*t=A*<wide|v|\<vect\>><rsub|2>-2*<wide|v|\<vect\>><rsub|2>
+  </equation*>
+
+  Use eq. (5) to simplify:
+
+  <\equation*>
+    2*<wide|v|\<vect\>><rsub|1>*t+<wide|v|\<vect\>><rsub|1>-A*<wide|v|\<vect\>><rsub|1>*t=<wide|v|\<vect\>><rsub|1>
+  </equation*>
+
+  Now we have an equation in <math|<wide|v|\<vect\>><rsub|1>> only. Set
+  <math|t=1>:
+
+  <\equation*>
+    2*<wide|v|\<vect\>><rsub|1>=A*<wide|v|\<vect\>><rsub|1>
+  </equation*>
+
+  <math|<wide|v|\<vect\>><rsub|1>> is an eigenvector for <math|\<lambda\>=2>.
+  Take <math|<wide|v|\<vect\>><rsub|1>=<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|-1>>>>>>.
+  We now look at eq. (5):
+
+  <\equation*>
+    <around*|(|A-2*I|)>*<wide|v|\<vect\>><rsub|2>=<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|-1>>>>>
+  </equation*>
+
+  and solve.\ 
+
+  <\note*>
+    We can utilize the fact that <math|<around*|(|A-2*I|)>*<wide|v|\<vect\>><rsub|1>=0>
+    and multiply both sides (from the left) by <math|<around*|(|A-2*I|)>>.
+    Then:
+
+    <\equation*>
+      <around*|(|A-2*I|)><rsup|2>*<wide|v|\<vect\>><rsub|2>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|0>>>>>
+    </equation*>
+
+    so <math|<wide|v|\<vect\>><rsub|2>> is a generalized eigenvector.\ 
+  </note*>
+
+  Back to finding <math|<wide|v|\<vect\>><rsub|2>>.
+
+  <\equation*>
+    <around*|(|A-2*I|)>*<wide|v|\<vect\>><rsub|2>=<bmatrix|<tformat|<table|<row|<cell|-1>|<cell|-1>>|<row|<cell|1>|<cell|1>>>>>*<wide|v|\<vect\>><rsub|2>=<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|-1>>>>>
+  </equation*>
+
+  Select <math|<wide|v|\<vect\>><rsub|2>=<bmatrix|<tformat|<table|<row|<cell|-1>>|<row|<cell|0>>>>>>.
+  Final solution:
+
+  <\equation*>
+    <wide|x|\<vect\>>=t*\<mathe\><rsup|2*t>*<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|-1>>>>>+\<mathe\><rsup|2*t>*<bmatrix|<tformat|<table|<row|<cell|-1>>|<row|<cell|0>>>>>
+  </equation*>
+
+  is a linear combination of an eigenvector and a generalized eigenvector.
+
+  <subsection|Two-point boundary value problems (BVPs)>
+
+  Given a 2nd order linear ODE:
+
+  <\equation*>
+    y<rprime|''>+p<around*|(|t|)>*y<rprime|'>+q<around*|(|t|)>*y=g<around*|(|t|)>
+  </equation*>
+
+  we had initial conditions <math|y<around*|(|t<rsub|0>|)>=b<rsub|1>,y<rprime|'><around*|(|t<rsub|0>|)>=b<rsub|2>>.
+  By the E&U theorem we knew that if <math|p,q,g> were continuous and
+  differentiable we would have a unique solution.
+
+  In many physical situations, we have a time variable <math|t>. But
+  sometimes, our variable might be a space-variable (dependent on distance,
+  e.g. <math|x>). So instead of ICs we might be given 2 values of <math|y> at
+  different points <math|x<rsub|1>,x<rsub|2>>:
+  <math|y<around*|(|x<rsub|1>|)>=b<rsub|1>,y<around*|(|x<rsub|2>|)>=b<rsub|2>>.
+
+  Typically (but not always), <math|x<rsub|1>,x<rsub|2>> will be endpoints,
+  or <em|boundary values> (or boundary conditions).
+
+  We now assume we have:
+
+  <\equation*>
+    y<rprime|''>+p<around*|(|x|)>*y<rprime|'>+q<around*|(|x|)>*y=g<around*|(|x|)><application-space|1em>on<application-space|1em><around*|[|x<rsub|1>,x<rsub|2>|]>
+  </equation*>
+
+  and boundary values
+
+  <\equation*>
+    <choice|<tformat|<table|<row|<cell|y<around*|(|x<rsub|1>|)>=b<rsub|1>>>|<row|<cell|y<around*|(|x<rsub|2>|)>=b<rsub|2>>>>>>
+  </equation*>
+
+  We call a BVP homogeneous if <math|b<rsub|1>,b<rsub|2>=0> and
+  <math|g<around*|(|x|)>\<equiv\>0>.
+
+  <\note*>
+    The E&U theorem does <strong|not> hold for <strong|all> BVPs. There can
+    be no solutions, unique solutions, or infinitely many solutions, just as
+    in linear algebraic systems of equations for non-homogeneous systems.
+  </note*>
+
+  <\note*>
+    Homogeneous BVPs <em|always> have a solution <math|y\<equiv\>0>.
+  </note*>
+
+  <underline|Examples>
+
+  <\enumerate>
+    <item><math|y<rprime|''>+2*y=0,<application-space|1em><choice|<tformat|<table|<row|<cell|y<around*|(|0|)>=1>>|<row|<cell|y<around*|(|\<mathpi\>|)>=0>>>>>>.
+    This is a non-homogeneous BVP.
+
+    Solve characteristic equation
+
+    <\equation*>
+      \<lambda\><rsup|2>+2=0\<rightarrow\>\<lambda\>=\<pm\><sqrt|2>*\<mathi\>
+    </equation*>
+
+    General solution is
+
+    <\equation*>
+      y=c<rsub|1>*cos <around*|(|<sqrt|2>*x|)>+c<rsub|2>*sin
+      <around*|(|<sqrt|2>*x|)>
+    </equation*>
+
+    Substitute the BVs:
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|y<around*|(|0|)>=1>|<cell|=>|<cell|c<rsub|1>>>|<row|<cell|y<around*|(|\<mathpi\>|)>=0>|<cell|=>|<cell|cos
+      <around*|(|<sqrt|2>*\<mathpi\>|)>+c<rsub|2>*sin
+      <around*|(|<sqrt|2>*\<mathpi\>|)>\<rightarrow\>c<rsub|2>=-cot
+      <around*|(|<sqrt|2>*\<mathpi\>|)>>>>>
+    </eqnarray*>
+
+    Get a unique solution
+
+    <\equation*>
+      y=cos <around*|(|<sqrt|2>*x|)>-cot <around*|(|<sqrt|2>*\<mathpi\>|)>*sin
+      <around*|(|<sqrt|2>*x|)>
+    </equation*>
+
+    <item><math|y<rprime|''>+2*y=0,<application-space|1em><choice|<tformat|<table|<row|<cell|y<around*|(|0|)>=0>>|<row|<cell|y<around*|(|\<mathpi\>|)>=0>>>>>>.
+    This is a homogeneous BVP.
+
+    General solution is
+
+    <\equation*>
+      y=c<rsub|1>*cos <around*|(|<sqrt|2>*x|)>+c<rsub|2>*sin
+      <around*|(|<sqrt|2>*x|)>
+    </equation*>
+
+    Set
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|y<around*|(|0|)><rsub|>>|<cell|=>|<cell|0\<rightarrow\>c<rsub|1>=0>>|<row|<cell|y<around*|(|\<mathpi\>|)>>|<cell|=>|<cell|c<rsub|2>*sin
+      <around*|(|<sqrt|2>*\<mathpi\>|)>=0\<rightarrow\>c<rsub|2>=0>>>>
+    </eqnarray*>
+
+    Unique solution is <math|y\<equiv\>0>.
+
+    <item><math|y<rprime|''>+y=0,<application-space|1em><choice|<tformat|<table|<row|<cell|y<around*|(|0|)>=1>>|<row|<cell|y<around*|(|\<pi\>|)>=7>>>>>>.
+
+    General solution is
+
+    <\equation*>
+      y=c<rsub|1>*cos <around*|(|x|)>+c<rsub|2>**sin <around*|(|x|)>
+    </equation*>
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|y<around*|(|0|)>=1>|<cell|\<rightarrow\>>|<cell|c<rsub|1>=1>>|<row|<cell|y<around*|(|\<mathpi\>|)>=7>|<cell|\<rightarrow\>>|<cell|7=-1>>>>
+    </eqnarray*>
+
+    Oopsie no solution.
+
+    <item><math|y<rprime|''>+y=0,<application-space|1em><choice|<tformat|<table|<row|<cell|y<around*|(|0|)>=1>>|<row|<cell|y<around*|(|\<pi\>|)>=-1>>>>>>.
+
+    <\equation*>
+      y=c<rsub|1>*cos <around*|(|x|)>+c<rsub|2>**sin <around*|(|x|)>
+    </equation*>
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|y<around*|(|0|)>=1>|<cell|\<rightarrow\>>|<cell|c<rsub|1>=1>>|<row|<cell|y<around*|(|\<mathpi\>|)>=-1>|<cell|\<rightarrow\>>|<cell|-1=-1>>>>
+    </eqnarray*>
+
+    There are infinitely many solutions, as <math|c<rsub|2>\<in\>\<bbb-R\>>
+    is arbitrary.
+
+    <\equation*>
+      y=cos x+c<rsub|2>*sin x,<application-space|1em>c<rsub|2>\<in\>\<bbb-R\>
+    </equation*>
+
+    <item><math|y<rprime|''>+y=0,<application-space|1em><choice|<tformat|<table|<row|<cell|y<around*|(|0|)>=0>>|<row|<cell|y<around*|(|\<pi\>|)>=0>>>>>>.
+
+    <\equation*>
+      y=c<rsub|1>*cos <around*|(|x|)>+c<rsub|2>**sin <around*|(|x|)>
+    </equation*>
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|y<around*|(|0|)>=0>|<cell|\<rightarrow\>>|<cell|c<rsub|1>=0>>|<row|<cell|y<around*|(|\<mathpi\>|)>=0>|<cell|\<rightarrow\>>|<cell|0=0>>>>
+    </eqnarray*>
+
+    Again there are infinitely many solutions.
+
+    <\equation*>
+      y=c<rsub|2>*sin x,<application-space|1em>c<rsub|2>\<in\>\<bbb-R\>
+    </equation*>
+  </enumerate>
+
+  Both equations we looked at were of the form
+  <math|y<rprime|''>+\<lambda\>*y=0>. For which <math|\<lambda\>> do we have
+  non-trivial solutions for the homogeneous BVP?
+
+  <marginal-note|normal|c|lec 20 9.1.23>
+
+  <subsubsection|Eigenvalue problems>
+
+  Given a homogeneous BVP with a parameter <math|\<lambda\>>
+
+  <\equation*>
+    <choice|<tformat|<table|<row|<cell|y<rprime|''>+p<around*|(|x|)>*y<rprime|'>+\<lambda\>*q<around*|(|x|)>*y=0>>|<row|<cell|y<around*|(|a|)>=y<around*|(|b|)>=0>>>>>
+  </equation*>
+
+  For what (real) values of <math|\<lambda\>> does this have a non-trivial
+  solution? This problem is called an <em|eigenvalue problem>. The values
+  <math|\<lambda\>> giving non-trivial solutions are called <em|eigenvalues>
+  and the non-trivial solutions are called <em|eigenfunctions>.
+
+  <\note*>
+    The set of eigenfunctions, together with <math|0<rsub|f>>, is a vector
+    space.
+  </note*>
+
+  <\proof>
+    If <math|f,g> are eigenfunctions for <math|\<lambda\>>
+
+    <\equation*>
+      f<rprime|''>+p<around*|(|x|)>*f<rprime|'>+\<lambda\>*q<around*|(|x|)>*f=0
+    </equation*>
+
+    <\equation*>
+      g<rprime|''>+p<around*|(|x|)>*g<rprime|'>+\<lambda\>*q<around*|(|x|)>*g=0
+    </equation*>
+
+    so
+
+    <\equation*>
+      f<rprime|''>+g<rprime|''>+p*<around*|(|f<rprime|'>+g<rprime|'>|)>+\<lambda\>*q*<around*|(|f+g|)>=0
+    </equation*>
+
+    <\equation*>
+      <choice|<tformat|<table|<row|<cell|f<around*|(|a|)>=0=f<around*|(|b|)>>>|<row|<cell|g<around*|(|a|)>=0=g<around*|(|b|)>>>>>>
+    </equation*>
+
+    so
+
+    <\equation*>
+      <around*|(|f+g|)><around*|(|a|)>=0=<around*|(|f+g|)><around*|(|b|)>
+    </equation*>
+
+    If <math|f+g\<neq\>0> then it will be an eigenfunction. Additionally, if
+    <math|c\<neq\>0> then <math|c*f> is an eigenfunction and
+    <math|c*f<around*|(|a|)>=0=c*f<around*|(|b|)>>.
+  </proof>
+
+  Special case:
+
+  <\equation*>
+    y<rprime|''>+\<lambda\>*y=0,<application-space|1em>y<around*|(|0|)>=y<around*|(|L|)>=0,<application-space|1em>L\<gtr\>0
+  </equation*>
+
+  Characteristic equation is
+
+  <\equation*>
+    u<rsup|2>+\<lambda\>=0
+  </equation*>
+
+  There are 3 possible cases:
+
+  <\enumerate>
+    <item>Two real roots. <math|\<lambda\>\<less\>0>
+
+    <item>Two non-real roots. <math|\<lambda\>\<gtr\>0>
+
+    <item>One double (real) root. <math|\<lambda\>=0>.
+  </enumerate>
+
+  <underline|Case 1: <math|\<lambda\>\<less\>0>>
+
+  General solution can be written as follows (denoting
+  <math|\<mu\>=<sqrt|-\<lambda\>>>)
+
+  <\equation*>
+    y=c<rsub|1>*\<mathe\><rsup|\<mu\>*x>+c<rsub|2>*\<mathe\><rsup|-\<mu\>*x>
+  </equation*>
+
+  Plug in BVs
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|y<around*|(|0|)>=0>|<cell|\<rightarrow\>>|<cell|c<rsub|1>+c<rsub|2>=0>>|<row|<cell|y<around*|(|L|)>=0>|<cell|\<rightarrow\>>|<cell|c<rsub|1>*\<mathe\><rsup|\<mu\>*L>+c<rsub|2>*\<mathe\><rsup|-\<mu\>*L>=0>>>>
+  </eqnarray*>
+
+  Get
+
+  <\equation*>
+    c<rsub|1>*\<mathe\><rsup|\<mu\>*L>-c<rsub|1>*\<mathe\><rsup|-\<mu\>*L>=0
+  </equation*>
+
+  If <math|c<rsub|1>\<neq\>0> then get <math|\<mathe\><rsup|\<mu\>*L>=\<mathe\><rsup|-\<mu\>*L>>
+  or <math|\<mathe\><rsup|2*\<mu\>*L>=1>. As <math|\<mu\>,L\<gtr\>0> problem
+  is unsolvable unless <math|c<rsub|1>,c<rsub|2>=0>. Only solution is the
+  trivial solution, and <math|\<lambda\>\<less\>0> are <strong|not>
+  eigenvalues.
+
+  <\underline>
+    Case 2: <math|\<lambda\>\<gtr\>0>
+  </underline>
+
+  Characteristic polynomial has complex roots
+  <math|\<pm\><sqrt|\<lambda\>>*\<mathi\>>.
+
+  General solution is (denoting <math|\<mu\>=<sqrt|\<lambda\>>>)
+
+  <\equation*>
+    y=c<rsub|1>*cos <around*|(|\<mu\>*x|)>+c<rsub|2>*sin
+    <around*|(|\<mu\>*x|)>
+  </equation*>
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|y<around*|(|0|)>=0>|<cell|\<rightarrow\>>|<cell|c<rsub|1>=0>>|<row|<cell|y<around*|(|L|)>=0>|<cell|\<rightarrow\>>|<cell|c<rsub|2>=sin
+    <around*|(|\<mu\>*L|)>=0>>>>
+  </eqnarray*>
+
+  <\equation*>
+    \<mu\>*L=\<mathpi\>*n,<application-space|1em>n\<in\>\<bbb-N\>
+  </equation*>
+
+  So <math|<with|math-display|true|\<lambda\>=<frac|n<rsup|2>*\<mathpi\><rsup|2>|L<rsup|2>>>>.
+  Then we can take as eigenfunction <with|math-display|true|<math|y<rsub|n><around*|(|x|)>=sin
+  <frac|n*\<mathpi\>|L>*x>>, and all eigenfunctions are scalar multiples of
+  these.
+
+  <underline|Case 3: <math|\<lambda\>=0>>
+
+  ODE is <math|y<rprime|''>=0> and general solution is
+  <math|y=c<rsub|1>*x+c<rsub|2>>. Set BVs:
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|y<around*|(|0|)>=0>|<cell|\<rightarrow\>>|<cell|c<rsub|2>=0>>|<row|<cell|y<around*|(|L|)>=0>|<cell|\<rightarrow\>>|<cell|c<rsub|1>*L=0\<rightarrow\>c<rsub|1>=0>>>>
+  </eqnarray*>
+
+  Only solution is the trivial solution.
+
+  <underline|Conclude>: Only eigenvalues are
+  <math|\<lambda\><rsub|n>=<frac|n<rsup|2>*\<mathpi\><rsup|2>|L<rsup|2>>>
+  with corresponding eigenfunctions <math|sin <frac|n*\<mathpi\>*x|L>> (and
+  non-zero scalar multiples of these).
+
+  <underline|One more example of BVP>
+
+  <\equation*>
+    y<rprime|''>+y=0,<application-space|1em><choice|<tformat|<table|<row|<cell|y<around*|(|0|)>=0>>|<row|<cell|y<rprime|'><around*|(|\<mathpi\>|)>=1>>>>>
+  </equation*>
+
+  General solution is
+
+  <\equation*>
+    y=c<rsub|1>*cos x+c<rsub|2>*sin x
+  </equation*>
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|y<around*|(|0|)>=0>|<cell|\<rightarrow\>>|<cell|c<rsub|1>=0>>|<row|<cell|y<rprime|'><around*|(|\<mathpi\>|)>=1>|<cell|\<rightarrow\>>|<cell|c<rsub|2>*cos
+    \<mathpi\>=1\<rightarrow\>c<rsub|2>=-1>>>>
+  </eqnarray*>
+
+  <\equation*>
+    y=-sin x
+  </equation*>
+
+  Note though that this is <strong|not> a homogeneous BVP, because of the
+  boundary values are not all zero.
+
+  <underline|Another eigenvalue problem>
+
+  <\equation*>
+    y<rprime|''>+\<lambda\>*y<rprime|'>+2*y=0,<application-space|1em><choice|<tformat|<table|<row|<cell|y<around*|(|0|)>=0>>|<row|<cell|y<around*|(|1|)>=0>>>>>
+  </equation*>
+
+  Characteristic equation is
+
+  <\equation*>
+    u<rsup|2>+\<lambda\>*u+2=0
+  </equation*>
+
+  <\equation*>
+    u<rsub|1,2>=<frac|-\<lambda\>\<pm\><sqrt|\<lambda\><rsup|2>-8>|2>
+  </equation*>
+
+  Get a double root if <math|\<lambda\><rsup|2>=8>, get two real roots if
+  <math|\<lambda\><rsup|2>\<gtr\>8> and two non-real roots if
+  <math|\<lambda\><rsup|2>\<less\>8>. Each case must be dealt with
+  separately.
+
+  <section|Partial differential equations>
+
+  \;
+
+  In this section we review some examples of PDVs.
+
+  <subsection|Heat conduction in a rod (Heat equation)>
+
+  Heat conduction in a finite rod. Solution was given by Fourier
+  (1768\U1830).\ 
+
+  <\padded-center>
+    <with|gr-mode|<tuple|edit|math-at>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|empty>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-auto-crop|true|gr-arrow-end|\<gtr\>|<graphics||<math-at|u<around*|(|x,t|)>|<point|-2|2.4>>|<cline|<point|-5|0.7>|<point|-5.0|-0.7>|<point|2.0|-0.7>|<point|2.0|0.7>>|<with|color|blue|<cline|<point|-2|0.7>|<point|-2.0|-0.7>|<point|-1.8|-0.7>|<point|-1.8|0.7>>>|<with|arrow-end|\<gtr\>|<line|<point|-1.40953|2.16538>|<point|-1.9|0.872774814755288>>>|<math-at|x=L|<point|1.03867905807647|-1.10201415531155>>|<math-at|x=0|<point|-4.98653922476518|-1.16171120518587>>|<math-at|x|<point|-1.98085064161926|-1.12405741500198>>>>
+  </padded-center>
+
+  Assume the rod has a uniform cross-section and the material is homogenous.
+  Sides are perfectly insulated.
+
+  Denote <math|u<around*|(|x,y|)>> the temperature at a point <math|x> and
+  time <math|t>.
+
+  The heat equation that expresses this is:
+
+  <\equation*>
+    \<alpha\><rsup|2>*<frac|\<partial\><rsup|2>u|\<partial\>x<rsup|2>>=<frac|\<partial\>u|\<partial\>t>
+  </equation*>
+
+  <math|\<alpha\><rsup|2>> is a constant representing the thermal diffusivity
+  of the bar, in units of <rigid|<math|<around*|(|length|)><rsup|2>/time>>.
+
+  Different notation:
+
+  <\equation*>
+    \<alpha\><rsup|2>*u<rsub|x\<nocomma\>x>=u<rsub|t>
+  </equation*>
+
+  Given the initial temperature of the rod at every point & assuming that the
+  temperature at the endpoints is kept constant, we want to find a unique
+  solution <math|u<around*|(|x,t|)>>.
+
+  Initial conditions: <math|u<around*|(|x,0|)>=f<around*|(|x|)>> in
+  <math|x\<in\><around*|[|0,L|]>>.
+
+  Boundary conditions: <math|u<around*|(|0,t|)>=u<around*|(|L,t|)>=0> for all
+  <math|t>. (Homogeneous BCs.)
+
+  <\note*>
+    If <math|f<around*|(|x|)>\<equiv\>0> then
+    <math|u<around*|(|x,t|)>\<equiv\>0> <math|\<forall\>t> is a solution.
+  </note*>
+
+  <\note*>
+    Set of solutions to heat equation satisfying the homogeneous BCs is a
+    vector space, which is infinitely dimensional.
+  </note*>
+
+  How do we find a basis for an infinitely dimensional vector space? We do
+  the best we can\<ldots\> We find an infinite set of linearly independent
+  solutions and form a <em|series> of functions with unknown coefficients,
+  which can be determined so as to satisfy the ICs. We usually approximate
+  the solution as a finite series.
+
+  <subsubsection|Solution by separation of variables>
+
+  <\render-theorem|Method>
+    \;
+
+    <\em>
+      <with|font-series|bold|Step 1:> Try to find an infinite set of
+      solutions of a special form:
+
+      <\equation*>
+        u<around*|(|x,t|)>=X<around*|(|x|)>*T<around*|(|t|)>
+      </equation*>
+
+      Then we can convert the problem to two ODEs, one in <math|x> and one in
+      <math|t>.
+
+      <with|font-series|bold|Step 2:> Use the fundumental solutions to find a
+      unique solution that also satisfies the ICs.
+    </em>
+  </render-theorem>
+
+  <with|font-series|bold|Step 1:> Substitute in the heat equation
+
+  <\equation*>
+    \<alpha\><rsup|2>*u<rsub|x\<nocomma\>x>=u<rsub|t>
+  </equation*>
+
+  and get
+
+  <\equation*>
+    \<alpha\><rsup|2>*X<rprime|''>*T=X*T<rprime|'>
+  </equation*>
+
+  Assume <math|X,T\<nequiv\>0> on some interval. Separate variables:
+
+  <\equation*>
+    <frac|X<rprime|''>|X>=<frac|1|\<alpha\><rsup|2>*>*<frac|T<rprime|'>|T><application-space|1em>\<forall\>x,t
+  </equation*>
+
+  <\bothlined>
+    <\note*>
+      Suppose we have
+
+      <\equation*>
+        F<around*|(|x|)>=G<around*|(|t|)><application-space|1em>\<forall\>x,t
+      </equation*>
+
+      Differentiate wrt <math|x>:
+
+      <\equation*>
+        F<rprime|'><around*|(|x|)>=0<application-space|1em>\<forall\>x
+      </equation*>
+
+      So <math|F<around*|(|x|)>> is a constant function, say
+      <math|F<around*|(|x|)>\<equiv\>c>.
+
+      Now differentiate wrt <math|t>:
+
+      <\equation*>
+        G<rprime|'><around*|(|t|)>=0<application-space|1em>\<forall\>t
+      </equation*>
+
+      So <math|G<around*|(|t|)>> is a constant function, say
+      <math|G<around*|(|t|)>\<equiv\>c<rsup|\<star\>>>. But
+      <math|F<around*|(|x|)>=G*<around*|(|t|)>> so <math|c=c<rsup|\<star\>>>
+      and we have
+
+      <\equation*>
+        F<around*|(|x|)>=G<around*|(|t|)>=c
+      </equation*>
+    </note*>
+  </bothlined>
+
+  By our note, both sides are equal to one constant we denote as
+  <math|-\<lambda\>>.
+
+  <\equation*>
+    <frac|X<rprime|''>|X>=-\<lambda\>=<frac|1|\<alpha\><rsup|2>*>*<frac|T<rprime|'>|T>
+  </equation*>
+
+  We get two ODEs, which together solve the heat equation:
+
+  <\equation*>
+    <choice|<tformat|<table|<row|<cell|X<rprime|''>+\<lambda\>*X=0>>|<row|<cell|T<rprime|'>+\<alpha\><rsup|2>*\<lambda\>*T=0>>>>>
+  </equation*>
+
+  We want <math|X<around*|(|x|)>*T<around*|(|t|)>> to satisfy the BCs. Say
+  <math|u<around*|(|0,t|)>=u<around*|(|L,t|)>=0> for all <math|t\<geq\>0>.
+  Set <math|u=X<around*|(|x|)>*T<around*|(|t|)>>:
+
+  <\equation*>
+    X<around*|(|0|)>*T<around*|(|t|)>=0<application-space|1em>\<forall\>t
+  </equation*>
+
+  <math|T<around*|(|t|)>\<nequiv\>0> so this gives <math|X<around*|(|0|)>=0>.
+  Similarly <math|X<around*|(|L|)>=0>.
+
+  For <math|X<around*|(|x|)>> we need to find non-zero solutions to
+
+  <\equation*>
+    X<rprime|''>+\<lambda\>*X=0,<application-space|1em><choice|<tformat|<table|<row|<cell|X<around*|(|0|)>=0>>|<row|<cell|X<around*|(|L|)>=0>>>>>
+  </equation*>
+
+  That's an eigenvalue problem! The only non-trivial solutions we found
+  (Section 6.6.1) were
+
+  <\equation*>
+    \<lambda\><rsub|n>=<frac|\<mathpi\><rsup|2>*n<rsup|2>|L<rsup|2>>,<application-space|1em>n\<geq\>1
+  </equation*>
+
+  wuith functions which are multiples of <math|sin
+  <around*|(|<sqrt|\<lambda\><rsub|n>>*x|)>>. Define
+
+  <\equation*>
+    X<rsub|n><around*|(|x|)>=sin <frac|\<mathpi\>*n|L>
+  </equation*>
+
+  and substitute <math|\<lambda\><rsub|n>> in our ODE for
+  <math|T<around*|(|t|)>>:
+
+  <\equation*>
+    T<rprime|'>+\<alpha\><rsup|2>*\<lambda\><rsub|n>*T=0<with|font-series|bold|>
+  </equation*>
+
+  So <math|T<around*|(|t|)>> = constant multiple of
+  <math|\<mathe\><rsup|-\<alpha\><rsup|2>*\<lambda\><rsub|n>*t>>. Define
+
+  <\equation*>
+    T<rsub|n><around*|(|t|)>=exp <around*|(|-<frac|\<alpha\><rsup|2>*\<mathpi\><rsup|2>*n<rsup|2>|L<rsup|2>>*t|)>
+  </equation*>
+
+  Indeed,
+
+  <\equation*>
+    u<rsub|n><around*|(|x,t|)>=X<rsub|n><around*|(|x|)>*T<rsub|n><around*|(|t|)>=exp
+    <around*|(|-<frac|\<alpha\><rsup|2>*\<mathpi\><rsup|2>*n<rsup|2>|L<rsup|2>>*t|)>*sin
+    <around*|(|<frac|\<mathpi\>*n|L>*x|)>,<application-space|1em>n\<geq\>1,t\<geq\>0
+  </equation*>
+
+  solves the heat equation and satisfies the BCs.
 </body>
 
 <\initial>
@@ -6164,29 +6814,29 @@
 
 <\references>
   <\collection>
-    <associate|auto-1|<tuple|?|2>>
-    <associate|auto-10|<tuple|2|12>>
+    <associate|auto-1|<tuple|?|3>>
+    <associate|auto-10|<tuple|2|13>>
     <associate|auto-11|<tuple|I|16>>
     <associate|auto-12|<tuple|1|16>>
-    <associate|auto-13|<tuple|1.1|16>>
-    <associate|auto-14|<tuple|2|19>>
-    <associate|auto-15|<tuple|2.1|24>>
-    <associate|auto-16|<tuple|2.2|25>>
-    <associate|auto-17|<tuple|II|27>>
-    <associate|auto-18|<tuple|3|27>>
+    <associate|auto-13|<tuple|1.1|17>>
+    <associate|auto-14|<tuple|2|20>>
+    <associate|auto-15|<tuple|2.1|25>>
+    <associate|auto-16|<tuple|2.2|26>>
+    <associate|auto-17|<tuple|II|28>>
+    <associate|auto-18|<tuple|3|28>>
     <associate|auto-19|<tuple|3.1|28>>
-    <associate|auto-2|<tuple|?|2>>
+    <associate|auto-2|<tuple|?|3>>
     <associate|auto-20|<tuple|3.2|30>>
-    <associate|auto-21|<tuple|4|31>>
-    <associate|auto-22|<tuple|4.1|34>>
-    <associate|auto-23|<tuple|5|34>>
-    <associate|auto-24|<tuple|5.1|34>>
-    <associate|auto-25|<tuple|5.2|37>>
+    <associate|auto-21|<tuple|4|32>>
+    <associate|auto-22|<tuple|4.1|35>>
+    <associate|auto-23|<tuple|5|35>>
+    <associate|auto-24|<tuple|5.1|35>>
+    <associate|auto-25|<tuple|5.2|38>>
     <associate|auto-26|<tuple|5.2.1|38>>
     <associate|auto-27|<tuple|5.2.2|42>>
     <associate|auto-28|<tuple|5.3|48>>
     <associate|auto-29|<tuple|5.3.1|49>>
-    <associate|auto-3|<tuple|3|4>>
+    <associate|auto-3|<tuple|3|5>>
     <associate|auto-30|<tuple|5.3.2|56>>
     <associate|auto-31|<tuple|6|64>>
     <associate|auto-32|<tuple|6.1|64>>
@@ -6199,20 +6849,25 @@
     <associate|auto-39|<tuple|6.4.4|76>>
     <associate|auto-4|<tuple|3|5>>
     <associate|auto-40|<tuple|6.4.5|78>>
-    <associate|auto-41|<tuple|6.4.6|83>>
+    <associate|auto-41|<tuple|6.4.6|84>>
     <associate|auto-42|<tuple|6.5|86>>
     <associate|auto-43|<tuple|6.5.1|87>>
     <associate|auto-44|<tuple|6.5.2|90>>
-    <associate|auto-45|<tuple|6.5.3|92>>
-    <associate|auto-46|<tuple|6.5.4|?>>
+    <associate|auto-45|<tuple|6.5.3|93>>
+    <associate|auto-46|<tuple|6.5.4|95>>
+    <associate|auto-47|<tuple|6.6|96>>
+    <associate|auto-48|<tuple|6.6.1|99>>
+    <associate|auto-49|<tuple|7|101>>
     <associate|auto-5|<tuple|3|5>>
-    <associate|auto-6|<tuple|3|5>>
+    <associate|auto-50|<tuple|7.1|101>>
+    <associate|auto-51|<tuple|7.1.1|?>>
+    <associate|auto-6|<tuple|3|6>>
     <associate|auto-7|<tuple|3|6>>
     <associate|auto-8|<tuple|3|7>>
-    <associate|auto-9|<tuple|2|11>>
-    <associate|exponential-identities|<tuple|1|7>>
-    <associate|first-order-const-ode|<tuple|2|15>>
-    <associate|homo-2nd|<tuple|3|35>>
+    <associate|auto-9|<tuple|2|12>>
+    <associate|exponential-identities|<tuple|1|8>>
+    <associate|first-order-const-ode|<tuple|2|16>>
+    <associate|homo-2nd|<tuple|3|36>>
   </collection>
 </references>
 
@@ -6398,8 +7053,30 @@
       <no-break><pageref|auto-44>>
 
       <with|par-left|<quote|2tab>|6.5.3<space|2spc>Coefficient matrix is not
-      diagonalizble <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      diagonalizable & generalized eigenvectors
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-45>>
+
+      <with|par-left|<quote|2tab>|6.5.4<space|2spc>Coefficient matrix does
+      not have <with|mode|<quote|math>|n> linearly independent eigenvectors
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-46>>
+
+      <with|par-left|<quote|1tab>|6.6<space|2spc>Two-point boundary value
+      problems (BVPs) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-47>>
+
+      <with|par-left|<quote|2tab>|6.6.1<space|2spc>Eigenvalue problems
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-48>>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|7<space|2spc>Partial
+      differential equations> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-49><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|7.1<space|2spc>Heat conduction in a rod
+      (Heat equation) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-50>>
     </associate>
   </collection>
 </auxiliary>
