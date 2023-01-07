@@ -5,7 +5,7 @@
 <\body>
   <doc-data|<doc-title|Assignment 9>|<doc-author|<author-data|<author-name|Yuval
   Bernard>|<\author-affiliation>
-    Date: TBE
+    Date: 9.1.23
   </author-affiliation>>>>
 
   <section*|Page 355>
@@ -70,7 +70,8 @@
     <bmatrix|<tformat|<table|<row|<cell|2>|<cell|1>|<cell|1>>|<row|<cell|2>|<cell|2>|<cell|-1>>|<row|<cell|0>|<cell|-1>|<cell|2>>>>>*<wide|z|\<vect\>>=0
   </equation*>
 
-  Apply row operations on the augmented matrix <math|A\|<wide|0|\<vect\>>>.
+  Apply row operations on the augmented matrix
+  <math|<around*|(|A-\<lambda\><rsub|1>*I|)>\|<wide|0|\<vect\>>>.
 
   <\equation*>
     <bmatrix|<tformat|<table|<row|<cell|2>|<cell|1>|<cell|1>>|<row|<cell|2>|<cell|2>|<cell|-1>>|<row|<cell|0>|<cell|-1>|<cell|2>>>>><long-arrow|\<rubber-rightarrow\>|<tabular*|<tformat|<table|<row|<cell|R<rsub|2>\<rightarrow\>R<rsub|2>-R<rsub|1>>>>>>><bmatrix|<tformat|<table|<row|<cell|2>|<cell|1>|<cell|1>>|<row|<cell|0>|<cell|1>|<cell|-2>>|<row|<cell|0>|<cell|-1>|<cell|2>>>>>
@@ -380,9 +381,7 @@
     <wide|v<rsub|3>|\<vect\>>=<bmatrix|<tformat|<table|<row|<cell|2>>|<row|<cell|1>>|<row|<cell|2>>>>>
   </equation*>
 
-  <underline|Two Extra Extremely Exasperating Inquires>
-
-  <section*|Extra Page>
+  <section*|Extra Questions>
 
   <underline|Question 1>
 
@@ -411,7 +410,7 @@
     <wide|v|\<vect\>><rsub|n>=A<rsup|n>*<wide|v|\<vect\>><rsub|0>
   </equation*>
 
-  For <math|n=0>:
+  For <math|n=0> (base cas):
 
   <\equation*>
     <wide|v|\<vect\>><rsub|0>=A<rsup|0>*<wide|v|\<vect\>><rsub|0>=I*<wide|v|\<vect\>><rsub|0>=<wide|v|\<vect\>><rsub|0>
@@ -424,7 +423,7 @@
     <wide|v|\<vect\>><rsub|k>=A<rsup|k>*<wide|v|\<vect\>><rsub|0>
   </equation*>
 
-  \ Show that it holds for <math|n=k+1>:
+  \ Show that it holds for <math|n=k+1> (inductive step):
 
   <\equation*>
     <wide|v|\<vect\>><rsub|k+1>=A<rsup|k+1>*<wide|v|\<vect\>><rsub|0>=A*A<rsup|k>*<wide|v|\<vect\>><rsub|0>=A*<wide|v|\<vect\>><rsub|k>
@@ -511,7 +510,7 @@
     <choice|<tformat|<table|<row|<cell|A*<wide|x|\<vect\>><rsub|1>=2*<wide|x|\<vect\>><rsub|1>>>|<row|<cell|A*<wide|x|\<vect\>><rsub|2>=<wide|x|\<vect\>><rsub|2>>>>>>
   </equation*>
 
-  Then
+  then
 
   <\equation*>
     <choice|<tformat|<table|<row|<cell|A<rsup|\<ell\>>*<wide|x|\<vect\>><rsub|1>=2<rsup|\<ell\>>*<wide|x|\<vect\>><rsub|1>>>|<row|<cell|A<rsup|\<ell\>>*<wide|x|\<vect\>><rsub|2>=1<rsup|\<ell\>>*<wide|x|\<vect\>><rsub|2>=<wide|x|\<vect\>><rsub|2>>>>>>
@@ -610,6 +609,8 @@
     <bmatrix|<tformat|<table|<row|<cell|x<rsub|7>>>|<row|<cell|y<rsub|7>>>>>>=<around*|(|2\<cdot\>3-2|)>*2<rsup|7>*<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|1>>>>>+<around*|(|-3+2|)>*<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|2>>>>>=*512<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|1>>>>>-<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|2>>>>>=<bmatrix|<tformat|<table|<row|<cell|511>>|<row|<cell|510>>>>>
   </equation*>
 
+  After 7 years there are 511 rabbits and 510 wolves.
+
   <page-break*><underline|Question 2>
 
   <math|a<rsub|0>=0,a<rsub|1>=1>, and for <math|n\<gtr\>1>,
@@ -631,10 +632,10 @@
     A*<wide|v|\<vect\>><rsub|n>=<bmatrix|<tformat|<table|<row|<cell|0>|<cell|1>>|<row|<cell|1>|<cell|1>>>>>*<bmatrix|<tformat|<table|<row|<cell|a<rsub|n>>>|<row|<cell|a<rsub|n+1>>>>>>=<bmatrix|<tformat|<table|<row|<cell|a<rsub|n+1>>>|<row|<cell|a<rsub|n>+a<rsub|n+1>>>>>>
   </equation*>
 
-  We got the same result, thus approving that
+  We got the same result, thus verifying that
   <math|<wide|v|\<vect\>><rsub|n+1>=A*<wide|v|\<vect\>><rsub|n>>.
 
-  (b) the diagonalized form of <math|A> is
+  (b) The diagonalized form of <math|A> is
   <math|D=<bmatrix|<tformat|<table|<row|<cell|\<lambda\><rsub|1>>|<cell|0>>|<row|<cell|0>|<cell|\<lambda\><rsub|2>>>>>>>,
   where <math|\<lambda\><rsub|1>,\<lambda\><rsub|2>> are the eigenvalues of
   <math|A>.
@@ -700,8 +701,8 @@
 
   Hence the inductive step holds, which completes the proof.
 
-  The vector <math|V> is the eigenvectors of <math|A> adjacent to each other
-  in ordering respective to the order of eigenvalues in <math|D>.
+  The matrix <math|V> is equal to the eigenvectors of <math|A>, adjacent to
+  each other in ordering respective to the order of eigenvalues in <math|D>.
 
   Calculate the eigenvectors of <math|A>:
 
@@ -744,11 +745,11 @@
   </equation*>
 
   <\equation*>
-    A<rsup|n>=<frac|1|<sqrt|5>>*<bmatrix|<tformat|<table|<row|<cell|<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n>>|<cell|<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n>>>|<row|<cell|<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n+1>>|<cell|<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n+1>>>>>><bmatrix|<tformat|<table|<row|<cell|-<frac|1-<sqrt|5>|2>>|<cell|1>>|<row|<cell|<frac|1+<sqrt|5>|2>>|<cell|-1>>>>>
+    A<rsup|n>=<frac|1|<sqrt|5>>*<bmatrix|<tformat|<table|<row|<cell|<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n>>|<cell|<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n>>>|<row|<cell|<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n+1>>|<cell|<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n+1>>>>>><bmatrix|<tformat|<table|<row|<cell|-<frac|1-<sqrt|5>|2>>|<cell|1>>|<row|<cell|<frac|1+<sqrt|5>|2>>|<cell|-1>>>>>=*\<cdots\>*
   </equation*>
 
   <\equation*>
-    A<rsup|n>=<frac|1|<sqrt|5>>*<bmatrix|<tformat|<table|<row|<cell|-<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n>*<around*|(|<frac|1-<sqrt|5>|2>|)>+<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n>*<around*|(|<frac|1+<sqrt|5>|2>|)>>|<cell|<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n>-<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n>>>|<row|<cell|-<around*|(|<frac|1-<sqrt|5>|2>|)>*<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n+1>+<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n+1>*<around*|(|<frac|1+<sqrt|5>|2>|)>>|<cell|<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n+1>-<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n+1>>>>>>
+    *\<cdots\>*=<frac|1|<sqrt|5>>*<bmatrix|<tformat|<table|<row|<cell|-<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n>*<around*|(|<frac|1-<sqrt|5>|2>|)>+<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n>*<around*|(|<frac|1+<sqrt|5>|2>|)>>|<cell|<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n>-<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n>>>|<row|<cell|-<around*|(|<frac|1-<sqrt|5>|2>|)>*<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n+1>+<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n+1>*<around*|(|<frac|1+<sqrt|5>|2>|)>>|<cell|<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n+1>-<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n+1>>>>>>
   </equation*>
 
   <\equation*>
@@ -775,8 +776,8 @@
     <wide|v|\<vect\>><rsub|n>=<bmatrix|<tformat|<table|<row|<cell|a<rsub|n>>>|<row|<cell|a<rsub|n+1>>>>>>
   </equation*>
 
-  which was given to us as a definition. Thus, we can use it to extract the
-  formula for <math|a<rsub|n>>
+  which was given to us as a definition. We can use it to extract the formula
+  for <math|a<rsub|n>>:
 
   <\equation*>
     a<rsub|n>=<frac|1|<sqrt|5>>*<around*|[|<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n>-<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n>|]>
@@ -809,8 +810,8 @@
       367> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-2><vspace|0.5fn>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Page
-      ???> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|Extra
+      Page> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-3><vspace|0.5fn>
     </associate>
   </collection>
