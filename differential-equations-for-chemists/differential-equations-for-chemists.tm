@@ -6074,14 +6074,14 @@
     If we square the matrix <math|A-\<alpha\>*I> we get:
 
     <\equation*>
-      <around*|(|A-\<alpha\>*I|)><rsup|2>=<bmatrix|<tformat|<table|<row|<cell|0>|<cell|1>|<cell|>|<cell|0>>|<row|<cell|0>|<cell|\<ddots\>>|<cell|\<ddots\>>|<cell|>>|<row|<cell|>|<cell|>|<cell|>|<cell|1>>|<row|<cell|0>|<cell|>|<cell|0>|<cell|0>>>>><rsup|2>=<bmatrix|<tformat|<table|<row|<cell|0>|<cell|0>|<cell|1>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|0>|<cell|0>|<cell|\<ddots\>>|<cell|>>|<row|<cell|\<vdots\>>|<cell|\<vdots\>>|<cell|\<vdots\>>|<cell|0>|<cell|1>>|<row|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|0>>>>>
+      <around*|(|A-\<alpha\>*I|)><rsup|2>=<bmatrix|<tformat|<table|<row|<cell|0>|<cell|1>|<cell|>|<cell|0>>|<row|<cell|0>|<cell|\<ddots\>>|<cell|\<ddots\>>|<cell|>>|<row|<cell|>|<cell|>|<cell|>|<cell|1>>|<row|<cell|0>|<cell|>|<cell|0>|<cell|0>>>>><rsup|2>=<bmatrix|<tformat|<table|<row|<cell|0>|<cell|0>|<cell|1>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|0>|<cell|0>|<cell|\<ddots\>>|<cell|0>>|<row|<cell|\<vdots\>>|<cell|\<vdots\>>|<cell|\<vdots\>>|<cell|0>|<cell|1>>|<row|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|0>>>>>
     </equation*>
 
     The ones diagonal shifts up one row! Also, <math|rank
     <around*|(|A-\<alpha\>*I|)><rsup|2>=n-2>.
 
     What's the nullspace? Basis for the nullspace is
-    <math|<around*|[|1,0,\<ldots\>,0|]><rsup|T>,<around*|[|0,1,0,\<ldots\>,0|]><rsup|T>>.
+    <math|<around*|[|1,0,\<ldots\>,0|]><rsup|T>,\<ldots\>,<around*|[|0,1,0,\<ldots\>,0|]><rsup|T>>.
   </note*>
 
   In general, if <math|<wide|v|\<vect\>>> is a vector such that for and
@@ -6117,7 +6117,7 @@
   <\equation*>
     \<mathe\><rsup|<around*|(|-<frac|2|5>-<frac|\<mathi\>|5>|)>*t>*<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|\<mathi\>>>|<row|<cell|-1-\<mathi\>>>>>>=\<cdots\>=<wide*|\<mathe\><rsup|-<frac|2|5>*t>*<bmatrix|<tformat|<table|<row|<cell|cos
     <frac|t|5>>>|<row|<cell|sin <frac|t|5>>>|<row|<cell|-cos <frac|t|5>-sin
-    <frac|t|5>>>>>> |\<wide-underbrace\>><rsub|<wide|u|\<vect\>>>+\<mathi\>*<wide*|\<mathe\><rsup|-<frac|2|5>*t>*<bmatrix|<tformat|<table|<row|<cell|-sin
+    <frac|t|5>>>>>>|\<wide-underbrace\>><rsub|<wide|u|\<vect\>>>+\<mathi\>*<wide*|\<mathe\><rsup|-<frac|2|5>*t>*<bmatrix|<tformat|<table|<row|<cell|-sin
     <frac|t|5>>>|<row|<cell|cos <frac|t|5>>>|<row|<cell|-cos <frac|t|5>+sin
     <frac|t|5>>>>>>|\<wide-underbrace\>><rsub|<wide|w|\<vect\>>>
   </equation*>
@@ -6136,7 +6136,7 @@
   </equation*>
 
   <\note*>
-    If we add <math|x<rsub|1>,x<rsub|2>,x<rsub|3>> we get <math|5c<rsub|1>>.
+    If we add <math|x<rsub|1>,x<rsub|2>,x<rsub|3>> we get <math|5*c<rsub|1>>.
     This makes sense, as this is a closed system, which means the salt amount
     does not change.
 
@@ -6180,7 +6180,7 @@
   Substitute in <math|<wide|x|\<vect\>><rprime|'>=A*<wide|x|\<vect\>>>.
 
   <\equation*>
-    <wide|x|\<vect\>><rprime|'>=2*<wide|v|\<vect\>><rsub|1>*t*\<mathe\><rsup|2*t>+<wide|v|\<vect\>><rsub|1>*\<mathe\><rsup|2*t>+2<wide|v|\<vect\>><rsub|2>*\<mathe\><rsup|2*t>=A*<around*|(|<wide|v|\<vect\>><rsub|1>*t*\<mathe\><rsup|2*t>+<wide|v|\<vect\>><rsub|2>*\<mathe\><rsup|2*t>|)>
+    <wide|x|\<vect\>><rprime|'>=2*<wide|v|\<vect\>><rsub|1>*t*\<mathe\><rsup|2*t>+<wide|v|\<vect\>><rsub|1>*\<mathe\><rsup|2*t>+2*<wide|v|\<vect\>><rsub|2>*\<mathe\><rsup|2*t>=A*<around*|(|<wide|v|\<vect\>><rsub|1>*t*\<mathe\><rsup|2*t>+<wide|v|\<vect\>><rsub|2>*\<mathe\><rsup|2*t>|)>
   </equation*>
 
   This has to hold for all <math|t>. Set <math|t=0>:
@@ -6347,7 +6347,7 @@
     Set
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|y<around*|(|0|)><rsub|>>|<cell|=>|<cell|0\<rightarrow\>c<rsub|1>=0>>|<row|<cell|y<around*|(|\<mathpi\>|)>>|<cell|=>|<cell|c<rsub|2>*sin
+      <tformat|<table|<row|<cell|y<around*|(|0|)><rsub|\<nosymbol\>>>|<cell|=>|<cell|0\<rightarrow\>c<rsub|1>=0>>|<row|<cell|y<around*|(|\<mathpi\>|)>>|<cell|=>|<cell|c<rsub|2>*sin
       <around*|(|<sqrt|2>*\<mathpi\>|)>=0\<rightarrow\>c<rsub|2>=0>>>>
     </eqnarray*>
 
@@ -6358,7 +6358,7 @@
     General solution is
 
     <\equation*>
-      y=c<rsub|1>*cos <around*|(|x|)>+c<rsub|2>**sin <around*|(|x|)>
+      y=c<rsub|1>*cos <around*|(|x|)>+c<rsub|2>*sin <around*|(|x|)>
     </equation*>
 
     <\eqnarray*>
@@ -6370,7 +6370,7 @@
     <item><math|y<rprime|''>+y=0,<application-space|1em><choice|<tformat|<table|<row|<cell|y<around*|(|0|)>=1>>|<row|<cell|y<around*|(|\<pi\>|)>=-1>>>>>>.
 
     <\equation*>
-      y=c<rsub|1>*cos <around*|(|x|)>+c<rsub|2>**sin <around*|(|x|)>
+      y=c<rsub|1>*cos <around*|(|x|)>+c<rsub|2>*sin <around*|(|x|)>
     </equation*>
 
     <\eqnarray*>
@@ -6387,7 +6387,7 @@
     <item><math|y<rprime|''>+y=0,<application-space|1em><choice|<tformat|<table|<row|<cell|y<around*|(|0|)>=0>>|<row|<cell|y<around*|(|\<pi\>|)>=0>>>>>>.
 
     <\equation*>
-      y=c<rsub|1>*cos <around*|(|x|)>+c<rsub|2>**sin <around*|(|x|)>
+      y=c<rsub|1>*cos <around*|(|x|)>+c<rsub|2>*sin <around*|(|x|)>
     </equation*>
 
     <\eqnarray*>
@@ -6409,14 +6409,15 @@
 
   <subsubsection|Eigenvalue problems>
 
-  Given a homogeneous BVP with a parameter <math|\<lambda\>>
+  Given homogeneous BVPs with a parameter <math|\<lambda\>>:
 
   <\equation*>
-    <choice|<tformat|<table|<row|<cell|y<rprime|''>+p<around*|(|x|)>*y<rprime|'>+\<lambda\>*q<around*|(|x|)>*y=0>>|<row|<cell|y<around*|(|a|)>=y<around*|(|b|)>=0>>>>>
+    either:<choice|<tformat|<table|<row|<cell|y<rprime|''>+\<lambda\>*p<around*|(|x|)>*y<rprime|'>+q<around*|(|x|)>*y=0>>|<row|<cell|y<rprime|''>+p<around*|(|x|)>*y<rprime|'>+\<lambda\>*q<around*|(|x|)>*y=0>>>>>
   </equation*>
 
-  For what (real) values of <math|\<lambda\>> does this have a non-trivial
-  solution? This problem is called an <em|eigenvalue problem>. The values
+  with boundary values <math|y<around*|(|a|)>=y<around*|(|b|)>=0>, for what
+  (real) values of <math|\<lambda\>> do these have a non-trivial solution?
+  This problem is called an <em|eigenvalue problem>. The values
   <math|\<lambda\>> giving non-trivial solutions are called <em|eigenvalues>
   and the non-trivial solutions are called <em|eigenfunctions>.
 
@@ -6521,7 +6522,7 @@
   </equation*>
 
   <\eqnarray*>
-    <tformat|<table|<row|<cell|y<around*|(|0|)>=0>|<cell|\<rightarrow\>>|<cell|c<rsub|1>=0>>|<row|<cell|y<around*|(|L|)>=0>|<cell|\<rightarrow\>>|<cell|c<rsub|2>=sin
+    <tformat|<table|<row|<cell|y<around*|(|0|)>=0>|<cell|\<rightarrow\>>|<cell|c<rsub|1>=0>>|<row|<cell|y<around*|(|L|)>=0>|<cell|\<rightarrow\>>|<cell|c<rsub|2>*sin
     <around*|(|\<mu\>*L|)>=0>>>>
   </eqnarray*>
 
@@ -6533,6 +6534,12 @@
   Then we can take as eigenfunction <with|math-display|true|<math|y<rsub|n><around*|(|x|)>=sin
   <frac|n*\<mathpi\>|L>*x>>, and all eigenfunctions are scalar multiples of
   these.
+
+  <\note*>
+    If <math|L=\<mathpi\>> then the eigenvalues are
+    <math|\<lambda\><rsub|n>=n<rsup|2>> and the eigenfunctions are <math|sin
+    <around*|(|n*x|)>>.
+  </note*>
 
   <underline|Case 3: <math|\<lambda\>=0>>
 
@@ -6550,7 +6557,12 @@
   with corresponding eigenfunctions <math|sin <frac|n*\<mathpi\>*x|L>> (and
   non-zero scalar multiples of these).
 
-  <underline|One more example of BVP>
+  <\note*>
+    Boundary values can be given for the derivative of <math|y>, instead of
+    <math|y> itself, but an different points.
+  </note*>
+
+  <underline|Example of such BVP>
 
   <\equation*>
     y<rprime|''>+y=0,<application-space|1em><choice|<tformat|<table|<row|<cell|y<around*|(|0|)>=0>>|<row|<cell|y<rprime|'><around*|(|\<mathpi\>|)>=1>>>>>
@@ -6595,16 +6607,16 @@
   <math|\<lambda\><rsup|2>\<less\>8>. Each case must be dealt with
   separately.
 
-  <section|Partial differential equations>
+  <page-break>
 
-  \;
+  <section|Partial differential equations>
 
   In this section we review some examples of PDVs.
 
   <subsection|Heat conduction in a rod (Heat equation)>
 
   Heat conduction in a finite rod. Solution was given by Fourier
-  (1768\U1830).\ 
+  (1768\U1830).
 
   <\padded-center>
     <with|gr-mode|<tuple|edit|math-at>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|empty>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-auto-crop|true|gr-arrow-end|\<gtr\>|<graphics||<math-at|u<around*|(|x,t|)>|<point|-2|2.4>>|<cline|<point|-5|0.7>|<point|-5.0|-0.7>|<point|2.0|-0.7>|<point|2.0|0.7>>|<with|color|blue|<cline|<point|-2|0.7>|<point|-2.0|-0.7>|<point|-1.8|-0.7>|<point|-1.8|0.7>>>|<with|arrow-end|\<gtr\>|<line|<point|-1.40953|2.16538>|<point|-1.9|0.872774814755288>>>|<math-at|x=L|<point|1.03867905807647|-1.10201415531155>>|<math-at|x=0|<point|-4.98653922476518|-1.16171120518587>>|<math-at|x|<point|-1.98085064161926|-1.12405741500198>>>>
@@ -6641,9 +6653,13 @@
   Boundary conditions: <math|u<around*|(|0,t|)>=u<around*|(|L,t|)>=0> for all
   <math|t>. (Homogeneous BCs.)
 
+  <with|color|#a0a0a0|[Boundary conditions could also have been
+  <math|u<rprime|'>> at <math|x=0,L>.]>
+
   <\note*>
     If <math|f<around*|(|x|)>\<equiv\>0> then
-    <math|u<around*|(|x,t|)>\<equiv\>0> <math|\<forall\>t> is a solution.
+    <math|u<around*|(|x,t|)>\<equiv\>0> <math|\<forall\>t> is a solution of
+    the homogeneous BVP.
   </note*>
 
   <\note*>
@@ -6656,6 +6672,11 @@
   solutions and form a <em|series> of functions with unknown coefficients,
   which can be determined so as to satisfy the ICs. We usually approximate
   the solution as a finite series.
+
+  In formal nomenclature: Find a set of non-trivial solutions to the PDE and
+  BCs <math|<around*|{|u<rsub|n>|}>> and form a series of these:
+  <math|<big|sum><rsub|n=1><rsup|\<infty\>>c<rsub|n>*u<rsub|n>>, so that it
+  satisfies the ICs as well.
 
   <subsubsection|Solution by separation of variables>
 
@@ -6693,7 +6714,7 @@
   Assume <math|X,T\<nequiv\>0> on some interval. Separate variables:
 
   <\equation*>
-    <frac|X<rprime|''>|X>=<frac|1|\<alpha\><rsup|2>*>*<frac|T<rprime|'>|T><application-space|1em>\<forall\>x,t
+    <frac|X<rprime|''>|X>=<frac|1|\<alpha\><rsup|2>>*<frac|T<rprime|'>|T><application-space|1em>\<forall\>x,t
   </equation*>
 
   <\bothlined>
@@ -6734,7 +6755,7 @@
   <math|-\<lambda\>>.
 
   <\equation*>
-    <frac|X<rprime|''>|X>=-\<lambda\>=<frac|1|\<alpha\><rsup|2>*>*<frac|T<rprime|'>|T>
+    <frac|X<rprime|''>|X>=-\<lambda\>=<frac|1|\<alpha\><rsup|2>>*<frac|T<rprime|'>|T>
   </equation*>
 
   We get two ODEs, which together solve the heat equation:
@@ -6778,7 +6799,7 @@
   <math|T<around*|(|t|)>>:
 
   <\equation*>
-    T<rprime|'>+\<alpha\><rsup|2>*\<lambda\><rsub|n>*T=0<with|font-series|bold|>
+    T<rprime|'>+\<alpha\><rsup|2>*\<lambda\><rsub|n>*T=0
   </equation*>
 
   So <math|T<around*|(|t|)>> = constant multiple of
@@ -6857,10 +6878,10 @@
     <associate|auto-46|<tuple|6.5.4|95>>
     <associate|auto-47|<tuple|6.6|96>>
     <associate|auto-48|<tuple|6.6.1|99>>
-    <associate|auto-49|<tuple|7|101>>
+    <associate|auto-49|<tuple|7|102>>
     <associate|auto-5|<tuple|3|5>>
-    <associate|auto-50|<tuple|7.1|101>>
-    <associate|auto-51|<tuple|7.1.1|?>>
+    <associate|auto-50|<tuple|7.1|102>>
+    <associate|auto-51|<tuple|7.1.1|103>>
     <associate|auto-6|<tuple|3|6>>
     <associate|auto-7|<tuple|3|6>>
     <associate|auto-8|<tuple|3|7>>
@@ -7077,6 +7098,10 @@
       <with|par-left|<quote|1tab>|7.1<space|2spc>Heat conduction in a rod
       (Heat equation) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-50>>
+
+      <with|par-left|<quote|2tab>|7.1.1<space|2spc>Solution by separation of
+      variables <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-51>>
     </associate>
   </collection>
 </auxiliary>
