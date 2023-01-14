@@ -5,7 +5,7 @@
 <\body>
   <doc-data|<doc-title|Assignment 10>|<doc-author|<author-data|<author-name|Yuval
   Bernard>|<\author-affiliation>
-    Date:
+    Date: 16.1.23
   </author-affiliation>>>>
 
   <section*|Page 381>
@@ -70,7 +70,8 @@
   </equation*>
 
   As noted in the book, <math|A> has an eigenvalue
-  <math|\<lambda\><rsub|1>=0>. Calculate the second eigenvalue:
+  <math|\<lambda\><rsub|1>=0> (<math|A> has linearly dependent rows).
+  Calculate the second eigenvalue:
 
   <\equation*>
     <det|<tformat|<table|<row|<cell|A-\<lambda\>*I>>>>>=<det|<tformat|<table|<row|<cell|4-\<lambda\>>|<cell|-3>>|<row|<cell|8>|<cell|-6-\<lambda\>>>>>>=<around*|(|\<lambda\>-4|)>*<around*|(|\<lambda\>+6|)>+24=\<lambda\><rsup|2>+2*\<lambda\>=0
@@ -85,6 +86,8 @@
   <\equation*>
     <wide|z|\<vect\>><rsub|1>=<bmatrix|<tformat|<table|<row|<cell|3>>|<row|<cell|4>>>>>
   </equation*>
+
+  (As clearly <math|A*<wide|z|\<vect\>><rsub|1>=<wide|0|\<vect\>>>.)
 
   For <math|\<lambda\><rsub|2>=-2>:
 
@@ -107,16 +110,16 @@
   </underline>
 
   <\equation*>
-    <wide|x|\<vect\>><rprime|'>=<bmatrix|<tformat|<table|<row|<cell|1>|<cell|1>|<cell|2>>|<row|<cell|1>|<cell|2>|<cell|1>>|<row|<cell|2>|<cell|1>|<cell|1>>>>>
+    <wide|x|\<vect\>><rprime|'>=<bmatrix|<tformat|<table|<row|<cell|1>|<cell|1>|<cell|2>>|<row|<cell|1>|<cell|2>|<cell|1>>|<row|<cell|2>|<cell|1>|<cell|1>>>>>*<wide|x|\<vect\>>
   </equation*>
 
-  Note that the sum of all rows is equal (sum = 4). We can infer that
-  <math|<wide|z|\<vect\>><rsub|1>=<around*|[|1,1,1|]><rsup|T>> is an
-  eigenvector with an eigenvalue <math|\<lambda\><rsub|1>=4>. Find the other
-  eigenvalues:
+  Note that the sum along the columns in each row is equal (sum = 4). We can
+  infer that <math|<wide|z|\<vect\>><rsub|1>=<around*|[|1,1,1|]><rsup|T>> is
+  an eigenvector with an eigenvalue <math|\<lambda\><rsub|1>=4>. Find the
+  other eigenvalues:
 
   <\eqnarray*>
-    <tformat|<table|<row|<cell|<det|<tformat|<table|<row|<cell|A-\<lambda\>*I>>>>>=<det|<tformat|<table|<row|<cell|1-\<lambda\>>|<cell|1>|<cell|2>>|<row|<cell|1>|<cell|2-\<lambda\>>|<cell|1>>|<row|<cell|2>|<cell|1>|<cell|1-\<lambda\>>>>>>>|<cell|=>|<cell|<around*|(|1-\<lambda\>|)>*<around*|[|<around*|(|2-\<lambda\>|)>*<around*|(|1-\<lambda\>|)>-1|]>-<around*|[|1-\<lambda\>-2|]>+2*<around*|[|1-4+2\<lambda\>|]>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|1-\<lambda\>|)>*<around*|[|\<lambda\><rsup|2>-3\<lambda\>+1|]>+<around*|(|\<lambda\>+1|)>+<around*|(|4\<lambda\>-6|)>>>|<row|<cell|>|<cell|=>|<cell|\<lambda\><rsup|2>-3\<lambda\><rsub|>+1-\<lambda\><rsup|3>+3\<lambda\><rsup|2>-\<lambda\>+5\<lambda\>-5>>|<row|<cell|>|<cell|=>|<cell|-\<lambda\><rsup|3>+4\<lambda\><rsup|2>+\<lambda\>-4=0>>>>
+    <tformat|<table|<row|<cell|<det|<tformat|<table|<row|<cell|A-\<lambda\>*I>>>>>=<det|<tformat|<table|<row|<cell|1-\<lambda\>>|<cell|1>|<cell|2>>|<row|<cell|1>|<cell|2-\<lambda\>>|<cell|1>>|<row|<cell|2>|<cell|1>|<cell|1-\<lambda\>>>>>>>|<cell|=>|<cell|<around*|(|1-\<lambda\>|)>*<around*|[|<around*|(|2-\<lambda\>|)>*<around*|(|1-\<lambda\>|)>-1|]>-<around*|[|1-\<lambda\>-2|]>>>|<row|<cell|>|<cell|>|<cell|+2*<around*|[|1-4+2*\<lambda\>|]>>>|<row|<cell|>|<cell|=>|<cell|<around*|(|1-\<lambda\>|)>*<around*|[|\<lambda\><rsup|2>-3\<lambda\>+1|]>+<around*|(|\<lambda\>+1|)>+<around*|(|4\<lambda\>-6|)>>>|<row|<cell|>|<cell|=>|<cell|\<lambda\><rsup|2>-3\<lambda\><rsub|>+1-\<lambda\><rsup|3>+3\<lambda\><rsup|2>-\<lambda\>+5\<lambda\>-5>>|<row|<cell|>|<cell|=>|<cell|-\<lambda\><rsup|3>+4\<lambda\><rsup|2>+\<lambda\>-4=0>>>>
   </eqnarray*>
 
   <\equation*>
@@ -244,7 +247,7 @@
     <wide|x|\<vect\>>=c<rsub|1>*\<mathe\><rsup|4*t>*<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|1>>>>>+c<rsub|2>*\<mathe\><rsup|2*t>*<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|3>>>>>,<application-space|1em>c<rsub|1,2>\<in\>\<bbb-R\>,<application-space|1em>\<forall\>t
   </equation*>
 
-  Find <math|c<rsub|1,2>> with given ICs
+  Find <math|c<rsub|1,2>> for given ICs
 
   <\equation*>
     t=0:<application-space|1em>c<rsub|1>*<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|1>>>>>+c<rsub|2>*<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|3>>>>>=<bmatrix|<tformat|<table|<row|<cell|2>>|<row|<cell|-1>>>>>
@@ -364,7 +367,7 @@
   General solution is:
 
   <\equation*>
-    <wide|x|\<vect\>>=c<rsub|1>*\<mathe\><rsup|-0.05*t>*<bmatrix|<tformat|<table|<row|<cell|3>>|<row|<cell|2>>>>>+c<rsub|2>*\<mathe\><rsup|-0.25*t>*<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|-2>>>>>,<application-space|1em>c<rsub|1,2>\<in\>\<bbb-R\>,<application-space|1em>t\<gtr\>0
+    <wide|x|\<vect\>>=c<rsub|1>*\<mathe\><rsup|-0.05*t>*<bmatrix|<tformat|<table|<row|<cell|3>>|<row|<cell|2>>>>>+c<rsub|2>*\<mathe\><rsup|-0.25*t>*<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|-2>>>>>,<application-space|1em>c<rsub|1,2>\<in\>\<bbb-R\>,<application-space|1em>t\<geq\>0
   </equation*>
 
   Apply ICs:
@@ -380,7 +383,7 @@
   Unique solution is:
 
   <\equation*>
-    <wide|x|\<vect\>>=-<frac|55|8>*\<mathe\><rsup|-0.05*t>*<bmatrix|<tformat|<table|<row|<cell|3>>|<row|<cell|2>>>>>+<frac|29|8>*\<mathe\><rsup|-0.25*t>*<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|-2>>>>>,<application-space|1em>t\<gtr\>0
+    <wide|x|\<vect\>>=-<frac|55|8>*\<mathe\><rsup|-0.05*t>*<bmatrix|<tformat|<table|<row|<cell|3>>|<row|<cell|2>>>>>+<frac|29|8>*\<mathe\><rsup|-0.25*t>*<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|-2>>>>>,<application-space|1em>t\<geq\>0
   </equation*>
 
   <section*|Page 390>
@@ -426,7 +429,7 @@
     2t>>|<row|<cell|sin 2t>>>>>
   </equation*>
 
-  General solution is
+  General solution constituted of real functions is
 
   <\equation*>
     <wide|x|\<vect\>>=c<rsub|1>*\<mathe\><rsup|-t>*<bmatrix|<tformat|<table|<row|<cell|-2*sin
@@ -434,7 +437,8 @@
     2t>>|<row|<cell|sin 2t>>>>>,<application-space|1em>c<rsub|1,2>\<in\>\<bbb-R\>,<application-space|1em>\<forall\>t
   </equation*>
 
-  As <math|t\<rightarrow\>\<infty\>> the solution approaches zero.
+  As <math|t\<rightarrow\>\<infty\>> the solution approaches zero (decaying
+  oscillations).
 
   <underline|Question 10>
 
@@ -481,11 +485,31 @@
 
   <\equation*>
     <wide|x|\<vect\>>=c<rsub|1>*\<mathe\><rsup|-2*t>*<bmatrix|<tformat|<table|<row|<cell|cos
-    t+sin t>>|<row|<cell|co st>>>>>+c<rsub|2>*\<mathe\><rsup|-2t>*<bmatrix|<tformat|<table|<row|<cell|cos
+    t+sin t>>|<row|<cell|cos t>>>>>+c<rsub|2>*\<mathe\><rsup|-2t>*<bmatrix|<tformat|<table|<row|<cell|cos
     t-sin t>>|<row|<cell|-sin t>>>>>,<application-space|1em>c<rsub|1,2>\<in\>\<bbb-R\>,<application-space|1em>\<forall\>t
   </equation*>
 
-  As <math|t\<rightarrow\>\<infty\>> the solution approaches zero.
+  Find <math|c<rsub|1,2>> for given ICs.
+
+  <\equation*>
+    <wide|x|\<vect\>><around*|(|0|)>=c<rsub|1>*<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|1>>>>>+c<rsub|2>*<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|0>>>>>=<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|-2>>>>>
+  </equation*>
+
+  From the second row <math|c<rsub|1>=-2> and from the first row
+  <math|c<rsub|2>=3>.
+
+  Unique solution is
+
+  <\equation*>
+    <wide|x|\<vect\>>=\<mathe\><rsup|-2*t>*<around*|(|-2*<bmatrix|<tformat|<table|<row|<cell|cos
+    t+sin t>>|<row|<cell|cos t>>>>>+3*<bmatrix|<tformat|<table|<row|<cell|cos
+    t-sin t>>|<row|<cell|-sin t>>>>>|)>=\<mathe\><rsup|-2*t>*<bmatrix|<tformat|<table|<row|<cell|cos
+    t-5*sin t>>|<row|<cell|-2*cos t-3*sin
+    t>>>>>,<application-space|1em>\<forall\>t
+  </equation*>
+
+  As <math|t\<rightarrow\>\<infty\>> the solution approaches zero (decaying
+  oscillations).
 </body>
 
 <\initial>
