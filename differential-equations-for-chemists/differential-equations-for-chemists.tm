@@ -137,100 +137,134 @@
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-30>>
 
-    <vspace*|1fn><with|font-series|bold|math-font-series|bold|6<space|2spc>System
+    <vspace*|2fn><with|font-series|bold|math-font-series|bold|font-size|1.19|III<space|2spc>System
     of ODES> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-31><vspace|0.5fn>
+    <no-break><pageref|auto-31><vspace|1fn>
 
-    <with|par-left|1tab|6.1<space|2spc>Examples of problems represented by a
-    system of ODEs <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-32>>
-
-    <with|par-left|1tab|6.2<space|2spc>Existence & Uniqueness theorem for
-    first order systems <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-33>>
-
-    <with|par-left|1tab|6.3<space|2spc>Reducing a higher order ODE to a
-    system of first order ODEs <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-34>>
-
-    <with|par-left|1tab|6.4<space|2spc>System of algebraic equations
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|6<space|2spc>Examples
+    of problems represented by a system of ODEs>
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-35>>
+    <no-break><pageref|auto-32><vspace|0.5fn>
 
-    <with|par-left|2tab|6.4.1<space|2spc>Algorithm to invert (square)
-    matrices: Gauss-Seidel algorithm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|7<space|2spc>Existence
+    & Uniqueness theorem for first order systems>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-33><vspace|0.5fn>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|8<space|2spc>Reducing
+    a higher order ODE to a system of first order ODEs>
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-34><vspace|0.5fn>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|9<space|2spc>System
+    of algebraic equations> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-35><vspace|0.5fn>
+
+    <with|par-left|1tab|9.1<space|2spc>Algorithm to invert (square) matrices:
+    Gauss-Seidel algorithm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-36>>
 
-    <with|par-left|2tab|6.4.2<space|2spc>Review of determinants
+    <with|par-left|1tab|9.2<space|2spc>Review of determinants
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-37>>
 
-    <with|par-left|2tab|6.4.3<space|2spc>Cramer's rule
+    <with|par-left|1tab|9.3<space|2spc>Cramer's rule
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-38>>
 
-    <with|par-left|2tab|6.4.4<space|2spc>Properties of determinants
+    <with|par-left|1tab|9.4<space|2spc>Properties of determinants
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-39>>
 
-    <with|par-left|2tab|6.4.5<space|2spc>Review of eigenvalues and
-    eigenvectors <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <with|par-left|1tab|9.5<space|2spc>Review of eigenvalues and eigenvectors
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-40>>
 
-    <with|par-left|2tab|6.4.6<space|2spc>Diagonalizability,
-    eigendecomposition and power of matrices
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <with|par-left|1tab|9.6<space|2spc>Diagonalizability, eigendecomposition
+    and power of matrices <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-41>>
 
-    <with|par-left|1tab|6.5<space|2spc>Systems of First-order linear ODEs
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-42>>
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|10<space|2spc>Systems
+    of First-order linear ODEs> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-42><vspace|0.5fn>
 
-    <with|par-left|2tab|6.5.1<space|2spc>Homogeneous system
+    <with|par-left|1tab|10.1<space|2spc>Homogeneous system
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-43>>
 
-    <with|par-left|2tab|6.5.2<space|2spc>Real coefficient matrix with
-    non-real eigenvalues <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <with|par-left|1tab|10.2<space|2spc>Real coefficient matrix with non-real
+    eigenvalues <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-44>>
 
-    <with|par-left|2tab|6.5.3<space|2spc>Coefficient matrix is not
+    <with|par-left|1tab|10.3<space|2spc>Coefficient matrix is not
     diagonalizable & generalized eigenvectors
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-45>>
 
-    <with|par-left|2tab|6.5.4<space|2spc>Coefficient matrix does not have
+    <with|par-left|1tab|10.4<space|2spc>Coefficient matrix does not have
     <with|mode|math|n> linearly independent eigenvectors
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-46>>
 
-    <with|par-left|1tab|6.6<space|2spc>Two-point boundary value problems
-    (BVPs) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-47>>
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|11<space|2spc>Two-point
+    boundary value problems (BVPs)> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-47><vspace|0.5fn>
 
-    <with|par-left|2tab|6.6.1<space|2spc>Eigenvalue problems
+    <with|par-left|1tab|11.1<space|2spc>Eigenvalue problems
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-48>>
 
-    <vspace*|1fn><with|font-series|bold|math-font-series|bold|7<space|2spc>Partial
+    <vspace*|2fn><with|font-series|bold|math-font-series|bold|font-size|1.19|IV<space|2spc>Partial
     differential equations> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-49><vspace|0.5fn>
+    <no-break><pageref|auto-49><vspace|1fn>
 
-    <with|par-left|1tab|7.1<space|2spc>Heat conduction in a rod (Heat
-    equation) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-    <no-break><pageref|auto-50>>
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|12<space|2spc>Heat
+    conduction in a rod (Heat equation)> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-50><vspace|0.5fn>
 
-    <with|par-left|2tab|7.1.1<space|2spc>Solution by separation of variables
+    <with|par-left|1tab|12.1<space|2spc>Solution by separation of variables
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-51>>
 
-    <with|par-left|2tab|7.1.2<space|2spc>Fourier series
+    <with|par-left|2tab|12.1.1<space|2spc>Interlude: Fourier series
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-52>>
 
-    <with|par-left|2tab|7.1.3<space|2spc>Inner products on function spaces
-    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <with|par-left|2tab|12.1.2<space|2spc>Inner products on function spaces &
+    orthogonality <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-53>>
+
+    <with|par-left|2tab|12.1.3<space|2spc>Popular examples of Fourier series
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-54>>
+
+    <with|par-left|2tab|12.1.4<space|2spc>Utilizing properties of even and
+    odd functions <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-55>>
+
+    <with|par-left|1tab|12.2<space|2spc>Back to heat equation
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-56>>
+
+    <with|par-left|2tab|12.2.1<space|2spc>Non-homogeneous boundary conditions
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-57>>
+
+    <with|par-left|1tab|12.3<space|2spc>Bar with insulated ends
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-58>>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|13<space|2spc>The
+    wave equation> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-59><vspace|0.5fn>
+
+    <with|par-left|1tab|13.1<space|2spc>Zero initial velocity
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-60>>
+
+    <with|par-left|1tab|13.2<space|2spc>Zero initial position
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-61>>
   </table-of-contents>
 
   <page-break*>
@@ -4321,9 +4355,9 @@
     </enumerate-Roman>
   </enumerate>
 
-  <section|System of ODES>
+  <part|System of ODES>
 
-  <subsection|Examples of problems represented by a system of ODEs>
+  <section|Examples of problems represented by a system of ODEs>
 
   <\enumerate>
     <item>2nd order system in <math|u<rsub|1>,u<rsub|2>>.
@@ -4475,7 +4509,7 @@
 
   ICs: <math|y<rsub|1><around*|(|a|)>=b<rsub|1>,y<rsub|2><around*|(|a|)>=b<rsub|2>,\<ldots\>,y<rsub|n><around*|(|a|)>=b<rsub|n>>.
 
-  <subsection|Existence & Uniqueness theorem for first order systems>
+  <section|Existence & Uniqueness theorem for first order systems>
 
   Given\ 
 
@@ -4526,7 +4560,7 @@
     </itemize>
   </note*>
 
-  <subsection|Reducing a higher order ODE to a system of first order ODEs>
+  <section|Reducing a higher order ODE to a system of first order ODEs>
 
   Any higher order linear ODE can be reduced to a first order linear system.
 
@@ -4597,7 +4631,7 @@
 
   If we solve the system then <math|y=y<rsub|1>> will solve the ODE.
 
-  <subsection|System of algebraic equations>
+  <section|System of algebraic equations>
 
   A system of equations of the form:
 
@@ -4806,8 +4840,7 @@
   <math|A*<wide|x|\<vect\>>=<wide|b|\<vect\>>> if and only if <math|rank
   <around*|(|A|)>=rank <around*|(|A\|B|)>>.
 
-  <subsubsection|Algorithm to invert (square) matrices: Gauss-Seidel
-  algorithm>
+  <subsection|Algorithm to invert (square) matrices: Gauss-Seidel algorithm>
 
   Works for <em|square matrices> (<math|n\<times\>n>).
 
@@ -4879,7 +4912,7 @@
     A<rsup|-1>=<bmatrix|<tformat|<table|<row|<cell|-<frac|7|2>>|<cell|-3>|<cell|-<frac|5|2>>>|<row|<cell|<frac|1|2>>|<cell|1>|<cell|-<frac|1|2>>>|<row|<cell|<frac|5|2>>|<cell|2>|<cell|-<frac|3|2>>>>>>
   </equation*>
 
-  <subsubsection|Review of determinants>
+  <subsection|Review of determinants>
 
   Assume throughout this subsection that all matrices are square.
 
@@ -4961,7 +4994,7 @@
 
   <page-break>
 
-  <subsubsection|Cramer's rule>
+  <subsection|Cramer's rule>
 
   <underline|A strategy to find solutions of a system based on determinant:>
 
@@ -5001,7 +5034,7 @@
   practical only for small matrices, as it makes us calculate <math|n+1>
   determinants to find the solutions.
 
-  <subsubsection|Properties of determinants>
+  <subsection|Properties of determinants>
 
   <\enumerate>
     <item>If <math|A> has a row/column of zeros then <math|det A=0>.
@@ -5132,8 +5165,8 @@
     yellow>|<table|<row|<cell|1>|<cell|0>|<cell|-1>|<cell|2>>|<row|<cell|0>|<cell|1>|<cell|1>|<cell|-1>>|<row|<cell|0>|<cell|0>|<cell|3>|<cell|-1>>|<row|<cell|0>|<cell|0>|<cell|0>|<cell|-5>>>>>=3\<cdot\>1\<cdot\>1\<cdot\>3\<cdot\><around*|(|-5|)>=-45
   </equation*>
 
-  <subsubsection|Review of eigenvalues and
-  eigenvectors><marginal-note|normal|c|Lec 16 26.12.22>
+  <subsection|Review of eigenvalues and eigenvectors><marginal-note|normal|c|Lec
+  16 26.12.22>
 
   Assume <math|A> is square <math|n\<times\>n>. The map that sends a vector
   in <math|\<bbb-R\><rsup|n>> <math|<bmatrix|<tformat|<table|<row|<cell|x<rsub|1>>>|<row|<cell|\<vdots\>>>|<row|<cell|x<rsub|n>>>>>>>
@@ -5454,7 +5487,7 @@
     </equation*>
   </enumerate>
 
-  <subsubsection|Diagonalizability, eigendecomposition and power of matrices>
+  <subsection|Diagonalizability, eigendecomposition and power of matrices>
 
   <\theorem*>
     \;
@@ -5654,7 +5687,7 @@
     A real matrix is symmetric iff it is Hermitian.
   </note*>
 
-  <subsection|Systems of First-order linear ODEs>
+  <section|Systems of First-order linear ODEs>
 
   Suppose we have the system
 
@@ -5690,7 +5723,7 @@
     </em>
   </theorem*>
 
-  <subsubsection|Homogeneous system>
+  <subsection|Homogeneous system>
 
   Suppose we have a homogeneous system:
 
@@ -5896,7 +5929,7 @@
     matrix of coefficients has rank <math|n>.
   </note*>
 
-  <subsubsection|Real coefficient matrix with non-real eigenvalues>
+  <subsection|Real coefficient matrix with non-real eigenvalues>
 
   What happens if <math|A> has non-real eigenvalues? Suppose <math|A> is real
   and we have
@@ -6070,7 +6103,7 @@
 
   <marginal-note|normal|c|lec 19 8.1.23>Interlude:
 
-  <subsubsection|Coefficient matrix is not diagonalizable & generalized
+  <subsection|Coefficient matrix is not diagonalizable & generalized
   eigenvectors>
 
   Interlude: what happens if a matrix isn't diagonalizable?
@@ -6185,8 +6218,8 @@
   multiplicity of <math|\<lambda\>> in the characteristic polynomial. In this
   case, generalized eigenvectors come in.
 
-  <subsubsection|Coefficient matrix does not have <math|n> linearly
-  independent eigenvectors>
+  <subsection|Coefficient matrix does not have <math|n> linearly independent
+  eigenvectors>
 
   Example:
 
@@ -6286,7 +6319,7 @@
 
   is a linear combination of an eigenvector and a generalized eigenvector.
 
-  <subsection|Two-point boundary value problems (BVPs)>
+  <section|Two-point boundary value problems (BVPs)>
 
   Given a 2nd order linear ODE:
 
@@ -6440,7 +6473,7 @@
 
   <marginal-note|normal|c|lec 20 9.1.23>
 
-  <subsubsection|Eigenvalue problems>
+  <subsection|Eigenvalue problems>
 
   Given homogeneous BVPs with a parameter <math|\<lambda\>>:
 
@@ -6642,11 +6675,11 @@
 
   <page-break>
 
-  <section|Partial differential equations>
+  <part|Partial differential equations>
 
   In this section we review some examples of PDVs.
 
-  <subsection|Heat conduction in a rod (Heat equation)>
+  <section|Heat conduction in a rod (Heat equation)>
 
   Heat conduction in a finite rod. Solution was given by Fourier
   (1768\U1830).
@@ -6711,7 +6744,7 @@
   <math|<big|sum><rsub|n=1><rsup|\<infty\>>c<rsub|n>*u<rsub|n>>, so that it
   satisfies the ICs as well.
 
-  <subsubsection|Solution by separation of variables>
+  <subsection|Solution by separation of variables>
 
   <\render-theorem|Method>
     \;
@@ -6889,7 +6922,7 @@
   The coefficients <math|<around*|{|c<rsub|n>|}>> are called <em|Fourier
   coefficients>.
 
-  <subsection|Fourier series>
+  <subsubsection|Interlude: Fourier series>
 
   Suppose we want to express a function which is periodic using a series of
   trigonometric functions.
@@ -6962,7 +6995,7 @@
     <math|f> in the vector space.
   </note*>
 
-  <subsubsection|Inner products on function spaces>
+  <subsubsection|Inner products on function spaces & orthogonality>
 
   On <math|\<bbb-C\><rsup|n>> we had <math|<around*|\<langle\>|<wide|v|\<vect\>>,<wide|w|\<vect\>>|\<rangle\>>>
   inner product for <math|<wide|v|\<vect\>>,<wide|w|\<vect\>>\<in\>\<bbb-C\><rsup|n>>:
@@ -7024,7 +7057,7 @@
     are linearly independent.
   </proof>
 
-  <marginal-note|normal|c|lec 22 23.1.23>
+  <marginal-note|normal|c|lec 22 16.1.23>
 
   <\corollary*>
     \;
@@ -7216,7 +7249,7 @@
     </equation*>
   </ornamented>
 
-  <underline|Examples>
+  <subsubsection|Popular examples of Fourier series>
 
   <\enumerate>
     <item>Triangular wave function.
@@ -7428,7 +7461,881 @@
     </note*>
   </enumerate>
 
-  \;
+  <marginal-note|normal|c|lec 23 22.1.23>
+
+  <subsubsection|Utilizing properties of even and odd functions>
+
+  <\definition*>
+    \;
+
+    <\em>
+      <math|f> is <em|even> if <math|f<around*|(|-x|)>=f<around*|(|x|)>>
+
+      <math|f> is <em|odd> if <math|f<around*|(|-x|)>=-f<around*|(|x|)>>
+    </em>
+  </definition*>
+
+  More properties:
+
+  <\itemize>
+    <item>If <math|f> is even then
+
+    <\equation*>
+      <big|int><rsub|-L><rsup|L>f<around*|(|x|)>
+      \<mathd\>x=2*<big|int><rsub|0><rsup|L>f<around*|(|x|)> \<mathd\>x
+    </equation*>
+
+    If <math|f> is odd then
+
+    <\equation*>
+      <big|int><rsub|-L><rsup|L>f<around*|(|x|)> \<mathd\>x=0
+    </equation*>
+
+    <item>If <math|f> is even then <math|f<rprime|'>> is odd and
+    <math|<big|int>f<around*|(|x|)> \<mathd\>x> is odd.
+
+    If <math|f> is odd then <math|f<rprime|'>> is even and
+    <math|<big|int>f<around*|(|x|)> \<mathd\>x> is even.
+  </itemize>
+
+  How can we apply this to Fourier series?
+
+  <\itemize>
+    <item>If <math|f> is even <math|2L>-periodic and piece-wise smooth then:
+    <math|f<around*|(|x|)>*cos <frac|n*\<mathpi\>*x|L>> is even and
+    <math|f<around*|(|x|)>*sin <frac|n*\<mathpi\>*x|L>> is odd. Therefore,
+    the Fourier sine coefficients <math|b<rsub|n>=0> <math|\<forall\>n> and
+    the Fourier cosine coefficients <math|a<rsub|n>=<frac|2|L>*<big|int><rsub|0><rsup|L>f<around*|(|x|)>*cos
+    <frac|n*\<mathpi\>*x|L> \<mathd\>x> and the Fourier series of <math|f>
+    will be
+
+    <\equation*>
+      f<around*|(|x|)>=<frac|a<rsub|0>|2>+<big|sum><rsub|n=1><rsup|\<infty\>>a<rsub|n>*cos
+      <frac|n*\<mathpi\>*x|L>
+    </equation*>
+
+    <item>Similarly, if <math|f> is odd <math|2L>-periodic piece-wise smooth
+    then <math|f<around*|(|x|)>*sin <frac|n*\<mathpi\>*x|L>> is even and
+    <math|f<around*|(|x|)>*cos <frac|n*\<mathpi\>*x|L>> is odd. So
+    <math|a<rsub|n>=0> <math|\<forall\>n\<geq\>0> and
+    <math|b<rsub|n>=<frac|2|L>*<big|int><rsub|0><rsup|L>f<around*|(|x|)>*sin
+    <frac|n*\<mathpi\>*x|L> \<mathd\>x>, and
+
+    <\equation*>
+      f<around*|(|x|)>=<big|sum><rsub|n=1><rsup|\<infty\>>b<rsub|n>*sin
+      <frac|n*\<mathpi\>*x|L>
+    </equation*>
+  </itemize>
+
+  <underline|Example>: Sawtooth wave.
+
+  <\equation*>
+    f<around*|(|x|)>=<choice|<tformat|<table|<row|<cell|x>|<cell|-L\<less\>x\<less\>L>>|<row|<cell|0>|<cell|x=\<pm\>L>>>>>,f<around*|(|x|)>=f<around*|(|x+2L|)>
+  </equation*>
+
+  <\padded-center>
+    <with|gr-mode|<tuple|edit|point>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|cartesian|<point|0|0>|1>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-auto-crop|true|<graphics||<math-at|L|<point|-0.5|2.0>>|<math-at|-L|<point|-0.6|-2.0>>|<math-at|L|<point|2|-0.4>>|<math-at|-L|<point|-2.3|-0.5>>|<line|<point|-2|-2>|<point|2.0|2.0>>|<line|<point|2|-2>|<point|6.0|2.0>>|<line|<point|-6|-2>|<point|-2.0|2.0>>|<math-at|-2L|<point|-6.4|-0.4>>|<math-at|2L|<point|4.0|-0.5>>|<with|color|blue|<line|<point|-1.75819|-2.02712>|<point|-1.75819|-2.02712>|<point|-1.73702|-1.90012>|<point|-1.73702|-1.87895>|<point|-1.71585|-1.87895>|<point|-1.71585|-1.85779>|<point|-1.71585|-1.83662>|<point|-1.71585|-1.81545>|<point|-1.71585|-1.79428>|<point|-1.71585|-1.77312>|<point|-1.71585|-1.75195>|<point|-1.71585|-1.73078>|<point|-1.71585|-1.70962>|<point|-1.71585|-1.68845>|<point|-1.69469|-1.66728>|<point|-1.69469|-1.64612>|<point|-1.69469|-1.62495>|<point|-1.69469|-1.60378>|<point|-1.67352|-1.60378>|<point|-1.67352|-1.58262>|<point|-1.67352|-1.56145>|<point|-1.65235|-1.56145>|<point|-1.65235|-1.54028>|<point|-1.65235|-1.51912>|<point|-1.65235|-1.49795>|<point|-1.63118|-1.49795>|<point|-1.63118|-1.47678>|<point|-1.63118|-1.45562>|<point|-1.61002|-1.45562>|<point|-1.61002|-1.43445>|<point|-1.58885|-1.43445>|<point|-1.58885|-1.41328>|<point|-1.56768|-1.41328>|<point|-1.56768|-1.39212>|<point|-1.54652|-1.39212>|<point|-1.52535|-1.37095>|<point|-1.50418|-1.37095>|<point|-1.50418|-1.34978>|<point|-1.48302|-1.34978>|<point|-1.46185|-1.34978>|<point|-1.44068|-1.34978>|<point|-1.44068|-1.32861>|<point|-1.41952|-1.32861>|<point|-1.39835|-1.32861>|<point|-1.37718|-1.32861>|<point|-1.37718|-1.30745>|<point|-1.35602|-1.30745>|<point|-1.33485|-1.30745>|<point|-1.31368|-1.30745>|<point|-1.31368|-1.28628>|<point|-1.29252|-1.28628>|<point|-1.27135|-1.28628>|<point|-1.25018|-1.28628>|<point|-1.22902|-1.28628>|<point|-1.22902|-1.26511>|<point|-1.20785|-1.26511>|<point|-1.18668|-1.26511>|<point|-1.16551|-1.26511>|<point|-1.16551|-1.24395>|<point|-1.14435|-1.24395>|<point|-1.12318|-1.24395>|<point|-1.12318|-1.22278>|<point|-1.10201|-1.22278>|<point|-1.10201|-1.20161>|<point|-1.08085|-1.20161>|<point|-1.05968|-1.20161>|<point|-1.05968|-1.18045>|<point|-1.03851|-1.18045>|<point|-1.01735|-1.18045>|<point|-1.01735|-1.15928>|<point|-0.99618|-1.13811>|<point|-0.99618|-1.11695>|<point|-0.975013|-1.11695>|<point|-0.975013|-1.09578>|<point|-0.953846|-1.09578>|<point|-0.953846|-1.07461>|<point|-0.93268|-1.07461>|<point|-0.93268|-1.05345>|<point|-0.93268|-1.03228>|<point|-0.911513|-1.01111>|<point|-0.911513|-0.989946>|<point|-0.890346|-0.968779>|<point|-0.890346|-0.947612>|<point|-0.869179|-0.947612>|<point|-0.869179|-0.926445>|<point|-0.869179|-0.905278>|<point|-0.848012|-0.905278>|<point|-0.848012|-0.862945>|<point|-0.848012|-0.841778>|<point|-0.848012|-0.820611>|<point|-0.826845|-0.820611>|<point|-0.826845|-0.799444>|<point|-0.826845|-0.778278>|<point|-0.826845|-0.757111>|<point|-0.805679|-0.757111>|<point|-0.805679|-0.735944>|<point|-0.784512|-0.735944>|<point|-0.784512|-0.714777>|<point|-0.784512|-0.69361>|<point|-0.784512|-0.672443>|<point|-0.763345|-0.672443>|<point|-0.763345|-0.651277>|<point|-0.763345|-0.63011>|<point|-0.763345|-0.608943>|<point|-0.742178|-0.608943>|<point|-0.742178|-0.587776>|<point|-0.742178|-0.566609>|<point|-0.721011|-0.566609>|<point|-0.699845|-0.545443>|<point|-0.699845|-0.524276>|<point|-0.699845|-0.503109>|<point|-0.678678|-0.503109>|<point|-0.678678|-0.481942>|<point|-0.657511|-0.481942>|<point|-0.636344|-0.481942>|<point|-0.636344|-0.460775>|<point|-0.615177|-0.460775>|<point|-0.59401|-0.460775>|<point|-0.59401|-0.439608>|<point|-0.572844|-0.439608>|<point|-0.572844|-0.418442>|<point|-0.551677|-0.418442>|<point|-0.53051|-0.418442>|<point|-0.509343|-0.418442>|<point|-0.509343|-0.397275>|<point|-0.488176|-0.397275>|<point|-0.46701|-0.397275>|<point|-0.445843|-0.397275>|<point|-0.424676|-0.397275>|<point|-0.424676|-0.376108>|<point|-0.403509|-0.376108>|<point|-0.382342|-0.376108>|<point|-0.361175|-0.376108>|<point|-0.361175|-0.354941>|<point|-0.340009|-0.354941>|<point|-0.340009|-0.333774>|<point|-0.318842|-0.333774>|<point|-0.297675|-0.333774>|<point|-0.276508|-0.333774>|<point|-0.255341|-0.333774>|<point|-0.255341|-0.312607>|<point|-0.234174|-0.312607>|<point|-0.213008|-0.312607>|<point|-0.191841|-0.312607>|<point|-0.191841|-0.291441>|<point|-0.170674|-0.291441>|<point|-0.149507|-0.270274>|<point|-0.12834|-0.270274>|<point|-0.12834|-0.249107>|<point|-0.107174|-0.249107>|<point|-0.107174|-0.22794>|<point|-0.0860067|-0.22794>|<point|-0.0860067|-0.206773>|<point|-0.0648399|-0.206773>|<point|-0.0648399|-0.185607>|<point|-0.0648399|-0.16444>|<point|-0.0436731|-0.16444>|<point|-0.0436731|-0.143273>|<point|-0.0436731|-0.122106>|<point|-0.0225063|-0.122106>|<point|-0.0225063|-0.100939>|<point|-0.0225063|-0.0797725>|<point|-0.00133946|-0.0797725>|<point|-0.00133946|-0.0586056>|<point|-0.00133946|-0.0374388>|<point|-0.00133946|-0.016272>|<point|0.0198274|-0.016272>|<point|0.0198274|0.00489483>|<point|0.0198274|0.0260616>|<point|0.0198274|0.0472285>|<point|0.0198274|0.0683953>|<point|0.0409942|0.0895621>|<point|0.0409942|0.110729>|<point|0.0409942|0.131896>|<point|0.0409942|0.153063>|<point|0.062161|0.153063>|<point|0.062161|0.174229>|<point|0.0833278|0.195396>|<point|0.0833278|0.216563>|<point|0.0833278|0.23773>|<point|0.104495|0.23773>|<point|0.104495|0.258897>|<point|0.104495|0.280064>|<point|0.125661|0.30123>|<point|0.125661|0.322397>|<point|0.125661|0.343564>|<point|0.146828|0.343564>|<point|0.146828|0.364731>|<point|0.167995|0.364731>|<point|0.167995|0.385898>|<point|0.189162|0.385898>|<point|0.189162|0.407064>|<point|0.210329|0.407064>|<point|0.210329|0.428231>|<point|0.231496|0.428231>|<point|0.231496|0.449398>|<point|0.252662|0.449398>|<point|0.252662|0.470565>|<point|0.273829|0.470565>|<point|0.294996|0.470565>|<point|0.294996|0.491732>|<point|0.316163|0.491732>|<point|0.33733|0.491732>|<point|0.33733|0.512899>|<point|0.358496|0.512899>|<point|0.358496|0.534065>|<point|0.379663|0.534065>|<point|0.40083|0.534065>|<point|0.421997|0.534065>|<point|0.443164|0.534065>|<point|0.443164|0.555232>|<point|0.464331|0.555232>|<point|0.485497|0.576399>|<point|0.506664|0.576399>|<point|0.527831|0.576399>|<point|0.527831|0.597566>|<point|0.548998|0.597566>|<point|0.570165|0.597566>|<point|0.570165|0.618733>|<point|0.591332|0.618733>|<point|0.612498|0.618733>|<point|0.633665|0.618733>|<point|0.654832|0.618733>|<point|0.654832|0.639899>|<point|0.675999|0.639899>|<point|0.697166|0.639899>|<point|0.718332|0.639899>|<point|0.781833|0.682233>|<point|0.803|0.682233>|<point|0.803|0.7034>|<point|0.824167|0.7034>|<point|0.824167|0.724567>|<point|0.845333|0.724567>|<point|0.8665|0.724567>|<point|0.8665|0.745734>|<point|0.887667|0.745734>|<point|0.887667|0.7669>|<point|0.908834|0.7669>|<point|0.908834|0.788067>|<point|0.908834|0.809234>|<point|0.930001|0.830401>|<point|0.930001|0.851568>|<point|0.951167|0.851568>|<point|0.951167|0.872734>|<point|0.951167|0.893901>|<point|0.951167|0.915068>|<point|0.972334|0.915068>|<point|0.972334|0.936235>|<point|0.972334|0.957402>|<point|0.972334|0.978569>|<point|0.993501|0.978569>|<point|0.993501|0.999735>|<point|0.993501|1.0209>|<point|0.993501|1.04207>|<point|0.993501|1.06324>|<point|1.01467|1.06324>|<point|1.01467|1.0844>|<point|1.01467|1.10557>|<point|1.01467|1.12674>|<point|1.03583|1.1479>|<point|1.03583|1.16907>|<point|1.057|1.16907>|<point|1.057|1.19024>|<point|1.057|1.2114>|<point|1.07817|1.2114>|<point|1.07817|1.23257>|<point|1.07817|1.25374>|<point|1.09934|1.25374>|<point|1.09934|1.2749>|<point|1.1205|1.2749>|<point|1.1205|1.29607>|<point|1.14167|1.29607>|<point|1.14167|1.31724>|<point|1.16284|1.31724>|<point|1.16284|1.3384>|<point|1.184|1.3384>|<point|1.184|1.35957>|<point|1.20517|1.35957>|<point|1.22634|1.35957>|<point|1.22634|1.38074>|<point|1.2475|1.38074>|<point|1.26867|1.40191>|<point|1.26867|1.42307>|<point|1.28984|1.42307>|<point|1.311|1.42307>|<point|1.33217|1.42307>|<point|1.33217|1.44424>|<point|1.35334|1.44424>|<point|1.3745|1.44424>|<point|1.39567|1.44424>|<point|1.39567|1.46541>|<point|1.41684|1.46541>|<point|1.438|1.46541>|<point|1.45917|1.46541>|<point|1.45917|1.48657>|<point|1.48034|1.48657>|<point|1.5015|1.48657>|<point|1.5015|1.50774>|<point|1.52267|1.50774>|<point|1.54384|1.50774>|<point|1.56501|1.50774>|<point|1.56501|1.52891>|<point|1.58617|1.52891>|<point|1.60734|1.52891>|<point|1.62851|1.52891>|<point|1.62851|1.55007>|<point|1.64967|1.55007>|<point|1.64967|1.57124>|<point|1.67084|1.57124>|<point|1.67084|1.59241>|<point|1.67084|1.61357>|<point|1.69201|1.61357>|<point|1.69201|1.63474>|<point|1.69201|1.65591>|<point|1.71317|1.65591>|<point|1.71317|1.67707>|<point|1.71317|1.69824>|<point|1.71317|1.71941>|<point|1.73434|1.71941>|<point|1.73434|1.74057>|<point|1.75551|1.76174>|<point|1.75551|1.78291>|<point|1.75551|1.80407>|<point|1.77667|1.80407>|<point|1.77667|1.82524>|<point|1.77667|1.84641>|<point|1.77667|1.86758>|<point|1.79784|1.86758>|<point|1.79784|1.88874>|<point|1.81901|1.88874>|<point|1.81901|1.90991>|<point|1.84017|1.93108>|<point|1.84017|1.95224>|<point|1.86134|1.95224>|<point|1.88251|1.95224>|<point|1.88251|1.97341>|<point|1.90367|1.97341>|<point|1.92484|1.97341>|<point|1.94601|1.97341>|<point|1.96717|1.97341>|<point|1.98834|1.95224>|<point|1.98834|1.93108>|<point|2.00951|1.93108>|<point|2.00951|1.90991>|<point|2.00951|1.88874>|<point|2.00951|1.86758>|<point|2.00951|1.84641>|<point|2.00951|1.82524>|<point|2.03068|1.82524>|<point|2.03068|1.80407>|<point|2.03068|1.78291>|<point|2.03068|1.76174>|<point|2.03068|1.74057>|<point|2.03068|1.71941>|<point|2.03068|1.69824>|<point|2.03068|1.67707>|<point|2.03068|1.65591>|<point|2.03068|1.63474>|<point|2.03068|1.61357>|<point|2.03068|1.59241>|<point|2.03068|1.57124>|<point|2.03068|1.55007>|<point|2.03068|1.52891>|<point|2.03068|1.50774>|<point|2.03068|1.48657>|<point|2.03068|1.46541>|<point|2.03068|1.44424>|<point|2.03068|1.42307>|<point|2.03068|1.40191>|<point|2.03068|1.38074>|<point|2.03068|1.35957>|<point|2.03068|1.3384>|<point|2.03068|1.31724>|<point|2.03068|1.29607>|<point|2.03068|1.2749>|<point|2.03068|1.25374>|<point|2.03068|1.23257>|<point|2.03068|1.2114>|<point|2.03068|1.19024>|<point|2.00951|1.16907>|<point|2.00951|1.1479>|<point|2.00951|1.12674>|<point|2.00951|1.10557>|<point|1.98834|1.10557>|<point|1.98834|1.0844>|<point|1.98834|1.06324>|<point|1.98834|1.04207>|<point|1.98834|1.0209>|<point|1.98834|0.999735>|<point|1.96717|0.978569>|<point|1.96717|0.957402>|<point|1.96717|0.936235>|<point|1.96717|0.915068>|<point|1.96717|0.893901>|<point|1.94601|0.788067>|<point|1.94601|0.7669>|<point|1.94601|0.745734>|<point|1.94601|0.724567>|<point|1.94601|0.7034>|<point|1.94601|0.682233>|<point|1.94601|0.661066>|<point|1.94601|0.639899>|<point|1.94601|0.618733>|<point|1.94601|0.597566>|<point|1.94601|0.576399>|<point|1.94601|0.555232>|<point|1.94601|0.534065>|<point|1.94601|0.512899>|<point|1.92484|0.512899>|<point|1.92484|0.491732>|<point|1.92484|0.470565>|<point|1.92484|0.449398>|<point|1.92484|0.428231>|<point|1.92484|0.407064>|<point|1.92484|0.385898>|<point|1.92484|0.364731>|<point|1.92484|0.343564>|<point|1.92484|0.322397>|<point|1.92484|0.30123>|<point|1.92484|0.280064>|<point|1.92484|0.258897>|<point|1.92484|0.23773>|<point|1.92484|0.216563>|<point|1.92484|0.195396>|<point|1.92484|0.174229>|<point|1.92484|0.153063>|<point|1.92484|0.131896>|<point|1.92484|0.110729>|<point|1.92484|0.0895621>|<point|1.92484|0.0683953>|<point|1.92484|0.0472285>|<point|1.92484|0.0260616>|<point|1.92484|0.00489483>|<point|1.92484|-0.016272>|<point|1.92484|-0.0374388>|<point|1.92484|-0.0586056>|<point|1.92484|-0.0797725>|<point|1.94601|-0.0797725>|<point|1.94601|-0.100939>|<point|1.94601|-0.122106>|<point|1.94601|-0.143273>|<point|1.94601|-0.16444>|<point|1.94601|-0.185607>|<point|1.94601|-0.206773>|<point|1.94601|-0.22794>|<point|1.94601|-0.249107>|<point|1.94601|-0.270274>|<point|1.94601|-0.291441>|<point|1.96717|-0.291441>|<point|1.96717|-0.312607>|<point|1.96717|-0.354941>|<point|1.96717|-0.376108>|<point|1.96717|-0.397275>|<point|1.96717|-0.418442>|<point|1.96717|-0.439608>|<point|1.96717|-0.460775>|<point|1.96717|-0.481942>|<point|1.96717|-0.503109>|<point|1.98834|-0.524276>|<point|1.98834|-0.545443>|<point|1.98834|-0.566609>|<point|1.98834|-0.587776>|<point|1.98834|-0.608943>|<point|2.00951|-0.63011>|<point|2.00951|-0.651277>|<point|2.00951|-0.672443>|<point|2.00951|-0.69361>|<point|2.00951|-0.714777>|<point|2.00951|-0.735944>|<point|2.00951|-0.757111>|<point|2.00951|-0.778278>|<point|2.00951|-0.799444>|<point|2.00951|-0.820611>|<point|2.00951|-0.841778>|<point|2.00951|-0.862945>|<point|2.00951|-0.884112>|<point|2.00951|-0.905278>|<point|2.00951|-0.926445>|<point|2.00951|-0.947612>|<point|2.00951|-0.968779>|<point|2.00951|-0.989946>|<point|2.00951|-1.01111>|<point|2.00951|-1.03228>|<point|2.00951|-1.05345>|<point|2.00951|-1.07461>|<point|2.03068|-1.09578>|<point|2.03068|-1.11695>|<point|2.03068|-1.13811>|<point|2.03068|-1.15928>|<point|2.03068|-1.18045>|<point|2.03068|-1.20161>|<point|2.03068|-1.22278>|<point|2.03068|-1.24395>|<point|2.03068|-1.26511>|<point|2.03068|-1.28628>|<point|2.03068|-1.30745>|<point|2.03068|-1.32861>|<point|2.03068|-1.34978>|<point|2.03068|-1.37095>|<point|2.03068|-1.39212>|<point|2.03068|-1.41328>|<point|2.03068|-1.43445>|<point|2.03068|-1.45562>|<point|2.03068|-1.47678>|<point|2.03068|-1.49795>|<point|2.03068|-1.51912>|<point|2.05184|-1.51912>|<point|2.05184|-1.54028>|<point|2.05184|-1.56145>|<point|2.05184|-1.58262>|<point|2.05184|-1.60378>|<point|2.05184|-1.62495>|<point|2.07301|-1.62495>|<point|2.07301|-1.64612>|<point|2.07301|-1.66728>|<point|2.09418|-1.66728>|<point|2.09418|-1.68845>|<point|2.11534|-1.70962>|<point|2.11534|-1.73078>|<point|2.11534|-1.75195>|<point|2.13651|-1.75195>|<point|2.13651|-1.77312>|<point|2.15768|-1.77312>|<point|2.17884|-1.77312>|<point|2.20001|-1.77312>|<point|2.22118|-1.77312>|<point|2.24234|-1.77312>|<point|2.26351|-1.77312>|<point|2.28468|-1.77312>|<point|2.28468|-1.75195>|<point|2.28468|-1.73078>|<point|2.30584|-1.73078>|<point|2.30584|-1.70962>|<point|2.32701|-1.70962>|<point|2.32701|-1.68845>|<point|2.34818|-1.68845>|<point|2.34818|-1.66728>|<point|2.36934|-1.64612>|<point|2.36934|-1.62495>|<point|2.39051|-1.62495>|<point|2.39051|-1.60378>|<point|2.39051|-1.58262>|<point|2.39051|-1.56145>|<point|2.41168|-1.56145>|<point|2.41168|-1.54028>|<point|2.41168|-1.51912>|<point|2.43284|-1.51912>|<point|2.43284|-1.49795>|<point|2.43284|-1.47678>|<point|2.45401|-1.47678>|<point|2.45401|-1.45562>|<point|2.45401|-1.43445>|<point|2.47518|-1.43445>|<point|2.47518|-1.41328>|<point|2.47518|-1.39212>|<point|2.47518|-1.37095>|<point|2.49635|-1.37095>|<point|2.49635|-1.34978>|<point|2.49635|-1.32861>|<point|2.51751|-1.32861>|<point|2.53868|-1.30745>|<point|2.53868|-1.28628>|<point|2.55985|-1.26511>|<point|2.55985|-1.24395>|<point|2.58101|-1.24395>|<point|2.60218|-1.24395>|<point|2.62335|-1.22278>|<point|2.62335|-1.20161>|<point|2.64451|-1.20161>|<point|2.64451|-1.18045>|<point|2.66568|-1.18045>|<point|2.68685|-1.18045>|<point|2.68685|-1.15928>|<point|2.70801|-1.15928>|<point|2.72918|-1.15928>|<point|2.72918|-1.13811>|<point|2.75035|-1.13811>|<point|2.75035|-1.11695>|<point|2.77151|-1.11695>|<point|2.79268|-1.11695>|<point|2.81385|-1.11695>|<point|2.81385|-1.09578>|<point|2.83501|-1.09578>|<point|2.85618|-1.09578>|<point|2.87735|-1.09578>|<point|2.87735|-1.07461>|<point|2.89852|-1.07461>|<point|2.91968|-1.07461>|<point|2.94085|-1.07461>|<point|2.96202|-1.07461>|<point|2.96202|-1.05345>|<point|2.98318|-1.05345>|<point|2.98318|-1.03228>|<point|3.00435|-1.03228>|<point|3.02552|-1.03228>|<point|3.04668|-1.03228>|<point|3.06785|-1.01111>|<point|3.08902|-1.01111>|<point|3.08902|-0.989946>|<point|3.11018|-0.989946>|<point|3.11018|-0.968779>|<point|3.13135|-0.968779>|<point|3.13135|-0.947612>|<point|3.15252|-0.947612>|<point|3.15252|-0.926445>|<point|3.15252|-0.905278>|<point|3.17368|-0.905278>|<point|3.17368|-0.884112>|<point|3.17368|-0.862945>|<point|3.19485|-0.862945>|<point|3.19485|-0.841778>|<point|3.19485|-0.820611>|<point|3.19485|-0.799444>|<point|3.21602|-0.799444>|<point|3.21602|-0.778278>|<point|3.21602|-0.757111>|<point|3.23718|-0.757111>|<point|3.23718|-0.735944>|<point|3.23718|-0.714777>|<point|3.25835|-0.63011>|<point|3.27952|-0.63011>|<point|3.27952|-0.587776>|<point|3.27952|-0.566609>|<point|3.30068|-0.566609>|<point|3.32185|-0.545443>|<point|3.32185|-0.524276>|<point|3.34302|-0.503109>|<point|3.34302|-0.481942>|<point|3.36419|-0.481942>|<point|3.36419|-0.460775>|<point|3.38535|-0.460775>|<point|3.38535|-0.439608>|<point|3.40652|-0.439608>|<point|3.40652|-0.418442>|<point|3.42769|-0.418442>|<point|3.42769|-0.397275>|<point|3.44885|-0.397275>|<point|3.44885|-0.376108>|<point|3.47002|-0.376108>|<point|3.49119|-0.376108>|<point|3.51235|-0.376108>|<point|3.51235|-0.354941>|<point|3.53352|-0.354941>|<point|3.53352|-0.333774>|<point|3.57585|-0.333774>|<point|3.59702|-0.333774>|<point|3.59702|-0.312607>|<point|3.61819|-0.312607>|<point|3.63935|-0.312607>|<point|3.66052|-0.312607>|<point|3.68169|-0.312607>|<point|3.68169|-0.291441>|<point|3.70285|-0.291441>|<point|3.72402|-0.291441>|<point|3.74519|-0.291441>|<point|3.76635|-0.270274>|<point|3.78752|-0.270274>|<point|3.78752|-0.249107>|<point|3.80869|-0.249107>|<point|3.82986|-0.249107>|<point|3.85102|-0.249107>|<point|3.85102|-0.22794>|<point|3.87219|-0.22794>|<point|3.89336|-0.206773>|<point|3.91452|-0.185607>|<point|3.93569|-0.16444>|<point|3.93569|-0.143273>|<point|3.95686|-0.122106>|<point|3.95686|-0.100939>|<point|3.95686|-0.0797725>|<point|3.97802|-0.0586056>|<point|3.97802|-0.0374388>|<point|3.97802|-0.016272>|<point|3.99919|-0.016272>|<point|3.99919|0.00489483>|<point|4.02036|0.0260616>|<point|4.02036|0.0472285>|<point|3.9274|-0.0725956>|<point|3.9274|-0.0725956>|<point|3.9274|-0.0725956>|<point|3.9274|-0.0725956>|<point|4.06269|0.131896>|<point|4.06269|0.153063>|<point|4.06269|0.174229>|<point|4.06269|0.195396>|<point|4.08386|0.195396>|<point|4.10502|0.216563>|<point|4.10502|0.23773>|<point|4.10502|0.258897>|<point|4.12619|0.280064>|<point|4.12619|0.30123>|<point|4.14736|0.30123>|<point|4.14736|0.322397>|<point|4.16852|0.322397>|<point|4.18969|0.343564>|<point|4.18969|0.364731>|<point|4.21086|0.364731>|<point|4.21086|0.385898>|<point|4.23202|0.385898>|<point|4.23202|0.407064>|<point|4.25319|0.407064>|<point|4.27436|0.407064>|<point|4.27436|0.428231>|<point|4.29553|0.449398>|<point|4.31669|0.449398>|<point|4.33786|0.449398>|<point|4.35903|0.470565>|<point|4.38019|0.470565>|<point|4.46486|0.491732>|<point|4.48603|0.491732>|<point|4.50719|0.491732>|<point|4.52836|0.491732>|<point|4.54953|0.491732>|<point|4.57069|0.491732>|<point|4.59186|0.491732>|<point|4.61303|0.491732>|<point|4.63419|0.491732>|<point|4.65536|0.512899>|<point|4.67653|0.512899>|<point|4.67653|0.534065>|<point|4.69769|0.534065>|<point|4.71886|0.534065>|<point|4.74003|0.534065>|<point|4.74003|0.555232>|<point|4.7612|0.555232>|<point|4.78236|0.555232>|<point|4.78236|0.576399>|<point|4.80353|0.576399>|<point|4.80353|0.597566>|<point|4.8247|0.597566>|<point|4.8247|0.618733>|<point|4.8247|0.639899>|<point|4.84586|0.639899>|<point|4.84586|0.661066>|<point|4.84586|0.682233>|<point|4.86703|0.682233>|<point|4.86703|0.7034>|<point|4.86703|0.724567>|<point|4.8882|0.724567>|<point|4.8882|0.745734>|<point|4.8882|0.7669>|<point|4.90936|0.788067>|<point|4.90936|0.809234>|<point|4.90936|0.830401>|<point|4.93053|0.830401>|<point|4.93053|0.851568>|<point|4.93053|0.872734>|<point|4.93053|0.893901>|<point|4.9517|0.893901>|<point|4.9517|0.915068>|<point|4.97286|0.936235>|<point|4.97286|0.957402>|<point|4.97286|0.978569>|<point|4.99403|0.978569>|<point|4.99403|0.999735>|<point|4.99403|1.0209>|<point|5.0152|1.0209>|<point|5.0152|1.04207>|<point|5.0152|1.06324>|<point|5.03636|1.06324>|<point|5.03636|1.0844>|<point|5.03636|1.10557>|<point|5.05753|1.10557>|<point|5.05753|1.1479>|<point|5.0787|1.1479>|<point|5.0787|1.16907>|<point|5.0787|1.19024>|<point|5.09986|1.19024>|<point|5.09986|1.2114>|<point|5.12103|1.23257>|<point|5.12103|1.25374>|<point|5.1422|1.25374>|<point|5.16336|1.2749>|<point|5.16336|1.29607>|<point|5.18453|1.31724>|<point|5.2057|1.31724>|<point|5.2057|1.3384>|<point|5.22687|1.3384>|<point|5.24803|1.3384>|<point|5.24803|1.35957>|<point|5.2692|1.35957>|<point|5.29037|1.35957>|<point|5.31153|1.35957>|<point|5.3327|1.35957>|<point|5.3327|1.38074>|<point|5.35387|1.38074>|<point|5.37503|1.38074>|<point|5.4597|1.42307>|<point|5.48087|1.42307>|<point|5.50203|1.44424>|<point|5.5232|1.44424>|<point|5.54437|1.44424>|<point|5.56553|1.46541>|<point|5.5867|1.46541>|<point|5.60787|1.46541>|<point|5.60787|1.48657>|<point|5.62903|1.48657>|<point|5.62903|1.50774>|<point|5.6502|1.50774>|<point|5.67137|1.50774>|<point|5.67137|1.52891>|<point|5.69254|1.52891>|<point|5.69254|1.55007>|<point|5.7137|1.55007>|<point|5.7137|1.57124>|<point|5.73487|1.57124>|<point|5.73487|1.59241>|<point|5.75604|1.59241>|<point|5.75604|1.61357>|<point|5.7772|1.61357>|<point|5.7772|1.63474>|<point|5.7772|1.65591>|<point|5.79837|1.65591>|<point|5.79837|1.67707>|<point|5.79837|1.69824>|<point|5.81954|1.69824>|<point|5.81954|1.71941>|<point|5.8407|1.71941>|<point|5.8407|1.74057>|<point|5.8407|1.76174>|<point|5.86187|1.76174>|<point|5.86187|1.78291>|<point|5.88304|1.78291>|<point|5.88304|1.80407>|<point|5.88304|1.82524>|<point|5.88304|1.84641>|<point|5.9042|1.84641>|<point|5.9042|1.86758>|<point|5.9042|1.88874>|<point|5.9042|1.90991>|<point|5.92537|1.90991>|<point|5.92537|1.93108>|<point|5.94654|1.93108>|<point|5.94654|1.95224>|<point|5.94654|1.97341>>>|<with|color|blue|<line|<point|-6.09738|-1.87895>|<point|-6.09738|-1.87895>|<point|-5.97038|-1.87895>|<point|-5.94922|-1.87895>|<point|-5.92805|-1.87895>|<point|-5.90688|-1.87895>|<point|-5.90688|-1.90012>|<point|-5.88572|-1.90012>|<point|-5.86455|-1.90012>|<point|-5.84338|-1.90012>|<point|-5.82222|-1.90012>|<point|-5.80105|-1.90012>|<point|-5.77988|-1.90012>|<point|-5.75871|-1.90012>|<point|-5.73755|-1.90012>|<point|-5.73755|-1.87895>|<point|-5.71638|-1.87895>|<point|-5.71638|-1.85779>|<point|-5.71638|-1.83662>|<point|-5.71638|-1.81545>|<point|-5.69521|-1.79428>|<point|-5.69521|-1.77312>|<point|-5.69521|-1.75195>|<point|-5.69521|-1.73078>|<point|-5.69521|-1.70962>|<point|-5.69521|-1.68845>|<point|-5.69521|-1.66728>|<point|-5.67405|-1.64612>|<point|-5.67405|-1.62495>|<point|-5.67405|-1.60378>|<point|-5.65288|-1.60378>|<point|-5.65288|-1.58262>|<point|-5.65288|-1.56145>|<point|-5.63171|-1.54028>|<point|-5.63171|-1.51912>|<point|-5.61055|-1.51912>|<point|-5.61055|-1.49795>|<point|-5.61055|-1.47678>|<point|-5.58938|-1.45562>|<point|-5.56821|-1.43445>|<point|-5.54705|-1.43445>|<point|-5.54705|-1.41328>|<point|-5.52588|-1.41328>|<point|-5.50471|-1.41328>|<point|-5.48355|-1.39212>|<point|-5.46238|-1.39212>|<point|-5.44121|-1.39212>|<point|-5.44121|-1.37095>|<point|-5.39888|-1.37095>|<point|-5.39888|-1.34978>|<point|-5.37771|-1.34978>|<point|-5.35655|-1.34978>|<point|-5.33538|-1.34978>|<point|-5.31421|-1.32861>|<point|-5.29304|-1.32861>|<point|-5.27188|-1.32861>|<point|-5.25071|-1.30745>|<point|-5.22954|-1.30745>|<point|-5.20838|-1.30745>|<point|-5.20838|-1.28628>|<point|-5.18721|-1.28628>|<point|-5.18721|-1.26511>|<point|-5.16604|-1.26511>|<point|-5.14488|-1.26511>|<point|-5.12371|-1.24395>|<point|-5.12371|-1.22278>|<point|-5.10254|-1.22278>|<point|-5.10254|-1.20161>|<point|-5.10254|-1.18045>|<point|-5.08138|-1.18045>|<point|-5.08138|-1.15928>|<point|-5.08138|-1.13811>|<point|-5.06021|-1.13811>|<point|-5.06021|-1.11695>|<point|-5.03904|-1.09578>|<point|-5.03904|-1.07461>|<point|-5.03904|-1.05345>|<point|-5.01788|-1.05345>|<point|-5.01788|-1.03228>|<point|-5.01788|-1.01111>|<point|-4.99671|-0.989946>|<point|-4.99671|-0.968779>|<point|-4.97554|-0.968779>|<point|-4.97554|-0.947612>|<point|-4.95438|-0.926445>|<point|-4.95438|-0.905278>|<point|-4.93321|-0.905278>|<point|-4.93321|-0.884112>|<point|-4.93321|-0.862945>|<point|-4.91204|-0.841778>|<point|-4.91204|-0.820611>|<point|-4.89088|-0.820611>|<point|-4.86971|-0.820611>|<point|-4.86971|-0.799444>|<point|-4.84854|-0.778278>|<point|-4.82737|-0.778278>|<point|-4.82737|-0.757111>|<point|-4.80621|-0.735944>|<point|-4.78504|-0.735944>|<point|-4.76387|-0.735944>|<point|-4.76387|-0.714777>|<point|-4.74271|-0.714777>|<point|-4.72154|-0.69361>|<point|-4.70037|-0.69361>|<point|-4.67921|-0.69361>|<point|-4.65804|-0.672443>|<point|-4.63687|-0.672443>|<point|-4.61571|-0.651277>|<point|-4.59454|-0.651277>|<point|-4.57337|-0.651277>|<point|-4.57337|-0.63011>|<point|-4.55221|-0.63011>|<point|-4.53104|-0.63011>|<point|-4.50987|-0.63011>|<point|-4.48871|-0.63011>|<point|-4.48871|-0.608943>|<point|-4.46754|-0.608943>|<point|-4.44637|-0.587776>|<point|-4.42521|-0.587776>|<point|-4.42521|-0.566609>|<point|-4.40404|-0.566609>|<point|-4.38287|-0.566609>|<point|-4.38287|-0.545443>|<point|-4.3617|-0.545443>|<point|-4.34054|-0.524276>|<point|-4.34054|-0.503109>|<point|-4.34054|-0.481942>|<point|-4.31937|-0.481942>|<point|-4.31937|-0.460775>|<point|-4.2982|-0.439608>|<point|-4.2982|-0.418442>|<point|-4.2982|-0.397275>|<point|-4.27704|-0.376108>|<point|-4.27704|-0.354941>|<point|-4.27704|-0.333774>|<point|-4.25587|-0.312607>|<point|-4.25587|-0.291441>|<point|-4.25587|-0.270274>|<point|-4.2347|-0.270274>|<point|-4.2347|-0.249107>|<point|-4.2347|-0.22794>|<point|-4.2347|-0.206773>|<point|-4.21354|-0.206773>|<point|-4.21354|-0.185607>|<point|-4.21354|-0.16444>|<point|-4.19237|-0.143273>|<point|-4.1712|-0.143273>|<point|-4.1712|-0.122106>|<point|-4.1712|-0.100939>|<point|-4.15004|-0.100939>|<point|-4.15004|-0.0797725>|<point|-4.12887|-0.0586056>|<point|-4.12887|-0.0374388>|<point|-4.1077|-0.0374388>|<point|-4.08654|-0.016272>|<point|-4.08654|0.00489483>|<point|-4.06537|0.00489483>|<point|-4.06537|0.0260616>|<point|-4.0442|0.0472285>|<point|-4.02304|0.0472285>|<point|-4.00187|0.0472285>|<point|-4.00187|0.0683953>|<point|-3.9807|0.0683953>|<point|-3.95953|0.0683953>|<point|-3.95953|0.0895621>|<point|-3.93837|0.0895621>|<point|-3.9172|0.0895621>|<point|-3.89603|0.0895621>|<point|-3.87487|0.0895621>|<point|-3.87487|0.110729>|<point|-3.8537|0.110729>|<point|-3.81137|0.110729>|<point|-3.7902|0.131896>|<point|-3.76903|0.131896>|<point|-3.74787|0.131896>|<point|-3.7267|0.131896>|<point|-3.70553|0.131896>|<point|-3.70553|0.153063>|<point|-3.68437|0.153063>|<point|-3.6632|0.153063>|<point|-3.64203|0.153063>|<point|-3.64203|0.174229>|<point|-3.62087|0.174229>|<point|-3.62087|0.195396>|<point|-3.5997|0.216563>|<point|-3.5997|0.23773>|<point|-3.57853|0.23773>|<point|-3.57853|0.258897>|<point|-3.55737|0.258897>|<point|-3.55737|0.280064>|<point|-3.55737|0.30123>|<point|-3.5362|0.322397>|<point|-3.5362|0.343564>|<point|-3.51503|0.343564>|<point|-3.51503|0.364731>|<point|-3.51503|0.385898>|<point|-3.51503|0.407064>|<point|-3.49386|0.428231>|<point|-3.49386|0.449398>|<point|-3.4727|0.470565>|<point|-3.4727|0.491732>|<point|-3.4727|0.512899>|<point|-3.45153|0.534065>|<point|-3.45153|0.555232>|<point|-3.45153|0.576399>|<point|-3.45153|0.597566>|<point|-3.43036|0.618733>|<point|-3.43036|0.639899>|<point|-3.4092|0.661066>|<point|-3.4092|0.682233>|<point|-3.38803|0.682233>|<point|-3.38803|0.7034>|<point|-3.38803|0.724567>|<point|-3.38803|0.745734>|<point|-3.36686|0.745734>|<point|-3.36686|0.7669>|<point|-3.3457|0.7669>|<point|-3.3457|0.788067>|<point|-3.32453|0.788067>|<point|-3.23986|0.830401>|<point|-3.2187|0.830401>|<point|-3.19753|0.830401>|<point|-3.17636|0.830401>|<point|-3.17636|0.851568>|<point|-3.1552|0.851568>|<point|-3.13403|0.851568>|<point|-3.11286|0.851568>|<point|-3.11286|0.872734>|<point|-3.0917|0.872734>|<point|-3.07053|0.872734>|<point|-3.04936|0.872734>|<point|-3.02819|0.893901>|<point|-3.00703|0.893901>|<point|-3.00703|0.915068>|<point|-2.98586|0.915068>|<point|-2.98586|0.936235>|<point|-2.94353|0.936235>|<point|-2.92236|0.936235>|<point|-2.92236|0.957402>|<point|-2.90119|0.957402>|<point|-2.90119|0.978569>|<point|-2.88003|0.999735>|<point|-2.85886|0.999735>|<point|-2.83769|1.0209>|<point|-2.83769|1.04207>|<point|-2.81653|1.04207>|<point|-2.81653|1.06324>|<point|-2.81653|1.0844>|<point|-2.79536|1.10557>|<point|-2.79536|1.12674>|<point|-2.77419|1.12674>|<point|-2.77419|1.16907>|<point|-2.77419|1.19024>|<point|-2.75303|1.19024>|<point|-2.75303|1.2114>|<point|-2.75303|1.23257>|<point|-2.75303|1.25374>|<point|-2.75303|1.2749>|<point|-2.73186|1.2749>|<point|-2.73186|1.29607>|<point|-2.73186|1.31724>|<point|-2.73186|1.3384>|<point|-2.73186|1.35957>|<point|-2.71069|1.35957>|<point|-2.71069|1.38074>|<point|-2.68953|1.38074>|<point|-2.68953|1.40191>|<point|-2.68953|1.42307>|<point|-2.68953|1.44424>|<point|-2.66836|1.44424>|<point|-2.66836|1.46541>|<point|-2.64719|1.46541>|<point|-2.64719|1.48657>|<point|-2.62603|1.48657>|<point|-2.60486|1.48657>|<point|-2.58369|1.48657>|<point|-2.58369|1.50774>|<point|-2.56252|1.50774>|<point|-2.56252|1.52891>|<point|-2.54136|1.52891>|<point|-2.52019|1.52891>|<point|-2.49902|1.52891>|<point|-2.47786|1.52891>|<point|-2.47786|1.55007>|<point|-2.45669|1.55007>|<point|-2.43552|1.55007>|<point|-2.43552|1.57124>|<point|-2.41436|1.57124>|<point|-2.39319|1.57124>|<point|-2.39319|1.59241>|<point|-2.37202|1.59241>|<point|-2.37202|1.61357>|<point|-2.35086|1.61357>|<point|-2.32969|1.63474>|<point|-2.30852|1.63474>|<point|-2.30852|1.65591>|<point|-2.28736|1.65591>|<point|-2.28736|1.67707>|<point|-2.28736|1.69824>|<point|-2.28736|1.71941>|<point|-2.28736|1.74057>|<point|-2.26619|1.74057>|<point|-2.26619|1.76174>|<point|-2.26619|1.78291>|<point|-2.24502|1.78291>|<point|-2.24502|1.80407>|<point|-2.22386|1.80407>|<point|-2.22386|1.82524>|<point|-2.22386|1.84641>|<point|-2.20269|1.84641>|<point|-2.20269|1.86758>|<point|-2.18152|1.86758>|<point|-2.16036|1.86758>|<point|-2.16036|1.88874>|<point|-2.13919|1.88874>|<point|-2.11802|1.88874>|<point|-2.09685|1.88874>|<point|-2.09685|1.90991>|<point|-2.07569|1.90991>|<point|-2.05452|1.90991>|<point|-2.03335|1.90991>|<point|-2.03335|1.88874>|<point|-2.03335|1.86758>|<point|-2.03335|1.84641>|<point|-2.01219|1.84641>|<point|-1.99102|1.82524>|<point|-1.99102|1.80407>|<point|-1.99102|1.78291>|<point|-1.96985|1.76174>|<point|-1.96985|1.74057>|<point|-1.96985|1.71941>|<point|-1.94869|1.71941>|<point|-1.94869|1.67707>|<point|-1.94869|1.65591>|<point|-1.94869|1.63474>|<point|-1.92752|1.61357>|<point|-1.92752|1.59241>|<point|-1.92752|1.57124>|<point|-1.92752|1.55007>|<point|-1.92752|1.52891>|<point|-1.92752|1.50774>|<point|-1.90635|1.48657>|<point|-1.90635|1.46541>|<point|-1.90635|1.44424>|<point|-1.90635|1.40191>|<point|-1.90635|1.38074>|<point|-1.90635|1.35957>|<point|-1.90635|1.3384>|<point|-1.90635|1.31724>|<point|-1.90635|1.29607>|<point|-1.90635|1.2749>|<point|-1.90635|1.23257>|<point|-1.90635|1.2114>|<point|-1.90635|1.19024>|<point|-1.90635|1.16907>|<point|-1.90635|1.1479>|<point|-1.90635|1.12674>|<point|-1.90635|1.0844>|<point|-1.90635|1.04207>|<point|-1.90635|1.0209>|<point|-1.92752|0.978569>|<point|-1.92752|0.957402>|<point|-1.92752|0.915068>|<point|-1.94869|0.893901>|<point|-1.94869|0.872734>|<point|-1.94869|0.851568>|<point|-1.94869|0.809234>|<point|-1.94869|0.788067>|<point|-1.94869|0.7669>|<point|-1.96985|0.724567>|<point|-1.96985|0.7034>|<point|-1.96985|0.682233>|<point|-1.96985|0.639899>|<point|-1.96985|0.618733>|<point|-1.99102|0.597566>|<point|-1.99102|0.576399>|<point|-1.99102|0.555232>|<point|-2.01219|0.534065>|<point|-2.01219|0.512899>|<point|-2.01219|0.491732>|<point|-2.01219|0.449398>|<point|-2.01219|0.428231>|<point|-2.01219|0.407064>|<point|-2.01219|0.385898>|<point|-2.01219|0.364731>|<point|-2.01219|0.343564>|<point|-2.01219|0.322397>|<point|-2.03335|0.30123>|<point|-2.03335|0.280064>|<point|-2.03335|0.258897>|<point|-2.03335|0.110729>|<point|-2.03335|0.0895621>|<point|-2.03335|0.0683953>|<point|-2.03335|0.0260616>|<point|-2.03335|0.00489483>|<point|-2.03335|-0.016272>|<point|-2.03335|-0.0374388>|<point|-2.03335|-0.0586056>|<point|-2.03335|-0.0797725>|<point|-2.03335|-0.100939>|<point|-2.03335|-0.122106>|<point|-2.03335|-0.16444>|<point|-2.03335|-0.185607>|<point|-2.03335|-0.206773>|<point|-2.03335|-0.22794>|<point|-2.03335|-0.249107>|<point|-2.03335|-0.270274>|<point|-2.03335|-0.291441>|<point|-2.03335|-0.333774>|<point|-2.03335|-0.354941>|<point|-2.03335|-0.376108>|<point|-2.03335|-0.397275>|<point|-2.03335|-0.418442>|<point|-2.03335|-0.439608>|<point|-2.03335|-0.460775>|<point|-2.03335|-0.481942>|<point|-2.03335|-0.503109>|<point|-2.03335|-0.524276>|<point|-2.03335|-0.545443>|<point|-2.03335|-0.587776>|<point|-2.03335|-0.608943>|<point|-2.03335|-0.63011>|<point|-2.03335|-0.651277>|<point|-2.03335|-0.672443>|<point|-2.03335|-0.69361>|<point|-2.03335|-0.714777>|<point|-2.03335|-0.735944>|<point|-2.03335|-0.757111>|<point|-2.03335|-0.778278>|<point|-2.03335|-0.799444>|<point|-2.03335|-0.820611>|<point|-2.03335|-0.862945>|<point|-2.03335|-0.884112>|<point|-2.03335|-0.905278>|<point|-2.03335|-0.947612>|<point|-2.03335|-0.968779>|<point|-2.03335|-0.989946>|<point|-2.03335|-1.03228>|<point|-2.01219|-1.05345>|<point|-2.01219|-1.07461>|<point|-2.01219|-1.09578>|<point|-2.01219|-1.11695>|<point|-2.01219|-1.13811>|<point|-1.99102|-1.15928>|<point|-1.99102|-1.20161>|<point|-1.99102|-1.22278>|<point|-1.99102|-1.24395>|<point|-1.99102|-1.26511>|<point|-1.99102|-1.28628>|<point|-1.96985|-1.30745>|<point|-1.96985|-1.32861>|<point|-1.96985|-1.34978>|<point|-1.96985|-1.37095>|<point|-1.96985|-1.39212>|<point|-1.96985|-1.41328>|<point|-1.94869|-1.43445>|<point|-1.94869|-1.45562>|<point|-1.94869|-1.47678>|<point|-1.94869|-1.49795>|<point|-1.94869|-1.51912>|<point|-1.94869|-1.54028>|<point|-1.94869|-1.56145>|<point|-1.94869|-1.58262>|<point|-1.94869|-1.60378>|<point|-1.94869|-1.62495>|<point|-1.94869|-1.64612>|<point|-1.92752|-1.64612>|<point|-1.92752|-1.66728>|<point|-1.92752|-1.68845>|<point|-1.90635|-1.73078>|<point|-1.90635|-1.75195>|<point|-1.90635|-1.77312>|<point|-1.90635|-1.79428>|<point|-1.90635|-1.81545>|<point|-1.88519|-1.83662>|<point|-1.88519|-1.85779>|<point|-1.86402|-1.87895>|<point|-1.86402|-1.90012>|<point|-1.86402|-1.92129>|<point|-1.84285|-1.94245>|<point|-1.84285|-1.96362>|<point|-1.84285|-1.98479>|<point|-1.82169|-1.98479>|<point|-1.80052|-2.00595>|<point|-1.77935|-2.00595>|<point|-1.75819|-2.00595>>>|<point|-6|-2>|<point|-1.99438|-0.0725956>|<point|-2|2>|<point|-2|-2>|<point|2|2>|<point|2|-2>|<point|6|2>>>
+  </padded-center>
+
+  <math|f> is odd so we get a sine Fourier series.
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|b<rsub|n>>|<cell|=>|<cell|<frac|2|L>*<big|int><rsub|0><rsup|L>x*sin
+    <frac|n*\<mathpi\>*x|L> \<mathd\>x>>|<row|<cell|>|<cell|=>|<cell|<frac|2|L><around*|[|-<frac|L*x|n*\<mathpi\>>*cos
+    <frac|n*\<mathpi\>*x|L>+<frac|L<rsup|2>|n<rsup|2>*\<mathpi\><rsup|2>>*sin
+    <frac|n*\<mathpi\>*x|L>|]><rsub|0><rsup|L>>>>>
+  </eqnarray*>
+
+  <\equation*>
+    f<around*|(|x|)>=<frac|2L|*\<mathpi\>><big|sum><frac|<around*|(|-1|)><rsup|n+1>|n>**sin
+    <frac|n*\<mathpi\>*x|L>
+  </equation*>
+
+  <underline|Example>: <math|2L>-periodic triangular wave. A triangular wave
+  is even and coincides with with the sawtooth wave on
+  <math|<around*|[|0,L|]>>. Remember that for a triangular wave:
+
+  <\equation*>
+    f<around*|(|x|)>=1-<frac|8|\<mathpi\><rsup|2>>*<big|sum><rsub|k=1><rsup|\<infty\>><frac|cos
+    <around*|(|<frac|<around*|(|2*k-1|)>*\<mathpi\>*x|2>|)>|<around*|(|2*k-1|)><rsup|2>>
+  </equation*>
+
+  which is a sum of cosines. How can a two functions coincide if one is a sum
+  of sines and the other is a sum of cosines? Well, the Fourier convergence
+  theorem holds for the <strong|full> interval, so on <strong|partial>
+  intervals two series can converge to the same function
+  <math|f<around*|(|x|)>=x>, <math|x\<in\><around*|[|0,L|]>>.
+
+  In fact, we could extend arbitrarily to <math|<around*|[|-L,0|]>> and
+  extend periodically with period <math|2L>. There are infinitely many
+  Fourier series that converge to some function on a partial section of the
+  period.
+
+  In general, given <strong|any> function defined on <math|<around*|[|0,L|]>>
+  can be extended to <math|<around*|[|-L,0|]>> in any way we please, and then
+  extend periodically. Each option gives a Fourier series and all converge to
+  the same function on <math|<around*|[|0,L|]>>.
+
+  <\padded-center>
+    <with|gr-mode|<tuple|group-edit|move>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|cartesian|<point|0|0>|1>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-color|dark
+    cyan|gr-auto-crop|true|<graphics||<math-at|L|<point|2|-0.4>>|<math-at|-L|<point|-2.6|-0.4>>|<with|color|red|<bezier|<point|0.0|-1.0>|<point|-1.0|-2.0>|<point|-1.99437756316973|0.0274176478370155>>>|<with|color|blue|<bezier|<point|0.0|1.0>|<point|-1.0|2.0>|<point|-2.0|0.0>>>|<bezier|<point|0.0|1.0>|<point|1.0|2.0>|<point|2.0|0.0>>|<with|color|dark
+    cyan|<bezier|<point|0|1>|<point|-0.6|0.4>|<point|-1.0|1.0>|<point|-1.6|0.4>|<point|-3.0|1.0>>>|<with|color|blue|<text-at|<math|->
+    Even extension (Sines)|<point|2.58170392909115|1.71971821669533>>>|<with|color|red|<text-at|<math|->
+    Odd extension (Cosines)|<point|2.58170392909115|1.21971821669533>>>|<with|color|dark
+    cyan|<text-at|<math|-> Arbitrary extension|<point|2.57803942320413|0.68686995634343>>>|<with|<text-at|<math|->
+    Original function|<point|2.58170392909115|2.31971821669532>>>>>
+  </padded-center>
+
+  <subsection|Back to heat equation>
+
+  Summary so far: PDV is:
+
+  <\equation*>
+    \<alpha\><rsup|2>*u<rsub|x\<nocomma\>x>=u<rsub|t>
+  </equation*>
+
+  ICs: <math|u<around*|(|x,0|)>=f<around*|(|x|)>,x\<in\><around*|[|0,L|]>>.
+
+  BCs: <math|u<around*|(|0,t|)>=u<around*|(|L,t|)>=0>,
+  <math|\<forall\>t\<geq\>0>.
+
+  We had constructed fundamental solutions:
+
+  <\equation*>
+    u<rsub|n><around*|(|x,t|)>=exp <around*|(|-<frac|\<alpha\><rsup|2>*\<mathpi\><rsup|2>*n<rsup|2>|L<rsup|2>>*t|)>*sin
+    <around*|(|<frac|\<mathpi\>*n|L>*x|)>
+  </equation*>
+
+  satisfying the heat equation and the BCs. We then formed a series
+
+  <\equation*>
+    u<around*|(|x,t|)>=<big|sum><rsub|n=1><rsup|\<infty\>>c<rsub|n>*u<rsub|n><around*|(|x,t|)>
+  </equation*>
+
+  satisfying these conditions, and we demand that <math|u<around*|(|x,t|)>>
+  satisfies the ICs.
+
+  <\equation*>
+    f<around*|(|x|)>=u<around*|(|x,0|)>=<big|sum><rsub|n=1><rsup|\<infty\>>c<rsub|n>*sin
+    <frac|n*\<mathpi\>*x|L>
+  </equation*>
+
+  This is the sine Fourier series for <math|f<around*|(|x|)>>, such that
+
+  <\equation*>
+    c<rsub|n>=<frac|2|L><big|int><rsub|0><rsup|L>f<around*|(|x|)>*sin
+    <frac|n*\<mathpi\>*x|L>
+  </equation*>
+
+  Take for example <math|L=<SI|50|cm>>, <math|\<alpha\><rsup|2>=1>,
+  <math|u<around*|(|0,t|)>=u<around*|(|L,t|)>=0> <math|\<forall\>t\<geq\>0>
+  and that the initial temperature is <SI|20|degrees>C on all bar:
+  <math|u<around*|(|x,0|)>=20,x\<in\><around*|[|0,L|]>>. Solutions is
+
+  <\equation*>
+    u<around*|(|x,t|)>=<big|sum>c<rsub|n>*\<mathe\><rsup|-<frac|n<rsup|2>*\<mathpi\><rsup|2>*t|2500>>*sin
+    <frac|n*\<mathpi\>*x|50>
+  </equation*>
+
+  <\equation*>
+    c<rsub|n>=<frac|2|50>*<big|int><rsub|0><rsup|50>20\<cdot\>sin
+    <frac|n*\<mathpi\>*x|50> \<mathd\>x=<frac|4|5>\<cdot\><frac|50|n*\<mathpi\>>*<around*|[|-cos
+    <frac|n*\<mathpi\>*x|50>|]><rsub|0><rsup|50>=<frac|40|n*\<mathpi\>>*<around*|[|<around*|(|-1|)><rsup|n>+1|]>=<choice|<tformat|<table|<row|<cell|0>|<cell|n<text|
+    even>>>|<row|<cell|<frac|80|n*\<mathpi\>>>|<cell|n<text| odd>>>>>>
+  </equation*>
+
+  <\equation*>
+    u<around*|(|x,t|)>=<frac|80|n*\<mathpi\>>*<big|sum><rsub|n<text|
+    odd>><frac|1|n>*\<mathe\><rsup|-<frac|n<rsup|2>*\<mathpi\><rsup|2>*t|2500>>*sin
+    <frac|n*\<mathpi\>*x|50>
+  </equation*>
+
+  The <math|exonent\<less\>as> has <math|n<rsup|2>> in the numerator so the
+  series converges fast.
+
+  Let's say we want to estimate when the entire bar is at
+  <math|\<leq\><SI|1|degrees>>C using first term of series. We find <math|t>
+  such that
+
+  <\equation*>
+    1=u<around*|(|25,t|)>\<approx\><frac|80|\<mathpi\>>*\<mathe\><rsup|-<frac|n<rsup|2>*\<mathpi\><rsup|2>*t|2500>><wide*|*sin
+    <frac|\<mathpi\>\<cdot\>25|50>|\<wide-underbrace\>><rsub|=1>=<frac|80|\<mathpi\>>*\<mathe\><rsup|-<frac|n<rsup|2>*\<mathpi\><rsup|2>*t|2500>>
+  </equation*>
+
+  <\equation*>
+    ln <frac|80|\<mathpi\>>=<frac|\<mathpi\><rsup|2>*t|2500>\<Rightarrow\>t=<frac|2500|\<mathpi\><rsup|2>>*ln
+    <frac|80|\<mathpi\>>\<sim\><SI|820|sec>
+  </equation*>
+
+  <subsubsection|Non-homogeneous boundary conditions>
+
+  A case where <math|u<around*|(|0,t|)>=T<rsub|1>> and
+  <math|u<around*|(|L,t|)>=T<rsub|2>>.
+
+  <\render-theorem|Method>
+    \;
+
+    <\em>
+      Solve by reducing to the homogeneous case. Subtract some linear
+      function <math|v<around*|(|x|)>> from <math|u<around*|(|x,t|)>> to get
+      the homogeneous BCs.
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|v<around*|(|0|)>>|<cell|=>|<cell|T<rsub|1>>>|<row|<cell|v<around*|(|L|)>>|<cell|=>|<cell|T<rsub|2>>>>>
+      </eqnarray*>
+
+      As <math|v<around*|(|x|)>> is linear,
+
+      <\equation*>
+        v<around*|(|x|)>=<around*|(|T<rsub|2>-T<rsub|1>|)>*<frac|x|L>+T<rsub|1>
+      </equation*>
+
+      Define
+
+      <\equation*>
+        w<around*|(|x,t|)>\<equiv\>u<around*|(|x,t|)>-v<around*|(|x|)>
+      </equation*>
+
+      such that <math|w<around*|(|0,t|)>=w<around*|(|L,t|)>=0>. What else
+      <math|w> satisfies?
+
+      <\equation*>
+        \<alpha\><rsup|2>*w<rsub|x\<nocomma\>x>=\<alpha\><rsup|2>*<around*|(|u<rsub|x\<nocomma\>x>-v<rprime|''><around*|(|x|)>|)>=\<alpha\><rsup|2>*u<rsub|x\<nocomma\>x>
+      </equation*>
+
+      <\equation*>
+        w<rsub|t>=u<rsub|t>-<frac|\<mathd\>v|\<mathd\>t>=u<rsub|t>
+      </equation*>
+
+      <math|w<around*|(|x,t|)>> satisfies the heat equation and the BCs. What
+      about the ICs?
+
+      <\equation*>
+        w<around*|(|x,0|)>=u<around*|(|x,0|)>-v<around*|(|x|)>=f<around*|(|x|)>-v<around*|(|x|)>
+      </equation*>
+
+      So we solve for <math|w> with these ICs and substitute
+
+      <\equation*>
+        u<around*|(|x,t|)>=w<around*|(|x,t|)>+v<around*|(|x|)>
+      </equation*>
+
+      \;
+    </em>
+
+    <\em>
+      In fact, we get
+
+      <\equation*>
+        u<around*|(|x,t|)>=<big|sum>c<rsub|n>*\<mathe\><rsup|-<frac|n<rsup|2>*\<mathpi\><rsup|2>*\<alpha\><rsup|2>*t|L<rsup|2>>>*sin
+        <frac|n*\<mathpi\>*x|L>+<around*|(|T<rsub|2>-T<rsub|1>|)>*<frac|x|L>+T<rsub|1>
+      </equation*>
+
+      where
+    </em>
+
+    <\equation*>
+      c<rsub|n>=<frac|2|L>*<big|int><rsub|0><rsup|L><around*|[|f<around*|(|x|)>-<around*|(|T<rsub|2>-T<rsub|1>|)>*<frac|x|L>-T<rsub|1>|]>*sin
+      <frac|n*\<mathpi\>*x|L> \<mathd\>x
+    </equation*>
+  </render-theorem>
+
+  <underline|Example>: Rod of length 30, <math|\<alpha\><rsup|2>=1>, with ICs
+  <math|u<around*|(|x,0|)>=60-2x,x\<in\><around*|[|0,30|]>> and BCs
+  <math|u<around*|(|0,t|)>=20,u<around*|(|30,t|)>=50>.
+
+  <\equation*>
+    v<around*|(|x|)>=20+x
+  </equation*>
+
+  Solve <math|\<alpha\><rsup|2>*w<rsub|x\<nocomma\>x>=w<rsub|t>>.
+
+  <\equation*>
+    w<around*|(|x,0|)>=60-2x-<around*|(|20+x|)>=49-3x
+  </equation*>
+
+  <\equation*>
+    w<around*|(|0,t|)>=0=w<around*|(|L,t|)>
+  </equation*>
+
+  and then add <math|20+x> to our solution <math|w<around*|(|x,t|)>> to get
+  <math|u<around*|(|x,t|)>>.
+
+  <subsection|Bar with insulated ends>
+
+  <\equation*>
+    \<alpha\><rsup|2>*u<rsub|x\<nocomma\>x>=u<rsub|t>,x\<in\><around*|[|0,L|]>
+  </equation*>
+
+  ICs: <math|u<around*|(|x,0|)>=f<around*|(|x|)>>. Now assume that no heat
+  passes through the ends in the <math|x> direction, so that
+  <math|u<rsub|x><around*|(|0,t|)>=u<rsub|x><around*|(|L,t|)>=0>.
+
+  Solve by finding fundamental solutions of the form
+  <math|X<around*|(|x|)>*T<around*|(|t|)>> and get as before:
+
+  <\equation*>
+    a<rsup|2>*X<rprime|''>*T=X*T<rprime|'>
+  </equation*>
+
+  Separate variables to get:
+
+  <\equation*>
+    <frac|X<rprime|''>|X>=\<lambda\>=<frac|T<rprime|'>|\<alpha\><rsup|2>*T>
+  </equation*>
+
+  and
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|X<rprime|''>+\<lambda\>*X>|<cell|=>|<cell|0>>|<row|<cell|T<rprime|'>+\<lambda\>*\<alpha\><rsup|2>*T>|<cell|=>|<cell|0>>>>
+  </eqnarray*>
+
+  The difference is in the BCs:
+
+  <\equation*>
+    X<rprime|'><around*|(|0|)>=X<rprime|'><around*|(|L|)>=0
+  </equation*>
+
+  We need to solve this eigenvalue problem for <math|X<around*|(|x|)>>.
+  Different cases:
+
+  <\enumerate>
+    <item>Characteristic polynomial has 2 real roots:
+    <math|\<lambda\>\<less\>0>, denote <math|\<mu\>=<sqrt|-\<lambda\>>>\<gtr\>0
+
+    <\equation*>
+      y<rsup|2>+\<lambda\>=0
+    </equation*>
+
+    <\equation*>
+      X<rprime|''>-\<mu\><rsup|2>*X=0
+    </equation*>
+
+    general solution is
+
+    <\equation*>
+      X<around*|(|x|)>=c<rsub|1>*\<mathe\><rsup|\<mu\>*x>+c<rsub|2>*\<mathe\><rsup|-\<mu\>*x>
+    </equation*>
+
+    Set BCs:
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|X<rprime|'><around*|(|0|)>=0>|<cell|\<rightarrow\>>|<cell|\<mu\>*<around*|(|c<rsub|1>-c<rsub|2>|)>=0\<rightarrow\>c<rsub|1>=c<rsub|2>>>|<row|<cell|X<rprime|'><around*|(|L|)>=0>|<cell|\<rightarrow\>>|<cell|c<rsub|1>*\<mathe\><rsup|\<mu\>*L>-\<mu\>*c<rsub|2>*\<mathe\><rsup|-\<mu\>*L>=0\<rightarrow\>c<rsub|1>=c<rsub|2>=0>>>>
+    </eqnarray*>
+
+    No non-zero solutions in this case.
+
+    <item>Characteristic polynomial has one double root: <math|\<lambda\>=0>.
+
+    <\equation*>
+      X<around*|(|x|)>=c<rsub|1>*x+c<rsub|2>
+    </equation*>
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|X<rprime|'><around*|(|0|)>=0>|<cell|\<rightarrow\>>|<cell|c<rsub|1>=0>>>>
+    </eqnarray*>
+
+    <math|c<rsub|2>> is arbitrary. <math|X<around*|(|x|)>=c<rsub|2>=1> is an
+    eigenfunction.
+
+    <item>Characteristic polynomial has 2 non-real roots:
+    <math|\<lambda\>\<gtr\>0>
+
+    <\equation*>
+      X<rprime|''>+\<lambda\>*X=0
+    </equation*>
+
+    Write <math|\<mu\>=<sqrt|\<lambda\>>\<gtr\>0> and get general solution
+
+    <\equation*>
+      X<around*|(|x|)>=c<rsub|1>*cos <around*|(|\<mu\>*x|)>+c<rsub|2>*sin
+      <around*|(|\<mu\>*x|)>
+    </equation*>
+
+    <\equation*>
+      X<rprime|'><around*|(|x|)>=-c<rsub|1>*\<mu\>*sin
+      <around*|(|\<mu\>*x|)>+c<rsub|2>*cos <around*|(|\<mu\>*x|)>
+    </equation*>
+
+    Set BCs:
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|X<rprime|'><around*|(|0|)>=0>|<cell|\<rightarrow\>>|<cell|c<rsub|2>*\<mu\>=0\<rightarrow\>c<rsub|2>=0>>|<row|<cell|X<rprime|'><around*|(|L|)>=0>|<cell|\<rightarrow\>>|<cell|-c<rsub|1>*\<mu\>*sin
+      <around*|(|\<mu\>*L|)>=0>>>>
+    </eqnarray*>
+
+    If <math|c<rsub|1>\<neq\>0> then <math|sin <around*|(|\<mu\>*L|)>=0>.
+
+    <\equation*>
+      sin <around*|(|\<mu\>*L|)>=0\<Longleftrightarrow\>\<mu\>*L=n*\<mathpi\>,<application-space|1em>n\<geq\>1<text|
+      integer>
+    </equation*>
+
+    <\equation*>
+      \<lambda\><rsub|n>=<frac|n<rsup|2>*\<mathpi\><rsup|2>|L<rsup|2>>
+    </equation*>
+
+    Eigenfunctions are scalar multiples of
+
+    <\ornamented>
+      <\equation*>
+        X<rsub|n><around*|(|x|)>=cos <frac|n*\<mathpi\>*x|L>,<application-space|1em>n\<geq\>0
+      </equation*>
+    </ornamented>
+  </enumerate>
+
+  Now solve for <math|T>:
+
+  <\equation*>
+    T<rprime|'>+\<alpha\><rsup|2>*\<lambda\>*T=0
+  </equation*>
+
+  <\equation*>
+    <choice|<tformat|<table|<row|<cell|\<lambda\>=0>|<cell|>|<cell|T<rsub|0>\<equiv\>1>>|<row|<cell|\<lambda\><rsub|n>=<frac|n<rsup|2>*\<mathpi\><rsup|2>|L<rsup|2>>>|<cell|>|<cell|T=\<mathe\><rsup|-<frac|\<alpha\><rsup|2>*n<rsup|2>*\<mathpi\><rsup|2>|L<rsup|2>>*t>>>>>>
+  </equation*>
+
+  Fundamental solutions are:
+
+  <\equation*>
+    <choice|<tformat|<table|<row|<cell|\<lambda\>=0>|<cell|>|<cell|u<rsub|0><around*|(|x,t|)>=X<rsub|0><around*|(|x|)>*T<rsub|0><around*|(|t|)>\<equiv\>1>>|<row|<cell|\<lambda\><rsub|n>=<frac|n<rsup|2>*\<mathpi\><rsup|2>|L<rsup|2>>>|<cell|>|<cell|u<rsub|n><around*|(|x,t|)>=X<rsub|n><around*|(|x|)>*T<rsub|n><around*|(|t|)>=cos
+    <frac|n*\<mathpi\>*x|L>\<cdot\>\<mathe\><rsup|-<frac|\<alpha\><rsup|2>*n<rsup|2>*\<mathpi\><rsup|2>|L<rsup|2>>*t>>>>>>
+  </equation*>
+
+  Form an infinite series:
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|u<around*|(|x,t|)>>|<cell|=>|<cell|<frac|c<rsub|0>|2>*u<rsub|0><around*|(|x,t|)>+<big|sum><rsub|n=1><rsup|\<infty\>>c<rsub|n>*u<rsub|n><around*|(|x,t|)>>>|<row|<cell|>|<cell|=>|<cell|<frac|c<rsub|0>|2>+<big|sum>c<rsub|n>*cos
+    <frac|n*\<mathpi\>*x|L>*\<mathe\><rsup|-<frac|n<rsup|2>*\<mathpi\><rsup|2>*\<alpha\><rsup|2>*|L<rsup|2>>*t>>>>>
+  </eqnarray*>
+
+  which satisfies the PDE & BCs and set <math|t=0> to get ICs:
+
+  <\equation*>
+    f<around*|(|x|)>=u<around*|(|x,0|)>=<frac|c<rsub|0>|2>+<big|sum>c<rsub|n>*cos
+    <frac|n*\<mathpi\>*x|L>,<application-space|1em>x\<in\><around*|[|0,L|]>
+  </equation*>
+
+  <math|c<rsub|n>> is the Fourier cosine series coefficients for
+  <math|f<around*|(|x|)>>.
+
+  <\equation*>
+    c<rsub|n>=<frac|2|L>*<big|int><rsub|0><rsup|L>f<around*|(|x|)>*cos
+    <frac|n*\<mathpi\>*x|L> \<mathd\>x,<application-space|1em>n\<geq\>0
+  </equation*>
+
+  <marginal-note|normal|c|lec 24 23.1.23><underline|Example of another
+  eigenvalue problem>
+
+  <\equation*>
+    y<rprime|''>+y<rprime|'>+2\<lambda\>*y=0
+  </equation*>
+
+  BVs: <math|y<around*|(|0|)>=y<around*|(|\<mathpi\>|)>=0>. Characteristic
+  equation is
+
+  <\equation*>
+    x<rsup|2>+x+2\<lambda\>=0
+  </equation*>
+
+  <\equation*>
+    roots=<frac|-1\<pm\><sqrt|1-8\<lambda\>>|2>
+  </equation*>
+
+  Cases depend on sign of discriminant.
+
+  <\enumerate>
+    <item><math|1-8\<lambda\>\<gtr\>0>, so
+    <math|\<lambda\>\<less\><frac|1|8>> and 2 real roots.
+
+    General solution is
+
+    <\equation*>
+      y=c<rsub|1>*\<mathe\><rsup|<frac|-1+<sqrt|1-8\<lambda\>>|2>*t>+c<rsub|2>*\<mathe\><rsup|<frac|-1-<sqrt|1-8\<lambda\>>|2>*t>
+    </equation*>
+
+    <item><math|1-8\<lambda\>=0>, so <math|\<lambda\>=<frac|1|8>> and one
+    double root.
+
+    General solution is
+
+    <\equation*>
+      y=c<rsub|1>*\<mathe\><rsup|-<frac|1|2>*t>+c<rsub|2>*t*\<mathe\><rsup|-<frac|1|2>*t>
+    </equation*>
+
+    <item><math|1-8\<lambda\>\<less\>0>, so
+    <math|\<lambda\>\<gtr\><frac|1|8>> and 2 complex roots.
+
+    General solution is
+
+    <\equation*>
+      y=c<rsub|1>*\<mathe\><rsup|-<frac|1|2>*t>*cos
+      <around*|(|<frac|<sqrt|8\<lambda\>-1>|2>*t|)>+c<rsub|2>*\<mathe\><rsup|-<frac|1|2>*t>*sin
+      <around*|(|<frac|<sqrt|8\<lambda\>-1>|2>*t|)>
+    </equation*>
+  </enumerate>
+
+  From the third case we get the eigenvalues and eigenfunctions (homogeneous
+  BVs):
+
+  <\equation*>
+    \<lambda\><rsub|n>=<frac|4n<rsup|2>+1|8>,y<rsub|n>=\<mathe\><rsup|-<frac|1|2>*t>*sin
+    <around*|(|n*t|)>
+  </equation*>
+
+  <section|The wave equation>
+
+  Represent e.g. vibrations of an elastic string.
+
+  <\padded-center>
+    <with|gr-mode|<tuple|edit|line>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|empty>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|2|none>>|gr-edit-grid|<tuple|empty>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-grid-aspect|<tuple|<tuple|axes|#e0e0ff>|<tuple|1|#e0e0ff>|<tuple|2|#e0e0ff>>|gr-grid-aspect-props|<tuple|<tuple|axes|#e0e0ff>|<tuple|1|#e0e0ff>|<tuple|2|#e0e0ff>>|gr-auto-crop|true|<graphics||<line|<point|-4|3>|<point|-4.0|0.0>>|<line|<point|-4|1.5>|<point|3.0|1.5>>|<line|<point|-4|3>|<point|-4.5|2.5>>|<line|<point|-4|2.5>|<point|-4.5|2.0>>|<line|<point|-4|2>|<point|-4.5|1.5>>|<line|<point|-4|1>|<point|-4.5|0.5>>|<line|<point|-4|0.5>|<point|-4.5|0.0>>|<line|<point|-4|1.5>|<point|-4.5|1.0>>|<math-at|0|<point|-4|-0.5>>|<math-at|L|<point|3|-0.5>>|<spline|<point|-4|1.5>|<point|-3.5|2.0>|<point|-3.0|1.0>|<point|-2.5|2.0>|<point|-2.0|1.0>|<point|-1.5|2.0>|<point|-1.0|1.0>|<point|-0.5|2.0>|<point|0.0|1.0>|<point|0.5|2.0>|<point|1.0|1.0>|<point|1.5|2.0>|<point|2.0|1.0>|<point|2.5|2.0>|<point|3.0|1.5>>|<line|<point|3|3>|<point|3.0|1.0>|<point|3.0|0.0>>|<line|<point|3|0.5>|<point|3.49918970763328|0.178578515676677>>|<line|<point|3|1>|<point|3.52035652864135|0.686582219870353>>|<line|<point|3|1.5>|<point|3.55169334568065|1.2157527450721>>|<line|<point|3|2>|<point|3.56737002248975|1.74492327027385>>|<line|<point|3|2.5>|<point|3.55404153988623|2.27409379547559>>|<line|<point|3|3>|<point|3.53287471887816|2.78209749966927>>|<math-at|x|<point|-0.636989019711602|-0.482983860298981>>>>
+  </padded-center>
+
+  <math|u<around*|(|x,t|)>> is the vertical displacement of a string at point
+  <math|x> and time <math|t>.
+
+  Assume that the string vibrates in the vertical plane, with no damping.
+
+  The string has the properties <math|\<rho\>>, the <em|linear density> of
+  the string (mass/length) and <math|T>, the tension force. The wave equation
+  is:
+
+  <\equation*>
+    <around*|(|<frac|T|\<rho\>>|)>*u<rsub|x\<nocomma\>x>=u<rsub|t\<nocomma\>t>
+  </equation*>
+
+  The velocity, <math|a>, satisfies <math|a<rsup|2>=T/\<rho\>>.
+
+  BCs are <math|u<around*|(|0,t|)>=u<around*|(|L,t|)>=0>.
+
+  ICs are <math|u<around*|(|x,0|)>=f<around*|(|t|)>,u<rsub|t><around*|(|x,0|)>=g<around*|(|x|)>>.
+  (Initial position and initial velocity).
+
+  Now we examine different ICs.
+
+  <subsection|Zero initial velocity>
+
+  Initial velocity <math|g<around*|(|x|)>\<equiv\>0>.
+
+  We have
+
+  <\equation*>
+    a<rsup|2>*u<rsub|x\<nocomma\>x>=u<rsub|t\<nocomma\>t>
+  </equation*>
+
+  BVs: <math|u<around*|(|0,t|)>=u<around*|(|L,t|)>=0>. ICs:
+  <math|u<around*|(|x,0|)>=f<around*|(|x|)>,u<rsub|t><around*|(|x,0|)>=0>.
+
+  We find \Pfundamental solutions\Q satisfying the PDE, the homogeneous BVs
+  and the homogeneous IC: <math|u<rsub|t>=0>.
+
+  We look for solutions of the form <math|X<around*|(|x|)>*T<around*|(|t|)>>.
+  We get
+
+  <\equation*>
+    a<rsup|2>*X<rprime|''>*T=X*T<rprime|''>
+  </equation*>
+
+  Separate variables:
+
+  <\equation*>
+    <frac|X<rprime|''>|X>=<frac|T<rprime|''>|a<rsup|2>*T>=-\<lambda\>
+  </equation*>
+
+  We get:
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|X<rprime|''>+\<lambda\>*X>|<cell|=>|<cell|0>>|<row|<cell|T<rprime|''>+a<rsup|2>*\<lambda\>*T>|<cell|=>|<cell|0>>>>
+  </eqnarray*>
+
+  BVs:
+
+  <\equation*>
+    X<around*|(|0|)>*T<around*|(|t|)>=X<around*|(|L|)>*T<around*|(|t|)><application-space|1em>\<forall\>t
+  </equation*>
+
+  As <math|T<around*|(|t|)>\<nequiv\>0> we get
+
+  <\equation*>
+    X<around*|(|0|)>=X<around*|(|L|)>=0
+  </equation*>
+
+  This is an eigenvalue problem we've already solved for the heat equation.
+  It has non-zero solutions only for
+
+  <\equation*>
+    \<lambda\><rsub|n>=<frac|n<rsup|2>*\<mathpi\><rsup|2>|L<rsup|2>>,<application-space|1em>X<rsub|n><around*|(|x|)>=sin
+    <frac|n*\<mathpi\>*x|L>
+  </equation*>
+
+  Substitute these in the equation for <math|T<around*|(|t|)>>.
+
+  <\equation*>
+    T<rprime|''>+<frac|a<rsup|2>*n<rsup|2>*\<mathpi\><rsup|2>|L<rsup|2>>*T=0
+  </equation*>
+
+  General solution is
+
+  <\equation*>
+    T<around*|(|t|)>=c<rsub|1>*cos <frac|n*a*\<mathpi\>*t|L>+c<rsub|2>*sin
+    <frac|n*a*\<mathpi\>*t|L>
+  </equation*>
+
+  We have <math|u<rsub|t><around*|(|x,0|)>\<equiv\>0> <math|\<forall\>x> in
+  this case.
+
+  <\equation*>
+    u<rsub|t><around*|(|x,0|)>=X<around*|(|x|)>*T<rprime|'><around*|(|0|)>=0
+  </equation*>
+
+  As <math|X<around*|(|x|)>\<nequiv\>0>, <math|T<rprime|'><around*|(|0|)>=0>.
+
+  <\equation*>
+    T<rprime|'><around*|(|0|)>=c<rsub|2>*<frac|n*a*\<mathpi\>|L>=0\<rightarrow\>c<rsub|2>=0
+  </equation*>
+
+  That's the only condition we have so <math|c<rsub|1>> is arbitrary. Choose
+  a basis
+
+  <\equation*>
+    T<rsub|n><around*|(|t|)>=cos <around*|(|<frac|n*a*\<mathpi\>|L>*t|)>
+  </equation*>
+
+  and get fundamental solutions
+
+  <\ornamented>
+    <\equation*>
+      u<rsub|n><around*|(|x,t|)>=sin <around*|(|<frac|n*\<mathpi\>|L>*x|)>*cos
+      <around*|(|<frac|n*a*\<mathpi\>|L>*t|)>
+    </equation*>
+  </ornamented>
+
+  <math|u<rsub|n>> satisfies the following:
+
+  <\equation*>
+    a<rsup|2>*u<rsub|x\<nocomma\>x>=-a<rsup|2>*<frac|n<rsup|2>*\<mathpi\><rsup|2>|L<rsup|2>>*sin
+    <frac|n*\<mathpi\>*x|L>*cos <frac|n*\<mathpi\>*a*t|L>
+  </equation*>
+
+  <\equation*>
+    u<rsub|t\<nocomma\>t>=-sin <frac|n*\<mathpi\>*x|L>*\<cdot\><frac|n<rsup|2>*\<mathpi\><rsup|2>*a<rsup|2>|L<rsup|2>>*\<cdot\>cos
+    <frac|n*\<mathpi\>*a*t|L>
+  </equation*>
+
+  Indeed the PDE is satisfied. Regarding BVs:
+
+  <\equation*>
+    u<rsub|n><around*|(|0,t|)>=u<rsub|n><around*|(|L,t|)>=0
+  </equation*>
+
+  <\equation*>
+    u<rsub|t>=sin <frac|n*\<mathpi\>*x|L>*<around*|(|-<frac|n*\<mathpi\>*a|L>|)>*sin
+    <frac|n*\<mathpi\>*a\<cdot\>0|L>=0
+  </equation*>
+
+  The only thing <math|u<rsub|n>> doesn't satisfy is
+  <math|u<around*|(|x,0|)>=f<around*|(|x|)>>. We form a series:
+
+  <\equation*>
+    u<around*|(|x,t|)>=<big|sum>c<rsub|n>*u<rsub|n><around*|(|x,t|)>
+  </equation*>
+
+  and demand that <math|u<around*|(|x,0|)>=f<around*|(|x|)>>.
+
+  <\equation*>
+    u<around*|(|x,0|)>=<big|sum>c<rsub|n>*sin <frac|n*\<mathpi\>*x|L>
+  </equation*>
+
+  So <math|c<rsub|n>> must be Fourier sine coefficients of
+  <math|f<around*|(|x|)>>.
+
+  <\equation*>
+    c<rsub|n>=<frac|2|L>*<big|int><rsub|0><rsup|L>f<around*|(|x|)>*sin
+    <frac|n*\<mathpi\>*x|L> \<mathd\>x
+  </equation*>
+
+  One problem though: with the heat equation it can be shown that you can
+  take the series and differentiate it, and the series converges. There, we
+  had fundamental solutions that involved decaying exponents. Here, have
+  cosines instead of exponents.
+
+  <\note*>
+    The series <math|<big|sum>c<rsub|n>*sin <frac|n*\<mathpi\>*x|L>*cos
+    <frac|n*\<mathpi\>*a*t|L>> <strong|cannot> be differentiated twice (wrt
+    either <math|x> or <math|t>) to get a convergent series.
+  </note*>
+
+  We need to find a different representation of the solution in order to show
+  that the wave equation holds. (Take care of that later.)
+
+  <subsection|Zero initial position>
+
+  <math|u<around*|(|x,0|)>=f<around*|(|x|)>\<equiv\>0> <math|\<forall\>x> and
+  <math|ut<around*|(|x,0|)>=g<around*|(|x|)>>.
+
+  Again we look for fundamental solutions of the form
+  <math|X<around*|(|x|)>*T<around*|(|t|)>> and get
+
+  <\equation*>
+    X<rprime|''>+\<lambda\>*X=0,<application-space|1em>X<around*|(|0|)>=X<around*|(|L|)>=0
+  </equation*>
+
+  <\equation*>
+    T<rprime|''>+a<rsup|2>*\<lambda\>*T=0
+  </equation*>
+
+  with <math|X<around*|(|x|)>*T<around*|(|t|)>\<equiv\>0>, which implies
+  <math|T<around*|(|0|)>=0>. The eigenvalue problem for
+  <math|X<around*|(|x|)>> yields eigenvalues
+
+  <\equation*>
+    \<lambda\><rsub|n>=<frac|n<rsup|2>*\<mathpi\><rsup|2>|L<rsup|2>>
+  </equation*>
+
+  and eigenfunctions
+
+  <\equation*>
+    X<rsub|n><around*|(|x|)>=sin <frac|n*\<mathpi\>*x|L>
+  </equation*>
+
+  We solve for <math|T<around*|(|t|)>>:
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|T<around*|(|t|)>>|<cell|=>|<cell|c<rsub|1>*cos
+    <frac|n*\<mathpi\>*a*t|L>+c<rsub|2>*sin
+    <frac|n*\<mathpi\>*a*t|L>>>|<row|<cell|T<around*|(|0|)>=0>|<cell|\<rightarrow\>>|<cell|c<rsub|1>=0>>>>
+  </eqnarray*>
+
+  Get basis for solutions
+
+  <\equation*>
+    T<rsub|n><around*|(|t|)>=sin <frac|n*\<mathpi\>*a*t|L>
+  </equation*>
+
+  and fundamental solutions:
+
+  <\equation*>
+    u<rsub|n><around*|(|x,t|)>=sin <frac|n*\<mathpi\>*x|L>*sin
+    <frac|n*\<mathpi\>*a*t|L>
+  </equation*>
+
+  <math|u<rsub|n>> satisfies the PDE, the BCs and
+  <math|u<rsub|n><around*|(|x,0|)>\<equiv\>0>.
+
+  Form the series
+
+  <\equation*>
+    u<around*|(|x,t|)>=<big|sum><rsub|>k<rsub|n>*sin
+    <frac|n*\<mathpi\>*x|L>*sin <frac|n*\<mathpi\>*a*t|L>
+  </equation*>
+
+  and demand
+
+  <\equation*>
+    u<rsub|t><around*|(|x,0|)>=g<around*|(|x|)>
+  </equation*>
+
+  Get:
+
+  <\equation*>
+    <big|sum>k<rsub|n>*sin <frac|n*\<mathpi\>*x|L>\<cdot\><around*|(|<frac|n*\<mathpi\>*a|L>|)>*<wide*|cos
+    <frac|n*\<mathpi\>*a\<cdot\>0|L> |\<wide-underbrace\>><rsub|=1>=g<around*|(|x|)>
+  </equation*>
+
+  So
+
+  <\equation*>
+    <big|sum><around*|(|k<rsub|n>\<cdot\><frac|n*\<mathpi\>*a|L>|)>*sin
+    <frac|n*\<mathpi\>*x|L>=g<around*|(|x|)>
+  </equation*>
+
+  In other words, <math|k<rsub|n>\<cdot\><frac|n*\<mathpi\>*a|L>> is the sine
+  Fourier coefficient of <math|g<around*|(|x|)>>.
+
+  <\equation*>
+    k<rsub|n>*<frac|n*\<mathpi\>*a|L>=<frac|2|L>*<big|int><rsub|0><rsup|L>g<around*|(|x|)>*sin
+    <frac|n*\<mathpi\>*x|L> \<mathd\>x
+  </equation*>
+
+  so
+
+  <\ornamented>
+    <\equation*>
+      k<rsub|n>=<frac|2|n*\<mathpi\>*a>*<big|int><rsub|0><rsup|L>g<around*|(|x|)>*sin
+      <frac|n*\<mathpi\>*x|L> \<mathd\>x
+    </equation*>
+  </ornamented>
+
+  <subsection|General case: arbitrary initial position and velocity>
+
+  The general case is with ICs:
+
+  <\equation*>
+    <choice|<tformat|<table|<row|<cell|u<around*|(|x,0|)>=f<around*|(|x|)>>>|<row|<cell|u<rsub|t><around*|(|x,0|)>=g<around*|(|x|)>>>>>>,<application-space|1em>x\<in\><around*|[|0,L|]>
+  </equation*>
+
+  We use the previous cases: suppose
+
+  <\equation*>
+    <choice|<tformat|<table|<row|<cell|v<around*|(|x,t|)><text| solves case
+    in section 13.1>>>|<row|<cell|w<around*|(|x,t|)><text| solves case in
+    section 13.2>>>>>>
+  </equation*>
+
+  Set <math|u<around*|(|x,t|)>=v<around*|(|x,t|)>+w<around*|(|x,t|)>>. Then
+  we have
+
+  <\equation*>
+    a<rsup|2>*u<rsub|x\<nocomma\>x>=a<rsup|2>*v<rsub|x\<nocomma\>x>+a<rsup|2>*w<rsub|x\<nocomma\>x>=v<rsub|t\<nocomma\>t>+w<rsub|t\<nocomma\>t>=u<rsub|t\<nocomma\>t>
+  </equation*>
+
+  Wave equation is satisfied.
+
+  <\equation*>
+    <choice|<tformat|<table|<row|<cell|u<around*|(|0,t|)>=v<around*|(|0,t|)>+w<around*|(|0,t|)>=0>>|<row|<cell|u<around*|(|L,t|)>=v<around*|(|L,t|)>+w<around*|(|L,t|)>=0>>>>>
+  </equation*>
+
+  BCs are satisfied.
+
+  Regarding ICs:
+
+  <\equation*>
+    <choice|<tformat|<table|<row|<cell|u<around*|(|x,0|)>=v<around*|(|x,0|)>+w<around*|(|x,0|)>=f<around*|(|x|)>>>|<row|<cell|u<rsub|t><around*|(|x,0|)>=v<rsub|t><around*|(|x,0|)>+w<rsub|t><around*|(|x,0|)>=g<around*|(|x|)>>>>>>
+  </equation*>
+
+  <underline|Example>: Vibrating string of length <SI|30|cm>, <math|a=2>. We
+  pluck at the point <SI|10|cm>
+
+  \ from the left to a height of <SI|1|cm> and let go.
+
+  <\padded-center>
+    <with|gr-mode|<tuple|edit|point>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|empty>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|2|none>>|gr-edit-grid|<tuple|empty>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-grid-aspect|<tuple|<tuple|axes|#e0e0ff>|<tuple|1|#e0e0ff>|<tuple|2|#e0e0ff>>|gr-grid-aspect-props|<tuple|<tuple|axes|#e0e0ff>|<tuple|1|#e0e0ff>|<tuple|2|#e0e0ff>>|gr-arrow-begin|\<less\>|gr-arrow-end|\<gtr\>|gr-auto-crop|true|<graphics||<line|<point|-5|1>|<point|-5.0|0.0>>|<line|<point|-5|0.5>|<point|4.0|0.5>>|<line|<point|4|1>|<point|4.0|0.0>>|<with|dash-style|10|<line|<point|-5|0.5>|<point|-2.5|1.5>>>|<with|dash-style|10|<line|<point|-2.5|1.5>|<point|4.0|0.5>>>|<math-at|0|<point|-5.0|-0.5>>|<math-at|30|<point|4|-0.5>>|<with|arrow-end|\<gtr\>|arrow-begin|\<less\>|<line|<point|-5.5|0.5>|<point|-5.5|1.5>>>|<math-at|1
+    cm|<point|-6.5|1.0>>|<math-at|10|<point|-2.69514816774706|-0.534495303611589>>|<with|point-size|5ln|<point|-2.5|1.5>>>>
+  </padded-center>
+
+  ICs:
+
+  <\equation*>
+    u<around*|(|x,0|)>=<choice|<tformat|<table|<row|<cell|<frac|x|10>>|<cell|x\<in\><around*|[|0,10|]>>>|<row|<cell|<frac|30-x|20>>|<cell|x\<in\><around*|(|10,30|]>>>>>>
+  </equation*>
+
+  <\equation*>
+    u<rsub|t><around*|(|x,0|)>=0
+  </equation*>
+
+  BCs: <math|u<around*|(|0,t|)>=u<around*|(|30,t|)>=0>. The PDE is
+
+  <\equation*>
+    4*u<rsub|x\<nocomma\>x>=u<rsub|t\<nocomma\>t>
+  </equation*>
+
+  <\enumerate>
+    <item>Initial zero velocity.
+
+    <\equation*>
+      u<around*|(|x,t|)>=<big|sum>c<rsub|n>*sin <frac|n*\<mathpi\>*x|30>*cos
+      <frac|2*n*\<mathpi\>*t|30>
+    </equation*>
+  </enumerate>
 </body>
 
 <\initial>
@@ -7448,7 +8355,7 @@
   <\collection>
     <associate|auto-1|<tuple|?|3>>
     <associate|auto-10|<tuple|2|13>>
-    <associate|auto-11|<tuple|I|16>>
+    <associate|auto-11|<tuple|I|17>>
     <associate|auto-12|<tuple|1|17>>
     <associate|auto-13|<tuple|1.1|17>>
     <associate|auto-14|<tuple|2|20>>
@@ -7456,9 +8363,9 @@
     <associate|auto-16|<tuple|2.2|26>>
     <associate|auto-17|<tuple|II|28>>
     <associate|auto-18|<tuple|3|28>>
-    <associate|auto-19|<tuple|3.1|28>>
+    <associate|auto-19|<tuple|3.1|29>>
     <associate|auto-2|<tuple|?|3>>
-    <associate|auto-20|<tuple|3.2|30>>
+    <associate|auto-20|<tuple|3.2|31>>
     <associate|auto-21|<tuple|4|32>>
     <associate|auto-22|<tuple|4.1|35>>
     <associate|auto-23|<tuple|5|35>>
@@ -7470,33 +8377,42 @@
     <associate|auto-29|<tuple|5.3.1|49>>
     <associate|auto-3|<tuple|3|5>>
     <associate|auto-30|<tuple|5.3.2|55>>
-    <associate|auto-31|<tuple|6|64>>
-    <associate|auto-32|<tuple|6.1|64>>
-    <associate|auto-33|<tuple|6.2|67>>
-    <associate|auto-34|<tuple|6.3|68>>
-    <associate|auto-35|<tuple|6.4|69>>
-    <associate|auto-36|<tuple|6.4.1|73>>
-    <associate|auto-37|<tuple|6.4.2|74>>
-    <associate|auto-38|<tuple|6.4.3|76>>
-    <associate|auto-39|<tuple|6.4.4|76>>
+    <associate|auto-31|<tuple|III|64>>
+    <associate|auto-32|<tuple|6|64>>
+    <associate|auto-33|<tuple|7|67>>
+    <associate|auto-34|<tuple|8|68>>
+    <associate|auto-35|<tuple|9|69>>
+    <associate|auto-36|<tuple|9.1|73>>
+    <associate|auto-37|<tuple|9.2|74>>
+    <associate|auto-38|<tuple|9.3|76>>
+    <associate|auto-39|<tuple|9.4|76>>
     <associate|auto-4|<tuple|3|5>>
-    <associate|auto-40|<tuple|6.4.5|78>>
-    <associate|auto-41|<tuple|6.4.6|84>>
-    <associate|auto-42|<tuple|6.5|87>>
-    <associate|auto-43|<tuple|6.5.1|87>>
-    <associate|auto-44|<tuple|6.5.2|90>>
-    <associate|auto-45|<tuple|6.5.3|93>>
-    <associate|auto-46|<tuple|6.5.4|95>>
-    <associate|auto-47|<tuple|6.6|97>>
-    <associate|auto-48|<tuple|6.6.1|99>>
-    <associate|auto-49|<tuple|7|102>>
-    <associate|auto-5|<tuple|3|5>>
-    <associate|auto-50|<tuple|7.1|102>>
-    <associate|auto-51|<tuple|7.1.1|103>>
-    <associate|auto-52|<tuple|7.2|105>>
-    <associate|auto-53|<tuple|7.2.1|106>>
+    <associate|auto-40|<tuple|9.5|78>>
+    <associate|auto-41|<tuple|9.6|84>>
+    <associate|auto-42|<tuple|10|86>>
+    <associate|auto-43|<tuple|10.1|87>>
+    <associate|auto-44|<tuple|10.2|90>>
+    <associate|auto-45|<tuple|10.3|93>>
+    <associate|auto-46|<tuple|10.4|95>>
+    <associate|auto-47|<tuple|11|96>>
+    <associate|auto-48|<tuple|11.1|99>>
+    <associate|auto-49|<tuple|IV|102>>
+    <associate|auto-5|<tuple|3|6>>
+    <associate|auto-50|<tuple|12|102>>
+    <associate|auto-51|<tuple|12.1|103>>
+    <associate|auto-52|<tuple|12.1.1|105>>
+    <associate|auto-53|<tuple|12.1.2|106>>
+    <associate|auto-54|<tuple|12.1.3|109>>
+    <associate|auto-55|<tuple|12.1.4|112>>
+    <associate|auto-56|<tuple|12.2|114>>
+    <associate|auto-57|<tuple|12.2.1|115>>
+    <associate|auto-58|<tuple|12.3|117>>
+    <associate|auto-59|<tuple|13|120>>
     <associate|auto-6|<tuple|3|6>>
-    <associate|auto-7|<tuple|3|6>>
+    <associate|auto-60|<tuple|13.1|121>>
+    <associate|auto-61|<tuple|13.2|123>>
+    <associate|auto-62|<tuple|13.3|124>>
+    <associate|auto-7|<tuple|3|7>>
     <associate|auto-8|<tuple|3|7>>
     <associate|auto-9|<tuple|2|12>>
     <associate|exponential-identities|<tuple|1|8>>
@@ -7629,101 +8545,140 @@
       vibrations <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-30>>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|6<space|2spc>System
+      <vspace*|2fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-size|<quote|1.19>|III<space|2spc>System
       of ODES> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-31><vspace|0.5fn>
+      <no-break><pageref|auto-31><vspace|1fn>
 
-      <with|par-left|<quote|1tab>|6.1<space|2spc>Examples of problems
-      represented by a system of ODEs <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-32>>
-
-      <with|par-left|<quote|1tab>|6.2<space|2spc>Existence & Uniqueness
-      theorem for first order systems <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-33>>
-
-      <with|par-left|<quote|1tab>|6.3<space|2spc>Reducing a higher order ODE
-      to a system of first order ODEs <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-34>>
-
-      <with|par-left|<quote|1tab>|6.4<space|2spc>System of algebraic
-      equations <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-35>>
-
-      <with|par-left|<quote|2tab>|6.4.1<space|2spc>Algorithm to invert
-      (square) matrices: Gauss-Seidel algorithm
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|6<space|2spc>Examples
+      of problems represented by a system of ODEs>
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-32><vspace|0.5fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|7<space|2spc>Existence
+      & Uniqueness theorem for first order systems>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-33><vspace|0.5fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|8<space|2spc>Reducing
+      a higher order ODE to a system of first order ODEs>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-34><vspace|0.5fn>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|9<space|2spc>System
+      of algebraic equations> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-35><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|9.1<space|2spc>Algorithm to invert (square)
+      matrices: Gauss-Seidel algorithm <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-36>>
 
-      <with|par-left|<quote|2tab>|6.4.2<space|2spc>Review of determinants
+      <with|par-left|<quote|1tab>|9.2<space|2spc>Review of determinants
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-37>>
 
-      <with|par-left|<quote|2tab>|6.4.3<space|2spc>Cramer's rule
+      <with|par-left|<quote|1tab>|9.3<space|2spc>Cramer's rule
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-38>>
 
-      <with|par-left|<quote|2tab>|6.4.4<space|2spc>Properties of determinants
+      <with|par-left|<quote|1tab>|9.4<space|2spc>Properties of determinants
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-39>>
 
-      <with|par-left|<quote|2tab>|6.4.5<space|2spc>Review of eigenvalues and
+      <with|par-left|<quote|1tab>|9.5<space|2spc>Review of eigenvalues and
       eigenvectors <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-40>>
 
-      <with|par-left|<quote|2tab>|6.4.6<space|2spc>Diagonalizability,
+      <with|par-left|<quote|1tab>|9.6<space|2spc>Diagonalizability,
       eigendecomposition and power of matrices
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-41>>
 
-      <with|par-left|<quote|1tab>|6.5<space|2spc>Systems of First-order
-      linear ODEs <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-42>>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|10<space|2spc>Systems
+      of First-order linear ODEs> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-42><vspace|0.5fn>
 
-      <with|par-left|<quote|2tab>|6.5.1<space|2spc>Homogeneous system
+      <with|par-left|<quote|1tab>|10.1<space|2spc>Homogeneous system
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-43>>
 
-      <with|par-left|<quote|2tab>|6.5.2<space|2spc>Real coefficient matrix
+      <with|par-left|<quote|1tab>|10.2<space|2spc>Real coefficient matrix
       with non-real eigenvalues <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-44>>
 
-      <with|par-left|<quote|2tab>|6.5.3<space|2spc>Coefficient matrix is not
+      <with|par-left|<quote|1tab>|10.3<space|2spc>Coefficient matrix is not
       diagonalizable & generalized eigenvectors
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-45>>
 
-      <with|par-left|<quote|2tab>|6.5.4<space|2spc>Coefficient matrix does
-      not have <with|mode|<quote|math>|n> linearly independent eigenvectors
+      <with|par-left|<quote|1tab>|10.4<space|2spc>Coefficient matrix does not
+      have <with|mode|<quote|math>|n> linearly independent eigenvectors
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-46>>
 
-      <with|par-left|<quote|1tab>|6.6<space|2spc>Two-point boundary value
-      problems (BVPs) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-47>>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|11<space|2spc>Two-point
+      boundary value problems (BVPs)> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-47><vspace|0.5fn>
 
-      <with|par-left|<quote|2tab>|6.6.1<space|2spc>Eigenvalue problems
+      <with|par-left|<quote|1tab>|11.1<space|2spc>Eigenvalue problems
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-48>>
 
-      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|7<space|2spc>Partial
+      <vspace*|2fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|font-size|<quote|1.19>|IV<space|2spc>Partial
       differential equations> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-49><vspace|0.5fn>
+      <no-break><pageref|auto-49><vspace|1fn>
 
-      <with|par-left|<quote|1tab>|7.1<space|2spc>Heat conduction in a rod
-      (Heat equation) <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-50>>
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|12<space|2spc>Heat
+      conduction in a rod (Heat equation)>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-50><vspace|0.5fn>
 
-      <with|par-left|<quote|2tab>|7.1.1<space|2spc>Solution by separation of
+      <with|par-left|<quote|1tab>|12.1<space|2spc>Solution by separation of
       variables <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-51>>
 
-      <with|par-left|<quote|2tab>|7.1.2<space|2spc>Fourier series
+      <with|par-left|<quote|2tab>|12.1.1<space|2spc>Interlude: Fourier series
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-52>>
 
-      <with|par-left|<quote|2tab>|7.1.3<space|2spc>Inner products on function
-      spaces <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|2tab>|12.1.2<space|2spc>Inner products on
+      function spaces & orthogonality <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-53>>
+
+      <with|par-left|<quote|2tab>|12.1.3<space|2spc>Popular examples of
+      Fourier series <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-54>>
+
+      <with|par-left|<quote|2tab>|12.1.4<space|2spc>Utilizing properties of
+      even and odd functions <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-55>>
+
+      <with|par-left|<quote|1tab>|12.2<space|2spc>Back to heat equation
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-56>>
+
+      <with|par-left|<quote|2tab>|12.2.1<space|2spc>Non-homogeneous boundary
+      conditions <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-57>>
+
+      <with|par-left|<quote|1tab>|12.3<space|2spc>Bar with insulated ends
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-58>>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|13<space|2spc>The
+      wave equation> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-59><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|13.1<space|2spc>Zero initial velocity
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-60>>
+
+      <with|par-left|<quote|1tab>|13.2<space|2spc>Zero initial position
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-61>>
+
+      <with|par-left|<quote|1tab>|13.3<space|2spc>General case: arbitrary
+      initial position and velocity <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-62>>
     </associate>
   </collection>
 </auxiliary>
