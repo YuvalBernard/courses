@@ -5,7 +5,7 @@
 <\body>
   <doc-data|<doc-title|Assignment 11>|<doc-author|<author-data|<author-name|Yuval
   Bernard>|<\author-affiliation>
-    Date: TBE
+    Date: 23.1.23
   </author-affiliation>>>>
 
   <section*|Page 547>
@@ -19,11 +19,11 @@
   Solve characteristic equation.
 
   <\equation*>
-    x<rsup|2>+2=0
+    u<rsup|2>+2=0
   </equation*>
 
   <\equation*>
-    x=\<pm\><sqrt|2>*\<mathi\>
+    u=\<pm\><sqrt|2>*\<mathi\>
   </equation*>
 
   General solution is:
@@ -54,7 +54,7 @@
   <\equation*>
     y=<frac|<sqrt|2>|2>*cot <around*|(|<sqrt|2>*\<mathpi\>|)>*cos
     <around*|(|<sqrt|2>*x|)>+<frac|<sqrt|2>|2>*sin
-    <around*|(|<sqrt|2>*x|)>,<application-space|1em>x\<in\><around*|[|0,\<mathpi\>|]>
+    <around*|(|<sqrt|2>*x|)>,<application-space|1em>\<forall\>x
   </equation*>
 
   <underline|Question 5>
@@ -67,7 +67,7 @@
   solution. Characteristic equation:
 
   <\equation*>
-    x<rsup|2>+1=0\<rightarrow\>x=\<pm\>\<mathi\>
+    u<rsup|2>+1=0\<rightarrow\>u=\<pm\>\<mathi\>
   </equation*>
 
   General solution of homogeneous equation is
@@ -92,16 +92,16 @@
   Equate coefficients on both sides:
 
   <\equation*>
-    <choice|<tformat|<table|<row|<cell|x<rsup|2>:<application-space|1em>A=0>>|<row|<cell|x:<application-space|1em>B=1>>|<row|<cell|1:<application-space|1em>2*A+C=0\<rightarrow\>C=0>>>>>
+    <choice|<tformat|<table|<row|<cell|x<rsup|2>:>|<cell|A=0>>|<row|<cell|x:>|<cell|B=1>>|<row|<cell|1:>|<cell|2*A+C=0\<rightarrow\>C=0>>>>>
   </equation*>
 
   Unique solution is:
 
   <\equation*>
-    y=c<rsub|1>*cos x+c<rsub|2>*sin x+x
+    y=c<rsub|1>*cos x+c<rsub|2>*sin x+x\<nospace\><application-space|2em>c<rsub|1,2>\<in\>\<bbb-R\>,\<forall\>x
   </equation*>
 
-  Find <math|c<rsub|1,2>> that satisfies the BVs.
+  Find <math|c<rsub|1,2>> that satisfy the BVs.
 
   \ 
 
@@ -121,7 +121,7 @@
   is:
 
   <\equation*>
-    x<rsup|2>+4=0\<rightarrow\>x=\<pm\>2*\<mathi\>
+    u<rsup|2>+4=0\<rightarrow\>u=\<pm\>2*\<mathi\>
   </equation*>
 
   <\equation*>
@@ -150,7 +150,7 @@
 
   <\equation*>
     y=y<rsub|h>+y<rsub|p>=c<rsub|1>*cos <around*|(|2*x|)>+c<rsub|2>*sin
-    <around*|(|2*x|)>+<frac|1|3>*cos x,<application-space|1em>c<rsub|1,2>\<in\>\<bbb-R\>
+    <around*|(|2*x|)>+<frac|1|3>*cos x,<application-space|1em>c<rsub|1,2>\<in\>\<bbb-R\>,\<forall\>x
   </equation*>
 
   Find <math|c<rsub|1,2>> that satisfy BVs.
@@ -164,13 +164,12 @@
     <tformat|<table|<row|<cell|y<rprime|'><around*|(|0|)>=0>|<cell|\<rightarrow\>>|<cell|c<rsub|2>=0>>|<row|<cell|y<rprime|'><around*|(|\<mathpi\>|)>=0>|<cell|\<rightarrow\>>|<cell|c<rsub|2>=0>>>>
   </eqnarray*>
 
-  We've don't have sufficient information to find a specific
-  <math|c<rsub|1>>, meaning that it can be arbitrary. The BVP has infinitely
-  many solutions:
+  We don't have sufficient information to find a specific <math|c<rsub|1>>,
+  meaning that it is arbitrary. The BVP has infinitely many solutions:
 
   <\equation*>
     y=c<rsub|1>*cos <around*|(|2*x|)>+<frac|1|3>*cos
-    x,<application-space|1em>c<rsub|1>\<in\>\<bbb-R\>,<application-space|1em>x\<in\><around*|[|0,\<mathpi\>|]>
+    x,<application-space|1em>c<rsub|1>\<in\>\<bbb-R\>,\<forall\>x
   </equation*>
 
   <underline|Question 11>
@@ -179,7 +178,7 @@
     y<rprime|''>+\<lambda\>*y=0,<application-space|1em><choice|<tformat|<table|<row|<cell|y<around*|(|0|)>=0>>|<row|<cell|y<rprime|'><around*|(|\<mathpi\>|)>=0>>>>>
   </equation*>
 
-  Characteristic polynomial is:
+  Characteristic equation is:
 
   <\equation*>
     u<rsup|2>+\<lambda\>=0
@@ -193,7 +192,7 @@
     to the ODE is:
 
     <\equation*>
-      y=c<rsub|1>*x+c<rsub|2>,<application-space|1em>c<rsub|1,2>\<in\>\<bbb-R\>
+      y=c<rsub|1>*x+c<rsub|2>,<application-space|1em>c<rsub|1,2>\<in\>\<bbb-R\>,\<forall\>x
     </equation*>
 
     Find <math|c<rsub|1,2>> that satisfy the boundary conditions.
@@ -202,14 +201,14 @@
       <tformat|<table|<row|<cell|y<around*|(|0|)>=0>|<cell|\<rightarrow\>>|<cell|c<rsub|2>=0>>|<row|<cell|y<rprime|'><around*|(|\<mathpi\>|)>=0>|<cell|\<rightarrow\>>|<cell|c<rsub|1>=0>>>>
     </eqnarray*>
 
-    Only solution is trivian solution, therefore there are no eigenvalues
+    Only solution is the trivian solution, therefore there are no eigenvalues
     associated with it.
 
-    <item><math|\<lambda\>\<less\>0>. Denote <math|\<mu\>=<sqrt|\<lambda\>>>.
-    General solution is
+    <item><math|\<lambda\>\<less\>0>. Denote
+    <math|\<mu\>=<sqrt|-\<lambda\>>>. General solution is
 
     <\equation*>
-      y=c<rsub|1>*\<mathe\><rsup|\<mu\>*x>+c<rsub|2>*\<mathe\><rsup|-\<mu\>*x>,<application-space|1em>c<rsub|1,2>\<in\>\<bbb-R\>
+      y=c<rsub|1>*\<mathe\><rsup|\<mu\>*x>+c<rsub|2>*\<mathe\><rsup|-\<mu\>*x>,<application-space|1em>c<rsub|1,2>\<in\>\<bbb-R\>,\<forall\>x
     </equation*>
 
     Find <math|c<rsub|1,2>> that satisfy the BCs.
@@ -255,7 +254,7 @@
     multiples of:
 
     <\equation*>
-      y<rsub|n>=sin <around*|(|<frac|2*n-1|2>*x|)>
+      y<rsub|n>=sin <around*|(|<frac|2*n-1|2>*x|)><application-space|1em>\<forall\>x,n\<in\>\<bbb-N\>
     </equation*>
 
     \ 
@@ -275,7 +274,7 @@
     <item><math|\<lambda\>=0>. General solution is:
 
     <\equation*>
-      y=c<rsub|1>*x+c<rsub|2>,<application-space|1em>c<rsub|1,2>\<in\>\<bbb-R\>
+      y=c<rsub|1>*x+c<rsub|2>,<application-space|1em>c<rsub|1,2>\<in\>\<bbb-R\>,\<forall\>x
     </equation*>
 
     Find <math|c<rsub|1,2>> that satisfy the boundary conditions.
@@ -286,14 +285,14 @@
 
     There is not enough information to determine <math|c<rsub|2>>, so it's
     arbitrary. There are infinitely many solutions for the eigenvalue
-    <math|\<lambda\>=0>, which is all <math|y=c<rsub|2>\<in\>\<bbb-R\>>.
+    <math|\<lambda\>=0>, which are all <math|y=c<rsub|2>\<in\>\<bbb-R\>>.
     Eigenfunctions for this eigenvalue are all real scalars.
 
     <item> <math|\<lambda\>\<less\>0>. Denote
-    <math|\<mu\>=<sqrt|\<lambda\>>>. General solution is
+    <math|\<mu\>=<sqrt|-\<lambda\>>>. General solution is
 
     <\equation*>
-      y=c<rsub|1>*\<mathe\><rsup|\<mu\>*x>+c<rsub|2>*\<mathe\><rsup|-\<mu\>*x>,<application-space|1em>c<rsub|1,2>\<in\>\<bbb-R\>
+      y=c<rsub|1>*\<mathe\><rsup|\<mu\>*x>+c<rsub|2>*\<mathe\><rsup|-\<mu\>*x>,<application-space|1em>c<rsub|1,2>\<in\>\<bbb-R\>,\<forall\>x
     </equation*>
 
     Find <math|c<rsub|1,2>> that satisfy the BCs.
@@ -320,7 +319,7 @@
       <around*|(|\<mu\>*\<mathpi\>|)>=0>>>>
     </eqnarray*>
 
-    Only non-trivial solution is when <math|sin
+    Only non-trivial solution is obtained when <math|sin
     <around*|(|\<mu\>*\<mathpi\>|)>=0>.
 
     <\equation*>
@@ -335,7 +334,7 @@
     eigenfunctions are all scalar multiples of
 
     <\equation*>
-      y<rsub|n>=cos <around*|(|n*x|)>,<application-space|1em>n\<in\>\<bbb-N\>
+      y<rsub|n>=cos <around*|(|n*x|)>,<application-space|1em>n\<in\>\<bbb-N\>,\<forall\>x
     </equation*>
   </enumerate>
 </body>
@@ -349,7 +348,7 @@
 
 <\references>
   <\collection>
-    <associate|auto-1|<tuple|?|1|../../../../../.TeXmacs/texts/scratch/no_name_2.tm>>
+    <associate|auto-1|<tuple|?|1>>
   </collection>
 </references>
 

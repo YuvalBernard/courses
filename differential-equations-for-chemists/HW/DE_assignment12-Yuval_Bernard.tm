@@ -56,7 +56,7 @@
     <around*|(|x+n*x|)>+cos <around*|(|x-n*x|)>|]> \<mathd\>x>>>>
   </eqnarray*>
 
-  The integral over the sines is equal to zero because is it an integral of
+  The integral over the sines is equal to zero because it is an integral of
   an odd function over a symmetric interval. Calculate the integral of the
   cosines.
 
@@ -66,6 +66,15 @@
     <around*|(|\<mathpi\>+n*\<mathpi\>|)>-sin 0|1+n>+<frac|sin
     <around*|(|\<mathpi\>-n*\<mathpi\>|)>-sin 0|1-n>|]>=0>>>>
   </eqnarray*>
+
+  Here we assumed <math|n\<neq\>1>. If <math|n=1>:
+
+  <\equation*>
+    a<rsub|1>=<frac|1|2\<mathpi\>>*<big|int><rsub|-\<mathpi\>><rsup|\<mathpi\>><around*|[|cos
+    <around*|(|2*x|)>+cos <around*|(|0|)>|]> \<mathd\>x=1
+  </equation*>
+
+  Calculate the other coefficient.
 
   <\eqnarray*>
     <tformat|<table|<row|<cell|b<rsub|n>>|<cell|=>|<cell|<frac|1|\<mathpi\>>*<big|int><rsub|-\<mathpi\>><rsup|\<mathpi\>>sin
@@ -83,7 +92,23 @@
     <around*|(|x-n*x|)>|1-n>-<frac|sin <around*|(|x+n*x|)>|1+n>|]><rsub|0><rsup|\<mathpi\>>=0>>>>
   </eqnarray*>
 
-  All coefficients are zero! The fourier series is <math|f<around*|(|x|)>=0>.
+  Here we also assumed <math|n\<neq\>1>. If we set <math|n=1>:
+
+  <\equation*>
+    b<rsub|1>=<frac|1|\<mathpi\>>*<big|int><rsub|0><rsup|\<mathpi\>><around*|[|cos
+    <around*|(|0|)>-cos <around*|(|2*x|)>|]> \<mathd\>x=1
+  </equation*>
+
+  In conclusion, <math|a<rsub|n>,b<rsub|n>> are zero for all <math|n> except
+  <math|n=1>, for which <math|a<rsub|1>,b<rsub|1>=1>. If we plug the
+  coefficients in the formula for the series we get:
+
+  <\equation*>
+    f<around*|(|x|)>=a<rsub|1>*cos <frac|1*\<mathpi\>*x|\<mathpi\>>+b<rsub|1>*sin<frac|1*\<mathpi\>*x|\<mathpi\>>=cos
+    x+sin x
+  </equation*>
+
+  As expected, <math|sin x+cos x> is its own Fourier sreies.
 
   <underline|Question 2>
 

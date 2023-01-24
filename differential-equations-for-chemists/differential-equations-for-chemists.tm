@@ -7650,12 +7650,12 @@
     <frac|n*\<mathpi\>*x|50>
   </equation*>
 
-  The <math|exonent\<less\>as> has <math|n<rsup|2>> in the numerator so the
-  series converges fast.
+  The <math|exponent> has <math|n<rsup|2>> in the numerator so the series
+  converges fast.
 
-  Let's say we want to estimate when the entire bar is at
-  <math|\<leq\><SI|1|degrees>>C using first term of series. We find <math|t>
-  such that
+  Let's say we want to estimate when the entire bar's temperature is smaller
+  or equal to <math|<SI|1|degrees>>C using first term of series. We find
+  <math|t> such that
 
   <\equation*>
     1=u<around*|(|25,t|)>\<approx\><frac|80|\<mathpi\>>*\<mathe\><rsup|-<frac|n<rsup|2>*\<mathpi\><rsup|2>*t|2500>><wide*|*sin
