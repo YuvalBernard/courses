@@ -8170,7 +8170,7 @@
   <subsection|Zero initial position>
 
   <math|u<around*|(|x,0|)>=f<around*|(|x|)>\<equiv\>0> <math|\<forall\>x> and
-  <math|ut<around*|(|x,0|)>=g<around*|(|x|)>>.
+  <math|u<rsub|t><around*|(|x,0|)>=g<around*|(|x|)>>.
 
   Again we look for fundamental solutions of the form
   <math|X<around*|(|x|)>*T<around*|(|t|)>> and get
