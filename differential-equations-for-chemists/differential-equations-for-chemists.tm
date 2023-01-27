@@ -265,6 +265,18 @@
     <with|par-left|1tab|13.2<space|2spc>Zero initial position
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-61>>
+
+    <with|par-left|1tab|13.3<space|2spc>General case: arbitrary initial
+    position and velocity <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-62>>
+
+    <with|par-left|1tab|13.4<space|2spc>D'Alembert solution to the wave
+    equation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-63>>
+
+    <with|par-left|2tab|13.4.1<space|2spc>Zero initial velocity
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-64>>
   </table-of-contents>
 
   <page-break*>
@@ -8312,17 +8324,21 @@
     cm|<point|-6.5|1.0>>|<math-at|10|<point|-2.69514816774706|-0.534495303611589>>|<with|point-size|5ln|<point|-2.5|1.5>>>>
   </padded-center>
 
-  ICs:
+  ICs and BCs:
 
   <\equation*>
     u<around*|(|x,0|)>=<choice|<tformat|<table|<row|<cell|<frac|x|10>>|<cell|x\<in\><around*|[|0,10|]>>>|<row|<cell|<frac|30-x|20>>|<cell|x\<in\><around*|(|10,30|]>>>>>>
   </equation*>
 
   <\equation*>
-    u<rsub|t><around*|(|x,0|)>=0
+    \;
   </equation*>
 
-  BCs: <math|u<around*|(|0,t|)>=u<around*|(|30,t|)>=0>. The PDE is
+  <\equation*>
+    <choice|<tformat|<table|<row|<cell|u<rsub|t><around*|(|x,0|)>=0>>|<row|<cell|u<around*|(|0,t|)>=u<around*|(|30,t|)>=0>>>>>
+  </equation*>
+
+  The PDE is
 
   <\equation*>
     4*u<rsub|x\<nocomma\>x>=u<rsub|t\<nocomma\>t>
@@ -8336,6 +8352,344 @@
       <frac|2*n*\<mathpi\>*t|30>
     </equation*>
   </enumerate>
+
+  <marginal-note|normal|c|lec 25 29.01.23>Calculate <math|c<rsub|n>>
+
+  <\equation*>
+    c<rsub|n>=<frac|2|30>*<big|int><rsub|0><rsup|30>f<around*|(|x|)>*sin
+    <frac|n*\<mathpi\>*x|30> \<mathd\>x
+  </equation*>
+
+  <\equation*>
+    A<around*|(|x|)>\<equiv\><big|int>x*sin <frac|n*\<mathpi\>*x|30>
+    \<mathd\>x=<frac|-30*x*cos <frac|n*\<mathpi\>*x|30>|n*\<mathpi\>>+<frac|900|n<rsup|2>*\<mathpi\><rsup|2>>*sin
+    <frac|n*\<mathpi\>*x|30>
+  </equation*>
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|c<rsub|n>>|<cell|=>|<cell|<frac|2|30>*<around*|[|<frac|1|10>*A<around*|(|x|)>\|<rsub|0><rsup|10>+<frac|1|20>*<big|int><rsub|10><rsup|30>30*sin
+    <frac|n*\<mathpi\>*x|30 > \<mathd\>x-<frac|1|20>*A<around*|(|x|)>\|<rsub|10><rsup|30>|]>>>|<row|<cell|>|<cell|=>|<cell|<frac|2|300>*<around*|[|A<around*|(|10|)>+<frac|30|2>*<around*|(|-cos
+    <frac|n*\<mathpi\>*x|30>\<cdot\><frac|30|n*\<mathpi\>>|)><rsub|10><rsup|30>-<frac|1|2>*A<around*|(|30|)>+<frac|1|2>*A<around*|(|10|)>|]>>>|<row|<cell|>|<cell|=>|<cell|<frac|2|300><around*|(|<around*|[|<frac|3|2>*A<around*|(|10|)>+<frac|900|2*\<mathpi\>*n>*<around*|(|-cos
+    <around*|(|n*\<mathpi\>|)>+cos <frac|n*\<mathpi\>|3>|)>-<frac|1|2>*<around*|[|-<frac|900|n*\<mathpi\>>*cos
+    <around*|(|n*\<mathpi\>|)>+<frac|900|n<rsup|2>*\<mathpi\><rsup|2>>*sin
+    <around*|(|n*\<mathpi\>|)>|]>|]>|)>>>|<row|<cell|>|<cell|=>|<cell|<frac|2|300>*<around*|[|<frac|3|2><around*|(|-<frac|300|n*\<mathpi\>>*cos
+    <frac|n*\<mathpi\>|3>+<frac|900|n<rsup|2>*\<mathpi\><rsup|2>>*sin
+    <frac|n*\<mathpi\>|3>|)>+<frac|900|2*\<mathpi\>*n>*cos
+    <frac|n*\<mathpi\>|3>|]>>>|<row|<cell|>|<cell|=>|<cell|<frac|9|n<rsup|2>*\<mathpi\><rsup|2>>*sin
+    <frac|n*\<mathpi\>|3>>>>>
+  </eqnarray*>
+
+  So,
+
+  <\equation*>
+    u<around*|(|x,t|)>=<frac|9|\<mathpi\><rsup|2>>*<big|sum><rsub|n=1><rsup|\<infty\>><around*|(|<frac|1|n<rsup|2>>*sin
+    <frac|n*\<mathpi\>|3>|)>*sin <frac|n*\<mathpi\>*x|30>*cos
+    <frac|2*n*\<mathpi\>*t|30>
+  </equation*>
+
+  <\note*>
+    Differentiating the series on the right twice by <math|x> or by <math|t>,
+    we get a series whose coefficients never approach zero as
+    <math|n\<rightarrow\>\<infty\>>. In other words, the series' second
+    derivative doesn't converge, and so can't be equal either
+    <math|u<rsub|x\<nocomma\>x>> or <math|u<rsub|t\<nocomma\>t>>. We need
+    another way to write the solution so we can differentiate.
+  </note*>
+
+  <underline|Example>: <math|a=5>, string of length <SI|3|cm>, with BCs:
+  <math|u<around*|(|0,t|)>=u<around*|(|3,t|)>=0> an ICs
+
+  <\equation*>
+    <choice|<tformat|<table|<row|<cell|u<around*|(|x,0|)>=<frac|1|4>*sin
+    <around*|(|\<mathpi\>*x|)>>>|<row|<cell|u<rsub|t><around*|(|x,0|)>=10*sin
+    <around*|(|2*\<mathpi\>*x|)>>>>>>
+  </equation*>
+
+  <\enumerate>
+    <item>Solve for ICs:\ 
+
+    <\equation*>
+      <choice|<tformat|<table|<row|<cell|u<around*|(|x,0|)>=<frac|1|4>*sin
+      <around*|(|\<mathpi\>*x|)>>>|<row|<cell|u<rsub|t><around*|(|x,0|)>\<equiv\>0>>>>>
+    </equation*>
+
+    <\equation*>
+      u<rsub|1><around*|(|x,t|)>=<big|sum><rsub|n=1><rsup|\<infty\>>A<rsub|n>*sin
+      <frac|n*\<mathpi\>*x|3>*cos <frac|5*n*\<mathpi\>*t|3>
+    </equation*>
+
+    <\equation*>
+      A<rsub|n>=<frac|2|3><big|int><rsub|0><rsup|3><frac|1|4>*sin
+      <around*|(|\<mathpi\>*x|)>*sin <frac|n*\<mathpi\>*x|3>=<around*|[|orthogonality|]>=<choice|<tformat|<table|<row|<cell|0,>|<cell|n\<neq\>3>>|<row|<cell|<frac|1|4>,>|<cell|n=3>>>>>
+    </equation*>
+
+    <\equation*>
+      u<rsub|1><around*|(|x,t|)>=<frac|1|4>*sin
+      <around*|(|\<mathpi\>*x|)>*cos <around*|(|5*\<mathpi\>*t|)>
+    </equation*>
+
+    <item>Solve for ICs:
+
+    <\equation*>
+      <choice|<tformat|<table|<row|<cell|u<around*|(|x,0|)>\<equiv\>0>>|<row|<cell|u<rsub|t><around*|(|x,0|)>=10*sin
+      <around*|(|2*\<mathpi\>*x|)>>>>>>
+    </equation*>
+
+    <\equation*>
+      u<rsub|2><around*|(|x,t|)>=<big|sum><rsub|n=1><rsup|\<infty\>>B<rsub|n>*sin
+      <frac|n*\<mathpi\>*x|3>*sin <frac|5*n*\<mathpi\>*t|3>
+    </equation*>
+
+    <\equation*>
+      B<rsub|n>=<frac|2|5*n*\<mathpi\>>*<big|int><rsub|0><rsup|3>10*sin
+      <around*|(|2*\<mathpi\>*x|)>\<cdot\>sin
+      <frac|n*\<mathpi\>*x|3>=<choice|<tformat|<table|<row|<cell|0,>|<cell|n\<neq\>6>>|<row|<cell|<frac|1|\<mathpi\>>,>|<cell|n=6>>>>>
+    </equation*>
+
+    So
+
+    <\equation*>
+      u<rsub|2><around*|(|x,t|)>=<frac|1|\<mathpi\>>*sin
+      <around*|(|2*\<mathpi\>*x|)>*sin <around*|(|10*\<mathpi\>*t|)>*
+    </equation*>
+  </enumerate>
+
+  Solution to original problem is <math|u<around*|(|x,t|)>=u<rsub|1>+u<rsub|2>>.
+
+  <\equation*>
+    u<around*|(|x,t|)>=<frac|1|4>*sin <around*|(|5*\<mathpi\>*t|)>*sin
+    <around*|(|\<mathpi\>*t|)>+<frac|1|\<mathpi\>>*sin
+    <around*|(|10*\<mathpi\>*t|)>*sin <around*|(|2*\<mathpi\>*x|)>
+  </equation*>
+
+  <subsection|D'Alembert solution to the wave equation>
+
+  D'Alembert method preceded Fourier's method (1717\U1783).
+
+  <subsubsection|Zero initial velocity>
+
+  The ICs are:
+
+  <\equation*>
+    <choice|<tformat|<table|<row|<cell|u<around*|(|x,0|)>=f<around*|(|x|)>>>|<row|<cell|u<rsub|t><around*|(|x,0|)>\<equiv\>0>>>>>,<application-space|1em>x\<in\><around*|[|0,L|]>
+  </equation*>
+
+  <\theorem*>
+    \;
+
+    <\em>
+      Let <math|F<around*|(|x|)>> denote the odd extension of
+      <math|f<around*|(|x|)>> to a periodic function of period <math|2L> on
+      the entire real line. Then
+
+      <\equation*>
+        u<around*|(|x,t|)>=<frac|1|2>*<around*|(|F<around*|(|x+a*t|)>+F<around*|(|x-a*t|)>|)>
+      </equation*>
+
+      is the solution to the wave equation
+      <math|u<rsub|t\<nocomma\>t>=a<rsup|2>*u<rsub|x\<nocomma\>x>> with
+      homogeneous BCs and ICs above.
+    </em>
+  </theorem*>
+
+  Show that the solution satisfies homogeneous BCs.
+
+  <\equation*>
+    u<around*|(|0,t|)>=<frac|1|2>*<around*|[|F<around*|(|a*t|)>-F<around*|(|-a*t|)>|]>=<around*|[|F<text|
+    odd>|]>=<frac|1|2>*<around*|[|F<around*|(|a*t|)>-F<around*|(|a*t|)>|]>=0
+  </equation*>
+
+  <\equation*>
+    u<around*|(|L,t|)>=<frac|1|2>*<around*|[|F<around*|(|L*+a*t|)>+F<around*|(|L-a*t|)>|]>=<frac|1|2>*<around*|[|F<around*|(|L+a*t|)>-F<around*|(|a*t-L|)>|]>
+  </equation*>
+
+  Using the fact that <math|F> is <math|2L>-periodic,
+
+  <\equation*>
+    u<around*|(|L,t|)>=<frac|1|2>*<around*|[|F<around*|(|L+a*t|)>-F<around*|(|2*L+a*t-L|)>|]>=<frac|1|2>*<around*|[|F<around*|(|L+a*t|)>-F<around*|(|L+a*t|)>|]>=0
+  </equation*>
+
+  Show that the solution solves the wave equation.
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|u<rsub|t><around*|(|x,t|)>>|<cell|=>|<cell|<frac|1|2>*<around*|[|F<rprime|'><around*|(|x+a*t|)>\<cdot\>a+F<rprime|'><around*|(|x-a*t|)>\<cdot\><around*|(|-a|)>|]>>>|<row|<cell|u<rsub|t\<nocomma\>t><around*|(|x,t|)>>|<cell|=>|<cell|<frac|1|2>*<around*|[|F<rprime|''><around*|(|x+a*t|)>*a<rsup|2>+F<rprime|''><around*|(|x-a*t|)>*a<rsup|2>|]>=<frac|a<rsup|2>|2><around*|[|F<rprime|''><around*|(|x+a*t|)>+F<rprime|''><around*|(|x-a*t|)>|]>=a<rsup|2>*u<rsub|x\<nocomma\>x>>>>>
+  </eqnarray*>
+
+  Check ICs:
+
+  <\equation*>
+    u<around*|(|x,0|)>=<frac|1|2>*<around*|[|F<around*|(|x|)>+F<around*|(|x|)>|]>=F<around*|(|x|)>=f<around*|(|x|)>,x\<in\><around*|[|0,L|]>
+  </equation*>
+
+  <\equation*>
+    u<rsub|t><around*|(|x,t|)>=<frac|a|2>*<around*|[|F<rprime|'><around*|(|x+a*t|)>-F<around*|(|x<rprime|'>-a*t|)>|]>
+  </equation*>
+
+  <\equation*>
+    u<rsub|t><around*|(|x,0|)>=<frac|a|2>*<around*|[|F<rprime|'><around*|(|x|)>-F<rprime|'><around*|(|x|)>|]>=0
+  </equation*>
+
+  Why use D'alembert's version? Suppose <math|g<around*|(|x|)>> has a graph:
+
+  <\padded-center>
+    <with|gr-mode|<tuple|edit|math-at>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.469999gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|cartesian|<point|0|0>|1>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-auto-crop|true|gr-color|blue|<graphics||<with|color|blue|<spline|<point|1|0>|<point|2.0|2.0>|<point|3.0|0.0>>>|<with|color|blue|<line|<point|3|0>|<point|6.0|0.0>>>|<with|color|blue|<line|<point|-3.0|0.0>|<point|1.0|0.0>>>|<math-at|b|<point|-0.4|2.0>>|<math-at|x<rsub|0>|<point|2|-0.4>>|<with|dash-style|10|<line|<point|-4|0>|<point|-3.0|0.0>>>|<with|dash-style|10|<spline|<point|-3|0>|<point|-2.0|2.0>|<point|-1.0|0.0>>>|<with|dash-style|10|<line|<point|-1|0>|<point|6.0|0.0>>>|<math-at|x<rsub|0>-a|<point|-2.5|-0.4>>|<with|dash-style|10|<line|<point|4.5|1.6>|<point|4.8|1.6>>>|<with|color|blue|<line|<point|4.5|2.2>|<point|4.8|2.2>>>|<math-at|g<around*|(|x-a|)>|<point|5.0|1.5>>|<with|color|blue|<math-at|g<around*|(|x|)>|<point|5.0|2.1>>>>>
+  </padded-center>
+
+  <\padded-center>
+    <with|gr-mode|<tuple|edit|math-at>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|cartesian|<point|0|0>|1>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-auto-crop|true|<graphics||<line|<point|5.0|0.0>|<point|7.0|0.0>>|<spline|<point|3.0|0.0>|<point|4.0|1.0>|<point|5.0|0.0>>|<line|<point|-5.0|0.0>|<point|-3.0|0.0>>|<line|<point|-1.0|0.0>|<point|3.0|0.0>>|<math-at|x<rsub|0>+a|<point|3.6|-0.7>>|<spline|<point|-3.0|0.0>|<point|-2.0|1.0>|<point|-1.0|0.0>>|<math-at|x<rsub|0>-a|<point|-2.5|-0.4>>|<math-at|<frac|1|2>*<around*|[|g<around*|(|x+a|)>+g<around*|(|x-a|)>|]>|<point|2.5|2.6>>|<math-at|<frac|b|2>|<point|0|1>>>>
+  </padded-center>
+
+  \;
+
+  <with|gr-mode|<tuple|edit|math-at>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|cartesian|<point|0|0>|1>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-auto-crop|true|<graphics||<line|<point|-7|0>|<point|-6.0|0.0>>|<spline|<point|-6|0>|<point|-5.0|1.0>|<point|-4.0|0.0>>|<line|<point|-4|0>|<point|4.0|0.0>>|<spline|<point|4|0>|<point|5.0|1.0>|<point|6.0|0.0>>|<line|<point|6|0>|<point|7.0|0.0>>|<math-at|<frac|1|2>*<around*|[|g<around*|(|x+2a|)>+g<around*|(|x-2a|)>|]>|<point|2.5|3.0>>|<math-at|<frac|b|2>|<point|0.1|1.0>>|<math-at|x<rsub|0>+2a|<point|4.4|-0.5>>|<math-at|x<rsub|0>-2a|<point|-5.6|-0.4>>>>
+
+  As we can see <math|u<around*|(|x,t|)>> is just a sum of waves that get
+  further and further apart. (just line throwing a pebble flatly above
+  water.)
+
+  Recall example
+
+  <\equation*>
+    25*u<rsub|x\<nocomma\>x>=u<rsub|t\<nocomma\>t>
+  </equation*>
+
+  <\equation*>
+    u<around*|(|0,t|)>=u<around*|(|3,t|)>=0
+  </equation*>
+
+  <\equation*>
+    <choice|<tformat|<table|<row|<cell|u<around*|(|x,0|)>=<frac|1|4>*sin
+    <around*|(|\<mathpi\>*x|)>>>|<row|<cell|u<rsub|t><around*|(|x,0|)>\<equiv\>0>>>>>
+  </equation*>
+
+  Solution we had was <math|u<around*|(|x,t|)>=<frac|1|4>*sin
+  <around*|(|\<mathpi\>*x|)>*cos <around*|(|5*\<mathpi\>*t|)>>.
+
+  In this case the odd periodic extension of
+  <math|f<around*|(|x|)>=<frac|1|4>*sin <around*|(|\<mathpi\>*x|)>> on
+  <math|<around*|[|0,3|]>> is <math|<rigid|F<around*|(|x|)>=<frac|1|4>*sin
+  <around*|(|\<mathpi\>*x|)>>> on <math|\<bbb-R\>>. The D'Alembert solution
+  gives:
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|u<around*|(|x,t|)>>|<cell|=>|<cell|=<frac|1|2>*<around*|[|F<around*|(|x+a*t|)>+F<around*|(|x-a*t|)>|]>>>|<row|<cell|>|<cell|=>|<cell|<frac|1|2>*<around*|[|<frac|1|4>*<with|color|blue|sin
+    <around*|(|\<mathpi\>*<around*|(|x+a*t|)>|)>>+<frac|1|4>*<with|color|red|sin
+    <around*|(|\<mathpi\>*<around*|(|x-a*t|)>|)>>|]>>>|<row|<cell|>|<cell|=>|<cell|<frac|1|8>*<around*|[|<with|color|blue|sin
+    <around*|(|\<mathpi\>*x|)>*cos <around*|(|\<mathpi\>*a*t|)>+sin
+    <around*|(|a*t|)>*cos <around*|(|\<mathpi\>*x|)>>|]>>>|<row|<cell|>|<cell|>|<cell|+<frac|1|8>*<around*|[|<with|color|red|sin
+    <around*|(|\<mathpi\>*x|)>*cos <around*|(|\<mathpi\>*a*t|)>-sin
+    <around*|(|a*t|)>*cos <around*|(|\<mathpi\>*x|)>>|]>>>|<row|<cell|>|<cell|=>|<cell|<frac|1|4>*sin
+    <around*|(|\<mathpi\>*x|)>*cos <around*|(|\<mathpi\>*a*t|)>>>>>
+  </eqnarray*>
+
+  Fouerier series solution and D'Alembert solution give the same result.
+
+  Why is the D'Alembert solution equal to the Fourier series solution in
+  general? (If so, then the Fourier series solution <strong|is> the solution
+  to the wave equation, because we verified that D'Alembert solution works.)
+
+  Still assuming <math|u<rsub|t>\<equiv\>0> and
+  <math|u<around*|(|x,0|)>=f<around*|(|x|)>> on <math|<around*|[|0,L|]>>. The
+  Fouerier series solution:
+
+  <\equation*>
+    w<around*|(|x,t|)>=<big|sum><rsub|n=1><rsup|\<infty\>>c<rsub|n>*sin
+    <frac|n*\<mathpi\>*x|L>*cos <frac|n*\<mathpi\>*a*t|L>
+  </equation*>
+
+  <math|c<rsub|n>> = Fourier sine coefficients for <math|f> so that
+  <math|f<around*|(|x|)>=<big|sum>c<rsub|n>*sin <frac|n*\<mathpi\>*x|L>> on
+  <math|<around*|[|0,L|]>> and RHS is a function defined for all
+  <math|x\<in\>\<bbb-R\>> and is odd! So RHS = <math|F<around*|(|x|)>> and
+  <math|2L>-periodic.
+
+  <\note*>
+    <math|2*sin \<alpha\>*cos\<space\>\<beta\>=sin
+    <around*|(|\<alpha\>+\<beta\>|)>+sin <around*|(|\<alpha\>-\<beta\>|)>>,
+    so that
+
+    <\equation*>
+      w<around*|(|x,t|)>=<big|sum>c<rsub|n>*sin <frac|n*\<mathpi\>*x|L>*cos
+      <frac|n*\<mathpi\>*a*t|L>
+    </equation*>
+
+    Denote <math|\<alpha\>=><math|<frac|n*\<mathpi\>*x|L>*> and
+    <math|\<beta\>=<frac|n*\<mathpi\>*a*t|L>>. Then,
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|w<around*|(|x,t|)>>|<cell|=>|<cell|<frac|1|2>*<around*|[|<big|sum>c<rsub|n>*<around*|(|sin
+      <around*|(|<frac|n*\<mathpi\>*x|L>+<frac|n*\<mathpi\>*a*t|L>|)>+sin
+      <around*|(|<frac|n*\<mathpi\>*x|L>-<frac|n*\<mathpi\>*a*t|L>|)>|)>|]>>>|<row|<cell|>|<cell|=>|<cell|<frac|1|2>*<big|sum>c<rsub|n>*<around*|(|sin
+      <frac|n*\<mathpi\>|L>*<around*|(|x+a*t|)>+sin
+      <frac|n*\<mathpi\>|L>*<around*|(|x-a*t|)>|)>>>|<row|<cell|>|<cell|=>|<cell|<frac|1|2>*<around*|[|F<around*|(|x+a*t|)>+F<around*|(|x-a*t|)>|]>>>>>
+    </eqnarray*>
+
+    which is D'Alembert solution.
+  </note*>
+
+  <subsubsection|Zero initial position>
+
+  <\equation*>
+    a<rsup|2>*u<rsub|x\<nocomma\>x>=u<rsub|t\<nocomma\>t>
+  </equation*>
+
+  BCs: <math|u<around*|(|0,t|)>=u<around*|(|L,t|)>=0> and ICs:
+
+  <\equation*>
+    <choice|<tformat|<table|<row|<cell|u<around*|(|x,0|)>\<equiv\>0>>|<row|<cell|u<rsub|t><around*|(|x,0|)>=g<around*|(|x|)>>>>>>,x\<in\><around*|[|0,L|]>
+  </equation*>
+
+  Let <math|G<around*|(|x|)>> be the odd period-<math|2L> extension of
+  <math|g<around*|(|x|)>> and let <math|H<around*|(|x|)>> be the
+  <em|primitive function> of <math|G<around*|(|x|)>>, i.e
+
+  <\equation*>
+    H<around*|(|x|)>=<big|int><rsub|0><rsup|x>g<around*|(|\<xi\>|)> d\<xi\>
+  </equation*>
+
+  so <math|H<rprime|'><around*|(|x|)>=G<around*|(|x|)>>. The solution to the
+  above wave equation for this case is given by:
+
+  <\equation*>
+    u<around*|(|x,t|)>=<frac|1|2a>*<around*|[|H<around*|(|x+a*t|)>-H<around*|(|x-a*t|)>|]>
+  </equation*>
+
+  It can be shown that
+
+  <\equation*>
+    u<rsub|t\<nocomma\>t><around*|(|x,t|)>=<frac|a<rsup|2>|2a>*<around*|[|H<rprime|''><around*|(|x+a*t|)>-H<rprime|''><around*|(|x-a*t|)>|]>=a<rsup|2>*u<rsub|x\<nocomma\>x>
+  </equation*>
+
+  Check ICs:
+
+  <\equation*>
+    u<around*|(|x,0|)>=<frac|1|2a>*<around*|[|H<around*|(|x|)>-H<around*|(|x|)>|]>=0
+  </equation*>
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|u<rsub|t><around*|(|x,t|)>>|<cell|=>|<cell|<frac|1|2a>\<cdot\>a*<around*|[|H<rprime|'><around*|(|x+a*t|)>+H<rprime|'><around*|(|x-a*t|)>|]>>>|<row|<cell|>|<cell|=>|<cell|<frac|1|2>*<around*|[|H<rprime|'><around*|(|x+a*t|)>+H<rprime|'><around*|(|x-a*t|)>|]>>>>>
+  </eqnarray*>
+
+  Remember that <math|H<rprime|'><around*|(|x|)>=G<around*|(|x|)>>.
+
+  <\equation*>
+    u<rsub|t><around*|(|x,0|)>=<frac|1|2>*<around*|[|G<around*|(|x|)>+G<around*|(|x|)>|]>=G<around*|(|x|)>=g<around*|(|x|)><text|
+    on ><around*|[|0,L|]>
+  </equation*>
+
+  Check BCs.
+
+  <\eqnarray*>
+    <tformat|<table|<row|<cell|u<around*|(|0,t|)>>|<cell|=>|<cell|<frac|1|2a>*<around*|[|H<around*|(|a*t|)>-H<around*|(|-a*t|)>|]>>>>>
+  </eqnarray*>
+
+  Because <math|G> is odd <math|H> is even. So
+
+  <\equation*>
+    u<around*|(|0,t|)>=<frac|1|2a>*<around*|[|H<around*|(|a*t|)>-H<around*|(|a*t|)>|]>=0
+  </equation*>
+
+  Similarly, using periodicity, <math|u<around*|(|L,t|)>=0>.
 </body>
 
 <\initial>
@@ -8343,9 +8697,14 @@
     <associate|font|frak=TeX Gyre Pagella,cal=TeX Gyre Termes,roman>
     <associate|font-base-size|12>
     <associate|font-family|rm>
+    <associate|font-series|medium>
+    <associate|global-subject|>
+    <associate|global-title|Differential Equations for Chemists>
     <associate|math-font|roman>
     <associate|page-medium|paper>
+    <associate|page-orientation|portrait>
     <associate|page-screen-margin|false>
+    <associate|par-columns|1>
     <associate|par-mode|justify>
     <associate|toc-prefix|toc>
   </collection>
@@ -8355,17 +8714,17 @@
   <\collection>
     <associate|auto-1|<tuple|?|3>>
     <associate|auto-10|<tuple|2|13>>
-    <associate|auto-11|<tuple|I|17>>
-    <associate|auto-12|<tuple|1|17>>
+    <associate|auto-11|<tuple|I|16>>
+    <associate|auto-12|<tuple|1|16>>
     <associate|auto-13|<tuple|1.1|17>>
     <associate|auto-14|<tuple|2|20>>
     <associate|auto-15|<tuple|2.1|25>>
     <associate|auto-16|<tuple|2.2|26>>
     <associate|auto-17|<tuple|II|28>>
     <associate|auto-18|<tuple|3|28>>
-    <associate|auto-19|<tuple|3.1|29>>
+    <associate|auto-19|<tuple|3.1|28>>
     <associate|auto-2|<tuple|?|3>>
-    <associate|auto-20|<tuple|3.2|31>>
+    <associate|auto-20|<tuple|3.2|30>>
     <associate|auto-21|<tuple|4|32>>
     <associate|auto-22|<tuple|4.1|35>>
     <associate|auto-23|<tuple|5|35>>
@@ -8374,47 +8733,50 @@
     <associate|auto-26|<tuple|5.2.1|38>>
     <associate|auto-27|<tuple|5.2.2|42>>
     <associate|auto-28|<tuple|5.3|48>>
-    <associate|auto-29|<tuple|5.3.1|49>>
+    <associate|auto-29|<tuple|5.3.1|50>>
     <associate|auto-3|<tuple|3|5>>
-    <associate|auto-30|<tuple|5.3.2|55>>
-    <associate|auto-31|<tuple|III|64>>
-    <associate|auto-32|<tuple|6|64>>
-    <associate|auto-33|<tuple|7|67>>
-    <associate|auto-34|<tuple|8|68>>
-    <associate|auto-35|<tuple|9|69>>
-    <associate|auto-36|<tuple|9.1|73>>
-    <associate|auto-37|<tuple|9.2|74>>
-    <associate|auto-38|<tuple|9.3|76>>
-    <associate|auto-39|<tuple|9.4|76>>
+    <associate|auto-30|<tuple|5.3.2|57>>
+    <associate|auto-31|<tuple|III|65>>
+    <associate|auto-32|<tuple|6|65>>
+    <associate|auto-33|<tuple|7|68>>
+    <associate|auto-34|<tuple|8|69>>
+    <associate|auto-35|<tuple|9|70>>
+    <associate|auto-36|<tuple|9.1|74>>
+    <associate|auto-37|<tuple|9.2|75>>
+    <associate|auto-38|<tuple|9.3|77>>
+    <associate|auto-39|<tuple|9.4|77>>
     <associate|auto-4|<tuple|3|5>>
-    <associate|auto-40|<tuple|9.5|78>>
+    <associate|auto-40|<tuple|9.5|79>>
     <associate|auto-41|<tuple|9.6|84>>
-    <associate|auto-42|<tuple|10|86>>
-    <associate|auto-43|<tuple|10.1|87>>
-    <associate|auto-44|<tuple|10.2|90>>
-    <associate|auto-45|<tuple|10.3|93>>
-    <associate|auto-46|<tuple|10.4|95>>
-    <associate|auto-47|<tuple|11|96>>
-    <associate|auto-48|<tuple|11.1|99>>
-    <associate|auto-49|<tuple|IV|102>>
-    <associate|auto-5|<tuple|3|6>>
-    <associate|auto-50|<tuple|12|102>>
-    <associate|auto-51|<tuple|12.1|103>>
-    <associate|auto-52|<tuple|12.1.1|105>>
-    <associate|auto-53|<tuple|12.1.2|106>>
-    <associate|auto-54|<tuple|12.1.3|109>>
-    <associate|auto-55|<tuple|12.1.4|112>>
-    <associate|auto-56|<tuple|12.2|114>>
-    <associate|auto-57|<tuple|12.2.1|115>>
-    <associate|auto-58|<tuple|12.3|117>>
-    <associate|auto-59|<tuple|13|120>>
+    <associate|auto-42|<tuple|10|87>>
+    <associate|auto-43|<tuple|10.1|88>>
+    <associate|auto-44|<tuple|10.2|91>>
+    <associate|auto-45|<tuple|10.3|94>>
+    <associate|auto-46|<tuple|10.4|96>>
+    <associate|auto-47|<tuple|11|97>>
+    <associate|auto-48|<tuple|11.1|100>>
+    <associate|auto-49|<tuple|IV|103>>
+    <associate|auto-5|<tuple|3|5>>
+    <associate|auto-50|<tuple|12|103>>
+    <associate|auto-51|<tuple|12.1|104>>
+    <associate|auto-52|<tuple|12.1.1|106>>
+    <associate|auto-53|<tuple|12.1.2|107>>
+    <associate|auto-54|<tuple|12.1.3|110>>
+    <associate|auto-55|<tuple|12.1.4|113>>
+    <associate|auto-56|<tuple|12.2|115>>
+    <associate|auto-57|<tuple|12.2.1|116>>
+    <associate|auto-58|<tuple|12.3|118>>
+    <associate|auto-59|<tuple|13|121>>
     <associate|auto-6|<tuple|3|6>>
     <associate|auto-60|<tuple|13.1|121>>
-    <associate|auto-61|<tuple|13.2|123>>
-    <associate|auto-62|<tuple|13.3|124>>
-    <associate|auto-7|<tuple|3|7>>
+    <associate|auto-61|<tuple|13.2|124>>
+    <associate|auto-62|<tuple|13.3|125>>
+    <associate|auto-63|<tuple|13.4|128>>
+    <associate|auto-64|<tuple|13.4.1|128>>
+    <associate|auto-65|<tuple|13.4.2|130>>
+    <associate|auto-7|<tuple|3|6>>
     <associate|auto-8|<tuple|3|7>>
-    <associate|auto-9|<tuple|2|12>>
+    <associate|auto-9|<tuple|2|11>>
     <associate|exponential-identities|<tuple|1|8>>
     <associate|first-order-const-ode|<tuple|2|16>>
     <associate|homo-2nd|<tuple|3|36>>
@@ -8679,6 +9041,18 @@
       <with|par-left|<quote|1tab>|13.3<space|2spc>General case: arbitrary
       initial position and velocity <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-62>>
+
+      <with|par-left|<quote|1tab>|13.4<space|2spc>D'Alembert solution to the
+      wave equation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-63>>
+
+      <with|par-left|<quote|2tab>|13.4.1<space|2spc>Zero initial velocity
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-64>>
+
+      <with|par-left|<quote|2tab>|13.4.2<space|2spc>Zero initial position
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-65>>
     </associate>
   </collection>
 </auxiliary>
