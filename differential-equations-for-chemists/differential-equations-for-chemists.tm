@@ -277,6 +277,14 @@
     <with|par-left|2tab|13.4.1<space|2spc>Zero initial velocity
     <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
     <no-break><pageref|auto-64>>
+
+    <with|par-left|2tab|13.4.2<space|2spc>Zero initial position
+    <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-65>>
+
+    <vspace*|1fn><with|font-series|bold|math-font-series|bold|14<space|2spc>Green's
+    functions> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+    <no-break><pageref|auto-66><vspace|0.5fn>
   </table-of-contents>
 
   <page-break*>
@@ -8544,8 +8552,8 @@
   <with|gr-mode|<tuple|edit|math-at>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|cartesian|<point|0|0>|1>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-auto-crop|true|<graphics||<line|<point|-7|0>|<point|-6.0|0.0>>|<spline|<point|-6|0>|<point|-5.0|1.0>|<point|-4.0|0.0>>|<line|<point|-4|0>|<point|4.0|0.0>>|<spline|<point|4|0>|<point|5.0|1.0>|<point|6.0|0.0>>|<line|<point|6|0>|<point|7.0|0.0>>|<math-at|<frac|1|2>*<around*|[|g<around*|(|x+2a|)>+g<around*|(|x-2a|)>|]>|<point|2.5|3.0>>|<math-at|<frac|b|2>|<point|0.1|1.0>>|<math-at|x<rsub|0>+2a|<point|4.4|-0.5>>|<math-at|x<rsub|0>-2a|<point|-5.6|-0.4>>>>
 
   As we can see <math|u<around*|(|x,t|)>> is just a sum of waves that get
-  further and further apart. (just line throwing a pebble flatly above
-  water.)
+  further and further apart. (Similar to the trajectory of a pebble thrown
+  flatly above water.)
 
   Recall example
 
@@ -8582,7 +8590,7 @@
     <around*|(|\<mathpi\>*x|)>*cos <around*|(|\<mathpi\>*a*t|)>>>>>
   </eqnarray*>
 
-  Fouerier series solution and D'Alembert solution give the same result.
+  Fourier series solution and D'Alembert solution give the same result.
 
   Why is the D'Alembert solution equal to the Fourier series solution in
   general? (If so, then the Fourier series solution <strong|is> the solution
@@ -8590,7 +8598,7 @@
 
   Still assuming <math|u<rsub|t>\<equiv\>0> and
   <math|u<around*|(|x,0|)>=f<around*|(|x|)>> on <math|<around*|[|0,L|]>>. The
-  Fouerier series solution:
+  Fourier series solution:
 
   <\equation*>
     w<around*|(|x,t|)>=<big|sum><rsub|n=1><rsup|\<infty\>>c<rsub|n>*sin
@@ -8690,6 +8698,332 @@
   </equation*>
 
   Similarly, using periodicity, <math|u<around*|(|L,t|)>=0>.
+
+  <marginal-note|normal|c|lec 26 30.01.23>
+
+  <section|Green's functions>
+
+  <subsection|Introduction>
+
+  These can be used to solve many PDEs. Look at the heat equation
+
+  <\equation*>
+    \<alpha\><rsup|2>*u<rsub|x\<nocomma\>x>=u<rsub|t>
+  </equation*>
+
+  on an infinite rod, i.e. <math|x\<in\><around*|(|-\<infty\>,\<infty\>|)>>.
+  BCs are: <math|lim<rsub|x\<rightarrow\>\<infty\>>u<around*|(|x,t|)>=lim<rsub|x\<rightarrow\>-\<infty\>>u<around*|(|x,t|)>=0>.
+  ICs are: <math|u<around*|(|x,0|)>=f<around*|(|x|)>>,
+  <math|x\<in\>\<bbb-R\>>.
+
+  Our previous method using the orthogonal family <math|<around*|{|sin
+  <frac|n*\<mathpi\>*x|L>,cos <frac|n*\<mathpi\>*x|L>|}>> in space of
+  periodic functions will not work. The method of Green's functions uses one
+  special function that can be used to compute a solution for a given IC.
+
+  We first need to introduce a generalized function (or distribution) called
+  <em|the Dirac delta function>, also called the Impulse function:
+  <math|\<delta\><around*|(|x|)>>. We define <math|\<delta\><around*|(|x|)>>
+  as the limit of a sequence of functions
+  <math|\<delta\><rsub|n><around*|(|x|)>> such that
+
+  <\equation*>
+    \<delta\><rsub|n><around*|(|x|)>=<choice|<tformat|<table|<row|<cell|n,>|<cell|x\<in\><around*|[|-<frac|1|2n>,<frac|1|2n>|]>>>|<row|<cell|0>|<cell|x\<neq\>\<pm\><frac|1|2n>>>>>>
+  </equation*>
+
+  <\padded-center>
+    <with|gr-mode|<tuple|edit|cline>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|cartesian|<point|0|0>|1>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-auto-crop|true|gr-color|none|gr-fill-color|#aaf|gr-opacity|30%|<graphics||<with|color|blue|line-width|2ln|<line|<point|-4|0>|<point|-1.0|0.0>>>|<with|color|blue|line-width|2ln|<line|<point|1|0>|<point|4.0|0.0>>>|<with|color|blue|line-width|2ln|<line|<point|-1|3>|<point|1.0|3.0>>>|<with|color|blue|dash-style|10|<line|<point|-1|3>|<point|-1.0|0.0>>>|<with|color|blue|dash-style|10|<line|<point|1|3>|<point|1.0|0.0>>>|<with|color|blue|<point|-1|0>>|<with|color|blue|<point|-1|3>>|<with|color|blue|<point|1|3>>|<with|color|blue|<point|1|0>>>>
+  </padded-center>
+
+  Note:
+
+  <\enumerate>
+    <item><math|\<delta\><rsub|n><around*|(|x|)>\<geq\>0<application-space|1em>\<forall\>x>
+
+    <item><math|lim<rsub|n\<rightarrow\>\<infty\>>
+    \<delta\><rsub|n><around*|(|x|)>=0<application-space|1em>\<forall\>x\<neq\>0>
+
+    <item><math|<big|int><rsub|-\<infty\>><rsup|\<infty\>>\<delta\><rsub|n><around*|(|x|)>
+    \<mathd\>x=1<application-space|1em>\<forall\>n>
+  </enumerate>
+
+  We define <math|\<delta\><around*|(|x|)>> as the lim<math|>it
+  <math|lim<rsub|n\<rightarrow\>\<infty\>> \<delta\><rsub|n><around*|(|x|)>>,
+  meaning infinite impulse at <math|x=0>.
+
+  <\equation*>
+    <big|int><rsub|-\<infty\>><rsup|\<infty\>>\<delta\><rsub|><around*|(|x|)>
+    \<mathd\>x=1
+  </equation*>
+
+  We can shift <math|\<delta\><around*|(|x|)>> so that the spike is at a
+  point <math|\<xi\>> by taking
+
+  <\equation*>
+    \<delta\><around*|(|x-\<xi\>|)>=lim<rsub|n\<rightarrow\>\<infty\>>
+    \<delta\><rsub|n><around*|(|x-\<xi\>|)>
+  </equation*>
+
+  <\definition*>
+    \;
+
+    <em|The Green function for the heat equation with the given boundary
+    conditions, <math|<rigid|G<around*|(|x,\<xi\>,t|)>>>, is the solution to
+    the heat equation & BCs where the IC is:
+    <math|<rigid|u<around*|(|x,0|)>=\<delta\><around*|(|x-\<xi\>|)>>>.>
+
+    <em|Essentially, the IC means infinite heat at <math|x=\<xi\>> and 0
+    elsewhere.>
+
+    <\equation*>
+      G<around*|(|x,\<xi\>,t|)>=<frac|1|2\<alpha\>*<sqrt|\<mathpi\>*t>>*\<mathe\><rsup|-<frac|<around*|(|x-\<xi\>|)><rsup|2>|4\<alpha\><rsup|2>*t>>
+    </equation*>
+  </definition*>
+
+  <\note*>
+    We have <math|t> in the denominator of <math|G>, thus <math|G> is not at
+    <math|t=0>. However, it can be extended continuously to <math|t=0>.
+  </note*>
+
+  We need to verify 3 things: <math|G> satisfies the heat equation,
+  <math|lim<rsub|t\<rightarrow\>0> G<around*|(|x,\<xi\>,t|)>=\<delta\><around*|(|x,\<xi\>|)>>
+  and that it satisfies the BCs.
+
+  <\itemize>
+    <item>Check that <math|\<alpha\><rsup|2>*G<rsub|x\<nocomma\>x>=G<rsub|t>>
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<frac|\<partial\>G|\<partial\>t>>|<cell|=>|<cell|-<frac|1|2t*<sqrt|t>>\<cdot\><frac|\<mathe\><rsup|-<frac|<around*|(|x-\<xi\>|)><rsup|2>|4\<alpha\><rsup|2>*t>>|2\<alpha\>*<sqrt|\<mathpi\>>>+<frac|1|2\<alpha\>*<sqrt|\<mathpi\>*t>>\<cdot\><frac|-<around*|(|x-\<xi\>|)><rsup|2>|4\<alpha\><rsup|2>*<around*|(|-t<rsup|2>|)>>*\<mathe\><rsup|-<frac|<around*|(|x-\<xi\>|)><rsup|2>|4\<alpha\><rsup|2>*t>>>>|<row|<cell|>|<cell|=>|<cell|<frac|1|2t>*\<cdot\>G+<frac|<around*|(|x-\<xi\>|)><rsup|2>|4\<alpha\><rsup|2>*t<rsup|2>>\<cdot\>G>>>>
+    </eqnarray*>
+
+    .
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|<frac|\<partial\>G|\<partial\>x>>|<cell|=>|<cell|<frac|-2*<around*|(|x-\<xi\>|)>|4\<alpha\><rsup|2>*t>\<cdot\>G>>|<row|<cell|<frac|\<partial\><rsup|2>G|\<partial\>x<rsup|2>>>|<cell|=>|<cell|-<frac|1|2\<alpha\><rsup|2>*t>\<cdot\>G+<frac|<around*|(|x-\<xi\>|)><rsup|2>|4\<alpha\><rsup|4>*t<rsup|2>>\<cdot\>G>>>>
+    </eqnarray*>
+
+    Indeed, <math|G<around*|(|x,\<xi\>,t|)>> solves the heat equation.
+
+    <item>Check BCs. As <math|exp <around*|(|-<frac|<around*|(|x-\<xi\>|)><rsup|2>|4\<alpha\><rsup|2>*t>|)>\<rightarrow\>0>
+    as <math|x\<rightarrow\>\<pm\>\<infty\>>, we have:
+
+    <\equation*>
+      lim<rsub|x\<rightarrow\>\<infty\>> G<around*|(|x,\<xi\>,t|)>=0=lim<rsub|x\<rightarrow\>-\<infty\>>
+      G<around*|(|x,\<xi\>,t|)>
+    </equation*>
+
+    <item>It remains to show that <math|G<around*|(|x,\<xi\>,0|)>=\<delta\><around*|(|x-\<xi\>|)>>.
+    (ICs.) And for that we need to show that <math|G<around*|(|x,\<xi\>,t|)>>
+    has a limit as <math|t\<rightarrow\>0> and that this limit equals
+    <math|\<delta\><around*|(|x,\<xi\>|)>>.
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|lim<rsub|t\<rightarrow\>0>
+      <frac|1|2\<alpha\><rsup|2>*<sqrt|\<mathpi\>*t>>*\<mathe\><rsup|-<frac|<around*|(|x-\<xi\>|)><rsup|2>|4a<rsup|2>*t>>>|<cell|<above|=|t\<rightarrow\>1/s>>|<cell|lim<rsub|s\<rightarrow\>\<infty\>>
+      <frac|<sqrt|s>|2\<alpha\><rsup|2>*<sqrt|\<mathpi\>>>*\<mathe\><rsup|-<frac|<around*|(|x-\<xi\>|)><rsup|2>*s|4\<alpha\><rsup|2>>>>>|<row|<cell|>|<cell|=>|<cell|lim<rsub|s\<rightarrow\>\<infty\>>
+      <frac|1|2\<alpha\><rsup|2>*<sqrt|\<mathpi\>>>\<cdot\><frac|<sqrt|s>|\<mathe\><rsup|<frac|<around*|(|x-\<xi\>|)><rsup|2>*s|4\<alpha\><rsup|2>>>>>>>>
+    </eqnarray*>
+
+    By L'hopital rule we get\ 
+
+    <\equation*>
+      lim<rsub|s\<rightarrow\>\<infty\>><frac|<sqrt|s>|\<mathe\><rsup|s>>=0
+    </equation*>
+
+    So
+
+    <\equation*>
+      lim<rsub|s\<rightarrow\>\<infty\>> <frac|1|2\<alpha\><rsup|2>*<sqrt|\<mathpi\>>>\<cdot\><frac|<sqrt|s>|\<mathe\><rsup|<frac|<around*|(|x-\<xi\>|)><rsup|2>*s|4\<alpha\><rsup|2>>>>=0,<application-space|1em>x\<neq\>\<xi\>
+    </equation*>
+
+    When <math|x=\<xi\>> we get
+
+    <\equation*>
+      lim<rsub|t\<rightarrow\>0> G<around*|(|\<xi\>,\<xi\>,t|)>=\<infty\>
+    </equation*>
+
+    so that
+
+    <\equation*>
+      lim<rsub|t\<rightarrow\>0> G<around*|(|x,\<xi\>,t|)>=<choice|<tformat|<table|<row|<cell|0,>|<cell|x\<neq\>\<xi\>>>|<row|<cell|\<infty\>,>|<cell|x=\<xi\>>>>>>=\<delta\><around*|(|x-\<xi\>|)>
+    </equation*>
+  </itemize>
+
+  \;
+
+  How do we use Green's functions in the general problem? (With \Ptrue\Q
+  ICs.)
+
+  <subsection|Solving the general case for the heat equation>
+
+  <\theorem*>
+    \;
+
+    <em|Given Our BVP with IC <math|u<around*|(|x,0|)>=f<around*|(|x|)>> for
+    <math|f<around*|(|x|)>> continuous, the solution is given by:>
+
+    <\equation*>
+      u<around*|(|x,t|)>=<big|int><rsub|-\<infty\>><rsup|\<infty\>>G<around*|(|x,\<xi\>,t|)>*f<around*|(|\<xi\>|)>
+      \<mathd\>\<xi\>
+    </equation*>
+  </theorem*>
+
+  <\note*>
+    In most cases this will be a difficult integral, but it can be
+    approximated numerically.
+  </note*>
+
+  Verify that <math|u<around*|(|x,t|)>> is indeed the solution.
+
+  <\itemize>
+    <item>Show that <math|u<around*|(|x,t|)>> satisfies the heat equation.
+
+    <\equation*>
+      \<alpha\><rsup|2>*u<rsub|x\<nocomma\>x>=\<alpha\><rsup|2>\<cdot\><frac|\<partial\><rsup|2>|\<partial\>x<rsup|2>><around*|[|<big|int><rsub|-\<infty\>><rsup|\<infty\>>G<around*|(|x,\<xi\>,t|)>*f<around*|(|\<xi\>|)>
+      \<mathd\>\<xi\>|]>
+    </equation*>
+
+    Use the fact that <math|<frac|\<partial\><rsup|2>|\<partial\>x<rsup|2>><big|int><around*|(|\<cdot\>|)>=<big|int><frac|\<partial\><rsup|2>|\<partial\>x<rsup|2>><around*|(|\<cdot\>|)>>.
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|\<alpha\><rsup|2>*u<rsub|x\<nocomma\>x>>|<cell|=>|<cell|\<alpha\><rsup|2><big|int><rsub|-\<infty\>><rsup|\<infty\>><frac|\<partial\><rsup|2>|\<partial\>x<rsup|2>><around*|(|G<around*|(|x,\<xi\>,t|)>|)>*f<around*|(|\<xi\>|)>
+      \<mathd\>\<xi\>=\<alpha\><rsup|2>*<big|int><rsub|-\<infty\>><rsup|\<infty\>>G<rsub|x\<nocomma\>x>*f<around*|(|\<xi\>|)>
+      \<mathd\>\<xi\>>>|<row|<cell|>|<cell|=>|<cell|<big|int><rsub|-\<infty\>><rsup|\<infty\>>G<rsub|t>*f<around*|(|\<xi\>|)>
+      \<mathd\>\<xi\>=<frac|\<partial\>|\<partial\>t>*<big|int><rsub|-\<infty\>><rsup|\<infty\>>G*f<around*|(|\<xi\>|)>
+      \<mathd\>\<xi\>=u<rsub|t>>>>>
+    </eqnarray*>
+
+    <item>Show that BCs are satisfied.
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|lim<rsub|x\<rightarrow\>\<infty\>>
+      u<around*|(|x,t|)>>|<cell|=>|<cell|lim<rsub|x\<rightarrow\>\<infty\>>
+      <big|int><rsub|-\<infty\>><rsup|\<infty\>>G<around*|(|x,\<xi\>,t|)>*f<around*|(|\<xi\>|)>
+      \<mathd\>\<xi\>=<big|int><rsub|-\<infty\>><rsup|\<infty\>>\<nospace\><around*|(|lim<rsub|x\<rightarrow\>\<infty\>>
+      G<around*|(|x,\<xi\>,t|)>|)>*f<around*|(|\<xi\>|)> \<mathd\>\<xi\>>>>>
+    </eqnarray*>
+
+    We already calculated the limit and got
+    <math|><math|lim<rsub|x\<rightarrow\>\<infty\>>
+    G<around*|(|x,\<xi\>,t|)>=0>, so
+
+    <\equation*>
+      lim<rsub|x\<rightarrow\>\<infty\>> u<around*|(|x,t|)>=0
+    </equation*>
+
+    <item>Show that ICs are satisfied. To show that
+    <math|u<around*|(|x,0|)>=f<around*|(|x|)>> we need to show a property of
+    the delta function: The <em|sifting> property of
+    <math|\<delta\><around*|(|x|)>>.
+
+    <\ornamented>
+      The <em|sifting> property of the Dirac delta function. For all <math|x>
+      and continuous <math|f<around*|(|x|)>>:
+
+      <\equation*>
+        <big|int><rsub|-\<infty\>><rsup|\<infty\>>\<delta\><around*|(|x-\<xi\>|)>*f<around*|(|\<xi\>|)>
+        \<mathd\>\<xi\>=f<around*|(|x|)>
+      </equation*>
+
+      The integral is equivalent to the convolution of <math|\<delta\>> and
+      <math|f>, denoted <math|\<delta\>\<ast\>f>.
+    </ornamented>
+
+    <\proof>
+      We calculate
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<big|int><rsub|-\<infty\>><rsup|\<infty\>>\<delta\><rsub|n><around*|(|x-\<xi\>|)>*f<around*|(|\<xi\>|)>
+        \<mathd\>\<xi\>>|<cell|=>|<cell|<big|int><rsub|x-<frac|1|2n>><rsup|x+<frac|1|2n>>n\<cdot\>f<around*|(|\<xi\>|)>
+        \<mathd\>\<xi\>=n\<cdot\><big|int><rsub|x-<frac|1|2n>><rsup|x+<frac|1|2n>>f<around*|(|\<xi\>|)>
+        \<mathd\>\<xi\>>>>>
+      </eqnarray*>
+
+      By the <em|integral intermediate value> theorem (for continuous
+      functions), there exists a point <math|c\<in\><around*|[|a,b|]>> such
+      that
+
+      <\equation*>
+        <big|int><rsub|a><rsup|b>f<around*|(|\<xi\>|)>
+        \<mathd\>\<xi\>=f<around*|(|c|)>\<cdot\><around*|(|b-a|)>
+      </equation*>
+
+      \ So we have <math|x<rsub|n>\<in\><around*|[|x-<frac|1|2n>,x+<frac|1|2n>|]>>
+      such that
+
+      <\equation*>
+        <big|int><rsub|x-<frac|1|2n>><rsup|x+<frac|1|2n>>f<around*|(|\<xi\>|)>
+        \<mathd\>\<xi\>=f<around*|(|x<rsub|n>|)>\<cdot\><frac|1|n>
+      </equation*>
+
+      So:
+
+      <\equation*>
+        <big|int><rsub|-\<infty\>><rsup|\<infty\>>\<delta\><rsub|n><around*|(|x-\<xi\>|)>*f<around*|(|\<xi\>|)>
+        \<mathd\>\<xi\>=f<around*|(|x<rsub|n>|)><long-arrow|\<rubber-rightarrow\>|n\<rightarrow\>\<infty\>>f<around*|(|x|)>
+      </equation*>
+
+      Conclude that
+
+      <\equation*>
+        <big|int><rsub|-\<infty\>><rsup|\<infty\>>\<delta\><around*|(|x-\<xi\>|)>*f<around*|(|\<xi\>|)>
+        \<mathd\>\<xi\>=f<around*|(|x|)>
+      </equation*>
+
+      \;
+    </proof>
+
+    We now use this to show that <math|u<around*|(|x,0|)>=f<around*|(|x|)>>:
+
+    <\equation*>
+      u<around*|(|x,0|)>=<big|int><rsub|-\<infty\>><rsup|\<infty\>>G<around*|(|x,\<xi\>,0|)>*f<around*|(|\<xi\>|)>
+      \<mathd\>\<xi\>=<big|int><rsub|-\<infty\>><rsup|\<infty\>>\<delta\><around*|(|x-\<xi\>|)>*f<around*|(|\<xi\>|)>
+      \<mathd\>\<xi\>=f<around*|(|x|)>
+    </equation*>
+
+    This method can be used for many PDEs!
+
+    \;
+  </itemize>
+
+  The Fourier series method can also be used for many PDEs, where we have
+  finite conditions, e.g. 2-dimensional heat equation, Laplace's equation
+  etc.
+
+  Laplace's equation:
+
+  <\equation*>
+    <frac|\<partial\><rsup|2>u|\<partial\>x<rsup|2>>+<frac|\<partial\><rsup|2>u|\<partial\>y<rsup|2>>=0
+  </equation*>
+
+  on a rectangle. Equation can be solved by separation of variables,
+  fundamental solutions method etc.
+
+  <\note*>
+    There are a class of PDEs of the form: <math|u<around*|(|x,t|)>=u>
+
+    <\equation*>
+      r<around*|(|x|)>*u<rsub|t>=<around*|(|p<around*|(|x|)>*u<rsub|x>|)><rsub|x>-q<around*|(|x|)>*u
+    </equation*>
+
+    If <math|p,r> are positive contstant functions and <math|q\<equiv\>0>
+    this is <math|r*u<rsub|t>=p*u<rsub|x\<nocomma\>x>>, which is the heat
+    equation!
+
+    There are also BVPs of the form:
+
+    <\equation*>
+      a<rsub|1>*u<around*|(|0,t|)>+a<rsub|2>*u<rsub|x><around*|(|0,t|)>=0
+    </equation*>
+
+    <\equation*>
+      b<rsub|1>*u<around*|(|L,t|)>+b<rsub|2>*u<rsub|x><around*|(|L,t|)>=0
+    </equation*>
+
+    This is called a <em|Strum-Liouville problem>. Can be solved by
+    separation of variables by finding solutions of the form
+    <math|u<around*|(|x,t|)>=X<around*|(|x|)>\<cdot\>T<around*|(|t|)>>.
+  </note*>
 </body>
 
 <\initial>
@@ -8716,10 +9050,10 @@
     <associate|auto-10|<tuple|2|13>>
     <associate|auto-11|<tuple|I|16>>
     <associate|auto-12|<tuple|1|16>>
-    <associate|auto-13|<tuple|1.1|17>>
+    <associate|auto-13|<tuple|1.1|16>>
     <associate|auto-14|<tuple|2|20>>
-    <associate|auto-15|<tuple|2.1|25>>
-    <associate|auto-16|<tuple|2.2|26>>
+    <associate|auto-15|<tuple|2.1|24>>
+    <associate|auto-16|<tuple|2.2|25>>
     <associate|auto-17|<tuple|II|28>>
     <associate|auto-18|<tuple|3|28>>
     <associate|auto-19|<tuple|3.1|28>>
@@ -8733,47 +9067,50 @@
     <associate|auto-26|<tuple|5.2.1|38>>
     <associate|auto-27|<tuple|5.2.2|42>>
     <associate|auto-28|<tuple|5.3|48>>
-    <associate|auto-29|<tuple|5.3.1|50>>
+    <associate|auto-29|<tuple|5.3.1|49>>
     <associate|auto-3|<tuple|3|5>>
-    <associate|auto-30|<tuple|5.3.2|57>>
-    <associate|auto-31|<tuple|III|65>>
-    <associate|auto-32|<tuple|6|65>>
-    <associate|auto-33|<tuple|7|68>>
-    <associate|auto-34|<tuple|8|69>>
-    <associate|auto-35|<tuple|9|70>>
-    <associate|auto-36|<tuple|9.1|74>>
-    <associate|auto-37|<tuple|9.2|75>>
-    <associate|auto-38|<tuple|9.3|77>>
-    <associate|auto-39|<tuple|9.4|77>>
+    <associate|auto-30|<tuple|5.3.2|56>>
+    <associate|auto-31|<tuple|III|64>>
+    <associate|auto-32|<tuple|6|64>>
+    <associate|auto-33|<tuple|7|67>>
+    <associate|auto-34|<tuple|8|68>>
+    <associate|auto-35|<tuple|9|69>>
+    <associate|auto-36|<tuple|9.1|73>>
+    <associate|auto-37|<tuple|9.2|74>>
+    <associate|auto-38|<tuple|9.3|76>>
+    <associate|auto-39|<tuple|9.4|76>>
     <associate|auto-4|<tuple|3|5>>
-    <associate|auto-40|<tuple|9.5|79>>
-    <associate|auto-41|<tuple|9.6|84>>
-    <associate|auto-42|<tuple|10|87>>
-    <associate|auto-43|<tuple|10.1|88>>
-    <associate|auto-44|<tuple|10.2|91>>
-    <associate|auto-45|<tuple|10.3|94>>
-    <associate|auto-46|<tuple|10.4|96>>
-    <associate|auto-47|<tuple|11|97>>
-    <associate|auto-48|<tuple|11.1|100>>
-    <associate|auto-49|<tuple|IV|103>>
+    <associate|auto-40|<tuple|9.5|78>>
+    <associate|auto-41|<tuple|9.6|83>>
+    <associate|auto-42|<tuple|10|86>>
+    <associate|auto-43|<tuple|10.1|87>>
+    <associate|auto-44|<tuple|10.2|90>>
+    <associate|auto-45|<tuple|10.3|93>>
+    <associate|auto-46|<tuple|10.4|95>>
+    <associate|auto-47|<tuple|11|96>>
+    <associate|auto-48|<tuple|11.1|99>>
+    <associate|auto-49|<tuple|IV|102>>
     <associate|auto-5|<tuple|3|5>>
-    <associate|auto-50|<tuple|12|103>>
-    <associate|auto-51|<tuple|12.1|104>>
-    <associate|auto-52|<tuple|12.1.1|106>>
-    <associate|auto-53|<tuple|12.1.2|107>>
-    <associate|auto-54|<tuple|12.1.3|110>>
-    <associate|auto-55|<tuple|12.1.4|113>>
-    <associate|auto-56|<tuple|12.2|115>>
-    <associate|auto-57|<tuple|12.2.1|116>>
-    <associate|auto-58|<tuple|12.3|118>>
-    <associate|auto-59|<tuple|13|121>>
+    <associate|auto-50|<tuple|12|102>>
+    <associate|auto-51|<tuple|12.1|103>>
+    <associate|auto-52|<tuple|12.1.1|105>>
+    <associate|auto-53|<tuple|12.1.2|106>>
+    <associate|auto-54|<tuple|12.1.3|109>>
+    <associate|auto-55|<tuple|12.1.4|112>>
+    <associate|auto-56|<tuple|12.2|114>>
+    <associate|auto-57|<tuple|12.2.1|115>>
+    <associate|auto-58|<tuple|12.3|117>>
+    <associate|auto-59|<tuple|13|120>>
     <associate|auto-6|<tuple|3|6>>
-    <associate|auto-60|<tuple|13.1|121>>
-    <associate|auto-61|<tuple|13.2|124>>
-    <associate|auto-62|<tuple|13.3|125>>
-    <associate|auto-63|<tuple|13.4|128>>
-    <associate|auto-64|<tuple|13.4.1|128>>
-    <associate|auto-65|<tuple|13.4.2|130>>
+    <associate|auto-60|<tuple|13.1|120>>
+    <associate|auto-61|<tuple|13.2|123>>
+    <associate|auto-62|<tuple|13.3|124>>
+    <associate|auto-63|<tuple|13.4|127>>
+    <associate|auto-64|<tuple|13.4.1|127>>
+    <associate|auto-65|<tuple|13.4.2|129>>
+    <associate|auto-66|<tuple|14|130>>
+    <associate|auto-67|<tuple|14.1|130>>
+    <associate|auto-68|<tuple|14.2|133>>
     <associate|auto-7|<tuple|3|6>>
     <associate|auto-8|<tuple|3|7>>
     <associate|auto-9|<tuple|2|11>>
@@ -9053,6 +9390,18 @@
       <with|par-left|<quote|2tab>|13.4.2<space|2spc>Zero initial position
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-65>>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|14<space|2spc>Green's
+      functions> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-66><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|14.1<space|2spc>Introduction
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-67>>
+
+      <with|par-left|<quote|1tab>|14.2<space|2spc>Solving the general case
+      for the heat equation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-68>>
     </associate>
   </collection>
 </auxiliary>
