@@ -1,6 +1,6 @@
 <TeXmacs|2.1.2>
 
-<style|<tuple|course|python|std-shadow|std-frame|SIUnits-simple|hanging-theorems>>
+<style|<tuple|course|python|std-shadow|std-frame|hanging-theorems|SIUnits-simple>>
 
 <\body>
   <\hide-preamble>
@@ -8271,6 +8271,8 @@
   In other words, <math|k<rsub|n>\<cdot\><frac|n*\<mathpi\>*a|L>> is the sine
   Fourier coefficient of <math|g<around*|(|x|)>>.
 
+  \;
+
   <\equation*>
     k<rsub|n>*<frac|n*\<mathpi\>*a|L>=<frac|2|L>*<big|int><rsub|0><rsup|L>g<around*|(|x|)>*sin
     <frac|n*\<mathpi\>*x|L> \<mathd\>x
@@ -8416,6 +8418,8 @@
   <\enumerate>
     <item>Solve for ICs:\ 
 
+    \;
+
     <\equation*>
       <choice|<tformat|<table|<row|<cell|u<around*|(|x,0|)>=<frac|1|4>*sin
       <around*|(|\<mathpi\>*x|)>>>|<row|<cell|u<rsub|t><around*|(|x,0|)>\<equiv\>0>>>>>
@@ -8500,42 +8504,44 @@
     </em>
   </theorem*>
 
-  Show that the solution satisfies homogeneous BCs.
+  <\itemize>
+    <item>Show that the solution satisfies homogeneous BCs.
 
-  <\equation*>
-    u<around*|(|0,t|)>=<frac|1|2>*<around*|[|F<around*|(|a*t|)>-F<around*|(|-a*t|)>|]>=<around*|[|F<text|
-    odd>|]>=<frac|1|2>*<around*|[|F<around*|(|a*t|)>-F<around*|(|a*t|)>|]>=0
-  </equation*>
+    <\equation*>
+      u<around*|(|0,t|)>=<frac|1|2>*<around*|[|F<around*|(|a*t|)>-F<around*|(|-a*t|)>|]>=<around*|[|F<text|
+      odd>|]>=<frac|1|2>*<around*|[|F<around*|(|a*t|)>-F<around*|(|a*t|)>|]>=0
+    </equation*>
 
-  <\equation*>
-    u<around*|(|L,t|)>=<frac|1|2>*<around*|[|F<around*|(|L*+a*t|)>+F<around*|(|L-a*t|)>|]>=<frac|1|2>*<around*|[|F<around*|(|L+a*t|)>-F<around*|(|a*t-L|)>|]>
-  </equation*>
+    <\equation*>
+      u<around*|(|L,t|)>=<frac|1|2>*<around*|[|F<around*|(|L*+a*t|)>+F<around*|(|L-a*t|)>|]>=<frac|1|2>*<around*|[|F<around*|(|L+a*t|)>-F<around*|(|a*t-L|)>|]>
+    </equation*>
 
-  Using the fact that <math|F> is <math|2L>-periodic,
+    Using the fact that <math|F> is <math|2L>-periodic,
 
-  <\equation*>
-    u<around*|(|L,t|)>=<frac|1|2>*<around*|[|F<around*|(|L+a*t|)>-F<around*|(|2*L+a*t-L|)>|]>=<frac|1|2>*<around*|[|F<around*|(|L+a*t|)>-F<around*|(|L+a*t|)>|]>=0
-  </equation*>
+    <\equation*>
+      u<around*|(|L,t|)>=<frac|1|2>*<around*|[|F<around*|(|L+a*t|)>-F<around*|(|2*L+a*t-L|)>|]>=<frac|1|2>*<around*|[|F<around*|(|L+a*t|)>-F<around*|(|L+a*t|)>|]>=0
+    </equation*>
 
-  Show that the solution solves the wave equation.
+    <item>Show that the solution solves the wave equation.
 
-  <\eqnarray*>
-    <tformat|<table|<row|<cell|u<rsub|t><around*|(|x,t|)>>|<cell|=>|<cell|<frac|1|2>*<around*|[|F<rprime|'><around*|(|x+a*t|)>\<cdot\>a+F<rprime|'><around*|(|x-a*t|)>\<cdot\><around*|(|-a|)>|]>>>|<row|<cell|u<rsub|t\<nocomma\>t><around*|(|x,t|)>>|<cell|=>|<cell|<frac|1|2>*<around*|[|F<rprime|''><around*|(|x+a*t|)>*a<rsup|2>+F<rprime|''><around*|(|x-a*t|)>*a<rsup|2>|]>=<frac|a<rsup|2>|2><around*|[|F<rprime|''><around*|(|x+a*t|)>+F<rprime|''><around*|(|x-a*t|)>|]>=a<rsup|2>*u<rsub|x\<nocomma\>x>>>>>
-  </eqnarray*>
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|u<rsub|t><around*|(|x,t|)>>|<cell|=>|<cell|<frac|1|2>*<around*|[|F<rprime|'><around*|(|x+a*t|)>\<cdot\>a+F<rprime|'><around*|(|x-a*t|)>\<cdot\><around*|(|-a|)>|]>>>|<row|<cell|u<rsub|t\<nocomma\>t><around*|(|x,t|)>>|<cell|=>|<cell|<frac|1|2>*<around*|[|F<rprime|''><around*|(|x+a*t|)>*a<rsup|2>+F<rprime|''><around*|(|x-a*t|)>*a<rsup|2>|]>=<frac|a<rsup|2>|2><around*|[|F<rprime|''><around*|(|x+a*t|)>+F<rprime|''><around*|(|x-a*t|)>|]>=a<rsup|2>*u<rsub|x\<nocomma\>x>>>>>
+    </eqnarray*>
 
-  Check ICs:
+    <item>Check ICs:
 
-  <\equation*>
-    u<around*|(|x,0|)>=<frac|1|2>*<around*|[|F<around*|(|x|)>+F<around*|(|x|)>|]>=F<around*|(|x|)>=f<around*|(|x|)>,x\<in\><around*|[|0,L|]>
-  </equation*>
+    <\equation*>
+      u<around*|(|x,0|)>=<frac|1|2>*<around*|[|F<around*|(|x|)>+F<around*|(|x|)>|]>=F<around*|(|x|)>=f<around*|(|x|)>,x\<in\><around*|[|0,L|]>
+    </equation*>
 
-  <\equation*>
-    u<rsub|t><around*|(|x,t|)>=<frac|a|2>*<around*|[|F<rprime|'><around*|(|x+a*t|)>-F<around*|(|x<rprime|'>-a*t|)>|]>
-  </equation*>
+    <\equation*>
+      u<rsub|t><around*|(|x,t|)>=<frac|a|2>*<around*|[|F<rprime|'><around*|(|x+a*t|)>-F<around*|(|x<rprime|'>-a*t|)>|]>
+    </equation*>
 
-  <\equation*>
-    u<rsub|t><around*|(|x,0|)>=<frac|a|2>*<around*|[|F<rprime|'><around*|(|x|)>-F<rprime|'><around*|(|x|)>|]>=0
-  </equation*>
+    <\equation*>
+      u<rsub|t><around*|(|x,0|)>=<frac|a|2>*<around*|[|F<rprime|'><around*|(|x|)>-F<rprime|'><around*|(|x|)>|]>=0
+    </equation*>
+  </itemize>
 
   Why use D'alembert's version? Suppose <math|g<around*|(|x|)>> has a graph:
 
@@ -8608,7 +8614,7 @@
   <math|c<rsub|n>> = Fourier sine coefficients for <math|f> so that
   <math|f<around*|(|x|)>=<big|sum>c<rsub|n>*sin <frac|n*\<mathpi\>*x|L>> on
   <math|<around*|[|0,L|]>> and RHS is a function defined for all
-  <math|x\<in\>\<bbb-R\>> and is odd! So RHS = <math|F<around*|(|x|)>> and
+  <math|x\<in\>\<bbb-R\>> and is odd! So RHS = <math|F<around*|(|x|)>> and is
   <math|2L>-periodic.
 
   <\note*>
@@ -8652,7 +8658,7 @@
   <em|primitive function> of <math|G<around*|(|x|)>>, i.e
 
   <\equation*>
-    H<around*|(|x|)>=<big|int><rsub|0><rsup|x>g<around*|(|\<xi\>|)> d\<xi\>
+    H<around*|(|x|)>=<big|int><rsub|0><rsup|x>G<around*|(|\<xi\>|)> d\<xi\>
   </equation*>
 
   so <math|H<rprime|'><around*|(|x|)>=G<around*|(|x|)>>. The solution to the
@@ -8701,11 +8707,11 @@
 
   <marginal-note|normal|c|lec 26 30.01.23>
 
-  <section|Green's functions>
+  <section|Green's function>
 
-  <subsection|Introduction>
+  <subsection|Introduction\VHeat conduction on an infinite rod>
 
-  These can be used to solve many PDEs. Look at the heat equation
+  Green's function can be used to solve many PDEs. Look at the heat equation
 
   <\equation*>
     \<alpha\><rsup|2>*u<rsub|x\<nocomma\>x>=u<rsub|t>
@@ -8718,7 +8724,7 @@
 
   Our previous method using the orthogonal family <math|<around*|{|sin
   <frac|n*\<mathpi\>*x|L>,cos <frac|n*\<mathpi\>*x|L>|}>> in space of
-  periodic functions will not work. The method of Green's functions uses one
+  periodic functions will not work. The method of Green's function uses one
   special function that can be used to compute a solution for a given IC.
 
   We first need to introduce a generalized function (or distribution) called
@@ -8728,20 +8734,25 @@
   <math|\<delta\><rsub|n><around*|(|x|)>> such that
 
   <\equation*>
-    \<delta\><rsub|n><around*|(|x|)>=<choice|<tformat|<table|<row|<cell|n,>|<cell|x\<in\><around*|[|-<frac|1|2n>,<frac|1|2n>|]>>>|<row|<cell|0>|<cell|x\<neq\>\<pm\><frac|1|2n>>>>>>
+    \<delta\><rsub|n><around*|(|x|)>=<choice|<tformat|<table|<row|<cell|n,>|<cell|x\<in\><around*|[|-<frac|1|2n>,<frac|1|2n>|]>>>|<row|<cell|0>|<cell|otherwise>>>>>
   </equation*>
+
+  \;
 
   <\padded-center>
     <with|gr-mode|<tuple|edit|cline>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|cartesian|<point|0|0>|1>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-auto-crop|true|gr-color|none|gr-fill-color|#aaf|gr-opacity|30%|<graphics||<with|color|blue|line-width|2ln|<line|<point|-4|0>|<point|-1.0|0.0>>>|<with|color|blue|line-width|2ln|<line|<point|1|0>|<point|4.0|0.0>>>|<with|color|blue|line-width|2ln|<line|<point|-1|3>|<point|1.0|3.0>>>|<with|color|blue|dash-style|10|<line|<point|-1|3>|<point|-1.0|0.0>>>|<with|color|blue|dash-style|10|<line|<point|1|3>|<point|1.0|0.0>>>|<with|color|blue|<point|-1|0>>|<with|color|blue|<point|-1|3>>|<with|color|blue|<point|1|3>>|<with|color|blue|<point|1|0>>>>
   </padded-center>
 
-  Note:
+  <underline|Properties of <math|\<delta\><rsub|n><around*|(|x|)>>:>
 
   <\enumerate>
-    <item><math|\<delta\><rsub|n><around*|(|x|)>\<geq\>0<application-space|1em>\<forall\>x>
+    <item><math|\<delta\><rsub|n><around*|(|x|)>\<geq\>0<application-space|1em>\<forall\>x,n>
 
     <item><math|lim<rsub|n\<rightarrow\>\<infty\>>
     \<delta\><rsub|n><around*|(|x|)>=0<application-space|1em>\<forall\>x\<neq\>0>
+
+    <item><math|lim<rsub|n\<rightarrow\>\<infty\>>
+    \<delta\><rsub|n><around*|(|0|)>=\<infty\>>
 
     <item><math|<big|int><rsub|-\<infty\>><rsup|\<infty\>>\<delta\><rsub|n><around*|(|x|)>
     \<mathd\>x=1<application-space|1em>\<forall\>n>
@@ -8767,9 +8778,9 @@
   <\definition*>
     \;
 
-    <em|The Green function for the heat equation with the given boundary
-    conditions, <math|<rigid|G<around*|(|x,\<xi\>,t|)>>>, is the solution to
-    the heat equation & BCs where the IC is:
+    <em|The Green function (also called propagator) for the heat equation
+    with the given boundary conditions, <math|<rigid|G<around*|(|x,\<xi\>,t|)>>>,
+    is the solution to the heat equation & BCs, where the IC is:
     <math|<rigid|u<around*|(|x,0|)>=\<delta\><around*|(|x-\<xi\>|)>>>.>
 
     <em|Essentially, the IC means infinite heat at <math|x=\<xi\>> and 0
@@ -9108,8 +9119,8 @@
     <associate|auto-63|<tuple|13.4|127>>
     <associate|auto-64|<tuple|13.4.1|127>>
     <associate|auto-65|<tuple|13.4.2|129>>
-    <associate|auto-66|<tuple|14|130>>
-    <associate|auto-67|<tuple|14.1|130>>
+    <associate|auto-66|<tuple|14|131>>
+    <associate|auto-67|<tuple|14.1|131>>
     <associate|auto-68|<tuple|14.2|133>>
     <associate|auto-7|<tuple|3|6>>
     <associate|auto-8|<tuple|3|7>>
@@ -9392,11 +9403,11 @@
       <no-break><pageref|auto-65>>
 
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|14<space|2spc>Green's
-      functions> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      function> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-66><vspace|0.5fn>
 
-      <with|par-left|<quote|1tab>|14.1<space|2spc>Introduction
-      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <with|par-left|<quote|1tab>|14.1<space|2spc>Introduction\VHeat
+      conduction on an infinite rod <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-67>>
 
       <with|par-left|<quote|1tab>|14.2<space|2spc>Solving the general case
