@@ -486,9 +486,13 @@
   <math|<around*|\<\|\|\>|f<around*|(|z|)>-w|\<\|\|\>>\<rightarrow\>0> as
   <math|z\<rightarrow\>z<rsub|0>>.
 
-  Define <em|continuity>: <math|f> is continuous at the point
-  <math|z<rsub|0>> if the limit <math|<with|math-display|true|lim<rsub|z\<rightarrow\>z<rsub|0>>
-  f<around*|(|z|)>>> exists and equals <math|f<around*|(|z<rsub|0>|)>>.
+  <\definition*>
+    \;
+
+    <em|<math|f> is <em|continuous> at the point <math|z<rsub|0>> if the
+    limit <math|<with|math-display|true|lim<rsub|z\<rightarrow\>z<rsub|0>>
+    f<around*|(|z|)>>> exists and equals <math|f<around*|(|z<rsub|0>|)>>.>
+  </definition*>
 
   <\definition*>
     \;
@@ -518,7 +522,7 @@
   <subsection*|Reminder: Taylor series>
 
   A (real) <em|power series> is a series of the form
-  <math|<big|sum><rsub|n=0>a<rsub|n> x<rsup|n>> which converges for some
+  <math|<big|sum><rsub|>a<rsub|n> x<rsup|n>> which converges for some
   <math|<around*|\||x|\|>\<less\>r> (<math|x\<in\>\<bbb-R\>>).
 
   <\render-theorem|Taylor's theorem>
@@ -586,7 +590,7 @@
       C<rsub|n>=<frac|1|n!>
     </equation*>
 
-    Which means its Taylor series is <math|<big|sum><rsub|n=0><rsup|\<infty\>><frac|x<rsup|n>|n!>=\<mathe\><rsup|x>>.
+    Which means its Taylor series is <math|<with|math-display|true|<big|sum><rsub|n=0><rsup|\<infty\>><frac|x<rsup|n>|n!>=\<mathe\><rsup|x>>>.
 
     We can use this to define a complex function:
 
@@ -717,31 +721,6 @@
       </equation*>
 
       is the Taylor series for <math|<big|int>f<around*|(|x|)>\<mathd\>x>.
-
-      <item>If <math|f> is infinitely differentiable (real or analytic
-      complex) then we have a unique Taylor series at 0, so any power series
-      representation for <math|f> will be an alternative form of the Taylor
-      series.
-
-      <item>Taylor series converge uniformly so if <math|f> is infinitely
-      differentiable then so is <math|f<rprime|'>>, therefore it also has a
-      Taylor series. In other words
-
-      <\equation*>
-        if\<space\>f<around*|(|x|)>=<big|sum>C<rsub|n>
-        x<rsup|n>\<space\>then\<space\>f<rprime|'><around*|(|x|)>=<big|sum><rsub|n=0><rsup|\<infty\>>n
-        C<rsub|n> x<rsup|n-1>
-      </equation*>
-
-      is the Taylor series for <math|f<rprime|'>>. Similarly, if <math|f> is
-      <em|integrable>, we get
-
-      <\equation*>
-        <big|int>f<around*|(|x|)>\<mathd\>x=<big|sum>C<rsub|n>
-        <frac|x<rsup|n+1>|n+1>
-      </equation*>
-
-      is the Taylor series for <math|<big|int>f<around*|(|x|)>\<mathd\>x>.
     </itemize>
   </note*>
 
@@ -845,18 +824,18 @@
   example:
 
   <\equation*>
-    2*y-y<rprime|'>=0,<application-space|1em>y=y<around*|(|x|)>
+    2y-y<rprime|'>=0,<application-space|1em>y=y<around*|(|x|)>
   </equation*>
 
   <\equation*>
-    y<rprime|'>=2*y
+    y<rprime|'>=2y
   </equation*>
 
   <\equation*>
     y=\<mathe\><rsup|2*x>\<nospace\>\<nospace\><text| is a solution.>
   </equation*>
 
-  In fact, <math|y=c*e<rsup|2*x>> is a solution for any
+  In fact, <math|y=c*\<mathe\><rsup|2*x>> is a solution for any
   <math|c\<in\>\<bbb-R\>>.
 
   <underline|Example: Radioactive decay>
@@ -894,9 +873,9 @@
   Removing the assumption that <math|Q<around*|(|t|)>\<gtr\>0> we see this
   solves out equation for any <math|c\<in\>\<bbb-R\>>.
 
-  To solve the equation for a <em|specific> material, <em|a unique solution>,
-  we need extra information such as the amount of material at <math|t=0>, the
-  <em|initial condition>.
+  To solve the equation for a <em|specific> material\Vto get <em|a unique
+  solution>\Vwe need extra information such as the amount of material at
+  <math|t=0>, the <em|initial condition>.
 
   <underline|A numerical example>
 
@@ -921,13 +900,13 @@
     \<Rightarrow\>f<around*|(|t|)>=100 \<mathe\><rsup|-0.2828*t>
   </equation*>
 
-  Differential equations can be complicated like
+  Differential equations can be complicated, like
   <math|2*y-y<rprime|''>\<cdot\>x+y<rprime|'>\<cdot\>x<rsup|2>+7*sin y=0>.
 
   The <em|order> of a differential equation is the highest order of the
   derivative that appears.
 
-  There are also <em|partial differential equations>, like Laplace's
+  There are also <em|partial differential equations>, like the Laplace
   equation:
 
   <\equation*>
@@ -1019,7 +998,7 @@
     </with>
 
     <\with|gr-mode|<tuple|edit|line>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|cartesian|<point|0|0>|1>|gr-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|cartesian|<point|0|0>|1>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-arrow-end|\<gtr\>|gr-auto-crop|true|par-mode|center>
-      <graphics||<with|arrow-end|\<gtr\>|<line|<point|0|0>|<point|4.0|0.0>>>|<math-at|t|<point|4|-0.4>>|<math-at|30|<point|-0.690157428231247|0.89532345548353>>|<math-at|40|<point|-0.661869956343432|1.86355668739251>>|<math-at|v<around*|(|t|)>|<point|-0.8|3.8>>|<with|arrow-end|\<gtr\>|<line|<point|0|0>|<point|0.0|0.0>|<point|0.02576398994576|3.905824183093>>>|<math-at|49|<point|-0.7|3.0>>|<with|arrow-end|\<gtr\>|<line|<point|1|1>|<point|1.3|1.6>>>|<with|arrow-end|\<gtr\>|<line|<point|2.01856347563483|1.03712695126966>|<point|2.31856347563483|1.63712695126966>>>|<with|arrow-end|\<gtr\>|<line|<point|4.01856347563483|1.03712695126966>|<point|4.31856347563483|1.63712695126966>>>|<with|arrow-end|\<gtr\>|<line|<point|3.0|1.0>|<point|3.3|1.6>>>|<with|arrow-end|\<gtr\>|<line|<point|1|2>|<point|1.6|2.4>>>|<with|arrow-end|\<gtr\>|<line|<point|2.048578653696|1.965719102464>|<point|2.648578653696|2.365719102464>>>|<with|arrow-end|\<gtr\>|<line|<point|3.0|2.0>|<point|3.6|2.4>>>|<with|arrow-end|\<gtr\>|<line|<point|2|3>|<point|2.7|3.0>>>|<with|arrow-end|\<gtr\>|<line|<point|3|3>|<point|3.7|3.0>>>|<with|arrow-end|\<gtr\>|<line|<point|4|3>|<point|4.6|3.0>>>|<with|arrow-end|\<gtr\>|<line|<point|1.6|3.7>|<point|1.0|4.0>>>|<with|arrow-end|\<gtr\>|<line|<point|2.7|3.7>|<point|2.0|4.0>>>|<with|arrow-end|\<gtr\>|<line|<point|3.6|3.7>|<point|3.0|4.0>>>|<with|arrow-end|\<gtr\>|<line|<point|4.6|3.6>|<point|4.0|4.0>>>|<with|arrow-end|\<gtr\>|<line|<point|1|3>|<point|1.8|3.0>>>>
+      <graphics||<with|arrow-end|\<gtr\>|<line|<point|0|0>|<point|4.0|0.0>>>|<math-at|t|<point|4|-0.4>>|<math-at|30|<point|-0.690157428231247|0.89532345548353>>|<math-at|40|<point|-0.661869956343432|1.86355668739251>>|<math-at|v<around*|(|t|)>|<point|-0.8|3.8>>|<with|arrow-end|\<gtr\>|<line|<point|0|0>|<point|0.0|0.0>|<point|0.02576398994576|3.905824183093>>>|<math-at|49|<point|-0.7|3.0>>|<with|arrow-end|\<gtr\>|<line|<point|1|1>|<point|1.3|1.6>>>|<with|arrow-end|\<gtr\>|<line|<point|2.01856347563483|1.03712695126966>|<point|2.31856347563483|1.63712695126966>>>|<with|arrow-end|\<gtr\>|<line|<point|4.01856347563483|1.03712695126966>|<point|4.31856347563483|1.63712695126966>>>|<with|arrow-end|\<gtr\>|<line|<point|3.0|1.0>|<point|3.3|1.6>>>|<with|arrow-end|\<gtr\>|<line|<point|1|2>|<point|1.6|2.4>>>|<with|arrow-end|\<gtr\>|<line|<point|2.048578653696|1.965719102464>|<point|2.648578653696|2.365719102464>>>|<with|arrow-end|\<gtr\>|<line|<point|3.0|2.0>|<point|3.6|2.4>>>|<with|arrow-end|\<gtr\>|<line|<point|2|3>|<point|2.7|3.0>>>|<with|arrow-end|\<gtr\>|<line|<point|3|3>|<point|3.7|3.0>>>|<with|arrow-end|\<gtr\>|<line|<point|4|3>|<point|4.6|3.0>>>|<with|arrow-end|\<gtr\>|<line|<point|1|3>|<point|1.8|3.0>>>|<with|arrow-end|\<gtr\>|<line|<point|1|4>|<point|1.6|3.5>>>|<with|arrow-end|\<gtr\>|<line|<point|2|4>|<point|2.6|3.5>>>|<with|arrow-end|\<gtr\>|<line|<point|3|4>|<point|3.6|3.5>>>|<with|arrow-end|\<gtr\>|<line|<point|4|4>|<point|4.5|3.6>>>>
     </with>
 
     The solutions or <em|curves> that pass through a given point in the plane
@@ -1033,7 +1012,7 @@
 
     <item>Predator/prey = owls + field mice.
 
-    if no predators assume rate of growth of mouse population, <math|r>,
+    if no predators assume rate of growth of mouse population <math|r>,
     <math|p<around*|(|t|)>> is proportionate to the population level at that
     time.
 
@@ -1079,7 +1058,7 @@
   both sides to get\ 
 
   <\equation*>
-    ln <around*|\||y+<frac|b|a>|\|>=at+c
+    ln <around*|\||y+<frac|b|a>|\|>=a*t+c
   </equation*>
 
   exponentiate both sides to get
@@ -1099,7 +1078,7 @@
 
   <\ornamented>
     <\equation>
-      y=k*\<mathe\><rsup|at>-<frac|b|a>,<application-space|1em>k\<neq\>0,\<nospace\>k\<in\>\<bbb-R\><label|first-order-const-ode>
+      y=k*\<mathe\><rsup|a*t>-<frac|b|a>,<application-space|1em>k\<neq\>0,\<nospace\>k\<in\>\<bbb-R\><label|first-order-const-ode>
     </equation>
   </ornamented>
 
@@ -9058,13 +9037,13 @@
 <\references>
   <\collection>
     <associate|auto-1|<tuple|?|3>>
-    <associate|auto-10|<tuple|2|13>>
+    <associate|auto-10|<tuple|2|12>>
     <associate|auto-11|<tuple|I|16>>
     <associate|auto-12|<tuple|1|16>>
     <associate|auto-13|<tuple|1.1|16>>
     <associate|auto-14|<tuple|2|20>>
-    <associate|auto-15|<tuple|2.1|24>>
-    <associate|auto-16|<tuple|2.2|25>>
+    <associate|auto-15|<tuple|2.1|25>>
+    <associate|auto-16|<tuple|2.2|26>>
     <associate|auto-17|<tuple|II|28>>
     <associate|auto-18|<tuple|3|28>>
     <associate|auto-19|<tuple|3.1|28>>
@@ -9080,7 +9059,7 @@
     <associate|auto-28|<tuple|5.3|48>>
     <associate|auto-29|<tuple|5.3.1|49>>
     <associate|auto-3|<tuple|3|5>>
-    <associate|auto-30|<tuple|5.3.2|56>>
+    <associate|auto-30|<tuple|5.3.2|55>>
     <associate|auto-31|<tuple|III|64>>
     <associate|auto-32|<tuple|6|64>>
     <associate|auto-33|<tuple|7|67>>
@@ -9092,41 +9071,41 @@
     <associate|auto-39|<tuple|9.4|76>>
     <associate|auto-4|<tuple|3|5>>
     <associate|auto-40|<tuple|9.5|78>>
-    <associate|auto-41|<tuple|9.6|83>>
-    <associate|auto-42|<tuple|10|86>>
+    <associate|auto-41|<tuple|9.6|84>>
+    <associate|auto-42|<tuple|10|87>>
     <associate|auto-43|<tuple|10.1|87>>
     <associate|auto-44|<tuple|10.2|90>>
     <associate|auto-45|<tuple|10.3|93>>
     <associate|auto-46|<tuple|10.4|95>>
-    <associate|auto-47|<tuple|11|96>>
+    <associate|auto-47|<tuple|11|97>>
     <associate|auto-48|<tuple|11.1|99>>
     <associate|auto-49|<tuple|IV|102>>
     <associate|auto-5|<tuple|3|5>>
     <associate|auto-50|<tuple|12|102>>
     <associate|auto-51|<tuple|12.1|103>>
-    <associate|auto-52|<tuple|12.1.1|105>>
-    <associate|auto-53|<tuple|12.1.2|106>>
-    <associate|auto-54|<tuple|12.1.3|109>>
-    <associate|auto-55|<tuple|12.1.4|112>>
-    <associate|auto-56|<tuple|12.2|114>>
-    <associate|auto-57|<tuple|12.2.1|115>>
-    <associate|auto-58|<tuple|12.3|117>>
-    <associate|auto-59|<tuple|13|120>>
+    <associate|auto-52|<tuple|12.1.1|106>>
+    <associate|auto-53|<tuple|12.1.2|107>>
+    <associate|auto-54|<tuple|12.1.3|110>>
+    <associate|auto-55|<tuple|12.1.4|113>>
+    <associate|auto-56|<tuple|12.2|115>>
+    <associate|auto-57|<tuple|12.2.1|116>>
+    <associate|auto-58|<tuple|12.3|118>>
+    <associate|auto-59|<tuple|13|121>>
     <associate|auto-6|<tuple|3|6>>
-    <associate|auto-60|<tuple|13.1|120>>
-    <associate|auto-61|<tuple|13.2|123>>
-    <associate|auto-62|<tuple|13.3|124>>
-    <associate|auto-63|<tuple|13.4|127>>
-    <associate|auto-64|<tuple|13.4.1|127>>
-    <associate|auto-65|<tuple|13.4.2|129>>
-    <associate|auto-66|<tuple|14|131>>
-    <associate|auto-67|<tuple|14.1|131>>
-    <associate|auto-68|<tuple|14.2|133>>
+    <associate|auto-60|<tuple|13.1|121>>
+    <associate|auto-61|<tuple|13.2|124>>
+    <associate|auto-62|<tuple|13.3|125>>
+    <associate|auto-63|<tuple|13.4|128>>
+    <associate|auto-64|<tuple|13.4.1|128>>
+    <associate|auto-65|<tuple|13.4.2|131>>
+    <associate|auto-66|<tuple|14|132>>
+    <associate|auto-67|<tuple|14.1|132>>
+    <associate|auto-68|<tuple|14.2|134>>
     <associate|auto-7|<tuple|3|6>>
     <associate|auto-8|<tuple|3|7>>
     <associate|auto-9|<tuple|2|11>>
     <associate|exponential-identities|<tuple|1|8>>
-    <associate|first-order-const-ode|<tuple|2|16>>
+    <associate|first-order-const-ode|<tuple|2|15>>
     <associate|homo-2nd|<tuple|3|36>>
   </collection>
 </references>

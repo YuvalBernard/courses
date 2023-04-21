@@ -5,7 +5,7 @@
 <\body>
   <doc-data|<doc-title|Assignment 12>|<doc-author|<author-data|<author-name|Yuval
   Bernard>|<\author-affiliation>
-    Date: TBE
+    Date: 30.01.23
   </author-affiliation>>>>
 
   <underline|Question 1>
@@ -57,7 +57,7 @@
   </eqnarray*>
 
   The integral over the sines is equal to zero because it is an integral of
-  an odd function over a symmetric interval. Calculate the integral of the
+  odd functions over a symmetric interval. Calculate the integral of the
   cosines.
 
   <\eqnarray*>
@@ -121,13 +121,13 @@
   Calculate Fourier coefficients.
 
   <\equation*>
-    a<rsub|0>=<big|int><rsub|-L><rsup|L><around*|(|-x|)>
+    a<rsub|0>=<frac|1|L><big|int><rsub|-L><rsup|L><around*|(|-x|)>
     \<mathd\>x=<around*|[|f<around*|(|x|)><text| odd>|]>=0
   </equation*>
 
   <\equation*>
-    a<rsub|n>=-<big|int><rsub|-L><rsup|L>x*cos <frac|n*\<mathpi\>*x|L>
-    \<mathd\>x
+    a<rsub|n>=-<frac|1|L><big|int><rsub|-L><rsup|L>x*cos
+    <frac|n*\<mathpi\>*x|L> \<mathd\>x
   </equation*>
 
   Integrate by parts:
@@ -140,16 +140,16 @@
   </equation*>
 
   <\eqnarray*>
-    <tformat|<table|<row|<cell|a<rsub|n>>|<cell|=>|<cell|-<frac|L|n*\<mathpi\>><around*|[|x*sin
+    <tformat|<table|<row|<cell|a<rsub|n>>|<cell|=>|<cell|-<frac|1|n*\<mathpi\>><around*|[|x*sin
     <around*|(|<frac|n*\<mathpi\>*x|L> |)>-<frac|L|n*\<mathpi\>>*cos
-    <around*|(|<frac|n*\<mathpi\>*x|L> |)>|]><rsub|-L><rsup|L>>>|<row|<cell|>|<cell|=>|<cell|-<frac|L|n*\<mathpi\>>*<around*|[|<around*|(|L*sin<around*|(|n*\<mathpi\>|)>+L*sin
+    <around*|(|<frac|n*\<mathpi\>*x|L> |)>|]><rsub|-L><rsup|L>>>|<row|<cell|>|<cell|=>|<cell|-<frac|1|n*\<mathpi\>>*<around*|[|<around*|(|L*sin<around*|(|n*\<mathpi\>|)>+L*sin
     <around*|(|-n*\<mathpi\>|)>|)>-<frac|L|n*\<mathpi\>>*<around*|(|cos
     <around*|(|n*\<mathpi\>|)>-cos <around*|(|-n*\<mathpi\>|)>|)>|]>=0>>>>
   </eqnarray*>
 
   <\equation*>
-    b<rsub|n>=-<big|int><rsub|-L><rsup|L>x*sin <frac|n*\<mathpi\>*x|L>
-    \<mathd\>x
+    b<rsub|n>=-<frac|1|L><big|int><rsub|-L><rsup|L>x*sin
+    <frac|n*\<mathpi\>*x|L> \<mathd\>x
   </equation*>
 
   Integrate by parts:
@@ -157,27 +157,27 @@
   <\equation*>
     <big|int>x*sin <frac|n*\<mathpi\>*x|L>
     \<mathd\>x=-<frac|L*x|n*\<mathpi\>>*cos
-    <around*|(|<frac|n*\<mathpi\>*x|L>|)>-<frac|L<rsup|2>|n<rsup|2>*\<mathpi\><rsup|2>>*sin
+    <around*|(|<frac|n*\<mathpi\>*x|L>|)>+<frac|L<rsup|2>|n<rsup|2>*\<mathpi\><rsup|2>>*sin
     <around*|(|<frac|n*\<mathpi\>*x|L>|)>
   </equation*>
 
   <\eqnarray*>
-    <tformat|<table|<row|<cell|b<rsub|n>>|<cell|=>|<cell|-<frac|L|n*\<mathpi\>>*<around*|[|x*cos
-    <around*|(|<frac|n*\<mathpi\>*x|L>|)>+<frac|L|n*\<mathpi\>>*sin
-    <around*|(|<frac|n*\<mathpi\>*x|L>|)>|]><rsub|-L><rsup|L>>>|<row|<cell|>|<cell|=>|<cell|-<frac|L|n*\<mathpi\>>*<around*|[|<around*|(|L*cos
-    <around*|(|n*\<mathpi\>|)>+L*cos <around*|(|-n*\<mathpi\>|)>|)>+<frac|L|n*\<mathpi\>>*<around*|(|sin
-    <around*|(|n*\<mathpi\>|)>+sin <around*|(|-n*\<mathpi\>|)>|)>|]>=-<frac|2L<rsup|2>*cos
+    <tformat|<table|<row|<cell|b<rsub|n>>|<cell|=>|<cell|<frac|1|n*\<mathpi\>>*<around*|[|x*cos
+    <around*|(|<frac|n*\<mathpi\>*x|L>|)>-<frac|L|n*\<mathpi\>>*sin
+    <around*|(|<frac|n*\<mathpi\>*x|L>|)>|]><rsub|-L><rsup|L>>>|<row|<cell|>|<cell|=>|<cell|<frac|1|n*\<mathpi\>>*<around*|[|<around*|(|L*cos
+    <around*|(|n*\<mathpi\>|)>+L*cos <around*|(|-n*\<mathpi\>|)>|)>-<frac|L|n*\<mathpi\>>*<around*|(|sin
+    <around*|(|n*\<mathpi\>|)>-sin <around*|(|-n*\<mathpi\>|)>|)>|]>=<frac|2L*cos
     <around*|(|n*\<mathpi\>|)>|n*\<mathpi\>>>>>>
   </eqnarray*>
 
   <\equation*>
-    b<rsub|n>=-<frac|2L<rsup|2>|n*\<mathpi\>>*<around*|(|-1|)><rsup|n>
+    b<rsub|n>=<frac|2L|n*\<mathpi\>>*<around*|(|-1|)><rsup|n>
   </equation*>
 
   Fourier series for <math|f<around*|(|x|)>> on given interval is
 
   <\equation*>
-    f<around*|(|x|)>=-<big|sum><rsub|n=1><rsup|\<infty\>><frac|2L<rsup|2>|n*\<mathpi\>>*<around*|(|-1|)><rsup|n>*sin
+    f<around*|(|x|)>=<big|sum><rsub|n=1><rsup|\<infty\>><frac|2L|n*\<mathpi\>>*<around*|(|-1|)><rsup|n>*sin
     <frac|n*\<mathpi\>*x|L>
   </equation*>
 
@@ -193,29 +193,29 @@
   coefficients.
 
   <\equation*>
-    a<rsub|0>=<big|int><rsub|-\<mathpi\>><rsup|0>x
-    \<mathd\>x+0=-<frac|\<mathpi\><rsup|2>|2>
+    a<rsub|0>=<frac|1|\<mathpi\>><big|int><rsub|-\<mathpi\>><rsup|0>x
+    \<mathd\>x+0=-<frac|\<mathpi\>|2>
   </equation*>
 
   <\equation*>
-    a<rsub|n>=<big|int><rsub|-\<mathpi\>><rsup|0>x*cos <around*|(|n*x|)>
-    \<mathd\>x+0=-<frac|1|n><around*|[|x*sin <around*|(|n*x|)>-<frac|1|n>*cos
-    <around*|(|n*x |)>|]><rsub|-\<mathpi\>><rsup|0>=<frac|1-cos
-    <around*|(|n*\<mathpi\>|)>|n<rsup|2>>=<frac|1-<around*|(|-1|)><rsup|n>|n<rsup|2>>
+    a<rsub|n>=<frac|1|\<mathpi\>><big|int><rsub|-\<mathpi\>><rsup|0>x*cos
+    <around*|(|n*x|)> \<mathd\>x+0=<frac|1|n*\<mathpi\>>*<around*|[|x*sin
+    <around*|(|n*x|)>+<frac|1|n>*cos <around*|(|n*x|)>|]><rsub|-\<mathpi\>><rsup|0>=<frac|1|n*\<mathpi\>>*<around*|[|<frac|1|n>-<frac|1|n>*cos
+    <around*|(|n*\<mathpi\>|)>|]>=<frac|1-<around*|(|-1|)><rsup|n>|n<rsup|2>*\<mathpi\>>*
   </equation*>
 
   <\equation*>
-    b<rsub|n>=<big|int><rsub|-\<mathpi\>><rsup|0>x*sin <around*|(|n*x|)>
-    \<mathd\>x+0=-<frac|1|n>*<around*|[|x*cos
-    <around*|(|n*x|)>+<frac|1|n>*sin <around*|(|n*x|)>|]><rsub|-\<mathpi\>><rsup|0>=-<frac|\<mathpi\>|n>*cos
-    <around*|(|\<mathpi\>*n|)>=-<frac|\<mathpi\>|n>*<around*|(|-1|)><rsup|n>
+    b<rsub|n>=<frac|1|\<mathpi\>><big|int><rsub|-\<mathpi\>><rsup|0>x*sin
+    <around*|(|n*x|)> \<mathd\>x+0=<frac|1|\<mathpi\>*n>*<around*|[|-x*cos
+    <around*|(|n*x|)>+<frac|1|n>*sin <around*|(|n*x|)>|]><rsub|-\<mathpi\>><rsup|0>=-<frac|cos
+    <around*|(|n*\<mathpi\>|)>|n>=-<frac|<around*|(|-1|)><rsup|n>|n>*
   </equation*>
 
   Fourier series in given interval is
 
   <\equation*>
-    f<around*|(|x|)>=-<frac|\<mathpi\><rsup|2>|4>+<big|sum><rsub|n=1><rsup|\<infty\>><around*|(|<frac|1-<around*|(|-1|)><rsup|n>|n<rsup|2>>*cos
-    <around*|(|n*x|)>-<frac|\<mathpi\>|n>*<around*|(|-1|)><rsup|n>*sin
+    f<around*|(|x|)>=-<frac|\<mathpi\>|4>+<big|sum><rsub|n=1><rsup|\<infty\>><around*|(|<frac|1-<around*|(|-1|)><rsup|n>|n<rsup|2>*\<mathpi\>>*cos
+    <around*|(|n*x|)>-<frac|<around*|(|-1|)><rsup|n>|n>**sin
     <around*|(|n*x|)>|)>
   </equation*>
 
@@ -403,6 +403,14 @@
     y=<frac|1|8>+<around*|(|<frac|7|8>-<big|sum><rsub|n=1><rsup|\<infty\>><frac|2*<around*|[|1-*<around*|(|-1|)><rsup|n>|]>*|n<rsup|2>*\<mathpi\><rsup|2>*<around*|(|4-n<rsup|2>*\<mathpi\><rsup|2>|)>>|)>*cos
     <around*|(|2*t|)>+<big|sum><rsub|n=1><rsup|\<infty\>><frac|2*<around*|[|1-*<around*|(|-1|)><rsup|n>|]>*|n<rsup|2>*\<mathpi\><rsup|2>*<around*|(|4-n<rsup|2>*\<mathpi\><rsup|2>|)>>*cos
     <around*|(|n*\<mathpi\>*t|)>,<application-space|1em>\<forall\>t
+  </equation*>
+
+  Can further simplify:
+
+  <\equation*>
+    y=<frac|1|8>+<frac|7|8>*cos <around*|(|2t|)>-2<big|sum><rsub|n=1><rsup|\<infty\>><frac|2*<around*|[|1-*<around*|(|-1|)><rsup|n>|]>*|n<rsup|2>*\<mathpi\><rsup|2>*<around*|(|4-n<rsup|2>*\<mathpi\><rsup|2>|)>>**sin
+    <around*|(|<around*|(|n*<frac|\<mathpi\>|2>+1|)>*t|)>*sin
+    <around*|(|<around*|(|n*<frac|\<mathpi\>|2>-1|)>*t|)>\<comma\><application-space|2em>\<forall\>t
   </equation*>
 </body>
 
