@@ -1,6 +1,6 @@
 <TeXmacs|2.1.2>
 
-<style|<tuple|course|framed-theorems|cite-sort|number-long-article>>
+<style|<tuple|course|framed-theorems|cite-sort|number-long-article|libertine-font>>
 
 <\body>
   <\hide-preamble>
