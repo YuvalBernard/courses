@@ -37,7 +37,7 @@ fprintf('The speed is: %d (m/s)', speed)
 %%% section f
 disp(who)
 %%% section g
-save('save_distance.mat',"distace",'-mat')
+save('save_distance.mat',"distace")
 %%% section h
 clear distace
 %%% section i
@@ -66,15 +66,19 @@ fprintf('There are now %d variables in workspace.',length(who))
 % working session are used in current calculations unintentionally.
 
 % Example case:
-% >> x = -3;
+% >> user = memory;
+% >> max_array_size = user.MaxPossibleArrayBytes / 8;
+% >> x = rand(0.9 * max_array_size, 1);
 % %% script start
 % clear
-% % Check that workspace is empty.
-% if ~isempty(whos) error('Workspace is not empty'); end
+% user = memory;
+% max_array_size = user.MaxPossibleArrayBytes / 8;
+% y = rand(0.2 * max_array_size, 1);
 
 % Explanation:
-% If we wouldn't clear the workspace before running the script,
-% An error would have been thrown.
+% Not using clear at script start would result in 'out of memory' error,
+% because having both @x and @y in memory allocates more than 100% of the
+% memory available to store arrays of class double (which are 8 bytes each).
 disp('  ')
 %% Question 3
 %%% section b
@@ -99,5 +103,5 @@ disp(['If we multiply ', num2str(num1), ' and ', num2str(num2), ' we get: ', num
 %%% section f
 % A code with a syntax error won't run.
 % A code with a runtime error runs until a logical error is encountered.
-% A runtime error may be detected or prevented with duck-bugging.
+% A runtime error may be detected or prevented with debugging.
 % MATLAB automatically highlights syntax errors.

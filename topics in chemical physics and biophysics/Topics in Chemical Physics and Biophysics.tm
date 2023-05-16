@@ -1,6 +1,6 @@
 <TeXmacs|2.1.2>
 
-<style|<tuple|course|framed-theorems|number-long-article|libertine-font|SIUnits-simple|preview-ref|smart-ref>>
+<style|<tuple|course|framed-theorems|number-long-article|SIUnits-simple|preview-ref|smart-ref|pagella-font>>
 
 <\body>
   <\hide-preamble>
@@ -325,7 +325,7 @@
     </equation*>
 
     <\itemize>
-      <item><math|k=<SI|1.3806\<times\> 10<rsup|-23>|J*K<rsup|-1>>> is
+      <item><math|k=1.3806\<times\>10<rsup|-23> <math-up|J K><rsup|-1>> is
       Boltzmann's constant.
 
       <item><math|W> is the multiplicity; the microscopic degrees of freedom
@@ -339,7 +339,7 @@
 
   <\ornamented>
     <\note*>
-      Entropy is an <em|extensive> (additive) quantity. Consider a
+      Entropy is an <em|extensive> (thus additive) quantity. Consider a
       thermodynamic system having two subsystems, <math|A> and <math|B>, with
       multiplicities <math|W<rsub|A>> and <math|W<rsub|B>>, respectively. The
       multiplicity of the total system is
@@ -350,7 +350,7 @@
     </note*>
   </ornamented>
 
-  Why does def. <reference|entropy-definition> assumes this particular
+  Why does def. <reference|entropy-definition> assume this particular
   mathematical form? The multiplicity could be maximized as
   <math|W<rsup|2>,15*W<rsup|3>> etc. We first show that expressing the
   entropy in terms of a <em|set of probabilities> <math|p<rsub|i>>,
@@ -372,7 +372,7 @@
 
   <\definition>
     <em|Stirling's approximation>.<label|Stirling's approximation> For
-    <math|n\<gg\>1>,
+    <math|n\<gg\>1> (at least 1000),
 
     <\equation*>
       ln n!\<approx\>n*ln n-n
@@ -403,6 +403,15 @@
 
   <\ornamented>
     <\note*>
+      def. <reference|entropy-definition> is reformulated from eq.
+      <eqref|entropy-alt-def> if the microstates whose permutations sum up to
+      multiplicity <math|W> are <em|degenerate>, or equivalently, if
+      <math|p<rsub|i>=1/W>.
+    </note*>
+  </ornamented>
+
+  <\ornamented>
+    <\note*>
       Boltzmann's constant <math|k> puts entropy into units that
       inter-convert with energy for thermodynamics. Basically, <math|k> is
       the entropy per particle.
@@ -419,6 +428,8 @@
       mole.\ 
     </note*>
   </ornamented>
+
+  <subsection|Lattice models>
 
   <\example*>
     Entropy of mixing calculation for <em|lattice models>.
@@ -461,7 +472,7 @@
       W<rsub|A>\<approx\><frac|N<rsup|N>|n<rsup|n>*<around*|(|N-n|)><rsup|N-n>>.
     </equation*>
 
-    Similarly,
+    Similarly, for the second solution,
 
     <\equation*>
       W<rsub|B>\<approx\><frac|M<rsup|M>|m<rsup|m>*<around*|(|M-m|)><rsup|M-m>>.
@@ -486,7 +497,7 @@
     For simplification, assume <math|N=M> and <math|n=m>.
 
     <\equation*>
-      W<rsub|A\<nocomma\>B><rsup|\<star\>>=<frac|<around*|(|2*N|)><rsup|2*N>|n<rsup|2*N>*<around*|(|2*N-2*n|)><rsup|2*N-2*n>>.
+      W<rsub|A\<nocomma\>B><rsup|\<star\>>=<frac|<around*|(|2*N|)><rsup|2*N>|n<rsup|2*n>*<around*|(|2*N-2*n|)><rsup|2*N-2*n>>.
     </equation*>
 
     In this case, the combined multiplicity prior to mixing is
@@ -525,13 +536,13 @@
   </equation*>
 
   For very small changes, <math|\<Delta\>x=<around*|(|x-a|)>\<rightarrow\>\<mathd\>x>,
-  non-linear terms in the series expansions are neligible, and thus
+  non-linear terms in the series expansions are negligible, and thus
   <math|\<mathd\>f\<approx\><around*|(|<frac|\<mathd\>f|\<mathd\>x>|)><rsub|x=a>*\<mathd\>x>.
 
   In the case of a bivariate function, <math|f<around*|(|x,y|)>>,
 
   <\equation*>
-    \<mathd\>f=<around*|(|<frac|\<partial\>f|\<partial\>x>|)><rsub|y>*\<mathd\>x+<around*|(|<frac|\<partial\>f|\<partial\>y>|)><rsub|x>*.
+    \<mathd\>f=<around*|(|<frac|\<partial\>f|\<partial\>x>|)><rsub|y>*\<mathd\>x+<around*|(|<frac|\<partial\>f|\<partial\>y>|)><rsub|x>*\<mathd\>y.
   </equation*>
 
   We can generalize to multivariate functions, and define
@@ -566,7 +577,7 @@
   <\ornamented>
     <\note*>
       A constraint equation has the form <math|g<around*|(|x<rsub|1>,x<rsub|2>,\<ldots\>,x<rsub|t>|)>=constant>.
-      For example, if we require <math|x=y>, the constaint function
+      For example, if we require <math|x=y>, the constraint function
       <math|g<around*|(|x,y|)>> would be:
 
       <\equation*>
@@ -619,7 +630,7 @@
   to the constraint <math|g<around*|(|x,y|)>=constant>.
 
   It can be shown that the derivatives of <math|f> and <math|g> need only be
-  the same to within an arbitraty constant <math|\<mathlambda\>>, called the
+  the same to within an arbitrary constant <math|\<mathlambda\>>, called the
   <em|Lagrange multiplier>:
 
   <\equation>
@@ -633,6 +644,10 @@
   <\example*>
     Suppose you want to find a rectangle of the largest possible area that is
     40 cm in circumference.
+
+    <\padded-center>
+      <with|gr-mode|<tuple|edit|math-at>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|empty>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-grid-old|<tuple|cartesian|<point|0|0>|2>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|gr-auto-crop|true|<graphics||<cline|<point|-2|2>|<point|-2.0|0.0>|<point|2.0|0.0>|<point|2.0|2.0>>|<math-at|x|<point|-2.5|1>>|<math-at|y|<point|0|2.4>>>>
+    </padded-center>
 
     Mathematically, find the extremum of
 
@@ -713,7 +728,7 @@
     g=p<rsub|1>+p<rsub|2>=1
   </equation*>
 
-  Calculate partical derivatives:
+  Calculate partial derivatives:
 
   <\equation*>
     <frac|1|k>*<around*|(|<frac|\<partial\>S|\<partial\>p<rsub|1>>|)><rsub|p<rsub|2>>=-<around*|(|ln
@@ -751,7 +766,7 @@
   <subsubsection|Maximizing entropy with an energy constraint>
 
   Roll a dice having <math|t> sides, with faces numbered
-  <math|i=1,2,3,\<ldots\>,t>. You don't know thte distribution of outcomes of
+  <math|i=1,2,3,\<ldots\>,t>. You don't know the distribution of outcomes of
   each face, but you know the total score after <math|N> rolls. You want to
   predict the distribution function.
 
@@ -793,7 +808,7 @@
     i=1,2,\<ldots\>,t.
   </equation*>
 
-  The partial derivatives are evalueated for each <math|p<rsub|i>>:
+  The partial derivatives are evaluated for each <math|p<rsub|i>>:
 
   <\equation*>
     <around*|(|<frac|\<partial\>S|\<partial\>p<rsub|i>>|)>=-1-ln
@@ -822,7 +837,7 @@
   In Statistical Mechanics, the average score is translated to <em|average
   energy> of the system, and eq. <eqref|Boltzmann-distribution-law> is called
   the <em|Boltzmann distribution law>. \ The quantity in the denominator is
-  called the <em|partition function> <math|q>:
+  called the <em|partition function>, <math|q>:
 
   <\equation>
     q\<equiv\><big|sum><rsub|i=1><rsup|t>\<mathe\><rsup|-\<beta\>*\<varepsilon\><rsub|i>><label|partition-function>
@@ -833,18 +848,290 @@
   <\equation>
     <around*|\<langle\>|\<varepsilon\>|\<rangle\>>=<big|sum><rsub|i=1><rsup|t>\<varepsilon\><rsub|i>*p<rsub|i><rsup|\<star\>>=<frac|1|q>*<big|sum><rsub|i=1><rsup|t>\<varepsilon\><rsub|i>*\<mathe\><rsup|-\<beta\>*\<varepsilon\><rsub|i>>.<label|average-energy-canonical-ensemble>
   </equation>
+
+  <marginal-note|normal|c|16.05.23 lec 3>
+
+  <section|Free energy>
+
+  <\example*>
+    Let there be two non-interacting systems, <math|A> and <math|B>, each
+    having two possible states:
+
+    <\padded-center>
+      <with|gr-mode|<tuple|edit|math-at>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|empty>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-auto-crop|true|gr-grid-old|<tuple|cartesian|<point|0|0>|2>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|<graphics||<line|<point|-4|2>|<point|-2.0|2.0>>|<line|<point|-4|0>|<point|-2.0|0.0>>|<line|<point|0|2>|<point|2.0|2.0>>|<line|<point|0|0>|<point|2.0|0.0>>|<math-at|\<varepsilon\><rsub|2><rsup|B>=1|<point|2.3|2>>|<math-at|\<varepsilon\><rsub|1><rsup|B>0|<point|2.3|0>>|<math-at|\<varepsilon\><rsub|2><rsup|A>=1|<point|-5.3|2>>|<math-at|\<varepsilon\><rsub|1><rsup|A>=0|<point|-5.4|0>>|<point|-3.3|2>|<point|-2.9|2>|<point|-3.6|0>|<point|-3.3|0>|<point|-3|0>|<point|-2.7|0>|<point|-2.4|0>|<point|0.3|2>|<point|0.6|2>|<point|0.9|2>|<point|1.2|2>|<point|1.6|2>|<point|0.8|0>|<point|1.1|0>|<math-at|N<rsub|A>=1000|<point|-3.7|-1.0>>|<math-at|N<rsub|B>=1000|<point|0.6|-1>>|<math-at|N<rsub|B>*U<rsub|B>=900|<point|0.5265742823124752|-1.566080169334568>>|<math-at|N<rsub|A>*U<rsub|A>=200|<point|-3.7494873660537107|-1.5519910041010716>>>>
+    </padded-center>
+
+    The total energy of the system per particle is
+    <math|<frac|U|N>=<big|sum><rsub|i>p<rsub|i>*\<varepsilon\><rsub|i>>.
+
+    What is the distribution of states within each system?
+
+    For system <math|A>,
+
+    <\equation*>
+      U<rsub|A>=<frac|200|1000>=\<varepsilon\><rsub|1><rsup|A>*p<rsub|1><rsup|A>+\<varepsilon\><rsub|2><rsup|A>*p<rsub|2><rsup|A>=p<rsub|2><rsup|A>,
+    </equation*>
+
+    <\equation*>
+      p<rsub|1><rsup|A>=1-p<rsub|2><rsup|A>=0.8.
+    </equation*>
+
+    Similarly, for system B,
+
+    <\equation*>
+      U<rsub|B>=<frac|900|1000>=\<varepsilon\><rsub|1><rsup|B>*p<rsub|1><rsup|B>+\<varepsilon\><rsub|2><rsup|B>*p<rsub|2><rsup|B>=p<rsub|2><rsup|B>,
+    </equation*>
+
+    <\equation*>
+      p<rsub|1><rsup|B>=1-p<rsub|2><rsup|B>=0.1.
+    </equation*>
+
+    Now we let the systems exchange energy. What would be the new equilibrium
+    distribution of states?
+
+    According to the First Law of Thermodynamics, energy is conserved.
+
+    <\equation>
+      U<rsub|total>=U<rsub|A>+U<rsub|B>=<frac|N<rsub|A>*U<rsub|A>+N<rsub|B>*U<rsub|B>|N<rsub|A>+N<rsub|B>>=0.55.
+    </equation>
+
+    This is a constraint equation!
+
+    We wish to maximize the entrpy.
+
+    <\equation>
+      <frac|S|k>=-<big|sum>p<rsub|i>*ln p<rsub|i>=-p<rsub|1><rsup|A>*ln
+      p<rsub|1><rsup|A>-p<rsub|2><rsup|A>*ln
+      p<rsub|2><rsup|A>-p<rsub|1><rsup|B>*ln
+      p<rsub|1><rsup|B>-p<rsub|2><rsup|B>*ln p<rsub|2><rsup|B>.
+    </equation>
+
+    The other constraint equations:
+
+    <\equation>
+      g=p<rsub|1><rsup|A>+p<rsub|2><rsup|A>+p<rsub|1><rsup|B>+p<rsub|2><rsup|B>=1
+    </equation>
+
+    <\equation>
+      h=\<varepsilon\><rsub|1><rsup|A>*p<rsub|1><rsup|A>+\<varepsilon\><rsub|2><rsup|A>*p<rsub|2><rsup|A>+\<varepsilon\><rsub|1><rsup|B>*p<rsub|1><rsup|B>+\<varepsilon\><rsub|2><rsup|B>*p<rsub|2><rsup|B>
+    </equation>
+
+    According to Boltzmann's law,
+
+    <\equation*>
+      p<rsub|i><rsup|\<star\>>=<frac|\<mathe\><rsup|-\<beta\>*\<varepsilon\><rsub|i>>|q>,<space|2em>q=\<mathe\><rsup|-\<beta\>*\<varepsilon\><rsub|1><rsup|A>>+\<mathe\><rsup|-\<beta\>*\<varepsilon\><rsub|2><rsup|A>>+\<mathe\><rsup|-\<beta\>*\<varepsilon\><rsub|1><rsup|B>>+\<mathe\><rsup|-\<beta\>*\<varepsilon\><rsub|2><rsup|B>>=2*<around*|(|1+\<mathe\><rsup|-\<beta\>>|)>.
+    </equation*>
+
+    Accordingly,
+
+    <\equation>
+      p<rsub|1><rsup|A,\<star\>>=p<rsub|1><rsup|B,\<star\>>=<frac|1|2*<around*|(|1+\<mathe\><rsup|-\<beta\>>|)>>,<space|2em>p<rsub|2><rsup|B,\<star\>>=p<rsub|2><rsup|A,\<star\>>=<frac|\<mathe\><rsup|-\<beta\>>|2*<around*|(|1+\<mathe\><rsup|-\<beta\>>|)>>.
+    </equation>
+
+    What is the value of <math|\<beta\>>? Insert into the constraint
+    equation, eq. (3.4).
+
+    <\equation*>
+      U<rsub|total>=2*<around*|(|0\<cdot\><frac|1|2*<around*|(|1+\<mathe\><rsup|-\<beta\>>|)>>+1\<cdot\><frac|\<mathe\><rsup|-\<beta\>>|2*<around*|(|1+\<mathe\><rsup|-\<beta\>>|)>>|)>=0.55,
+    </equation*>
+
+    <\equation*>
+      \<beta\>=-ln <frac|U<rsub|total>|1-U<rsub|total>>=-0.2.
+    </equation*>
+
+    Plug <math|\<beta\>> into eq. (3.5) to get (after normalization per
+    system) <math|p<rsub|1><rsup|A,\<star\>>=p<rsub|1><rsup|B,\<star\>>=0.54>
+    and <math|p<rsub|2><rsup|A\<star\>>=p<rsub|2><rsup|B,\<star\>>=0.46>. We
+    can infer that particles in system <math|A> moved to the higher energy
+    state, and particles in system <math|B> moved to the lower energy state.
+  </example*>
+
+  <\definition>
+    <em|Types of systems.>
+
+    <\itemize>
+      <item>An <em|isolated system> can't exchange energy nor particles.
+
+      <item>A <em|closed system> can exchange energy, but not particles.
+
+      <item>An <em|open system> can exchange both energy and particles.
+    </itemize>
+  </definition>
+
+  In thermodynamic systems, the energy and the entropy are <em|linked
+  functions>. They are dependent on each other, and on the number of
+  particles and the volume. <math|S=f<around*|(|U,N,V|)>;U=f<around*|(|S,N,V|)>>.
+
+  In practice, we are usually interested in the <em|change> of entropy and
+  energy.
+
+  We transition from Statistical Mechanics to Classical Thermodynamics is the
+  change
+
+  <\equation*>
+    S=-k*<big|sum>p<rsub|i>*ln p<rsub|i><space|1em>\<rightarrow\><space|1em>S=f<around*|(|U,N,V|)>.
+  </equation*>
+
+  <\definition>
+    <em|Entropy and energy in differential form>.
+
+    <\equation>
+      \<mathd\>S=<around*|(|<frac|\<partial\>S|\<partial\>U>|)><rsub|V,N<rsub|j>>*\<mathd\>U+<around*|(|<frac|\<partial\>S|\<partial\>V>|)><rsub|U,N<rsub|j>>*\<mathd\>V+<big|sum><rsub|j><around*|(|<frac|\<partial\>S|\<partial\>N<rsub|j>>|)><rsub|U,V>*\<mathd\>N<rsub|j>,<label|entropy-diff-form>
+    </equation>
+
+    for <math|N<rsub|j>> particles of category <math|j>. Similarly,
+
+    <\equation>
+      \<mathd\>U=<around*|(|<frac|\<partial\>U|\<partial\>S>|)><rsub|V,N<rsub|j>>*\<mathd\>S+<around*|(|<frac|\<partial\>U|\<partial\>V>|)><rsub|S,N<rsub|j>>*\<mathd\>V+<big|sum><rsub|j><around*|(|<frac|\<partial\>U|\<partial\>N<rsub|j>>|)><rsub|U,V>*\<mathd\>N<rsub|j><label|energy-diff-form>
+    </equation>
+  </definition>
+
+  \;
+
+  eq. <eqref|energy-diff-form> is more frequently used, as all partial
+  derivatives are extensive quantities. We identify them as follows:
+
+  <\itemize>
+    <item><math|<around*|(|<frac|\<partial\>U|\<partial\>S>|)><rsub|V,N<rsub|j>>=T>,
+    the temperature of the system.
+
+    <item><math|<around*|(|<frac|\<partial\>U|\<partial\>V>|)><rsub|S,N<rsub|j>>=-P>,
+    the pressure of the system.
+
+    <item><math|<around*|(|<frac|\<partial\>U|\<partial\>N<rsub|j>>|)><rsub|U,V>=\<mu\><rsub|j>>,
+    the chemical potential.
+
+    <item><math|<around*|(|<frac|\<partial\>S|\<partial\>U>|)><rsub|V,N<rsub|j>>=<frac|1|T>>.
+
+    <item><math|<around*|(|<frac|\<partial\>S|\<partial\>V>|)><rsub|U,N<rsub|j>>=<frac|P|T>>.
+
+    <item><math|<around*|(|<frac|\<partial\>S|\<partial\>N<rsub|j>>|)><rsub|U,V>=-<frac|\<mu\><rsub|j>|T>>.
+  </itemize>
+
+  These formulations enable us to describe the system in terms of its
+  temperature, pressure, and volume.
+
+  <\example*>
+    Consider a container with some particles, where the temperature remains
+    fixed. We can fix the temperature by suspending the container in an
+    inifinitely large bath, and allow heat to flow.
+
+    How does the energy fluctuate as heat is allowed to transfer?
+
+    <\padded-center>
+      <with|gr-mode|<tuple|edit|math-at>|gr-frame|<tuple|scale|1cm|<tuple|0.5gw|0.5gh>>|gr-geometry|<tuple|geometry|1par|0.6par>|gr-grid|<tuple|empty>|gr-edit-grid-aspect|<tuple|<tuple|axes|none>|<tuple|1|none>|<tuple|10|none>>|gr-edit-grid|<tuple|empty>|gr-arrow-end|\<gtr\>|gr-auto-crop|true|gr-grid-old|<tuple|cartesian|<point|0|0>|2>|gr-edit-grid-old|<tuple|cartesian|<point|0|0>|1>|<graphics||<cline|<point|-2|2>|<point|-2.0|-2.0>|<point|2.0|-2.0>|<point|2.0|2.0>>|<with|fill-color|light
+      grey|<spline|<point|-1.2|2>|<point|0.0|0.0>|<point|1.2999999999999996|2.0>>>|<math-at|T,N,V|<point|-0.2|1.5>>|<with|arrow-end|\<gtr\>|<line|<point|2.8|-0.8>|<point|1.2999999999999996|-1.4>>>|<text-at|Bath|<point|3|-0.8>>|<with|arrow-end|\<gtr\>|<line|<point|1.7|3>|<point|0.6000000000000002|2.3>>>|<text-at|System|<point|2|3>>|<math-at|T|<point|-1.5|-1.7>>>>
+    </padded-center>
+
+    In laboratory conditions,
+
+    <\eqnarray*>
+      <tformat|<table|<row|<cell|U<rsub|combined>>|<cell|=>|<cell|U<rsub|sys>+U<rsub|bath>=const,>>|<row|<cell|\<mathd\>U<rsub|combined>>|<cell|=>|<cell|0=\<mathd\>U<rsub|sys>+\<mathd\>U<rsub|bath><space|1em>\<rightarrow\><space|1em>\<mathd\>U<rsub|sys>=-\<mathd\>U<rsub|bath>,>>|<row|<cell|\<mathd\>S<rsub|combined>>|<cell|=>|<cell|\<mathd\>S<rsub|sys>+\<mathd\>S<rsub|bath>\<geqslant\>0>>>>
+    </eqnarray*>
+
+    Perform calculations. According to eq. <eqref|entropy-diff-form>
+
+    <\equation*>
+      \<mathd\>S<rsub|bath>=<around*|(|<frac|1|T>|)>*\<mathd\>U<rsub|bath>+<around*|(|<frac|P|T>|)>*\<mathd\>V<rsub|bath>-<around*|(|<frac|\<mu\>|T>|)>*\<mathd\>N<rsub|bath>.
+    </equation*>
+
+    As the bath is infinitely large, the change in volume is negligible, and
+    as the bath is closed, the change in number of particles is zero.
+    Ultimately,
+
+    <\equation*>
+      \<mathd\>S<rsub|bath>=<around*|(|<frac|1|T>|)>*\<mathd\>U<rsub|bath>=-<around*|(|<frac|1|T>|)>*\<mathd\>U<rsub|sys>.
+    </equation*>
+
+    Plug this in the equation for the change in combined entropy to get
+
+    <\equation*>
+      \<mathd\>S<rsub|combined>=\<mathd\>S<rsub|sys>-<around*|(|<frac|1|T>|)>*\<mathd\>U<rsub|sys>\<geqslant\>0,
+    </equation*>
+
+    or
+
+    <\equation>
+      \<mathd\>F=\<mathd\>U<rsub|sys>-T*\<mathd\>S<rsub|sys>\<leqslant\>0.
+    </equation>
+
+    This is the Helmholtz free energy.
+  </example*>
+
+  <\definition>
+    <em|Helmholtz free energy.>
+
+    <\equation*>
+      F=U-T*S<label|helmholtz-free-energy>.
+    </equation*>
+
+    <\equation*>
+      \<mathd\>F=\<mathd\>U-T*\<mathd\>S-S*\<mathd\>T.<label|helmholtz-diff-form><text|>
+    </equation*>
+
+    <\equation*>
+      \<mathd\>F=-S*\<mathd\>T-P*\<mathd\>V+\<mu\>*\<mathd\>N.<label|helmholtz-alt-diff-form>
+    </equation*>
+
+    <\equation*>
+      <around*|(|<frac|\<partial\>F|\<partial\>T>|)>=-S.
+    </equation*>
+  </definition>
+
+  <\ornamented>
+    <em|Legendre transformation.> Assume we have a function
+    <math|y<around*|(|x|)>>, where each point <math|i> on the function line
+    can be represented by a tuple <math|<around*|(|x<rsub|i>,y<rsub|i>|)>>.
+    Let <math|c<rsub|i>> be the slope of the function at point <math|i>, and
+    <math|b<rsub|i>> the intercept of the slope with the <math|y>-axis.
+    <em|Legendre transformation> is <math|<around*|(|x<rsub|i>,y<rsub|i>|)>\<rightarrow\><around*|(|c<rsub|i>,b<rsub|i>|)>>.
+
+    For a function <math|y<around*|(|x<rsub|1>,x<rsub|2>,x<rsub|3>|)>,>
+
+    <\equation*>
+      \<mathd\>y=c<rsub|1>*\<mathd\>x<rsub|1>+c<rsub|2>*\<mathd\>x<rsub|2>+c<rsub|3>*\<mathd\>x<rsub|3>
+    </equation*>
+
+    <\equation*>
+      b=y-c<rsub|1>*x<rsub|1><space|1em>\<rightarrow\><space|1em>\<mathd\>b=\<mathd\>y-c<rsub|1>*\<mathd\>x<rsub|1>-x<rsub|1>*\<mathd\>c<rsub|1>
+    </equation*>
+
+    <\equation*>
+      \<mathd\>b=-x<rsub|1>*\<mathd\>c<rsub|1>+c<rsub|2>*\<mathd\>x<rsub|2>+c<rsub|3>*\<mathd\>x<rsub|3>
+    </equation*>
+
+    We can formulate <math|2<rsup|n>-1> equations of this type, where
+    <math|n> is the number of independent variables.
+  </ornamented>
+
+  <\itemize>
+    <item>A <em|micro canonical ensemble> is described in terms of
+    <math|S,V,N>.
+
+    <item>A <em|canonical ensemble> is described in terms of <math|T,V,N>.
+
+    <item>A <em|grand canonical ensemble> is described in terms of
+    <math|T,V,\<mu\>>.
+  </itemize>
+
+  \;
+
+  \;
+
+  \;
+
+  \;
 </body>
 
 <\initial>
   <\collection>
-    <associate|font-base-size|11>
     <associate|frame-titles|true>
     <associate|info-flag|detailed>
-    <associate|math-font|roman>
+    <associate|math-font|math-pagella>
     <associate|ornament-color|light grey>
     <associate|ornament-shape|rounded>
     <associate|ornament-title-style|top center>
-    <associate|page-medium|paper>
+    <associate|page-medium|papyrus>
     <associate|page-screen-margin|false>
   </collection>
 </initial>
@@ -856,22 +1143,29 @@
     <associate|Lagrange-multipliers|<tuple|2.2|8>>
     <associate|Stirling's approximation|<tuple|2.2|5>>
     <associate|auto-1|<tuple|1|1>>
-    <associate|auto-10|<tuple|2.2.2|9>>
-    <associate|auto-11|<tuple|2.3|10>>
-    <associate|auto-12|<tuple|2.2.3|10>>
+    <associate|auto-10|<tuple|2.3.1|9>>
+    <associate|auto-11|<tuple|2.3.2|9>>
+    <associate|auto-12|<tuple|2.3|10>>
+    <associate|auto-13|<tuple|2.3.3|?>>
+    <associate|auto-14|<tuple|3|?>>
     <associate|auto-2|<tuple|1.1|1>>
     <associate|auto-3|<tuple|1.2|2>>
     <associate|auto-4|<tuple|2|4>>
     <associate|auto-5|<tuple|2.1|4>>
-    <associate|auto-6|<tuple|2.1|6>>
-    <associate|auto-7|<tuple|2.2|7>>
-    <associate|auto-8|<tuple|2.2|7>>
-    <associate|auto-9|<tuple|2.2.1|8>>
+    <associate|auto-6|<tuple|2.2|6>>
+    <associate|auto-7|<tuple|2.1|7>>
+    <associate|auto-8|<tuple|2.3|7>>
+    <associate|auto-9|<tuple|2.2|8>>
     <associate|average-energy-canonical-ensemble|<tuple|2.6|11>>
+    <associate|energy-diff-form|<tuple|3.7|?>>
     <associate|entropy-alt-def|<tuple|2.1|5>>
     <associate|entropy-definition|<tuple|2.1|4>>
+    <associate|entropy-diff-form|<tuple|3.6|?>>
+    <associate|helmholtz-alt-diff-form|<tuple|3.3|?>>
+    <associate|helmholtz-diff-form|<tuple|3.3|?>>
+    <associate|helmholtz-free-energy|<tuple|3.3|?>>
     <associate|partition-function|<tuple|2.5|11>>
-    <associate|taylor-series|<tuple|2.2|7>>
+    <associate|taylor-series|<tuple|2.3|7>>
   </collection>
 </references>
 
@@ -880,19 +1174,19 @@
     <\associate|figure>
       <tuple|normal|<\surround|<hidden-binding|<tuple>|2.1>|>
         Each particle may occupy a lattice site.
-      </surround>|<pageref|auto-6>>
+      </surround>|<pageref|auto-7>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|2.2>|>
         To identify the maximum of this function, both
         <with|mode|<quote|math>|<around*|(|\<partial\>f/\<partial\>x|)>> and
         <with|mode|<quote|math>|<around*|(|\<partial\>f/\<partial\>y|)>> must
         equal zero, as they do in (b), but not in (a).
-      </surround>|<pageref|auto-8>>
+      </surround>|<pageref|auto-9>>
 
       <tuple|normal|<\surround|<hidden-binding|<tuple>|2.3>|>
         <with|mode|<quote|math>|-p*ln p> versus <with|mode|<quote|math>|p>
         has a maximum.
-      </surround>|<pageref|auto-11>>
+      </surround>|<pageref|auto-12>>
     </associate>
     <\associate|toc>
       <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|1<space|2spc>Review
@@ -915,21 +1209,29 @@
       approximation <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-5>>
 
-      <with|par-left|<quote|1tab>|2.2<space|2spc>Predicting distributions by
+      <with|par-left|<quote|1tab>|2.2<space|2spc>Lattice models
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-6>>
+
+      <with|par-left|<quote|1tab>|2.3<space|2spc>Predicting distributions by
       maximizing entropy <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-7>>
+      <no-break><pageref|auto-8>>
 
-      <with|par-left|<quote|2tab>|2.2.1<space|2spc>Extrema with constraints:
+      <with|par-left|<quote|2tab>|2.3.1<space|2spc>Extrema with constraints:
       Method of Lagrange Multipliers <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-9>>
-
-      <with|par-left|<quote|2tab>|2.2.2<space|2spc>Maximizing entropy of an
-      isolated system <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-10>>
 
-      <with|par-left|<quote|2tab>|2.2.3<space|2spc>Maximizing entropy with an
+      <with|par-left|<quote|2tab>|2.3.2<space|2spc>Maximizing entropy of an
+      isolated system <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-11>>
+
+      <with|par-left|<quote|2tab>|2.3.3<space|2spc>Maximizing entropy with an
       energy constraint <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
-      <no-break><pageref|auto-12>>
+      <no-break><pageref|auto-13>>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|3<space|2spc>Enthalpy>
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-14><vspace|0.5fn>
     </associate>
   </collection>
 </auxiliary>
