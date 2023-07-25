@@ -4999,6 +4999,41 @@
         'bulk' term <with|mode|<quote|math>|\<varepsilon\><rsub|0>> and
         opposed by a sufrace-area term <with|mode|<quote|math>|\<gamma\>>.
       </surround>|<pageref|auto-99>>
+
+      <tuple|normal|<\surround|<hidden-binding|<tuple>|9.1>|>
+        A binding curve. Nucleotide ligand bind to DnaB, a hexameric protein.
+        The average number <with|mode|<quote|math>|\<nu\>> of ligands bound
+        per hexamer protein is a function of the ligand concentration in
+        solution, and approaches six.
+      </surround>|<pageref|auto-101>>
+
+      <tuple|normal|<\surround|<hidden-binding|<tuple>|9.2>|>
+        When the concentration of ligand <with|mode|<quote|math>|<around*|[|\<up-H\><rsup|+>|]>>
+        is low (high pH), the number of proton bound is small
+        (<with|mode|<quote|math>|\<nu\>\<rightarrow\>0>). As the ligand
+        concentration increases (toward low pH), the glycines become
+        saturated and have <with|mode|<quote|math>|\<nu\>\<rightarrow\>2>
+        protons each.
+      </surround>|<pageref|auto-105>>
+
+      <tuple|normal|<\surround|<hidden-binding|<tuple>|9.3>|>
+        Ligation states for <with|mode|<quote|math>|P> molecules with two
+        binding sites: <with|mode|<quote|math>|P<rsub|0>> is the fraction of
+        <with|mode|<quote|math>|P> molecules with no ligands,
+        <with|mode|<quote|math>|P<rsub|1>> and
+        <with|mode|<quote|math>|P<rsub|2>> are the fraction of
+        <with|mode|<quote|math>|P> molecules with 1 and 2 ligands. (a)
+        One-state transition. (b) Two-state transition. From left to right:
+        at low ligand concentrations, <with|mode|<quote|math>|P> molecules
+        are mostly unliganded. At the midpoint of binding, a one-state
+        transition has a substantial intermediate population while a
+        two-state transition involves no intermediates. At high ligand, most
+        <with|mode|<quote|math>|P> molecules are doubly ligated.
+      </surround>|<pageref|auto-107>>
+
+      <tuple|normal|<\surround|<hidden-binding|<tuple>|9.4>|>
+        Hill plot.
+      </surround>|<pageref|auto-112>>
     </associate>
     <\associate|table>
       <tuple|normal|<\surround|<hidden-binding|<tuple>|4.1>|>
@@ -5315,6 +5350,45 @@
       Transitions Can Be Controlled by Nucleation
       <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
       <no-break><pageref|auto-98>>
+
+      <vspace*|1fn><with|font-series|<quote|bold>|math-font-series|<quote|bold>|9<space|2spc>Binding
+      Equilibria> <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-100><vspace|0.5fn>
+
+      <with|par-left|<quote|1tab>|9.1<space|2spc>Binding Polynomials are Used
+      to Compute Binding Curves <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-102>>
+
+      <with|par-left|<quote|1tab>|9.2<space|2spc>Two-Site Model of Binding
+      Cooperativity \ <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-103>>
+
+      <with|par-left|<quote|1tab>|9.3<space|2spc>The Stoichiometric Approach
+      to Two Binding Sites <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-104>>
+
+      <with|par-left|<quote|1tab>|9.4<space|2spc>Cooperativity Describes the
+      Depletion of Intermediate States <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-106>>
+
+      <with|par-left|<quote|1tab>|9.5<space|2spc>Binding Polynomials Can Be
+      Constructed Using the Addition and Multiplication Rules of Probability
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-108>>
+
+      <with|par-left|<quote|1tab>|9.6<space|2spc><with|mode|<quote|math>|n>
+      Independent Sites with Identical Affinities
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-109>>
+
+      <with|par-left|<quote|1tab>|9.7<space|2spc>Scatchard Plot for
+      <with|mode|<quote|math>|n> Independent Binding Sites
+      <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-110>>
+
+      <with|par-left|<quote|1tab>|9.8<space|2spc>Hill Plot for Cooperative
+      Binding <datoms|<macro|x|<repeat|<arg|x>|<with|font-series|medium|<with|font-size|1|<space|0.2fn>.<space|0.2fn>>>>>|<htab|5mm>>
+      <no-break><pageref|auto-111>>
     </associate>
   </collection>
 </auxiliary>

@@ -96,7 +96,7 @@ function [x_normalized, y_normalized] = normalize_axis(x, y, x_cal, y_cal)
 % - a point at y = 0
 % - a point at y = 8
 
-% For each axis direction constract a best-fit line.
+% For each axis direction construct a best-fit line.
 % Given y = b0 + b1 * x + error,
 % [y1;y2;y3] = [1,x1;1,x2;1,x3] * [b0;b1]
 % [b0;b1] = [y1;y2;y3] \ [1,x1;1,x2;1,x3];
