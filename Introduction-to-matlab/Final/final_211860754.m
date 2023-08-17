@@ -4,9 +4,10 @@ data = readtable(filename);
 
 %% Q1: Plot election results
 f = figure;
-tiledlayout(f, 2, 2);
+tiledlayout(f, 'flow');
 
-parties = data.Properties.VariableNames(7:end);
+% switch horrible underscore with a proper whitespace.
+parties = strrep(data.Properties.VariableNames(7:end),'_',' ');
 
 % Plot 1
 nexttile
@@ -31,8 +32,13 @@ ylabel('# votes (log scale)')
 nexttile
 % find 5 biggest parties
 [~,I] = sort(Y,'descend');
+% explode 5 biggest parties
 explode = ismember(Y,Y(I(1:5)));
-pie(Y, explode, parties)
+% create empty array of strings
+labels = strings(size(parties));
+% populate only 5 biggest parties
+labels(explode) = parties(explode);
+pie(Y, explode, labels)
 
 % Plot 4
 nexttile
@@ -50,7 +56,7 @@ clearvars -except data; clc
 non_currupt = data.settlement_name(I(1:10));
 disp("the top 10 settlements that had the highest percentage of valid votes:")
 fprintf("%s\n", non_currupt{:})
-I = flipud(I); most_currupt = data.settlement_name(I(1:10));
+most_currupt = data.settlement_name(I(end:-1:end-10));
 disp("the top 10 settlements that had the lowest percentage of valid votes:")
 fprintf("%s\n", most_currupt{:})
 
@@ -66,7 +72,7 @@ correlation = correlation(:,1); % The matrix's columns are copies of one another
 top_10_corr = data.settlement_name(I(1:10));
 disp("the top 10 settlements that had the highest correlation to the general voting pattern:")
 fprintf("%s\n", top_10_corr{:})
-I = flipud(I); bot_10_corr = data.settlement_name(I(1:10));
+bot_10_corr = data.settlement_name(I(end:-1:end-10));
 disp("the top 10 settlements that had the lowest correlation to the general voting pattern:")
 fprintf("%s\n", bot_10_corr{:})
 %%% (c)
@@ -86,3 +92,54 @@ fprintf("%s and %s\n", data.settlement_name{row}, data.settlement_name{col})
 
 %% Q4
 clearvars -except data; clc
+
+%%% (a)
+fprintf("Number of samples: %d\n", size(data,1))
+fprintf("Number of features: %d\n", size(data,2) - 6)
+
+%%% (b)-(f)
+rng(0)  % For reproducibility
+data_matrix = data{:,7:end};
+n_replicates = 25;
+metrics = {'sqeuclidean', 'cosine', 'correlation'};
+ks = 2:10;
+avg_sil = zeros(size(ks));
+
+for i = 1:length(metrics)
+    f = figure(i);
+    t = tiledlayout(f, 'flow');
+    title(t, ['Clustering analysis using the \bf' metrics{i} ' \rmmetric'])
+    for j = 1:length(ks)
+        nexttile
+        clust = kmeans(data_matrix, ks(j), 'Distance', metrics{i}, 'Replicates', n_replicates);
+        [s, h] = silhouette(data_matrix, clust, metrics{i});
+        avg_sil(j) = mean(s);
+        xlabel('Silhouette Value')
+        ylabel('Cluster')
+        title(['k = ' num2str(ks(j))])
+    end
+    [M, I] = max(avg_sil);
+    k_opt = ks(I);
+    nexttile
+    scatter(ks, avg_sil)
+    xlabel('k')
+    ylabel('average silhouette value')
+    hold on
+    plot(k_opt, M, 'r*')
+    text(k_opt, M, strcat("'\leftarrow optimal k: ",num2str(k_opt)))
+    hold off
+end
+
+%%% (g)
+% I have no idea why using the 'sqeuclidean' created different results...
+
+%% Q5
+clearvars -except data k_opt data_matrix n_replicates; clc
+k = k_opt;
+clust = kmeans(data_matrix, k_opt, 'Distance', 'correlation', 'Replicates', n_replicates);
+tiledlayout(figure, 'flow');
+
+
+%% Q8
+clearvars -except data; clc
+
