@@ -33,8 +33,8 @@
 
   <\enumerate>
     <item>Mutually exclusive: outcomes <math|<around*|(|A<rsub|1>,A<rsub|2,\<ldots\>>|)>>
-    are <em|mutually exclusive> if one outcome precludes another outcomes.
-    (Event <math|A<rsub|1>> prevents even <math|A<rsub|2>> from happening
+    are <em|mutually exclusive> if one outcome precludes other outcomes.
+    (Event <math|A<rsub|1>> prevents event <math|A<rsub|2>> from happening
     simultaneously.)
 
     <item>Collectively exhaustive: if all known outcomes are also all
@@ -499,11 +499,11 @@
     After mixing there are <math|M+N> lattice sites and <math|m+n> particles.
     Note that <math|W<rsub|A\<nocomma\>B>=W<rsub|A>*W<rsub|B>> is the
     combined multiplicity without mixing. The multiplicity after mixing,
-    <math|W<rsub|A\<nocomma\>B><rsup|\<star\>>> behaves according to the
+    <math|W<rsub|A\<nocomma\>B><rsup|\<star\>>>, behaves according to the
     multinomial distribution.
 
     <\equation*>
-      W<rsub|A\<nocomma\>B><rsup|\<star\>>=<frac|<around*|(|N+M|)>!|n!*m!*<around*|(|N+M-m-n|)>!>\<approx\><frac|<around*|(|N+M|)><rsup|N+M>|n<rsup|n>*m<rsup|m>*<around*|(|N+M-m-n|)><rsup|N+m-m-n>>
+      W<rsub|A\<nocomma\>B><rsup|\<star\>>=<frac|<around*|(|N+M|)>!|n!*m!*<around*|(|N+M-m-n|)>!>\<approx\><frac|<around*|(|N+M|)><rsup|N+M>|n<rsup|n>*m<rsup|m>*<around*|(|N+M-m-n|)><rsup|N+M-m-n>>
       .
     </equation*>
 
@@ -903,10 +903,10 @@
     up or gives off heat <math|q> or work <math|w>:
 
     <\equation>
-      \<Delta\>*U=q+w .<label|first-law>
+      \<Delta\>U=q+w .<label|first-law>
     </equation>
 
-    The internal energy is conserved; if <math|\<Delta\>*U> increases in the
+    The internal energy is conserved; if <math|\<Delta\>U> increases in the
     system, the energy decreases in the surroundings.
   </definition>
 
@@ -922,10 +922,10 @@
 
   <subsection|Energy is quantized>
 
-  Quantum theory debuted in the 20th century showed that energies of atoms
-  and molecules are quantized. Each particle has discrete amounts of energy
-  associated with each of its allowed degrees of freedom, some of which are
-  translations rotations, vibrations, and electronic excitations.
+  Quantum theory debuted in the 20th century and showed that energies of
+  atoms and molecules are quantized. Each particle has discrete amounts of
+  energy associated with each of its allowed degrees of freedom, some of
+  which are translations rotations, vibrations, and electronic excitations.
 
   The allowed energies for a given system are indicated in <em|energy-level
   diagrams>, and they predict thermodynamic properties.
@@ -988,10 +988,10 @@
   Why, then, does heat flow from hot objects to cold ones?
 
   Consider two systems, <math|A> and <math|B>, both having two possible
-  energy states: <math|\<varepsilon\><rsub|1>=0,\<varepsilon\><rsub|2>=1>.
-  Each system has 10 particles. Suppose that system <math|A> starts with
-  energy <math|U<rsub|A>=2> and system <math|B> starts with energy
-  <math|U<rsub|B>=4>.
+  energy states: <math|\<varepsilon\><rsub|1>=0>,
+  <math|\<varepsilon\><rsub|2>=1> . Each system has 10 particles. Suppose
+  that system <math|A> starts with energy <math|U<rsub|A>=2> and system
+  <math|B> starts with energy <math|U<rsub|B>=4>.
 
   <\big-figure|<image|Figures/flow-of-heat-example.png|0.7par|||>>
     Energy-level diagrams for two different systems with 10 particles each.
@@ -1168,7 +1168,7 @@
 
   A thermodynamic system is a collection of matter in any form, delineated
   from its surroundings by (real or imaginary) boundaries. Defining the
-  boundaries is important, as its specifies thermodynamic properties of the
+  boundaries is important, as they specify thermodynamic properties of the
   system.
 
   <em|Types of systems:>
@@ -1218,10 +1218,10 @@
   system.
 
   <\note*>
-    Thermodynamics does not en-tell the specific mathematical dependence of
-    <math|S> on <math|<around*|(|U,V,\<b-up-N\>|)>> or <math|U> on
-    <math|<around*|(|S,V,\<b-up-N\>|)>>. <em|Equations of state>, which come
-    from microscopic models or experiments, specify interrelations among
+    Thermodynamics theory does not entell the specific mathematical
+    dependence of <math|S> on <math|<around*|(|U,V,\<b-up-N\>|)>> or <math|U>
+    on <math|<around*|(|S,V,\<b-up-N\>|)>>. <em|Equations of state>, which
+    come from microscopic models or experiments, specify interrelations among
     these variables.\ 
   </note*>
 
@@ -1321,7 +1321,7 @@
   and from the particle bath. In this case, the number of particles in the
   system can fluctuate.
 
-  Consider a process in a system that we call the <em|tset tube>, immersed in
+  Consider a process in a system that we call the <em|test tube>, immersed in
   a <em|heat bath>. a heat bath refers to any surroundings of a system that
   hold the temperature of the system constant. If the combined test tube plus
   heat bath are isolated from the greater surroundings, equilibrium will be
@@ -1400,7 +1400,7 @@
   Substitute eq. (4.4) into (4.1) to get
 
   <\equation>
-    \<mathd\>S<rsub|sys>=-<frac|\<mathd\>U<rsub|sys>|T>\<geqslant\>0<space|2em>\<Longrightarrow\><space|2em>\<mathd\>U<rsub|sys>-T*\<mathd\>S<rsub|sys>\<leqslant\>0
+    \<mathd\>S<rsub|sys>-<frac|\<mathd\>U<rsub|sys>|T>\<geqslant\>0<space|2em>\<Longrightarrow\><space|2em>\<mathd\>U<rsub|sys>-T*\<mathd\>S<rsub|sys>\<leqslant\>0
     .
   </equation>
 
@@ -1730,11 +1730,9 @@
       water, <math|\<Delta\>*H<rsub|boil<around*|(|0<degreesign>C|)>>>, at
       the freezing point of water 0<degreesign>C and <math|p=1 atm>. boiling
       water, <math|\<Delta\>*H<rsub|boil<around|(|0<degreesign>C|)>>>, at the
-      freezing point of water <math|0<degreesign>C> and p = 1 atm. Since you
-      cannot boil water at water's freezing point, why would you want to know
-      that quantity? We will see later that
-      <math|\<Delta\>*H<rsub|boil<around|(|0<degreesign>C|)>>> from the heat
-      capacities of water and steam and the enthalpy of vaporization of
+      freezing point of water <math|0<degreesign>C> and p = 1 atm. You can
+      get <math|\<Delta\>*H<rsub|boil<around|(|0<degreesign>C|)>>> from the
+      heat capacities of water and steam and the enthalpy of vaporization of
       water, <math|\<Delta\>*H<rsub|boil<around|(|100<degreesign>C|)>>>,
       under more standard boiling conditions, by using a simple thermodynamic
       cycle.\ 
@@ -1818,7 +1816,7 @@
     p<rsub|j>|)>*\<mathd\>p<rsub|j>.
   </equation>
 
-  <math|\<mathd\>U> is given by eq. <eqref|average-energy-canonical-ensemble>:
+  <math|U> is given by eq. <eqref|average-energy-canonical-ensemble>:
 
   <\equation*>
     U=<around*|\<langle\>|E|\<rangle\>>=<big|sum><rsub|j=1><rsup|t>p<rsub|j>*E<rsub|j>.
@@ -2185,7 +2183,7 @@
   </equation>
 
   Because <math|S> increases linearly with <math|N>, the system entropy is
-  the num of the entropies of the independent particles.
+  the sum of the entropies of the independent particles.
 
   <subsubsection|Computing the free energy and chemical potential>
 
@@ -2239,12 +2237,12 @@
   The heat capacity is defined as <math|\<partial\>U/\<partial\>T>.
 
   <\equation*>
-    U=N*<around*|\<langle\>|\<varepsilon\>|\<rangle\>>=<frac|\<varepsilon\><rsub|0>*\<mathe\><rsup|-\<beta\>*\<varepsilon\><rsub|0>>|1+\<mathe\><rsup|-\<beta\>*\<varepsilon\><rsub|0>>>
+    U=N*<around*|\<langle\>|\<varepsilon\>|\<rangle\>>=<frac|N*\<varepsilon\><rsub|0>*\<mathe\><rsup|-\<beta\>*\<varepsilon\><rsub|0>>|1+\<mathe\><rsup|-\<beta\>*\<varepsilon\><rsub|0>>>
     .
   </equation*>
 
   <\equation>
-    C<rsub|V>=<frac|\<partial\>U|\<partial\>T>=<frac|\<partial\>U|\<partial\>\<beta\>>*<frac|\<partial\>\<beta\>|\<partial\>T>=-<frac|N|k*T<rsup|2>>*<around*|(|<frac|\<partial\><around*|\<langle\>|\<varepsilon\>|\<rangle\>>|\<partial\>\<beta\>>|)>
+    C<rsub|V>=<frac|\<partial\>U|\<partial\>T>=<frac|\<partial\>U|\<partial\>\<beta\>>*<frac|\<partial\>\<beta\>|\<partial\>T>=-<frac|1|k*T<rsup|2>>*<around*|(|<frac|\<partial\>U|\<partial\>\<beta\>>|)>
     .
   </equation>
 
@@ -2301,9 +2299,9 @@
   use the Schottky model to see the meaning of <math|T>.
 
   In the two-state model, <math|n> (out of <math|N>) particles populate the
-  excited state. When energy enters thesystem as heat, it excites particles
-  to move from the ground state to the excited state. We've seen that the
-  energy <math|U> of the system abides by
+  excited state. When energy enters the system as heat, it excites particles
+  from the ground state to the excited state. We've seen that the energy
+  <math|U> of the system abides by
 
   <\equation>
     U=n*\<varepsilon\><rsub|0><space|2em>\<Longrightarrow\><space|2em>n=<frac|U|\<varepsilon\><rsub|0>>

@@ -130,7 +130,7 @@
     <math|\<chi\><rsub|i\<nocomma\>j>> as
 
     <\equation>
-      \<chi\><rsub|i\<nocomma\>j>=<frac|z|k*T>*<around*|(|w<rsub|i\<nocomma\>j>-<frac|w<rsub|i\<nocomma\>i>+w<rsub|i\<nocomma\>j>|2>|)>
+      \<chi\><rsub|i\<nocomma\>j>=<frac|z|k*T>*<around*|(|w<rsub|i\<nocomma\>j>-<frac|w<rsub|i\<nocomma\>i>+w<rsub|j\<nocomma\>j>|2>|)>
       .
     </equation>
 
@@ -276,9 +276,3 @@
     <associate|page-medium|paper>
   </collection>
 </initial>
-
-<\references>
-  <\collection>
-    <associate|auto-1|<tuple|1|?>>
-  </collection>
-</references>

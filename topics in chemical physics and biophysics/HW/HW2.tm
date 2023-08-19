@@ -1,6 +1,6 @@
 <TeXmacs|2.1.2>
 
-<style|<tuple|generic|libertine-font|framed-theorems>>
+<style|<tuple|generic|framed-theorems>>
 
 <\body>
   <doc-data|<doc-title|Homework 2>>
