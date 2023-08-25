@@ -37,8 +37,8 @@ explode = ismember(Y,Y(I(1:5)));
 % create empty array of strings
 labels = strings(size(parties));
 parties_percentage = Y * 100 / sum(Y);
-% populate only 5 biggest parties and show slice size
-labels(explode) = parties(explode) + " (" + string(fix(parties_percentage(explode))) + "%)";
+% populate only 5 biggest parties
+labels(explode) = parties(explode);
 pie(Y, explode, labels)
 
 % Plot 4
@@ -81,10 +81,13 @@ disp("the top 10 settlements that had the lowest correlation to the general voti
 fprintf("%s\n", bot_10_corr{:})
 %%% (c)
 inter_correlation = corr(individual_voting_pattern);
+% The resulting matrix is a mirror of itself.
+% Additionally, the diagonal is all ones.
 %%% (d)
+%%%%%%%%%% Two approaches %%%%%%%%%%
+%%%%%%%%%% Approach (1) %%%%%%%%%%
 % By highest correlation, we mean approaches one or negative one.
-% The resulting matrix is a mirror of itself. Additionally, the diagonal is
-% all ones. To find the highest correlating settlements, it is sufficient to take
+% To find the highest correlating settlements, it is sufficient to take
 % only one side of the matrix (upper or lower triangular part), excluding
 % the main diagonal.
 [~,I] = max(tril(abs(inter_correlation),-1),[],"all");
@@ -94,6 +97,22 @@ fprintf("%s and %s\n", data.settlement_name{row}, data.settlement_name{col})
 
 % By lowest correlation, we mean approaches zero, and not the most negative one.
 [~,I] = min(abs(inter_correlation),[],"all");
+disp("Two settlements that had the lowest correlation between their voting pattern:")
+[row, col] = ind2sub(size(inter_correlation), I);
+fprintf("%s and %s\n", data.settlement_name{row}, data.settlement_name{col})
+
+%%%%%%%%%% Approach (2) %%%%%%%%%%
+% By highest correlation, we mean approaches (positive) one.
+% To find the highest correlating settlements, it is sufficient to take
+% only one side of the matrix (upper or lower triangular part), excluding
+% the main diagonal.
+[~,I] = max(tril(inter_correlation,-1),[],"all");
+disp("Two settlements that had the highest correlation between their voting pattern:")
+[row, col] = ind2sub(size(inter_correlation), I);
+fprintf("%s and %s\n", data.settlement_name{row}, data.settlement_name{col})
+
+% By lowest correlation, we mean approaches negative one.
+[~,I] = min(inter_correlation,[],"all");
 disp("Two settlements that had the lowest correlation between their voting pattern:")
 [row, col] = ind2sub(size(inter_correlation), I);
 fprintf("%s and %s\n", data.settlement_name{row}, data.settlement_name{col})
@@ -155,8 +174,8 @@ end
 % `correlation` metrics.
 
 % `sqeuclidean` aims to minimize the sum of squared Euclidean distances,
-% which can be interpreted minimizing the variance within each cluster.
-% Other metrics do not satisfy the sum-of-variance equality (which holds
+% which can be interpreted as minimizing the variance within each cluster.
+% The other metrics do not satisfy the sum-of-variance equality (which holds
 % for `sqeuclidean`). They inherently change the interpretation of `what is
 % good clustering`.
 % `correlation` and `cosine` try to maximize either:
@@ -182,7 +201,19 @@ set(gca,"Colormap",c)
 
 % Plot 2
 nexttile
-% No idea what the hell they want
+X = categorical(strrep(data.Properties.VariableNames(7:end),'_',' '))';
+Y = zeros(length(X), k_opt);
+for i = 1:k_opt
+    Y(:,i) = sum(data_matrix(clust == i, :)) ./ sum(data_matrix) * 100;
+end
+stem(X,Y,'filled')
+yline(100,'-k','LineWidth',3,'Label',"General Voting Pattern")
+% Expland plot limit so the ylim annotation can be seen clearly.
+ylim([-5,115])
+xlabel("Party")
+ylabel("Percentage of votes to party within cluster")
+set(gca,"Colormap",c)
+legend("group " + string(1:k_opt), 'Location','northeastoutside')
 
 % Plot 3
 nexttile
@@ -242,56 +273,55 @@ fprintf("%s\n", common_parties{:})
 tiledlayout(figure, 'flow');
 
 %%% (b)-(d)
+
+% Find indices of common parties in all elections
+[~,i19a,~] = intersect(data_19a.Properties.VariableNames(7:end), common_parties);
+[~,i19b,~] = intersect(data_19b.Properties.VariableNames(7:end), common_parties);
+[~,i20a,~] = intersect(data_20a.Properties.VariableNames(7:end), common_parties);
+
 % comparing 2019a and 2019b
 nexttile
-% Find common parties to both elections
-[common_19a_19b,ia,ib] = intersect(data_19a.Properties.VariableNames(7:end),data_19b.Properties.VariableNames(7:end));
 % Calculate sum of votes per each common party.
-X = sum(data_matrix_19a(:,ia))';
-Y = sum(data_matrix_19b(:,ib))';
+X = sum(data_matrix_19a(:,i19a))';
+Y = sum(data_matrix_19b(:,i19b))';
 % Perform linear regression via ordinary least squares.
 linear_fit = horzcat(ones(size(X)),X)\Y;
 % Plot results
 scatter(X,Y,'filled'); hold on
 plot(X, linear_fit(1) + linear_fit(2) * X,'r--')
-xlabel("Total votes for each common party in 2019a")
-ylabel("Total votes for each common party in 2019b")
-title("Comparing 2019a and 2019b elections. Correlation is: " + num2str(corr(X,Y)))
+xlabel(["Total votes for", "each common party in 2019a"])
+ylabel(["Total votes for", "each common party in 2019b"])
+title(["Comparing 2019a and 2019b elections.", "Correlation is: " + num2str(corr(X,Y))])
 legend("data","linear fit",'Location','northwest')
 
 % comparing 2019a and 2020a
 nexttile
-[common_19a_20a,ia,ib] = intersect(data_19a.Properties.VariableNames(7:end),data_20a.Properties.VariableNames(7:end));
-X = sum(data_matrix_19a(:,ia))';
-Y = sum(data_matrix_20a(:,ib))';
+X = sum(data_matrix_19a(:,i19a))';
+Y = sum(data_matrix_20a(:,i20a))';
 linear_fit = horzcat(ones(size(X)),X)\Y;
 scatter(X,Y,'filled'); hold on
 plot(X, linear_fit(1) + linear_fit(2) * X,'r--')
-xlabel("Total votes for each common party in 2019a")
-ylabel("Total votes for each common party in 2020a")
-title("Comparing 2019a and 2020a elections. Correlation is: " + num2str(corr(X,Y)))
+xlabel(["Total votes for", "each common party in 2019a"])
+ylabel(["Total votes for", "each common party in 2020a"])
+title(["Comparing 2019a and 2020a elections.", "Correlation is: " + num2str(corr(X,Y))])
 legend("data","linear fit",'Location','northwest')
 
-% comparing 2019a and 2020a
+% comparing 2019b and 2020a
 nexttile
-[common_19b_20a,ia,ib] = intersect(data_19b.Properties.VariableNames(7:end),data_20a.Properties.VariableNames(7:end));
-X = sum(data_matrix_19b(:,ia))';
-Y = sum(data_matrix_20a(:,ib))';
+X = sum(data_matrix_19b(:,i19b))';
+Y = sum(data_matrix_20a(:,i20a))';
 linear_fit = horzcat(ones(size(X)),X)\Y;
 scatter(X,Y,'filled'); hold on
 plot(X, linear_fit(1) + linear_fit(2) * X,'r--')
-xlabel("Total votes for each common party in 2019b")
-ylabel("Total votes for each common party in 2020a")
-title("Comparing 2019b and 2020a elections. Correlation is: " + num2str(corr(X,Y)))
+xlabel(["Total votes for", "each common party in 2019b"])
+ylabel(["Total votes for", "each common party in 2020a"])
+title(["Comparing 2019b and 2020a elections.", "Correlation is: " + num2str(corr(X,Y))])
 legend("data","linear fit",'Location','northwest')
 
 %%% (e)
 nexttile
 X = categorical(strrep(common_parties','_',' '));
-[~,idx_19a] = ismember(common_parties, data_19a.Properties.VariableNames(7:end));
-[~,idx_19b] = ismember(common_parties, data_19b.Properties.VariableNames(7:end));
-[~,idx_20a] = ismember(common_parties, data_20a.Properties.VariableNames(7:end));
-Y = vertcat(sum(data_matrix_19a(:,idx_19a)), sum(data_matrix_19b(:,idx_19b)), sum(data_matrix_20a(:,idx_20a)));
+Y = vertcat(sum(data_matrix_19a(:,i19a)), sum(data_matrix_19b(:,i19b)), sum(data_matrix_20a(:,i20a)));
 bar(X,Y,'stacked')
 legend("2019a", "2019b", "2020a")
 ylabel("Total votes per party")
@@ -318,8 +348,7 @@ end
 %%% (c)
 nexttile
 % find top 100 likud settlements in 2019a
-% [~,I] = sort(data_20a.LIKUD./data_20a.votes_valid,'descend');
-[~,I] = sort(data_20a.LIKUD,'descend');
+[~,I] = sort(data_20a.LIKUD./data_20a.votes_valid,'descend');
 X = categorical(["GESHER 19a", "AVODA 19a", "MERETZ 19a", "GESHER+AVODA+MERETZ 20a"]);
 Y = sum([data_19a.GESHER(I(1:100)), data_19a.AVODA(I(1:100)), data_19a.MERETZ(I(1:100)), data_20a.AVODA_GESHER_MERETZ(I(1:100))]);
 bar(X,Y)
@@ -362,25 +391,3 @@ pie([voting_rate_large_above_threshold, voting_rate_large_below_threshold])
 title("Large settlements")
 
 legend("Voting rate above 75%", "Voting rate below 75%",'Location','northeastoutside')
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Questions about the assignment:
-% - Q2d. So the names of the other parties should be hidden?
-%        Do you want the percentage next to the name of the 5 biggest?
-% - Q2e. Total voters, irrespective of if the votes are valid or invalid?
-%        Voting rate calculated via valid votes only?
-% - Q3d. High and low correlations by means of absolute magnitude,
-%        irrespective of the sign?
-% - Q6c. What do you mean by voting pattern for each cluster?
-%        If you mean the sum of votes for each party over all settlements in
-%        the cluster, what should be the x-axis in the plot?
-%        How is the general voting pattern a single value? It should be a
-%        vector...
-% - Q8b. Do you want to account only for parties common to the three
-%        elections? Or parties common to each pair?
-%        A scatter plot of sum of votes for common parties in election (a)
-%        vs sum of votes for common parties in election (b)?
-% - Q9c. Filter settlements by total votes to Likud,
-%        normalized by the number of valid votes in the settlement?
-%        What else do you mean in top 100 in percentage?
-%        In the bar graph, 2019b results should be discarded?
