@@ -1,4 +1,4 @@
-<TeXmacs|2.1.4>
+<TeXmacs|2.1.2>
 
 <style|generic>
 
@@ -120,7 +120,7 @@
       Proposed basis for <math|U> is the set
       <math|S=<around*|{|E<rsub|i\<nocomma\>i>\|i=1,\<ldots\>,n|}>\<cup\><around*|{|E<rsub|i\<nocomma\>j>+E<rsub|j\<nocomma\>i>\|i,j=1,\<ldots\>,n<infix-and>i\<less\>j|}>>.
       We first show that the basis spans the set. <math|A> can be described
-      compleltey via the upper triangular entries (<math|i\<leq\>j>):
+      completely via the upper triangular entries (<math|i\<leq\>j>):
 
       <\equation*>
         A=<bmatrix|<tformat|<table|<row|<cell|a<rsub|11>>|<cell|a<rsub|12>>|<cell|\<cdots\>>|<cell|a<rsub|1\<nocomma\>n>>>|<row|<cell|a<rsub|12>>|<cell|a<rsub|22>>|<cell|\<cdots\>>|<cell|a<rsub|2\<nocomma\>n>>>|<row|<cell|\<vdots\>>|<cell|\<vdots\>>|<cell|\<ddots\>>|<cell|\<vdots\>>>|<row|<cell|a<rsub|1n>>|<cell|a<rsub|2\<nocomma\>n>>|<cell|\<cdots\>>|<cell|a<rsub|n\<nocomma\>n>>>>>>,
@@ -179,8 +179,37 @@
       vectors are linearly independent.
 
       <item><math|W> is the set of real polynomial functions.
-      <with|color|red|The set is infinite! Did you mean polynomials of degree
-      <math|n>?>
+
+      Every polynomial can be written as the sum:
+
+      <\equation*>
+        a<rsub|0>+a<rsub|1>*x+a<rsub|2>*x<rsup|2>+\<cdots\>+a<rsub|n>*x<rsup|n>,<space|2em>a<rsub|i>\<in\>\<bbb-R\>,<space|1em>n\<in\>\<bbb-N\>,
+      </equation*>
+
+      which is spanned by the monomial set:
+
+      <\equation*>
+        S=<around*|{|1,x,x<rsup|2>,\<ldots\>,x<rsup|n>|}> ,
+      </equation*>
+
+      whose dimension is <math|n+1>. The set is linearly independent: each
+      monomial can be expressed as a vector of order <math|n+1>; for example
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|1>|<cell|\<leftrightarrow\>>|<cell|<around*|[|1,0,0,\<ldots\>,0|]>>>|<row|<cell|x>|<cell|\<leftrightarrow\>>|<cell|<around*|[|0,1,0,\<ldots\>,0|]>>>|<row|<cell|x<rsup|2>>|<cell|\<leftrightarrow\>>|<cell|<around*|[|0,0,1,\<ldots\>,0|]>>>|<row|<cell|x<rsup|n>>|<cell|\<leftrightarrow\>>|<cell|<around*|[|0,0,0,\<ldots\>,1|]>
+        .>>>>
+      </eqnarray*>
+
+      To check for linear independence, form a matrix from the vectors to get
+
+      <\equation*>
+        <bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>|<cell|0>|<cell|\<cdots\>>|<cell|0>>|<row|<cell|0>|<cell|1>|<cell|0>|<cell|\<cdots\>>|<cell|0>>|<row|<cell|0>|<cell|0>|<cell|1>|<cell|\<cdots\>>|<cell|0>>|<row|<cell|\<vdots\>>|<cell|\<vdots\>>|<cell|\<vdots\>>|<cell|\<ddots\>>|<cell|\<vdots\>>>|<row|<cell|0>|<cell|0>|<cell|0>|<cell|\<cdots\>>|<cell|1>>>>>
+        .
+      </equation*>
+
+      The resulting matrix is in canonical form and has a full rank, which
+      means that the set is linearly independent. The set spans the space and
+      is linearly independent. It is therefore a basis.
 
       <item><math|\<bbb-C\><rsup|n>> as a vector space over <math|\<bbb-R\>>.
 
@@ -297,19 +326,45 @@
   </question>
 
   <\question>
+    The system can be expressed in matrix form, where
+    <math|<wide|x|\<vect\>>\<in\>\<bbb-R\><rsup|5>>,
+    <math|<wide|y|\<vect\>>\<in\>\<bbb-R\><rsup|3>>, and
+    <math|W\<in\>R<rsup|3\<times\>5>>:
+
     <\equation*>
-      y<rsub|i>=<big|sum><rsub|j=1><rsup|5>w<rsub|i\<nocomma\>j>*x<rsub|j>,<space|1em>i=1,2,3
-      .
+      W*<wide|x|\<vect\>>=<wide|y|\<vect\>> .
     </equation*>
 
     <\enumerate-alpha>
-      <item>
+      <item>The output, <math|<wide|y|\<vect\>>,> is a linear combination of
+      the columns of <math|W> weighted by the coordinates of
+      <math|<wide|x|\<vect\>>>. This means that <math|<wide|y|\<vect\>>> is
+      spanned by the columns of <math|W>, so <math|<wide|y|\<vect\>>> resides
+      in the <with|font-series|bold|column space> of <math|W>.
 
-      <item>
+      <item>We need to find a basis for the column space of <math|W>. Perform
+      Gaussian elimination on <math|W>.
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<bmatrix|<tformat|<table|<row|<cell|7>|<cell|1>|<cell|6>|<cell|5>|<cell|3>>|<row|<cell|0>|<cell|-1>|<cell|1>|<cell|2>|<cell|4>>|<row|<cell|6>|<cell|4>|<cell|2>|<cell|-2>|<cell|-10>>>>>>|<cell|<long-arrow|\<rubber-rightarrow\>|R<rsub|3>\<rightarrow\>7R<rsub|3>-6R<rsub|1>>>|<cell|<bmatrix|<tformat|<table|<row|<cell|7>|<cell|1>|<cell|6>|<cell|5>|<cell|3>>|<row|<cell|0>|<cell|-1>|<cell|1>|<cell|2>|<cell|4>>|<row|<cell|0>|<cell|22>|<cell|-22>|<cell|-44>|<cell|-88>>>>>>>|<row|<cell|>|<cell|<long-arrow|\<rubber-rightarrow\>|<tabular*|<tformat|<table|<row|<cell|R<rsub|3>\<rightarrow\>R<rsub|3>+22R<rsub|2>>>>>>>>|<cell|<bmatrix|<tformat|<table|<row|<cell|7>|<cell|1>|<cell|6>|<cell|5>|<cell|3>>|<row|<cell|0>|<cell|-1>|<cell|1>|<cell|2>|<cell|4>>|<row|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|0>>>>>
+        .>>>>
+      </eqnarray*>
+
+      The matrix is in row echelon form. A possible basis for the column
+      space of <math|W> is
 
       <\equation*>
-        W=<bmatrix|<tformat|<table|<row|<cell|7>|<cell|1>|<cell|6>|<cell|5>|<cell|3>>|<row|<cell|0>|<cell|-1>|<cell|1>|<cell|2>|<cell|4>>|<row|<cell|6>|<cell|4>|<cell|2>|<cell|-2>|<cell|-10>>>>>
+        <around*|{|<bmatrix|<tformat|<table|<row|<cell|7>>|<row|<cell|1>>|<row|<cell|6>>|<row|<cell|5>>|<row|<cell|3>>>>>,<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|-1>>|<row|<cell|1>>|<row|<cell|2>>|<row|<cell|4>>>>>|}>
         .
+      </equation*>
+
+      <item>The fundumental space of <math|W*<wide|x|\<vect\>>=<wide|0|\<vect\>>>
+      is the <with|font-series|bold|nullspace> of <math|W>, and its dimension
+      is <math|n-r>. In this case, <math|n=5> and <math|r=2> (found from b.)
+      The dimension of the nullspace of <math|W> is 3.
+
+      <\equation*>
+        \ 
       </equation*>
     </enumerate-alpha>
   </question>
