@@ -1,4 +1,4 @@
-<TeXmacs|2.1.2>
+<TeXmacs|2.1.4>
 
 <style|generic>
 
@@ -145,38 +145,39 @@
       <item><math|V> is the set of square <math|n\<times\>n> real matrices
       whose rows add up to zero.
 
-      A general matrix <math|A<rsup|n\<times\>n>\<in\>V> has the form:
+      A general matrix <math|A<rsup|n\<times\>n>\<in\>V> has the form
 
       <\equation*>
-        A=<bmatrix|<tformat|<table|<row|<cell|a<rsub|11>>|<cell|a<rsub|21>>|<cell|\<cdots\>>|<cell|a<rsub|n1>>>|<row|<cell|a<rsub|12>>|<cell|a<rsub|22>>|<cell|>|<cell|a<rsub|n2>>>|<row|<cell|\<vdots\>>|<cell|\<vdots\>>|<cell|\<ddots\>>|<cell|\<vdots\>>>|<row|<cell|-<big|sum><rsub|j=1><rsup|n-1>a<rsub|1j>>|<cell|-<big|sum><rsub|j=1><rsup|n-1>a<rsub|2j>>|<cell|>|<cell|-<big|sum><rsub|j=1><rsup|n-1>a<rsub|n\<nocomma\>j>>>>>>
+        A=<bmatrix|<tformat|<table|<row|<cell|a<rsub|11>>|<cell|a<rsub|12>>|<cell|\<cdots\>>|<cell|-<big|sum><rsub|j=1><rsup|n-1>a<rsub|1j>>>|<row|<cell|a<rsub|21>>|<cell|a<rsub|22>>|<cell|\<cdots\>>|<cell|-<big|sum><rsub|j=1><rsup|n-1>a<rsub|2j>>>|<row|<cell|\<vdots\>>|<cell|\<vdots\>>|<cell|\<ddots\>>|<cell|\<vdots\>>>|<row|<cell|a<rsub|n1>>|<cell|a<rsub|n2>>|<cell|\<cdots\>>|<cell|-<big|sum><rsub|j=1><rsup|n-1>a<rsub|n\<nocomma\>j>>>>>>
         .
       </equation*>
 
-      We can see that all elements in the <math|n<rsup|th>> row are linearly
-      dependent on the elements in their respective columns. The basis
+      We can see that all elements in the <math|n<rsup|th>> column are
+      linearly dependent on the elements in their respective rows. The basis
       dimension is therefore <math|n<rsup|2>-n> (total number of elements in
-      a square matrix minus a number of elements in a row).
+      a square matrix minus number of elements in a row).
 
-      Take out the scalars to get a spanning set and check linear
+      Take out the scalars to get a spanning set, and check linear
       independence to get a basis.
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|A>|<cell|=>|<cell|a<rsub|11>*<bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>|<cell|\<cdots\>>|<cell|0>>|<row|<cell|0>|<cell|0>|<cell|\<cdots\>>|<cell|0>>|<row|<cell|\<vdots\>>|<cell|\<vdots\>>|\<ddots\>|<cell|0>>|<row|<cell|-1>|<cell|0>|0|<cell|0>>>>>+a<rsub|21>*<bmatrix|<tformat|<table|<row|<cell|0>|<cell|0>|<cell|\<cdots\>>|<cell|0>>|<row|<cell|1>|<cell|0>|<cell|\<cdots\>>|<cell|0>>|<row|<cell|\<vdots\>>|<cell|\<vdots\>>|\<ddots\>|<cell|0>>|<row|<cell|-1>|<cell|0>|0|<cell|0>>>>>+\<cdots\>+a<rsub|<around*|(|n-1|)>1><bmatrix|<tformat|<table|<row|<cell|0>|<cell|0>|<cell|\<cdots\>>|<cell|0>>|<row|<cell|\<vdots\>>|<cell|0>|<cell|\<cdots\>>|<cell|0>>|<row|<cell|1>|<cell|\<vdots\>>|\<ddots\>|<cell|0>>|<row|<cell|-1>|<cell|0>|0|<cell|0>>>>>>>|<row|<cell|>|<cell|+>|<cell|a<rsub|12>*<bmatrix|<tformat|<table|<row|<cell|0>|<cell|1>|<cell|\<cdots\>>|<cell|0>>|<row|<cell|0>|<cell|0>|<cell|\<cdots\>>|<cell|0>>|<row|<cell|\<vdots\>>|<cell|\<vdots\>>|\<ddots\>|<cell|0>>|<row|<cell|0>|<cell|-1>|0|<cell|0>>>>>+a<rsub|22>*<bmatrix|<tformat|<table|<row|<cell|0>|<cell|0>|<cell|\<cdots\>>|<cell|0>>|<row|<cell|0>|<cell|1>|<cell|\<cdots\>>|<cell|0>>|<row|<cell|\<vdots\>>|<cell|\<vdots\>>|\<ddots\>|<cell|0>>|<row|<cell|0>|<cell|-1>|0|<cell|0>>>>>+\<cdots\>+a<rsub|<around*|(|n-1|)>2>*<bmatrix|<tformat|<table|<row|<cell|0>|<cell|0>|<cell|\<cdots\>>|<cell|0>>|<row|<cell|0>|<cell|\<vdots\>>|<cell|\<cdots\>>|<cell|0>>|<row|<cell|\<vdots\>>|<cell|1>|\<ddots\>|<cell|0>>|<row|<cell|0>|<cell|-1>|0|<cell|0>>>>>>>|<row|<cell|>|<cell|+>|<cell|a<rsub|1\<nocomma\>n>*<bmatrix|<tformat|<table|<row|<cell|0>|<cell|0>|<cell|\<cdots\>>|<cell|1>>|<row|<cell|0>|<cell|0>|<cell|\<cdots\>>|<cell|0>>|<row|<cell|\<vdots\>>|<cell|0>|\<ddots\>|<cell|\<vdots\>>>|<row|<cell|0>|<cell|0>|0|<cell|-1>>>>>+a<rsub|2n>*<bmatrix|<tformat|<table|<row|<cell|0>|<cell|0>|<cell|\<cdots\>>|<cell|0>>|<row|<cell|0>|<cell|0>|<cell|\<cdots\>>|<cell|1>>|<row|<cell|\<vdots\>>|<cell|0>|\<ddots\>|<cell|\<vdots\>>>|<row|<cell|0>|<cell|0>|0|<cell|-1>>>>>+\<cdots\>+a<rsub|<around*|(|n-1|)>n>*<bmatrix|<tformat|<table|<row|<cell|0>|<cell|0>|<cell|\<cdots\>>|<cell|0>>|<row|<cell|0>|<cell|0>|<cell|\<cdots\>>|<cell|\<vdots\>>>|<row|<cell|\<vdots\>>|<cell|0>|\<ddots\>|<cell|1>>|<row|<cell|0>|<cell|0>|0|<cell|-1>>>>>>>>>
+        <tformat|<table|<row|<cell|A>|<cell|=>|<cell|a<rsub|11>*<bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>|<cell|\<cdots\>>|<cell|-1>>|<row|<cell|0>|<cell|0>|<cell|\<cdots\>>|<cell|0>>|<row|<cell|\<vdots\>>|<cell|\<vdots\>>|<cell|\<ddots\>>|<cell|\<vdots\>>>|<row|<cell|0>|<cell|0>|<cell|\<cdots\>>|<cell|0>>>>>+a<rsub|12>*<bmatrix|<tformat|<table|<row|<cell|0>|<cell|1>|<cell|\<cdots\>>|<cell|-1>>|<row|<cell|0>|<cell|0>|<cell|\<cdots\>>|<cell|0>>|<row|<cell|\<vdots\>>|<cell|\<vdots\>>|<cell|\<ddots\>>|<cell|\<vdots\>>>|<row|<cell|0>|<cell|0>|<cell|\<cdots\>>|<cell|0>>>>>+\<cdots\>+a<rsub|1<around*|(|n-1|)>>*<bmatrix|<tformat|<table|<row|<cell|0>|<cell|\<cdots\>>|<cell|1>|<cell|-1>>|<row|<cell|0>|<cell|0>|<cell|\<cdots\>>|<cell|0>>|<row|<cell|\<vdots\>>|<cell|\<vdots\>>|<cell|\<ddots\>>|<cell|\<vdots\>>>|<row|<cell|0>|<cell|0>|<cell|\<cdots\>>|<cell|0>>>>>>>|<row|<cell|>|<cell|+>|<cell|a<rsub|21>*<bmatrix|<tformat|<table|<row|<cell|0>|<cell|0>|<cell|\<cdots\>>|<cell|0>>|<row|<cell|1>|<cell|0>|<cell|\<cdots\>>|<cell|-1>>|<row|<cell|\<vdots\>>|<cell|\<vdots\>>|<cell|\<ddots\>>|<cell|\<vdots\>>>|<row|<cell|0>|<cell|0>|<cell|\<cdots\>>|<cell|0>>>>>+a<rsub|22>*<bmatrix|<tformat|<table|<row|<cell|0>|<cell|0>|<cell|\<cdots\>>|<cell|0>>|<row|<cell|0>|<cell|1>|<cell|\<cdots\>>|<cell|-1>>|<row|<cell|\<vdots\>>|<cell|\<vdots\>>|<cell|\<ddots\>>|<cell|\<vdots\>>>|<row|<cell|0>|<cell|0>|<cell|\<cdots\>>|<cell|0>>>>>+\<cdots\>+a<rsub|2<around*|(|n-1|)>>**<bmatrix|<tformat|<table|<row|<cell|0>|<cell|0>|<cell|\<cdots\>>|<cell|0>>|<row|<cell|0>|<cell|0>|<cell|1>|<cell|-1>>|<row|<cell|\<vdots\>>|<cell|\<vdots\>>|<cell|\<ddots\>>|<cell|\<vdots\>>>|<row|<cell|0>|<cell|0>|<cell|\<cdots\>>|<cell|0>>>>>>>|<row|<cell|>|<cell|\<vdots\>>|<cell|>>|<row|<cell|>|<cell|+>|<cell|a<rsub|n1>*<bmatrix|<tformat|<table|<row|<cell|0>|<cell|0>|<cell|\<cdots\>>|<cell|0>>|<row|<cell|0>|<cell|0>|<cell|\<cdots\>>|<cell|0>>|<row|<cell|\<vdots\>>|<cell|\<vdots\>>|<cell|\<ddots\>>|<cell|\<vdots\>>>|<row|<cell|1>|<cell|0>|<cell|\<cdots\>>|<cell|-1>>>>>+a<rsub|n2>*<bmatrix|<tformat|<table|<row|<cell|0>|<cell|0>|<cell|\<cdots\>>|<cell|0>>|<row|<cell|0>|<cell|0>|<cell|\<cdots\>>|<cell|0>>|<row|<cell|\<vdots\>>|<cell|\<vdots\>>|<cell|\<ddots\>>|<cell|\<vdots\>>>|<row|<cell|0>|<cell|1>|<cell|\<cdots\>>|<cell|-1>>>>>+\<cdots\>+a<rsub|n<around*|(|n-1|)>>*<bmatrix|<tformat|<table|<row|<cell|0>|<cell|0>|<cell|\<cdots\>>|<cell|0>>|<row|<cell|0>|<cell|0>|<cell|\<cdots\>>|<cell|0>>|<row|<cell|\<vdots\>>|<cell|\<vdots\>>|<cell|\<ddots\>>|<cell|\<vdots\>>>|<row|<cell|0>|<cell|0>|<cell|1>|<cell|-1>>>>>>>>>
       </eqnarray*>
 
       Let <math|B<rsub|i\<nocomma\>j>\<in\>\<bbb-R\><rsup|n\<times\>n>> be a
-      matrix whose <math|i\<nocomma\>j<rsup|th>> entry is 1 and its
-      <math|i\<nocomma\>n<rsup|th>> entry is <math|-1>. The basis is
+      matrix shose <math|i\<nocomma\>j<rsup|th>> entry is 1 and its
+      <math|i\<nocomma\>n<rsup|th>> entry is <math|-1>. A basis for <math|V>
+      is
 
       <\equation*>
-        S=<around*|{|B<rsub|i\<nocomma\>j>\|i=1,\<ldots\>,n-1<infix-and>j=1,\<ldots\>,n|}>
+        S=<around*|{|B<rsub|i\<nocomma\>j>\|i=1,\<ldots\>,n<infix-and>j=1,\<ldots\>,n-1|}>
         .
       </equation*>
 
       As shown above, <math|S> is a spanning set:
-      <math|A=<big|sum><rsub|i=1><rsup|n-1><big|sum><rsub|j=1><rsup|n>B<rsub|i\<nocomma\>j>>.
-      The set <math|S> also contains <math|n<rsup|2>-n> elements, so its
-      vectors are linearly independent.
+      <math|A=<big|sum><rsub|i=1><rsup|n><big|sum><rsub|j=1><rsup|n-1>B<rsub|i\<nocomma\>j>>.
+      The set <math|S> also contains <math|n<rsup|2>-n> vectors, so it is
+      linearly independent.
 
       <item><math|W> is the set of real polynomial functions.
 
@@ -350,13 +351,16 @@
         .>>>>
       </eqnarray*>
 
-      The matrix is in row echelon form. A possible basis for the column
-      space of <math|W> is
+      The matrix is in echelon form. We see that the 1st and 2nd column have
+      leading pivots. These are therefore the independent columns of the
+      matrix. A basis for the column space (or output space) is
 
       <\equation*>
-        <around*|{|<bmatrix|<tformat|<table|<row|<cell|7>>|<row|<cell|1>>|<row|<cell|6>>|<row|<cell|5>>|<row|<cell|3>>>>>,<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|-1>>|<row|<cell|1>>|<row|<cell|2>>|<row|<cell|4>>>>>|}>
+        <around*|{|<bmatrix|<tformat|<table|<row|<cell|7>>|<row|<cell|0>>|<row|<cell|6>>>>>,<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|-1>>|<row|<cell|1>>>>>|}>
         .
       </equation*>
+
+      \ 
 
       <item>The fundumental space of <math|W*<wide|x|\<vect\>>=<wide|0|\<vect\>>>
       is the <with|font-series|bold|nullspace> of <math|W>, and its dimension
