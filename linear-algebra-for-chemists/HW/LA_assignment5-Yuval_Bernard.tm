@@ -1,4 +1,4 @@
-<TeXmacs|2.1.4>
+<TeXmacs|2.1.2>
 
 <style|generic>
 
@@ -36,33 +36,32 @@
       <item><math|v<rsub|1>=<around*|(|\<mathe\><rsup|-t>,2*\<mathe\><rsup|-t>|)>,v<rsub|2>=<around*|(|\<mathe\><rsup|-t>,\<mathe\><rsup|-t>|)>,v<rsub|3>=<around*|(|3\<mathe\><rsup|-t>,0|)>
       .>
 
-      Perform Gaussian elimination on the system
+      Check for linear independence by solving the system
 
       <\equation*>
-        <bmatrix|<tformat|<table|<row|<cell|\<mathe\><rsup|-t>>|<cell|2*\<mathe\><rsup|-t>>>|<row|<cell|\<mathe\><rsup|-t>>|<cell|\<mathe\><rsup|-t>>>|<row|<cell|3*\<mathe\><rsup|-t>>|<cell|0>>>>><long-arrow|\<rubber-rightarrow\>|<tabular*|<tformat|<table|<row|<cell|R<rsub|2>-R<rsub|2>-R<rsub|1>>>|<row|<cell|R<rsub|3>\<rightarrow\>R<rsub|3>-3R<rsub|1>>>>>>><bmatrix|<tformat|<table|<row|<cell|\<mathe\><rsup|-t>>|<cell|2*\<mathe\><rsup|-t>>>|<row|<cell|0>|<cell|-\<mathe\><rsup|-t>>>|<row|<cell|0>|<cell|-6*\<mathe\><rsup|-t>>>>>><long-arrow|\<rubber-rightarrow\>|R<rsub|3>-6*R<rsub|2>><bmatrix|<tformat|<table|<row|<cell|\<mathe\><rsup|-t>>|<cell|2*\<mathe\><rsup|-t>>>|<row|<cell|0>|<cell|-\<mathe\><rsup|-t>>>|<row|<cell|0>|<cell|0>>>>>
+        \<mathe\><rsup|-t>*<bmatrix|<tformat|<table|<row|<cell|1>|<cell|1>|<cell|3>>|<row|<cell|2>|<cell|1>|<cell|0>>>>>*<bmatrix|<tformat|<table|<row|<cell|c<rsub|1>>>|<row|<cell|c<rsub|2>>>|<row|<cell|c<rsub|3>>>>>>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|0>>>>>
+        .
       </equation*>
 
-      The system is linearly dependent. (We could have also claimed this
-      based on the fact that the dimension of <math|\<bbb-F\><rsup|n>> is
-      <math|n>.)
+      A nontrivial solution <math|<around*|(|c<rsub|1>,c<rsub|2>,c<rsub|3>|)>>
+      should apply for every <math|t\<in\>\<bbb-R\>>. The system is linearly
+      dependent as the system consists of 3 vectors in
+      <math|\<bbb-R\><rsup|2>>, whose dimension is 2, and can only have at
+      most two independent vectors.
 
       <item><math|v<rsub|1>=<around*|(|2*sin t,sin
       t|)>,v<rsub|2>=<around*|(|sin t,2*sin t|)>>. Perform Gaussian
       elimination on the system
 
       <\equation*>
-        <bmatrix|<tformat|<table|<row|<cell|2*sin t>|<cell|sin
-        t>>|<row|<cell|sin t>|<cell|2*sin
-        t>>>>><long-arrow|\<rubber-rightarrow\>|R<rsub|2>\<rightarrow\>R<rsub|2>-<frac|1|2>*R<rsub|2>><bmatrix|<tformat|<table|<row|<cell|2*sin
-        t>|<cell|sin t>>|<row|<cell|0>|<cell|<frac|3|2>*sin t>>>>>.
+        sin t*<bmatrix|<tformat|<table|<row|<cell|2>|<cell|1>>|<row|<cell|1>|<cell|2>>>>>*<bmatrix|<tformat|<table|<row|<cell|c<rsub|1>>>|<row|<cell|c<rsub|2>>>>>>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|0>>>>>
+        .
       </equation*>
 
-      The rank of the coefficient matrix equals its number of columns.
-
-      The system is linearly independent, because there are no
-      <math|c<rsub|1>,c<rsub|2>> such that
-      <math|c<rsub|1>*v<rsub|1><around*|(|t|)>+c<rsub|2>*v<rsub|2><around*|(|t|)>=<wide|0|\<vect\>>>
-      for all <math|t>.
+      A nontrivial solution <math|<around*|(|c<rsub|1>,c<rsub|2>|)>> should
+      apply for every <math|t\<in\>\<bbb-R\>>. The rank of the coefficient
+      matrix matches the number of columns, so the system is linearly
+      independent.
 
       <item><math|v<rsub|1>=<around*|(|\<mathe\><rsup|t>,t*\<mathe\><rsup|t>|)>,v<rsub|2>=<around*|(|1,t|)>>.
       We can see that, for <math|c<rsub|1>=\<mathe\><rsup|t>,c<rsub|2>=-1>
@@ -75,7 +74,7 @@
       <em|constants> <math|c<rsub|1>,c<rsub|2>> such that
 
       <math|c<rsub|1>*v<rsub|1>+c<rsub|2>*v<rsub|2>=0> <em|for all <math|t>>;
-      there is a different <math|c<rsub|1>> for each <math|t>.
+      there is a different <math|c<rsub|1>> for each <math|t\<in\>\<bbb-R\>>.
     </enumerate-alpha>
   </question>
 
@@ -127,8 +126,8 @@
       </equation*>
 
       because of its symmetry. Note that there are
-      <math|<frac|n*<around*|(|n+1|)>|2>> distinct elements in a symmetric
-      matrix (<math|n> from the diagonal and
+      <math|<frac|n*<around*|(|n+1|)>|2>> distinguishable elements in a
+      symmetric matrix (<math|n> on the diagonal and
       <math|<around*|(|n<rsup|2>-n|)>/2> above the diagonal), which means
       that the basis dimension shall be <math|<frac|n*<around*|(|n+1|)>|2>>.
 
@@ -139,8 +138,8 @@
       </equation*>
 
       <math|A\<in\>U> is a linear combination of all vectors in <math|S>, so
-      it is a spanning set. Because the number of vectors in <math|S> matches
-      the basis dimension, <math|S> is also linearly independent.
+      <math|S> is a spanning set. Because the number of vectors in <math|S>
+      matches the basis dimension, <math|S> is also linearly independent.
 
       <item><math|V> is the set of square <math|n\<times\>n> real matrices
       whose rows add up to zero.
@@ -165,7 +164,7 @@
       </eqnarray*>
 
       Let <math|B<rsub|i\<nocomma\>j>\<in\>\<bbb-R\><rsup|n\<times\>n>> be a
-      matrix shose <math|i\<nocomma\>j<rsup|th>> entry is 1 and its
+      matrix whose <math|i\<nocomma\>j<rsup|th>> entry is 1 and its
       <math|i\<nocomma\>n<rsup|th>> entry is <math|-1>. A basis for <math|V>
       is
 
@@ -190,11 +189,11 @@
       which is spanned by the monomial set:
 
       <\equation*>
-        S=<around*|{|1,x,x<rsup|2>,\<ldots\>,x<rsup|n>|}> ,
+        S=<around*|{|1,x,x<rsup|2>,\<ldots\>,x<rsup|n>|}> .
       </equation*>
 
-      whose dimension is <math|n+1>. The set is linearly independent: each
-      monomial can be expressed as a vector of order <math|n+1>; for example
+      The set is linearly independent: each monomial can be expressed as a
+      vector of order <math|n+1>; for example
 
       <\eqnarray*>
         <tformat|<table|<row|<cell|1>|<cell|\<leftrightarrow\>>|<cell|<around*|[|1,0,0,\<ldots\>,0|]>>>|<row|<cell|x>|<cell|\<leftrightarrow\>>|<cell|<around*|[|0,1,0,\<ldots\>,0|]>>>|<row|<cell|x<rsup|2>>|<cell|\<leftrightarrow\>>|<cell|<around*|[|0,0,1,\<ldots\>,0|]>>>|<row|<cell|x<rsup|n>>|<cell|\<leftrightarrow\>>|<cell|<around*|[|0,0,0,\<ldots\>,1|]>
@@ -330,7 +329,7 @@
     The system can be expressed in matrix form, where
     <math|<wide|x|\<vect\>>\<in\>\<bbb-R\><rsup|5>>,
     <math|<wide|y|\<vect\>>\<in\>\<bbb-R\><rsup|3>>, and
-    <math|W\<in\>R<rsup|3\<times\>5>>:
+    <math|W\<in\>\<bbb-R\><rsup|3\<times\>5>>:
 
     <\equation*>
       W*<wide|x|\<vect\>>=<wide|y|\<vect\>> .
@@ -356,7 +355,7 @@
       matrix. A basis for the column space (or output space) is
 
       <\equation*>
-        <around*|{|<bmatrix|<tformat|<table|<row|<cell|7>>|<row|<cell|0>>|<row|<cell|6>>>>>,<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|-1>>|<row|<cell|1>>>>>|}>
+        <around*|{|<bmatrix|<tformat|<table|<row|<cell|7>>|<row|<cell|0>>|<row|<cell|6>>>>>,<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|-1>>|<row|<cell|4>>>>>|}>
         .
       </equation*>
 
