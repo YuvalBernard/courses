@@ -1,4 +1,4 @@
-<TeXmacs|2.1.2>
+<TeXmacs|2.1.4>
 
 <style|generic>
 
@@ -168,20 +168,326 @@
       For <math|\<lambda\><rsub|2>=<frac|5+<sqrt|15>*\<mathi\>|2>>,
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|A-\<lambda\><rsub|2>*I>|<cell|=>|<cell|<bmatrix|<tformat|<table|<row|<cell|1-<frac|5+<sqrt|15>*\<mathi\>|2>>|<cell|0>|<cell|0>>|<row|<cell|1>|<cell|2-<frac|5+<sqrt|15>*\<mathi\>|2>>|<cell|4>>|<row|<cell|1>|<cell|-1>|<cell|3-<frac|5+<sqrt|15>*\<mathi\>|2>>>>>>>>|<row|<cell|>|<cell|=>|<cell|<bmatrix|<tformat|<table|<row|<cell|-<frac|3+<sqrt|15>*\<mathi\>|2>>|<cell|0>|<cell|0>>|<row|<cell|1>|<cell|-<frac|1+<sqrt|15>*\<mathi\>|2>>|<cell|4>>|<row|<cell|1>|<cell|-1>|<cell|-<frac|-1+<sqrt|15>*\<mathi\>|2>>>>>>
-        .>>|<row|<cell|>|<cell|\<sim\>>|<cell|<bmatrix|<tformat|<table|<row|<cell|-<frac|3+<sqrt|15>*\<mathi\>|2>>|<cell|0>|<cell|0>>|<row|<cell|1>|<cell|-<frac|1+<sqrt|15>*\<mathi\>|2>>|<cell|4>>|<row|<cell|0>|<cell|-1+<frac|1+<sqrt|15>*\<mathi\>|2>>|<cell|-<frac|-1+<sqrt|15>*\<mathi\>|2>-4>>>>>>>>>
+        <tformat|<table|<row|<cell|A-\<lambda\><rsub|2>*I>|<cell|=>|<cell|<bmatrix|<tformat|<table|<row|<cell|1-<frac|5+<sqrt|15>*\<mathi\>|2>>|<cell|0>|<cell|0>>|<row|<cell|1>|<cell|2-<frac|5+<sqrt|15>*\<mathi\>|2>>|<cell|4>>|<row|<cell|1>|<cell|-1>|<cell|3-<frac|5+<sqrt|15>*\<mathi\>|2>>>>>>>>|<row|<cell|>|<cell|=>|<cell|<bmatrix|<tformat|<table|<row|<cell|-<frac|3+<sqrt|15>*\<mathi\>|2>>|<cell|0>|<cell|0>>|<row|<cell|1>|<cell|-<frac|1+<sqrt|15>*\<mathi\>|2>>|<cell|4>>|<row|<cell|1>|<cell|-1>|<cell|<frac|1-<sqrt|15>*\<mathi\>|2>>>>>>
+        .>>|<row|<cell|>|<cell|\<sim\>>|<cell|<bmatrix|<tformat|<table|<row|<cell|-<frac|3+<sqrt|15>*\<mathi\>|2>>|<cell|0>|<cell|0>>|<row|<cell|-<frac|2|1+<sqrt|15>*\<mathi\>>>|<cell|1>|<cell|-4\<times\><frac|2|1+<sqrt|15>*\<mathi\>>>>|<row|<cell|1>|<cell|-1>|<cell|<frac|1-<sqrt|15>*\<mathi\>|2>>>>>>>>|<row|<cell|>|<cell|=>|<cell|<bmatrix|<tformat|<table|<row|<cell|-<frac|3+<sqrt|15>*\<mathi\>|2>>|<cell|0>|<cell|0>>|<row|<cell|-<frac|2|1+<sqrt|15>*\<mathi\>>>|<cell|1>|<cell|<frac|-1+<sqrt|15>*\<mathi\>|2>>>|<row|<cell|1>|<cell|-1>|<cell|<frac|1-<sqrt|15>*\<mathi\>|2>>>>>>>>>>
       </eqnarray*>
 
       <\equation*>
-        w<rsub|2>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|4>>|<row|<cell|<frac|1+<sqrt|15>*\<mathi\>|2>>>>>>,
+        w<rsub|2>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|<frac|1-<sqrt|15>*\<mathi\>|2>>>|<row|<cell|1>>>>>
       </equation*>
 
       and for <math|\<lambda\><rsub|3>=<wide|<around*|(|<frac|1+<sqrt|15>*\<mathi\>|2>|)>|\<bar\>>>,
 
       <\equation*>
-        w<rsub|3>=<wide|w|\<bar\>><rsub|2>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|4>>|<row|<cell|<frac|1-<sqrt|15>*\<mathi\>|2>>>>>>
+        w<rsub|3>=<wide|w|\<bar\>><rsub|2>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|<frac|1+<sqrt|15>*\<mathi\>|2>>>|<row|<cell|1>>>>>
         .
       </equation*>
+
+      In conclusion, <math|P,D> are
+
+      <\equation*>
+        P=<bmatrix|<tformat|<table|<row|<cell|0>|<cell|0>|<cell|3>>|<row|<cell|<frac|1-<sqrt|15>*\<mathi\>|2>>|<cell|<frac|1+<sqrt|15>*\<mathi\>|2>>|<cell|1>>|<row|<cell|1>|<cell|1>|<cell|-1>>>>>
+        ,<space|1em>D=<bmatrix|<tformat|<table|<row|<cell|<frac|5+<sqrt|15>*\<mathi\>|2>>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|<frac|5-<sqrt|15>*\<mathi\>|2>>|<cell|0>>|<row|<cell|0>|0|<cell|1>>>>>
+      </equation*>
+
+      <item>
+
+      <\equation*>
+        A=<bmatrix|<tformat|<table|<row|<cell|3>|<cell|1>|<cell|1>>|<row|<cell|0>|<cell|2>|<cell|1>>|<row|<cell|0>|<cell|0>|<cell|1>>>>>
+        .
+      </equation*>
+
+      The eigenvalues of a triangular matrix are on the diagonal:
+      <math|\<lambda\><rsub|1,2,3>=3,2,1>. Find associated eigenvectors.
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|<around*|[|A-\<lambda\><rsub|1>*I|]>>|<cell|=>|<cell|<bmatrix|<tformat|<table|<row|<cell|0>|<cell|1>|<cell|1>>|<row|<cell|0>|<cell|-1>|<cell|1>>|<row|<cell|0>|<cell|0>|<cell|-2>>>>>
+        .>>>>
+      </eqnarray*>
+
+      <\equation*>
+        w<rsub|1>=<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|0>>|<row|<cell|0>>>>>
+        .
+      </equation*>
+
+      <\equation*>
+        <around*|[|A-\<lambda\><rsub|2>*I|]>=<bmatrix|<tformat|<table|<row|<cell|1>|<cell|1>|<cell|1>>|<row|<cell|0>|<cell|0>|<cell|1>>|<row|<cell|0>|<cell|0>|<cell|-1>>>>>.
+      </equation*>
+
+      <\equation*>
+        w<rsub|2>=<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|-1>>|<row|<cell|0>>>>>
+        .
+      </equation*>
+
+      <\equation*>
+        <around*|[|A-\<lambda\><rsub|3>*I|]>=<bmatrix|<tformat|<table|<row|<cell|2>|<cell|1>|<cell|1>>|<row|<cell|0>|<cell|1>|<cell|1>>|<row|<cell|0>|<cell|0>|<cell|0>>>>>
+        .
+      </equation*>
+
+      <\equation*>
+        w<rsub|3>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|1>>|<row|<cell|-1>>>>>
+        .
+      </equation*>
+
+      <math|P,D> are
+
+      <\equation*>
+        P=<bmatrix|<tformat|<table|<row|<cell|1>|<cell|1>|<cell|0>>|<row|<cell|0>|<cell|-1>|<cell|1>>|<row|<cell|0>|<cell|0>|<cell|-1>>>>>,<space|1em>D=<bmatrix|<tformat|<table|<row|<cell|3>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|2>|<cell|0>>|<row|<cell|0>|<cell|0>|<cell|1>>>>>
+        .
+      </equation*>
+
+      <item>
+
+      <\equation*>
+        A=<bmatrix|<tformat|<table|<row|<cell|1>|<cell|4>>|<row|<cell|4>|<cell|1>>>>>
+        .
+      </equation*>
+
+      <\equation*>
+        <around*|\||A-\<lambda\>*I|\|>=<det|<tformat|<table|<row|<cell|1-\<lambda\>>|<cell|4>>|<row|<cell|4>|<cell|1-\<lambda\>>>>>>=\<lambda\><rsup|2>-2\<lambda\>-15=0
+      </equation*>
+
+      <\equation*>
+        \<lambda\><rsub|1,2>=<frac|2\<pm\><sqrt|4+60>|2>=5,-3 .
+      </equation*>
+
+      Find associated eigenvectors. For <math|\<lambda\><rsub|1>=5>,
+
+      <\equation*>
+        <around*|[|A-\<lambda\><rsub|1>*I|]>=<bmatrix|<tformat|<table|<row|<cell|-4>|<cell|4>>|<row|<cell|4>|<cell|-4>>>>>
+        .
+      </equation*>
+
+      <\equation*>
+        w<rsub|1>=<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|1>>>>> .
+      </equation*>
+
+      For <math|\<lambda\><rsub|2>=-3>,
+
+      <\equation*>
+        <around*|[|A-\<lambda\><rsub|2>*I|]>=<bmatrix|<tformat|<table|<row|<cell|4>|<cell|4>>|<row|<cell|4>|<cell|4>>>>>
+        .
+      </equation*>
+
+      <\equation*>
+        w<rsub|2>=<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|-1>>>>>
+        .
+      </equation*>
+
+      <math|P,D> are
+
+      <\equation*>
+        P=<bmatrix|<tformat|<table|<row|<cell|1>|<cell|1>>|<row|<cell|1>|<cell|-1>>>>>,<space|1em>D=<bmatrix|<tformat|<table|<row|<cell|5>|<cell|0>>|<row|<cell|0>|<cell|-3>>>>>
+        .
+      </equation*>
+
+      <item>
+
+      <\equation*>
+        A=<bmatrix|<tformat|<table|<row|<cell|1>|<cell|1>|<cell|1>|<cell|1>>|<row|<cell|0>|<cell|1>|<cell|2>|<cell|3>>|<row|<cell|0>|<cell|0>|<cell|1>|<cell|3>>|<row|<cell|0>|<cell|0>|<cell|0>|<cell|1>>>>>
+        .
+      </equation*>
+
+      The eigenvalues of a triangular matrix are on the diagonal.
+      <math|\<lambda\><rsub|1,2,3,4>\<equiv\>\<lambda\>=1>. Find
+      eigenvectors.
+
+      <\equation*>
+        <around*|[|A-\<lambda\>*I|]>=<bmatrix|<tformat|<table|<row|<cell|0>|<cell|1>|<cell|1>|<cell|1>>|<row|<cell|0>|<cell|0>|<cell|2>|<cell|3>>|<row|<cell|0>|<cell|0>|<cell|0>|<cell|3>>|<row|<cell|0>|<cell|0>|<cell|0>|<cell|0>>>>>
+        .
+      </equation*>
+
+      The geometric multiplicity of the eigenvalue <math|\<lambda\>>, that
+      is, the dimension of the nullspace of <math|A-\<lambda\>*I>, is smaller
+      than its algebraic multiplicity. <math|A> is therefore not
+      diagonalizable.
+
+      <item>
+
+      <\equation*>
+        A=<bmatrix|<tformat|<table|<row|<cell|3>|<cell|2>>|<row|<cell|0>|<cell|5>>>>>
+        .
+      </equation*>
+
+      The matrix is triangular. <math|\<lambda\><rsub|1,2>=3,5>. Find
+      associated eigenvectors.
+
+      <\equation*>
+        <around*|[|A-\<lambda\><rsub|1>*I|]>=<bmatrix|<tformat|<table|<row|<cell|0>|<cell|2>>|<row|<cell|0>|<cell|2>>>>>
+        .
+      </equation*>
+
+      <\equation*>
+        w<rsub|1>=<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|0>>>>> .
+      </equation*>
+
+      <\equation*>
+        <around*|[|A-\<lambda\><rsub|2>*I|]>=<bmatrix|<tformat|<table|<row|<cell|-2>|<cell|2>>|<row|<cell|0>|<cell|0>>>>>
+        .
+      </equation*>
+
+      <\equation*>
+        w<rsub|2>=<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|1>>>>> .
+      </equation*>
+
+      <math|P,D> are
+
+      <\equation*>
+        P=<bmatrix|<tformat|<table|<row|<cell|1>|<cell|1>>|<row|<cell|0>|<cell|1>>>>>,<space|1em>D=<bmatrix|<tformat|<table|<row|<cell|3>|<cell|0>>|<row|<cell|0>|<cell|5>>>>>
+        .
+      </equation*>
+    </enumerate-alpha>
+  </question>
+
+  <\question>
+    .
+
+    <\enumerate-alpha>
+      <item>Show that if <math|P<rsup|-1>*A*P=D> then
+      <math|A<rsup|n>=P*D<rsup|n>*P<rsup|-1>>.
+
+      We shall use induction. For <math|n=0>,
+
+      <\equation*>
+        A<rsup|0>=I=P*D<rsup|0>*P<rsup|-1>=P**I*P<rsup|-1>=I .
+      </equation*>
+
+      For <math|n=1>, start from
+
+      <\equation*>
+        P<rsup|-1>*A*P=D .
+      </equation*>
+
+      Multipliy by <math|P> on the left and by <math|P<rsup|-1 >> on the
+      right to get
+
+      <\equation*>
+        P*P<rsup|-1>*A*P*P<rsup|-1>=P*D*P<rsup|-1>
+      </equation*>
+
+      <\equation*>
+        A=P*D*P<rsup|-1> .
+      </equation*>
+
+      Now assume that for <math|n=k>
+
+      <\equation*>
+        A<rsup|k>=P*D<rsup|k>*P<rsup|-1> .
+      </equation*>
+
+      For <math|n=k+1>,
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|A<rsup|k+1>=A<rsup|k>*A>|<cell|=>|<cell|<around*|(|P*D<rsup|k>*P<rsup|-1>
+        |)>*P*D*P<rsup|-1>>>|<row|<cell|>|<cell|=>|<cell|P*D<rsup|k>*P<rsup|-1>*P*D*P<rsup|-1>>>|<row|<cell|>|<cell|=>|<cell|P*D<rsup|k>*I*D*P<rsup|-1>>>|<row|<cell|>|<cell|=>|<cell|P*D<rsup|k+1>*P<rsup|-1>
+        .>>>>
+      </eqnarray*>
+
+      QED.
+
+      <item>Given <math|A=<bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>>|<row|<cell|2>|<cell|3>>>>>>,
+      calculate <math|A<rsup|8>>. Diagonalize <math|A>.
+
+      <math|A> is triangular. The eigenvalues are
+      <math|\<lambda\><rsub|1,2>=1,3>. Find associated eigenvectors.
+
+      <\equation*>
+        <around*|[|A-\<lambda\><rsub|1>*I|]>=<bmatrix|<tformat|<table|<row|<cell|0>|<cell|0>>|<row|<cell|2>|<cell|2>>>>>
+        .
+      </equation*>
+
+      <\equation*>
+        w<rsub|1>=<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|*-1>>>>>
+        .
+      </equation*>
+
+      <\equation*>
+        <around*|[|A-\<lambda\><rsub|2>*I|]>=<bmatrix|<tformat|<table|<row|<cell|-2>|<cell|0>>|<row|<cell|2>|<cell|0>>>>>
+        .
+      </equation*>
+
+      <\equation*>
+        w<rsub|2>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|1>>>>> .
+      </equation*>
+
+      <math|P,D> are
+
+      <\equation*>
+        P=<bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>>|<row|<cell|-1>|<cell|1>>>>>,<space|1em>D=<bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>>|<row|<cell|0>|<cell|3>>>>>
+        .
+      </equation*>
+
+      Calculate <math|P<rsup|-1>>. Use Gauss-Seidel method
+
+      <\equation*>
+        <around*|[|P\|I|]>=<bmatrix|<tformat|<cwith|1|1|3|3|cell-tborder|0ln>|<cwith|2|2|3|3|cell-bborder|0ln>|<cwith|1|-1|3|3|cell-lborder|1ln>|<cwith|1|-1|2|2|cell-rborder|1ln>|<cwith|1|-1|3|3|cell-rborder|0ln>|<cwith|1|-1|4|4|cell-lborder|0ln>|<table|<row|<cell|1>|<cell|0>|<cell|1>|<cell|0>>|<row|<cell|-1>|<cell|1>|<cell|0>|<cell|1>>>>>\<sim\><bmatrix|<tformat|<cwith|1|1|3|3|cell-tborder|0ln>|<cwith|2|2|3|3|cell-bborder|0ln>|<cwith|1|-1|3|3|cell-lborder|1ln>|<cwith|1|-1|2|2|cell-rborder|1ln>|<cwith|1|-1|3|3|cell-rborder|0ln>|<cwith|1|-1|4|4|cell-lborder|0ln>|<table|<row|<cell|1>|<cell|0>|<cell|1>|<cell|0>>|<row|<cell|0>|<cell|1>|<cell|1>|<cell|1>>>>>
+        .
+      </equation*>
+
+      <\equation*>
+        P<rsup|-1>=<bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>>|<row|<cell|1>|<cell|1>>>>>
+        .
+      </equation*>
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|A<rsup|8>=P*D<rsup|8>*P<rsup|-1>>|<cell|=>|<cell|<bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>>|<row|<cell|-1>|<cell|1>>>>>*<bmatrix|<tformat|<table|<row|<cell|1<rsup|8>>|<cell|0>>|<row|<cell|0>|<cell|3<rsup|8>>>>>>*<bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>>|<row|<cell|1>|<cell|1>>>>>>>|<row|<cell|>|<cell|=>|<cell|<bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>>|<row|<cell|-1>|<cell|1>>>>>**<bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>>|<row|<cell|3<rsup|8>>|<cell|3<rsup|8>>>>>>>>|<row|<cell|>|<cell|=>|<cell|<bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>>|<row|<cell|3<rsup|8>-1>|<cell|3<rsup|8>>>>>>=<bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>>|<row|<cell|6560>|<cell|6561>>>>>
+        .>>>>
+      </eqnarray*>
+    </enumerate-alpha>
+  </question>
+
+  <\question>
+    Prove:
+
+    <\enumerate-alpha>
+      <item>If <math|\<lambda\>> is an eigenvalue for <math|A> then
+      <math|\<lambda\><rsup|k>> is an eigenvalue for <math|A<rsup|k>>.
+
+      <\proof>
+        We shall prove the statements via induction. For <math|k=1> we get
+        the trivial case. Now assume that If <math|\<lambda\>> is an
+        eigenvalue for <math|A> then <math|\<lambda\><rsup|m>> is an
+        eigenvalue for <math|A<rsup|m>>, i.e.
+
+        <\equation*>
+          A<rsup|m>*x=\<lambda\><rsup|m>*x
+        </equation*>
+
+        \ For <math|k=m+1>,
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|A<rsup|m+1>*x>|<cell|=>|<cell|A<rsup|m>*A*x>>|<row|<cell|>|<cell|=>|<cell|A<rsup|m>*\<lambda\>*x>>|<row|<cell|>|<cell|=>|<cell|\<lambda\>*A<rsup|m>*x>>|<row|<cell|>|<cell|=>|<cell|\<lambda\>*\<lambda\><rsup|m>*x>>|<row|<cell|>|<cell|=>|<cell|\<lambda\><rsup|m+1>*x
+          .>>>>
+        </eqnarray*>
+      </proof>
+
+      <item>If <math|A<rsup|2>=A> and if <math|\<lambda\>> is an eigenvalue
+      for <math|A> then <math|\<lambda\>=0> or <math|\<lambda\>=1>.
+
+      <\proof>
+        If <math|\<lambda\>> is an eigenvalue for <math|A>, then
+
+        <\equation*>
+          A*x=\<lambda\>*x .
+        </equation*>
+
+        Similarly, based on the previous section, for <math|A<rsup|2>>
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|A<rsup|2>*x>|<cell|=>|<cell|\<lambda\><rsup|2>*x
+          .>>>>
+        </eqnarray*>
+
+        But since <math|A<rsup|2>=A>, we must have
+
+        <\eqnarray*>
+          <tformat|<table|<row|<cell|<around*|(|A<rsup|2>-A|)>*x>|<cell|=>|<cell|0>>|<row|<cell|\<lambda\><rsup|2>*x-\<lambda\>*x>|<cell|=>|<cell|0>>|<row|<cell|<around*|(|\<lambda\><rsup|2>-\<lambda\>|)>*x>|<cell|=>|<cell|0>>>>
+        </eqnarray*>
+
+        which is only generally true for <math|\<lambda\>=1> or
+        <math|\<lambda\>=0>, assuming <math|x\<neq\><wide|0|\<vect\>>> (which
+        holds by the definition of an eigenvector).
+      </proof>
     </enumerate-alpha>
   </question>
 </body>
