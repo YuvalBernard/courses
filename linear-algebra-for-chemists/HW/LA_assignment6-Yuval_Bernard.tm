@@ -231,8 +231,9 @@
         >>>>
       </eqnarray*>
 
-      The nullspace of the coefficient matrix is empty, and a particular
-      solution to the system is <math|<around*|(|x,u,y,z|)>=<around*|(|<frac|58|9>,-<frac|2|3>,-<frac|82|9>,-<frac|13|9>|)>>.
+      The nullspace of the coefficient matrix only has the trivial solution
+      (zero vector), and a particular solution to the system is
+      <math|<around*|(|x,u,y,z|)>=<around*|(|<frac|58|9>,-<frac|2|3>,-<frac|82|9>,-<frac|13|9>|)>>.
 
       <item>Solving
 
@@ -248,8 +249,8 @@
         .>>>>
       </eqnarray*>
 
-      Again, the nullspace of the coefficient matrix is empty. A particular
-      solution to the system of equations is
+      Again, the nullspace of the coefficient matrix only contains the zero
+      vector. A particular solution to the system of equations is
       <math|<around*|(|x,y,z|)>=<around*|(|<frac|1|4>,<frac|5|4>,-<frac|3|4>|)>>
     </enumerate-alpha>
   </question>
