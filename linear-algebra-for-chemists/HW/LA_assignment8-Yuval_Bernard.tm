@@ -10,6 +10,103 @@
   </author-affiliation>>>|<doc-date|<date>>>
 
   <\question>
+    .
+
+    <\enumerate-alpha>
+      <item>Show that if <math|P<rsup|-1>*A*P=D> then
+      <math|A<rsup|n>=P*D<rsup|n>*P<rsup|-1>>.
+
+      We shall use induction. For <math|n=0>,
+
+      <\equation*>
+        A<rsup|0>=I=P*D<rsup|0>*P<rsup|-1>=P**I*P<rsup|-1>=I .
+      </equation*>
+
+      For <math|n=1>, start from
+
+      <\equation*>
+        P<rsup|-1>*A*P=D .
+      </equation*>
+
+      Multipliy by <math|P> on the left and by <math|P<rsup|-1 >> on the
+      right to get
+
+      <\equation*>
+        P*P<rsup|-1>*A*P*P<rsup|-1>=P*D*P<rsup|-1>
+      </equation*>
+
+      <\equation*>
+        A=P*D*P<rsup|-1> .
+      </equation*>
+
+      Now assume that for <math|n=k>
+
+      <\equation*>
+        A<rsup|k>=P*D<rsup|k>*P<rsup|-1> .
+      </equation*>
+
+      For <math|n=k+1>,
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|A<rsup|k+1>=A<rsup|k>*A>|<cell|=>|<cell|<around*|(|P*D<rsup|k>*P<rsup|-1>
+        |)>*P*D*P<rsup|-1>>>|<row|<cell|>|<cell|=>|<cell|P*D<rsup|k>*P<rsup|-1>*P*D*P<rsup|-1>>>|<row|<cell|>|<cell|=>|<cell|P*D<rsup|k>*I*D*P<rsup|-1>>>|<row|<cell|>|<cell|=>|<cell|P*D<rsup|k+1>*P<rsup|-1>
+        .>>>>
+      </eqnarray*>
+
+      QED.
+
+      <item>Given <math|A=<bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>>|<row|<cell|2>|<cell|3>>>>>>,
+      calculate <math|A<rsup|8>>. Diagonalize <math|A>.
+
+      <math|A> is triangular. The eigenvalues are
+      <math|\<lambda\><rsub|1,2>=1,3>. Find associated eigenvectors.
+
+      <\equation*>
+        <around*|[|A-\<lambda\><rsub|1>*I|]>=<bmatrix|<tformat|<table|<row|<cell|0>|<cell|0>>|<row|<cell|2>|<cell|2>>>>>
+        .
+      </equation*>
+
+      <\equation*>
+        w<rsub|1>=<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|*-1>>>>>
+        .
+      </equation*>
+
+      <\equation*>
+        <around*|[|A-\<lambda\><rsub|2>*I|]>=<bmatrix|<tformat|<table|<row|<cell|-2>|<cell|0>>|<row|<cell|2>|<cell|0>>>>>
+        .
+      </equation*>
+
+      <\equation*>
+        w<rsub|2>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|1>>>>> .
+      </equation*>
+
+      <math|P,D> are
+
+      <\equation*>
+        P=<bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>>|<row|<cell|-1>|<cell|1>>>>>,<space|1em>D=<bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>>|<row|<cell|0>|<cell|3>>>>>
+        .
+      </equation*>
+
+      Calculate <math|P<rsup|-1>>. Use Gauss-Seidel method
+
+      <\equation*>
+        <around*|[|P\|I|]>=<bmatrix|<tformat|<cwith|1|1|3|3|cell-tborder|0ln>|<cwith|2|2|3|3|cell-bborder|0ln>|<cwith|1|-1|3|3|cell-lborder|1ln>|<cwith|1|-1|2|2|cell-rborder|1ln>|<cwith|1|-1|3|3|cell-rborder|0ln>|<cwith|1|-1|4|4|cell-lborder|0ln>|<table|<row|<cell|1>|<cell|0>|<cell|1>|<cell|0>>|<row|<cell|-1>|<cell|1>|<cell|0>|<cell|1>>>>>\<sim\><bmatrix|<tformat|<cwith|1|1|3|3|cell-tborder|0ln>|<cwith|2|2|3|3|cell-bborder|0ln>|<cwith|1|-1|3|3|cell-lborder|1ln>|<cwith|1|-1|2|2|cell-rborder|1ln>|<cwith|1|-1|3|3|cell-rborder|0ln>|<cwith|1|-1|4|4|cell-lborder|0ln>|<table|<row|<cell|1>|<cell|0>|<cell|1>|<cell|0>>|<row|<cell|0>|<cell|1>|<cell|1>|<cell|1>>>>>
+        .
+      </equation*>
+
+      <\equation*>
+        P<rsup|-1>=<bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>>|<row|<cell|1>|<cell|1>>>>>
+        .
+      </equation*>
+
+      <\eqnarray*>
+        <tformat|<table|<row|<cell|A<rsup|8>=P*D<rsup|8>*P<rsup|-1>>|<cell|=>|<cell|<bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>>|<row|<cell|-1>|<cell|1>>>>>*<bmatrix|<tformat|<table|<row|<cell|1<rsup|8>>|<cell|0>>|<row|<cell|0>|<cell|3<rsup|8>>>>>>*<bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>>|<row|<cell|1>|<cell|1>>>>>>>|<row|<cell|>|<cell|=>|<cell|<bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>>|<row|<cell|-1>|<cell|1>>>>>**<bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>>|<row|<cell|3<rsup|8>>|<cell|3<rsup|8>>>>>>>>|<row|<cell|>|<cell|=>|<cell|<bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>>|<row|<cell|3<rsup|8>-1>|<cell|3<rsup|8>>>>>>=<bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>>|<row|<cell|6560>|<cell|6561>>>>>
+        .>>>>
+      </eqnarray*>
+    </enumerate-alpha>
+  </question>
+
+  <\question>
     Define the Fibonacci sequence as follows:
 
     <\equation*>
@@ -38,7 +135,7 @@
         .
       </equation*>
 
-      The the definition of the Fibonacci sequence,
+      By the definition of the Fibonacci sequence,
       <math|a<rsub|n>+a<rsub|n+1>=a<rsub|n+2>>, which verifies that
 
       <\equation*>
@@ -124,7 +221,7 @@
       that
 
       <\equation*>
-        a<rsub|n>=<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n>-<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n>
+        a<rsub|n>=<frac|1|<sqrt|5>>*<around*|[|<around*|(|<frac|1+<sqrt|5>|2>|)><rsup|n>-<around*|(|<frac|1-<sqrt|5>|2>|)><rsup|n>|]>
         .
       </equation*>
     </enumerate-alpha>
@@ -165,30 +262,8 @@
         .
       </equation*>
 
-      For <math|\<lambda\><rsub|2>=<frac|5+<sqrt|15>*\<mathi\>|2>>,
-
-      <\eqnarray*>
-        <tformat|<table|<row|<cell|A-\<lambda\><rsub|2>*I>|<cell|=>|<cell|<bmatrix|<tformat|<table|<row|<cell|1-<frac|5+<sqrt|15>*\<mathi\>|2>>|<cell|0>|<cell|0>>|<row|<cell|1>|<cell|2-<frac|5+<sqrt|15>*\<mathi\>|2>>|<cell|4>>|<row|<cell|1>|<cell|-1>|<cell|3-<frac|5+<sqrt|15>*\<mathi\>|2>>>>>>>>|<row|<cell|>|<cell|=>|<cell|<bmatrix|<tformat|<table|<row|<cell|-<frac|3+<sqrt|15>*\<mathi\>|2>>|<cell|0>|<cell|0>>|<row|<cell|1>|<cell|-<frac|1+<sqrt|15>*\<mathi\>|2>>|<cell|4>>|<row|<cell|1>|<cell|-1>|<cell|<frac|1-<sqrt|15>*\<mathi\>|2>>>>>>
-        .>>|<row|<cell|>|<cell|\<sim\>>|<cell|<bmatrix|<tformat|<table|<row|<cell|-<frac|3+<sqrt|15>*\<mathi\>|2>>|<cell|0>|<cell|0>>|<row|<cell|-<frac|2|1+<sqrt|15>*\<mathi\>>>|<cell|1>|<cell|-4\<times\><frac|2|1+<sqrt|15>*\<mathi\>>>>|<row|<cell|1>|<cell|-1>|<cell|<frac|1-<sqrt|15>*\<mathi\>|2>>>>>>>>|<row|<cell|>|<cell|=>|<cell|<bmatrix|<tformat|<table|<row|<cell|-<frac|3+<sqrt|15>*\<mathi\>|2>>|<cell|0>|<cell|0>>|<row|<cell|-<frac|2|1+<sqrt|15>*\<mathi\>>>|<cell|1>|<cell|<frac|-1+<sqrt|15>*\<mathi\>|2>>>|<row|<cell|1>|<cell|-1>|<cell|<frac|1-<sqrt|15>*\<mathi\>|2>>>>>>>>>>
-      </eqnarray*>
-
-      <\equation*>
-        w<rsub|2>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|<frac|1-<sqrt|15>*\<mathi\>|2>>>|<row|<cell|1>>>>>
-      </equation*>
-
-      and for <math|\<lambda\><rsub|3>=<wide|<around*|(|<frac|1+<sqrt|15>*\<mathi\>|2>|)>|\<bar\>>>,
-
-      <\equation*>
-        w<rsub|3>=<wide|w|\<bar\>><rsub|2>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|<frac|1+<sqrt|15>*\<mathi\>|2>>>|<row|<cell|1>>>>>
-        .
-      </equation*>
-
-      In conclusion, <math|P,D> are
-
-      <\equation*>
-        P=<bmatrix|<tformat|<table|<row|<cell|0>|<cell|0>|<cell|3>>|<row|<cell|<frac|1-<sqrt|15>*\<mathi\>|2>>|<cell|<frac|1+<sqrt|15>*\<mathi\>|2>>|<cell|1>>|<row|<cell|1>|<cell|1>|<cell|-1>>>>>
-        ,<space|1em>D=<bmatrix|<tformat|<table|<row|<cell|<frac|5+<sqrt|15>*\<mathi\>|2>>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|<frac|5-<sqrt|15>*\<mathi\>|2>>|<cell|0>>|<row|<cell|0>|0|<cell|1>>>>>
-      </equation*>
+      The other eigenvalues are not in <math|\<bbb-R\>>, so the matrix is not
+      diagonalizable over <math|\<bbb-R\>>.
 
       <item>
 
@@ -336,103 +411,6 @@
         P=<bmatrix|<tformat|<table|<row|<cell|1>|<cell|1>>|<row|<cell|0>|<cell|1>>>>>,<space|1em>D=<bmatrix|<tformat|<table|<row|<cell|3>|<cell|0>>|<row|<cell|0>|<cell|5>>>>>
         .
       </equation*>
-    </enumerate-alpha>
-  </question>
-
-  <\question>
-    .
-
-    <\enumerate-alpha>
-      <item>Show that if <math|P<rsup|-1>*A*P=D> then
-      <math|A<rsup|n>=P*D<rsup|n>*P<rsup|-1>>.
-
-      We shall use induction. For <math|n=0>,
-
-      <\equation*>
-        A<rsup|0>=I=P*D<rsup|0>*P<rsup|-1>=P**I*P<rsup|-1>=I .
-      </equation*>
-
-      For <math|n=1>, start from
-
-      <\equation*>
-        P<rsup|-1>*A*P=D .
-      </equation*>
-
-      Multipliy by <math|P> on the left and by <math|P<rsup|-1 >> on the
-      right to get
-
-      <\equation*>
-        P*P<rsup|-1>*A*P*P<rsup|-1>=P*D*P<rsup|-1>
-      </equation*>
-
-      <\equation*>
-        A=P*D*P<rsup|-1> .
-      </equation*>
-
-      Now assume that for <math|n=k>
-
-      <\equation*>
-        A<rsup|k>=P*D<rsup|k>*P<rsup|-1> .
-      </equation*>
-
-      For <math|n=k+1>,
-
-      <\eqnarray*>
-        <tformat|<table|<row|<cell|A<rsup|k+1>=A<rsup|k>*A>|<cell|=>|<cell|<around*|(|P*D<rsup|k>*P<rsup|-1>
-        |)>*P*D*P<rsup|-1>>>|<row|<cell|>|<cell|=>|<cell|P*D<rsup|k>*P<rsup|-1>*P*D*P<rsup|-1>>>|<row|<cell|>|<cell|=>|<cell|P*D<rsup|k>*I*D*P<rsup|-1>>>|<row|<cell|>|<cell|=>|<cell|P*D<rsup|k+1>*P<rsup|-1>
-        .>>>>
-      </eqnarray*>
-
-      QED.
-
-      <item>Given <math|A=<bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>>|<row|<cell|2>|<cell|3>>>>>>,
-      calculate <math|A<rsup|8>>. Diagonalize <math|A>.
-
-      <math|A> is triangular. The eigenvalues are
-      <math|\<lambda\><rsub|1,2>=1,3>. Find associated eigenvectors.
-
-      <\equation*>
-        <around*|[|A-\<lambda\><rsub|1>*I|]>=<bmatrix|<tformat|<table|<row|<cell|0>|<cell|0>>|<row|<cell|2>|<cell|2>>>>>
-        .
-      </equation*>
-
-      <\equation*>
-        w<rsub|1>=<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|*-1>>>>>
-        .
-      </equation*>
-
-      <\equation*>
-        <around*|[|A-\<lambda\><rsub|2>*I|]>=<bmatrix|<tformat|<table|<row|<cell|-2>|<cell|0>>|<row|<cell|2>|<cell|0>>>>>
-        .
-      </equation*>
-
-      <\equation*>
-        w<rsub|2>=<bmatrix|<tformat|<table|<row|<cell|0>>|<row|<cell|1>>>>> .
-      </equation*>
-
-      <math|P,D> are
-
-      <\equation*>
-        P=<bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>>|<row|<cell|-1>|<cell|1>>>>>,<space|1em>D=<bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>>|<row|<cell|0>|<cell|3>>>>>
-        .
-      </equation*>
-
-      Calculate <math|P<rsup|-1>>. Use Gauss-Seidel method
-
-      <\equation*>
-        <around*|[|P\|I|]>=<bmatrix|<tformat|<cwith|1|1|3|3|cell-tborder|0ln>|<cwith|2|2|3|3|cell-bborder|0ln>|<cwith|1|-1|3|3|cell-lborder|1ln>|<cwith|1|-1|2|2|cell-rborder|1ln>|<cwith|1|-1|3|3|cell-rborder|0ln>|<cwith|1|-1|4|4|cell-lborder|0ln>|<table|<row|<cell|1>|<cell|0>|<cell|1>|<cell|0>>|<row|<cell|-1>|<cell|1>|<cell|0>|<cell|1>>>>>\<sim\><bmatrix|<tformat|<cwith|1|1|3|3|cell-tborder|0ln>|<cwith|2|2|3|3|cell-bborder|0ln>|<cwith|1|-1|3|3|cell-lborder|1ln>|<cwith|1|-1|2|2|cell-rborder|1ln>|<cwith|1|-1|3|3|cell-rborder|0ln>|<cwith|1|-1|4|4|cell-lborder|0ln>|<table|<row|<cell|1>|<cell|0>|<cell|1>|<cell|0>>|<row|<cell|0>|<cell|1>|<cell|1>|<cell|1>>>>>
-        .
-      </equation*>
-
-      <\equation*>
-        P<rsup|-1>=<bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>>|<row|<cell|1>|<cell|1>>>>>
-        .
-      </equation*>
-
-      <\eqnarray*>
-        <tformat|<table|<row|<cell|A<rsup|8>=P*D<rsup|8>*P<rsup|-1>>|<cell|=>|<cell|<bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>>|<row|<cell|-1>|<cell|1>>>>>*<bmatrix|<tformat|<table|<row|<cell|1<rsup|8>>|<cell|0>>|<row|<cell|0>|<cell|3<rsup|8>>>>>>*<bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>>|<row|<cell|1>|<cell|1>>>>>>>|<row|<cell|>|<cell|=>|<cell|<bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>>|<row|<cell|-1>|<cell|1>>>>>**<bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>>|<row|<cell|3<rsup|8>>|<cell|3<rsup|8>>>>>>>>|<row|<cell|>|<cell|=>|<cell|<bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>>|<row|<cell|3<rsup|8>-1>|<cell|3<rsup|8>>>>>>=<bmatrix|<tformat|<table|<row|<cell|1>|<cell|0>>|<row|<cell|6560>|<cell|6561>>>>>
-        .>>>>
-      </eqnarray*>
     </enumerate-alpha>
   </question>
 
