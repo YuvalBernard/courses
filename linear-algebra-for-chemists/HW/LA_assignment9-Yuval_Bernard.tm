@@ -124,22 +124,46 @@
   </question>
 
   <\question>
-    Find Jordan canonical forms. The number of\ 
+    Find Jordan canonical forms. For each eigenvalue, the number of unique
+    Jordan blocks (up to permuations) equals its algebraic multiplicity. The
+    number of possible Jordan forms equals the product of the numbers of
+    unique Jordan blocks (of each eigenvalue).
 
     <\enumerate-alpha>
       <item><math|P<around*|(|\<lambda\>|)>=<around*|(|\<lambda\>-1|)><rsup|2>*<around*|(|\<lambda\>+2|)><rsup|3>>.
 
       <\equation*>
-        J=<bmatrix|<tformat|<cwith|1|2|1|2|cell-background|pastel
+        J<rsub|1>=<bmatrix|<tformat|<cwith|1|2|1|2|cell-background|pastel
         green>|<cwith|3|5|3|5|cell-background|pastel
-        yellow>|<table|<row|<cell|1>|<cell|1>|<cell|0>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|1>|<cell|0>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|0>|<cell|-2>|<cell|1>|<cell|0>>|<row|<cell|0>|<cell|0>|<cell|0>|<cell|-2>|<cell|1>>|<row|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|-2>>>>>
-        .
+        yellow>|<table|<row|<cell|1>|<cell|1>|<cell|0>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|1>|<cell|0>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|0>|<cell|-2>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|0>|<cell|0>|<cell|-2>|<cell|0>>|<row|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|-2>>>>>,J<rsub|2>=<bmatrix|<tformat|<cwith|1|2|1|2|cell-background|pastel
+        green>|<cwith|3|5|3|5|cell-background|pastel
+        yellow>|<table|<row|<cell|1>|<cell|0>|<cell|0>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|1>|<cell|0>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|0>|<cell|-2>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|0>|<cell|0>|<cell|-2>|<cell|0>>|<row|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|-2>>>>>
+      </equation*>
+
+      <\equation*>
+        J<rsub|3>=<bmatrix|<tformat|<cwith|1|2|1|2|cell-background|pastel
+        green>|<cwith|3|5|3|5|cell-background|pastel
+        yellow>|<table|<row|<cell|1>|<cell|1>|<cell|0>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|1>|<cell|0>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|0>|<cell|-2>|<cell|1>|<cell|0>>|<row|<cell|0>|<cell|0>|<cell|0>|<cell|-2>|<cell|0>>|<row|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|-2>>>>>,J<rsub|4>=<bmatrix|<tformat|<cwith|1|2|1|2|cell-background|pastel
+        green>|<cwith|3|5|3|5|cell-background|pastel
+        yellow>|<table|<row|<cell|1>|<cell|0>|<cell|0>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|1>|<cell|0>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|0>|<cell|-2>|<cell|1>|<cell|0>>|<row|<cell|0>|<cell|0>|<cell|0>|<cell|-2>|<cell|0>>|<row|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|-2>>>>>
+      </equation*>
+
+      <\equation*>
+        J<rsub|5>=<bmatrix|<tformat|<cwith|1|2|1|2|cell-background|pastel
+        green>|<cwith|3|5|3|5|cell-background|pastel
+        yellow>|<table|<row|<cell|1>|<cell|1>|<cell|0>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|1>|<cell|0>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|0>|<cell|-2>|<cell|1>|<cell|0>>|<row|<cell|0>|<cell|0>|<cell|0>|<cell|-2>|<cell|1>>|<row|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|-2>>>>>,J<rsub|6>=<bmatrix|<tformat|<cwith|1|2|1|2|cell-background|pastel
+        green>|<cwith|3|5|3|5|cell-background|pastel
+        yellow>|<table|<row|<cell|1>|<cell|0>|<cell|0>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|1>|<cell|0>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|0>|<cell|-2>|<cell|1>|<cell|0>>|<row|<cell|0>|<cell|0>|<cell|0>|<cell|-2>|<cell|1>>|<row|<cell|0>|<cell|0>|<cell|0>|<cell|0>|<cell|-2>>>>>
+      </equation*>
+
+      <\equation*>
+        \;
       </equation*>
 
       <item><math|P<around*|(|\<lambda\>|)>=<around*|(|\<lambda\>-5|)><rsup|4>>.
 
       <\equation*>
-        J=<bmatrix|<tformat|<table|<row|<cell|5>|<cell|1>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|5>|<cell|1>|0>|<row|0|0|<cell|5>|<cell|1>>|<row|0|0|0|<cell|5>>>>>
+        J<rsub|1>=<bmatrix|<tformat|<table|<row|<cell|5>|<cell|0>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|5>|<cell|0>|0>|<row|0|0|<cell|5>|<cell|0>>|<row|0|0|0|<cell|5>>>>>,J<rsub|2>=<bmatrix|<tformat|<table|<row|<cell|5>|<cell|1>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|5>|<cell|0>|0>|<row|0|0|<cell|5>|<cell|0>>|<row|0|0|0|<cell|5>>>>>,J<rsub|3>=<bmatrix|<tformat|<table|<row|<cell|5>|<cell|1>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|5>|<cell|1>|0>|<row|0|0|<cell|5>|<cell|0>>|<row|0|0|0|<cell|5>>>>>,J<rsub|4>=<bmatrix|<tformat|<table|<row|<cell|5>|<cell|1>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|5>|<cell|1>|0>|<row|0|0|<cell|5>|<cell|1>>|<row|0|0|0|<cell|5>>>>>
         .
       </equation*>
 
@@ -147,11 +171,13 @@
       .>
 
       <\equation*>
-        J=<bmatrix|<tformat|<cwith|1|1|1|1|cell-background|pastel
+        J<rsub|1>=<bmatrix|<tformat|<cwith|1|1|1|1|cell-background|pastel
+        green>|<cwith|2|2|2|2|cell-background|pastel
+        yellow>|<cwith|3|4|3|4|cell-background|pastel
+        cyan>|<table|<row|<cell|0>|<cell|0>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|-3>|0|0>|<row|0|<cell|0>|<cell|5>|<cell|0>>|<row|0|<cell|0>|<cell|0>|<cell|5>>>>>,J<rsub|2>=<bmatrix|<tformat|<cwith|1|1|1|1|cell-background|pastel
         green>|<cwith|2|2|2|2|cell-background|pastel
         yellow>|<cwith|3|4|3|4|cell-background|pastel
         cyan>|<table|<row|<cell|0>|<cell|0>|<cell|0>|<cell|0>>|<row|<cell|0>|<cell|-3>|0|0>|<row|0|<cell|0>|<cell|5>|<cell|1>>|<row|0|<cell|0>|<cell|0>|<cell|5>>>>>
-        .
       </equation*>
     </enumerate-alpha>
   </question>
