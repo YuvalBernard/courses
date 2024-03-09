@@ -82,8 +82,7 @@
       \<mathd\>x .
     </equation*>
 
-    Show that the 5 properties hold. Again, show that the 5 properties of a
-    vector space hold.
+    Show that the 5 properties hold.
 
     <\enumerate-numeric>
       <item>
@@ -137,15 +136,15 @@
     given as follows:
 
     <\eqnarray*>
-      <tformat|<table|<row|<cell|Define \<psi\><rsub|1>=v<rsub|1>,>|<cell|>|<cell|then<space|1em>u<rsub|1>=<frac|\<psi\><rsub|1>|<around*|\<\|\|\>|\<psi\><rsub|1>|\<\|\|\>>>
+      <tformat|<table|<row|<cell|Define \ \<psi\><rsub|1>=v<rsub|1>,>|<cell|>|<cell|then<space|1em>u<rsub|1>=<frac|\<psi\><rsub|1>|<around*|\<\|\|\>|\<psi\><rsub|1>|\<\|\|\>>>
       .>>|<row|<cell|\<psi\><rsub|k>=v<rsub|k>-<big|sum><rsub|j=1><rsup|k-1><around*|\<langle\>|v<rsub|k>,u<rsub|j>|\<rangle\>>*u<rsub|j>,>|<cell|>|<cell|then<space|1em>u<rsub|k>=<frac|\<psi\><rsub|k>|<around*|\<\|\|\>|\<psi\><rsub|k>|\<\|\|\>>>
       .>>>>
     </eqnarray*>
 
     For <math|V=\<bbb-R\><rsub|2><around*|[|x|]>> with the inner product
     space defined on <math|<around*|[|0,1|]>>, a basis for <math|V> is
-    <math|v<rsub|1>=1,v<rsub|2>=x,v<rsub|3>=x<rsup|2>>. Perform the
-    Gram-Schmidt process to get an orthonormal basis for <math|V>.
+    <math|<around*|{|v<rsub|1>=1,v<rsub|2>=x,v<rsub|3>=x<rsup|2>|}>>. Perform
+    the Gram-Schmidt process to get an orthonormal basis for <math|V>.
 
     <\eqnarray*>
       <tformat|<table|<row|<cell|\<psi\><rsub|1>>|<cell|=>|<cell|v<rsub|1>=1>>|<row|<cell|<around*|\<\|\|\>|\<psi\><rsub|1>|\<\|\|\>>>|<cell|=>|<cell|<sqrt|<big|int><rsub|0><rsup|1>1<rsup|2>
@@ -213,12 +212,11 @@
       </equation*>
 
       A general vector in <math|U<rsup|\<perp\>>> has the form
-      <math|<around*|[|-2*y-3*z,y,z|]>> for <math|y,z\<in\>\<bbb-R\>>. A
-      basis for <math|U<rsup|\<perp\>>> is
+      <math|<around*|[|-2*y-3*z,y,z|]><rsup|T>> for
+      <math|y,z\<in\>\<bbb-R\>>. A basis for <math|U<rsup|\<perp\>>> is
 
       <\equation*>
-        <around*|{|<bmatrix|<tformat|<table|<row|<cell|-2>>|<row|<cell|1>>|<row|<cell|0>>>>>,<bmatrix|<tformat|<table|<row|<cell|-3>>|<row|<cell|0>>|<row|<cell|1>>>>>|}>
-        .
+        <around*|{|<bmatrix|<tformat|<table|<row|<cell|-2>>|<row|<cell|1>>|<row|<cell|0>>>>>,<bmatrix|<tformat|<table|<row|<cell|-3>>|<row|<cell|0>>|<row|<cell|1>>>>>|}>.
       </equation*>
 
       <item>Write a decomposition of the vector
@@ -228,11 +226,10 @@
       We need to find the coefficients <math|a,b,c\<in\>\<bbb-R\>> such that
 
       <\equation*>
-        <bmatrix|<tformat|<table|<row|<cell|-1>>|<row|<cell|3>>|<row|<cell|0>>>>>=a*<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|2>>|<row|<cell|3>>>>>+b*<bmatrix|<tformat|<table|<row|<cell|-2>>|<row|<cell|1>>|<row|<cell|0>>>>>+c*<bmatrix|<tformat|<table|<row|<cell|-3>>|<row|<cell|0>>|<row|<cell|1>>>>>
-        .
+        <bmatrix|<tformat|<table|<row|<cell|-1>>|<row|<cell|3>>|<row|<cell|0>>>>>=a*<bmatrix|<tformat|<table|<row|<cell|1>>|<row|<cell|2>>|<row|<cell|3>>>>>+b*<bmatrix|<tformat|<table|<row|<cell|-2>>|<row|<cell|1>>|<row|<cell|0>>>>>+c*<bmatrix|<tformat|<table|<row|<cell|-3>>|<row|<cell|0>>|<row|<cell|1>>>>>,
       </equation*>
 
-      This translates to solving the system
+      which translates to solving the system
 
       <\equation*>
         <bmatrix|<tformat|<table|<row|<cell|1>|<cell|-2>|<cell|-3>>|<row|<cell|2>|<cell|1>|<cell|0>>|<row|<cell|3>|<cell|0>|<cell|1>>>>>*<bmatrix|<tformat|<table|<row|<cell|a>>|<row|<cell|b>>|<row|<cell|c>>>>>=<bmatrix|<tformat|<table|<row|<cell|-1>>|<row|<cell|3>>|<row|<cell|0>>>>>
@@ -242,7 +239,7 @@
       Solve the augmented system.
 
       <\eqnarray*>
-        <tformat|<table|<row|<cell|<bmatrix|<tformat|<cwith|1|-1|4|4|cell-hyphen|n>|<cwith|1|1|4|4|cell-tborder|0ln>|<cwith|3|3|4|4|cell-bborder|0ln>|<cwith|1|-1|4|4|cell-lborder|1ln>|<cwith|1|-1|3|3|cell-rborder|1ln>|<cwith|1|-1|4|4|cell-rborder|0ln>|<table|<row|<cell|1>|<cell|-2>|<cell|-3>|<cell|-1>>|<row|<cell|2>|<cell|1>|<cell|0>|<cell|3>>|<row|<cell|3>|<cell|0>|<cell|1>|<cell|0>>>>>>|<cell|<long-arrow|\<rubber-rightarrow\>|<tabular*|<tformat|<table|<row|<cell|R<rsub|2>\<rightarrow\>R<rsub|2>-2*R<rsub|1>>>|<row|<cell|R<rsub|3>\<rightarrow\>R<rsub|3>-3*R<rsub|1>>>>>>>>|<cell|<bmatrix|<tformat|<cwith|1|-1|4|4|cell-hyphen|n>|<cwith|1|1|4|4|cell-tborder|0ln>|<cwith|3|3|4|4|cell-bborder|0ln>|<cwith|1|-1|4|4|cell-lborder|1ln>|<cwith|1|-1|3|3|cell-rborder|1ln>|<cwith|1|-1|4|4|cell-rborder|0ln>|<table|<row|<cell|1>|<cell|-2>|<cell|-3>|<cell|-1>>|<row|<cell|0>|<cell|5>|<cell|6>|<cell|5>>|<row|<cell|0>|<cell|6>|<cell|10>|<cell|3>>>>><long-arrow|\<rubber-rightarrow\>|R<rsub|2>\<rightarrow\>R<rsub|2>/5><bmatrix|<tformat|<cwith|1|-1|4|4|cell-hyphen|n>|<cwith|1|1|4|4|cell-tborder|0ln>|<cwith|3|3|4|4|cell-bborder|0ln>|<cwith|1|-1|4|4|cell-lborder|1ln>|<cwith|1|-1|3|3|cell-rborder|1ln>|<cwith|1|-1|4|4|cell-rborder|0ln>|<table|<row|<cell|1>|<cell|-2>|<cell|-3>|<cell|-1>>|<row|<cell|0>|<cell|1>|<cell|<frac|6|5>>|<cell|1>>|<row|<cell|0>|<cell|6>|<cell|10>|<cell|3>>>>>>>|<row|<cell|<long-arrow|\<rubber-rightarrow\>|<tabular*|<tformat|<table|<row|<cell|R<rsub|1>\<rightarrow\>R<rsub|1>+2R<rsub|2>>>|<row|<cell|R<rsub|3>\<rightarrow\>R<rsub|3>-6*R<rsub|2>>>>>>>>|<cell|<bmatrix|<tformat|<cwith|1|-1|4|4|cell-hyphen|n>|<cwith|1|1|4|4|cell-tborder|0ln>|<cwith|3|3|4|4|cell-bborder|0ln>|<cwith|1|-1|4|4|cell-lborder|1ln>|<cwith|1|-1|3|3|cell-rborder|1ln>|<cwith|1|-1|4|4|cell-rborder|0ln>|<table|<row|<cell|1>|<cell|0>|<cell|-<frac|3|5>>|<cell|1>>|<row|<cell|0>|<cell|1>|<cell|<frac|6|5>>|<cell|1>>|<row|<cell|0>|<cell|0>|<cell|<frac|14|5>>|<cell|-3>>>>>>|<cell|<long-arrow|\<rubber-rightarrow\>|R<rsub|3>\<rightarrow\>R<rsub|3>\<cdot\><frac|5|14>><bmatrix|<tformat|<cwith|1|-1|4|4|cell-hyphen|n>|<cwith|1|1|4|4|cell-tborder|0ln>|<cwith|3|3|4|4|cell-bborder|0ln>|<cwith|1|-1|4|4|cell-lborder|1ln>|<cwith|1|-1|3|3|cell-rborder|1ln>|<cwith|1|-1|4|4|cell-rborder|0ln>|<table|<row|<cell|1>|<cell|0>|<cell|-<frac|3|5>>|<cell|1>>|<row|<cell|0>|<cell|1>|<cell|<frac|6|5>>|<cell|1>>|<row|<cell|0>|<cell|0>|<cell|1>|<cell|-<frac|15|14>>>>>>>>|<row|<cell|<long-arrow|\<rubber-rightarrow\>|<tabular*|<tformat|<table|<row|<cell|R<rsub|2>\<rightarrow\>R<rsub|2>-<frac|6|5>*R<rsub|3>>>|<row|<cell|R<rsub|1>\<rightarrow\>R<rsub|1>+<frac|3|5>*R<rsub|3>>>>>>>>|<cell|<bmatrix|<tformat|<cwith|1|-1|4|4|cell-hyphen|n>|<cwith|1|1|4|4|cell-tborder|0ln>|<cwith|3|3|4|4|cell-bborder|0ln>|<cwith|1|-1|4|4|cell-lborder|1ln>|<cwith|1|-1|3|3|cell-rborder|1ln>|<cwith|1|-1|4|4|cell-rborder|0ln>|<table|<row|<cell|1>|<cell|0>|<cell|0>|<cell|<frac|5|14>>>|<row|<cell|0>|<cell|1>|<cell|0>|<cell|<frac|16|7>>>|<row|<cell|0>|<cell|0>|<cell|1>|<cell|-<frac|15|14>>>>>>>|<cell|\<Longrightarrow\>a,b,c=<frac|5|14>,<frac|16|7>,-<frac|15|14>
+        <tformat|<table|<row|<cell|<bmatrix|<tformat|<cwith|1|-1|4|4|cell-hyphen|n>|<cwith|1|1|4|4|cell-tborder|0ln>|<cwith|3|3|4|4|cell-bborder|0ln>|<cwith|1|-1|4|4|cell-lborder|1ln>|<cwith|1|-1|3|3|cell-rborder|1ln>|<cwith|1|-1|4|4|cell-rborder|0ln>|<table|<row|<cell|1>|<cell|-2>|<cell|-3>|<cell|-1>>|<row|<cell|2>|<cell|1>|<cell|0>|<cell|3>>|<row|<cell|3>|<cell|0>|<cell|1>|<cell|0>>>>>>|<cell|<long-arrow|\<rubber-rightarrow\>|<tabular*|<tformat|<table|<row|<cell|R<rsub|2>\<rightarrow\>R<rsub|2>-2*R<rsub|1>>>|<row|<cell|R<rsub|3>\<rightarrow\>R<rsub|3>-3*R<rsub|1>>>>>>>>|<cell|<bmatrix|<tformat|<cwith|1|-1|4|4|cell-hyphen|n>|<cwith|1|1|4|4|cell-tborder|0ln>|<cwith|3|3|4|4|cell-bborder|0ln>|<cwith|1|-1|4|4|cell-lborder|1ln>|<cwith|1|-1|3|3|cell-rborder|1ln>|<cwith|1|-1|4|4|cell-rborder|0ln>|<table|<row|<cell|1>|<cell|-2>|<cell|-3>|<cell|-1>>|<row|<cell|0>|<cell|5>|<cell|6>|<cell|5>>|<row|<cell|0>|<cell|6>|<cell|10>|<cell|3>>>>><long-arrow|\<rubber-rightarrow\>|R<rsub|2>\<rightarrow\>R<rsub|2>/5><bmatrix|<tformat|<cwith|1|-1|4|4|cell-hyphen|n>|<cwith|1|1|4|4|cell-tborder|0ln>|<cwith|3|3|4|4|cell-bborder|0ln>|<cwith|1|-1|4|4|cell-lborder|1ln>|<cwith|1|-1|3|3|cell-rborder|1ln>|<cwith|1|-1|4|4|cell-rborder|0ln>|<table|<row|<cell|1>|<cell|-2>|<cell|-3>|<cell|-1>>|<row|<cell|0>|<cell|1>|<cell|<frac|6|5>>|<cell|1>>|<row|<cell|0>|<cell|6>|<cell|10>|<cell|3>>>>>>>|<row|<cell|<long-arrow|\<rubber-rightarrow\>|<tabular*|<tformat|<table|<row|<cell|R<rsub|1>\<rightarrow\>R<rsub|1>+2R<rsub|2>>>|<row|<cell|R<rsub|3>\<rightarrow\>R<rsub|3>-6*R<rsub|2>>>>>>>>|<cell|<bmatrix|<tformat|<cwith|1|-1|4|4|cell-hyphen|n>|<cwith|1|1|4|4|cell-tborder|0ln>|<cwith|3|3|4|4|cell-bborder|0ln>|<cwith|1|-1|4|4|cell-lborder|1ln>|<cwith|1|-1|3|3|cell-rborder|1ln>|<cwith|1|-1|4|4|cell-rborder|0ln>|<table|<row|<cell|1>|<cell|0>|<cell|-<frac|3|5>>|<cell|1>>|<row|<cell|0>|<cell|1>|<cell|<frac|6|5>>|<cell|1>>|<row|<cell|0>|<cell|0>|<cell|<frac|14|5>>|<cell|-3>>>>>>|<cell|<long-arrow|\<rubber-rightarrow\>|R<rsub|3>\<rightarrow\>R<rsub|3>\<cdot\><frac|5|14>><bmatrix|<tformat|<cwith|1|-1|4|4|cell-hyphen|n>|<cwith|1|1|4|4|cell-tborder|0ln>|<cwith|3|3|4|4|cell-bborder|0ln>|<cwith|1|-1|4|4|cell-lborder|1ln>|<cwith|1|-1|3|3|cell-rborder|1ln>|<cwith|1|-1|4|4|cell-rborder|0ln>|<table|<row|<cell|1>|<cell|0>|<cell|-<frac|3|5>>|<cell|1>>|<row|<cell|0>|<cell|1>|<cell|<frac|6|5>>|<cell|1>>|<row|<cell|0>|<cell|0>|<cell|1>|<cell|-<frac|15|14>>>>>>>>|<row|<cell|<long-arrow|\<rubber-rightarrow\>|<tabular*|<tformat|<table|<row|<cell|R<rsub|2>\<rightarrow\>R<rsub|2>-<frac|6|5>*R<rsub|3>>>|<row|<cell|R<rsub|1>\<rightarrow\>R<rsub|1>+<frac|3|5>*R<rsub|3>>>>>>>>|<cell|<bmatrix|<tformat|<cwith|1|-1|4|4|cell-hyphen|n>|<cwith|1|1|4|4|cell-tborder|0ln>|<cwith|3|3|4|4|cell-bborder|0ln>|<cwith|1|-1|4|4|cell-lborder|1ln>|<cwith|1|-1|3|3|cell-rborder|1ln>|<cwith|1|-1|4|4|cell-rborder|0ln>|<table|<row|<cell|1>|<cell|0>|<cell|0>|<cell|<frac|5|14>>>|<row|<cell|0>|<cell|1>|<cell|0>|<cell|<frac|16|7>>>|<row|<cell|0>|<cell|0>|<cell|1>|<cell|-<frac|15|14>>>>>>>|<cell|\<Longrightarrow\><space|1em>a,b,c=<frac|5|14>,<frac|16|7>,-<frac|15|14>
         .>>>>
       </eqnarray*>
     </enumerate-alpha>

@@ -171,7 +171,7 @@
           .>>>>
         </eqnarray*>
 
-        The first and three vectors are proportional. A basis for <math|Im T>
+        The first and third vectors are proportional. A basis for <math|Im T>
         is <math|<around*|{|1|}>>.
 
         <item><math|T:\<bbb-R\><rsup|3>\<rightarrow\><text|vector space of
@@ -219,7 +219,9 @@
 
       <item><math|Ker T=Ker A> is given by <math|v\<in\>\<bbb-R\><rsup|3>>
       s.t. <math|A*v=\<b-0\>>. Therefore, a basis for <math|Ker T> is
-      <math|<around*|{|<around*|(|0,2,1|)>|}>>.
+      <math|<around*|{|<around*|(|0,2,1|)>|}>>. (From third row, first
+      element is zero, and from the first row, the second element must be
+      twice the third element.)
 
       <math|Im T> is given by the column space of <math|A>. Row reduce
       <math|A>.
@@ -272,7 +274,7 @@
       \<theta\>+r*sin \<alpha\>*cos \<theta\>|)> .
     </equation*>
 
-    So, returning to cartesian axis notation, rotation a vector
+    So, returning to cartesian axis notation, rotating a vector
     <math|v=<around*|(|x,y|)>> anti-clockwise by an angle <math|\<theta\>>
     results in <math|u=<around*|(|x*cos \<theta\>-y*sin \<theta\>,x*sin
     \<theta\>+y*cos \<theta\>|)>>.
@@ -362,6 +364,20 @@
 
 <\references>
   <\collection>
-    <associate|auto-1|<tuple|1|?|../../../../../.TeXmacs/texts/scratch/no_name_4.tm>>
+    <associate|auto-1|<tuple|1|?>>
   </collection>
 </references>
+
+<\auxiliary>
+  <\collection>
+    <\associate|figure>
+      <tuple|normal|<\surround|<hidden-binding|<tuple>|1>|>
+        Anti-clockwise rotation of a vector of length
+        <with|mode|<quote|math>|r>, offset from the
+        <with|mode|<quote|math>|x> axis by angle
+        <with|mode|<quote|math>|\<alpha\>> (solid line), by an angle
+        <with|mode|<quote|math>|\<theta\>> (dashed line).
+      </surround>|<pageref|auto-1>>
+    </associate>
+  </collection>
+</auxiliary>
